@@ -14,40 +14,268 @@ Organization, Project, and Deployment Hierarchy
 
 Intro statement
 
+Use the following |service| features and configuration suggestions to
+structure your |service| hierarchy.
+
 {+service+} Features and Best Practices for Hierarchy
 -----------------------------------------------------
 
-Content here
+You can use the following levels of hierarchy in |service| to define
+security settings and governance for your deployments:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 40
+   
+   * - {+service+} Hierarchy Level
+     - Description
+
+   * - (Optional) Paying Organization
+     - One organization can be a paying organization for other
+       organization(s). The MongoDB account team must enable the paying organization when you establish the |service| subscription. A paying organization lets you set up :atlas:`cross-organization billing <billing/#std-label-cross-org-billing>` to share a
+       billing subscription across multiple organizations.
+
+   * - Organization
+     - Invoicing aggregates and generates at this level. Line items go
+       to cluster level and below. An organization often maps to a
+       business unit (BU) or application.
+
+   * - Project
+     - Security configuration for the data plane (including database
+       clusters and other data services) occurs at this level,
+       including network security. A project often maps to an application and environment (for example: Customer Portal app -
+       Production environment). For each project, there is one dedicated VPC created in GCP, and one VPC/VNet per region in AWS
+       and Azure. 
+
+   * - Cluster 
+     - |service| provisions each {+cluster+} within the dedicated 
+       VPC/VNet(s) for a project. The security configuration is shared
+       among {+clusters+} in the project, except for user roles and authorization, which you can apply to actions on a {+cluster+},
+       database, and collection level.
+
+**DIAGRAM**
+
+Suggested Org and Project Hierarchies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _project-hierarchy-1:
+
+Suggested Hierarchy 1: Fewer Atlas Organizations
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+This hierarchy, which creates fewer |service| organizations, might be useful if you have common teams and permissions across the business unit, and less than the (raiseable) limit of 250 projects per organization. 
+
+**DIAGRAM TO REPLACE TEXT**
+
+- Atlas Paying Org - Acme Inc
+  
+  - Atlas Org: Consumer Products Business Unit
+
+    - Project: Consumer Customer Portal - Production (environment) 
+    - Project: Consumer Customer Portal - Test 
+    - Project: Consumer Customer Portal - Dev 
+    - Project: Product Mgmt App - Production 
+    - Project: Product Mgmt App - Test 
+    - Project: Product Mgmt App - Dev 
+
+  - Atlas Org: Corporate Products BU
+
+.. _project-hierarchy-2:
+
+Suggested Hierarchy 2: More Atlas Organizations
++++++++++++++++++++++++++++++++++++++++++++++++
+
+This hierarchy creates a relatively large number of |service|
+organizations: one per application or scrum team. This hierarchy might
+be useful if each of your teams is fairly independent, they don't share people or permissions within a business unit, or they want to buy credits themselves through the cloud provider marketplace. There is
+no paying organization in this hierarchy.
+
+**DIAGRAM TO REPLACE TEXT**
+
+- Atlas Org: Consumer Customer Portal - paying at this level too
+
+  - Project: Portal - Production (environment)
+  - Project: Portal - Test
+  - Project: Portal - Dev 
+
+- Atlas Org: Product Mgmt App - paying at this level too
+
+  - Project: PM App - Production 
+  - Project: PM App - Test 
+  - Project: PM App - Dev
+
+.. _deployment-hierarchy:
+
+Suggested Deployment Hierarchy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To allow fine-grained access control, we recommend one deployment
+per |service| project.
+
+DIAGRAM
+
+Grouping multiple deployments in one project by team simplifies
+administration when the same team is responsible for all stages of
+development, acceptance testing, and production. However, this
+increases the risk of human error, since DevOps members also have
+access to production {+clusters+}.
+
+DIAGRAM
+
+Grouping multiple deployments in one project by environment simplifies
+administration when a separate team is responsible for each stage of
+development, acceptance testing, and production. It allows Dev and UAT
+hosts to support multiple nodes when testing shard-level operations like adding shards, and testing new zone rules. However, there is a
+risk of human error because the same DevOps teams can access multiple
+sub-organizations' databases.
+
+DIAGRAM
+
 
 Examples
 --------
 
-The following examples <perform this action> using |service| tools for automation (link).
+The following examples create :ref:`project-hierarchy-1` and
+:ref:`deployment-hierarchy` using |service| tools for automation (link).
+
+The examples also apply other recommended project and deployment
+configurations, including:
+
+- Multi-cloud and multi-region deployments (page link)
+- (Cluster configuration page link?)
+- Autoscaling (Scalability page link?)
 
 .. tabs::
 
    .. tab:: API
       :tabid: api
 
-      Content here
+      .. note::
+
+         Before you
+         can create resources with the {+atlas-admin-api+}, you must
+         create your paying organization and create an API key for the
+         paying organization. To learn more, see
+         `Get Started with the {+atlas-admin-api+} <https://www.mongodb.com/docs/atlas/configure-api-access/>`__.
+
+      Create the Organizations
+      ~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each business unit:
+
+      .. include:: /includes/api-example-create-orgs.rst
+
+      For more configuration options and info about this example, 
+      see :oas-atlas-op:`Create One Organization </createOrganization>`.
+
+      Create the Projects
+      ~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each application and environment pair:
+
+      .. include:: /includes/api-example-create-projects.rst
+
+      For more configuration options and info about this example, 
+      see :oas-atlas-op:`Create One Organization </createOrganization>`.
+
+      Create One Deployment Per Project
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each project that you created:
+
+      .. include:: /includes/api-example-create-clusters.rst
+
+      For more configuration options and info about this example, 
+      see :oas-atlas-op:`Create One Cluster </createCluster>`.
 
    .. tab:: CLI
       :tabid: cli
 
-      Content here
+      .. note::
+
+         Before you
+         can create resources with the {+atlas-cli+}, you must
+         install the {+atlas-cli+},
+         create your paying organization, and create an API key for the
+         paying organization. To learn more, see
+         `Get Started with the {+atlas-admin-api+} <https://www.mongodb.com/docs/atlas/configure-api-access/>`__.
+
+      Create the Organizations
+      ~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each business unit:
+
+      .. include:: /includes/cli-example-create-orgs.rst
+
+      For more configuration options and info about this example, 
+      see :atlascli:`atlas-organizations-create`.
+
+      Create the Projects
+      ~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each application and environment pair:
+
+      .. include:: /includes/cli-example-create-projects.rst
+
+      For more configuration options and info about this example, 
+      see :atlascli:`atlas-projects-create`.
+
+      Create One Deployment Per Project
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Create the following ``.json`` file for each project that you
+      created:
+
+      .. include:: /includes/cli-json-example-create-clusters.rst
+      
+      After you create the ``.json`` file, run the following command for each project that you created. The command uses the ``.json``
+      file to create a cluster.
+
+      .. include:: /includes/api-example-create-clusters.rst
+
+      For more configuration options and info about this example, 
+      see :atlascli:`atlas-clusters-create`.
 
    .. tab:: Terraform
       :tabid: Terraform
 
-      Content here
+      Example code here
 
    .. tab:: CDK
       :tabid: CDK
 
-      Content here
+      Example code here
 
    .. tab:: AKO
       :tabid: ako
 
-      Content here
+      .. note::
+
+         Before you
+         can create resources with the |ak8so|, you must create your
+         organizations and API keys, deploy the |ak8so|, and create a
+         secret. To learn more, see
+         `Quick Start <https://www.mongodb.com/docs/atlas/operator/current/ak8so-quick-start/>`__.
+
+      You can't create organizations with the |ak8so|.
+
+      Create the Projects
+      ~~~~~~~~~~~~~~~~~~~
+
+      .. include:: /includes/ako-example-create-projects.rst
+
+      For more configuration options and info about this example, 
+      see `AtlasProject Custom Resource <https://www.mongodb.com/docs/atlas/operator/current/atlasproject-custom-resource/>`__.
+
+      Create One Deployment Per Project
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each project that you created:
+
+      .. include:: /includes/ako-example-create-clusters.rst
+
+      For more configuration options and info about this example, 
+      see `AtlasDeployment Custom Resource <https://www.mongodb.com/docs/atlas/operator/current/atlasdeployment-custom-resource/>`__.
+
+
 
