@@ -49,6 +49,55 @@ These examples also apply other recommended configurations, including:
    .. tab:: API
       :tabid: api
 
+      .. note::
+
+         Before you
+         can create resources with the {+atlas-admin-api+}, you must
+         create your paying organization and create an API key for the
+         paying organization. To learn more, see
+         :atlas:`Get Started with the {+atlas-admin-api+} </configure-api-access/>`.
+
+      Create the Organizations
+      ~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each business unit:
+
+      For more configuration options and info about this example, 
+      see :oas-atlas-op:`Create One Organization </createOrganization>`.
+
+      Create the Projects
+      ~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each application and environment pair:
+
+      .. include:: /includes/examples/api-example-create-projects.rst
+
+      For more configuration options and info about this example, 
+      see :oas-atlas-op:`Create One Organization </createOrganization>`.
+
+      Create One Deployment Per Project
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      .. tabs::
+
+         .. tab:: Dev and Test Environments
+            :tabid: devtest
+
+            For your development and testing environments, run the following command for each project that you created:
+
+            .. include:: /includes/examples/api-example-create-clusters-devtest.rst
+
+         .. tab:: Staging and Prod Environments
+            :tabid: stagingprod
+
+            For your staging and production environments, run the
+            following command for each project that you created:
+
+            .. include:: /includes/examples/api-example-create-clusters-stagingprod.rst 
+
+      For more configuration options and info about this example, 
+      see :oas-atlas-op:`Create One Cluster </createCluster>`.
+
 
    .. tab:: CLI
       :tabid: cli
