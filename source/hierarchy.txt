@@ -17,7 +17,7 @@ Intro statement
 {+service+} Features and Best Practices for Hierarchy
 -----------------------------------------------------
 
-Content here
+Content Here
 
 .. _arch-center-cluster-size-guide:
 
