@@ -6,23 +6,200 @@ Monitoring and Alerts
 
 .. default-domain:: mongodb
 
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: atlas architecture center
+   :description: Learn about the different Atlas tools to automate the provisioning and management of Atlas clusters and projects.
+
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: onecol
 
-Intro statement
+|service-fullname| has a robust set of built-in tools, alerts, charts,
+integrations, and logs that help you to monitor and enhance your
+|service| deployment and detect and respond to threats in real time.
+
+Monitoring your deployment allows you to:
+
+- Understand the current capacity of your |service| {+cluster+}.
+- Observe the utilization of resources.
+- Observe the presence of abnormal behavior and performance issues.
+- Detect and react to real-time issues to improve your application stack.
+- Comply with your data protection and governance requirements.
+
+|service| provides several metrics for monitoring and alerting. You can
+track the health, availability, consumption, and performance of your 
+deployments in visual dashboards and by |api|.  
 
 {+service+} Features and Best Practices for Monitoring and Alerts
 -----------------------------------------------------------------
 
-Content here
+|service| provides several ways and tools to monitor your deployment and
+improve performance. You can view various {+cluster+} metrics, monitor your
+database performance, configure alerts and alert notification, and
+download activity logs. 
+
+View Cluster Metrics 
+~~~~~~~~~~~~~~~~~~~~
+
+Deployment metrics provide insight into hardware performance and
+database operation efficiency. |service| collects metrics for your
+servers, databases, and MongoDB processes and stores metrics data at
+various granularity levels. For each granularity level, |service|
+computes metrics as averages of the reported metrics at the next finer 
+granularity level. Many metrics have a burst reporting equivalent. The
+value of a burst reporting metric at a given granularity is the maximum
+reported value from all the reports |service| generates at the next finer
+granularity level during that interval.
+
+To monitor your {+cluster+} performance, you can view the {+cluster+}
+metrics. For your databases, you can view historical throughput,
+performance, and utilization metrics. The following table lists some
+important categories of metrics to monitor: 
+
+.. list-table:: 
+   :widths: 30 70 
+   :stub-columns: 1
+
+   * - |service| {+Cluster+} Operations and Connection Metrics 
+     - - Opcounters 
+       - Operation Execution Times 
+       - Query Executors and Query Targeting 
+       - Connections 
+       - Queues 
+       - Scan and Order
+
+   * - Hardware Metrics
+     - - Normalised System CPU 
+       - Normalised Process CPU 
+       - Disk Latency 
+       - Disk IOPS 
+       - Disk Space Free 
+       - System Memory 
+       - Swap Usage
+
+   * - Replication Metrics
+     - - Replication Lag 
+       - Replication Oplog Window 
+       - Replication Headroom 
+       - Oplog GB/Hour 
+       - Opcounters -repl 
+
+You can use the {+atlas-ui+}, {+atlas-admin-api+}, and {+atlas-cli+} to
+view |service| {+cluster+} metrics.
+
+To learn more, see :ref:`monitor-cluster-metrics`. 
+
+Monitor Database Performance 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|service| provides several tools that allow you to proactively maintain and
+improve the performance of your database. 
+
+Real-Time Performance Panel
+```````````````````````````
+
+The Real-Time Performance Panel (RTPP) in the {+atlas-ui+} provides
+insights into current network traffic, database operations, and hardware
+statistics about the hosts at a one second granularity in the
+{+atlas-ui+}. You can use :abbr:`RTPP (Real-Time Performance Panel)` to:  
+
+- Visually identify relevant database operations
+- Evaluate query execution times 
+- Evaluate the ratio of documents scanned to documents returned
+- Monitor network load and throughput
+- Discover potential replication lag on secondary members of replica sets
+- Kill operations before they have completed to free up valuable resources
+
+To learn more, see :ref:`real-time-metrics-status-tab`.
+
+Query Profiler 
+``````````````
+
+The Query Profiler identifies slow queries and bottlenecks, and suggests
+index refinement and query restructuring to improve the performance of
+your database. It provides visibility into the slowest operations over 
+a 24-hour window in the {+atlas-ui+}, making it easier to identify
+trends and outliers in query efficiency. With this data, you can
+pinpoint and troubleshoot poorly performing queries, reducing 
+performance overhead. 
+
+To learn more, see :ref:`query-profiler`.
+
+Performance Advisor 
+```````````````````
+
+The Performance Advisor automatically analyzes logs for slow-running
+queries and recommends indexes to create and drop. It analyzes slow
+queries and provides index suggestions for individual collections,
+ranked by a calculated impact score, and tailored to your workload. This
+gives you an easy, instantaneous way to make high-impact performance
+improvements. It's crucial to monitor regularly, focus on slow
+queries, and enable the profiler selectively to minimize overhead.
+
+You can use the {+atlas-ui+}, {+atlas-cli+}, and the {+atlas-admin-api+}
+to view slow queries and suggestions for improving the performance of
+your queries from the Performance Advisor.  
+
+To learn more, see :ref:`performance-advisor`.
+
+Namespace Insights 
+``````````````````
+
+The Namespace Insights page in the {+atlas-ui+} allows you to monitor
+collection-level performance and usage metrics. It displays metrics
+(such as the number of CRUD operations on the collection) and statistics
+(like average query execution time) for certain hosts and operation
+types for the collections that you pin for monitoring. This gives you
+more granular visibility into collection-level performance, which you
+can use to optimize database performance, resolve issues. and make
+decisions about scaling, indexing, and query tuning. 
+
+To learn more, see :ref:`namespace-insights`.  
+
+Configure Alerts 
+~~~~~~~~~~~~~~~~
+
+|service| provides alerts for over 200 event types, allowing you to
+tailor alerts for precise monitoring. |service| issues alerts for the
+database and server conditions that you configure in your alert
+settings. When a condition triggers an alert, |service| displays a
+warning symbol on the {+cluster+} and sends alert notifications. You can
+use the {+atlas-ui+}, {+atlas-admin-api+}, and {+atlas-cli+} to
+configure alerts and alert notification.
+
+|service| integrates alert notification with third-party tools like
+:atlas:`Microsoft Teams </tutorial/integrate-msft-teams>`,
+:ref:`PagerDuty <pagerduty-integration>`, :ref:`DataDog 
+<datadog-integration>`, :ref:`Prometheus <prometheus-integration>`,
+:atlascli:`Opsgenie </command/atlas-integrations-create-OPS_GENIE/>`,
+and :atlascli:`Splunk On-Call </command/atlas-integrations-create-VICTOR_OPS/>`,    
+enhancing collaboration and unifying application performance management
+within your existing workflows for optimal efficiency. 
+
+To learn more, see :atlas:`Configure and Resolve Alerts </alerts>`. 
+
+View and Download Logs 
+~~~~~~~~~~~~~~~~~~~~~~
+
+|service| provides logs for each process in the {+cluster+}. Each
+process keeps an account of its activity in its own log file. You can
+download these logs at any point until the end of their retention
+periods by using the {+atlas-ui+}, {+atlas-admin-api+}, and
+{+atlas-cli+}. |service| retains the last 30 days of log messages and
+system event audit messages. 
+
+To learn more, see :ref:`mongodb-logs`.
 
 Examples
 --------
 
-The following examples <perform this action> using |service|
+The following examples demonstrate how to enable monitoring using |service|
 :ref:`tools for automation <arch-center-automation>`.
 
 These examples also apply other recommended configurations, including:
@@ -39,15 +216,51 @@ These examples also apply other recommended configurations, including:
 
       .. include:: /includes/shared-settings-clusters-stagingprod.rst
 
-.. tabs::
+CLI
+~~~
 
-   .. tab:: CLI
-      :tabid: cli
+View Cluster Metrics 
+````````````````````
 
-      Content here
+Run the following command to retrieve the databases running on the
+specified host for your project. 
 
-   .. tab:: Terraform
-      :tabid: Terraform
+.. include:: /includes/examples/cli-example-metrics-databases.rst
 
-      Content here
+Run the following command to retrieve the disks or disk partitions on
+the specified host for your project.  
 
+.. include:: /includes/examples/cli-example-metrics-disks.rst
+
+Monitor Database Performance 
+````````````````````````````
+
+Run the following command to enable |service|-managed slow operation threshold
+for your project. 
+
+.. include:: /includes/examples/cli-example-performance-advisor-enable.rst
+
+Run the following command to retrieve the suggested indexes for collections
+experiencing slow queries. 
+
+.. include:: /includes/examples/cli-example-return-suggested-indexes.rst
+
+Configure Alerts 
+````````````````
+
+Run the following command to enable one alert configuration for the specified
+project.
+
+.. include:: /includes/examples/cli-example-enable-alerts.rst
+
+Run the following command to create an alert configuration for your project.
+
+.. include:: /includes/examples/cli-example-create-alerts.rst
+
+Download Logs 
+`````````````
+
+Run the following command to download a compressed file that contains the
+MongoDB logs for the specified host in your project. 
+
+.. include:: /includes/examples/cli-example-download-logs.rst
