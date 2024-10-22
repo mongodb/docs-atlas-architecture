@@ -6,12 +6,85 @@ Migration
 
 .. default-domain:: mongodb
 
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: atlas architecture center
+   :description: Learn about live migrating data into Atlas from on-premises MongoDB databases using several automated processes.
+
 .. contents:: On this page
    :local:
    :backlinks: none
    :depth: 1
    :class: onecol
 
-Intro statement
+Live migrate data from your on-premises MongoDB deployments to |service| using an 
+automated process designed to transfer your data securely, accurately, and efficiently, with 
+minimal cutover time. You can pull data from an on-premises MongoDB database, or 
+push data using |com|, but with either method, |service| live migration includes 
+the following features:
 
-Content here
+- The migration host always encrypts traffic to the |service| {+cluster+}. To encrypt 
+  data end-to-end, enable |tls| on your source {+cluster+}. Only users with specific 
+  Role-Based Access Control (RBAC) :ref:`roles <authorization>` 
+  (such as :authrole:`backup`, :authrole:`readAnyDatabase`, or :authrole:`clusterMonitor`) 
+  can initiate live migration. Users authenticate to {+clusters+} using 
+  :manual:`SCRAM-SHA-1 or SCRAM-SHA-256 </core/security-scram/>`.
+
+- Live migration automates most tasks. You specify the resource requirements 
+  and scalable options to prevent over-provisioning.
+
+- Detailed instructions help you provision migration hosts and scale destination {+clusters+} 
+  to control costs. Recommendations include appropriate {+cluster+} sizing 
+  and temporary scaling, followed by resizing to optimal levels post-migration.
+
+- Live migration uses |mongosync| to facilitate fast cutover through parallel data copying.
+  Processes manage temporary network interruptions and {+cluster+} elections, using continuous 
+  data synchronization and a final cutover phase to achieve minimal downtime. Retry 
+  mechanisms and pre-migration validations enhance resilience against interruptions.
+
+- Monitor migrations with real-time status updates and notifications.
+
+Live Migration Methods
+----------------------
+
+|service| live migration automates moving data from on-premises MongoDB databases to |service|.
+The methods differ depending on if you use |com| to push data into |service|, or 
+a live migration server to pull data into |service|.
+
+Both live migration methods require that the source and destination databases run 
+MongoDB 6.0.13+ or MongoDB 7.0.8+. You can migrate data from databases using prior 
+versions of MongoDB, but the process requires more manual intervention. 
+To learn more, see `Legacy Migration <https://www.mongodb.com/docs/atlas/legacy-migration/>`__. 
+
+* **Pull data into Atlas.** |service| pulls data from the source MongoDB deployment 
+  and requires access to the source deployment through the deployment's firewall. When the 
+  {+clusters+} are nearly synced, you must stop write operations on the source, 
+  redirect applications to the |service| {+cluster+} and restart them. 
+  This method is best for deployments not monitored by |com|. This method does not support 
+  :ref:`VPC peering <vpc-peering>` or :ref:`private endpoints <private-endpoint>` 
+  for either the source or destination {+cluster+}. 
+  To learn more, see :ref:`c2c-pull-live-migration`.
+
+* **Push data into Atlas.** |com| push data to |service| using a secure :term:`link-token` 
+  without requiring access to the source {+cluster+} through the {+cluster+}'s firewall.
+  During migration, |service| continuously syncs real-time data between the source 
+  and destination {+clusters+} until cutover. This method supports 
+  :ref:`VPC peering <vpc-peering>` and :ref:`private endpoints <private-endpoint>`.
+  To learn more, see :ref:`c2c-push-live-migration`.
+
+Monitoring Migrations
+---------------------
+
+.. include:: /includes/cloud-docs/shared-migration-monitoring-description.rst
+
+To learn more, see :ref:`monitor-migrations`.
+
+Cutover
+-------
+
+.. include:: /includes/cloud-docs/shared-migration-cutover-description.rst
+
+To learn more, see :ref:`monitor-migrations`.
