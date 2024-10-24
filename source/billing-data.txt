@@ -6,48 +6,138 @@ Billing Data
 
 .. default-domain:: mongodb
 
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: atlas architecture center
+   :description: Learn about ways to manage and view your billing data.
+
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: onecol
 
-Intro statement
+Tracking and managing cloud spending can be difficult in a large
+organization. While :ref:`cost-saving configurations
+<arch-center-cost-saving-config>` provides strategies to proactively
+save money, {+service+} also provides cloud spend governance tools for
+you to:
+
+- Categorize {+service+} resources based on your organization's billing needs.
+- Leverage billing data to visualize and understand your {+service+} spending.
+- Receive notifications when Atlas spending exceeds a specified threshold.
+- Pull billing data programmatically to integrate with your FinOps tools.
+
+On this page, learn how to use built-in {+service+} tools and
+{+service+} billing data to track, manage, and optimize your cloud
+spending.
 
 {+service+} Features and Best Practices for Billing Data
 --------------------------------------------------------
 
-Content here
+Billing Dashboards
+~~~~~~~~~~~~~~~~~~
 
-Examples
---------
+|charts| integreates seemlessly with {+service+}. You can visualize your
+billing data in a billing dashboard to help you optimize your |service|
+spending. Billing dashboards contain prebuilt charts that help you
+monitor your {+service+} usage in an organization across different
+categories and periods of time.
 
-The following examples <perform this action> using |service|
-:ref:`tools for automation <arch-center-automation>`.
+.. figure:: /includes/images/atlas-billing-dashboard.png
+   :figwidth: 750px
+   :alt: Atlas Billing Dashboard example.
 
-These examples also apply other recommended configurations, including:
+To create or manage a billing dashboard, see :ref:`billing-dashboards`.
 
-.. tabs::
+Apply Resource Tags
+~~~~~~~~~~~~~~~~~~~
 
-   .. tab:: Dev and Test Environments
-      :tabid: devtest
+The {+atlas-admin-api+} provides a |rest|\ful interface that allows you
+to retrieve all your pending invoices with the :oas-atlas-op:`Return All
+Pending Invoices for One Organization </listPendingInvoices>` |api|
+endpoint. The endpoints response body contains the
+``results.lineItems.tags`` field, which you can apply to your resources.
 
-      .. include:: /includes/shared-settings-clusters-devtest.rst
+Resource tags can help you categorize your spending and allow you to
+feed the |api| data to reports and external FinOps tools they already
+use. To learn more, see :ref:`configure-resource-tags`.
 
-   .. tab:: Staging and Prod Environments
-      :tabid: stagingprod
+Billing Quota Management
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-      .. include:: /includes/shared-settings-clusters-stagingprod.rst
+|service| offers real-time notifications when spending nears or exceeds
+set thresholds. You can customize these alerts to be project-specific or
+team-specific, allowing for precise monitoring and control over
+different areas of cloud expenditure. To configure billing alerts, see
+:ref:`configure-alerts`.
 
-.. tabs::
+Resource Tagging
+~~~~~~~~~~~~~~~~
 
-   .. tab:: CLI
-      :tabid: cli
+|service| uses resource tagging for precise cost allocation by
+categorizing resources according to departments, projects, or cost
+centers. You can also group and analyze tagged resources in financial
+reports, providing a clear and organized view of how various teams or
+projects contribute to overall cloud spending. To learn more, see
+:ref:`configure-resource-tags`.
 
-      Content here
+Cross-Organization Billing
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   .. tab:: Terraform
-      :tabid: Terraform
+|service| allows you to share a billing subscription across many
+organizations and to pay a single invoice for them. 
 
-      Content here
+After you configure a paying organization, you pay invoices for the paying
+organization that include a list of charges incurred for all linked
+organizations. To learn more, see :ref:`cross-org-billing`.
 
+Monthly Cost Visualization
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To view your billing data monthly, navigate to the :guilabel:`Cost
+Explorer` page. The Cost Explorer provides a granular view of cloud
+spending in chart and table form, allowing users to analyze costs by
+{+clusters+}, projects, or teams. Historical spending data and
+customizable filters help identify trends and inefficiencies, enabling
+better financial decision-making and resource optimization. You can view
+your usage over the past six months, and access your billing data up to
+the past 18 months. If your organization uses cross-organizational
+billing, you can view billing data across all linked organizations.
+
+The Billing Cost Explorer filters and groups usage data by organization,
+project, {+cluster+}, and service. Each filter contains a :guilabel:`Usage`
+chart with stacked columns representing the total cost incurred each
+month. Underneath, there is a :guilabel:`Usage By Month` table that
+displays the billing data shown in the chart. To learn more, see
+:ref:`cost-explorer`.
+
+Annual Cost Visualization
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To view your billing data annually, navigate to the :guilabel:`Billing
+Overview` page. This page helps you to understand the costs incurred by
+your organization's {+service+} usage by service, deployment, and
+project. Each category contains a :guilabel:`Usage` chart with stacked
+columns representing the total cost incurred each month. To learm more,
+see :ref:`Year-to-Date Usage Chart <billing-visualizations>`.
+
+Invoice Cost Visualization
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To view your billing data as an invoice, click on the
+:guilabel:`Invoice Date` or :guilabel:`Invoice Period` you want to
+view. This page shows you the costs incurred by your {+service+} usage
+over the invoice period through the :guilabel:`Total Usage` and
+:guilabel:`By Deployment` charts.
+
+For the  :guilabel:`Total Usage` chart, you can filter your usage by
+service to view charges incurred by a particular {+service+} service.
+For the :guilabel:`By Deployment` chart, you can view the proportion of
+your usage incurred by each of your {+clusters+} and serverless instances
+across all your projects.
+
+To view line-item charges, see :ref:`view-past-invoices`.
