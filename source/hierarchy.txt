@@ -13,13 +13,18 @@
    :class: onecol
 
 Organizations, projects, and {+clusters+} are the building blocks
-of your {+service+} enterprise estate. At the organization level, you
-can implement security controls and create users that work across one or more projects. Projects offer a more fine-grained security isolation
-and authorization boundary, and {+clusters+} are your cloud databases
-in {+service+}.
+of your {+service+} enterprise estate: 
 
-Use the foundational guidance on this page to plan the hierarchy and size for your organizations, projects, and {+clusters+}. This guidance optimizes security and performance from the start while aligning with
-your enterprise's billing and access needs.
+- At the organization level, you can implement security controls and
+  create users that work across one or more projects. 
+- Projects offer a more fine-grained security isolation and
+  authorization boundary.
+- {+Clusters+} are your cloud databases in {+service+}.
+
+Use the foundational guidance on this page to plan the hierarchy and
+size for your organizations, projects, and {+clusters+}. This guidance
+helps you optimize your security and performance from the start while
+aligning with your enterprise's billing and access needs.
 
 {+service+} Features and Best Practices for Hierarchy
 -----------------------------------------------------
@@ -40,14 +45,13 @@ security settings and governance for your {+service+} enterprise estate:
        billing subscription across multiple organizations.
 
    * - Organization
-     - Invoicing aggregates and generates at this level. Line items go
-       to cluster level and below. An organization often maps to a
-       business unit (BU) or application.
+     - Invoicing aggregates and generates at the organization level.
+       Line items go to cluster level and below. An organization often
+       maps to a business unit (BU) or application.
 
    * - Project
      - Security configuration for the data plane (including database
-       clusters and other data services) occurs at this level,
-       including network security. A project often maps to an application and environment (for example: Customer Portal app -
+       clusters, network security, and other data services) occurs at the project level. A project often maps to an application and environment (for example: Customer Portal app -
        Production environment). For each project, there is one dedicated VPC created in GCP, and one VPC/VNet per region in AWS
        and Azure. 
 
@@ -67,7 +71,8 @@ Suggested Org and Project Hierarchies
 Suggested Hierarchy 1: Fewer Atlas Organizations
 ````````````````````````````````````````````````
 
-This hierarchy, which creates fewer |service| organizations, might be useful if you have common teams and permissions across the business unit, and less than the (raiseable) limit of 250 projects per organization. 
+Consider the following hierarchy for an example enterprise.
+This hierarchy, which creates fewer |service| organizations, might be useful if you have common teams and permissions across the business unit, and less than the raiseable limit of 250 projects per organization. 
 
 **DIAGRAM TO REPLACE TEXT**
 
@@ -89,6 +94,7 @@ This hierarchy, which creates fewer |service| organizations, might be useful if 
 Suggested Hierarchy 2: More Atlas Organizations
 ```````````````````````````````````````````````
 
+Consider the following hierarchy for a different enterprise.
 This hierarchy creates a relatively large number of |service|
 organizations: one per application or scrum team. This hierarchy might
 be useful if each of your teams is fairly independent, they don't share people or permissions within a business unit, or they want to buy credits themselves through the cloud provider marketplace. There is
@@ -143,10 +149,12 @@ DIAGRAM
 Use the following {+cluster+} size guide to select a {+cluster+} tier that ensures performance without over-provisioning.
 
 The {+cluster+}
-size guide uses "t-shirt sizing," a common analogy used in software development and infrastructure to describe capacity planning in a simplified manner, to simplify selecting a {+cluster+} tier. You should
-consider t-shirt sizes as approximate starting points. 
-Sizing a {+cluster+} is an iterative process based on changing resource needs, performance requirements, workload characteristics, and growth
-expectations.
+size guide uses "t-shirt sizing," a common analogy used in software
+development and infrastructure to describe capacity planning in a
+simplified manner. You should consider t-shirt sizes as approximate
+starting points. Sizing a {+cluster+} is an iterative process based on
+changing resource needs, performance requirements, workload
+characteristics, and growth expectations.
 
 .. important::
    
@@ -253,7 +261,7 @@ These examples also apply other recommended configurations, including:
       ~~~~~~~~~~~~~~~~~~~~~~~~
 
       Run the following command for each business unit. Change
-      the IDs and names to use your values::
+      the IDs and names to use your actual values:
 
       .. code-block::
 
@@ -449,7 +457,7 @@ Next Steps
 
 After you plan the hierarchy and size for your organizations, projects,
 and {+clusters+}, see the following suggested resources or use the left
-navigation to find features and best practices for each pillar.
+navigation to find features and best practices for each {+waf+} pillar.
 
 - :ref:`arch-center-monitoring-alerts`
 - :ref:`arch-center-network-security`
