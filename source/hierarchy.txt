@@ -102,13 +102,13 @@ no paying organization in this hierarchy.
 
 **DIAGRAM TO REPLACE TEXT**
 
-- Atlas Org: Consumer Customer Portal - paying at this level too
+- Atlas Org: Consumer Customer Portal
 
   - Project: Portal - Production (environment)
   - Project: Portal - Test
   - Project: Portal - Dev 
 
-- Atlas Org: Product Mgmt App - paying at this level too
+- Atlas Org: Product Mgmt App
 
   - Project: PM App - Production 
   - Project: PM App - Test 

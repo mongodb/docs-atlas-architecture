@@ -35,7 +35,7 @@ The {+atlas-arch-center+}'s content aligns with the {+waf+} pillars:
 .. kicker:: Next Steps
 
 Get Started with the {+atlas-arch-center+}
---------------------------------------------------
+-------------------------------------------------
 
 Explore the following getting started resources or use the left navigation to find features and best practices for each pillar.
 
