@@ -40,7 +40,7 @@ The {+atlas-arch-center+}'s content aligns with the {+waf+} pillars:
 .. kicker:: Next Steps
 
 Get Started with the {+atlas-arch-center+}
---------------------------------------------------
+-------------------------------------------------
 
 Explore the following resources to get started with |service| and the
 {+atlas-arch-center+}.
