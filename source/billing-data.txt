@@ -20,12 +20,54 @@ Billing Data
    :depth: 2
    :class: onecol
 
-|service-fullname| provides an easy way for you to view and manage your
-billing data. You can examine data at the organization or project
-level.
+Tracking and managing cloud spending can be difficult in a large
+organization. While :ref:`Cost-Saving Configurations
+<arch-center-cost-saving-config>` provides strategies to proactively
+save money, {+service+} also provides cloud spend governance tools for
+you to:
+
+- Categorize {+service+} resources based on your organization's billing needs.
+- Leverage billing data to visualize and understand your {+service+} spending.
+- Receive notifications when Atlas spending exceeds a specified threshold.
+- Pull billing data programmatically to integrate with your FinOps tools.
+
+On this page, learn how to use built-in {+service+} tools and
+{+service+} billing data to create a customizable billing dashboard,
+billing alerts, and more to track, manage, and optimize your cloud
+spending.
 
 {+service+} Features and Best Practices for Billing Data
 --------------------------------------------------------
+
+Billing Dashboards
+~~~~~~~~~~~~~~~~~~
+
+|charts| integreates seemlessly with {+service+}. You can visualize your
+billing data in a billing dashboard.
+
+Billing dashboards contain prebuilt charts that help you monitor your
+{+service+} usage in an organization across different categories and
+periods of time. The insights from your dashboard can help you optimize
+your |service| spending.
+
+.. figure:: /images/atlas-billing-dashboard.png
+   :figwidth: 750px
+   :alt: Atlas Billing Dashboard example.
+
+To create or manage a billing dashboard, see :ref:`billing-dashboards`.
+
+Apply Resource Tags
+~~~~~~~~~~~~~~~~~~~
+
+The {+atlas-admin-api+} provides a |rest|\ful interface that allows you
+to retrieve all your pending invoices with the :oas-atlas-op:`Return All
+Pending Invoices for One Organization </listPendingInvoices>` |api|
+endpoint. The endpoints response body contains the
+``results.lineItems.tags`` field, which you can apply to your resources.
+
+Resource tags can help you categorize your spending and allow you to
+feed the |api| data to reports and external financial operation tools
+they already use. To learn more, see :ref:`configure-resource-tags`.
 
 Billing Quota Management
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -66,7 +108,8 @@ spending in chart and table form, allowing users to analyze costs by
 customizable filters help identify trends and inefficiencies, enabling
 better financial decision-making and resource optimization. You can view
 your usage over the past six months, and access your billing data up to
-the past 18 months.
+the past 18 months. If your organization uses cross-organizational
+billing, you can view billing data across all linked organizations.
 
 The Billing Cost Explorer filters and groups usage data by organization,
 project, {+cluster+}, and service. Each filter contains a :guilabel:`Usage`
