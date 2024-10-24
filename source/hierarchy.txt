@@ -140,7 +140,13 @@ DIAGRAM
 {+service+} {+Cluster+} Size Guide
 ----------------------------------
 
-Use the following {+cluster+} size guide to select a {+cluster+} tier that ensures performance without over-provisioning. 
+Use the following {+cluster+} size guide to select a {+cluster+} tier that ensures performance without over-provisioning.
+
+The {+cluster+}
+size guide uses "t-shirt sizing," a common analogy used in software development and infrastructure to describe capacity planning in a simplified manner, to simplify selecting a {+cluster+} tier. You should
+consider t-shirt sizes as approximate starting points. 
+Sizing a {+cluster+} is an iterative process based on changing resource needs, performance requirements, workload characteristics, and growth
+expectations.
 
 .. important::
    
@@ -151,7 +157,7 @@ Use the following {+cluster+} size guide to select a {+cluster+} tier that ensur
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 20 20 20 20 20 20 20
+   :widths: 10 10 20 20 10 10 10 20
 
    * - T-Shirt Size
      - Cluster Tier
@@ -246,7 +252,12 @@ These examples also apply other recommended configurations, including:
       Create the Organizations
       ~~~~~~~~~~~~~~~~~~~~~~~~
 
-      Run the following command for each business unit:
+      Run the following command for each business unit. Change
+      the IDs and names to use your values::
+
+      .. code-block::
+
+         atlas organizations create ConsumerProducts --ownerId 508bb8f5f11b8e3488a0e99e --apiKeyRole ORG_OWNER --apiKeyDescription consumer-products-key
 
       For more configuration options and info about this example, 
       see :ref:`atlas-organizations-create`.
@@ -440,7 +451,7 @@ After you plan the hierarchy and size for your organizations, projects,
 and {+clusters+}, see the following suggested resources or use the left
 navigation to find features and best practices for each pillar.
 
-- Suggested Resource 1
-- Suggested Resource 2
-- Suggested Resource 3
+- :ref:`arch-center-monitoring-alerts`
+- :ref:`arch-center-network-security`
+- :ref:`arch-center-backups`
 
