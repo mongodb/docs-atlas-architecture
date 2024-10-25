@@ -22,7 +22,7 @@ Billing Data
 
 Tracking and managing cloud spending can be difficult in a large
 organization. While :ref:`cost-saving configurations
-<arch-center-cost-saving-config>` proactively saves money, {+service+}
+<arch-center-cost-saving-config>` proactively save money, {+service+}
 also provides cloud spend governance tools for you to:
 
 - Categorize {+service+} resources based on your organization's billing needs.
@@ -34,13 +34,13 @@ On this page, learn how to use built-in {+service+} tools and
 {+service+} billing data to track, manage, and optimize your cloud
 spending.
 
-{+service+} Features and Best Practices for Billing Data
---------------------------------------------------------
+{+service+} Features for Billing Data
+-------------------------------------
 
 Create Billing Dashboards
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can visualize your billing data in a billing dashboard in |charts|
+You can visualize your billing data in a |charts| billing dashboard
 to help you optimize your |service| spending. Billing dashboards contain
 prebuilt charts that help you monitor your {+service+} usage in an
 organization across different categories and periods of time, and
