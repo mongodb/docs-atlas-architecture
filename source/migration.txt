@@ -20,10 +20,11 @@ Migration
    :depth: 1
    :class: onecol
 
-Migrate data from your on-premises MongoDB deployments to |service| using one of 
+You can migrate data from your on-premises MongoDB deployments to |service| using one of 
 a variety of methods designed to transfer your data securely, accurately, and 
-efficiently, with minimal cutover time. |service| live migration is the method that
-automates the most tasks with the least downtime, but there are other, more manual methods,
+efficiently, with minimal cutover time. We recommend using |service| live migration 
+when possible because it automates the most tasks with the least downtime, but you can use 
+more :ref:`manual methods <arch-center-manual-migration>`
 that accommodate the variety and complexity inherent to database migration. 
 
 Live Migration Overview
@@ -34,7 +35,7 @@ You can pull data from an on-premises MongoDB database or push data using |com|,
 but with either method, |service| live migration includes the following features:
 
 - The migration host always encrypts traffic to the |service| {+cluster+}. To encrypt 
-  data end-to-end, enable |tls| on your source {+cluster+}. Only users with specific 
+  data end-to-end, :manual:`enable TLS on your source {+cluster+} </tutorial/upgrade-cluster-to-ssl/>`. Only users with specific 
   Role-Based Access Control (RBAC) :ref:`roles <authorization>` 
   (such as :authrole:`backup`, :authrole:`readAnyDatabase`, or :authrole:`clusterMonitor`) 
   can initiate live migration. Users authenticate to {+clusters+} using 
