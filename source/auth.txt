@@ -17,7 +17,7 @@ Authorization and Authentication
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: onecol
 
 Authentication is the process of verifying the identity of a client.
