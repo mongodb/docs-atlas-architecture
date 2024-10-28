@@ -294,42 +294,80 @@ These examples also apply other recommended configurations, including:
       .. include:: /includes/shared-settings-clusters-stagingprod.rst
 
 .. tabs::
+   :hidden:
 
-   .. tab:: CLI
-      :tabid: cli
+   .. tab:: Dev and Test Environments
+      :tabid: devtest
 
-      Run the following command to create a database user from a specific
-      group in the Identity Provider. You can manage the user
-      authentication and authorization through the identity provider,
-      Okta. The command also grants the users in the identity provider
-      group ``dbAdmin`` and ``readWrite`` privileges on the |service|
-      {+cluster+}. 
+      .. tabs::
 
-      .. include:: /includes/examples/cli-example-auth-okta.rst 
+         .. tab:: CLI
+            :tabid: cli
 
-      Run the following command to create an :abbr:`OIDC (OpenID
-      Connect)`-compatible identity provider from your federation
-      settings.  
+            Run the following command to create a user authentication
+            with IAM credentials to a specified {+cluster+}. 
+            
+            .. include:: /includes/examples/cli-example-auth-aws-iam-devtest.rst
 
-      .. include:: /includes/examples/cli-example-auth-oidc.rst 
+            Run the following command to create a temporary user with
+            SCRAM authentication.
 
-   .. tab:: Terraform
-      :tabid: Terraform
+            .. include:: /includes/examples/cli-example-auth-temp-user-devtest.rst
 
-      Run the following to set up an :abbr:`OIDC (OpenID Connect)`
-      federated identity provider in |service|, for using it with
-      |azure|. It allows access by using OIDC tokens issued by |azure|
-      Active Directory. 
+         .. tab:: Terraform
+            :tabid: Terraform
 
-      .. include:: /includes/examples/tf-example-auth-oidc.rst
+            Run the following to create a |service| user with username
+            and password authentication.
 
-      Run the following to create an :abbr:`OIDC (OpenID Connect)`
-      federated authentication user. 
+            .. include:: /includes/examples/tf-example-auth-scram-devtest.rst
 
-      .. include::/includes/examples/tf-example-auth-create-oidc-user.rst
+            Run the following to grant users admin rights on the
+            {+cluster+} and project member rights for the projects in the
+            {+cluster+}. 
 
-      Run the following to create a custom role named ``my_custom_role``
-      which allows update, add, and delete operations on any collection
-      in the database named ``myDb``.
+            .. include:: /includes/examples/tf-example-auth-grant-roles-devtest.rst  
 
-      .. include:: /includes/examples/tf-example-auth-create-custom-role.rst
+   .. tab:: Staging and Prod Environments
+      :tabid: stagingprod
+
+      .. tabs::
+
+         .. tab:: CLI
+            :tabid: cli
+
+            Run the following command to create a database user from a specific
+            group in the Identity Provider. You can manage the user
+            authentication and authorization through the identity provider,
+            Okta. The command also grants the users in the identity provider
+            group ``dbAdmin`` and ``readWrite`` privileges on the |service|
+            {+cluster+}. 
+
+            .. include:: /includes/examples/cli-example-auth-okta-stagingprod.rst 
+
+            Run the following command to create an :abbr:`OIDC (OpenID
+            Connect)`-compatible identity provider from your federation
+            settings.  
+
+            .. include:: /includes/examples/cli-example-auth-oidc-stagingprod.rst 
+
+         .. tab:: Terraform
+            :tabid: Terraform
+
+            Run the following to set up an :abbr:`OIDC (OpenID Connect)`
+            federated identity provider in |service|, for using it with
+            |azure|. It allows access by using OIDC tokens issued by |azure|
+            Active Directory. 
+
+            .. include:: /includes/examples/tf-example-auth-oidc-stagingprod.rst
+
+            Run the following to create an :abbr:`OIDC (OpenID Connect)`
+            federated authentication user. 
+
+            .. include::/includes/examples/tf-example-auth-create-oidc-user.rst
+
+            Run the following to create a custom role named ``my_custom_role``
+            which allows update, add, and delete operations on any collection
+            in the database named ``myDb``.
+
+            .. include:: /includes/examples/tf-example-auth-create-custom-role-stagingprod.rst
