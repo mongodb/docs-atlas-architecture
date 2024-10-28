@@ -35,19 +35,6 @@ authentication is distinct from authorization:
   You can manage access to |service-fullname| {+clusters+} by
   configuring authentication. 
 
-  |service-fullname| supports a variety of authentication methods to
-  ensure robust security.  
-
-  - For user authentication, |service| integrates seamlessly with identity
-    providers (IdP) using federated authentication through OpenID Connect
-    (OIDC) or SAML 2.0, and enhances security with Multi-Factor
-    Authentication (MFA). 
-  - For workload authentication, |service| supports OAuth2.0, allowing
-    seamless compatibility with authorization services. Additionally, to
-    meet diverse technical needs, you can utilize x.509 certificates for
-    authentication, following best practices such as credential rotation
-    to maintain a secure environment.
-
 - Authorization determines the verified user's access to resources and
   operations. 
 
@@ -113,17 +100,25 @@ To learn more, see the following:
 Features 
 ~~~~~~~~
 
+|service-fullname| supports a variety of authentication methods to
+ensure robust security.   
+
+- For user authentication, |service| integrates seamlessly with identity
+  providers (IdP) using federated authentication through OpenID Connect
+  (OIDC) or SAML 2.0, and enhances security with Multi-Factor
+  Authentication (MFA). You can also configure username-password
+  authentication by using SCRAM-SHA.
+- For workload authentication, |service| supports OAuth2.0, allowing
+  seamless compatibility with authorization services. Additionally, to
+  meet diverse technical needs, you can utilize x.509 certificates for
+  authentication, following best practices such as credential rotation
+  to maintain a secure environment.
+
 |service| requires all clients to authenticate to access {+atlas-ui+}, 
 |service| database, and {+atlas-admin-api+}. The following
 authentication methods for each |service| resource ensure that
 authentication is both secure and adaptable. |service| provides the
 following authentication mechanisms:
-
-- Username-password authentication by using SCRAM-SHA
-- Multi-Factor authentication 
-- X.509 certificate Authentication
-- |aws| |iam| authentication
-- |oidc| and OAuth authentication
 
 Recommendations for Deployment 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -279,22 +274,7 @@ Examples
 The following examples configure authentication and custom roles using
 |service| :ref:`tools for automation <arch-center-automation>`.
 
-These examples also apply other recommended configurations, including:
-
 .. tabs::
-
-   .. tab:: Dev and Test Environments
-      :tabid: devtest
-
-      .. include:: /includes/shared-settings-clusters-devtest.rst
-
-   .. tab:: Staging and Prod Environments
-      :tabid: stagingprod
-
-      .. include:: /includes/shared-settings-clusters-stagingprod.rst
-
-.. tabs::
-   :hidden:
 
    .. tab:: Dev and Test Environments
       :tabid: devtest
@@ -317,14 +297,62 @@ These examples also apply other recommended configurations, including:
          .. tab:: Terraform
             :tabid: Terraform
 
-            Run the following to create a |service| user with username
+            The following examples demonstrate how to configure
+            authentication and authorization. Before you can create
+            resources with Terraform, you must: 
+
+            - :ref:`Create your paying organization
+              <configure-paying-org>` and :ref:`create an API key
+              <atlas-admin-api-access>` for the paying organization.
+              Store your API key as environment variables by running the
+              following command in the terminal: 
+
+              .. code-block::
+
+                 export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+                 export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+            - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
+
+            Common Files 
+            ~~~~~~~~~~~~
+
+            You must create the following files for each example. Place
+            the files for each example in their own directory. Change
+            the IDs and names to use your values. Then run the commands
+            to initialize Terraform, view the Terraform plan, and apply
+            the changes. 
+
+            variables.tf 
+            ````````````
+
+            .. include:: /includes/examples/tf-example-auth-variables-devtest.rst
+
+            terraform.tfvars 
+            ````````````````
+
+            .. include:: /includes/examples/tf-example-auth-tfvars-devtest.rst
+
+            Authentication Example 
+            ~~~~~~~~~~~~~~~~~~~~~~
+
+            Use the following to create an |service| user with username
             and password authentication.
+
+            main.tf 
+            ```````
 
             .. include:: /includes/examples/tf-example-auth-scram-devtest.rst
 
-            Run the following to grant users admin rights on the
+            Authorization Example 
+            ~~~~~~~~~~~~~~~~~~~~~
+            
+            Use the following to grant users admin rights on the
             {+cluster+} and project member rights for the projects in the
             {+cluster+}. 
+
+            main.tf 
+            ```````
 
             .. include:: /includes/examples/tf-example-auth-grant-roles-devtest.rst  
 
@@ -354,19 +382,65 @@ These examples also apply other recommended configurations, including:
          .. tab:: Terraform
             :tabid: Terraform
 
-            Run the following to set up an :abbr:`OIDC (OpenID Connect)`
+            The following examples demonstrate how to configure
+            authentication and authorization. Before you can create
+            resources with Terraform, you must: 
+
+            - :ref:`Create your paying organization
+              <configure-paying-org>` and :ref:`create an API key
+              <atlas-admin-api-access>` for the paying organization.
+              Store your API key as environment variables by running the
+              following command in the terminal: 
+
+              .. code-block::
+
+                 export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+                 export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+            - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
+
+            Common Files 
+            ~~~~~~~~~~~~
+
+            You must create the following files for each example. Place
+            the files for each example in their own directory. Change
+            the IDs and names to use your values. Then run the commands
+            to initialize Terraform, view the Terraform plan, and apply
+            the changes. 
+
+            variables.tf 
+            ````````````
+
+            .. include:: /includes/examples/tf-example-auth-variables-stagingprod.rst
+
+            terraform.tfvars 
+            ````````````````
+            .. include:: /includes/examples/tf-example-auth-tfvars-stagingprod.rst
+
+            outputs.tf 
+            ``````````
+
+            .. include:: /includes/examples/tf-example-auth-tfoutputs-stagingprod.rst
+
+            Configure Federated Settings for Identity Provider 
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            Use the following to set up an :abbr:`OIDC (OpenID Connect)`
             federated identity provider in |service|, for using it with
             |azure|. It allows access by using OIDC tokens issued by |azure|
             Active Directory. 
 
             .. include:: /includes/examples/tf-example-auth-oidc-stagingprod.rst
 
-            Run the following to create an :abbr:`OIDC (OpenID Connect)`
+            Use the following to create an :abbr:`OIDC (OpenID Connect)`
             federated authentication user. 
 
-            .. include::/includes/examples/tf-example-auth-create-oidc-user.rst
+            .. include:: /includes/examples/tf-example-auth-create-oidc-user-stagingprod.rst
 
-            Run the following to create a custom role named ``my_custom_role``
+            Configure Custom Role 
+            ~~~~~~~~~~~~~~~~~~~~~
+
+            Use the following to create a custom role named ``my_custom_role``
             which allows update, add, and delete operations on any collection
             in the database named ``myDb``.
 

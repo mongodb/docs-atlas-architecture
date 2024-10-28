@@ -2,7 +2,7 @@
    :copyable: true 
 
    resource "mongodbatlas_custom_db_role" "create_role" {
-     project_id = "56fd11f25f23b33ef4c2a331"
+     project_id = var.project_id
      role_name  = "my_custom_role"
 
      actions {
