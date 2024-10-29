@@ -12,7 +12,8 @@ Application and Database Resiliency
    :depth: 1
    :class: onecol
 
-Intro statement
+MongoDB |service| is a modern, highly-performant database that is purpose-built 
+to maintain uptime regardless of infrastructure outages, system maintenance and more.
 
 {+service+} Features and Best Practices for Resiliency
 ------------------------------------------------------
@@ -40,8 +41,8 @@ outages, maintenance windows or any other reason, |service| {+clusters+} self-he
 converting an existing secondary node into your primary node to maintain 
 database availability. 
 
-Maintain Uptime During Maintenance
-``````````````````````````````````
+Maintenance Window Uptime
+`````````````````````````
 
 |service| maintains uptime during scheduled maintenance by applying updates to 
 one node at a time. During this process, it elects a new primary when necessary 
@@ -85,7 +86,6 @@ related to resilience:
 - `Cluster-level timeouts <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-default-read-timeout>`__ for proactive protection against expensive read operations
 
 - Better workload isolation with the `moveCollection command <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-move-collection>`__
-
 
 
 
