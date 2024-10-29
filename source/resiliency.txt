@@ -17,7 +17,77 @@ Intro statement
 {+service+} Features and Best Practices for Resiliency
 ------------------------------------------------------
 
-Content here
+Database Replication
+~~~~~~~~~~~~~~~~~~~~
+
+|service| {+clusters+} consist of a minimum of three nodes and can be increased 
+to any odd number of nodes you require. Data from your application is first written 
+to a primary node, and that data is then incrementally replicated and stored on 
+all secondary nodes within your cluster.
+
+By default, {+cluster+} nodes are distributed across availability zones within 
+one of your chosen cloud provider's availability regions. For example, ...
+
+Self-Healing Deployments
+````````````````````````
+
+|service| {+clusters+} must consist of an odd number of nodes, because only one 
+node can be elected as the primary node to and from which your application writes 
+and reads directly. 
+
+In the event that a primary node is unavailable, because of infrastructure 
+outages, maintenance windows or any other reason, |service| {+clusters+} self-heal by 
+converting an existing secondary node into your primary node to maintain 
+database availability. 
+
+Maintain Uptime During Maintenance
+``````````````````````````````````
+
+|service| maintains uptime during scheduled maintenance by applying updates to 
+one node at a time. During this process, it elects a new primary when necessary 
+just as it does during any other node outage. 
+
+Configurable Read and Write Concerns
+````````````````````````````````````
+
+|service| {+clusters+} eventually replicate all data across all nodes. However, 
+you can configure the number of nodes across which data must be repicated before 
+a read or write operation is reported to have been successful. For example, ... 
+
+Multi-Region and Multi-Cloud Deployments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For increased resiliance, you can choose to deploy |service| {+cluster+} nodes 
+across multiple cloud provider regions or even across multiple cloud providers. 
+For example, if you want to ensure uptime even in the event of your cloud provider 
+experiencing a regional outage you can ... 
+
+Moreover, for even greater resiliancy, or to facilitate specific requirements of 
+your application, you can deploy your |service| {+cluster+} nodes across cloud 
+providers, such that your data is replicated to the greatest possible degree in 
+the cloud. 
+
+Monitoring
+~~~~~~~~~~
+
+
+Building Resilient Applications with {+service+}
+------------------------------------------------
+
+To improve the resiliency of your cluster, upgrade your cluster to MongoDB 8.0. 
+MongoDB 8.0 introduces the following performance improvements and new features 
+related to resilience:
+
+- `Improved memory management <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-upgraded-tcmalloc>`__
+
+- `Operation rejection filters <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-operations-rejection-filters>`__ to reactively mitigate expensive queries
+
+- `Cluster-level timeouts <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-default-read-timeout>`__ for proactive protection against expensive read operations
+
+- Better workload isolation with the `moveCollection command <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-move-collection>`__
+
+
+
 
 Examples
 --------
