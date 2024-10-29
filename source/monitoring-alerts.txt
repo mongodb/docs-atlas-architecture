@@ -76,6 +76,17 @@ Features
        and integrated Terraform resource to configure alerts and alert
        notification.  
 
+   * - Charts 
+     - |service| monitoring charts provide insights into various key
+       metrics, including hardware performance and database operation
+       efficiency. Tools such as real-time performance panels for
+       network and operation visibility, query profilers for tracking
+       efficiency trends, and automated index suggestions allow you to
+       monitor and troubleshoot issues more effectively, driving
+       greater operational efficiency. For example, these charts can
+       help you understand the impact of server restarts and elections
+       on database performance.  
+
    * - Logs 
      - |service| provides logs for each process in the {+cluster+}. Each
        process keeps an account of its activity in its own log file. 
@@ -369,7 +380,7 @@ These examples also apply other recommended configurations, including:
             space on the specified disk. This metric can be used to determine
             if the system is running out of free space. 
 
-            .. include:: /includes/examples/cli-example-metrics-disk.rst
+            .. include:: /includes/examples/cli-example-metrics-disk-devtest.rst
 
             Configure Alerts 
             ~~~~~~~~~~~~~~~~
@@ -377,7 +388,7 @@ These examples also apply other recommended configurations, including:
             Run the following command to create an alert notification to an
             email address when your deployment doesn't have a primary.
 
-            .. include:: /includes/examples/cli-example-alerts-no-primary.rst
+            .. include:: /includes/examples/cli-example-alerts-no-primary-devtest.rst
 
             Monitor Database Performance 
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -385,7 +396,7 @@ These examples also apply other recommended configurations, including:
             Run the following command to enable |service|-managed slow operation threshold
             for your project. 
 
-            .. include:: /includes/examples/cli-example-performance-advisor-enable.rst
+            .. include:: /includes/examples/cli-example-performance-advisor-enable-devtest.rst 
 
             Download Logs 
             ~~~~~~~~~~~~~
@@ -396,16 +407,50 @@ These examples also apply other recommended configurations, including:
             .. include:: /includes/examples/cli-example-download-logs.rst
 
          .. tab:: Terraform
-            :tabid: Terraform 
+            :tabid: terraform 
+
+            Before you can create resources with Terraform, you must:
+
+            - :ref:`Create your paying organization
+              <configure-paying-org>` and :ref:`create an API key
+              <atlas-admin-api-access>` for the paying organization.
+              Store your |api| key as environment variables by running the
+              following command in the terminal: 
+
+              .. code-block::
+
+                 export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+                 export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+            - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__ 
 
             Configure Alerts 
             ~~~~~~~~~~~~~~~~
 
-            Run the following to send an alert notification by email to
-            users with the ``GROUP_CLUSTER_MANAGER`` role when there is a
-            replication lag, which could result in data inconsistencies. 
+            The following examples demonstrate how to configure alerts
+            and alert notifications. You must create the following files
+            for each example. Place the files for each example in their
+            own directory. Change the IDs and names to use your values:
 
-            .. include:: /includes/examples/tf-example-alerts-replication-lag.rst
+            variables.tf 
+            ````````````
+
+            .. include:: /includes/examples/tf-example-monitoring-variables-devtest.rst 
+
+            terraform.tfvars 
+            ````````````````
+
+            .. include:: /includes/examples/tf-example-monitoring-tfvars-devtest.rst
+
+            **Example:** Use the following to send an alert notification
+            by email to users with the ``GROUP_CLUSTER_MANAGER`` role
+            when there is a replication lag, which could result in data
+            inconsistencies.  
+
+            main.tf 
+            ```````
+
+            .. include:: /includes/examples/tf-example-alerts-replication-lag-devtest.rst
 
    .. tab:: Staging and Prod Environments
       :tabid: stagingprod
@@ -433,7 +478,7 @@ These examples also apply other recommended configurations, including:
               are't too high. 
             - SYSTEM CPU - to ensure that the CPU usage is steady. 
 
-            .. include:: /includes/examples/cli-example-metrics-processes.rst
+            .. include:: /includes/examples/cli-example-metrics-processes-stagingprod.rst
 
             Configure Alerts 
             ~~~~~~~~~~~~~~~~
@@ -442,7 +487,7 @@ These examples also apply other recommended configurations, including:
             there are possible connection storms based on the number of
             connections in your project. 
 
-            .. include:: /includes/examples/cli-example-alerts-connection-storms.rst
+            .. include:: /includes/examples/cli-example-alerts-connection-storms-stagingprod.rst
 
             Monitor Database Performance 
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -450,7 +495,7 @@ These examples also apply other recommended configurations, including:
             Run the following command to retrieve the suggested indexes for collections
             experiencing slow queries. 
 
-            .. include:: /includes/examples/cli-example-return-suggested-indexes.rst
+            .. include:: /includes/examples/cli-example-return-suggested-indexes-stagingprod.rst
 
             Download Logs 
             ~~~~~~~~~~~~~
@@ -461,22 +506,65 @@ These examples also apply other recommended configurations, including:
             .. include:: /includes/examples/cli-example-download-logs.rst
 
          .. tab:: Terraform
-            :tabid: Terraform 
+            :tabid: terraform 
+
+            Before you can create resources with Terraform, you must:
+
+            - :ref:`Create your paying organization
+              <configure-paying-org>` and :ref:`create an API key
+              <atlas-admin-api-access>` for the paying organization.
+              Store your |api| key as environment variables by running the
+              following command in the terminal: 
+
+              .. code-block::
+
+                 export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+                 export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+            - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__ 
 
             Configure Alerts 
             ~~~~~~~~~~~~~~~~
 
-            Run the following to send alert notification to third-party
-            services like PagerDuty and Datadog when there is no primary on
-            the replica set for more than 24 hours.   
+            The following examples demonstrate how to configure alerts
+            and alert notifications. You must create the following files
+            for each example. Place these files for each example in their
+            own directory and replace only the ``main.tf`` file. Change
+            the IDs and names to use your values: 
 
-            .. include:: /includes/examples/tf-example-alerts-no-primary.rst  
+            variables.tf 
+            ````````````
 
-            Push Logs to S3 
-            ~~~~~~~~~~~~~~~
+            .. include:: /includes/examples/tf-example-monitoring-variables-stagingprod.rst 
 
-            Run the following to continually push logs from mongod,
-            mongos, and audit logs to an Amazon |s3| bucket. |service| exports
-            logs every 5 minutes.
+            terraform.tfvars 
+            ````````````````
 
-            .. include:: /includes/examples/tf-example-push-logs-to-s3.rst 
+            .. include:: /includes/examples/tf-example-monitoring-tfvars-stagingprod.rst
+
+            **Example 1:** Use the following to integrate with
+            third-party services like Datadog and Prometheus for alert notification.
+
+            main.tf 
+            ```````
+
+            .. include:: /includes/examples/tf-example-third-party-integration-stagingprod.rst 
+
+            **Example 2:** Use the following to send alert notification
+            to third-party services like Datadog and Prometheus when
+            there is no primary on the replica set for more than 24 hours.
+
+            main.tf 
+            ```````
+
+            .. include:: /includes/examples/tf-example-alerts-no-primary-stagingprod.rst  
+
+            **Example 3:** Use the following to send an alert
+            notification by email to users with the
+            ``GROUP_CLUSTER_MANAGER`` role when there is a replication
+            lag, which could result in data inconsistencies.
+
+            main.tf 
+            ```````
+
+            .. include:: /includes/examples/tf-example-alerts-replication-lag-stagingprod.rst

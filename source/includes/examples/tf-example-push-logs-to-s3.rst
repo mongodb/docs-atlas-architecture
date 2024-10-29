@@ -1,7 +1,7 @@
 .. code-block:: 
    :copyable: true 
 
-   resource "mongodbatlas_project" "project-tf" {
+   resource "mongodbatlas_project" "project_tf" {
      name   = var.atlas_project_name
      org_id = var.atlas_org_id
    }
@@ -33,6 +33,6 @@
      project_id = mongodbatlas_push_based_log_export.test.project_id
    }
 
-   output "test" {
+   output "log_export_prefix_path" {
      value = data.mongodbatlas_push_based_log_export.test.prefix_path
    }

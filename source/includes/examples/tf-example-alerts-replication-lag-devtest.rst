@@ -2,7 +2,7 @@
    :copyable: true
 
    resource "mongodbatlas_alert_configuration" "test" {
-     project_id = mongodbatlas_project.atlas-project.id
+     project_id = var.atlas_project_id
      event_type = "REPLICATION_OPLOG_WINDOW_RUNNING_OUT"
      enabled    = true
 
@@ -21,7 +21,7 @@
        value      = "myCluster"
      }
 
-     metric_threshold_config {
+     threshold_config {
        operator    = "LESS_THAN"
        threshold   = 1
        units       = "HOURS"
