@@ -12,7 +12,13 @@ High Availability
    :depth: 1
    :class: onecol
 
-Intro statement
+MongoDB |service| allows you to create cluster configurations that meet your 
+specific availability needs while satisfying your security and compliance 
+requirements. 
+
+Consult this page to plan the appropriate cluster configuration that optimizes 
+your availability and performance while aligning with your enterprise's 
+billing and access needs.
 
 {+service+} Features and Best Practices for High Availability
 -------------------------------------------------------------
@@ -85,11 +91,39 @@ to a second region. Furthermore, a primary node failure shifts the primary out o
 and reads from secondaries always exist in a different region compared to the primary, and may exist 
 outside of the preferred region.
 
+3-Region, 5 Node Replicat Set / Shard (PS - SS - S)
+````````````````````````````````````````````````````
+This topology is a typical multi-regional topology for mission-critical applications that require 
+in-region availability. This topology can tolerate any 2 nodes' failure, tolerate primary node failure 
+while keeping the new primary in the preferred region, and tolerate any 1 region outage. 
+
+This topology, however, experiences higher latency because its majority write concern must replicate 
+to a second region. Furthermore, reads from secondaries always exist in a different region compared 
+to the primary, and may exist outside of the preferred region.
+
+3-Region, 7 Node Replicat Set / Shard (PSS - SSS - S)
+`````````````````````````````````````````````````````
+This topology is a non-typical multi-regional topology for mission-critical applications that require 
+in-region availability. This topology can tolerate any 3 nodes' failure, tolerate primary node failure 
+and a secondary node failure in the preferred region, and tolerate any 1 region outage.
+
+This topology, however, experiences higher latency because its majority write concern must replicate 
+to a second region.
+
+5-Region, 9 Node Replicat Set / Shard (PS - SS - SS - SS - S)
+`````````````````````````````````````````````````````````````
+This topology is a non-typical multi-regional topology for the most availability-demanding applications 
+that require in-region availability. This topology can tolerate any 4 nodes' failure, tolerate primary 
+node failure while keeping the new primary in the preferred region, and tolerate any 2 region outages.
+
+This topology, however, experiences higher latency because its majority write concern must replicate 
+to two additional regions (3 regions in total).
+
 Examples
 --------
 
-The following examples configure high availability deployment topologies using |service|
-:ref:`tools for automation <arch-center-automation>`.
+The following examples configure the Single Region, 3 Node Replica Set / Shard 
+deployment topology using |service| :ref:`tools for automation <arch-center-automation>`.
 
 These examples also apply other recommended configurations, including:
 
