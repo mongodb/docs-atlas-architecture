@@ -22,14 +22,14 @@ Cost-Saving Configurations
 
 |service-fullname| offers comprehensive tools and features to
 effectively manage and control an organization's database costs,
-especially as your usage expands. By providing detailed insights and
-user friendly cost optimization features, {+service+} enables you to
-better understand and streamline your spending.  
+especially as your usage expands. By providing user-friendly cost
+optimization features, {+service+} enables you to better understand and
+streamline your spending.
 
-{+service+} Features and Best Practices for Cost-Saving Configurations
-----------------------------------------------------------------------
+{+service+} Recommendations for Cost-Saving Configurations
+----------------------------------------------------------
 
-.. include:: /includes/billing-optimizations.rst
+.. include:: /includes/cloud-docs/billing-optimizations.rst
 
 Auto-Scaling {+Clusters+}
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,14 +48,7 @@ Users can also specify a range of maximum and minimum {+cluster+} sizes
 that their {+cluster+} can automatically scale to. {+service+} won't
 scale a {+cluster+} if the new tier falls outside a user's specified
 size range or if memory usage would exceed the capacity of the new tier.
-To learn more about {+cluster+} sizes, see
-:ref:`arch-center-cluster-size-guide`.
 
-Billing Quota Management
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-|service| offers real-time notifications when spending nears or exceeds
-set thresholds. You can customize these alerts to be project-specific or
-team-specific, allowing for precise monitoring and control over
-different areas of cloud expenditure. To configure billing alerts, see
-:ref:`configure-alerts`.
+To learn more about the considerations for autoscaling, 
+see :ref:`arch-center-scalability`. To learn more about {+cluster+}
+sizes, see :ref:`arch-center-cluster-size-guide`.
