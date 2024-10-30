@@ -19,8 +19,8 @@ your unique security needs and preferences.
 Use the foundational guidance on this page to plan network security
 configuration for your {+clusters+}.
 
-{+service+} Features and Best Practices for Network Security
-------------------------------------------------------------
+{+service+} Features and Recommendations for Network Security
+-------------------------------------------------------------
 
 Features
 ~~~~~~~~
