@@ -19,9 +19,9 @@ This page:
 - Helps you design a starter landing zone that gives
   prescriptive guidance on:
 
-  - How your teams will implement {+service+} in accordance with both
+  - How your teams can implement {+service+} in accordance with both
     the {+waf+} pillars and your organization's unique requirements.
-  - How {+service+} will fit into your organization's larger ecosystem.
+  - How {+service+} fits into your organization's larger ecosystem.
 
 MongoDB's Professional Services team partners with enterprise
 customers to create custom landing zones for {+service+}. If you're
@@ -37,7 +37,8 @@ What is a Landing Zone?
 A landing zone is a well-architected and pre-configured environment for
 working in the cloud that conforms to your organization's unique
 requirements. A landing zone is often a prerequisite for enterprises to
-move workloads to the cloud, and it is is often provisioned through code using an API or tools like Terraform.
+move workloads to the cloud, and it is is often provisioned
+programatically using an API or tools like Terraform.
 
 An {+service+} landing zone defines how your team will work in
 {+service+}, including the internal settings and tools they should use,
@@ -49,9 +50,10 @@ Why Do You Need a Landing Zone?
 Establishing a landing zone gives you confidence that
 every workload your team deploys aligns with your requirements around
 security, performance, reliability, operational efficiency, and cost
-optimization. You don't want developers on every team following different standards, and designing and sharing out a landing zone helps
+optimization. Designing and sharing out a landing zone helps
 ensure alignment across all teams and stakeholders on how your
-organization will work in {+service+}.
+organization will work in {+service+}, and it prevents developers on 
+all of your teams following different standards.
 
 .. _landing-zone-considerations:
 
@@ -76,8 +78,8 @@ requirements when you create a landing zone:
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-hierarchy`.
    * - Access Controls
-     - Identify MongoDB Atlas Control Plane access controls, and
-       database access controls for both workload and workforce principals. Create a comprehensive list of principals and mechanisms for how you will authenticate and authorize. Define Atlas API key access controls, including authorizations and expiration rules.
+     - Identify MongoDB {+service+} Control Plane access controls, and
+       database access controls for both workload and workforce principals. Create a comprehensive list of principals and mechanisms for how you will authenticate and authorize. Define {+service+} API key access controls, including authorizations and expiration rules.
    * - Change Control and Auditability Requirements
      - Clarify any change control or audit controls requirements. This
        can include change approval processes and tools, along with
@@ -105,7 +107,7 @@ requirements when you create a landing zone:
    * - Data Retention Requirements
      - Identify and record your data retention policies. This may
        require creating a classification for automation, including
-       creation of archive and/or purge automation. In some cases, data
+       creation of archive or purge automation. In some cases, data
        must be preserved for a certain duration, whereas in other cases
        data must be purged after some duration. Identify performance
        characteristics of retrieval of archived records.
@@ -118,9 +120,9 @@ requirements when you create a landing zone:
          Objective (RPO). 
        - Define backup snapshot locations. 
        - Identify Point-in-time restore option selection. 
-       - Define recovery methodologies (i.e., restore, queryable
-         backups, document versioning, region shifting, cloud
-         provider pivot).
+       - Define recovery methodologies such as restore, queryable
+         backups, document versioning, region shifting, and cloud
+         provider pivot.
 
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-backups`.
@@ -132,8 +134,8 @@ requirements when you create a landing zone:
        :ref:`arch-center-monitoring-alerts`.
    * - Integration Requirements
      - Identify requirements for external system integrations, such as
-       Log File ingestion, Change Streams, Atlas Streams, Activity
-       Feed / Audit Log integration, Alerts, and/or Metrics.
+       Log File ingestion, Change Streams, {+service+} Streams, Activity
+       Feed, Audit Log integration, Alerts, and/or Metrics.
    * - Security, Legal, and Compliance Requirements
      - Identify and define any specific security, legal, or compliance
        requirements not clearly articulated within other requirements
@@ -159,7 +161,7 @@ requirements when you create a landing zone:
        :ref:`arch-center-backups`.
    * - Billing Requirements
      - Identify any specific requirements to billing aspects of any
-       systems where definition will drive automation. Consider Atlas
+       systems where definition will drive automation. Consider {+service+}
        cross-org billing, including department charge-backs. Consider
        billing systems integrations.
 
@@ -198,7 +200,7 @@ and adjust it as needed to customize it for your organization.
 .. Customers can download the SVG from Github and edit it.
 
 .. image:: /includes/images/LandingZone.png
-   :alt: "A diagram showing an example Atlas landing zone."
+   :alt: "A diagram showing an example {+service+} landing zone."
    :width: 750px
    :align: center
 
