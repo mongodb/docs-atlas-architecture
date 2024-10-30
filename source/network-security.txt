@@ -12,12 +12,44 @@ Network Security
    :depth: 1
    :class: onecol
 
-Intro statement
+{+service+} is pre-configured with secure default settings. You can
+fine-tune the security features for your database deployments to meet
+your unique security needs and preferences.
+
+Use the foundational guidance on this page to plan network security
+configuration for your {+clusters+}.
 
 {+service+} Features and Best Practices for Network Security
 ------------------------------------------------------------
 
-Content here
+Features
+~~~~~~~~
+
+{+service+} requires TLS/SSL to encrypt the connections to your
+databases. All {+service+} projects with one or more M10+ dedicated
+{+clusters+} receive their own dedicated VPC (or VNet if you use
+|azure|). {+service+} deploys all dedicated clusters inside this VPC
+or VNet. By default, this VPC or VNet allows no inbound access to
+{+service+}, requiring you to explicitly enable access by doing one of
+the following:
+
+- Add public IP addresses to your IP access list
+- Use VPC / VNet peering to add private IP addresses
+- Add private endpoints
+
+If your firewall blocks outbound network connections, you must also
+open outbound access from your application environment to
+{+service+}. You must configure your firewall to allow your
+applications to make outbound connections to TCP traffic on
+{+service+} hosts. This grants your applications access to databases
+stored on {+service+}.
+
+{+service+} {+cluster+} public IPs remain the same in the majority of
+cases of {+cluster+} changes: vertical scaling, topology changes,
+maintenance events, healing events, etc. However, certain topology
+changes – such as a conversion from replica set to sharded cluster, an
+addition of shards, or a region change – will require new IP addresses
+be used.
 
 Examples
 --------
