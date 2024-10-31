@@ -43,7 +43,7 @@ Clusters that you deploy within a single region are spread across availability
 zones within that region, so that they can withstand partial region outages without 
 an interruption of read or write availability. You can optionally choose to spread 
 your clusters across two or more regions for greater resilience and 
-:doc:`workload isolation <create-cluster-multi-region>`.
+:ref:`workload isolation <create-cluster-multi-region>`.
 
 Deploying a cluster to three or more regions ensures that the cluster can withstand 
 a full region-level outage while maintaining read and write availability, provided 
@@ -53,7 +53,7 @@ cluster so that at least two electable members are in at least two data centers 
 your preferred region.
 
 For the best database performance in a worldwide deployment, users can configure a 
-:doc:`global cluster <global-clusters>` which uses location-aware sharding to minimize 
+:ref:`global cluster <global-clusters>` which uses location-aware sharding to minimize 
 read and write latency. If you have geographical storage requirements, you can also 
 ensure that {+service+} stores data in a particular geographical area.
 
