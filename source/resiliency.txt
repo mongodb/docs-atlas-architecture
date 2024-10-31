@@ -75,7 +75,7 @@ Connection Pool Considerations for Performant Applications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Opening database client connections is one of the most resource intensive processes
-involved in maintaining a client connection pool that facilitatesapplication access 
+involved in maintaining a client connection pool that facilitates application access 
 to your |service| {+cluster+}. 
 
 Because of this, it is worth thinking about how and when you would like this 
@@ -92,8 +92,8 @@ database operations.
 Min and Max Pool Size 
 `````````````````````
 
-If your min and max connection pool sizes are similar, the majority of your 
-connections will open at application startup, and in turn the additional load 
+If your minConnection and maxConnection pool sizes are similar, the majority of your 
+connections will open at application startup, and in turn the additional networking load 
 that comes with opening such connections will happen at the same time. However, 
 if there is a large range in size between your min and max pool size, additional 
 connections are opened more frequestly during application runtime. 
