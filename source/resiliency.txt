@@ -27,7 +27,9 @@ to a primary node, and that data is then incrementally replicated and stored on
 all secondary nodes within your cluster.
 
 By default, {+cluster+} nodes are distributed across availability zones within 
-one of your chosen cloud provider's availability regions. For example, ...
+one of your chosen cloud provider's availability regions. For example, if your 
+cluster is deployed to the cloud provider region ``us-east``, |service| deploys 
+nodes to ``us-east-a``, ``us-east-b`` and ``us-east-c`` by default. 
 
 Self-Healing Deployments
 ````````````````````````
@@ -44,50 +46,95 @@ database availability.
 Maintenance Window Uptime
 `````````````````````````
 
-|service| maintains uptime during scheduled maintenance by applying updates to 
-one node at a time. During this process, it elects a new primary when necessary 
-just as it does during any other node outage. 
-
-Configurable Read and Write Concerns
-````````````````````````````````````
-
-|service| {+clusters+} eventually replicate all data across all nodes. However, 
-you can configure the number of nodes across which data must be repicated before 
-a read or write operation is reported to have been successful. For example, ... 
-
-Multi-Region and Multi-Cloud Deployments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-For increased resiliance, you can choose to deploy |service| {+cluster+} nodes 
-across multiple cloud provider regions or even across multiple cloud providers. 
-For example, if you want to ensure uptime even in the event of your cloud provider 
-experiencing a regional outage you can ... 
-
-Moreover, for even greater resiliancy, or to facilitate specific requirements of 
-your application, you can deploy your |service| {+cluster+} nodes across cloud 
-providers, such that your data is replicated to the greatest possible degree in 
-the cloud. 
+|service| maintains uptime during scheduled maintenance by applying updates in 
+a rolling fashion to one node at a time. During this process, it elects a new 
+primary when necessary just as it does during any other unplanned primary node 
+outage.  
 
 Monitoring
 ~~~~~~~~~~
 
+Metrics/logs integrated with 3rd party
 
 Building Resilient Applications with {+service+}
 ------------------------------------------------
 
-To improve the resiliency of your cluster, upgrade your cluster to MongoDB 8.0. 
-MongoDB 8.0 introduces the following performance improvements and new features 
-related to resilience:
+.. include:: /source/includes/cloud-docs/cluster-resilience.rst
 
-- `Improved memory management <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-upgraded-tcmalloc>`__
+Connecting Your Application to |service|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Operation rejection filters <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-operations-rejection-filters>`__ to reactively mitigate expensive queries
+We recommend that you use the most current driver version for your application's 
+programming language whenever possible. And while the default connection string 
+|service| provides is a good place to start, you might want to tune it for 
+performance in the context of your specific application and deployment 
+architecture. Performance tuning is particularly important in the context of 
+enterprise level application deployments. 
 
-- `Cluster-level timeouts <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-default-read-timeout>`__ for proactive protection against expensive read operations
+Connection Pool Considerations for Performant Applications
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Better workload isolation with the `moveCollection command <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-move-collection>`__
+Opening database client connections is one of the most resource intensive processes
+involved in maintaining a client connection pool that facilitatesapplication access 
+to your |service| {+cluster+}. 
 
+Because of this, it is worth thinking about how and when you would like this 
+process of opening client connections to unfold in the context of your specific 
+application. 
 
+For example, if you are scaling your |service| {+cluster+} to meet user demand, 
+consider what the minimum pool size of connections your application will 
+consisently need, so that when the connection pool scales the additional 
+networking and compute load that comes with opening new client connections 
+doesn't undermine your application's time-sensitive need for increased 
+database operations. 
+
+Min and Max Pool Size 
+`````````````````````
+
+If your min and max connection pool sizes are similar, the majority of your 
+connections will open at application startup, and in turn the additional load 
+that comes with opening such connections will happen at the same time. However, 
+if there is a large range in size between your min and max pool size, additional 
+connections are opened more frequestly during application runtime. 
+
+This process of incrementally increasing your connection pool size during 
+application runtime distributes the total workload of connecting clients from 
+your application to |service| over a longer period of time, which often makes it 
+manageable for a given use case, but it is important to note that the associated 
+increase in network load occurs during application runtime, which has 
+the potential to impact perceived database -- and by extension -- application 
+performance for end-users.
+
+Your application's architecture is central to this consideration. If, for example, 
+you deploy your application as microservices in an elastic environment, consider 
+which services should call |service| directly as a means of controlling the 
+dynamic expansion and contraction of your connection pool. 
+
+Optimizing Request Configurations for Distinct Query Types
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Request Timeout
+```````````````
+Almost invariably, workload-specific queries from your application will vary in 
+terms of the amount of time they take to execute in |service| and in terms of 
+the amount of time your application can wait for a response. 
+
+Consider defining query classes that handle categories or buckets of similar 
+request requirements. For example, you can define a query category with a fast 
+timeout for end-user driven requests, a middle tier timeout bucket for general 
+purpose requests, and a long-running query class for things like analytics 
+queries that require the most time to execute in |service|. 
+
+Retryable Database Reads and Writes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Configure Read and Write Concerns 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|service| {+clusters+} eventually replicate all data across all nodes. However, 
+you can configure the number of nodes across which data must be repicated before 
+a read or write operation is reported to have been successful. For example, ...
 
 Examples
 --------
