@@ -114,7 +114,7 @@ dynamic expansion and contraction of your connection pool.
 Optimizing Request Configurations for Distinct Query Types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Request Timeout
+Query Timeout
 ```````````````
 Almost invariably, workload-specific queries from your application will vary in 
 terms of the amount of time they take to execute in |service| and in terms of 
@@ -126,15 +126,24 @@ timeout for end-user driven requests, a middle tier timeout bucket for general
 purpose requests, and a long-running query class for things like analytics 
 queries that require the most time to execute in |service|. 
 
+Query timeout behavior can be set globally in |service| and it can be defined 
+at the query level. 
+
 Retryable Database Reads and Writes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|service| supports retryable read and retryable write operations. When enabled, 
+read and write operations are retried once as a safeguard against intermittent 
+network outages. 
 
 Configure Read and Write Concerns 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |service| {+clusters+} eventually replicate all data across all nodes. However, 
 you can configure the number of nodes across which data must be repicated before 
-a read or write operation is reported to have been successful. For example, ...
+a read or write operation is reported to have been successful. Read concerns and 
+write concerns can be defined globally in |service| and they can be defined at the 
+client level in the connection string. 
 
 Examples
 --------
