@@ -60,7 +60,7 @@ and more. Additionally, |service| integrates easily with `third-party services <
 Building Resilient Applications with {+service+}
 ------------------------------------------------
 
-.. include:: /source/includes/cloud-docs/cluster-resilience.rst
+.. include:: /includes/cloud-docs/cluster-resilience.rst
 
 Connecting Your Application to |service|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

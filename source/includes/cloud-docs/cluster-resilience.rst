@@ -1,9 +1,11 @@
-To improve the resiliency of your {+cluster+}, :ref:`upgrade your
-cluster to MongoDB 8.0 <upgrade-major-MongoDB-version>`. MongoDB 8.0
-introduces the following performance improvements and new features
+To improve the resiliency of your cluster, upgrade your cluster to MongoDB 8.0. 
+MongoDB 8.0 introduces the following performance improvements and new features 
 related to resilience:
 
-- :ref:`Improved memory management <resilient-upgraded-tcmalloc>`
-- :ref:`Operation rejection filters <resilient-operations-rejection-filters>`  to reactively mitigate expensive queries
-- :ref:`Cluster-level timeouts  <resilient-default-read-timeout>` for proactive protection against expensive read operations
-- Better workload isolation with the :ref:`moveCollection command <resilient-move-collection>`
+- `Improved memory management <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-upgraded-tcmalloc>`__
+
+- `Operation rejection filters <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-operations-rejection-filters>`__ to reactively mitigate expensive queries
+
+- `Cluster-level timeouts <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-default-read-timeout>`__ for proactive protection against expensive read operations
+
+- Better workload isolation with the `moveCollection command <https://www.mongodb.com/docs/atlas/resilient-application/#std-label-resilient-move-collection>`__
