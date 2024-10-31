@@ -9,7 +9,7 @@ High Availability
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: onecol
 
 MongoDB |service| allows you to create cluster configurations that meet your 
@@ -20,23 +20,26 @@ Consult this page to plan the appropriate cluster configuration that optimizes
 your availability and performance while aligning with your enterprise's 
 billing and access needs.
 
-{+service+} Features and Best Practices for High Availability
--------------------------------------------------------------
+{+service+} Features and Recommendations for High Availability
+---------------------------------------------------------------
 
-When a new cluster is launched in |service|, a minimum three-node replica set is 
-automatically configured and distributed across availability zones. If a primary 
-member experiences outage, |service| automatically detects this failure and elects 
-a secondary member as a replacement, and promotes this secondary member to become 
-the new primary. |service| then restores or replaces the failing member to ensure 
-that the cluster is returned to its target configuration as soon as possible. The 
-MongoDB client driver also automatically switches all client connections. The 
+Features
+~~~~~~~~
+
+When you launch a new cluster in |service|, {+service+} automatically configures a 
+minimum three-node replica set and distributes it across availability zones. If a 
+primary member experiences an outage, |service| automatically detects this failure 
+and elects a secondary member as a replacement, and promotes this secondary member 
+to become the new primary. |service| then restores or replaces the failing member 
+to ensure that the cluster is returned to its target configuration as soon as possible. 
+The MongoDB client driver also automatically switches all client connections. The 
 entire selection and failover process happens within seconds, without manual 
 intervention. MongoDB optimizes the algorithms used to detect failure and elect a 
 new primary, reducing the failover interval. 
 
 [insert diagram]
 
-Clusters which are deployed within a single region are spread across availability 
+Clusters that you deploy within a single region are spread across availability 
 zones within that region, so that they can withstand partial region outages without 
 an interruption of read or write availability. You can optionally choose to spread 
 your clusters across two or more regions for greater resilience and 
@@ -52,10 +55,10 @@ your preferred region.
 For the best database performance in a worldwide deployment, users can configure a 
 :doc:`global cluster <global-clusters>` which uses location-aware sharding to minimize 
 read and write latency. If you have geographical storage requirements, you can also 
-ensure that data is stored in a particular geographical area.
+ensure that {+service+} stores data in a particular geographical area.
 
-Suggested Deployment Topologies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Recommended Deployment Topologies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Single Region, 3 Node Replica Set / Shard (PSS)
 ````````````````````````````````````````````````
@@ -80,7 +83,7 @@ intervention, such as adding additional nodes to the least-preferred region. Fur
 from secondaries in a specific region is limited to a single node, and there is potential data loss 
 during regional outage.
 
-3-Region, 3 Node Replicat Set / Shard (P - S - S)
+3-Region, 3 Node Replica Set / Shard (P - S - S)
 ``````````````````````````````````````````````````
 This topology is a typical multi-regional topology where high availability and data durability are 
 more important than write latency performance. This topology can tolerate any 1 node failure, any 
@@ -91,7 +94,7 @@ to a second region. Furthermore, a primary node failure shifts the primary out o
 and reads from secondaries always exist in a different region compared to the primary, and may exist 
 outside of the preferred region.
 
-3-Region, 5 Node Replicat Set / Shard (PS - SS - S)
+3-Region, 5 Node Replica Set / Shard (PS - SS - S)
 ````````````````````````````````````````````````````
 This topology is a typical multi-regional topology for mission-critical applications that require 
 in-region availability. This topology can tolerate any 2 nodes' failure, tolerate primary node failure 
@@ -101,7 +104,7 @@ This topology, however, experiences higher latency because its majority write co
 to a second region. Furthermore, reads from secondaries always exist in a different region compared 
 to the primary, and may exist outside of the preferred region.
 
-3-Region, 7 Node Replicat Set / Shard (PSS - SSS - S)
+3-Region, 7 Node Replica Set / Shard (PSS - SSS - S)
 `````````````````````````````````````````````````````
 This topology is a non-typical multi-regional topology for mission-critical applications that require 
 in-region availability. This topology can tolerate any 3 nodes' failure, tolerate primary node failure 
@@ -110,7 +113,7 @@ and a secondary node failure in the preferred region, and tolerate any 1 region 
 This topology, however, experiences higher latency because its majority write concern must replicate 
 to a second region.
 
-5-Region, 9 Node Replicat Set / Shard (PS - SS - SS - SS - S)
+5-Region, 9 Node Replica Set / Shard (PS - SS - SS - SS - S)
 `````````````````````````````````````````````````````````````
 This topology is a non-typical multi-regional topology for the most availability-demanding applications 
 that require in-region availability. This topology can tolerate any 4 nodes' failure, tolerate primary 
@@ -156,34 +159,6 @@ These examples also apply other recommended configurations, including:
          - :atlascli:`Connect from the {+atlas-cli+} 
            </connect-atlas-cli/>` using the steps for :guilabel:`Programmatic Use`.
 
-      Create the Organizations
-      ~~~~~~~~~~~~~~~~~~~~~~~~
-
-      Run the following command for each business unit:
-
-      For more configuration options and info about this example, 
-      see :ref:`atlas-organizations-create`.
-
-      To get the user IDs and organization IDs, see the following
-      commands:
-
-      - :ref:`atlas-organizations-list`
-      - :ref:`atlas-organizations-users-list`
-
-      Create the Projects
-      ~~~~~~~~~~~~~~~~~~~
-
-      Run the following command for each application and environment pair. Change the IDs and names to use your values:
-
-      .. include:: /includes/examples/cli-example-create-projects.rst
-
-      For more configuration options and info about this example, 
-      see :ref:`atlas-projects-create`.
-
-      To get the project IDs, see the following command:
-
-      - :ref:`atlas-projects-list`
-
       Create One Deployment Per Project
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -192,7 +167,7 @@ These examples also apply other recommended configurations, including:
          .. tab:: Dev and Test Environments
             :tabid: devtest
 
-            For your development and testing environments, run the following command for each project that you created. Change
+            For your development and testing environments, run the following command for each project. Change
             the IDs and names to use your values:
 
             .. include:: /includes/examples/cli-example-create-clusters-devtest.rst
@@ -200,13 +175,13 @@ These examples also apply other recommended configurations, including:
          .. tab:: Staging and Prod Environments
             :tabid: stagingprod
 
-            For your staging and production environments, create the following ``cluster.json`` file for each project that you
-            created. Change the IDs and names to use your values:
+            For your staging and production environments, create the following ``cluster.json`` file for each project. 
+            Change the IDs and names to use your values:
 
             .. include:: /includes/examples/cli-json-example-create-clusters.rst
 
             After you create the ``cluster.json`` file, run the
-            following command for each project that you created. The
+            following command for each project. The
             command uses the ``cluster.json`` file to create a cluster.
 
             .. include:: /includes/examples/cli-example-create-clusters-stagingprod.rst 
