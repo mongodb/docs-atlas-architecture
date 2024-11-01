@@ -12,86 +12,108 @@ Compliance
    :depth: 1
    :class: onecol
 
-MongoDB uses a comprehensive compliance and trust program for MongoDB Atlas.
-https://www.mongodb.com/products/platform/trust
 
-MongoDB is committed to delivering the highest levels of standards conformance
-and regulatory compliance as part of our ongoing mission to address the most
-demanding security and privacy requirements of our customers. 
+To help you address security and privacy requirements, MongoDB {+service+}
+aims to deliver the highest levels of standards conformance and regulatory
+compliance. MongoDB offers |atlas-trust|, a comprehensive compliance and
+trust program for MongoDB {+service+}.
 
 This section lists the key considerations that allow you to
-enforce strict compliance controls.
+enforce strict compliance controls for your deployments in {+service+}.
 
 {+service+} Features and Best Practices for Compliance
 ------------------------------------------------------
 
-MongoDB Atlas offers multiple features that allow you to address
-compliance requirements.
+Use the following {+service+} features to address compliance requirements:
 
-- Robust Encryption. Implement encryption to ensure data security and
-  compliance across all stages of data handling:
+- Encryption. 
   
-  - Encrypt data in transit using Transport Layer Security (TLS).
-  - Encrypt data at rest using AES-256 encryption.
-  - Encrypt data in use to ensure privacy and regulatory compliance.
-    
-    MongoDB Atlas supports client-side encryption, allowing you to protect
-    data throughout its lifecycle.
-    
-    You can use Queryable Encryption to secure queries on encrypted data.
-    With queryable encryption, sensitive information remains protected
-    even when users run queries on data.
-    
+  - Implement encryption to ensure data security and compliance
+    across all stages of data handling:
+
+    - Encrypt data in transit using Transport Layer Security (TLS).
+    - Encrypt data at rest using AES-256 encryption.
+    - Encrypt data in use to ensure privacy and regulatory compliance.
+
+  - Use client-side encryption in {+service+} to protect data throughout its lifecycle.
+
+  - Use queryable encryption to secure queries on encrypted data. With
+    queryable encryption, sensitive information remains protected even
+    when users run queries on data.
+
     Choose encryption configurations that support expressive queries.
     Use well-researched non-deterministic encryption schemes to maintain
     a balance between security and functionality.
 
-- Data Sovereignty: MongoDB Atlas simplifies data sovereignty compliance through two key features: 
-  Multi cloud and multi region clusters: As highlighted in the Reliability and Scalability sections below, MongoDB Atlas gives users a choice of 110+
-  cloud regions across the 3 major cloud providers Google Cloud Platform, AWS, and Microsoft Azure. With MongoDB Atlas, users can address data
-  sovereignty concerns by deploying dedicated MongoDB clusters in a specific cloud provider and region of their choice. For example, a European
-  company handling sensitive customer data can choose to deploy their MongoDB cluster in a data center located within the European Union, such as in
-  Frankfurt, Germany, using AWS or another cloud provider. By doing so, the company ensures that all data remains within EU borders and complies with
-  the GDPR (General Data Protection Regulation).
-  
-  Global clusters with zoned sharding: Global clusters enable users to partition their database into distinct zones, each situated in a different geographical location. This feature allows precise control over data storage locations. For example, they can ensure that European customer data remains in Europe, while U.S. customer data is stored in the U.S. This configuration not only aids in compliance with data sovereignty regulations but also enhances performance by reducing latency for users accessing data from their respective regions.
+- Data Sovereignty. {+service+} simplifies data sovereignty compliance
+  through two key features:
 
+  - Multi-cloud and multi-region clusters. Use multi-region and multi-cloud
+    {+clusters+} to distribute data across geographically-diverse regions
+    and cloud providers.
 
-  Compliance with regulations, such as GDPR, CCPA, HIPAA, and PCI-DSS.
-  MongoDB Atlas allows you to use multi-region and multi-cloud clusters
-  to ensure security by distributing data across geographically diverse
-  regions and cloud providers, reducing the risk of localized failures,
-  and ensuring data redundancy. You can also leverage the multi-cloud
-  flexibility, deploying global clusters with zoned sharding to precisely
-  control data storage locations. This approach ensures compliance with
-  local data sovereignty laws while maintaining operational efficiency
-  across different regions.
+    Create {+clusters+} in any of the 110+ cloud regions across the three
+    major cloud providers, |gcp|, |aws|, and |azure|. With {+service+},
+    you can deploy dedicated MongoDB {+clusters+} in a specific cloud
+    provider and region of your choice. This approach increases security,
+    reduces the risk of localized failures, and ensures data redundancy.
 
-- Certifications. MongoDB Atlas has ISO/IEC 27001 and 9001, PCI DSS, HIPAA, GDPR,
-  and FedRAMP certifications. These certifications provide a foundation
-  for meeting industry-specific regulatory requirements. Use these certifications
+    For example, a European company handling sensitive customer data can
+    choose to deploy their MongoDB {+cluster+} in a data center located
+    within the European Union, such as in Frankfurt, Germany, using |aws|
+    or another cloud provider. By doing so, the company ensures that all
+    data remains within EU borders and complies with
+    the GDPR (General Data Protection Regulation).
+
+  - Global {+clusters+} with zoned sharding. Use global {+clusters+} to
+    control data storage locations. You can partition and store data in
+    your database into distinct zones, each situated in a different
+    geographical location. 
+
+    For example, you can store European customer data in Europe, while
+    storing U.S. customer data in the U.S. This allows you to comply with
+    data sovereignty regulations and reduces latency for users accessing
+    data from their respective regions.
+
+- Certifications and compliance with regulations, such as GDPR, CCPA, HIPAA, and PCI-DSS.
+
+  {+service+} has ISO/IEC 27001 and 9001, PCI DSS, HIPAA, GDPR, and FedRAMP
+  certifications. These certifications serve as a foundation for meeting
+  industry-specific regulatory requirements. Use these certifications
   to ensure that your data practices align with necessary compliance demands
   while maintaining robust security controls.
 
-  MongoDB Atlas Compliance and Attestations: MongoDB's data platform undergoes rigorous independent audits to verify its security, privacy, and organizational controls. These audits help ensure that the platform meets a wide range of compliance and regulatory requirements, including those specific to highly regulated industries. MongoDB Atlas has obtained the following certifications:
-ISO/IEC 27001:2022: Global standard for information security management systems.
-ISO/IEC 27017:2015: Global standard for cloud-specific security controls.
-ISO/IEC 27018:2019: Global standard for protecting sensitive data (PII) on the cloud.
-ISO 9001:2015: Globally recognized standard for Quality Management.
-PCI DSS: Requirements for processing and accessing credit card data.
-HIPAA: U.S. privacy regulation safeguarding health information.
-GDPR: Privacy protections for data in the EU and EEA.
-IRAP: Australian government cybersecurity assessment framework.
-TX-RAMP: Texas Risk and Authorization Management Program.
-TISAX: Trusted Information Security Assessment Exchange for automotive industries.
-HDS: French standard for hosting health data (Hébergeur de Données de Santé).
+- MongoDB Atlas Compliance and Attestations. {+service+} data platform
+  undergoes rigorous independent audits to verify its security, privacy,
+  and organizational controls. These audits help ensure that the platform
+  meets compliance and regulatory requirements, including those specific
+  to highly-regulated industries.
+  
+  {+service+}  has obtained the following certifications:
 
-To learn more, visit the MongoDB Trust Program: https://www.mongodb.com/products/platform/trust
+  - ISO/IEC 27001:2022: Global standard for information security management systems.
+  - ISO/IEC 27017:2015: Global standard for cloud-specific security controls.
+  - ISO/IEC 27018:2019: Global standard for protecting sensitive data (PII) on the cloud.
+  - ISO 9001:2015: Globally recognized standard for Quality Management.
+  - PCI DSS: Requirements for processing and accessing credit card data.
+  - HIPAA: U.S. privacy regulation safeguarding health information.
+  - GDPR: Privacy protections for data in the EU and EEA.
+  - IRAP: Australian government cybersecurity assessment framework.
+  - TX-RAMP: Texas Risk and Authorization Management Program.
+  - TISAX: Trusted Information Security Assessment Exchange for automotive industries.
+  - HDS: French standard for hosting health data (Hébergeur de Données de Santé).
 
+  To learn more, visit the |atlas-trust|.
 
-Multi-region snapshot distribution: By adding multiple region snapshot distribution with Atlas Cloud backups, users can also increase resilience by
-distributing backup snapshots and oplogs across geographic regions instead of just storing them in their primary region.This allows them to meet
-compliance requirements of storing backups in different, air gapped geographical locations to ensure disaster recovery in case of regional outages.
+- Multi-region snapshot distribution. Distribute backup snapshots and oplog data
+  across multiple regions. For example, you can satisfy compliance requirements
+  and store backups in different, air-gapped geographical locations to
+  ensure disaster recovery in case of regional outages.
 
-Backup compliance policy: This feature enables organizations to further secure business critical data by preventing all snapshots and oplogs stored in Atlas from being modified or deleted for a predefined retention period by any user, regardless of Atlas role, guaranteeing that their backups are fully WORM (Write Once Read Many) compliant. Only a designated, authorized point of contact can turn off this protection after completing a verification process with MongoDB support.
-
+- Backup compliance policy. Secure business-critical data by preventing all
+  backup snapshots and oplog data stored in {+service+} from being modified
+  or deleted for a predefined retention period by any user, regardless of
+  their {+service+} role. This guarantees that your backups are fully
+  WORM (Write Once Read Many)-compliant. Only a designated, authorized
+  point of contact can turn off this protection after completing a
+  verification process with MongoDB support.
