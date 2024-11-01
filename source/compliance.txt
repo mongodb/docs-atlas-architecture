@@ -119,7 +119,7 @@ stages of data handling.
 
 .. _arch-center-compliance-data-sovereignty:
 
-Data sovereignty
+Data Sovereignty
 ~~~~~~~~~~~~~~~~
 
 {+service+} simplifies data sovereignty compliance through the following features:
@@ -158,8 +158,8 @@ Data sovereignty
 
 .. _arch-center-compliance-backup-distribution:
 
-Backup Snapshot distribution
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Backup Snapshot Distribution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Multi-region snapshot distribution. Distribute backup snapshots and oplog data
 across multiple regions. For example, you can satisfy compliance requirements
