@@ -70,6 +70,34 @@ By actively monitoring your {+clusters+}, you can gain valuable insights into
 query and deployment performance. To learn more about monitoring in |service|, see 
 `Monitor Your Clusters <https://www.mongodb.com/docs/atlas/monitoring-alerts/>`__.
 
+Deployment Resilience Testing
+`````````````````````````````
+
+You can simulate various scenarios that require disaster recovery workflows in 
+order to measure your preparedness for such events. Specifically, with |service| 
+you can `test primary node failover <https://www.mongodb.com/docs/atlas/tutorial/test-resilience/test-primary-failover/#std-label-test-failover>`__
+and `simulate regional outages <https://www.mongodb.com/docs/atlas/tutorial/test-resilience/simulate-regional-outage/#std-label-test-outage>`__. 
+
+Cluster Termination Safeguards
+``````````````````````````````
+
+You can prevent accidental deletion of |service| {+clusters+} by enabling 
+`termination protection <https://www.mongodb.com/docs/atlas/cluster-additional-settings/#termination-protection>`__.
+To delete a cluster that has termination protection enabled, you must first 
+disable termination protection. By default, Atlas disables termination protection 
+for all clusters.
+
+Database Backups
+````````````````
+
+|service| Cloud Backups facilitate cloud backup storage using the native 
+snapshot functionality of cloud service provider on which your {+cluster+} is 
+deployed. For example, if your cluster is deployed to AWS, you can elect to 
+backup your {+cluster+}'s data with snapshots taken at configurable intervals 
+in AWS S3. 
+
+To learn more about database backup and snapshot retrieval, see `Back Up Your Cluster <https://www.mongodb.com/docs/atlas/backup/cloud-backup/overview/>`__. 
+
 Recommendations
 ~~~~~~~~~~~~~~~
 
@@ -159,3 +187,14 @@ a read or write operation is reported to have been successful. You can define
 `write concerns <https://www.mongodb.com/docs/manual/reference/write-concern/>`__ 
 globally in |service|, and you can also define them at the client level in your 
 connection string. 
+
+Disaster Recovery 
+`````````````````
+
+We strongly recommend that you prepare a comprehensive disaster recovery (DR) plan 
+that includes elements such as `data backup policies <https://www.mongodb.com/docs/atlas/backup/cloud-backup/backup-compliance-policy/#std-label-backup-compliance-policy>`__, 
+your designated |rpo|, your designated |rto|, and any automated processes that 
+facilitate alignment with these objectives. 
+
+To learn more about DR with |service|, see 
+`Data Resilience with MongoDB <https://www.mongodb.com/resources/products/capabilities/data-resilience-strategy-with-mongodb-atlas>`__. 
