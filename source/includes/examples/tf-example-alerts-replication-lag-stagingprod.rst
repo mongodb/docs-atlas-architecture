@@ -21,7 +21,7 @@
        value      = "myCluster"
      }
 
-     threshold_config {
+     metric_threshold_config {
        metric_name = "OPLOG_SLAVE_LAG_MASTER_TIME"
        operator    = "GREATER_THAN"
        threshold   = 1
