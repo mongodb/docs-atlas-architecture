@@ -55,7 +55,7 @@ those specific to highly-regulated industries.
 - ISO 9001:2015: Globally recognized standard for Quality Management.
 - PCI DSS: Requirements for processing and accessing credit card data.
 - HIPAA: U.S. privacy regulation safeguarding health information.
-- GDPR: Privacy protections for data in the EU and EEA.
+- GDPR: General Data Protection Regulation in the EU and EEA.
 - IRAP: Australian government cybersecurity assessment framework.
 - TX-RAMP: Texas Risk and Authorization Management Program.
 - TISAX: Trusted Information Security Assessment Exchange for automotive industries.
@@ -142,7 +142,7 @@ Data Sovereignty
   within the European Union, such as in Frankfurt, Germany, using |aws|
   or another cloud provider. By doing so, the company ensures that all
   data remains within EU borders and complies
-  with the GDPR (General Data Protection Regulation).
+  with the GDPR.
 
 - Global {+clusters+} with zoned sharding.
 
