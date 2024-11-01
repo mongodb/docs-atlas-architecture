@@ -109,7 +109,7 @@ stages of data handling.
 
   You can set up {+qe+} using the following mechanisms:
 
-  - :manual:`Automatic Encryption <csfle-tutorial-automatic-encryption>``
+  - :manual:`Automatic Encryption <csfle-tutorial-automatic-encryption>`
     enables you to perform encrypted read and write operations without
     having to add explicit calls to encrypt and decrypt fields.
   - :manual:`Manual Encryption <qe-tutorials-manual-encryption>` enables
@@ -175,7 +175,9 @@ Backup Compliance Policy
 Use |bcp| in {+service+} to secure business-critical data. You can prevent
 all backup snapshots and oplog data stored in {+service+} from being modified
 or deleted for a predefined retention period by any user, regardless of their
-{+service+} role. This guarantees that your backups are fully
-WORM (Write Once Read Many)-compliant. Only a designated, authorized point
-of contact can turn off this protection after completing a verification
-process with MongoDB support. To learn more, see :atlas:`Atlas Backups Compliance Policy <atlas-backups-compliancePolicy>`.
+{+service+} role.
+
+This guarantees that your backups are fully WORM (Write Once Read Many)-compliant.
+Only a designated, authorized point of contact can turn off this protection
+after completing a verification process with MongoDB support. To learn more,
+see :atlas:`Atlas Backups Compliance Policy <atlas-backups-compliancePolicy>`.
