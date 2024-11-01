@@ -14,7 +14,7 @@ Compliance
 
 To help you address security and privacy requirements, MongoDB {+service+}
 aims to deliver the highest levels of standards conformance and regulatory
-compliance. MongoDB offers |atlas-trust|, a comprehensive compliance and
+compliance. MongoDB offers the |atlas-trust|, a comprehensive compliance and
 trust program for MongoDB {+service+}.
 
 This section lists the key considerations that allow you to
