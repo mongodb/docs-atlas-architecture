@@ -6,6 +6,14 @@ Backups
 
 .. default-domain:: mongodb
 
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: atlas architecture center
+   :description: Learn the best practices for configuring backups for you Atlas cluster.
+
 .. contents:: On this page
    :local:
    :backlinks: none
@@ -193,7 +201,8 @@ Examples
 The following examples enable backup and restore operations using |service|
 :ref:`tools for automation <arch-center-automation>`.
 
-These examples apply only for staging and production environments.
+These examples apply only for staging and production environments where
+backup is enabled for the {+cluster+}.
 
 .. tabs::
 
@@ -221,13 +230,55 @@ These examples apply only for staging and production environments.
 
    .. tab:: Terraform
       :tabid: Terraform
+ 
+      The following examples demonstrate how to configure backups during
+      deployment. Before you can create resources with Terraform,
+      you must:  
 
-      Run the following to configure a backup schedule for the
+      - :ref:`Create your paying organization <configure-paying-org>`
+        and :ref:`create an API key <atlas-admin-api-access>` for the
+        paying organization. Store your API key as environment variables
+        by running the following command in the terminal: 
+
+        .. code-block::
+
+           export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+           export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+      - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__.
+
+      Common Files 
+      ~~~~~~~~~~~~
+
+      You must create the following files for each example. Place the
+      files for each example in their own directory. Change the IDs and
+      names to use your values. Then run the commands to initialize
+      Terraform, view the Terraform plan, and apply the changes. 
+
+      variables.tf 
+      ````````````
+
+      .. include:: /includes/examples/tf-example-backup-variables.rst
+
+
+      Configure Backup Schedule for the {+Cluster+} 
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Use the following to configure a backup schedule for the
       {+cluster+}. 
+
+      main.tf 
+      ```````
 
       .. include:: /includes/examples/tf-example-backup-snapshot-schedule.rst
 
-      Run the following to configure cloud backup snapshot and PIT restore
+      Configure Backup and PIT Restore for the {+Cluster+}
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Use the following to configure cloud backup snapshot and PIT restore
       job.
+
+      main.tf 
+      ```````
       
       .. include:: /includes/examples/tf-example-backup-snapshot-pit-restore.rst
