@@ -12,7 +12,6 @@ Compliance
    :depth: 1
    :class: onecol
 
-
 To help you address security and privacy requirements, MongoDB {+service+}
 aims to deliver the highest levels of standards conformance and regulatory
 compliance. MongoDB offers |atlas-trust|, a comprehensive compliance and
@@ -26,94 +25,155 @@ enforce strict compliance controls for your deployments in {+service+}.
 
 Use the following {+service+} features to address compliance requirements:
 
-- Encryption. 
+- :ref:`arch-center-compliance-certs`
+- :ref:`arch-center-compliance-encryption`
+- :ref:`arch-center-compliance-data-sovereignty`
+- :ref:`arch-center-compliance-backup-distribution`
+- :ref:`arch-center-compliance-backup-compliance-policy`
+
+.. _arch-center-compliance-certs:
+
+Certifications and Compliance with GDPR, CCPA, HIPAA, PCI-DSS, and Other Regulations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+{+service+} has ISO/IEC 27001 and 9001, PCI DSS, HIPAA, GDPR, and FedRAMP
+certifications. These certifications serve as a foundation for meeting
+industry-specific regulatory requirements. Use these certifications
+to ensure that your data practices align with necessary compliance demands
+while maintaining robust security controls.
+
+{+service+} data platform undergoes rigorous independent audits to verify
+its security, privacy, and organizational controls. These audits help ensure
+that the platform  meets compliance and regulatory requirements, including
+those specific to highly-regulated industries.
+
+{+service+} maintains the following certifications:
+
+- ISO/IEC 27001:2022: Global standard for information security management systems.
+- ISO/IEC 27017:2015: Global standard for cloud-specific security controls.
+- ISO/IEC 27018:2019: Global standard for protecting sensitive data (PII) on the cloud.
+- ISO 9001:2015: Globally recognized standard for Quality Management.
+- PCI DSS: Requirements for processing and accessing credit card data.
+- HIPAA: U.S. privacy regulation safeguarding health information.
+- GDPR: Privacy protections for data in the EU and EEA.
+- IRAP: Australian government cybersecurity assessment framework.
+- TX-RAMP: Texas Risk and Authorization Management Program.
+- TISAX: Trusted Information Security Assessment Exchange for automotive industries.
+- HDS: French standard for hosting health data (Hébergeur de Données de Santé).
+
+To learn more, visit the |atlas-trust|.
+
+.. _arch-center-compliance-encryption:
+
+Encryption
+~~~~~~~~~~
+
+Implement encryption to ensure data security and compliance across all
+stages of data handling.
+
+- By default, |service| encrypts data in transit. To ensure data privacy and
+  regulatory compliance, |service| requires |tls-ssl| to encrypt the connections
+  to your databases. In addition, you can configure SSL or TLS OCSP certificate
+  revocation checking. To learn more, see :atlas:`oscp-cert-check`.
+
+- By default, |service| encrypts all data at rest. |service| uses |AES-256|
+  encryption to encrypt all data stored in |s3| buckets in your |service|
+  {+database-deployments+}.
+  In addition, |service| supports using |aws| |kms|, Azure Key Vault, and |gcp| to
+  encrypt storage engines and cloud provider backups. To learn more, see
+  :atlas:`Encryption at Rest using your Key Management 
+  <security-kms-encryption>`. 
+
+- Use :manual:`queryable encryption </core/queryable-encryption/>` to secure
+  queries on encrypted data. With queryable encryption, sensitive information
+  remains protected even when users run queries on data. 
+
+  Use well-researched non-deterministic encryption schemes to maintain
+  a balance between security and functionality.
+
+  With {+qe+}, you can perform the following tasks:
+
+  - Encrypt sensitive data fields from the client-side.
+  - Store sensitive data fields as fully randomized encrypted data on the database 
+    server-side.
+  - Run expressive queries on the encrypted data. Choose encryption configurations
+    that support expressive queries on the encrypted data.
+
+  MongoDB completes these tasks without the server having knowledge of the data
+  it's processing.
+
+  Sensitive data is encrypted throughout its lifecycle, in-transit, at-rest, in-use,
+  in logs, and backups. The data is only ever decrypted on the client-side,
+  since only you have access to the encryption keys.
+
+  You can set up {+qe+} using the following mechanisms:
+
+  - :manual:`Automatic Encryption <csfle-tutorial-automatic-encryption>``
+    enables you to perform encrypted read and write operations without
+    having to add explicit calls to encrypt and decrypt fields.
+  - :manual:`Manual Encryption <qe-tutorials-manual-encryption>` enables
+    you to perform encrypted read and write operations through your MongoDB
+    driver's encryption library. You must specify the logic for encryption
+    with this library throughout your application.
+
+.. _arch-center-compliance-data-sovereignty:
+
+Data sovereignty
+~~~~~~~~~~~~~~~~
+
+{+service+} simplifies data sovereignty compliance through the following features:
+
+- Multi-cloud and multi-region {+clusters+}.
+
+  Use multi-region and multi-cloud {+clusters+} to distribute data across
+  geographically-diverse regions and cloud providers. To learn more,
+  see :atlas:`create-cluster-multi-region`.
+
+  Create {+clusters+} in any of the 110+ cloud regions across the three
+  major cloud providers, |gcp|, |aws|, and |azure|. With {+service+},
+  you can deploy dedicated MongoDB {+clusters+} in a specific cloud
+  provider and region of your choice. This approach increases security,
+  reduces the risk of localized failures, and ensures data redundancy.
+
+  For example, a European company handling sensitive customer data can
+  choose to deploy their MongoDB {+cluster+} in a data center located
+  within the European Union, such as in Frankfurt, Germany, using |aws|
+  or another cloud provider. By doing so, the company ensures that all
+  data remains within EU borders and complies
+  with the GDPR (General Data Protection Regulation).
+
+- Global {+clusters+} with zoned sharding.
+
+  Use global {+clusters+} to control data storage locations. You can
+  partition and store data in your database into distinct zones, each
+  situated in a different geographical location. To learn more,
+  see :atlas:`global-clusters`.
   
-  - Implement encryption to ensure data security and compliance
-    across all stages of data handling:
+  For example, you can store European customer data in Europe, while
+  storing U.S. customer data in the U.S. This allows you to comply with
+  data sovereignty regulations and reduces latency for users accessing
+  data from their respective regions.
 
-    - Encrypt data in transit using Transport Layer Security (TLS).
-    - Encrypt data at rest using AES-256 encryption.
-    - Encrypt data in use to ensure privacy and regulatory compliance.
+.. _arch-center-compliance-backup-distribution:
 
-  - Use client-side encryption in {+service+} to protect data throughout its lifecycle.
-
-  - Use queryable encryption to secure queries on encrypted data. With
-    queryable encryption, sensitive information remains protected even
-    when users run queries on data.
-
-    Choose encryption configurations that support expressive queries.
-    Use well-researched non-deterministic encryption schemes to maintain
-    a balance between security and functionality.
-
-- Data Sovereignty. {+service+} simplifies data sovereignty compliance
-  through two key features:
-
-  - Multi-cloud and multi-region clusters. Use multi-region and multi-cloud
-    {+clusters+} to distribute data across geographically-diverse regions
-    and cloud providers.
-
-    Create {+clusters+} in any of the 110+ cloud regions across the three
-    major cloud providers, |gcp|, |aws|, and |azure|. With {+service+},
-    you can deploy dedicated MongoDB {+clusters+} in a specific cloud
-    provider and region of your choice. This approach increases security,
-    reduces the risk of localized failures, and ensures data redundancy.
-
-    For example, a European company handling sensitive customer data can
-    choose to deploy their MongoDB {+cluster+} in a data center located
-    within the European Union, such as in Frankfurt, Germany, using |aws|
-    or another cloud provider. By doing so, the company ensures that all
-    data remains within EU borders and complies with
-    the GDPR (General Data Protection Regulation).
-
-  - Global {+clusters+} with zoned sharding. Use global {+clusters+} to
-    control data storage locations. You can partition and store data in
-    your database into distinct zones, each situated in a different
-    geographical location. 
-
-    For example, you can store European customer data in Europe, while
-    storing U.S. customer data in the U.S. This allows you to comply with
-    data sovereignty regulations and reduces latency for users accessing
-    data from their respective regions.
-
-- Certifications and compliance with regulations, such as GDPR, CCPA, HIPAA, and PCI-DSS.
-
-  {+service+} has ISO/IEC 27001 and 9001, PCI DSS, HIPAA, GDPR, and FedRAMP
-  certifications. These certifications serve as a foundation for meeting
-  industry-specific regulatory requirements. Use these certifications
-  to ensure that your data practices align with necessary compliance demands
-  while maintaining robust security controls.
-
-- MongoDB Atlas Compliance and Attestations. {+service+} data platform
-  undergoes rigorous independent audits to verify its security, privacy,
-  and organizational controls. These audits help ensure that the platform
-  meets compliance and regulatory requirements, including those specific
-  to highly-regulated industries.
-  
-  {+service+}  has obtained the following certifications:
-
-  - ISO/IEC 27001:2022: Global standard for information security management systems.
-  - ISO/IEC 27017:2015: Global standard for cloud-specific security controls.
-  - ISO/IEC 27018:2019: Global standard for protecting sensitive data (PII) on the cloud.
-  - ISO 9001:2015: Globally recognized standard for Quality Management.
-  - PCI DSS: Requirements for processing and accessing credit card data.
-  - HIPAA: U.S. privacy regulation safeguarding health information.
-  - GDPR: Privacy protections for data in the EU and EEA.
-  - IRAP: Australian government cybersecurity assessment framework.
-  - TX-RAMP: Texas Risk and Authorization Management Program.
-  - TISAX: Trusted Information Security Assessment Exchange for automotive industries.
-  - HDS: French standard for hosting health data (Hébergeur de Données de Santé).
-
-  To learn more, visit the |atlas-trust|.
+Backup Snapshot distribution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Multi-region snapshot distribution. Distribute backup snapshots and oplog data
   across multiple regions. For example, you can satisfy compliance requirements
   and store backups in different, air-gapped geographical locations to
-  ensure disaster recovery in case of regional outages.
+  ensure disaster recovery in case of regional outages. To learn more,
+  see :atlas:`snapshot-distribution`.
 
-- Backup compliance policy. Secure business-critical data by preventing all
-  backup snapshots and oplog data stored in {+service+} from being modified
-  or deleted for a predefined retention period by any user, regardless of
-  their {+service+} role. This guarantees that your backups are fully
-  WORM (Write Once Read Many)-compliant. Only a designated, authorized
-  point of contact can turn off this protection after completing a
-  verification process with MongoDB support.
+.. _arch-center-compliance-backup-compliance-policy:
+
+Backup Compliance Policy
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use |bcp| in {+service+} to secure business-critical data. You can prevent
+all backup snapshots and oplog data stored in {+service+} from being modified
+or deleted for a predefined retention period by any user, regardless of their
+{+service+} role. This guarantees that your backups are fully
+WORM (Write Once Read Many)-compliant. Only a designated, authorized point
+of contact can turn off this protection after completing a verification
+process with MongoDB support. To learn more, see :atlas:`atlas-backups-compliancePolicy`.
