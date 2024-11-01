@@ -9,7 +9,7 @@ Backups
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: onecol
 
 |service-fullname| provides fully managed and customizable backups to
@@ -20,7 +20,7 @@ ensure data retention and recovery:
   storage. These snapshots are always incremental in nature and leverage
   the cloud provider's underlying backup snapshot mechanism for low cost
   and fast restores. You choose a backup policy that specifies a certain
-  number of daily, weekly, and monthly snapshots 
+  number of daily, weekly, and monthly snapshots.
 - Continuous Cloud Backups: This is an additive feature to the cloud
   backups. It captures the full oplog for a specified window, recording 
   all changes between snapshots, which is then replayed at the time of
@@ -190,10 +190,10 @@ effectively manage costs while maintaining secure and reliable backups.
 Examples
 --------
 
-The following examples backup and restore operations using |service|
+The following examples enable backup and restore operations using |service|
 :ref:`tools for automation <arch-center-automation>`.
 
-These examples only apply for staging and production environments.
+These examples apply only for staging and production environments.
 
 .. tabs::
 
