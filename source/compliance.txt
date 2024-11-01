@@ -74,7 +74,8 @@ stages of data handling.
 - By default, |service| encrypts data in transit. To ensure data privacy and
   regulatory compliance, |service| requires |tls-ssl| to encrypt the connections
   to your databases. In addition, you can configure SSL or TLS OCSP certificate
-  revocation checking. To learn more, see :atlas:`oscp-cert-check`.
+  revocation checking. To learn more,
+  see :atlas:`OCSP Certificate Revocation Check <oscp-cert-check>`.
 
 - By default, |service| encrypts all data at rest. |service| uses |AES-256|
   encryption to encrypt all data stored in |s3| buckets in your |service|
@@ -127,7 +128,8 @@ Data sovereignty
 
   Use multi-region and multi-cloud {+clusters+} to distribute data across
   geographically-diverse regions and cloud providers. To learn more,
-  see :atlas:`create-cluster-multi-region`.
+  see :atlas:`Create Multi-Cloud Multi-Region MongoDB Deployments for High
+  Availability and Workload Isolation <create-cluster-multi-region>`.
 
   Create {+clusters+} in any of the 110+ cloud regions across the three
   major cloud providers, |gcp|, |aws|, and |azure|. With {+service+},
@@ -147,7 +149,7 @@ Data sovereignty
   Use global {+clusters+} to control data storage locations. You can
   partition and store data in your database into distinct zones, each
   situated in a different geographical location. To learn more,
-  see :atlas:`global-clusters`.
+  see :atlas:`Global Clusters <global-clusters>`.
   
   For example, you can store European customer data in Europe, while
   storing U.S. customer data in the U.S. This allows you to comply with
@@ -159,11 +161,11 @@ Data sovereignty
 Backup Snapshot distribution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Multi-region snapshot distribution. Distribute backup snapshots and oplog data
-  across multiple regions. For example, you can satisfy compliance requirements
-  and store backups in different, air-gapped geographical locations to
-  ensure disaster recovery in case of regional outages. To learn more,
-  see :atlas:`snapshot-distribution`.
+Multi-region snapshot distribution. Distribute backup snapshots and oplog data
+across multiple regions. For example, you can satisfy compliance requirements
+and store backups in different, air-gapped geographical locations to
+ensure disaster recovery in case of regional outages. To learn more,
+see :atlas:`Snapshot Distribution <snapshot-distribution>`.
 
 .. _arch-center-compliance-backup-compliance-policy:
 
@@ -176,4 +178,4 @@ or deleted for a predefined retention period by any user, regardless of their
 {+service+} role. This guarantees that your backups are fully
 WORM (Write Once Read Many)-compliant. Only a designated, authorized point
 of contact can turn off this protection after completing a verification
-process with MongoDB support. To learn more, see :atlas:`atlas-backups-compliancePolicy`.
+process with MongoDB support. To learn more, see :atlas:`Atlas Backups Compliance Policy <atlas-backups-compliancePolicy>`.
