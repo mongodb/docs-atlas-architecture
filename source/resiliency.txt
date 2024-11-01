@@ -29,11 +29,11 @@ Database Replication
 |service| {+clusters+} consist of a minimum of three nodes, and you can increase
 the node count to any odd number of nodes you require. |service| first writes data 
 from your application to a primary node, and then |service| incrementally replicates
-and stores that data on all secondary nodes within your cluster.
+and stores that data across all secondary nodes within your {+cluster+}.
 
-By default, |service| distributres {+cluster+} nodes across availability zones within 
+By default, |service| distributes {+cluster+} nodes across availability zones within 
 one of your chosen cloud provider's availability regions. For example, if your 
-cluster is deployed to the cloud provider region ``us-east``, |service| deploys 
+{+cluster+} is deployed to the cloud provider region ``us-east``, |service| deploys 
 nodes to ``us-east-a``, ``us-east-b`` and ``us-east-c`` by default. 
 
 To learn more about high availability and node distribution across regions, 
@@ -47,8 +47,8 @@ node can be elected as the primary node to and from which your application write
 and reads directly. 
 
 In the event that a primary node is unavailable, because of infrastructure 
-outages, maintenance windows or any other reason, |service| {+clusters+} self-heal by 
-converting an existing secondary node into your primary node to maintain 
+outages, maintenance windows or any other reason, |service| {+clusters+} self-heal 
+by converting an existing secondary node into your primary node to maintain 
 database availability. 
 
 Maintenance Window Uptime
@@ -63,8 +63,12 @@ Monitoring
 ``````````
 
 |service| provides `built-in tools <https://www.mongodb.com/docs/atlas/monitoring-alerts/>`__ 
-to monitor cluster performance, query performance and more. Additionally, |service| 
+to monitor {+cluster+} performance, query performance and more. Additionally, |service| 
 integrates easily with `third-party services <https://www.mongodb.com/docs/atlas/tutorial/third-party-service-integrations/#std-label-third-party-integrations>`__. 
+
+By actively monitoring your {+clusters+}, you can gain valuable insights into 
+query and deployment performance. To learn more about monitoring in |service|, see 
+`Monitor Your Clusters <https://www.mongodb.com/docs/atlas/monitoring-alerts/>`__.
 
 Recommendations
 ~~~~~~~~~~~~~~~
@@ -122,9 +126,6 @@ you deploy your application as microservices in an elastic environment, consider
 which services should call |service| directly as a means of controlling the 
 dynamic expansion and contraction of your connection pool. 
 
-Optimizing Request Configurations for Distinct Query Types
-```````````````````````````````````````````````````````````
-
 Query Timeout
 `````````````
 Almost invariably, workload-specific queries from your application will vary in 
@@ -138,7 +139,7 @@ purpose requests, and a long-running query class for things like analytics
 queries that require the most time to execute in |service|. 
 
 You can set `query timeout <https://www.mongodb.com/docs/manual/tutorial/query-documents/specify-query-timeout/>`__ 
-behavior globally in |service|, and it can also be defined at the query level. 
+behavior globally in |service|, and you can also define it at the query level. 
 
 Retryable Database Reads and Writes
 ```````````````````````````````````
