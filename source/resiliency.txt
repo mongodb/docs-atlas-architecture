@@ -68,7 +68,8 @@ integrates easily with `third-party services <https://www.mongodb.com/docs/atlas
 
 By actively monitoring your {+clusters+}, you can gain valuable insights into 
 query and deployment performance. To learn more about monitoring in |service|, see 
-`Monitor Your Clusters <https://www.mongodb.com/docs/atlas/monitoring-alerts/>`__.
+`Monitor Your Clusters <https://www.mongodb.com/docs/atlas/monitoring-alerts/>`__ 
+and :ref:`Monitoring and Alerts <arch-center-monitoring-alerts>`.
 
 Deployment Resilience Testing
 `````````````````````````````
@@ -100,6 +101,9 @@ To learn more about database backup and snapshot retrieval, see `Back Up Your Cl
 
 Recommendations
 ~~~~~~~~~~~~~~~
+
+Use MongoDB 8.0
+````````````````
 
 .. include:: /includes/cloud-docs/cluster-resilience.rst
 
