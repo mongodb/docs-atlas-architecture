@@ -12,12 +12,13 @@ Network Security
    :depth: 1
    :class: onecol
 
-{+service+} is pre-configured with secure default settings. You can
-fine-tune the security features for your database deployments to meet
-your unique security needs and preferences.
+By default, {+service+} secures your database deployments through the
+use of mandatory TLS/SSL connection encryption, and a VPC-first,
+minimum-access default policy. You can further configure these
+protections to meet your unique security needs and preferences.
 
-Use the foundational guidance on this page to plan network security
-configuration for your {+clusters+}.
+Use the foundational guidance on this page to plan the network
+security configuration for your {+clusters+}.
 
 {+service+} Features and Recommendations for Network Security
 -------------------------------------------------------------
@@ -25,37 +26,123 @@ configuration for your {+clusters+}.
 Features
 ~~~~~~~~
 
-{+service+} requires TLS/SSL to encrypt the connections to your
-databases. All {+service+} projects with one or more M10+ dedicated
-{+clusters+} receive their own dedicated VPC (or VNet if you use
+{+service+} enforces TLS/SSL encryption for all connections to your
+databases.
+
+All {+service+} projects with one or more M10+ dedicated {+clusters+}
+receive their own dedicated VPC (or VNet if you use
 |azure|). {+service+} deploys all dedicated clusters inside this VPC
 or VNet. By default, this VPC or VNet allows no inbound access to
-{+service+}, requiring you to explicitly enable access by doing one of
-the following:
+{+service+}, requiring you to explicitly enable access by one of the
+following methods:
 
 - Add public IP addresses to your IP access list
 - Use VPC / VNet peering to add private IP addresses
 - Add private endpoints
 
-If your firewall blocks outbound network connections, you must also
-open outbound access from your application environment to
-{+service+}. You must configure your firewall to allow your
-applications to make outbound connections to TCP traffic on
-{+service+} hosts. This grants your applications access to databases
-stored on {+service+}.
+TLS
+```
+
+{+service+} enforces mandatory TLS encryption of connections to your
+databases. TLS 1.2 is the default protocol; you can select TLS 1.1 or
+TLS 1.0 if necessary. Note that in situations where TLS 1.1 or later
+is available, MongoDB 4.0 or later doesn't support TLS 1.0.
+
+IP Access Lists
+```````````````
+
+You can configure IP Access Lists to limit which IP addresses can
+attempt authentication to your database. Unless you have added the
+relevant IP addresses or CIDR blocks covering the relevant IP
+addresses to your access list, application servers and other clients
+cannot access your {+service+} {+clusters+}.
+
+You can configure temporary access list entries that expire
+automatically after a user-defined period.
+
+You can create one access list per project.
+
+Firewall Configuration
+``````````````````````
+
+If you use a firewall that blocks outbound network connections, you
+must also configure your firewall to allow your applications to make
+outbound connections to TCP traffic on {+service+} hosts. This grants
+your applications access to databases stored on {+service+}.
 
 {+service+} {+cluster+} public IPs remain the same in the majority of
 cases of {+cluster+} changes: vertical scaling, topology changes,
 maintenance events, healing events, etc. However, certain topology
 changes – such as a conversion from replica set to sharded cluster, an
-addition of shards, or a region change – will require new IP addresses
-be used.
+addition of shards, or a region change – require that you use new IP
+addresses.
+
+VPC/VNet Peering
+````````````````
+
+Network peering allows you to connect your own VPCs with an Atlas VPC,
+routing traffic privately and isolating your data flow from the public
+internet. {+service+} does not need outbound access to peer VPCs
+except when you have configured LDAPS for authentication. In this
+case, {+service+} {+clusters+} must be able to connect to the LDAPS
+endpoint inside your peer VPC over the LDAPS protocol.
+
+Recommendations
+~~~~~~~~~~~~~~~
+
+IP Access Lists
+```````````````
+
+We recommend using temporary access list entries in situations where
+team members require access to your environment from temporary work
+locations.
+
+To reduce the attack surface of your {+service+} projects, we
+recommend defining IP access list entries covering the smallest
+network segments possible. To do this, favor individual ``/32``
+addresses where possible, and avoid large CIDR blocks.
+
+VPC/VNet Peering
+````````````````
+
+To maintain tight network trust boundaries, configure mitigations such
+as security groups and network ACLs to prevent inbound access to
+systems inside your application VPCs from the {+service+}-side VPC.
+
+If your applications rely on VPCs containing extensive unisolated
+infrastructure, you can provide an extra layer of security to these
+systems by deploying new VPCs for those applications that require
+access to {+service+}. These new VPCs can in turn be peered to both
+your legacy VPCs and {+service+} VPCs, leveraging the non-transitivity
+of VPC peering to enforce appropriate isolation of your core
+infrastructure from {+service+}.
+
+You can choose your {+service+} CIDR block with the VPC peering wizard
+before you deploy your first {+cluster+}. The {+service+} VPC CIDR
+block must not overlap with the CIDR block of any VPC you intend to
+peer to. {+service+} limits the number of MongoDB instances per VPC
+based on the CIDR block; for example, a project with a CIDR block of
+/24 is limited to the equivalent of 273-node replica sets.
+
+Private Endpoints
+`````````````````
+
+A private endpoint facilitates a one-way connection from your own VPC
+to your {+service+} VPC, without permitting {+service+} to initiate a
+reciprocal connection. This allows you to make use of secure
+connections to {+service+} without extending your network trust
+boundary. The following private endpoints are available:
+
+- AWS PrivateLink, for connections from AWS VPCs
+- Azure Private Link, for connections from Azure VNets
+- Private Service Connect, for connections from Google Cloud
 
 Examples
 --------
 
-The following examples <perform this action> using |service|
-:ref:`tools for automation <arch-center-automation>`.
+The following examples configure connections between your application
+environment and your {+service+} {+clusters+} using IP Access Lists,
+VPC Peering, and Private Endpoints.
 
 These examples also apply other recommended configurations, including:
 
@@ -76,10 +163,88 @@ These examples also apply other recommended configurations, including:
    .. tab:: CLI
       :tabid: cli
 
-      Content here
+      .. note::
+
+	 Before you can configure connections with the {+atlas-cli+},
+	 you must:
+
+	 - :atlas:`Create your paying organization 
+	   </billing/#configure-a-paying-organization>` and :atlas:`create an API key </configure-api-access/>` for the
+	   paying organization.
+	 - :atlascli:`Install the {+atlas-cli+} </install-atlas-cli/>` 
+	 - :atlascli:`Connect from the {+atlas-cli+} 
+	   </connect-atlas-cli/>` using the steps for :guilabel:`Programmatic Use`.
+
+      Create an IP Access List Entry
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each connection you want to
+      allow. Change the entries to use the appropriate options and
+      your actual values:
+
+      .. code-block::
+
+         atlas accessList create 192.0.2.15 --type ipAddress --projectId 5e2211c17a3e5a48f5497de3 --comment "IP address for app server 2" --output json
+
+      For more configuration options and info about this example, see
+      :ref:`atlas-accessLists-create`.
+
+      Create a VPC Peering Connection
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each VPC you want to peer to your
+      {+service+} VPC. Replace ``aws`` with ``azure`` or ``gcp`` as
+      appropriate, and change the options and values to the
+      appropriate ones for your VPC:
+
+      .. code-block::
+
+	 atlas networking peering create aws --accountId 854333054055 --atlasCidrBlock 192.168.0.0/24 --region us-east-1 --routeTableCidrBlock 10.0.0.0/24 --vpcId vpc-078ac381aa90e1e63
+
+      For more configuration options and info about this example, see:
+
+      - :ref:`atlas-networking-peering-create-aws`, for AWS VPCs
+      - :ref:`atlas-networking-peering-create-azure`, for Azure VNets
+      - :ref:`atlas-networking-peering-create-gcp`, for GCP VPCs
+
+      Create a Private Endpoint
+      ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Run the following command for each private endpoint you want to
+      create. Replace ``aws`` with ``azure`` or ``gcp`` as
+      appropriate, and change the options and values to the
+      appropriate ones for your VPC:
+
+      .. code-block::
+
+         atlas privateEndpoints aws create --region us-east-1 --projectId 5e2211c17a3e5a48f5497de3 --output json
+
+      For more configuration options and info about this example, see:
+
+      - :ref:`atlas-privateEndpoints-aws-create`, for connections from AWS VPCs
+      - :ref:`atlas-privateEndpoints-azure-create`, for connections from Azure VNets
+      - :ref:`atlas-privateEndpoints-gcp-create`, for connections from GCP VPCs
+
 
    .. tab:: Terraform
       :tabid: Terraform
 
-      Content here
+      .. note::
+
+         Before you
+         can create resources with Terraform, you must:
+
+         - :atlas:`Create your paying organization 
+           </billing/#configure-a-paying-organization>` and :atlas:`create an API key </configure-api-access/>` for the
+           paying organization. Store your API key as environment
+           variables by running the following command in the terminal:
+
+           .. code-block::
+
+              export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+              export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+         - `Install Terraform 
+           <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__ 
+
 
