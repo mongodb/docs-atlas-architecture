@@ -24,16 +24,10 @@ Compliance
 This section lists the key considerations that allow you to enforce strict
 compliance controls for your deployments in {+service+}.
 
-{+service+} Features and Best Practices for Compliance
-------------------------------------------------------
+{+service+} Features for Compliance
+-----------------------------------
 
 Use the following {+service+} features to address compliance requirements:
-
-- :ref:`arch-center-compliance-certs`
-- :ref:`arch-center-compliance-encryption`
-- :ref:`arch-center-compliance-data-sovereignty`
-- :ref:`arch-center-compliance-backup-distribution`
-- :ref:`arch-center-compliance-backup-compliance-policy`
 
 .. _arch-center-compliance-certs:
 
@@ -60,17 +54,17 @@ with necessary compliance demands.
 
 {+service+} maintains the following certifications:
 
-- ISO/IEC 27001:2022: Global standard for information security management systems.
-- ISO/IEC 27017:2015: Global standard for cloud-specific security controls.
-- ISO/IEC 27018:2019: Global standard for protecting sensitive data (PII) on the cloud.
-- ISO 9001:2015: Globally recognized standard for Quality Management.
-- PCI DSS: Requirements for processing and accessing credit card data.
-- HIPAA: U.S. privacy regulation safeguarding health information.
-- GDPR: General Data Protection Regulation in the EU and EEA.
-- IRAP: Australian government cybersecurity assessment framework.
-- TX-RAMP: Texas Risk and Authorization Management Program.
-- TISAX: Trusted Information Security Assessment Exchange for automotive industries.
-- HDS: French standard for hosting health data (Hébergeur de Données de Santé).
+- **ISO/IEC 27001:2022**: Global standard for information security management systems.
+- **ISO/IEC 27017:2015**: Global standard for cloud-specific security controls.
+- **ISO/IEC 27018:2019**: Global standard for protecting sensitive data (PII) on the cloud.
+- **ISO 9001:2015**: Globally recognized standard for Quality Management.
+- **PCI DSS**: Requirements for processing and accessing credit card data.
+- **HIPAA**: U.S. privacy regulation safeguarding health information.
+- **GDPR**: General Data Protection Regulation in the EU and EEA.
+- **IRAP**: Australian government cybersecurity assessment framework.
+- **TX-RAMP**: Texas Risk and Authorization Management Program.
+- **TISAX**: Trusted Information Security Assessment Exchange for automotive industries.
+- **HDS**: French standard for hosting health data (Hébergeur de Données de Santé).
 
 To learn more, visit the |atlas-trust|, a comprehensive compliance and
 trust program for MongoDB {+service+}.
@@ -80,7 +74,7 @@ trust program for MongoDB {+service+}.
 Encryption
 ~~~~~~~~~~
 
-Implement encryption to ensure data security and compliance across all
+You can implement encryption to ensure data security and compliance across all
 stages of data handling.
 
 - By default, |service| encrypts data in transit. To ensure data privacy and
@@ -97,11 +91,11 @@ stages of data handling.
   :atlas:`Encryption at Rest using your Key Management 
   <security-kms-encryption>`. 
 
-- Use :manual:`queryable encryption </core/queryable-encryption/>` to secure
-  queries on encrypted data. With queryable encryption, sensitive information
-  remains protected even when users run queries on data. 
+- You can use :manual:`queryable encryption </core/queryable-encryption/>`
+  to secure queries on encrypted data. With queryable encryption, sensitive
+  information remains protected even when users run queries on data.
 
-  Use well-researched non-deterministic encryption schemes to maintain
+  Use  well-researched non-deterministic encryption schemes to maintain
   a balance between security and functionality.
 
   With {+qe+}, you can perform the following tasks:
@@ -134,56 +128,35 @@ stages of data handling.
 Data Sovereignty
 ~~~~~~~~~~~~~~~~
 
-{+service+} simplifies data sovereignty compliance through the following features:
+{+service+} simplifies data sovereignty compliance through global {+clusters+}
+with zoned sharding.
 
-- Multi-cloud and multi-region {+clusters+}.
+You can use global {+clusters+} to control data storage locations. You can
+partition and store data in your database into distinct zones, each
+situated in a different geographical location. To learn more,
+see :atlas:`Global Clusters <global-clusters>`.
 
-  Use multi-region and multi-cloud {+clusters+} to distribute data across
-  geographically-diverse regions and cloud providers. To learn more,
-  see :atlas:`Create Multi-Cloud Multi-Region MongoDB Deployments for High
-  Availability and Workload Isolation <create-cluster-multi-region>`.
-
-  Create {+clusters+} in any of the 110+ cloud regions across the three
-  major cloud providers, |gcp|, |aws|, and |azure|. With {+service+},
-  you can deploy dedicated MongoDB {+clusters+} in a specific cloud
-  provider and region of your choice. This approach increases security,
-  reduces the risk of localized failures, and ensures data redundancy.
-
-  For example, a European company handling sensitive customer data can
-  choose to deploy their MongoDB {+cluster+} in a data center located
-  within the European Union, such as in Frankfurt, Germany, using |aws|
-  or another cloud provider. By doing so, the company ensures that all
-  data remains within EU borders and complies with the GDPR.
-
-- Global {+clusters+} with zoned sharding.
-
-  Use global {+clusters+} to control data storage locations. You can
-  partition and store data in your database into distinct zones, each
-  situated in a different geographical location. To learn more,
-  see :atlas:`Global Clusters <global-clusters>`.
-  
-  For example, you can store European customer data in Europe, while
-  storing U.S. customer data in the U.S. This allows you to comply with
-  data sovereignty regulations and reduces latency for users accessing
-  data from their respective regions.
+For example, you can store European customer data in Europe, while
+storing U.S. customer data in the U.S. This allows you to comply with
+data sovereignty regulations and reduces latency for users accessing
+data from their respective regions.
 
 .. _arch-center-compliance-backup-distribution:
 
 Backup Snapshot Distribution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Multi-region snapshot distribution. Distribute backup snapshots and oplog data
-across multiple regions. For example, you can satisfy compliance requirements
-and store backups in different, air-gapped geographical locations to
-ensure disaster recovery in case of regional outages. To learn more,
-see :atlas:`Snapshot Distribution <snapshot-distribution>`.
+You can distribute backup snapshots and oplog data across multiple regions.
+For example, you can satisfy compliance requirements and store backups in
+different, air-gapped geographical locations to ensure disaster recovery
+in case of regional outages. To learn more, see :atlas:`Snapshot Distribution <snapshot-distribution>`.
 
 .. _arch-center-compliance-backup-compliance-policy:
 
 Backup Compliance Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use |bcp| in {+service+} to secure business-critical data. You can prevent
+You can use |bcp| in {+service+} to secure business-critical data. You can prevent
 all backup snapshots and oplog data stored in {+service+} from being modified
 or deleted for a predefined retention period by any user, regardless of their
 {+service+} role.
