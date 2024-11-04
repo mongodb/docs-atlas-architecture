@@ -17,12 +17,67 @@ Intro statement
 {+service+} Features and Best Practices for Auditing and Logging
 ----------------------------------------------------------------
 
-Content here
+Auditing
+~~~~~~~~
+
+To monitor and log |service| platform activities, use auditing.
+
+Database auditing lets administrators track system activity for 
+deployments with multiple users. |service| administrators can select 
+the actions, database users, |service| roles, and LDAP groups that they 
+want to audit. |service| supports :manual:`auditing </core/auditing>` 
+most of the documented :atlas:`system event actions 
+<audit-action-details-results>`.
+
+To audit the database, see :atlas:`Set up Database Auditing <set-up-database-auditing>`.
+
+To learn about best practices for auditing the actions of temporary
+database users, see :atlas:`Audit Temporary Database Users <audit-temp-db-users>`.
+
+By default, |service| performs database authentication auditing in M10+ clusters
+to record authentication events, which include:
+
+- database users
+- source IP addresses
+- timestamps for successful and failed attempts.
+
+In addition, you can configure a JSON-formatted audit filter
+to customize :manual:`MongoDB Auditing </core/auditing>`.
+
+If you create a custom audit filter, you can skip using the managed 
+{+atlas-ui+} auditing filter builder and configure your own tailored
+granular control of event auditing.
+Granular database auditing allows you to track usage of all DDL (Data Definition Language),
+DML (Data Manipulation Language), and DCL (Data Control Language) commands
+in detail.
+
+Access or download audit logs through the Atlas UI or Atlas Admin API:
+
+- :atlas:`atlas-auditing-describe <atlas-auditing-describe>` - Returns the
+  auditing configuration for the specified project.
+- :atlas:`atlas-auditing-update <atlas-auditing-update>` - Updates
+  the auditing configuration for the specified project.
+
+Logging
+~~~~~~~
+
+You can view and download MongoDB logs.
+
+To retrieve the audit logs in |service|, see :atlas:`MongoDB Logs 
+<mongodb-logs>`.
+To retrieve the audit logs using the API, see 
+:oas-atlas-op:`Logs </downloadLogsForOneClusterHostInOneProject>`.
+
+To learn more, see:
+
+- :atlas:`MongoDB Logs <mongodb-logs>`.
+- :atlas:`Atlas Deployment Logs <atlas-deployments-logs>`
+
 
 Examples
 --------
 
-The following examples <perform this action> using |service|
+The following examples enable auditing and logging using |service|
 :ref:`tools for automation <arch-center-automation>`.
 
 .. tabs::
