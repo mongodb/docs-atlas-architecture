@@ -197,7 +197,7 @@ Disaster Recovery
 
 We strongly recommend that you prepare a comprehensive disaster recovery (DR) plan 
 that includes elements such as `data backup policies <https://www.mongodb.com/docs/atlas/backup/cloud-backup/backup-compliance-policy/#std-label-backup-compliance-policy>`__, 
-your designated |rpo|, your designated |rto|, and any automated processes that 
+your designated recovery point objective (RPO), your designated recovery time objective (RTO), and any automated processes that 
 facilitate alignment with these objectives. 
 
 To learn more about DR with |service|, see 
