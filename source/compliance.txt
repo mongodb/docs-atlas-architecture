@@ -6,19 +6,23 @@ Compliance
 
 .. default-domain:: mongodb
 
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: atlas architecture center, GDPR, ISO, PCI-DDS, FedRAMP, HIPAA
+   :description: Learn how MongoDB Atlas meets compliance and regulation controls..
+
 .. contents:: On this page
    :local:
    :backlinks: none
    :depth: 1
    :class: onecol
 
-To help you address security and privacy requirements, MongoDB {+service+}
-aims to deliver the highest levels of standards conformance and regulatory
-compliance. MongoDB offers the |atlas-trust|, a comprehensive compliance and
-trust program for MongoDB {+service+}.
 
-This section lists the key considerations that allow you to
-enforce strict compliance controls for your deployments in {+service+}.
+This section lists the key considerations that allow you to enforce strict
+compliance controls for your deployments in {+service+}.
 
 {+service+} Features and Best Practices for Compliance
 ------------------------------------------------------
@@ -33,19 +37,26 @@ Use the following {+service+} features to address compliance requirements:
 
 .. _arch-center-compliance-certs:
 
-Certifications and Compliance with GDPR, CCPA, HIPAA, PCI-DSS, and Other Regulations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Certifications and Compliance with Regulations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{+service+} has ISO/IEC 27001 and 9001, PCI DSS, HIPAA, GDPR, and FedRAMP
-certifications. These certifications serve as a foundation for meeting
-industry-specific regulatory requirements. Use these certifications
-to ensure that your data practices align with necessary compliance demands
-while maintaining robust security controls.
+To help you address security and privacy requirements, MongoDB {+service+}
+aims to deliver the highest levels of standards conformance and regulatory
+compliance.
 
 {+service+} data platform undergoes rigorous independent audits to verify
 its security, privacy, and organizational controls. These audits help ensure
 that the platform  meets compliance and regulatory requirements, including
 those specific to highly-regulated industries.
+
+{+service+} has ISO/IEC 27001 and 9001, PCI DSS, HIPAA, GDPR, FedRAMP, and
+several other certifications. The full list of certifications is included
+in this section.
+
+These certifications serve as a foundation for meeting
+industry-specific regulatory requirements. Use these certifications
+to maintain security controls and ensure that your data practices align
+with necessary compliance demands.
 
 {+service+} maintains the following certifications:
 
@@ -61,7 +72,8 @@ those specific to highly-regulated industries.
 - TISAX: Trusted Information Security Assessment Exchange for automotive industries.
 - HDS: French standard for hosting health data (Hébergeur de Données de Santé).
 
-To learn more, visit the |atlas-trust|.
+To learn more, visit the |atlas-trust|, a comprehensive compliance and
+trust program for MongoDB {+service+}.
 
 .. _arch-center-compliance-encryption:
 
@@ -141,8 +153,7 @@ Data Sovereignty
   choose to deploy their MongoDB {+cluster+} in a data center located
   within the European Union, such as in Frankfurt, Germany, using |aws|
   or another cloud provider. By doing so, the company ensures that all
-  data remains within EU borders and complies
-  with the GDPR.
+  data remains within EU borders and complies with the GDPR.
 
 - Global {+clusters+} with zoned sharding.
 
