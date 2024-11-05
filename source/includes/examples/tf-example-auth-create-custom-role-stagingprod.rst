@@ -8,21 +8,18 @@
      actions {
        action = "UPDATE"
        resources {
-         collection_name = ""
          database_name   = "myDb"
        }
      }
      actions {
        action = "INSERT"
        resources {
-         collection_name = ""
          database_name   = "myDb"
        }
      }
      actions {
        action = "REMOVE"
        resources {
-         collection_name = ""
          database_name   = "myDb"
        }
      }

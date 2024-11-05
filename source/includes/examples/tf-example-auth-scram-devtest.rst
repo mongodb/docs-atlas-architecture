@@ -25,4 +25,4 @@
    }
 
    output "user1" { value = mongodbatlas_database_user.user1.username }
-   output "userpwd" { value = mongodbatlas_database_user.user1.password }
+   output "userpwd" { value = mongodbatlas_database_user.user1.password sensitive = true }
