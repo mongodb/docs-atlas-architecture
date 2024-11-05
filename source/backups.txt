@@ -123,6 +123,11 @@ recommend that you identify replica set size or shard size limits to
 ensure that your size is compatible with RTO requirements. Ensure that 
 snapshot schedule and retention policies meet any RPO requirements. 
 
+In addition to |service| cloud backups, we recommend that you enable
+continuous cloud backups with a restore window of seven days. This will
+allow you to replay the Oplog to restore a {+cluster+} from a particular
+point in time. 
+
 Recommendations for Backup Snapshots 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -131,7 +136,43 @@ frequency of snapshots, and retention period. Retaining backup snapshots
 for long periods can be costly. We recommend building automated
 deployment templates that meet your requirements based on the size and
 criticality of the data and the environment (development, test, staging,
-production).  
+production). For frequency and retention of snapshots, we recommend
+the following: 
+
+.. list-table:: 
+   :widths: 10 15 20 45 10
+   :header-rows: 1
+
+   * - Tier
+     - RTO 
+     - RPO
+     - Recommended Frequency and Retention
+     - Total Number of Snapshots
+
+   * - Tier 1 
+     - 30 minutes 
+     - Near zero (within 7 days)
+     - | **Hourly**: Every 12 hours, retain for 7 days = 14 snapshots
+       | **Daily**: Once a day, retain for 7 days = 7 snapshots
+       | **Weekly**: Saturday, retain for 4 weeks = 4 snapshots
+       | **Monthly**: Last day of month, retain for 3 months = 6 snapshots
+     - 31
+
+   * - Tier 2 
+     - 12 hours 
+     - Near zero (within 7 days)
+     - | **Daily**: Once a day, retain for 7 days = 7 snapshots
+       | **Weekly**: Saturday, retain for 4 weeks = 4 snapshots
+       | **Monthly**: Last day of month, retain for 3 months = 3 snapshots
+     - 14
+
+   * - Tier 3 
+     - 3 days 
+     - Near zero (within 2 days)
+     - | **Daily**: Once a day, retain for 7 days = 7 snapshots
+       | **Weekly**: Saturday, retain for 4 weeks = 4 snapshots
+       | **Monthly**: Last day of month, retain for 3 months = 3 snapshots
+     - 14
 
 We recommend Queryable Backup Snapshot options when defining automation
 templates. Queryable Backups allow you to access your backup data
