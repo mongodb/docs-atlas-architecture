@@ -27,7 +27,7 @@ compliance controls for your deployments in {+service+}.
 {+service+} Features for Compliance
 -----------------------------------
 
-Use the following {+service+} features to address compliance requirements:
+Use the following {+service+} features to address compliance requirements.
 
 .. _arch-center-compliance-certs:
 
