@@ -12,7 +12,7 @@ Auditing and Logging
    :depth: 1
    :class: onecol
 
-Intro statement
+To monitor and log |service| platform activities, use auditing and logs.
 
 {+service+} Features and Best Practices for Auditing and Logging
 ----------------------------------------------------------------
@@ -20,16 +20,14 @@ Intro statement
 Auditing
 ~~~~~~~~
 
-To monitor and log |service| platform activities, use auditing.
-
 Database auditing lets administrators track system activity for 
 deployments with multiple users. |service| administrators can select 
 the actions, database users, |service| roles, and LDAP groups that they 
-want to audit. |service| supports :manual:`auditing </core/auditing>` 
-most of the documented :atlas:`system event actions 
+want to audit. You can configure manual :manual:`auditing </core/auditing>` 
+in |service| of most of the documented :atlas:`system event actions 
 <audit-action-details-results>`.
 
-To audit the database, see :atlas:`Set up Database Auditing <set-up-database-auditing>`.
+You can :atlas:`set up database auditing <set-up-database-auditing>`.
 
 To learn about best practices for auditing the actions of temporary
 database users, see :atlas:`Audit Temporary Database Users <audit-temp-db-users>`.
@@ -42,7 +40,9 @@ to record authentication events, which include:
 - timestamps for successful and failed attempts.
 
 In addition, you can configure a JSON-formatted audit filter
-to customize :manual:`MongoDB Auditing </core/auditing>`.
+to customize MongoDB auditing.
+For a full list of events you can configure for auditing, and for a list
+of examples, see :manual:`MongoDB auditing </core/auditing>`.
 
 If you create a custom audit filter, you can skip using the managed 
 {+atlas-ui+} auditing filter builder and configure your own tailored
@@ -51,33 +51,38 @@ Granular database auditing allows you to track usage of all DDL (Data Definition
 DML (Data Manipulation Language), and DCL (Data Control Language) commands
 in detail.
 
-Access or download audit logs through the Atlas UI or Atlas Admin API:
+Access audit logs through the Atlas UI or Atlas Admin API:
 
 - :atlas:`atlas-auditing-describe <atlas-auditing-describe>` - Returns the
   auditing configuration for the specified project.
 - :atlas:`atlas-auditing-update <atlas-auditing-update>` - Updates
   the auditing configuration for the specified project.
 
+You can :atlas:`view authentication attempts <access-tracking>` that
+are made against your cluster. Both successful and unsuccessful
+attempts are logged, including the timestamp of the attempt and which
+user tried to authenticate.
+
+You can :atlas:`view and filter the activity feed <view-activity-feed>`
+for an organization or project.
+
+You can perform a full audit by using a combination of audit logs,
+the ``mongodb.log``, and :atlas:`the project activity feed <view-activity-feed>`.
+
 Logging
 ~~~~~~~
 
-You can view and download MongoDB logs.
+.. include:: /includes/cloud-docs/logs.rst
 
-To retrieve the audit logs in |service|, see :atlas:`MongoDB Logs 
-<mongodb-logs>`.
-To retrieve the audit logs using the API, see 
+To retrieve the audit logs using the API, see
 :oas-atlas-op:`Logs </downloadLogsForOneClusterHostInOneProject>`.
 
-To learn more, see:
-
-- :atlas:`MongoDB Logs <mongodb-logs>`.
-- :atlas:`Atlas Deployment Logs <atlas-deployments-logs>`
-
+See also :atlas:`Atlas Deployment Logs <atlas-deployments-logs>`
 
 Examples
 --------
 
-The following examples enable auditing and logging using |service|
+The following examples show how to download logs using |service|
 :ref:`tools for automation <arch-center-automation>`.
 
 .. tabs::
@@ -92,15 +97,28 @@ The following examples enable auditing and logging using |service|
 
       .. include:: /includes/shared-settings-clusters-stagingprod.rst
 
+
 .. tabs::
+   :hidden:
 
-   .. tab:: CLI
-      :tabid: cli
+   .. tab:: Dev and Test Environments
+      :tabid: devtest
 
-      Content here
+      Download Logs
+      ~~~~~~~~~~~~~
 
-   .. tab:: Terraform
-      :tabid: Terraform
+      Run the following CLI command to download a compressed file that contains the
+      MongoDB logs for the specified host in your project.
 
-      Content here
+      .. include:: /includes/examples/cli-example-download-logs.rst
 
+   .. tab:: Staging and Prod Environments
+      :tabid: stagingprod
+
+      Download Logs
+      ~~~~~~~~~~~~~
+
+      Run the following command to download a compressed file that contains the
+      MongoDB logs for the specified host in your project.
+
+      .. include:: /includes/examples/cli-example-download-logs.rst
