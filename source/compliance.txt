@@ -12,7 +12,7 @@ Compliance
 
 .. meta::
    :keywords: atlas architecture center, GDPR, ISO, PCI-DDS, FedRAMP, HIPAA
-   :description: Learn how MongoDB Atlas meets compliance and regulation controls..
+   :description: Learn how MongoDB Atlas meets compliance and regulation controls.
 
 .. contents:: On this page
    :local:
@@ -47,10 +47,9 @@ those specific to highly-regulated industries.
 several other certifications. The full list of certifications is included
 in this section.
 
-These certifications serve as a foundation for meeting
-industry-specific regulatory requirements. Use these certifications
-to maintain security controls and ensure that your data practices align
-with necessary compliance demands.
+These certifications serve as a foundation for meeting industry-specific
+regulatory requirements. Use these certifications to maintain security controls
+and ensure that your data practices align with necessary compliance demands.
 
 {+service+} maintains the following certifications:
 
@@ -80,13 +79,12 @@ stages of data handling.
 - By default, |service| encrypts data in transit. To ensure data privacy and
   regulatory compliance, |service| requires |tls-ssl| to encrypt the connections
   to your databases. In addition, you can configure SSL or TLS OCSP certificate
-  revocation checking. To learn more,
-  see :atlas:`OCSP Certificate Revocation Check <oscp-cert-check>`.
+  revocation checking. To learn more, see :atlas:`OCSP Certificate Revocation Check <oscp-cert-check>`.
 
 - By default, |service| encrypts all data at rest. |service| uses |AES-256|
   encryption to encrypt all data stored in |s3| buckets in your |service|
   {+database-deployments+}.
-  In addition, |service| supports using |aws| |kms|, Azure Key Vault, and |gcp| to
+  In addition, |service| supports using |aws| |kms|, |akv|, and |gcp| to
   encrypt storage engines and cloud provider backups. To learn more, see
   :atlas:`Encryption at Rest using your Key Management 
   <security-kms-encryption>`. 
@@ -132,14 +130,12 @@ Data Sovereignty
 with zoned sharding.
 
 You can use global {+clusters+} to control data storage locations. You can
-partition and store data in your database into distinct zones, each
-situated in a different geographical location. To learn more,
-see :atlas:`Global Clusters <global-clusters>`.
-
-For example, you can store European customer data in Europe, while
-storing U.S. customer data in the U.S. This allows you to comply with
-data sovereignty regulations and reduces latency for users accessing
-data from their respective regions.
+partition and store data in your database into distinct zones, each situated
+in a different geographical location. For example, you can store European
+customer data in Europe, while storing U.S. customer data in the U.S.
+This allows you to comply with data sovereignty regulations and reduces
+latency for users accessing data from their respective regions. To learn
+more, see :atlas:`Global Clusters <global-clusters>`.
 
 .. _arch-center-compliance-backup-distribution:
 
