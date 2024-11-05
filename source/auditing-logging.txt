@@ -24,7 +24,7 @@ Database auditing lets administrators track system activity for
 deployments with multiple users. |service| administrators can select 
 the actions, database users, |service| roles, and LDAP groups that they 
 want to audit. You can configure manual :manual:`auditing </core/auditing>` 
-in |service| of most of the documented :atlas:`system event actions 
+in |service| of most of the documented :manual:`system event actions 
 <audit-action-details-results>`.
 
 You can :atlas:`set up database auditing <set-up-database-auditing>`.
@@ -77,7 +77,7 @@ Logging
 To retrieve the audit logs using the API, see
 :oas-atlas-op:`Logs </downloadLogsForOneClusterHostInOneProject>`.
 
-See also :atlas:`Atlas Deployment Logs <atlas-deployments-logs>`
+See also :atlas:`Atlas Deployment Logs <atlas-deployment-logs>`.
 
 Examples
 --------
