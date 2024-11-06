@@ -99,7 +99,7 @@ locations.
 
 To reduce the attack surface of your {+service+} projects, we
 recommend defining IP access list entries covering the smallest
-network segments possible. To do this, favor individual ``/32``
+network segments possible. To do this, favor individual IP
 addresses where possible, and avoid large CIDR blocks.
 
 VPC/VNet Peering
@@ -245,6 +245,115 @@ These examples also apply other recommended configurations, including:
               export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
 
          - `Install Terraform 
-           <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__ 
+           <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
 
+      Create an IP Access List Entry
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      To add an entry to your IP Access List, create the following
+      file and place it in the directory of the project you want to
+      grant access to. Change the IDs and names to use your values:
+
+      accessEntryForAddress1.tf
+      `````````````````````````
+
+      .. include:: /includes/examples/tf-example-access-entry-for-add-1.rst
+
+      After you create the files, navigate to your project directory
+      and run the following command to initialize Terraform:
+
+      .. code-block::
+
+	 terraform init
+
+      Run the following command to view the Terraform plan:
+
+      .. code-block::
+
+	 terraform plan
+
+      Run the following command to add one entry to the IP Access List
+      for your project. The command uses the file and the
+      |service-terraform| to add the entry.
+
+      .. code-block::
+
+	 terraform apply
+
+      When prompted, type ``yes`` and press :kbd:`Enter` to apply
+      the configuration.
+
+      Create a VPC Peering Connection
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      To create a peering connection between your application VPC and
+      your {+service+} VPC, create the following file and place it in
+      the directory of the project you want to grant access to. Change
+      the IDs and names to use your values:
+
+      vpcConnection.tf
+      ````````````````
+
+      .. include:: /includes/examples/tf-example-vpc-connection.rst
+
+      After you create the files, navigate to your project directory
+      and run the following command to initialize Terraform:
+
+      .. code-block::
+
+	 terraform init
+
+      Run the following command to view the Terraform plan:
+
+      .. code-block::
+
+	 terraform plan
+
+      Run the following command to add a VPC peering connection from
+      your application to your project. The command uses the file and
+      the |service-terraform| to add the entry.
+
+      .. code-block::
+
+	 terraform apply
+
+      When prompted, type ``yes`` and press :kbd:`Enter` to apply
+      the configuration.
+
+      Create a Private Link
+      ~~~~~~~~~~~~~~~~~~~~~
+
+      To create a private link from your application VPC to
+      your {+service+} VPC, create the following file and place it in
+      the directory of the project you want to connect to. Change
+      the IDs and names to use your values:
+
+      privateLink.tf
+      ``````````````
+
+      .. include:: /includes/examples/tf-example-private-link.rst
+
+      After you create the files, navigate to your project directory
+      and run the following command to initialize Terraform:
+
+      .. code-block::
+
+	 terraform init
+
+      Run the following command to view the Terraform plan:
+
+      .. code-block::
+
+	 terraform plan
+
+      Run the following command to add a privatelink endpoint from
+      your application to your project. The command uses the file and
+      the |service-terraform| to add the entry.
+
+      .. code-block::
+
+	 terraform apply
+
+      When prompted, type ``yes`` and press :kbd:`Enter` to apply
+      the configuration.
 
