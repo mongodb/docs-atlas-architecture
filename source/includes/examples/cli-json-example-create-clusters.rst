@@ -40,12 +40,12 @@
            "zoneName": "Zone 1"
          }
        ],
-       tags = {
+       "tag" : [{
          "bu": "ConsumerProducts",
          "teamName": "TeamA",
          "appName": "ProductManagementApp",
          "env": "Production",
          "version": "8.0",
          "email": "marissa@acme.com"
-       }
+       }]
      }

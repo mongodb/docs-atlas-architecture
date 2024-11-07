@@ -28,7 +28,7 @@
          region_name   = var.atlas_region
        }
      }
-     tags = {
+     tags {
        BU       = "ConsumerProducts"
        TeamName = "TeamA"
        AppName  = "ProductManagementApp"
