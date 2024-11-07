@@ -28,6 +28,14 @@
          region_name   = var.atlas_region
        }
      }
+     tags {
+       BU       = "ConsumerProducts"
+       TeamName = "TeamA"
+       AppName  = "ProductManagementApp"
+       Env      = "Production"
+       Version  = "8.0"
+       Email    = "marissa@acme.com"
+     }
    }
    
    # Outputs to Display
