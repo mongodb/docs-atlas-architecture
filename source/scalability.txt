@@ -12,17 +12,65 @@ Scalability
    :depth: 1
    :class: onecol
 
-Intro statement
+MongoDB {+service+} allows automated scaling, tiered storage, workload optimization, and other 
+features which can reduce your database costs as your data usage expands.
 
-{+service+} Features and Best Practices for Scalability
--------------------------------------------------------
+{+service+} Features and Recommendations for Scalability
+---------------------------------------------------------
 
-Content here
+:ref:`Auto-scaling <cluster-autoscaling>` allows you to dynamically allocate resources based on 
+real-time workload demands. This feature ensures that you only pay for the resources you use. By 
+configuring auto-scaling within predefined limits, you can effectively manage fluctuations in data 
+processing needs, maintain optimal performance and achieve cost efficiency. {+service} 
+offers cluster auto-scaling for all tiers except for the highest tier. Auto-scaling enables 
+clusters to automatically adjust their tier, storage capacity, or both in response to real-time 
+use. {+service+} analyzes the CPU and memory utilization to determine when and whether to scale 
+the cluster tier up and down. You can also specify a range of maximum and minimum cluster sizes 
+that their cluster can automatically scale to. {+service+} won't scale a cluster if the new 
+tier falls outside of your specified size range or if memory usage would exceed the capacity of 
+the new tier.
+
+{+service+} deployment templates provide you with horizontal and vertical scaling options. Upgrading 
+an {+service+} cluster to the next available {+service+} tier is available through the {+service+} 
+control plane GUI. Changing an {+service+} tier, either upscaling or downscaling, is performed in a 
+rolling fashion and allows zero downtime. Horizontal scaling occurs manually post-deployment. Some 
+cluster templates require sharded clusters. Starting with MongoDB version 8.0, you may make use of 
+:manual:`embedded config servers </reference/command/transitionFromDedicatedConfigServer>` to reduce 
+costs associated with config servers on small sharded clusters. 
+
+The :ref:`Low CPU option <customize-storage/#low-cpu-class>` in {+service+} helps applications that 
+require higher memory but not as much processing power. This option provides instances with half the 
+vCPUs compared to the General tier of the same cluster size, reducing costs for workloads that are 
+memory-intensive but not CPU-bound. 
+
+Data tiering and archival allows you to archive data at low-cost storage while still enabling 
+queries alongside live cluster data, which is particularly useful for long-term record retention. 
+To optimize this process, MongoDB recommends that you automate data archiving with simple, configurable 
+rules. Also, for scenarios where data retention is not a priority, {+service+} offers the option to 
+automatically delete unused data based on date criteria. For infrequently accessed data, {+service+} 
+online archive automates archiving an organization's infrequently accessed data to a fully managed S3 
+bucket while allowing you to query the archives through the same interface used for active cluster data. 
+This is particularly useful for managing large datasets, such as historical or time series data, where only 
+the most recent information needs to be quickly accessible. Additionally, :manual:`TTL indexes <core/index-ttl/>` 
+are special single-field indexes that automatically delete documents from a collection after a specified 
+period or at a set clock time. This is particularly useful for data like logs, session information, 
+or event data that only needs to be retained for a limited time. To create a TTL index, you can define 
+an index on a field that holds date values and specify a time-to-live duration in seconds.
+
+{+service+} also provides you with automated tools, such as the :opsmgr:`Performance Advisor </current/tutorial/performance-advisor/>`, 
+to monitor and identify inefficient queries. You can reduce unnecessary compute time and resource 
+consumption by following actionable recommendations to enhance your query performance. Additionally, 
+you can leverage intelligent index recommendations provided by {+service+} to further improve data 
+retrieval efficiency and minimize the resources needed for database operations. 
+
+The {+service+} CLI also helps you manage both local and cloud environments efficiently, automating 
+tasks and scaling resources as needed. This setup enables testing and development locally, minimizing 
+unnecessary cloud usage. 
 
 Examples
 --------
 
-The following examples <perform this action> using |service|
+The following examples enable auto-scaling compute and storage using |service| 
 :ref:`tools for automation <arch-center-automation>`.
 
 These examples also apply other recommended configurations, including:
@@ -44,10 +92,62 @@ These examples also apply other recommended configurations, including:
    .. tab:: CLI
       :tabid: cli
 
-      Content here
+      .. note::
+
+         Before you
+         can create resources with the {+atlas-cli+}, you must:
+
+         - :atlas:`Create your paying organization 
+           </billing/#configure-a-paying-organization>` and :atlas:`create an API key </configure-api-access/>` for the
+           paying organization.
+         - :atlascli:`Install the {+atlas-cli+} </install-atlas-cli/>` 
+         - :atlascli:`Connect from the {+atlas-cli+} 
+           </connect-atlas-cli/>` using the steps for :guilabel:`Programmatic Use`.
+
+      Create One Deployment Per Project
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      .. tabs::
+
+         .. tab:: Dev and Test Environments
+            :tabid: devtest
+
+            For your development and testing environments, auto-scaling compute and storage is disabled to save costs.
+
+         .. tab:: Staging and Prod Environments
+            :tabid: stagingprod
+
+            For your staging and production environments, create the following ``cluster.json`` file for each project. 
+            Change the IDs and names to use your values:
+
+            .. include:: /includes/examples/cli-json-example-create-clusters-with-autoscaling.rst
+
+            After you create the ``cluster.json`` file, run the
+            following command for each project. The
+            command uses the ``cluster.json`` file to create a cluster.
+
+            .. include:: /includes/examples/cli-example-create-clusters-stagingprod.rst 
+
+      For more configuration options and info about this example, 
+      see :ref:`atlas-clusters-create`.
 
    .. tab:: Terraform
       :tabid: Terraform
 
-      Content here
+      .. note::
 
+         Before you
+         can create resources with Terraform, you must:
+
+         - :atlas:`Create your paying organization 
+           </billing/#configure-a-paying-organization>` and :atlas:`create an API key </configure-api-access/>` for the
+           paying organization. Store your API key as environment
+           variables by running the following command in the terminal:
+
+           .. code-block::
+
+              export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+              export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+         - `Install Terraform 
+           <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__ 
