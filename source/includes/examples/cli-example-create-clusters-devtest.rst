@@ -2,7 +2,7 @@
    :copyable: true
 
    atlas clusters create CustomerPortalDev \
-     --projectId 618d48e05277a606ed2496fe \
+     --projectId 56fd11f25f23b33ef4c2a331 \
      --region EASTERN_US \
      --members 3 \
      --tier M10 \
