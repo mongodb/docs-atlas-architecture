@@ -29,12 +29,28 @@
        }
      }
      tags {
-       BU       = "ConsumerProducts"
-       TeamName = "TeamA"
-       AppName  = "ProductManagementApp"
-       Env      = "Production"
-       Version  = "8.0"
-       Email    = "marissa@acme.com"
+       key   = "BU"
+       value = "ConsumerProducts"
+     }
+     tags {
+       key   = "TeamName"
+       value = "TeamA"
+     }
+     tags {
+       key   = "AppName"
+       value = "ProductManagementApp"
+     }
+     tags {
+       key   = "Env"
+       value = "Production"
+     }
+     tags {
+       key   = "Version"
+       value = "8.0"
+     }
+     tags {
+       key   = "Email"
+       value = "marissa@acme.com"
      }
    }
    
