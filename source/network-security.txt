@@ -92,7 +92,7 @@ your applications access to your {+clusters+}.
 {+service+} {+cluster+} public IPs remain the same in the majority of
 cases of {+cluster+} changes such as :atlas:`vertical scaling
 <sizing-auto-scaling>`,
-:atlas:`/reference/glossary/#std-term-topology` changes, or
+:atlas:`topology </reference/glossary/#std-term-topology>` changes, or
 :atlas:`maintenance events <cluster-maintenance-window>`. However,
 certain topology changes – such as a :ref:`conversion from replica set
 to sharded cluster <convert-repl-set-to-sharded>`, the
