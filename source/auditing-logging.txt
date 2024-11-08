@@ -87,22 +87,8 @@ using |service| :ref:`tools for automation <arch-center-automation>`.
 
 .. tabs::
 
-   .. tab:: Dev and Test Environments
-      :tabid: devtest
-
-      .. include:: /includes/shared-settings-clusters-devtest.rst
-
-   .. tab:: Staging and Prod Environments
-      :tabid: stagingprod
-
-      .. include:: /includes/shared-settings-clusters-stagingprod.rst
-
-
-.. tabs::
-   :hidden:
-
-   .. tab:: Dev and Test Environments
-      :tabid: devtest
+   .. tab:: CLI
+      :tabid: cli
 
       Download Logs
       ~~~~~~~~~~~~~
@@ -112,40 +98,26 @@ using |service| :ref:`tools for automation <arch-center-automation>`.
 
       .. include:: /includes/examples/cli-example-download-logs.rst
 
-   .. tab:: Staging and Prod Environments
-      :tabid: stagingprod
-
-      .. tab:: CLI
-         :tabid: cli
-
-         Download Logs
-         ~~~~~~~~~~~~~
-
-         Run the following command to download a compressed file that contains the
-         MongoDB logs for the specified host in your project.
-
-         .. include:: /includes/examples/cli-example-download-logs.rst
-
-      .. tab:: Terraform
-         :tabid: Terraform
+   .. tab:: Terraform
+      :tabid: Terraform
  
-         The following examples demonstrate how to enable auditing for
-         your deployment. Before you can create resources with Terraform,
-         you must:
+      The following example demonstrates how to enable auditing for
+      your deployment. Before you can create resources with Terraform,
+      you must:
 
-         - :ref:`Create your paying organization <configure-paying-org>`
-           and :ref:`create an API key <atlas-admin-api-access>` for the
-           paying organization. Store your API key as environment variables
-           by running the following command in the terminal: 
+      - :ref:`Create your paying organization <configure-paying-org>`
+        and :ref:`create an API key <atlas-admin-api-access>` for the
+        paying organization. Store your API key as environment variables
+        by running the following command in the terminal: 
 
-           .. code-block::
+        .. code-block::
 
-              export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
-              export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+           export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+           export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
 
-         - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__.
+      - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__.
 
-         Enable Auditing and Create an Auditing Filter for the {+Cluster+}
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Enable Auditing and Create an Auditing Filter for the {+Cluster+}
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-         .. include:: /includes/examples/tf-example-auditing-filter.rst
+      .. include:: /includes/examples/tf-example-auditing-filter.rst
