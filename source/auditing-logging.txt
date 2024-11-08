@@ -40,15 +40,15 @@ multiple users. As a |service| administrator, you can:
   your own tailored filter of event auditing.
   
   You can :manual:`configure manual auditing </core/auditing>` of most of the
-  documented :manual:`system event actions <audit-action-details-results>`
+  documented :manual:`system event actions </reference/audit-message/mongo/>`
   in |service|. Granular MongoDB database auditing allows you to track
   usage of all DDL (Data Definition Language), DML (Data Manipulation Language),
   and DCL (Data Control Language) commands in detail. For a full list of
   events you can configure for auditing, and for a list of examples,
   see :manual:`MongoDB auditing </core/auditing>`. See also
-  :atlas:`Set up Database Auditing <set-up-database-auditing>`.
+  :atlas:`Set up Database Auditing </database-auditing>`.
 
-- :atlas:`Audit the actions of temporary database users <audit-temp-db-users>`.
+- :atlas:`Audit the actions of temporary database users </production-notes/#audit-temporary-database-users>`.
 
 .. _accessing-audit-logs:
 
@@ -61,23 +61,25 @@ To retrieve the audit logs using the {+atlas-admin-api+}, see
 :oas-atlas-op:`Logs </downloadLogsForOneClusterHostInOneProject>`. You
 can use these API commands:
 
-- :atlas:`atlas-auditing-describe <atlas-auditing-describe>` returns the
+- :ref:`atlas-auditing-describe <atlas-auditing-describe>` returns the
   auditing configuration for the specified project.
-- :atlas:`atlas-auditing-update <atlas-auditing-update>` updates
+- :ref:`atlas-auditing-update <atlas-auditing-update>` updates
   the auditing configuration for the specified project.
 
-You can :atlas:`view authentication attempts <access-tracking>` that users
+You can :ref:`view authentication attempts <access-tracking>` that users
 make against your {+cluster+}. |service| logs both successful and unsuccessful
 authentication attempts, including the timestamp of the attempt and which
 user tried to authenticate.
 
-You can :atlas:`view and filter the activity feed <view-activity-feed>`
+You can :ref:`view and filter the activity feed <view-activity-feed>`
 for an organization or project.
 
 To perform a full audit, you can use a combination of audit logs,
-the ``mongodb.log``, and :atlas:`the project activity feed <view-activity-feed>`.
+the ``mongodb.log``, and :ref:`the project activity feed <view-activity-feed>`.
 
-See also :atlas:`Atlas Deployment Logs <atlas-deployment-logs>`.
+You can use the ``atlas deployments logs`` command in the {+atlas-cli+}
+to retrieve deployment logs. To learn more,
+see :atlas:`Atlas Deployment Logs </cli/current/command/atlas-deployments-logs/>`.
 
 Examples
 --------
