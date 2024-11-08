@@ -88,9 +88,7 @@ The following examples show how to download logs and enable auditing
 using |service| :ref:`tools for automation <arch-center-automation>`.
 
 In addition to the following examples, see the blogpost
-`Streamlining Log Management to Amazon S3 Using Atlas Push-based Log
-Exports With HashiCorp Terraform
-https://www.mongodb.com/developer/products/atlas/streamlining-log-management-amazon-s3-atlas-push-based-log-exports-hashicorp-terraform/`__.
+`Streamlining Log Management to Amazon S3 Using Atlas Push-based Log Exports With HashiCorp Terraform <https://www.mongodb.com/developer/products/atlas/streamlining-log-management-amazon-s3-atlas-push-based-log-exports-hashicorp-terraform/>`__.
 
 .. tabs::
 
