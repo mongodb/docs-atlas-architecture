@@ -31,7 +31,7 @@ multiple users. As a |service| administrator, you can:
 
   - database users
   - source IP addresses
-  - timestamps for successful and failed attempts.
+  - timestamps for successful and failed attempts
 
 - Configure a JSON-formatted audit filter to customize MongoDB auditing
   and select the actions, database users, |service| roles, and |ldap| groups
