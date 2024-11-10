@@ -145,7 +145,7 @@ connections to {+service+} without extending your network trust
 boundary. The following private endpoints are available:
 
 - {+aws+} :aws:`PrivateLink <vpc/latest/userguide/endpoint-services-overview.html>`,
-  for connections from {+aws+} |vpc|s
+  for connections from {+aws+} VPCs
 - {+Azure+} :azure:`Private Link <private-link/private-link/overview>`,
   for connections from {+Azure+} {+vnet+}s
 - :gcp:`Private Service Connect <vpc/docs/private-service-connect>`, for
