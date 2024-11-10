@@ -98,7 +98,7 @@ cases of {+cluster+} changes such as :atlas:`vertical scaling
 :atlas:`maintenance events <cluster-maintenance-window>`. However,
 certain topology changes – such as a :ref:`conversion from replica set
 to sharded cluster <convert-repl-set-to-sharded>`, the
-:atlas:`<scale-cluster-shardNum> addition of shards`, or a :ref:`region
+:atlas:`addition of shards <scale-cluster-shardNum>`, or a :ref:`region
 change <scale-cluster-region>` – require that you use new IP
 addresses.
 
