@@ -105,13 +105,13 @@ addresses.
 VPC/{+vnet+} Peering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Network peering allows you to connect your own |vpc|s with an Atlas
+Network peering allows you to connect your own |vpc|\s with an Atlas
 |vpc| to route traffic privately and isolate your data flow from the
 public Internet.
 
 Most operations performed over a |vpc| connection originate from your
 application environment, minimizing the need for {+service+} to make
-outbound access requests to peer |vpc|s. However, if you have
+outbound access requests to peer |vpc|\s. However, if you have
 configured a peer |vpc| to use |ldap| authentication, you must enbale
 {+service+} to connect to the authentication endpoint of your peer
 |vpc| over the |ldap| protocol.
@@ -128,11 +128,11 @@ We recommend the following as best practices:
 - To maintain tight network trust boundaries, configure mitigations
   such as security groups and :aws:`network ACLs
   <vpc/latest/userguide/vpc-network-acls.html>` to prevent inbound
-  access to systems inside your application |vpc|s from the {+service+}-side
+  access to systems inside your application |vpc|\s from the {+service+}-side
   |vpc|.
   
-- Create new |vpc|s to act as intermediaries between sensitive
-  application infrastructure and your {+service+} |vpc|s. |vpc|s are
+- Create new |vpc|\s to act as intermediaries between sensitive
+  application infrastructure and your {+service+} |vpc|\s. |vpc|\s are
   intransitive, allowing you to only expose those components of your
   application that need access to {+service+}.
 
@@ -220,9 +220,9 @@ These examples also apply other recommended configurations, including:
 
       For more configuration options and information about this example, see:
 
-      - :ref:`atlas-networking-peering-create-aws`, for {+aws+} |vpc|s
+      - :ref:`atlas-networking-peering-create-aws`, for {+aws+} |vpc|\s
       - :ref:`atlas-networking-peering-create-azure`, for {+azure+} {+vnet+}s
-      - :ref:`atlas-networking-peering-create-gcp`, for {+gcp+} |vpc|s
+      - :ref:`atlas-networking-peering-create-gcp`, for {+gcp+} |vpc|\s
 
       Create a Private Endpoint
       ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -239,7 +239,7 @@ These examples also apply other recommended configurations, including:
 
       For more configuration options and information about this example, see:
 
-      - :ref:`atlas-privateEndpoints-aws-create`, for connections from {+aws+} |vpc|s
+      - :ref:`atlas-privateEndpoints-aws-create`, for connections from {+aws+} |vpc|\s
       - :ref:`atlas-privateEndpoints-azure-create`, for connections from {+azure+} {+vnet+}s
       - :ref:`atlas-privateEndpoints-gcp-create`, for connections from {+gcp-psc+}
 
