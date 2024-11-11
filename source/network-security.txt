@@ -16,7 +16,7 @@ Network Security
 such as:
 
 - Mandatory |tls-ssl| connection encryption
-- |vpc|s for all projects with one-or-more {+Dedicated-clusters+}
+- |vpc| s for all projects with one-or-more {+Dedicated-clusters+}
 - Access-list-based authentication which only accepts connections from
   sources you explicitly declare
 
@@ -128,9 +128,9 @@ We recommend the following as best practices:
 - To maintain tight network trust boundaries, configure mitigations
   such as security groups and :aws:`network ACLs
   <vpc/latest/userguide/vpc-network-acls.html>` to prevent inbound
-  access to systems inside your application |vpc|s from the
-
-{+service+}-side |vpc|.
+  access to systems inside your application |vpc|s from the {+service+}-side
+  |vpc|.
+  
 - Create new |vpc|s to act as intermediaries between sensitive
   application infrastructure and your {+service+} |vpc|s. |vpc|s are
   intransitive, allowing you to only expose those components of your
