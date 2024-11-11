@@ -16,7 +16,7 @@ Network Security
 such as:
 
 - Mandatory |tls-ssl| connection encryption
-- |vpc| s for all projects with one-or-more {+Dedicated-clusters+}
+- {+vpc+}s for all projects with one-or-more {+Dedicated-clusters+}
 - Access-list-based authentication which only accepts connections from
   sources you explicitly declare
 
