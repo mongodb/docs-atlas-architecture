@@ -52,7 +52,7 @@ following methods:
 databases. |tls| 1.2 is the default protocol; you can select |tls| 1.1
 or |tls| 1.0 if necessary. For more information, see the
 :guilabel:`Set Minimum TLS Protocol Version` section of
-:atlas:`Configure Additional Setting
+:ref:`Configure Additional Setting
 <create-cluster-additional-settings>`.
 
 {+ip-access-list+}s
@@ -70,7 +70,7 @@ access your {+service+} {+clusters+} if their IP addresses aren't
 included in your {+ip-access-list+}.
 
 You can configure :atlas:`temporary access list entries
-<security/ip-access-list/#-optional--set-the-ip-access-list-as-temporary.>`
+<security/ip-access-list/#add-ip-access-list-entries>`
 that expire automatically after a user-defined period.
 
 You can create one access list per project.
