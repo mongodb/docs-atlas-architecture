@@ -92,7 +92,7 @@ outbound connections to TCP traffic on {+service+} hosts. This grants
 your applications access to your {+clusters+}.
 
 {+service+} {+cluster+} public IPs remain the same in the majority of
-cases of {+cluster+} changes such as :atlas:`vertical scaling
+cases of {+cluster+} changes such as :ref:`vertical scaling
 <sizing-auto-scaling>`,
 :atlas:`topology </reference/glossary/#std-term-topology>` changes, or
 :atlas:`maintenance events <cluster-maintenance-window>`. However,
