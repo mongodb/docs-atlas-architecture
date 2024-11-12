@@ -95,10 +95,10 @@ your applications access to your {+clusters+}.
 cases of {+cluster+} changes such as :ref:`vertical scaling
 <sizing-auto-scaling>`,
 :atlas:`topology </reference/glossary/#std-term-topology>` changes, or
-:atlas:`maintenance events <cluster-maintenance-window>`. However,
+:ref:`maintenance events <cluster-maintenance-window>`. However,
 certain topology changes – such as a :ref:`conversion from replica set
 to sharded cluster <convert-repl-set-to-sharded>`, the
-:atlas:`addition of shards <scale-cluster-shardNum>`, or a :ref:`region
+:ref:`addition of shards <scale-cluster-shardNum>`, or a :ref:`region
 change <scale-cluster-region>` – require that you use new IP
 addresses.
 
