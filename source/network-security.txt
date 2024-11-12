@@ -70,7 +70,7 @@ access your {+service+} {+clusters+} if their IP addresses aren't
 included in your {+ip-access-list+}.
 
 You can configure :atlas:`temporary access list entries
-<security/ip-access-list/#add-ip-access-list-entries>`
+</security/ip-access-list/#add-ip-access-list-entries>`
 that expire automatically after a user-defined period.
 
 You can create one access list per project.
