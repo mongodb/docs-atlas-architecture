@@ -28,7 +28,7 @@
                    "scaleDownEnabled": true
                  },
                  "diskGB": {
-                   "enabled": false
+                   "enabled": true
                  }
                },
                "readOnlySpecs": {
