@@ -41,10 +41,9 @@ cluster templates require sharded clusters. Starting with MongoDB version 8.0, y
 :manual:`embedded config servers </reference/command/transitionFromDedicatedConfigServer>` to reduce 
 costs associated with config servers on small sharded clusters. 
 
-The :doc:`Low CPU option <customize-storage/#low-cpu-class>` in {+service+} helps applications that 
-require higher memory but not as much processing power. This option provides instances with half the 
-vCPUs compared to the General tier of the same cluster size, reducing costs for workloads that are 
-memory-intensive but not CPU-bound. 
+The low CPU option in {+service+} helps applications that require higher memory but not as much 
+processing power. This option provides instances with half the vCPUs compared to the General tier of 
+the same cluster size, reducing costs for workloads that are memory-intensive but not CPU-bound. 
 
 Data tiering and archival allows you to archive data at low-cost storage while still enabling 
 queries alongside live cluster data, which is particularly useful for long-term record retention. 
