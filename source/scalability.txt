@@ -9,19 +9,22 @@ Scalability
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: onecol
 
 MongoDB {+service+} allows automated scaling, tiered storage, workload optimization, and other 
-features which can reduce your database costs as your data usage expands.
+features that can reduce your database costs as your data usage expands.
 
 {+service+} Features and Recommendations for Scalability
 ---------------------------------------------------------
 
+Features
+~~~~~~~~~
+
 :ref:`Auto-scaling <cluster-autoscaling>` allows you to dynamically allocate resources based on 
 real-time workload demands. This feature ensures that you only pay for the resources you use. By 
 configuring auto-scaling within predefined limits, you can effectively manage fluctuations in data 
-processing needs, maintain optimal performance and achieve cost efficiency. {+service} 
+processing needs, maintain optimal performanc, and achieve cost efficiency. {+service+} 
 offers cluster auto-scaling for all tiers except for the highest tier. Auto-scaling enables 
 clusters to automatically adjust their tier, storage capacity, or both in response to real-time 
 use. {+service+} analyzes the CPU and memory utilization to determine when and whether to scale 
