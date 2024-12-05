@@ -7,6 +7,27 @@ Reliability
 
 .. default-domain:: mongodb
 
+To achieve reliability, you can provide high availability and fault tolerance
+to minimize downtime and prevent data loss. |service-fullname| allows you
+to create cluster configurations that meet your availability needs
+while satisfying security and compliance requirements.
+
+When you launch a new cluster, |service| configures a minimum three-node replica
+set across availability zones. If a primary node fails, |service|  detects the failure,
+promotes a secondary node to primary, and restores the cluster to its target configuration.
+You can increase the node count to any odd number as needed. |service| writes data to a
+primary node and replicates it across secondary nodes. 
+
+By default, |service| distributes cluster nodes across availability zones
+within your chosen cloud provider's region.
+
+Use built-in tools to monitor cluster performance and integrate with
+third-party services. Enable termination protection to prevent accidental
+cluster deletion. Additionally, |service| supports retryable database reads
+and writes and provides robust database backup options.
+
+Simulate disaster recovery scenarios to test your preparedness for such events.
+
 Use the following resources to learn about reliability in {+service+}:
 
 - :ref:`High Availability <arch-center-high-availability>`
