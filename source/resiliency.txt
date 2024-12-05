@@ -162,12 +162,12 @@ application.
 
 For example, if you are scaling your |service| {+cluster+} to meet user demand, 
 consider what the minimum pool size of connections your application will 
-consisently need, so that when the connection pool scales the additional 
+consistently need, so that when the connection pool scales the additional 
 networking and compute load that comes with opening new client connections 
 doesn't undermine your application's time-sensitive need for increased 
 database operations. 
 
-Min and Max Conection Pool Size 
+Min and Max Connection Pool Size 
 ```````````````````````````````
 
 If your ``minPoolSize`` and ``maxPoolSize`` values are similar, the majority of your 

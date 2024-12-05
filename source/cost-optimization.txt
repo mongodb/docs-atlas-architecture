@@ -7,6 +7,23 @@ Cost Optimization
 
 .. default-domain:: mongodb
 
+Cost optimization involves managing expenses while maintaining performance
+and scalability. A data platform should provide clear visibility into resource
+usage to help predict and manage costs effectively.
+|service-fullname| offers comprehensive tools and features to control
+database costs as usage expands, including user-friendly cost optimization
+features to streamline spending.
+
+You can create billing dashboards using MongoDB Charts to visualize billing
+data and monitor usage across different categories and time periods.
+To prevent over-provisioning, enable auto-scaling on your cluster tier,
+which adjusts resources based on usage.
+
+Consider lowering backup frequency for less critical data and terminating
+clusters in development environments. Optimize data transfer by using same-provider, same-region transfers
+whenever possible to minimize costs. Optimize queries to reduce resource consumption and lower costs, and use
+tools like Cost Explorer to set alerts and review invoices for better cost management.
+
 Use the following resources to learn about cost optimization in
 {+service+}:
 

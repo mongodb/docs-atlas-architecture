@@ -7,6 +7,28 @@ Performance
 
 .. default-domain:: mongodb
 
+Performance efficiency ensures low latency and high throughput for data
+operations while scaling seamlessly to meet increasing demand.
+
+|service-fullname| supports automated scaling, tiered storage, and workload
+optimization to reduce database costs as data usage grows. Auto-scaling
+dynamically allocates resources based on real-time workload demands,
+ensuring you only pay for what you use. You can configure auto-scaling
+within predefined limits to manage data processing fluctuations, maintain
+performance, and achieve cost efficiency. Atlas offers cluster auto-scaling
+for all tiers except the highest, adjusting tier and storage capacity
+based on CPU and memory utilization. 
+
+Deployment templates provide horizontal and vertical scaling options, and
+you can upgrade clusters through the control plane GUI.
+
+|service| also includes tools like the Performance Advisor to monitor and
+optimize query performance, offering intelligent index recommendations to
+enhance data retrieval efficiency. The Atlas CLI helps manage local and
+cloud environments efficiently, automating tasks and scaling resources
+as needed, which supports local testing and development while minimizing
+cloud usage.
+
 Use the :ref:`Scalability <arch-center-scalability>` resource to learn
 about performance in {+service+}.
 
