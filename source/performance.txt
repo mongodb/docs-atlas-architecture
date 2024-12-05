@@ -7,30 +7,28 @@ Performance
 
 .. default-domain:: mongodb
 
-Performance efficiency ensures low latency and high throughput for data
-operations while scaling seamlessly to meet increasing demand.
+Improve performance of your deployments to achieve low latency and high
+throughput for data operations, and to allow your deployments to scale
+seamlessly to meet increasing demand.
 
-|service-fullname| supports automated scaling, tiered storage, and workload
-optimization to reduce database costs as data usage grows. Auto-scaling
-dynamically allocates resources based on real-time workload demands,
-ensuring you only pay for what you use. You can configure auto-scaling
-within predefined limits to manage data processing fluctuations, maintain
-performance, and achieve cost efficiency. Atlas offers cluster auto-scaling
-for all tiers except the highest, adjusting tier and storage capacity
-based on CPU and memory utilization. 
+To manage data processing fluctuations, maintain performance, and reduce
+database costs as data usage grows, use automated scaling, tiered {+cluster+}
+storage, and workload optimization in |service-fullname|. Configure
+auto-scaling in |service| within predefined limits. |service| auto-scales
+{+clusters+} in all tiers except the highest, and adjusts {+cluster+}
+tier and storage capacity based on real-time workload demands for CPU
+and memory utilization. For horizontal or vertical scaling options, you
+can use deployment templates, and upgrade {+clusters+} to higher tiers
+through the |service| UI.
 
-Deployment templates provide horizontal and vertical scaling options, and
-you can upgrade clusters through the control plane GUI.
+To monitor and optimize query performance, you can use the Performance
+Advisor in |service|. The Performance Advisor provides index recommendations
+that allow you to efficiently retrieve data. To manage local and cloud
+environments, and automate tasks and scaling resources as needed, use
+the {+atlas-cli+}.
 
-|service| also includes tools like the Performance Advisor to monitor and
-optimize query performance, offering intelligent index recommendations to
-enhance data retrieval efficiency. The Atlas CLI helps manage local and
-cloud environments efficiently, automating tasks and scaling resources
-as needed, which supports local testing and development while minimizing
-cloud usage.
-
-Use the :ref:`Scalability <arch-center-scalability>` resource to learn
-about performance in {+service+}.
+To learn about features that help you improve performance in {+service+},
+see :ref:`Scalability <arch-center-scalability>`.
 
 .. toctree::
    :titlesonly:
