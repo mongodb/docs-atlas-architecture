@@ -7,18 +7,12 @@ Operational Efficiency
 
 .. default-domain:: mongodb
 
-To achieve operational efficiency, implement automation to improve
-process consistency and efficiency. Ensure full visibility into system
-performance with real-time monitoring and observability. This approach
-allows you to detect issues proactively and resolve them quickly to maintain
-reliability. 
-
-Use |service-fullname| integrations with Infrastructure as Code (IaC) tools to
-automate resource deployment. Leverage CloudFormation Resources with
-JSON and YAML templates available in the AWS CloudFormation Public Registry
-to utilize various |service| resources. Additionally, you can automate
-processes using the AWS Cloud Development Kit (CDK), Atlas CLI,
-Atlas Kubernetes Operator, and direct scripting via the Atlas Admin API.
+To use consistent processes, monitor system performance in real time, and
+detect issues, automate resources deployment by integrating with
+Infrastructure as Code (IaC) tools in |service-fullname|. For example,
+you can use JSON and YAML templates from the CloudFormation Public Registry,
+automate processes using the |aws| Cloud Development Kit (CDK),
+the {+atlas-cli+}, the |ak8so|, and direct scripting via the {+atlas-admin-api+}.
 
 Use the following resources to learn about operational efficiency
 in {+service+}:
