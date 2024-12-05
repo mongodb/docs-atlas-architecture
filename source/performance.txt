@@ -7,8 +7,28 @@ Performance
 
 .. default-domain:: mongodb
 
-Use the :ref:`Scalability <arch-center-scalability>` resource to learn
-about performance in {+service+}.
+Improve performance of your deployments to achieve low latency and high
+throughput for data operations, and to allow your deployments to scale
+seamlessly to meet increasing demand.
+
+To manage data processing fluctuations, maintain performance, and reduce
+database costs as data usage grows, use automated scaling, tiered {+cluster+}
+storage, and workload optimization in |service-fullname|. Configure
+auto-scaling in |service| within predefined limits. |service| auto-scales
+{+clusters+} in all tiers except the highest, and adjusts {+cluster+}
+tier and storage capacity based on real-time workload demands for CPU
+and memory utilization. For horizontal or vertical scaling options, you
+can use deployment templates, and upgrade {+clusters+} to higher tiers
+through the |service| UI.
+
+To monitor and optimize query performance, you can use the Performance
+Advisor in |service|. The Performance Advisor provides index recommendations
+that allow you to efficiently retrieve data. To manage local and cloud
+environments, and automate tasks and scaling resources as needed, use
+the {+atlas-cli+}.
+
+To learn about features that help you improve performance in {+service+},
+see :ref:`Scalability <arch-center-scalability>`.
 
 .. toctree::
    :titlesonly:
