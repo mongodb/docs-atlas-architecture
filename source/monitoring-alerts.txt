@@ -20,9 +20,11 @@ Monitoring and Alerts
    :depth: 2
    :class: onecol
 
-|service-fullname| has a robust set of built-in tools, alerts, charts,
-integrations, and logs that help you to monitor and enhance your
-|service| deployment and detect and respond to threats in real time.
+|service-fullname| has a robust set of built-in metrics, telemetry,
+and logs that you can leverage from |service| or integrate into your
+third-party observability and alerting stack. This enables you to
+monitor and manage your |service| deployments and respond to incidents
+proactively and in real time.
 
 Monitoring your deployment allows you to:
 
@@ -30,7 +32,6 @@ Monitoring your deployment allows you to:
 - Observe the utilization of resources.
 - Observe the presence of abnormal behavior and performance issues.
 - Detect and react to real-time issues to improve your application stack.
-- Comply with your data protection and governance requirements.
 
 |service| provides several metrics for monitoring and alerting. You can
 track the health, availability, consumption, and performance of your 
@@ -61,8 +62,9 @@ Features
        reporting equivalent. 
        
        You can view metrics by using the {+atlas-ui+} Real-Time
-       Performance Panel, Query Profiler, Performance Advisor, and
-       Namespace Insights page, {+atlas-cli+}, {+atlas-admin-api+}. 
+       Performance Panel, Query Profiler, Performance Advisor and
+       Namespace Insights page, {+atlas-cli+}, or by consuming than{+atlas-admin-api+} to funnel metrics into a tool of your
+       choice. 
 
    * - Alerts 
      - |service| provides alerts for over 200 event types, allowing you
@@ -76,8 +78,9 @@ Features
        and integrated Terraform resource to configure alerts and alert
        notification.  
 
-   * - Charts 
-     - |service| monitoring charts provide insights into various key
+   * - Monitoring
+     - |service| monitoring visualizations provide insights into
+       various key
        metrics, including hardware performance and database operation
        efficiency. Tools such as real-time performance panels for
        network and operation visibility, query profilers for tracking
@@ -97,8 +100,7 @@ Features
 Recommendations for Monitoring by Using Metrics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To monitor your {+cluster+} performance, you can view the {+cluster+}
-metrics. For your databases, you can view historical throughput,
+To monitor your {+cluster+} or database performance, you can view the {+cluster+} metrics such as historical throughput,
 performance, and utilization metrics. The following table lists some
 important categories of metrics to monitor: 
 
@@ -131,8 +133,10 @@ important categories of metrics to monitor:
        - Opcounters -repl 
 
 You can use the {+atlas-ui+}, {+atlas-admin-api+}, and {+atlas-cli+} to
-view |service| {+cluster+} metrics. You can also integrate with
-third-party tools for visualizing these metrics.
+view |service| {+cluster+} metrics. Additionally, |service| provides
+built-in integrations with third-party tools such as Datadog, and you
+can also leverage the {+atlas-admin-api+} to integrate with other
+custom metrics tools.
 
 To learn more, see :ref:`monitor-cluster-metrics`. 
 
@@ -145,7 +149,7 @@ Recommendations for Monitoring by Configuring Alerts
 <datadog-integration>`, :ref:`Prometheus <prometheus-integration>`,
 :atlascli:`Opsgenie </command/atlas-integrations-create-OPS_GENIE/>`,
 :atlascli:`Splunk On-Call </command/atlas-integrations-create-VICTOR_OPS/>`, 
-and so on, enhancing collaboration and unifying application performance
+and :atlas:`other tools </tutorial/third-party-service-integrations/>`, enhancing collaboration and unifying application performance
 management within your existing workflows for optimal efficiency. For
 example, you can configure to send alerts from your project to your: 
 
@@ -164,102 +168,142 @@ login attempts, unusual access patterns, and data breaches. In dev and
 test environments, we recommend configuring alerts on {+clusters+} after
 seven days of inactivity to save costs. 
 
-At the minimum, we recommend configuring the following alerts: 
+Recommended {+service+} Alert Configurations
+````````````````````````````````````````````
+
+At the minimum, we recommend configuring the following alerts. These
+alerts recommendations provide a baseline, but you should adjust them
+based on your workload characteristics. Where "high priority" conditions
+are specified, we recommend that you configure multiple alerts for the
+same condition, one for a low priority / "warning" level of severity, and one for a high priority level of severity.
 
 .. list-table:: 
-   :widths: 20 80 
+   :header-rows: 1
+   :widths: 20 20 60 
    :stub-columns: 1 
 
-   * - Opcounters 
-     - Gives a basic overview of what the system is doing including
-       number of queries, updates, inserts, deletes, and so on commands
-       per second. Excessive Opcounter levels typically indicate that
-       load has increased unexpectedly in some dimension. So set an
-       alert for around X% of the expected peaks. 
+   * - Condition
+     - Recommended Alert Thresholds
+     - Description
 
-   * - Tickets 
+   * - Opcounters
+     - 60% of the expected peaks
+     - Gives a basic overview of what the system is doing, including
+       number of queries, updates, inserts, and deletes
+       per second. Excessive Opcounter levels typically indicate that
+       load has increased unexpectedly in some dimension due to a spike
+       in usage.
+
+   * - Tickets
+     - < 100 tickets available for more than 2 minutes
+       < 50 tickets available for more than 1 minute
+       < 10 tickets available at any time
      - Tickets represent the number of concurrent operations allowed
        into the storage engine. There are separate tickets for read and
        write operations. When this value reaches zero, new requests may
-       queue until a ticket becomes available. Unless the load is known
+       queue until a ticket becomes available, causing a delay in 
+       application performance. Unless the load is known
        to be highly concurrent, this value should remain close to the
-       default (``128``) and mustn't dip much, or frequently. We
-       recommend setting the following alert thresholds:
+       default (``128``) and should not dip frequently.
 
-       < 100 tickets available for more than 2 minutes
-       < 50 tickets available for more than 1 minute
-       < 10 tickets available at any time
-
-   * - Replication Lag 
+   * - Replication Lag
+     - > A few tens of seconds persistently for more than a few
+       minutes
      - Replication lag is calculated between the last operation time on
        the primary and the time of the last operation received by the
        secondary. Excessive replication lag diminishes the worth of
        failover nodes and adversely affects the latency for write
        operations using a majority write concern or any value greater
-       than one. We recommend setting an alert to trigger if lag exceeds
-       more than a few tens of seconds persistently for more than a few
-       minutes. 
+       than one.
 
    * - Replication Oplog Window 
-     - Represents how long a Secondary can be down before losing its
-       ability to catch up to the Primary. We recommend a minimum value
-       of 72 to 96 hours for this metric. Note that a value less than 24
+     - Minimum value
+       of 72 to 96 hours. Note that a value less than 24
        hours might be risky. 
+     - Represents how long a Secondary can be down before losing its
+       ability to catch up to the Primary.
 
    * - Connections 
+     - 60% of the maximum number of allowed connections based on your
+       |service| tier. To learn more, see 
+       :atlas:`Connection Limits and Cluster Tier 
+       </reference/atlas-limits/#connection-limits-and-cluster-tier>`.
      - Represents the number of connected sockets the server is actively
        servicing, including sockets used for heartbeats and replication
-       between members. Configure an alert to X% above the peak
-       observed. Value must never be zero.
+       between members. Value must never be zero.
 
        If the connections have increased:
 
        - Due to slowly increasing workload, re-evaluate the alert threshold.
-       - Suddenly, pinpoint the cause in time on the graph to the
-         nearest 10 seconds and investigate the cause for the change.
-       - Because of other factors such as slow query response, the, the
-         increase might be because an application response to slow
-         queries which could trigger a connection storm. Review your
-         application connection limits.
-
-   * - Query Targeting 
-     - Ratio of number of keys and documents scanned to the number of
-       documents returned, averaged by second. A high level of this
-       metric means that the query subsystem has to perform many
-       inefficient scans to fulfill queries, probably because there are
-       no appropriate indexes to support queries, or new queries have
-       been introduced, or new data has been added to the system that
-       the performance threshold is noticeable. Use the Performance
-       Advisor to observe the specific operations that are noticeably
-       contributing to the alert.  
+       - If there is a sudden spike, pinpoint the cause by looking at
+         the time on the graph to the nearest 10 seconds and
+         investigate the cause for the change by tracing application
+         server logs and metrics.
+       - Other factors such as a slow query response might cause the
+         application server to re-try the connection and query,
+         potentially causing a connection storm or a mass reboot of app servers causing all connections to retry at once. Review your app server connection limits and timeouts.
 
    * - System CPU (%)
+     - Sustained load of 60% of available CPU after several minutes.
      - Measure of CPU utilization on the host operating system.
-       Configure an alert if there is a spike in X% of steady state
-       value after several minutes. If CPU changes dramatically, it
+       If CPU changes dramatically, it
        could be due to a change in load patterns, which indicates that a
        larger CPU might be needed to handle the extra load. 
 
    * - Disk Space Used (%)
+     - 60%, 80%, and 90% of free space used.
      - Measure of used disk space for MongoDB related files. We
        recommend an alert at a threshold that would indicate the system
        is running out of free space. Check the usage by using MongoDB
-       Compass or the Data Explorer in your |service| {+cluster+}. Use
+       Compass or the Data Explorer in your |service| {+cluster+}.
 
    * - Disk I/O Utilization (%)
+     - Sustained utilization over 80% for several minutes
      - Measure of disk IO utilization on the host operating system. High
        disk utilization could be the results of memory exhaustion, high
        write load, or unusual load churn. Writes can't complete until
        the disk confirms receipt of the data, which means that large
        data import or other batch job might become limited by the speed
-       of the disk. Configure an alert for sustained utilization over
-       80% for several minutes. Check the Opcounters and Query Targeting
+       of the disk. Check the Opcounters and Query Targeting
        graphs to get some insight into what sort of unexpected load is
        occurring. 
 
    * - No Primary, Mongos
-     - |service| has an alerting mechanism if a deployment doesn't have
-       a primary or Mongos.
+     - N/A
+     - Alerts if a deployment doesn't have
+       a primary or Mongos. No primary or Mongos would mean that the
+       app server would be unable to connect and the application would
+       be down.
+
+   * - Oplog Window
+     - < 24h for 5 minutes. High priority condition: < 1h for
+       10 minutes.
+     -
+    
+   * - Election events
+     - > 3 for 5 minutes. High priority condition: > 30 for
+       5 minutes.
+     - 
+
+   * - Read IOPS
+     - > 4000 for 2 minutes. High priority condition: > 9000 for 5
+       minutes.
+     - 
+
+   * - Write IOPS
+     - > 4000 for 2 minutes. High priority condition: > 9000 for 5
+       minutes.
+     - 
+
+   * - Read Latency
+     - > 20ms for 5 minutes. High priority condition: > 50 s for 5
+       minutes.
+     - 
+
+   * - Write Latency
+     - > 20ms for 5 minutes. High priority condition: > 50ms for more
+       than 5 minutes.
+     - 
 
 To learn more, see :atlas:`Configure and Resolve Alerts </alerts>`. 
 
