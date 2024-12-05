@@ -7,11 +7,11 @@ Operational Efficiency
 
 .. default-domain:: mongodb
 
-To use consistent processes, monitor system performance in real time, and
+To use consistent processes, monitor system performance in real time and
 detect issues, automate resources deployment by integrating with
 Infrastructure as Code (IaC) tools in |service-fullname|. For example,
-you can use JSON and YAML templates from the CloudFormation Public Registry,
-automate processes using the |aws| Cloud Development Kit (CDK),
+you can use JSON and YAML templates from the |aws| CloudFormation Public
+Registry, automate processes using the |aws| Cloud Development Kit (CDK),
 the {+atlas-cli+}, the |ak8so|, and direct scripting via the {+atlas-admin-api+}.
 
 Use the following resources to learn about operational efficiency
