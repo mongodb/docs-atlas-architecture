@@ -155,7 +155,7 @@ Recommended Hierarchy 2: Decentralized Business Units/Departments
 
 Consider the following hierarchy if your organization is highly
 decentralized without a centralized function to serve as the contract
-and billing owner. In this hierarchy, you each {+BU+},
+and billing owner. In this hierarchy, each {+BU+},
 department, or team has their own {+service+} organization. This
 hierarchy is useful if each of your teams is fairly independent, they
 don't share people or permissions within the company, or they want to
