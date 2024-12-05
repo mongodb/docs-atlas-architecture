@@ -7,9 +7,9 @@ Security
 
 .. default-domain:: mongodb
 
-A robust data platform must ensure data integrity and privacy through
-comprehensive security measures, such as encryption at rest and in transit,
-fine-grained access controls, and adherence to regulatory standards.
+|service-fullname| ensures data integrity and privacy through comprehensive
+security measures, such as encryption at rest and in transit, fine-grained
+access controls, and adherence to regulatory standards.
 
 |service-fullname| enforces mandatory |tls| encryption for database connections,
 with TLS 1.2 as the default protocol. You can configure {+ip-access-list+}\s
@@ -21,8 +21,8 @@ Role-Based Access Control (RBAC) in |service| with built-in and custom roles.
 Implement RBAC with the principle of least privilege and integrate with
 identity providers in |service|.
 
-To ensure comprehensive data protection and monitoring, |service| meets
-multiple compliance standards, and provides features for auditing and logging.
+To protect and monitor data, |service| meets compliance standards and
+provides features for auditing and logging.
 
 Use the following resources to learn about security in {+service+}:
 
