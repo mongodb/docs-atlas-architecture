@@ -1,3 +1,5 @@
+:noprevnext:
+
 .. meta::
    :robots: noindex, nosnippet
 
@@ -7,13 +9,34 @@ Security
 
 .. default-domain:: mongodb
 
-Use the following resources to learn about security in {+service+}:
+The Security pillar of the {+service+} {+waf+} includes
+features that ensure data integrity and privacy through comprehensive
+safeguarding measures, such as encryption at rest and in transit,
+fine-grained access controls, and adherence to regulatory standards.
 
-- :ref:`Network Security <arch-center-network-security>`
-- :ref:`Authorization and Authentication <arch-center-auth>`
-- :ref:`Data Encryption <arch-center-data-encryption>`
-- :ref:`Compliance <arch-center-compliance>`
-- :ref:`Auditing and Logging <arch-center-auditing-logging>`
+Use the following {+atlas-arch-center+} resources to learn about
+security in {+service+}:
+
+.. card-group::
+   :columns: 2
+   :style: extra-compact
+
+   .. card::
+      :headline: Network Security
+      :url: https://mongodb.com/docs/manual/data-modeling/
+      :icon: atlas_search
+      :icon-alt: Data modeling icon
+
+      Content here...
+
+   .. card::
+      :headline: Authorization and Authentication
+      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
+      :icon: atlas_search
+      :icon-alt: Atlas security icon
+
+      Content here...
+
 
 .. toctree::
    :titlesonly:

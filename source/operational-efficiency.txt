@@ -1,3 +1,5 @@
+:noprevnext:
+
 .. meta::
    :robots: noindex, nosnippet
 
@@ -7,11 +9,32 @@ Operational Efficiency
 
 .. default-domain:: mongodb
 
-Use the following resources to learn about operational efficiency
-in {+service+}:
+The Operational Efficiency pillar of the {+service+} {+waf+} includes
+features that support your organization's operations with minimum
+expenditure of time and effort, including tools for automation
+and monitoring and alert tools and integrations.
 
-- :ref:`Automation <arch-center-automation>`
-- :ref:`Monitoring and Alerts <arch-center-monitoring-alerts>`
+Use the following {+atlas-arch-center+} resources to learn about operational efficiency in {+service+}:
+
+.. card-group::
+   :columns: 2
+   :style: extra-compact
+
+   .. card::
+      :headline: Automation
+      :url: https://mongodb.com/docs/manual/data-modeling/
+      :icon: atlas_search
+      :icon-alt: Data modeling icon
+
+      Automate resource deployment by integrating with Infrastructure as Code (IaC) tools that templatize your processes.
+
+   .. card::
+      :headline: Monitoring and Alerts
+      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
+      :icon: atlas_search
+      :icon-alt: Atlas security icon
+
+      Monitor system performance in real time, detect issues, and integrate with your third-party observability and alerting stack.
 
 .. toctree::
    :titlesonly:
