@@ -99,7 +99,7 @@ provider.
        user can turn off this protection after completing a verification
        process with MongoDB support and legal. This adds a mandatory manual 
        delay and cooldown period so that an attacker cannot change the backup 
-       policy and export the data. To learn more, see `Configure a Backup Compliance Policy <https://www.mongodb.com/docs/atlas/backup/cloud-backup/backup-compliance-policy/>`__
+       policy and export the data. To learn more, see `Configure a Backup Compliance Policy <https://www.mongodb.com/docs/atlas/backup/cloud-backup/backup-compliance-policy/>`__.
 
 Recommendations for Backup Strategy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -234,7 +234,7 @@ Recommendations for Backup Costs
 To optimize |service| backup costs, you must adjust the backup frequency
 and retention policies to align with data criticality, reducing
 unnecessary storage expenses. For example, you should disable backups in lower 
-environments and ensure that in upper environments with high availability requirements 
+environments, and ensure that in upper environments with high availability requirements 
 you are distributing backups to each region where you are deployed.
 You can also use incremental backups and
 built-in compression to minimize the amount of stored data. By selecting
