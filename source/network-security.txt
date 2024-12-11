@@ -62,7 +62,8 @@ Features
 
 {+service+} enforces mandatory |tls| encryption of connections to your
 databases. |tls| 1.2 is the default protocol; you can select |tls| 1.1
-or |tls| 1.0 if necessary but we do not recommend. To learn more, see the
+or |tls| 1.0 if necessary, but we do not recommend protocols lower than 
+the default. To learn more, see the
 :guilabel:`Set Minimum TLS Protocol Version` section of
 :ref:`Configure Additional Settings
 <create-cluster-additional-settings>`.
@@ -150,7 +151,7 @@ boundary.
 In general, we recommend using private endpoints for every {+service+} project 
 because it provides the most granular security and eases the administrative burden 
 that can come from managing {+ip-access-list+}\s and large blocks of IP addresses 
-as your cloud network scales. There is a cost associated with each endpoint so you 
+as your cloud network scales. There is a cost associated with each endpoint, so you 
 might consider not requiring private endpoints in lower environments but you should 
 leverage them in higher environments to limit the extension of your network trust 
 boundary.
