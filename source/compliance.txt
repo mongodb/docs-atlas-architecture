@@ -113,7 +113,7 @@ of encryption options to satisfy the requirements.
   it's processing.
 
   When using queryable encryption, sensitive data is encrypted throughout its 
-  lifecycle, in-transit, at-rest, in-use,
+  lifecycle: in transit, at rest, in use,
   in logs, and backups. The data is only ever decrypted on the client-side,
   since only you have access to the encryption keys.
 
