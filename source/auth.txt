@@ -178,7 +178,7 @@ management and enhance security by allowing for passwordless access to
 the |service| database. 
 We recommend workload identity federation for all applications running in 
 production. You shouldn't allow human users to connect except in the most 
-extreme break-glass scenarios.
+extreme break-glass emergency scenarios.
 
 To learn more, see the following: 
 
