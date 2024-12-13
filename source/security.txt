@@ -7,30 +7,64 @@ Security
 
 .. default-domain:: mongodb
 
-|service-fullname| ensures data integrity and privacy through comprehensive
-security measures, such as encryption at rest and in transit, fine-grained
-access controls, and adherence to regulatory standards.
+The Security pillar of the {+service+} {+waf+} includes features that
+ensure data integrity and privacy through comprehensive safeguarding
+measures, such as encryption at rest and in transit, fine-grained access
+controls, and adherence to regulatory standards.
 
-|service-fullname| enforces mandatory |tls| encryption for database connections,
-with TLS 1.2 as the default protocol. You can configure {+ip-access-list+}\s
-to restrict database access to specific IP addresses and |cidr| ranges and
-use private endpoints for staging and production projects.
+Use the following {+atlas-arch-center+} resources to learn about
+security in {+service+}:
 
-To control resource operations and improve security, you can use
-Role-Based Access Control (RBAC) in |service| with built-in and custom roles.
-Implement RBAC with the principle of least privilege and integrate with
-identity providers in |service|.
+.. card-group::
+   :columns: 2
+   :style: extra-compact
 
-To protect and monitor data, |service| meets compliance standards and
-provides features for auditing and logging.
+   .. card::
+      :headline: Network Security
+      :url: https://mongodb.com/docs/manual/data-modeling/
+      :icon: atlas_search
+      :icon-alt: Data modeling icon
 
-Use the following resources to learn about security in {+service+}:
+      |service-fullname| enforces mandatory |tls| encryption for database connections,
+      with TLS 1.2 as the default protocol. You can configure {+ip-access-list+}\s
+      to restrict database access to specific IP addresses and |cidr| ranges and
+      use private endpoints for staging and production projects.
 
-- :ref:`Network Security <arch-center-network-security>`
-- :ref:`Authorization and Authentication <arch-center-auth>`
-- :ref:`Data Encryption <arch-center-data-encryption>`
-- :ref:`Compliance <arch-center-compliance>`
-- :ref:`Auditing and Logging <arch-center-auditing-logging>`
+   .. card::
+      :headline: Authorization and Authentication
+      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
+      :icon: atlas_search
+      :icon-alt: Atlas security icon
+
+      To control resource operations and improve security, you can use
+      Role-Based Access Control (RBAC) in |service| with built-in and
+      custom roles. Implement RBAC with the principle of least privilege
+      and integrate with identity providers in |service|.
+
+   .. card::
+      :headline: Data Encryption
+      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
+      :icon: atlas_search
+      :icon-alt: Atlas encryption icon
+
+      text here
+
+   .. card::
+      :headline: Compliance
+      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
+      :icon: atlas_search
+      :icon-alt: Atlas encryption icon
+
+      To protect and monitor data, |service| meets compliance standards and
+      provides features for auditing and logging.
+
+   .. card::
+      :headline: Auditing and Logging
+      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
+      :icon: atlas_search
+      :icon-alt: Atlas logging icon
+
+      Text here
 
 .. toctree::
    :titlesonly:

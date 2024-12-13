@@ -7,18 +7,37 @@ Operational Efficiency
 
 .. default-domain:: mongodb
 
-To use consistent processes, monitor system performance in real time and
-detect issues, automate resources deployment by integrating with
-Infrastructure as Code (IaC) tools in |service-fullname|.
+The Operational Efficiency pillar of the {+service+} {+waf+} includes
+features that support your organization's operations with minimum
+expenditure of time and effort, including tools for automation and
+monitoring and alert tools and integrations.
 
-For example, you can use JSON and YAML templates from the |aws| CloudFormation
-Public Registry, automate processes using the |aws| Cloud Development Kit (CDK),
-the {+atlas-cli+}, the |ak8so|, and direct scripting via the {+atlas-admin-api+}.
+Use the following {+atlas-arch-center+} resources to learn about
+operational efficiency in {+service+}:
 
-Use the following resources to learn about operational efficiency in {+service+}:
+.. card-group::
+   :columns: 2
+   :style: extra-compact
 
-- :ref:`Automation <arch-center-automation>`
-- :ref:`Monitoring and Alerts <arch-center-monitoring-alerts>`
+   .. card::
+      :headline: Automation
+      :url: https://mongodb.com/docs/manual/data-modeling/
+      :icon: atlas_search
+      :icon-alt: Atlas automation icon
+
+      Automate resource deployment by integrating with
+      Infrastructure as Code (IaC) tools that use templates for your processes,
+      or automate processes using the |aws| Cloud Development Kit (CDK),
+      the {+atlas-cli+}, the |ak8so|, and direct scripting via the {+atlas-admin-api+}.
+
+   .. card::
+      :headline: Monitoring and Alerts
+      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
+      :icon: atlas_search
+      :icon-alt: Atlas security icon
+
+      Monitor system performance in real time, detect issues, and integrate
+      with your third-party observability and alerting stack.
 
 .. toctree::
    :titlesonly:
