@@ -7,26 +7,40 @@ Cost Optimization
 
 .. default-domain:: mongodb
 
-To control database costs in |service-fullname|, you can create billing
-dashboards using |charts| to visualize billing data and monitor usage
-across categories and time periods.
+The Cost Optimization pillar of the {+service+} {+waf+} includes
+features that help you control database costs in |service-fullname|.
 
-To prevent over-provisioning, you can enable auto-scaling on your cluster tier,
-which adjusts resources based on usage.
 
-To minimize data transfer costs, you can configure {+clusters+} with
-same-provider, same-region transfers whenever possible.
 
-To reduce resource consumption and lower costs, you can lower backup
-frequency for less critical data, optimize queries, terminate {+clusters+}
-in development environments, and configure alerts and review invoices in
-the Cost Explorer in |service|.
 
-Use the following resources to learn about cost optimization in {+service+}:
+Use the following {+atlas-arch-center+} resources to learn about cost
+optimization in {+service+}:
 
-- :ref:`Cost-Saving Configurations <arch-center-cost-saving-config>`
-- :ref:`Billing Data <arch-center-billing-data>`
+.. card-group::
+   :columns: 2
+   :style: extra-compact
 
+   .. card::
+      :headline: Cost-Saving Configurations
+      :url: https://mongodb.com/docs/tbd/cost-saving-config/
+      :icon: TBD
+      :icon-alt: Atlas cost savings icon
+
+      To prevent over-provisioning, enable auto-scaling on your cluster tier,
+      which adjusts resources based on usage. To minimize data transfer costs,
+      configure {+clusters+} with same-provider, same-region transfers whenever
+      possible.
+
+   .. card::
+      :headline: Cost-Saving Configurations
+      :url: https://mongodb.com/docs/tbd/billing-data/
+      :icon: TBD
+      :icon-alt: Atlas billing icon
+
+      To reduce resource consumption and lower costs, use billing dashboards
+      to monitor usage across categories and time periods. You can also
+      optimize queries, terminate {+clusters+} in development environments,
+      configure alerts, and review invoices in the Cost Explorer in |service|.
 
 .. toctree::
    :titlesonly:

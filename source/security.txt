@@ -25,46 +25,44 @@ security in {+service+}:
       :icon: atlas_search
       :icon-alt: Data modeling icon
 
-      |service-fullname| enforces mandatory |tls| encryption for database connections,
-      with TLS 1.2 as the default protocol. You can configure {+ip-access-list+}\s
-      to restrict database access to specific IP addresses and |cidr| ranges and
-      use private endpoints for staging and production projects.
+      |service-fullname| enforces mandatory |tls| encryption for database connections.
+      Restrict database access to specific IP addresses and |cidr| ranges
+      and use private endpoints for staging and production projects.
 
    .. card::
       :headline: Authorization and Authentication
-      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
-      :icon: atlas_search
+      :url: https://mongodb.com/docs/TBD/setup-cluster-security/
+      :icon: TBD
       :icon-alt: Atlas security icon
 
-      To control resource operations and improve security, you can use
-      Role-Based Access Control (RBAC) in |service| with built-in and
-      custom roles. Implement RBAC with the principle of least privilege
-      and integrate with identity providers in |service|.
+      Use Role-Based Access Control (RBAC) with built-in and custom roles
+      to control operations on resources. Implement RBAC with the principle of
+      least privilege and integrate with identity providers in |service|.
 
    .. card::
       :headline: Data Encryption
-      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
-      :icon: atlas_search
+      :url: https://mongodb.com/docs/TBD/auth/
+      :icon: TBD
       :icon-alt: Atlas encryption icon
 
-      text here
+      To protect data while in transit, at rest, and in use, and to safeguard
+      data through its full lifecycle, |service| supports encryption features.
 
    .. card::
       :headline: Compliance
-      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
-      :icon: atlas_search
-      :icon-alt: Atlas encryption icon
+      :url: https://mongodb.com/docs/TBD/compliance/
+      :icon: TBD
+      :icon-alt: Atlas compliance icon
 
-      To protect and monitor data, |service| meets compliance standards and
-      provides features for auditing and logging.
+      To protect and monitor data, |service| meets compliance standards.
 
    .. card::
       :headline: Auditing and Logging
-      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
-      :icon: atlas_search
+      :url: https://mongodb.com/docs/TBD/auditing-logging/
+      :icon: TBD
       :icon-alt: Atlas logging icon
 
-      Text here
+      To monitor and log |service| platform activities, use auditing and logs.
 
 .. toctree::
    :titlesonly:

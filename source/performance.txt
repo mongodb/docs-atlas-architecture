@@ -7,28 +7,27 @@ Performance
 
 .. default-domain:: mongodb
 
-Improve performance of your deployments to achieve low latency and high
-throughput for data operations, and to allow your deployments to scale
-seamlessly to meet increasing demand.
+The Performance pillar of the {+service+} {+waf+} includes features, such
+as automated scaling and tiered {+cluster+} storage, that allow your data
+operations to achieve low latency and high throughput, and scale your
+deployments to meet increasing demand.
 
-To manage data processing fluctuations, maintain performance, and reduce
-database costs as data usage grows, use automated scaling, tiered {+cluster+}
-storage, and workload optimization in |service-fullname|. Configure
-auto-scaling in |service| within predefined limits. |service| auto-scales
-{+clusters+} in all tiers except the highest, and adjusts {+cluster+}
-tier and storage capacity based on real-time workload demands for CPU
-and memory utilization. For horizontal or vertical scaling options, you
-can use deployment templates, and upgrade {+clusters+} to higher tiers
-through the |service| UI.
+Use the following {+atlas-arch-center+} resources to learn about performance
+in {+service+}:
 
-To monitor and optimize query performance, you can use the Performance
-Advisor in |service|. The Performance Advisor provides index recommendations
-that allow you to efficiently retrieve data. To manage local and cloud
-environments, and automate tasks and scaling resources as needed, use
-the {+atlas-cli+}.
+.. card-group::
+   :columns: 2
+   :style: extra-compact
 
-To learn about features that help you improve performance in {+service+},
-see :ref:`Scalability <arch-center-scalability>`.
+   .. card::
+      :headline: Scalability
+      :url: https://mongodb.com/docs/TBD/scalability/
+      :icon: TBD
+      :icon-alt: Atlas scalability icon
+
+      Use auto-scaling to dynamically allocate resources based on growing workload
+      demands. For horizontal and vertical scaling, use {+service+} deployment templates.
+      Monitor and optimize query performance with the Performance Advisor in |service|.
 
 .. toctree::
    :titlesonly:

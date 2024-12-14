@@ -21,20 +21,18 @@ operational efficiency in {+service+}:
 
    .. card::
       :headline: Automation
-      :url: https://mongodb.com/docs/manual/data-modeling/
-      :icon: atlas_search
+      :url: https://mongodb.com/docs/tbd/automation/
+      :icon: TBD
       :icon-alt: Atlas automation icon
 
-      Automate resource deployment by integrating with
-      Infrastructure as Code (IaC) tools that use templates for your processes,
-      or automate processes using the |aws| Cloud Development Kit (CDK),
-      the {+atlas-cli+}, the |ak8so|, and direct scripting via the {+atlas-admin-api+}.
+      Automate resource deployment by integrating with Infrastructure as Code (IaC)
+      tools to configure templates for your processes.
 
    .. card::
       :headline: Monitoring and Alerts
-      :url: https://mongodb.com/docs/atlas/setup-cluster-security/
-      :icon: atlas_search
-      :icon-alt: Atlas security icon
+      :url: https://mongodb.com/docs/tbd/monitoring-alerts/
+      :icon: TBD
+      :icon-alt: Atlas monitoring icon
 
       Monitor system performance in real time, detect issues, and integrate
       with your third-party observability and alerting stack.
