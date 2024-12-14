@@ -41,7 +41,8 @@ in {+service+}:
  
       To maintain database's uptime regardless of infrastructure outages
       and system maintenance, use features in |service|, such as write
-      concern and retryable database reads and writes. To prevent accidental{+cluster+} deletion, enable termination protection.
+      concern and retryable database reads and writes. To prevent accidental
+      {+cluster+} deletion, enable termination protection.
 
    .. card::
       :headline: Backups
