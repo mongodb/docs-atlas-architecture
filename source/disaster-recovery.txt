@@ -1,15 +1,25 @@
 .. _arch-center-dr:
 
+:noprevnext:
+
 =================
 Disaster Recovery
 =================
 
 .. default-domain:: mongodb
 
+.. facet::
+   :name: genre
+   :values: tutorial
+
+.. meta::
+   :keywords: atlas architecture center, disaster recovery
+   :description: Learn how to prepare for and respond to disasters with this disaster recovery page for MongoDB Atlas.
+
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 3
+   :depth: 2
    :class: onecol
 
 It is critical for enterprises to plan for disaster recovery. We strongly recommend that you prepare a comprehensive disaster recovery (DR) plan 
@@ -22,9 +32,6 @@ that includes elements such as:
 
 Use the recommendations on this page to prepare for and respond to
 disasters.
-
-To learn more about evaluating a backup and DR strategy for |service|, see 
-`Data Resilience with MongoDB <https://www.mongodb.com/resources/products/capabilities/data-resilience-strategy-with-mongodb-atlas>`__. 
 
 {+service+} Features and Recommendations for Disaster Recovery
 --------------------------------------------------------------
@@ -108,17 +115,20 @@ automatically when you deploy a dedicated cluster to a region that supports avai
 
 We recommend that you deploy replica sets to the following regions because they support at least three availability zones:
 
-**Recommended AWS Regions**
+Recommended AWS Regions
+#######################
 
 .. include:: /includes/aws-recommended-regions.rst
 
-**Recommended Azure Regions**
+Recommended Azure Regions
+#########################
 
+.. include:: /includes/azure-recommended-regions.rst
 
+Recommended Google Cloud Regions
+################################
 
-**Recommended Google Cloud Regions**
-
-
+.. include:: /includes/gcp-recommended-regions.rst
 
 Use ``mongos`` Redundancy for Sharded {+Clusters+}
 `````````````````````
@@ -158,7 +168,7 @@ outage, we recommend that you set the write concern to ``majority``.
 To understand the importance of ``majorty`` write concern, imagine a
 five-node replica set spread across three separate regions with a 2-2-1
 topology (two regions with two nodes and one region with one node),
-with a write concern of ``4``. In the event that one of the regions
+with a write concern of ``4``. If one of the regions
 with two nodes becomes unavailable due to an outage and only three
 nodes are available, no write operations complete and the
 operation hangs due because it is unable to persist data on four nodes.
@@ -169,7 +179,7 @@ unavailable. If you use ``majority`` write concern rather than a numeric value, 
 Consider Backup Configuration
 `````````````````````````````
 Frequent data backups is critical for business continuity and disaster recovery. Frequent backups ensure that data loss and downtime is
-minimal in the event of the loss of normal operations, whether from a disaster or cyber attack. 
+minimal if a disaster or cyber attack disrupt normal operations. 
 
 We recommend that you:
 
@@ -187,6 +197,28 @@ We recommend that you:
 
 For more backup recommendations, see :ref:`arch-center-backups`.
 
+Plan Your Resource Utilization
+``````````````````````````````
+
+To avoid resource capacity issues, we recommend that you monitor
+resource utilization and hold regular capacity planning sessions.
+MongoDB Professional Services offers these sessions.
+
+To view your resource utilization, see :atlas:`Monitor Real-Time Performance </real-time-performance-panel>`. To view metrics with the {+atlas-admin-api+}, see :oas-atlas-tag:`Monitoring and Logs </Monitoring-and-Logs>`.
+
+To learn best practices for alerts and monitoring for resource
+utilization, see :ref:`arch-center-monitoring-alerts`.
+
+If you encounter resource capacity issues, see :ref:`arch-center-resource-capacity`.
+
+Plan Your MongoDB Version Changes
+`````````````````````````````````
+
+Ensure that MongoDB major version upgrades occur far before they reach `end of life <https://www.mongodb.com/legal/support-policy/lifecycles>`__. 
+
+You can't downgrade your MongoDB version using the {+atlas-ui+}, so we recommend that you work directly with MongoDB Professional or Technical
+Services when planning and executing a major version upgrade to avoid any issues that may occur during the upgrade process.
+
 Disaster Recovery Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -196,22 +228,32 @@ on steps to take in the event of a disaster.
 
 It is imperative that you test the plans in this section regularly (ideally quarterly, but at least semi-annually). Testing often helps prepare the Enterprise Database Management (EDM) team for when disaster strikes while also helping to keep the instructions up to date. 
 
-Your EDM team should test the following scenarios:
-
-- A regional outage affecting the {+cluster+}
-- A regional outage affecting the application
-- Any disaster that requires restoring a backup
-
 Some disaster recovery testing may require actions that cannot be performed by EDM users. In these cases, open a support case for the purpose of performing artificial outages at least a week in advance of when you plan on running a test exercise.
+
+This section covers the following disaster recovery procedures:
+
+- :ref:`arch-center-single-node-outage`
+- :ref:`arch-center-regional-outage`
+- :ref:`arch-center-provider-outage`
+- :ref:`arch-center-provider-outage`
+- :ref:`arch-center-resource-capacity`
+- :ref:`arch-center-resource-failure`
+- :ref:`arch-center-data-deletion`
+- :ref:`arch-center-driver-failure`
+- :ref:`arch-center-data-corruption`
+
+.. _arch-center-single-node-outage:
 
 Single Node Outage
 ``````````````````
 
-In the event that a single node in your replica set fails due to a regional outage, your deployment should still be available, assuming you have followed best practices. If you are reading from secondaries, you may experience degraded performance since you have one less node to read from.
+If a single node in your replica set fails due to a regional outage, your deployment should still be available, assuming you have followed best practices. If you are reading from secondaries, you may experience degraded performance since you have one less node to read from.
 
 You can test a primary node outage in {+service+} using the 
 {+atlas-ui+}\'s
 :atlas:`Test Primary Failover </tutorial/test-resilience/test-primary-failover/>` feature or the :oas-atlas-op:`Test Failover </testFailover>` {+atlas-admin-api+} endpoint.
+
+.. _arch-center-regional-outage:
 
 Regional Outage
 ```````````````
@@ -256,6 +298,197 @@ If a single region outage or multi-region outage degrades the state of your {+cl
 You can test a region outage in {+service+} using the 
 {+atlas-ui+}\'s
 :atlas:`Simulate Outage </tutorial/test-resilience/simulate-regional-outage/>` feature or the :oas-atlas-op:`Start an Outage Simulation </startOutageSimulation>` {+atlas-admin-api+} endpoint.
+
+.. _arch-center-provider-outage:
+
+Cloud Provider Outage
+``````````````````````
+
+In the highly unlikely event that an entire cloud provider is
+unavailable, follow these steps to bring your deployment back online:
+
+.. procedure::
+   :style: normal
+   
+   .. step:: Determine when the cloud provider outage began.
+
+   .. step:: Determine the alternative cloud provider you would like to deploy your new {+cluster+} on.
+
+      For a list of cloud providers and information, see 
+      :atlas:`Cloud Providers </reference/cloud-providers>`.
+
+   .. step:: Find the most recent available snapshot taken of the {+cluster+} before the outage began. 
+
+      To learn how to view your backup snapshots, see 
+      :atlas:`View M10+ Backup Snapshots </backup/cloud-backup/dedicated-cluster-backup/#view-m10--backup-snapshots>`.
+
+   .. step:: Create a new {+cluster+} with the alternative cloud provider.
+
+      Your new {+cluster+} must have an identical topology of the original cluster.
+
+   .. step:: Restore the most recent snapshot from the previous step into the new {+cluster+}.
+
+      To learn how to restore your snapshot, see :atlas:`Restore Your Cluster </backup/cloud-backup/restore-overview/>`.
+
+   .. step:: Switch any applications that connect to the old {+cluster+} to the newly-created {+cluster+}.
+
+      To find the new connection string, see :atlas:`Connect via Drivers </driver-connection>`.
+
+.. _arch-center-atlas-outage:
+
+{+service+} Outage
+``````````````````
+
+In the highly unlikely event that the {+service+} Control Plane is
+unavailable, open a high-priority :atlas:`support ticket </support/#request-support>`. 
+
+Your {+cluster+}
+may still be available and accessible even if the {+atlas-ui+} is
+unavailable.
+
+.. _arch-center-resource-capacity:
+
+Resource Capacity Issues
+````````````````````````
+
+Computational resource (such as disk space, RAM, or CPU) capacity
+issues can result from poor planning or unexpected database traffic.
+This behavior may not be a result of a disaster. 
+
+If a computational resource reaches the maximum allocated
+amount and causes a disaster, follow these steps:
+
+.. procedure::
+   :style: normal
+
+   .. step:: Identify through the Real Time Performance Panel or {+service+} metrics which computational resource is maxed out.
+
+      To view your resource utilization in the {+atlas-ui+}, see :atlas:`Monitor Real-Time Performance </real-time-performance-panel>`.
+
+      To view metrics with the {+atlas-admin-api+},
+      see :oas-atlas-tag:`Monitoring and Logs </Monitoring-and-Logs>`.
+
+   .. step:: Determine how much more of the maxed-out resource you need to alleviate performance issues.
+
+   .. step:: Allocate the necessary resources. 
+      
+      Note that Atlas will perform this change in a rolling manner, so
+      it should not have any major impact on your applications.
+
+      To learn how to allocate more resources, see :atlas:`Edit a Cluster </scale-cluster/#edit-a-cluster>`.
+
+   .. step:: Monitor your {+cluster+} to determine whether any other issues exist after the change.
+
+.. _arch-center-resource-failure:
+
+Resource Failure
+````````````````
+
+.. include:: /includes/temporary-cluster-fix.rst
+
+If a computational resource fails and causes your cluster to become
+unavailable, follow these steps:
+
+.. procedure::
+   :style: normal
+
+   .. step:: Open a high-priority :atlas:`support ticket </support/#request-support>`.
+
+   .. step:: Create a new {+cluster+} with the same topology as the failing {+cluster+}.
+
+   .. step:: Restore the most recent backup into the newly-created {+cluster+}.
+
+      To learn how to restore your snapshot, see :atlas:`Restore Your Cluster </backup/cloud-backup/restore-overview/>`.
+
+   .. step:: Point all applications using the failing {+cluster+} to the newly-created {+cluster+}.
+
+.. _arch-center-data-deletion:
+
+Deletion of Production Data
+```````````````````````````
+
+Production data may be accidentally deleted due to human error or a bug
+in the application built on top of the database.
+
+If the contents of a collection or database have been deleted, follow these steps to restore your data:
+
+.. procedure::
+   :style: normal
+
+   .. step:: Determine the date and time or oplog timestamp when the data was deleted.
+
+   .. step:: Create a copy of the current state of the collection/database, if it contains any data.
+
+      You can use `mongoexport <https://www.mongodb.com/docs/database-tools/mongoexport/>`__ to create a copy.
+
+   .. step:: Restore the data.
+   
+      If the deletion occurred within the last 72 hours, use Point in Time (PIT) restore to restore from the point in time right before the deletion occurred.
+
+      If the deletion did not occur in the past 72 hours, restore the most recent backup from before the deletion occurred into the cluster.
+
+   .. step:: If you created a copy of your data, import the new data you exported.
+
+      You can use `mongoimport <https://www.mongodb.com/docs/database-tools/mongoimport/>`__ with `upsert mode <https://www.mongodb.com/docs/database-tools/mongoimport/#std-option-mongoimport.--mode>`__ to import your data and ensure that any data that was modified or added is reflected properly in the collection/database.
+
+.. _arch-center-driver-failure:
+
+Driver Failure
+``````````````
+
+If a driver fails, follow these steps:
+
+.. procedure::
+   :style: normal
+
+   .. step:: Determine the issue. 
+
+      You can work with the technical support team during this step.
+
+      If you determine that reverting to an earlier driver version will
+      fix the issue, continue to the next step.
+
+   .. step:: Determine when the issue was introduced and the latest working driver version.
+
+   .. step:: Evaluate if any other changes are required to move to an earlier driver version. 
+      
+      These changes may include application code or queries.
+
+   .. step:: Test the changes in a non-production environment.
+
+   .. step:: If you don't encounter issues while testing, downgrade to the new driver version. 
+      
+      Ensure that any other changes from the previous step are
+      reflected in the production environment.
+
+.. _arch-center-data-corruption:
+
+Data Corruption
+```````````````
+
+.. include:: /includes/temporary-cluster-fix.rst
+
+If your underlying data becomes corrupted, follow these steps:
+
+.. procedure::
+   :style: normal
+
+   .. step:: Open a high-priority :atlas:`support ticket </support/#request-support>`.
+
+   .. step:: Create a new {+cluster+} with the same topology as the failing {+cluster+}.
+
+   .. step:: Restore the most recent backup into the newly-created {+cluster+}.
+
+      To learn how to restore your snapshot, see :atlas:`Restore Your Cluster </backup/cloud-backup/restore-overview/>`.
+
+   .. step:: Check the restored data to confirm that the corruption does not exist.
+
+   .. step:: Point all applications using the failing {+cluster+} to the newly-created {+cluster+}.
+
+
+
+
+
 
 
 
