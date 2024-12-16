@@ -131,7 +131,7 @@ Recommended Google Cloud Regions
 .. include:: /includes/gcp-recommended-regions.rst
 
 Use ``mongos`` Redundancy for Sharded {+Clusters+}
-`````````````````````
+```````````````````````````````````````````````````
 
 When a client connects to a sharded {+cluster+}, we recommend that you include multiple :manual:`mongos </reference/program/mongos/>`
 processes in the connection URI. This allows
@@ -157,7 +157,7 @@ Use ``majority`` Write Concern
 ``````````````````````````````
 
 MongoDB allows you to specify the level of acknowledgment requested
-for write operations by using your :manual:`write concern 
+for write operations by using :manual:`write concern 
 </reference/write-concern/>`. For example, if
 you had a three-node replica set and had a write concern of
 ``majority``, every write operation would need to be persisted on 
@@ -214,7 +214,8 @@ If you encounter resource capacity issues, see :ref:`arch-center-resource-capaci
 Plan Your MongoDB Version Changes
 `````````````````````````````````
 
-Ensure that MongoDB major version upgrades occur far before they reach `end of life <https://www.mongodb.com/legal/support-policy/lifecycles>`__. 
+Ensure that you perform MongoDB major version upgrades far before 
+your current version reaches `end of life <https://www.mongodb.com/legal/support-policy/lifecycles>`__. 
 
 You can't downgrade your MongoDB version using the {+atlas-ui+}, so we recommend that you work directly with MongoDB Professional or Technical
 Services when planning and executing a major version upgrade to avoid any issues that may occur during the upgrade process.
@@ -226,7 +227,7 @@ Use the following disaster recovery recommendations to create a {+DR+}
 plan for your organization. These recommendations provide information
 on steps to take in the event of a disaster.
 
-It is imperative that you test the plans in this section regularly (ideally quarterly, but at least semi-annually). Testing often helps prepare the Enterprise Database Management (EDM) team for when disaster strikes while also helping to keep the instructions up to date. 
+It is imperative that you test the plans in this section regularly (ideally quarterly, but at least semi-annually). Testing often helps prepare the Enterprise Database Management (EDM) team to respond to disasters while also helping to keep the instructions up to date. 
 
 Some disaster recovery testing may require actions that cannot be performed by EDM users. In these cases, open a support case for the purpose of performing artificial outages at least a week in advance of when you plan on running a test exercise.
 
@@ -235,7 +236,7 @@ This section covers the following disaster recovery procedures:
 - :ref:`arch-center-single-node-outage`
 - :ref:`arch-center-regional-outage`
 - :ref:`arch-center-provider-outage`
-- :ref:`arch-center-provider-outage`
+- :ref:`arch-center-atlas-outage`
 - :ref:`arch-center-resource-capacity`
 - :ref:`arch-center-resource-failure`
 - :ref:`arch-center-data-deletion`
@@ -288,7 +289,8 @@ If a single region outage or multi-region outage degrades the state of your {+cl
       outage.
 
       To reconfigure a replica set during an outage by adding regions
-      or nodes, see :atlas:`</reconfigure-replica-set-during-regional-outage/>`.
+      or nodes, see 
+      :atlas:`Reconfigure a Replica Set During a Regional Outage </reconfigure-replica-set-during-regional-outage/>`.
 
    .. step:: (Optional) Add additional nodes
     
@@ -310,27 +312,27 @@ unavailable, follow these steps to bring your deployment back online:
 .. procedure::
    :style: normal
    
-   .. step:: Determine when the cloud provider outage began.
+   .. step:: Determine when the cloud provider outage began
 
-   .. step:: Determine the alternative cloud provider you would like to deploy your new {+cluster+} on.
+   .. step:: Determine the alternative cloud provider you would like to deploy your new {+cluster+} on
 
       For a list of cloud providers and information, see 
       :atlas:`Cloud Providers </reference/cloud-providers>`.
 
-   .. step:: Find the most recent available snapshot taken of the {+cluster+} before the outage began. 
+   .. step:: Find the most recent available snapshot taken of the {+cluster+} before the outage began
 
       To learn how to view your backup snapshots, see 
       :atlas:`View M10+ Backup Snapshots </backup/cloud-backup/dedicated-cluster-backup/#view-m10--backup-snapshots>`.
 
-   .. step:: Create a new {+cluster+} with the alternative cloud provider.
+   .. step:: Create a new {+cluster+} with the alternative cloud provider
 
       Your new {+cluster+} must have an identical topology of the original cluster.
 
-   .. step:: Restore the most recent snapshot from the previous step into the new {+cluster+}.
+   .. step:: Restore the most recent snapshot from the previous step into the new {+cluster+}
 
       To learn how to restore your snapshot, see :atlas:`Restore Your Cluster </backup/cloud-backup/restore-overview/>`.
 
-   .. step:: Switch any applications that connect to the old {+cluster+} to the newly-created {+cluster+}.
+   .. step:: Switch any applications that connect to the old {+cluster+} to the newly-created {+cluster+}
 
       To find the new connection string, see :atlas:`Connect via Drivers </driver-connection>`.
 
@@ -361,23 +363,23 @@ amount and causes a disaster, follow these steps:
 .. procedure::
    :style: normal
 
-   .. step:: Identify through the Real Time Performance Panel or {+service+} metrics which computational resource is maxed out.
+   .. step:: Identify which computational resource is maxed out by using the Real Time Performance Panel or {+service+} metrics
 
       To view your resource utilization in the {+atlas-ui+}, see :atlas:`Monitor Real-Time Performance </real-time-performance-panel>`.
 
       To view metrics with the {+atlas-admin-api+},
       see :oas-atlas-tag:`Monitoring and Logs </Monitoring-and-Logs>`.
 
-   .. step:: Determine how much more of the maxed-out resource you need to alleviate performance issues.
+   .. step:: Determine how much more of the maxed-out resource you need to alleviate performance issues
 
-   .. step:: Allocate the necessary resources. 
+   .. step:: Allocate the necessary resources
       
       Note that Atlas will perform this change in a rolling manner, so
       it should not have any major impact on your applications.
 
       To learn how to allocate more resources, see :atlas:`Edit a Cluster </scale-cluster/#edit-a-cluster>`.
 
-   .. step:: Monitor your {+cluster+} to determine whether any other issues exist after the change.
+   .. step:: Monitor your {+cluster+} to determine whether any other issues exist after the change
 
 .. _arch-center-resource-failure:
 
@@ -392,15 +394,15 @@ unavailable, follow these steps:
 .. procedure::
    :style: normal
 
-   .. step:: Open a high-priority :atlas:`support ticket </support/#request-support>`.
+   .. step:: Open a high-priority :atlas:`support ticket </support/#request-support>`
 
-   .. step:: Create a new {+cluster+} with the same topology as the failing {+cluster+}.
+   .. step:: Create a new {+cluster+} with the same topology as the failing {+cluster+}
 
-   .. step:: Restore the most recent backup into the newly-created {+cluster+}.
+   .. step:: Restore the most recent backup into the newly-created {+cluster+}
 
       To learn how to restore your snapshot, see :atlas:`Restore Your Cluster </backup/cloud-backup/restore-overview/>`.
 
-   .. step:: Point all applications using the failing {+cluster+} to the newly-created {+cluster+}.
+   .. step:: Point all applications using the failing {+cluster+} to the newly-created {+cluster+}
 
 .. _arch-center-data-deletion:
 
@@ -415,21 +417,23 @@ If the contents of a collection or database have been deleted, follow these step
 .. procedure::
    :style: normal
 
-   .. step:: Determine the date and time or oplog timestamp when the data was deleted.
+   .. step:: Determine the date and time or oplog timestamp when the data was deleted
 
-   .. step:: Create a copy of the current state of the collection/database, if it contains any data.
+   .. step:: Create a copy of the current state of the collection or database, if it contains any data
 
       You can use `mongoexport <https://www.mongodb.com/docs/database-tools/mongoexport/>`__ to create a copy.
 
-   .. step:: Restore the data.
+   .. step:: Restore your data
    
       If the deletion occurred within the last 72 hours, use Point in Time (PIT) restore to restore from the point in time right before the deletion occurred.
 
       If the deletion did not occur in the past 72 hours, restore the most recent backup from before the deletion occurred into the cluster.
 
-   .. step:: If you created a copy of your data, import the new data you exported.
+      To learn more, see :atlas:`Restore Your Cluster </backup/cloud-backup/restore-overview/>`.
 
-      You can use `mongoimport <https://www.mongodb.com/docs/database-tools/mongoimport/>`__ with `upsert mode <https://www.mongodb.com/docs/database-tools/mongoimport/#std-option-mongoimport.--mode>`__ to import your data and ensure that any data that was modified or added is reflected properly in the collection/database.
+   .. step:: If you created a copy of your data, import the new data you exported
+
+      You can use `mongoimport <https://www.mongodb.com/docs/database-tools/mongoimport/>`__ with `upsert mode <https://www.mongodb.com/docs/database-tools/mongoimport/#std-option-mongoimport.--mode>`__ to import your data and ensure that any data that was modified or added is reflected properly in the collection or database.
 
 .. _arch-center-driver-failure:
 
@@ -441,22 +445,22 @@ If a driver fails, follow these steps:
 .. procedure::
    :style: normal
 
-   .. step:: Determine the issue. 
+   .. step:: Determine the issue
 
       You can work with the technical support team during this step.
 
       If you determine that reverting to an earlier driver version will
       fix the issue, continue to the next step.
 
-   .. step:: Determine when the issue was introduced and the latest working driver version.
+   .. step:: Determine when the issue was introduced and the latest working driver version
 
-   .. step:: Evaluate if any other changes are required to move to an earlier driver version. 
+   .. step:: Evaluate if any other changes are required to move to an earlier driver version
       
-      These changes may include application code or queries.
+      This may include application code or query changes.
 
-   .. step:: Test the changes in a non-production environment.
+   .. step:: Test the changes in a non-production environment
 
-   .. step:: If you don't encounter issues while testing, downgrade to the new driver version. 
+   .. step:: If you don't encounter issues while testing, downgrade to the new driver version
       
       Ensure that any other changes from the previous step are
       reflected in the production environment.
@@ -473,17 +477,17 @@ If your underlying data becomes corrupted, follow these steps:
 .. procedure::
    :style: normal
 
-   .. step:: Open a high-priority :atlas:`support ticket </support/#request-support>`.
+   .. step:: Open a high-priority :atlas:`support ticket </support/#request-support>`
 
-   .. step:: Create a new {+cluster+} with the same topology as the failing {+cluster+}.
+   .. step:: Create a new {+cluster+} with the same topology as the failing {+cluster+}
 
-   .. step:: Restore the most recent backup into the newly-created {+cluster+}.
+   .. step:: Restore the most recent backup into the newly-created {+cluster+}
 
       To learn how to restore your snapshot, see :atlas:`Restore Your Cluster </backup/cloud-backup/restore-overview/>`.
 
-   .. step:: Check the restored data to confirm that the corruption does not exist.
+   .. step:: Check the restored data to confirm that the corruption does not exist
 
-   .. step:: Point all applications using the failing {+cluster+} to the newly-created {+cluster+}.
+   .. step:: Point all applications using the failing {+cluster+} to the newly-created {+cluster+}
 
 
 
