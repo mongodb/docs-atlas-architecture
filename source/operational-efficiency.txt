@@ -22,7 +22,7 @@ operational efficiency in {+service+}:
    .. card::
       :headline: Automation
       :url: https://mongodb.com/docs/tbd/automation/
-      :icon: TBD
+      :icon: general_features_automation
       :icon-alt: Atlas automation icon
 
       Automate resource deployment by integrating with Infrastructure as Code (IaC)
@@ -31,8 +31,8 @@ operational efficiency in {+service+}:
    .. card::
       :headline: Monitoring and Alerts
       :url: https://mongodb.com/docs/tbd/monitoring-alerts/
-      :icon: TBD
-      :icon-alt: Atlas monitoring icon
+      :icon: general_alert_change_alert
+      :icon-alt: Atlas alert configuration icon
 
       Monitor system performance in real time, detect issues, and integrate
       with your third-party observability and alerting stack.

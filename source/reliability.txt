@@ -21,7 +21,7 @@ in {+service+}:
    .. card::
       :headline: High Availability
       :url: https://mongodb.com/docs/TBD/high-availability/
-      :icon: TBD
+      :icon: mdb_high_availability
       :icon-alt: Atlas high availability icon
 
       Create {+cluster+} configurations that meet your specific availability
@@ -36,19 +36,19 @@ in {+service+}:
    .. card::
       :headline: Resiliency
       :url: https://mongodb.com/docs/TBD/resiliency/
-      :icon: TBD
-      :icon-alt: Atlas resiliency icon
+      :icon: mdb_scheduled_work
+      :icon-alt: Atlas scheduled maintenance icon
  
-      To maintain database's uptime regardless of infrastructure outages
-      and system maintenance, use features in |service|, such as write
-      concern and retryable database reads and writes. To prevent accidental
-      {+cluster+} deletion, enable termination protection.
+      Use features in |service|, such as write concern and retryable database
+      reads and writes to maintain database's uptime regardless of infrastructure
+      outage and system maintenance. To prevent accidental {+cluster+} deletion,
+      enable termination protection.
 
    .. card::
       :headline: Backups
       :url: https://mongodb.com/docs/TBD/backups/
-      :icon: TBD
-      :icon-alt: Atlas backups icon
+      :icon: mdb_backup
+      :icon-alt: MongoDB backup icon
 
       Configure database backup options in |service|, such as point-in-time data
       recovery, and create consistent, cluster-wide snapshots of all {+clusters+}.

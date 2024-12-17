@@ -22,8 +22,8 @@ security in {+service+}:
    .. card::
       :headline: Network Security
       :url: https://mongodb.com/docs/manual/data-modeling/
-      :icon: atlas_search
-      :icon-alt: Data modeling icon
+      :icon: general_security
+      :icon-alt: Atlas security icon
 
       |service-fullname| enforces mandatory |tls| encryption for database connections.
       Restrict database access to specific IP addresses and |cidr| ranges
@@ -32,8 +32,8 @@ security in {+service+}:
    .. card::
       :headline: Authorization and Authentication
       :url: https://mongodb.com/docs/TBD/setup-cluster-security/
-      :icon: TBD
-      :icon-alt: Atlas security icon
+      :icon: general_action_login
+      :icon-alt: Atlas login icon
 
       Use Role-Based Access Control (RBAC) with built-in and custom roles
       to control operations on resources. Implement RBAC with the principle of
@@ -42,27 +42,28 @@ security in {+service+}:
    .. card::
       :headline: Data Encryption
       :url: https://mongodb.com/docs/TBD/auth/
-      :icon: TBD
+      :icon: general_security_encryption
       :icon-alt: Atlas encryption icon
 
-      To protect data while in transit, at rest, and in use, and to safeguard
-      data through its full lifecycle, |service| supports encryption features.
+      Use encryption features in |service| to protect data while in transit,
+      at rest, and in use, and to safeguard data through its full lifecycle.
 
    .. card::
       :headline: Compliance
       :url: https://mongodb.com/docs/TBD/compliance/
-      :icon: TBD
-      :icon-alt: Atlas compliance icon
+      :icon: general_security_hipaa_compliance
+      :icon-alt: Atlas HIPAA compliance icon
 
-      To protect and monitor data, |service| meets compliance standards.
+      |service| meets a list of compliance standards to ensure that you
+      can protect and monitor data.
 
    .. card::
       :headline: Auditing and Logging
       :url: https://mongodb.com/docs/TBD/auditing-logging/
-      :icon: TBD
-      :icon-alt: Atlas logging icon
+      :icon: general_features_realtime
+      :icon-alt: Atlas realtime reporting icon
 
-      To monitor and log |service| platform activities, use auditing and logs.
+      Use auditing and logs to monitor and log |service| platform activities.
 
 .. toctree::
    :titlesonly:

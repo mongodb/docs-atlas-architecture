@@ -23,24 +23,24 @@ optimization in {+service+}:
    .. card::
       :headline: Cost-Saving Configurations
       :url: https://mongodb.com/docs/tbd/cost-saving-config/
-      :icon: TBD
-      :icon-alt: Atlas cost savings icon
+      :icon: atlas_usage_based_pricing
+      :icon-alt: Atlas usage-based pricing icon
 
-      To prevent over-provisioning, enable auto-scaling on your cluster tier,
-      which adjusts resources based on usage. To minimize data transfer costs,
-      configure {+clusters+} with same-provider, same-region transfers whenever
-      possible.
+      Enable auto-scaling on your cluster tier so that |service| automatically
+      adjusts resources based on usage and prevents over-provisioning.
+      To minimize data transfer costs, configure {+clusters+} with
+      same-provider,same-region transfers whenever possible.
 
    .. card::
       :headline: Cost-Saving Configurations
       :url: https://mongodb.com/docs/tbd/billing-data/
-      :icon: TBD
-      :icon-alt: Atlas billing icon
+      :icon: general_features_transactions
+      :icon-alt: Atlas transactions and costs icon
 
-      To reduce resource consumption and lower costs, use billing dashboards
-      to monitor usage across categories and time periods. You can also
-      optimize queries, terminate {+clusters+} in development environments,
-      configure alerts, and review invoices in the Cost Explorer in |service|.
+      Use billing dashboards to monitor usage across categories and time periods.
+      To reduce resource consumption and lower costs, you can also optimize
+      queries, terminate {+clusters+} in development environments, configure
+      alerts, and review invoices in the Cost Explorer in |service|.
 
 .. toctree::
    :titlesonly:

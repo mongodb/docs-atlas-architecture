@@ -22,8 +22,8 @@ in {+service+}:
    .. card::
       :headline: Scalability
       :url: https://mongodb.com/docs/TBD/scalability/
-      :icon: TBD
-      :icon-alt: Atlas scalability icon
+      :icon: atlas_autoscaling
+      :icon-alt: Atlas auto-scaling icon
 
       Use auto-scaling to dynamically allocate resources based on growing workload
       demands. For horizontal and vertical scaling, use {+service+} deployment templates.
