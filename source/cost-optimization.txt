@@ -20,7 +20,7 @@ optimization in {+service+}:
    :style: extra-compact
 
    .. card::
-      :headline: Billing Data
+      :headline: Cost-Saving Configurations
       :url: https://mongodb.com/docs/atlas/architecture/cost-saving-config/
       :icon: atlas_usage_based_pricing
       :icon-alt: Atlas usage-based pricing icon
@@ -30,7 +30,7 @@ optimization in {+service+}:
       based on usage and prevents over-provisioning.
 
    .. card::
-      :headline: Cost-Saving Configurations
+      :headline: Billing Data
       :url: https://mongodb.com/docs/atlas/architecture/billing-data/
       :icon: general_features_transactions
       :icon-alt: Atlas transactions and costs icon
