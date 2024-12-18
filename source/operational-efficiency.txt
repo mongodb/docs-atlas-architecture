@@ -1,5 +1,4 @@
-.. meta::
-   :robots: noindex, nosnippet
+:noprevnext:
 
 ======================
 Operational Efficiency
@@ -21,7 +20,7 @@ operational efficiency in {+service+}:
 
    .. card::
       :headline: Automation
-      :url: https://mongodb.com/docs/tbd/automation/
+      :url: https://mongodb.com/docs/atlas/architecture/automation/
       :icon: general_features_automation
       :icon-alt: Atlas automation icon
 
@@ -30,12 +29,13 @@ operational efficiency in {+service+}:
 
    .. card::
       :headline: Monitoring and Alerts
-      :url: https://mongodb.com/docs/tbd/monitoring-alerts/
+      :url: https://mongodb.com/docs/atlas/architecture/monitoring-alerts/
       :icon: general_alert_change_alert
       :icon-alt: Atlas alert configuration icon
 
-      Monitor system performance in real time, detect issues, and integrate
-      with your third-party observability and alerting stack.
+      Monitor system performance, detect issues, and integrate with your
+      third-party observability and alerting stack. Get recommendations
+      on the alerts you should configure.
 
 .. toctree::
    :titlesonly:

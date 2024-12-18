@@ -1,5 +1,4 @@
-.. meta::
-   :robots: noindex, nosnippet
+:noprevnext:
 
 ===========
 Reliability
@@ -20,40 +19,32 @@ in {+service+}:
 
    .. card::
       :headline: High Availability
-      :url: https://mongodb.com/docs/TBD/high-availability/
+      :url: https://mongodb.com/docs/atlas/architecture/high-availability/
       :icon: mdb_high_availability
       :icon-alt: Atlas high availability icon
 
       Create {+cluster+} configurations that meet your specific availability
       needs while satisfying your security and compliance requirements.
 
-<<<<<<< HEAD
-- :ref:`High Availability <arch-center-high-availability>`
-- :ref:`Application and Database Resiliency <arch-center-resiliency>`
-- :ref:`Backups <arch-center-backups>`
-- :ref:`Disaster Recovery <arch-center-dr>`
-=======
    .. card::
       :headline: Resiliency
-      :url: https://mongodb.com/docs/TBD/resiliency/
+      :url: https://mongodb.com/docs/atlas/architecture/resiliency/
       :icon: mdb_scheduled_work
       :icon-alt: Atlas scheduled maintenance icon
  
-      Use features in |service|, such as write concern and retryable database
-      reads and writes to maintain database's uptime regardless of infrastructure
-      outage and system maintenance. To prevent accidental {+cluster+} deletion,
-      enable termination protection.
+      Use features in |service| to maintain your database's uptime.
+      Get recommendations and examples to build a resilient application.
 
    .. card::
       :headline: Backups
-      :url: https://mongodb.com/docs/TBD/backups/
+      :url: https://mongodb.com/docs/atlas/architecture/backups/
       :icon: mdb_backup
       :icon-alt: MongoDB backup icon
 
-      Configure database backup options in |service|, such as point-in-time data
-      recovery, and create consistent, cluster-wide snapshots of all {+clusters+}.
-      Store backups using native snapshots from your {+cluster+}'s cloud service provider.
->>>>>>> 18c9465 (Edits)
+      Configure database backup options in |service| and get recommendations
+      to meet your :abbr:`RTO (Recovery Time Objective)` and
+      :abbr:`RPO (Recovery Point Objective)` requirements with consistent,
+      cluster-wide snapshots of all {+clusters+}.
 
 .. toctree::
    :titlesonly:

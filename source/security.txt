@@ -1,5 +1,4 @@
-.. meta::
-   :robots: noindex, nosnippet
+:noprevnext:
 
 ========
 Security
@@ -21,49 +20,50 @@ security in {+service+}:
 
    .. card::
       :headline: Network Security
-      :url: https://mongodb.com/docs/manual/data-modeling/
+      :url: https://mongodb.com/docs/atlas/architecture/network-security/
       :icon: general_security
       :icon-alt: Atlas security icon
 
       |service-fullname| enforces mandatory |tls| encryption for database connections.
       Restrict database access to specific IP addresses and |cidr| ranges
-      and use private endpoints for staging and production projects.
+      and use private endpoints and VPC peering.
 
    .. card::
       :headline: Authorization and Authentication
-      :url: https://mongodb.com/docs/TBD/setup-cluster-security/
+      :url: https://mongodb.com/docs/atlas/architecture/setup-cluster-security/
       :icon: general_action_login
       :icon-alt: Atlas login icon
 
       Use Role-Based Access Control (RBAC) with built-in and custom roles
-      to control operations on resources. Implement RBAC with the principle of
-      least privilege and integrate with identity providers in |service|.
+      to control operations on resources. Get recommendations on the best
+      authentication method for production environments.
 
    .. card::
       :headline: Data Encryption
-      :url: https://mongodb.com/docs/TBD/auth/
+      :url: https://mongodb.com/docs/atlas/architecture/auth/
       :icon: general_security_encryption
       :icon-alt: Atlas encryption icon
 
       Use encryption features in |service| to protect data while in transit,
-      at rest, and in use, and to safeguard data through its full lifecycle.
+      at rest, and in use to safeguard data through its full lifecycle.
 
    .. card::
       :headline: Compliance
-      :url: https://mongodb.com/docs/TBD/compliance/
+      :url: https://mongodb.com/docs/atlas/architecture/compliance/
       :icon: general_security_hipaa_compliance
       :icon-alt: Atlas HIPAA compliance icon
 
       |service| meets a list of compliance standards to ensure that you
-      can protect and monitor data.
+      can protect and monitor data while complying with external requirements.
 
    .. card::
       :headline: Auditing and Logging
-      :url: https://mongodb.com/docs/TBD/auditing-logging/
+      :url: https://mongodb.com/docs/atlas/architecture/auditing-logging/
       :icon: general_features_realtime
       :icon-alt: Atlas realtime reporting icon
 
       Use auditing and logs to monitor and log |service| platform activities.
+      Get recommendations on the events you should audit.
 
 .. toctree::
    :titlesonly:
