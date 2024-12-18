@@ -27,8 +27,7 @@ that includes elements such as:
 
 - Your designated recovery point objective (RPO)
 - Your designated recovery time objective (RTO)
-- Any automated processes that facilitate alignment with these objectives
-- The recommendations on this page
+- Automated processes that facilitate alignment with these objectives
 
 Use the recommendations on this page to prepare for and respond to
 disasters.
@@ -50,14 +49,14 @@ Proactive Configuration Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use the following proactive configuration recommendations to configure your
-{+service+} deployments and backups for quicker recovery from disasters.
+{+service+} deployments and backups to expediate recovery from disasters.
 
 Members of the Same Replica Sets Should Not Share Resources
 ```````````````````````````````````````````````````````````
 
 MongoDB provides high availability by having multiple copies of data in replica sets. Members of the same replica set should not share the same resources. For example, members of the same replica set should not
 share the same physical hosts and disks. You can ensure that replica
-sets do not share resources by :ref:`distributing data across data centers <arch-center-distribute-data>`.
+sets don't share resources by :ref:`distributing data across data centers <arch-center-distribute-data>`.
 
 Use an Odd Number of Replica Set Members
 ````````````````````````````````````````
@@ -67,7 +66,7 @@ odd number of voting replica set members. There is no benefit in having
 an even number of voting replica set members.
 
 Fault tolerance is the number of replica set members that can become
-available and still leave enough members available for a primary. 
+unavailable with enough members still available for a primary election. 
 Fault tolerance of a four-member replica set is the same as for a three-member replica set because both can withstand a single-node
 outage.
 
@@ -171,15 +170,15 @@ topology (two regions with two nodes and one region with one node),
 with a write concern of ``4``. If one of the regions
 with two nodes becomes unavailable due to an outage and only three
 nodes are available, no write operations complete and the
-operation hangs due because it is unable to persist data on four nodes.
+operation hangs because it is unable to persist data on four nodes.
 In this scenario, despite the availability of the majority of nodes in the replica set, the database
-behaves the same as if a majority of nodes in the replica set were
+behaves the same as if a majority of the nodes in the replica set were
 unavailable. If you use ``majority`` write concern rather than a numeric value, it prevents this scenario.
 
 Consider Backup Configuration
 `````````````````````````````
 Frequent data backups is critical for business continuity and disaster recovery. Frequent backups ensure that data loss and downtime is
-minimal if a disaster or cyber attack disrupt normal operations. 
+minimal if a disaster or cyber attack disrupts normal operations. 
 
 We recommend that you:
 
@@ -218,7 +217,7 @@ Ensure that you perform MongoDB major version upgrades far before
 your current version reaches `end of life <https://www.mongodb.com/legal/support-policy/lifecycles>`__. 
 
 You can't downgrade your MongoDB version using the {+atlas-ui+}, so we recommend that you work directly with MongoDB Professional or Technical
-Services when planning and executing a major version upgrade to avoid any issues that may occur during the upgrade process.
+Services when planning and executing a major version upgrade to avoid any issues that might occur during the upgrade process.
 
 Disaster Recovery Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -229,7 +228,7 @@ on steps to take in the event of a disaster.
 
 It is imperative that you test the plans in this section regularly (ideally quarterly, but at least semi-annually). Testing often helps prepare the Enterprise Database Management (EDM) team to respond to disasters while also helping to keep the instructions up to date. 
 
-Some disaster recovery testing may require actions that cannot be performed by EDM users. In these cases, open a support case for the purpose of performing artificial outages at least a week in advance of when you plan on running a test exercise.
+Some disaster recovery testing might require actions that cannot be performed by EDM users. In these cases, open a support case for the purpose of performing artificial outages at least a week in advance of when you plan on running a test exercise.
 
 This section covers the following disaster recovery procedures:
 
@@ -248,7 +247,7 @@ This section covers the following disaster recovery procedures:
 Single Node Outage
 ``````````````````
 
-If a single node in your replica set fails due to a regional outage, your deployment should still be available, assuming you have followed best practices. If you are reading from secondaries, you may experience degraded performance since you have one less node to read from.
+If a single node in your replica set fails due to a regional outage, your deployment should still be available, assuming you have followed best practices. If you are reading from secondaries, you might experience degraded performance because you have one less node to read from.
 
 You can test a primary node outage in {+service+} using the 
 {+atlas-ui+}\'s
@@ -314,7 +313,7 @@ unavailable, follow these steps to bring your deployment back online:
    
    .. step:: Determine when the cloud provider outage began
 
-   .. step:: Determine the alternative cloud provider you would like to deploy your new {+cluster+} on
+   .. step:: Identify the alternative cloud provider you would like to deploy your new {+cluster+} on
 
       For a list of cloud providers and information, see 
       :atlas:`Cloud Providers </reference/cloud-providers>`.
@@ -345,7 +344,7 @@ In the highly unlikely event that the {+service+} Control Plane is
 unavailable, open a high-priority :atlas:`support ticket </support/#request-support>`. 
 
 Your {+cluster+}
-may still be available and accessible even if the {+atlas-ui+} is
+might still be available and accessible even if the {+atlas-ui+} is
 unavailable.
 
 .. _arch-center-resource-capacity:
@@ -355,7 +354,7 @@ Resource Capacity Issues
 
 Computational resource (such as disk space, RAM, or CPU) capacity
 issues can result from poor planning or unexpected database traffic.
-This behavior may not be a result of a disaster. 
+This behavior might not be a result of a disaster. 
 
 If a computational resource reaches the maximum allocated
 amount and causes a disaster, follow these steps:
@@ -409,7 +408,7 @@ unavailable, follow these steps:
 Deletion of Production Data
 ```````````````````````````
 
-Production data may be accidentally deleted due to human error or a bug
+Production data might be accidentally deleted due to human error or a bug
 in the application built on top of the database.
 
 If the contents of a collection or database have been deleted, follow these steps to restore your data:
@@ -456,7 +455,7 @@ If a driver fails, follow these steps:
 
    .. step:: Evaluate if any other changes are required to move to an earlier driver version
       
-      This may include application code or query changes.
+      This might include application code or query changes.
 
    .. step:: Test the changes in a non-production environment
 
