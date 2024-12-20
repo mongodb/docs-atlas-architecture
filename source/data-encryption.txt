@@ -28,22 +28,35 @@ Encryption in transit secures data during transmission between clients and serve
 ensuring that your data cannot be inspected while in motion.
 In |service|, all network traffic to {+clusters+} is protected by Transport Layer 
 Security (TLS) 1.2+, which is enabled by default and cannot be disabled.
-Data transmitted to and between nodes is encrypted in transit using TLS, ensuring secure communication throughout.
+Data transmitted to and between nodes is encrypted in transit using TLS, 
+ensuring secure communication throughout.
+
+.. figure:: /includes/images/encryption-in-transit.svg
+   :figwidth: 750px
+   :alt: An image showing encryption in transit with TLS between an Atlas client and app servers.
 
 Encryption at Rest
 ``````````````````
 
 Encryption at rest ensures that all data on disk are encrypted.
 In |service|, customer data is automatically encrypted at rest.
-This process utilizes your cloud provider's disk encryption, with the provider managing the encryption keys. This process cannot be disabled.
-Additionally, you have the option to enable database-level encryption, allowing you to use :ref:`your own encryption keys <security-kms-encryption>`
-with AWS Key Management Service (KMS), Google Cloud KMS, or Azure Key Vault.
+This process utilizes your cloud provider's disk encryption, with 
+the provider managing the encryption keys. This process cannot be disabled.
+
+Additionally, you have the option to enable database-level encryption, 
+allowing you to use :ref:`your own encryption keys <security-kms-encryption>`
+with AWS Key Management Service (KMS), Google Cloud KMS, or Azure Key Vault:
+
+.. figure:: /includes/images/encryption-at-rest.svg
+   :figwidth: 750px
+   :alt: An image showing encryption at rest with an additional customer-managed key.
 
 In-use Encryption
 `````````````````
 
 Encryption in use secures data while it's being processed.
-MongoDB has two features for encryption in use to meet your data protection needs: Client-Side Field-Level Encryption and Queryable Encryption.
+MongoDB has two features for encryption in use to meet your data protection 
+needs: Client-Side Field-Level Encryption and Queryable Encryption.
 
 Client-Side Field-Level Encryption
 ##################################
@@ -51,6 +64,8 @@ Client-Side Field-Level Encryption
 :ref:`Client-Side Field-Level Encryption <manual-csfle-feature>` (CSFLE) is an in-use encryption capability
 that enables a client application to encrypt sensitive data before storing it in the MongoDB database.
 Sensitive data is transparently encrypted, remains encrypted throughout its lifecycle, and is only decrypted on the client side.
+
+CSFLE uses AES-256 in authenticated CBC mode with HMAC-SHA-512 MAC.
 
 Queryable Encryption
 ####################
@@ -60,11 +75,51 @@ It allows applications to encrypt sensitive data on the client side, securely st
 and range queries directly on the encrypted data.
 This ensures protection for sensitive information without sacrificing the ability to perform queries on it.
 
+Queryable encryption uses AES-256 in authenticated CBC mode with HMAC-SHA-256.
+
 Recommendations
 ~~~~~~~~~~~~~~~
 
-For development and testing environments, do not enable added encryption with :ref:`your own encryption keys <security-kms-encryption>` through AWS Key Management Service (KMS), Google Cloud KMS, or Azure Key Vault. This saves costs in your 
-non-production environments.
+For development and testing environments, avoid enabling added 
+encryption with :ref:`your own encryption keys <security-kms-encryption>` 
+through AWS Key Management Service (KMS), Google Cloud KMS, or Azure Key Vault. 
+This approach saves costs in non-production environments.
 
-For staging and production environments, enable added encryption with :ref:`your own encryption keys <security-kms-encryption>` through AWS Key Management Service (KMS), Google Cloud KMS, or Azure Key Vault for
-additional security.
+For staging and production environments, consider the following recommendations:
+
+- Enable added encryption with :ref:`your own encryption keys <security-kms-encryption>` 
+  through AWS KMS, Google Cloud KMS, or Azure Key Vault to enhance security.
+
+- Apply |byok| integration with your cloud provider when provisioning your {+cluster+}
+  to ensure consistent data protection, and enforce it for all production-level workloads.
+  This mitigates the need to rely on application development teams to configure it.
+  
+  .. note::
+
+     If you're storing sensitive data in |service|, such as for industries 
+     such as healthcare or financial services, consider enforcing |byok| 
+     for development and testing environments as well.
+     Otherwise, you might skip |byok| in lower environments to reduce costs.
+
+Sensitive Data
+``````````````
+
+When provisioning a {+cluster+} for an application, 
+use queryable encryption on your app servers to
+secure fields that contain sensitive or private data, such as 
+Personally Identifiable Information (PII).
+
+Additionally, to ensure proper encryption and 
+authorization, classify your data based on sensitivity:
+
+**Personally Identifiable Information (PII)**:
+- Examples: Social Security Numbers, email addresses, phone numbers.
+- Recommended Encryption: CSFLE for PII fields.
+
+**Financial Data**:
+- Examples: Credit card numbers, bank account details.
+- Recommended Encryption: CSFLE for financial fields.
+
+**Health Information**:
+- Examples: Medical records, health insurance information.
+- Recommended Encryption: Queryable Encryption for health data.
