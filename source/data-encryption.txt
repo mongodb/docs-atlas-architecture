@@ -12,73 +12,111 @@ Data Encryption
    :depth: 2
    :class: onecol
 
-|service| offers encryption features to protect data while in transit, at rest,
-and in use to safeguard data through its full lifecycle.
+|service| offers several encryption features to protect data 
+while in transit, at rest, and in use to safeguard data through 
+its full lifecycle.
 
-{+service+} Features and Recommendations for Data Encryption
-------------------------------------------------------------
-
-Features 
-~~~~~~~~
+Features
+--------
 
 Encryption in Transit
-`````````````````````
+~~~~~~~~~~~~~~~~~~~~~
 
-Encryption in transit secures data during transmission between clients and servers, 
-ensuring that your data cannot be inspected while in motion.
-In |service|, all network traffic to {+clusters+} is protected by Transport Layer 
-Security (TLS) 1.2+, which is enabled by default and cannot be disabled.
-Data transmitted to and between nodes is encrypted in transit using TLS, 
-ensuring secure communication throughout.
+Encryption in transit secures data during transmission between 
+clients and servers, ensuring that your data cannot be inspected 
+while in motion. In |service|, all network traffic to {+clusters+} is 
+protected by Transport Layer Security (TLS), which is enabled by default 
+and cannot be disabled. Data transmitted to and between nodes is encrypted 
+in transit using TLS, ensuring secure communication throughout.
+
+You can select which TLS version to use in |service|, with TLS 1.2 
+being the recommended default and a minimum key length of 128 bits.
+All encryption in transit is supported by the OpenSSL FIPS Object Module.
 
 .. figure:: /includes/images/encryption-in-transit.svg
    :figwidth: 750px
-   :alt: An image showing encryption in transit with TLS between an Atlas client and app servers.
+   :alt: An image showing encryption in transit with TLS between client applications and MongoDB Atlas.
 
 Encryption at Rest
-``````````````````
+~~~~~~~~~~~~~~~~~~
 
-Encryption at rest ensures that all data on disk are encrypted.
-In |service|, customer data is automatically encrypted at rest.
-This process utilizes your cloud provider's disk encryption, with 
-the provider managing the encryption keys. This process cannot be disabled.
+Encryption at rest ensures that all data on disk is encrypted
+and only visible once decrypted by an authorized process or
+application. In |service|, customer data is automatically encrypted 
+at rest using AES-256. This process utilizes your cloud provider's 
+disk encryption, with the provider managing the encryption keys. 
+This process cannot be disabled.
 
-Additionally, you have the option to enable database-level encryption, 
-allowing you to use :ref:`your own encryption keys <security-kms-encryption>`
-with AWS Key Management Service (KMS), Google Cloud KMS, or Azure Key Vault:
+Additionally, you have the option to enable database-level encryption
+by "bringing your own key" (BYOK) with a key management service (KMS).
+|byok| encryption adds another layer of security for additional
+confidentiality and data segmentation:
 
 .. figure:: /includes/images/encryption-at-rest.svg
    :figwidth: 750px
    :alt: An image showing encryption at rest with an additional customer-managed key.
 
+To learn more about using your own encryption keys with 
+AWS Key Management Service (KMS), Google Cloud KMS, or 
+Azure Key Vault, see :ref:`here <security-kms-encryption>`.
+
 In-use Encryption
-`````````````````
+~~~~~~~~~~~~~~~~~
 
 Encryption in use secures data while it's being processed.
 MongoDB has two features for encryption in use to meet your data protection 
 needs: Client-Side Field-Level Encryption and Queryable Encryption.
 
 Client-Side Field-Level Encryption
-##################################
+``````````````````````````````````
 
-:ref:`Client-Side Field-Level Encryption <manual-csfle-feature>` (CSFLE) is an in-use encryption capability
-that enables a client application to encrypt sensitive data before storing it in the MongoDB database.
-Sensitive data is transparently encrypted, remains encrypted throughout its lifecycle, and is only decrypted on the client side.
+:ref:`Client-Side Field-Level Encryption <manual-csfle-feature>` (CSFLE) 
+is an in-use encryption capability that enables a client application to encrypt 
+sensitive data before storing it in the MongoDB database. Sensitive data is 
+transparently encrypted, remains encrypted throughout its lifecycle, and is 
+only decrypted on the client side.
 
-CSFLE uses AES-256 in authenticated CBC mode with HMAC-SHA-512 MAC.
+You can selectively encrypt individual fields within a document, 
+multiple fields within the document, or the entire document. You can optionally
+secure each field with its own key and decrypt them seamlessly 
+on the client by using a MongoDB driver. 
+
+The following diagram demonstrates a CSFLE workflow where user records 
+are stored in a MongoDB database. The user's social security number (SSN) 
+is encrypted before being stored in the database, and only the client 
+application can decrypt it. When the application submits a query, 
+the driver uses the key to encrypt the query and decrypt 
+the query results, before returning them to the authenticated client as 
+readable plaintext.
+
+.. figure:: /includes/images/csfle-encryption.svg
+   :figwidth: 750px
+   :alt: An image showing an example client-side field-level encryption (CSFLE) workflow.
 
 Queryable Encryption
-####################
+````````````````````
 
-:ref:`Queryable Encryption <qe-manual-feature-qe>` helps organizations protect sensitive data when it is queried.
-It allows applications to encrypt sensitive data on the client side, securely store it in the database, and perform equality
-and range queries directly on the encrypted data.
-This ensures protection for sensitive information without sacrificing the ability to perform queries on it.
+:ref:`Queryable Encryption <qe-manual-feature-qe>` helps organizations 
+protect sensitive data when it is queried. Like CSFLE, it allows applications 
+to encrypt your data on the client side before storing it in the MongoDB database. 
+It also enables applications to perform expressive queries directly on the 
+encrypted data by using an encrypted search algorithm. This ensures protection for 
+sensitive information without sacrificing the ability to perform queries on it.
 
-Queryable encryption uses AES-256 in authenticated CBC mode with HMAC-SHA-256.
+The following diagram demonstrates a queryable encryption workflow where user records 
+are encrypted on the client side and stored in a MongoDB database. When the 
+application submits a query, |service| passes a cryptographic token with the encrypted
+query to the MongoDB server, which uses an encrypted search algorithm 
+to process the query without knowing the data. The query results are then 
+decrypted with the keys held by the driver, and returned to the authenticated 
+client as readable plaintext.
+
+.. figure:: /includes/images/queryable-encryption.svg
+   :figwidth: 750px
+   :alt: An image showing an example queryable encryption workflow.
 
 Recommendations
-~~~~~~~~~~~~~~~
+---------------
 
 For development and testing environments, avoid enabling added 
 encryption with :ref:`your own encryption keys <security-kms-encryption>` 
@@ -99,27 +137,44 @@ For staging and production environments, consider the following recommendations:
      If you're storing sensitive data in |service|, such as for industries 
      such as healthcare or financial services, consider enforcing |byok| 
      for development and testing environments as well.
-     Otherwise, you might skip |byok| in lower environments to reduce costs.
+     Otherwise, consider skipping |byok| in lower environments to reduce costs.
 
-Sensitive Data
-``````````````
+Data Classification
+~~~~~~~~~~~~~~~~~~~
 
-When provisioning a {+cluster+} for an application, 
-use queryable encryption on your app servers to
-secure fields that contain sensitive or private data, such as 
-Personally Identifiable Information (PII).
+We also recommend grouping your data together
+based on sensitivity. Classifying your data helps you determine
+global restrictions around these groups and
+which data requires encryption.
 
-Additionally, to ensure proper encryption and 
-authorization, classify your data based on sensitivity:
+.. example::
 
-**Personally Identifiable Information (PII)**:
-- Examples: Social Security Numbers, email addresses, phone numbers.
-- Recommended Encryption: CSFLE for PII fields.
+   Consider the following example data classification levels:
 
-**Financial Data**:
-- Examples: Credit card numbers, bank account details.
-- Recommended Encryption: CSFLE for financial fields.
+   - **Private Data**: Data should be classified as 
+     Private when the unauthorized disclosure, alteration 
+     or destruction of that data could result in a moderate level 
+     of risk to the Company or its affiliates. By default, all 
+     Institutional Data that is not explicitly classified as Restricted or 
+     Public data should be treated as Private data. A reasonable level of 
+     security controls should be applied to Private data.
+     
+     Examples: Customer Information, Contracts, Product Costs
 
-**Health Information**:
-- Examples: Medical records, health insurance information.
-- Recommended Encryption: Queryable Encryption for health data.
+   - **Public Data**: Data should be classified as Public when 
+     the unauthorized disclosure, alteration or destruction of
+     that data would results in little or no risk to the Company 
+     and its affiliates. While little or no controls are required 
+     to protect the confidentiality of Public data, some level of 
+     control is required to prevent unauthorized modification or 
+     destruction of Public data.
+     
+     Examples: Products, Brochures, Training Information
+
+   - **Restricted Data**: Data should be classified as 
+     Restricted when the unauthorized disclosure, alteration 
+     or destruction of that data could cause a significant 
+     level of risk to the Company or its affiliates. The highest 
+     level of security controls should be applied to Restricted data.
+     
+     Examples: Revenue information, Payroll, Security Risks
