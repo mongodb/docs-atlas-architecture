@@ -110,7 +110,7 @@ Authentication)` within your identity provider. |service| also supports
 Google or Github account authentication. 
 
 {+atlas-ui+} manages user identities in a MongoDB-controlled Okta
-instance, encrypted and stored securely. You must also configure IP
+instance, encrypted and stored securely. You must also configure the IP
 access list to allow only connections from IP ranges that include your
 users and application servers.
 
@@ -140,7 +140,7 @@ Recommendations for |service| Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |service| supports the following options for |service| database
-authentication. In development and test environments, create separate
+authentication. In development and test environments, create a separate
 project with {+cluster+} and grant users ``Project Data Access
 Admin`` roles. In staging and production environments, we recommend
 granting only programmatic access by using Workforce Identity
@@ -154,9 +154,9 @@ created for the following periods:
 - 1 day
 - 1 week
 
-We recommend using secrets manager like `HashiCorp Vault
+We recommend using a secrets manager like `HashiCorp Vault
 <https://developer.hashicorp.com/vault/docs/secrets/databases/mongodbatlas>`__
-for generating database credentials dynamically based on configured
+to generate database credentials dynamically based on configured
 roles for |service| databases. To learn more, see :website:`Manage
 MongoDB Atlas Database Secrets in HashiCorp Vault 
 </blog/post/manage-atlas-database-secrets-hashicorp-vault>`.
@@ -197,17 +197,19 @@ To learn more, see the following:
 X.509 Client Certificates and SCRAM 
 ```````````````````````````````````
 
-The best practice is to leverage a 3rd party federated identity provider
+We recommend that you leverage a third-party federated identity provider
 for accessing all aspects of the |service| control and data plane.
 |service| {+clusters+} do support :manual:`x.509
 </core/security-x.509/>` client certificates and :manual:`SCRAM
-</core/security-scram/>` for user authentication. However, use these
-only if you don't have an identity provider for federation. If you 
-leverage these authentication methods, we recommend that you use complex
-passwords and store and credentials in a 3rd party secrets manager like
+</core/security-scram/>` for user authentication, but you should use these
+only if you don't have an identity provider for federation. 
+
+If you 
+leverage x.509 or SCRAM authentication, we recommend that you use complex
+passwords and store credentials in a third-party secrets manager like
 `HashiCorp Vault <https://developer.hashicorp.com/vault/docs/secrets/databases/mongodbatlas>`__
 or |aws|. Alternatively, implement automatic credential rotation or
-create one-time password through your PAM system for each access.
+create a one-time password through your PAM system for each access.
 
 Recommendations for {+atlas-admin-api+} 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -271,7 +273,7 @@ groups to |service| roles. You should restrict your company's domain from
 preventing users from logging into |service| when they are not authorized 
 for access, which you can do by following the procedure in
 :atlas:`Manage Domain Mapping for Federated Authentication 
-</atlas/security/manage-domain-mapping/>`. From here,  we recommend that
+</security/manage-domain-mapping/>`. From here,  we recommend that
 you map your :abbr:`IdP (Identity Provider)` groups to |service| roles
 as shown in :atlas:`Role Mapping Process
 </security/manage-role-mapping/#role-mapping-process>`.   
@@ -341,7 +343,7 @@ authentication during development and in lower environments. By configuring
 Provider)`, you can map groups to database users, simplifying access
 control within the :abbr:`IdP (Identity Provider)`. However, for
 workload identities, we recommend assigning roles directly using the
-'users' claim instead of 'groups.' In development and test environments,
+``users`` claim instead of ``groups``. In development and test environments,
 you can default to the predefined ``readWriteAny`` role to simplify the
 development and testing process. When moving the application to higher
 environments, you should build a custom role to restrict the access that
