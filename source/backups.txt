@@ -187,7 +187,7 @@ Recommendations for Backup Distribution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |service| provides options for backup locations. To further enhance
-resilience, we recommend distributing backups in local region and to
+resilience, we recommend distributing backups to a local region and to an
 external disaster recovery region, ensuring data recovery even during
 regional outages. For an |service| {+cluster+} in three regions,
 multi-region Snapshot Distribution copies backups to two secondary
@@ -196,12 +196,14 @@ hourly (that provide more frequent restore points) and daily snapshots
 (that provide regular backups without excessive storage cost) along
 with the oplog (for maintaining real-time replication of data) for
 regional copies, you can optimize costs while ensuring rapid recovery
-during regional outages. That is, this allows you to restore quickly with
+during regional outages. This allows you to restore quickly with
 minimal downtime from another region using recent snapshots and an
 oplog. Once restored, you can point your application to the new  
 {+cluster+} to regain full functionality with complete read and write
-capabilities. When configuring your snapshot frequency, retention,
-distribution, we recommend striking a balance between availability and
+capabilities. 
+
+When configuring your snapshot frequency, retention,
+and distribution, we recommend striking a balance between availability and
 cost. However, your critical workloads might require multiple copies of
 snapshots in various locations.
 
@@ -226,7 +228,7 @@ the snapshot can be restored first and then the oplog played back to get
 to your exact RPO objective. Recovery times can vary due to cloud
 provider disk warming and which point in time you are restoring to. If
 you can be flexible in your requirements for recovery, we recommend
-designing templates that identify the sweet spot between reasonable
+designing templates that identify the best compromise between reasonable
 recovery options and cost.  
 
 Recommendations for Backup Costs 
@@ -237,7 +239,7 @@ and retention policies to align with data criticality, reducing
 unnecessary storage expenses. For example, you should disable backups in
 lower environments, and ensure that in upper environments with high
 availability requirements you are distributing backups to each region
-where you are deployed. |service| provides incremental backups through
+where your |service| {+clusters+} are deployed. |service| provides incremental backups through
 snapshots that capture only incremental changes and built-in compression
 to minimize the amount of stored data. By :ref:`selecting regions
 <atlas-backup-distribution>` strategically for backup, you can avoid
