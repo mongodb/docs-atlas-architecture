@@ -143,8 +143,8 @@ Recommendations for |service| Database
 authentication. In development and test environments, create a separate
 project with {+cluster+} and grant users ``Project Data Access
 Admin`` roles. In staging and production environments, we recommend
-granting only programmatic access by using Workforce Identity
-Federation. 
+granting only programmatic access by using :atlas:`Workforce Identity
+Federation </workforce-oidc/>`. 
 
 |service| also supports creating temporary database users
 that automatically expire after the predefined times. A user can be
