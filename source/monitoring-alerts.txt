@@ -65,7 +65,7 @@ Features
        
        You can view metrics by using the {+atlas-ui+} Real-Time
        Performance Panel, Query Profiler, Performance Advisor and
-       Namespace Insights page, {+atlas-cli+}, or by consuming than{+atlas-admin-api+} to funnel metrics into a tool of your
+       Namespace Insights page, {+atlas-cli+}, or {+atlas-admin-api+} to funnel metrics into a tool of your
        choice. 
 
    * - Alerts 
@@ -178,8 +178,8 @@ same condition, one for a low priority / "warning" level of severity, and one fo
      - Recommended Alert Threshold: High Priority
 
    * - Oplog Window
-     - < 24h for 5 minutes. 
-     - < 1h for 10 minutes.
+     - < 24h for 5 minutes 
+     - < 1h for 10 minutes
     
    * - :manual:`Election </core/replica-set-elections/>` events
      - > 3 for 5 minutes 
@@ -379,7 +379,7 @@ Recommendations for Monitoring by Using Logs
 .. include:: /includes/cloud-docs/logs.rst
 
 You can also :atlas:`push logs to an AWS S3 bucket </push-logs/>`. 
-When you configure this feature, {+service+} continually push logs from ``mongod``, ``mongos``, and audit logs to an |aws| S3 bucket. {+service+} exports logs every five minutes.
+When you configure this feature, {+service+} continually pushes logs from ``mongod``, ``mongos``, and audit logs to an |aws| S3 bucket. {+service+} exports logs every five minutes.
 
 
 Examples
