@@ -22,18 +22,13 @@ Auto-scaling enables clusters to automatically adjust their tier, storage capaci
 response to real-time use. {+service+} analyzes the CPU and memory utilization to determine when 
 and whether to scale the cluster tier up and down. See :ref:`Cluster tier scaling <cluster-autoscaling>` 
 to learn more about the conditions under which {+service+} scales up or down your cluster nodes. You can 
-also specify a range of maximum and minimum cluster sizes that their cluster can automatically scale 
+also specify a range of maximum and minimum cluster sizes that your cluster can automatically scale 
 to. {+service+} won't scale a cluster if the new tier falls outside of your specified size range or 
 if your memory usage would exceed the capacity of the new tier. Auto-scaling is throttled with a delay 
 to scale a cluster tier up or down. Therefore, it is best suited for a steadily growing or declining 
 application load, not sudden spikes in which the database is being inundated with usage. If your 
 workload experiences frequent spikes or if you are expecting a large increase in traffic because of an 
 event or a launch, MongoDB recommends that you pre-scale programmatically. 
-
-Auto-scaling is throttled with a delay to scale a cluster tier up or down. As such, it is ideal 
-for a steadily growing or declining application load, not sudden spikes where the database is 
-inundated with use. If your workload experiences frequent spikes or if you are expecting a large 
-increase in traffic because of an event or a launch, we recommend that you pre-scale using a script.
 
 {+service+} deployment templates, as referenced in the `Recommended Deployment Topologies <arch-center-deployment-topologies>`, 
 provide you with horizontal and vertical scaling options. Specifically, sharding distributes data across 
