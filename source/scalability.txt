@@ -30,7 +30,7 @@ application load, not sudden spikes in which the database is being inundated wit
 workload experiences frequent spikes or if you are expecting a large increase in traffic because of an 
 event or a launch, MongoDB recommends that you pre-scale programmatically. 
 
-{+service+} deployment templates, as referenced in the `Recommended Deployment Topologies <arch-center-deployment-topologies>`, 
+{+service+} deployment templates, as referenced in the :ref:`Recommended Deployment Topologies <arch-center-deployment-topologies>`, 
 provide you with horizontal and vertical scaling options. Specifically, sharding distributes data across 
 numerous machines, which is useful when no single server can handle your workloads. Sharding follows a 
 shared-nothing architecture, a distributed computing architecture where none of the nodes share any 
