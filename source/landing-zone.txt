@@ -205,7 +205,7 @@ provide a starting point to begin your organization's first {+service+}
 landing zone.
 
 Example Landing Zone Diagram
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example diagram unifies many of the architectural diagrams
 across the {+atlas-arch-center+} in one image to visualize your
