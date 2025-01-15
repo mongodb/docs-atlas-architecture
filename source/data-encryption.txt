@@ -38,6 +38,8 @@ OpenSSL :abbr:`FIPS (Federal Information Processing Standards)` Object Module.
    :figwidth: 750px
    :alt: An image showing encryption in transit with TLS between client applications and MongoDB Atlas.
 
+.. _arch-center-encryption-at-rest:
+
 Encryption at Rest
 ~~~~~~~~~~~~~~~~~~
 
@@ -131,16 +133,17 @@ provisioning your {+clusters+}.
 BYOK Encryption
 ~~~~~~~~~~~~~~~
 
-For staging and production environments, we recommend that you enable :ref:`BYOK
-encryption <security-kms-encryption>` through AWS Key Management Service (KMS), 
-Google Cloud KMS, or Azure Key Vault when provisioning your {+clusters+} 
-to avoid relying on application development teams to configure it later on. 
-This also ensures consistent data protection across your environments.
+.. include:: /includes/byok-encryption-recommendations.rst
 
-For development and testing environments, consider skipping |byok| encryption
-to save costs. However, if you're storing sensitive data in |service|, 
-such as for healthcare or financial services industries, consider enabling 
-|byok| encryption in development and testing environments as well.
+Use the following methods to enable BYOK encryption:
+
+- :atlas:`{+atlas-ui+} </security-kms-encryption>`
+- :oas-atlas-tag:`{+atlas-admin-api+} </Encryption-at-Rest-using-Customer-Key-Management>`
+- `Terraform <https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs/resources/encryption_at_rest>`__
+
+For a full example of configuring BYOK encryption
+when creating a new |service| organization, project, and {+cluster+},
+see :ref:`arch-center-create-hierarchy-example`.
 
 Data Classification
 ~~~~~~~~~~~~~~~~~~~
