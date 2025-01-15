@@ -1,6 +1,17 @@
 .. code-block::
    :copyable: true
 
+   # Create a Group to Assign to Project 
+   resource "mongodbatlas_team" "project_group" {
+     org_id = var.atlas_org_id
+     name   = var.atlas_group_name
+     usernames = [
+       "user1@example.com",
+       "user2@example.com",
+       // Add more users as needed
+     ]
+   }
+
    # Create a Project
    resource "mongodbatlas_project" "atlas-project" {
      org_id = var.atlas_org_id
@@ -53,7 +64,25 @@
        value = "marissa@acme.com"
      }
    }
-   
+
+   # Create a Group and Add Users
+   resource "mongodbatlas_team" "atlas_group" {
+     org_id = var.atlas_org_id
+     name   = var.atlas_group_name
+      
+     usernames = [
+       "user1@example.com",
+       "user2@example.com"
+     ]
+   }
+
+   # Assign the Project the Group with Specific Roles
+   resource "mongodbatlas_team" "project_group" {
+     project_id = mongodbatlas_project.atlas-project.id
+     team_id    = mongodbatlas_team.atlas_group.team_id
+     role_names = ["GROUP_READ_ONLY", "GROUP_CLUSTER_MANAGER"] 
+   }
+
    # Outputs to Display
    output "atlas_cluster_connection_string" { value = mongodbatlas_advanced_cluster.atlas-cluster.connection_strings.0.standard_srv }
    output "project_name"      { value = mongodbatlas_project.atlas-project.name }
