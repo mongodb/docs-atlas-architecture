@@ -7,8 +7,7 @@
      name   = var.atlas_group_name
      usernames = [
        "user1@example.com",
-       "user2@example.com",
-       // Add more users as needed
+       "user2@example.com"
      ]
    }
 
@@ -65,19 +64,8 @@
      }
    }
 
-   # Create a Group and Add Users
-   resource "mongodbatlas_team" "atlas_group" {
-     org_id = var.atlas_org_id
-     name   = var.atlas_group_name
-      
-     usernames = [
-       "user1@example.com",
-       "user2@example.com"
-     ]
-   }
-
    # Assign the Project the Group with Specific Roles
-   resource "mongodbatlas_team" "project_group" {
+   resource "mongodbatlas_project" "project__team_role" {
      project_id = mongodbatlas_project.atlas-project.id
      team_id    = mongodbatlas_team.atlas_group.team_id
      role_names = ["GROUP_READ_ONLY", "GROUP_CLUSTER_MANAGER"] 

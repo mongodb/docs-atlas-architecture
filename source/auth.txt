@@ -414,6 +414,11 @@ The following examples configure authentication and custom roles using
             to initialize Terraform, view the Terraform plan, and apply
             the changes. 
 
+            azure.tf 
+            ````````
+
+            .. include:: /includes/examples/tf-example-auth-tfazure.rst
+
             variables.tf 
             ````````````
 
@@ -423,6 +428,7 @@ The following examples configure authentication and custom roles using
             ````````````````
 
             .. include:: /includes/examples/tf-example-auth-tfvars-devtest.rst
+
 
             Authentication Example 
             ~~~~~~~~~~~~~~~~~~~~~~
@@ -514,6 +520,11 @@ The following examples configure authentication and custom roles using
             the IDs and names to use your values. Then run the commands
             to initialize Terraform, view the Terraform plan, and apply
             the changes. 
+
+            azure.tf 
+            ````````
+
+            .. include:: /includes/examples/tf-example-auth-tfazure.rst
 
             variables.tf 
             ````````````
