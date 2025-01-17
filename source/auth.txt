@@ -385,11 +385,6 @@ The following examples configure authentication and custom roles using
 
             .. include:: /includes/examples/cli-example-auth-oid-devtest.rst
 
-            Run the following command to create an :abbr:`OIDC (OpenID
-            Connect)` federated authentication user. 
-
-            .. include:: /includes/examples/cli-example-auth-oidc-user-devtest.rst
-
          .. tab:: Terraform
             :tabid: Terraform
 
