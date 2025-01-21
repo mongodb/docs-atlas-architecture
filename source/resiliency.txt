@@ -28,12 +28,13 @@ Features
 Database Replication 
 ````````````````````
 
-|service| {+clusters+} consist of a minimum of three nodes, and you can increase
-the node count to any odd number of nodes you require. |service| first writes data 
-from your application to a primary node, and then |service| incrementally replicates
-and stores that data across all secondary nodes within your {+cluster+}. Additionally, 
-you can control the durability of your data storage by adjusting the write concern 
-of your application code to complete the write only once a certain number of secondaries 
+|service| {+clusters+} consist of a `replica set <https://www.mongodb.com/docs/manual/replication/>`__ 
+with a minimum of three nodes, and you can increase the node count to any odd 
+number of nodes you require. |service| first writes data from your application 
+to a primary node, and then |service| incrementally replicates and stores that 
+data across all secondary nodes within your {+cluster+}. Additionally, you can 
+control the durability of your data storage by adjusting the write concern of 
+your application code to complete the write only once a certain number of secondaries 
 have committed the write. To learn more, see :ref:`resiliency-read-write-concerns`.
 
 By default, |service| distributes {+cluster+} nodes across availability zones within 
