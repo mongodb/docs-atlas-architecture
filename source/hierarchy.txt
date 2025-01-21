@@ -116,7 +116,13 @@ projects and {+clusters+}:
      - The back end for your application that is live for your
        end users.
 
+BYOK Encryption
+```````````````
+
 .. include:: /includes/byok-encryption-recommendations.rst
+
+Local {+service+} Deployments
+`````````````````````````````
 
 For your dev and test environments, you can also develop {+service+}
 {+clusters+} locally with the {+atlas-cli+}. This can enable developers
@@ -390,6 +396,17 @@ These examples also apply other recommended configurations, including:
 
       - :ref:`atlas-projects-list`
 
+      Configure BYOK Encryption
+      ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      .. include:: /includes/byok-encryption-recommendations-short.rst
+
+      You can't manage BYOK encryption with the {+atlas-cli+}. 
+      Use the following methods to configure BYOK encryption:
+
+      - :atlas:`{+atlas-ui+} </security-kms-encryption>`
+      - :oas-atlas-tag:`{+atlas-admin-api+} </Encryption-at-Rest-using-Customer-Key-Management>`
+
       Create One {+Cluster+} Per Project
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -419,17 +436,6 @@ These examples also apply other recommended configurations, including:
 
       For more configuration options and info about this example, 
       see :ref:`atlas-clusters-create`.
-
-      Configure BYOK Encryption
-      ~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      .. include:: /includes/byok-encryption-recommendations-short.rst
-
-      You can't manage BYOK encryption with the {+atlas-cli+}. 
-      Use the following methods to configure BYOK encryption:
-
-      - :atlas:`{+atlas-ui+} </security-kms-encryption>`
-      - :oas-atlas-tag:`{+atlas-admin-api+} </Encryption-at-Rest-using-Customer-Key-Management>`
 
    .. tab:: Terraform
       :tabid: tf
@@ -533,7 +539,7 @@ These examples also apply other recommended configurations, including:
             :tabid: stagingprod
 
             For your staging and production environments environments, we
-            recommend enabling BYOK encryption when provisioning your {+cluster+}.
+            recommend enabling BYOK encryption when provisioning your {+clusters+}.
             To learn more, see :ref:`arch-center-recommendations`.
 
       To enable BYOK encryption with Terraform, 

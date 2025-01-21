@@ -51,7 +51,8 @@ disk encryption, with the provider managing the encryption keys.
 This process cannot be disabled.
 
 Additionally, you have the option to enable database-level encryption
-by "bringing your own key" (BYOK) with a key management service (KMS).
+by **"bringing your own key" (BYOK)** with a key management service (KMS)
+such as AWS KMS, Google Cloud KMS, or Azure Key Vault.
 |byok| encryption adds another layer of security for additional
 confidentiality and data segmentation:
 
@@ -59,9 +60,8 @@ confidentiality and data segmentation:
    :figwidth: 750px
    :alt: An image showing encryption at rest with an additional customer-managed key.
 
-To learn more about using your own encryption keys with 
-AWS Key Management Service (KMS), Google Cloud KMS, or 
-Azure Key Vault, see :ref:`security-kms-encryption`.
+To learn more about using your own encryption keys
+with a key management service (KMS), see :ref:`security-kms-encryption`.
 
 Encryption in Use
 ~~~~~~~~~~~~~~~~~
@@ -143,8 +143,8 @@ Use the following methods to enable BYOK encryption:
 - :oas-atlas-tag:`{+atlas-admin-api+} </Encryption-at-Rest-using-Customer-Key-Management>`
 - `Terraform <https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs/resources/encryption_at_rest>`__
 
-For a full example of configuring BYOK encryption
-when creating a new |service| organization, project, and {+cluster+},
+To learn how to configure BYOK encryption
+when provisioning a new |service| organization, project, and {+cluster+},
 see :ref:`arch-center-create-hierarchy-example`.
 
 Data Classification
