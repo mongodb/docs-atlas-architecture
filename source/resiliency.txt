@@ -247,4 +247,3 @@ Resilient Example Application
 `````````````````````````````
 
 .. include:: /includes/cloud-docs/example-resilient-app.rst
-
