@@ -9,7 +9,7 @@ Application and Database Resiliency
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 2
+   :depth: 3
    :class: onecol
 
 .. tabs-selector:: drivers
