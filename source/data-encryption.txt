@@ -130,6 +130,8 @@ Recommendations for Data Encryption
 Consider the following security recommendations when 
 provisioning your {+clusters+}.
 
+.. _arch-center-byok:
+
 BYOK Encryption
 ~~~~~~~~~~~~~~~
 

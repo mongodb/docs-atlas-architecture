@@ -118,8 +118,6 @@ projects and {+clusters+}:
 
 .. include:: /includes/byok-encryption-recommendations.rst
 
-To learn more, see :ref:`arch-center-encryption-at-rest`.
-
 For your dev and test environments, you can also develop {+service+}
 {+clusters+} locally with the {+atlas-cli+}. This can enable developers
 to work locally from their machine and cut down on costs for
@@ -392,17 +390,6 @@ These examples also apply other recommended configurations, including:
 
       - :ref:`atlas-projects-list`
 
-      Configure BYOK Encryption
-      ~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      .. include:: /includes/byok-encryption-recommendations-short.rst
-
-      You can't manage BYOK encryption with the {+atlas-cli+}. Alternatively,
-      use the following methods to enable BYOK encryption:
-
-      - :atlas:`{+atlas-ui+} </security-kms-encryption>`
-      - :oas-atlas-tag:`{+atlas-admin-api+} </Encryption-at-Rest-using-Customer-Key-Management>`
-
       Create One {+Cluster+} Per Project
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -432,6 +419,17 @@ These examples also apply other recommended configurations, including:
 
       For more configuration options and info about this example, 
       see :ref:`atlas-clusters-create`.
+
+      Configure BYOK Encryption
+      ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      .. include:: /includes/byok-encryption-recommendations-short.rst
+
+      You can't manage BYOK encryption with the {+atlas-cli+}. 
+      Use the following methods to configure BYOK encryption:
+
+      - :atlas:`{+atlas-ui+} </security-kms-encryption>`
+      - :oas-atlas-tag:`{+atlas-admin-api+} </Encryption-at-Rest-using-Customer-Key-Management>`
 
    .. tab:: Terraform
       :tabid: tf
@@ -522,22 +520,47 @@ These examples also apply other recommended configurations, including:
       Configure BYOK Encryption
       ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      .. include:: /includes/byok-encryption-recommendations-short.rst
+      .. tabs::
 
-      Add the following resources to your ``provider.tf`` file. 
-      Change the IDs and names to use your values.
-      To learn more, see `Terraform documentation 
-      <https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs/resources/encryption_at_rest>`__.
+         .. tab:: Dev and Test Environments
+            :tabid: devtest
+
+            For your development and testing environments, consider skipping BYOK encryption 
+            environments to save costs, unless you're in a highly-regulated industry
+            or storing sensitive data. To learn more, see :ref:`arch-center-recommendations`.
+
+         .. tab:: Staging and Prod Environments
+            :tabid: stagingprod
+
+            For your staging and production environments environments, we
+            recommend enabling BYOK encryption when provisioning your {+cluster+}.
+            To learn more, see :ref:`arch-center-recommendations`.
+
+      To enable BYOK encryption with Terraform, 
+      create the following resources. Change the IDs and names to use your values:
 
       .. tabs::
          
          .. tab:: AWS
             :tabid: aws
 
+            .. tip:: 
+
+               For a complete configuration example, see
+               :github:`Atlas Terraform Provider Example <mongodb/terraform-provider-mongodbatlas/blob/master/examples/mongodbatlas_encryption_at_rest/aws/atlas-cluster>`.
+
+               Alternatively, to simplify the configuration process, you can use the
+               `encryption at rest Terraform module <https://registry.terraform.io/modules/terraform-mongodbatlas-modules/encryption-at-rest/mongodbatlas/latest>`__.
+
             .. include:: /includes/examples/tf-example-byok-aws.rst
          
          .. tab:: Azure
             :tabid: azure
+
+            .. tip:: 
+
+               For a complete configuration example, see
+               :github:`Atlas Terraform Provider Example <mongodb/terraform-provider-mongodbatlas/tree/master/examples/mongodbatlas_encryption_at_rest/azure>`.
 
             .. include:: /includes/examples/tf-example-byok-azure.rst
          
@@ -546,6 +569,10 @@ These examples also apply other recommended configurations, including:
 
             .. include:: /includes/examples/tf-example-byok-gcp.rst
       
+      For more configuration options and info about this example, 
+      see `Terraform documentation 
+      <https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs/resources/encryption_at_rest>`__.
+
       Create the Projects and Deployments
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
