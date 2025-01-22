@@ -1,10 +1,10 @@
 
-:ref:`BYOK encryption <arch-center-encryption-at-rest>` is enabled at the project level. 
+You enable :ref:`BYOK encryption <arch-center-encryption-at-rest>` at the project level. 
 Once enabled, it automatically applies to all {+clusters+} created within the project, 
 ensuring consistent data protection across your environment.
 
 For **staging and production environments**, we recommend that you 
-enable BYOK encryption when provisioning your {+clusters+} 
+enable |byok| encryption when provisioning your {+clusters+} 
 to avoid relying on application development teams to configure it later on.
 
 For **development and testing environments**, consider skipping |byok| encryption

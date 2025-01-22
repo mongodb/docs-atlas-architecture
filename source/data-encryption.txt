@@ -137,13 +137,13 @@ BYOK Encryption
 
 .. include:: /includes/byok-encryption-recommendations.rst
 
-Use the following methods to enable BYOK encryption:
+Use the following methods to enable |byok| encryption:
 
 - :atlas:`{+atlas-ui+} </security-kms-encryption>`
 - :oas-atlas-tag:`{+atlas-admin-api+} </Encryption-at-Rest-using-Customer-Key-Management>`
 - `Terraform <https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs/resources/encryption_at_rest>`__
 
-To learn how to configure BYOK encryption
+To learn how to configure |byok| encryption
 when provisioning a new |service| organization, project, and {+cluster+},
 see :ref:`arch-center-create-hierarchy-example`.
 

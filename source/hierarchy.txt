@@ -401,8 +401,8 @@ These examples also apply other recommended configurations, including:
 
       .. include:: /includes/byok-encryption-recommendations-short.rst
 
-      You can't manage BYOK encryption with the {+atlas-cli+}. 
-      Use the following methods to configure BYOK encryption:
+      You can't manage |byok| encryption with the {+atlas-cli+}. 
+      Use the following methods to configure |byok| encryption:
 
       - :atlas:`{+atlas-ui+} </security-kms-encryption>`
       - :oas-atlas-tag:`{+atlas-admin-api+} </Encryption-at-Rest-using-Customer-Key-Management>`
@@ -531,7 +531,7 @@ These examples also apply other recommended configurations, including:
          .. tab:: Dev and Test Environments
             :tabid: devtest
 
-            For your development and testing environments, consider skipping BYOK encryption 
+            For your development and testing environments, consider skipping |byok| encryption 
             environments to save costs, unless you're in a highly-regulated industry
             or storing sensitive data. To learn more, see :ref:`arch-center-recommendations`.
 
@@ -539,10 +539,10 @@ These examples also apply other recommended configurations, including:
             :tabid: stagingprod
 
             For your staging and production environments environments, we
-            recommend enabling BYOK encryption when provisioning your {+clusters+}.
+            recommend enabling |byok| encryption when provisioning your {+clusters+}.
             To learn more, see :ref:`arch-center-recommendations`.
 
-      To enable BYOK encryption with Terraform, 
+      To enable |byok| encryption with Terraform, 
       create the following resources. Change the IDs and names to use your values:
 
       .. tabs::
