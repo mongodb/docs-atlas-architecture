@@ -1,0 +1,95 @@
+.. _arch-center-auditing-logging-template:
+
+====================
+Auditing and Logging
+====================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+To monitor and log |service| platform activities, use auditing and logs.
+
+{+service+} Features and Recommendations for Auditing and Logging
+-----------------------------------------------------------------
+
+Features
+~~~~~~~~
+
+Auditing
+````````
+
+<Brief overview of auditing that links to Atlas docs>
+
+Accessing Audit Logs
+````````````````````
+
+<Brief overview of audit logs that links to Atlas docs>
+
+Recommendations for Auditing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<Recommendations for auditing>
+
+For staging and production environments, enable auditing for
+additional security. We recommend that you audit the following events at a minimum:
+
+- Failed logon
+- Session activity
+- ...
+
+For all of the previous events, you should include the following
+information at a minimum:
+
+- Session ID
+- Client hostname and IP address
+- ...
+
+Recommendations for Audit Logs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<Recommendations for using audit logs>
+
+Examples
+--------
+
+.. tabs::
+
+   .. tab:: CLI
+      :tabid: cli
+
+      Download Logs
+      ~~~~~~~~~~~~~
+
+      Run the following CLI command to download a compressed file that contains the
+      MongoDB logs for the specified host in your project.
+
+      .. include:: /includes/examples/cli-example-download-logs.rst
+
+   .. tab:: Terraform
+      :tabid: Terraform
+ 
+      The following example demonstrates how to enable auditing for
+      your deployment. Before you can create resources with Terraform,
+      you must:
+
+      - :ref:`Create your paying organization <configure-paying-org>`
+        and :ref:`create an API key <atlas-admin-api-access>` for the
+        paying organization. Store your public and private keys as
+        environment variables by running the following commands in the terminal:
+
+        .. code-block::
+
+           export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+           export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+      - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__.
+
+      Enable Auditing and Create an Auditing Filter for the {+Cluster+}
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      .. include:: /includes/examples/tf-example-auditing-filter.rst
