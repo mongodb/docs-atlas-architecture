@@ -27,8 +27,8 @@ Underutilized {+Clusters+}
 
   - Enable a cron job to
     pause dev and test {+clusters+} during the night when no one actively develops against the {+cluster+}. You can pause {+clusters+} with the
-    {+atlas-admin-api+} by setting the ``paused`` field to ``true`` in
-    the:
+    {+atlas-admin-api+} by setting the ``paused`` field to ``true`` when
+    using either of the following methods:
     
     - :oas-atlas-op:`Modify One Cluster </updateCluster>` endpoint.
     - `Terraform cluster resource <https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs/resources/cluster#paused-2>`__.
@@ -39,8 +39,7 @@ Underutilized {+Clusters+}
 
   - Consider terminating unused dev and test {+clusters+} after a 
     set amount of time and sufficient email alerts to the {+cluster+}
-    owner. You can
-    terminate a {+cluster+} with the following:
+    owner. You can terminate a {+cluster+} with the following methods:
 
     - {+atlas-admin-api+} by using the :oas-atlas-op:`Remove One Cluster
       </deleteCluster>` endpoint.
@@ -69,7 +68,7 @@ Whenever possible, opt for same-provider, same-region data transfer to
 minimize costs. Only use inter-region or internet transfers when
 necessary, such as for disaster recovery scenarios where you need to
 restore the application in a different region. Locating your {+cluster+}
-in the same region as most of your traffic — likely where you host your
+in the same region as most of your traffic — usually where you host your
 application — can greatly reduce data transfer costs.
 
 To learn more, see :ref:`reducing-data-transfer-costs`.
