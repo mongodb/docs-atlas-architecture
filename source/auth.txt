@@ -109,10 +109,8 @@ complexity, credential rotation, and :abbr:`MFA (Multi-Factor
 Authentication)` within your identity provider. |service| also supports
 Google or Github account authentication. 
 
-{+atlas-ui+} manages user identities in a MongoDB-controlled Okta
-instance, encrypted and stored securely. You must also configure the IP
-access list to allow only connections from IP ranges that include your
-users and application servers.
+You must configure the IP access list in the {+atlas-ui+} to allow only connections 
+from IP ranges that include your users and application servers.
 
 To learn more, see :ref:`atlas-federated-authentication`.
 
@@ -140,11 +138,17 @@ Recommendations for |service| Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |service| supports the following options for |service| database
-authentication. In development and test environments, create a separate
-project with {+cluster+} and grant users ``Project Data Access
-Admin`` roles. In staging and production environments, we recommend
-granting only programmatic access by using :atlas:`Workforce Identity
-Federation </workforce-oidc/>`. 
+authentication.
+
+In development and test environments, create a separate
+project with a {+cluster+} and use :manual:`SCRAM
+</core/security-scram/>` for user authentication. 
+To allow users to interact with data using the {+atlas-ui+}, 
+grant users ``Project Data Access Admin`` roles.
+  
+In staging and production environments, we recommend using 
+:ref:`Workforce Identity Federation <oidc-authentication-workforce>` to 
+grant programmatic access to your |service| database through an external |idp|. 
 
 |service| also supports creating temporary database users
 that automatically expire after the predefined times. A user can be
@@ -176,16 +180,16 @@ To learn more, see :ref:`oidc-authentication-workforce`.
 Workload Identity Federation 
 ````````````````````````````
 
-Workload identity federation enables applications running in cloud
+Workload Identity Federation enables applications running in cloud
 environments like |aws|, |azure|, and Google Cloud to authenticate with
 |service| without the need to manage separate database user credentials.
-With workload identity federation, you can manage |service| database
+With Workload Identity Federation, you can manage |service| database
 users using |azure| Managed Identities, Google Service Accounts, or any
 OAuth 2.0-compliant service. You can also use |aws| workload federation
 through |aws| |iam| roles. These authentication mechanisms simplify
 management and enhance security by allowing for passwordless access to
 the |service| database. 
-We recommend workload identity federation for all applications running in 
+We recommend Workload Identity Federation for all applications running in 
 production. You shouldn't allow human users to connect except in the most 
 extreme break-glass emergency scenarios.
 
@@ -199,13 +203,16 @@ X.509 Client Certificates and SCRAM
 
 We recommend that you leverage a third-party federated identity provider
 for accessing all aspects of the |service| control and data plane.
-|service| {+clusters+} do support :manual:`x.509
-</core/security-x.509/>` client certificates and :manual:`SCRAM
-</core/security-scram/>` for user authentication, but you should use these
-only if you don't have an identity provider for federation. 
+If you don't have an identity provider for federation, then
+|service| {+clusters+} also support :manual:`x.509
+</core/security-x.509/>` client certificates for secure client authentication
+in staging and production environments. 
 
-If you 
-leverage x.509 or SCRAM authentication, we recommend that you use complex
+|service| {+clusters+} also support :manual:`SCRAM
+</core/security-scram/>` for user authentication, but we only recommend 
+SCRAM for use in development and test environments. 
+
+If you leverage x.509 or SCRAM authentication, we recommend that you use complex
 passwords and store credentials in a third-party secrets manager like
 `HashiCorp Vault <https://developer.hashicorp.com/vault/docs/secrets/databases/mongodbatlas>`__
 or |aws|. Alternatively, implement automatic credential rotation or
@@ -214,9 +221,20 @@ create a one-time password through your PAM system for each access.
 Recommendations for {+atlas-admin-api+} 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|service| provides |api| key-based authentication to securely manage
-programmatic access. It uses |http| Digest to protect requests, where
-the |api| public key functions as the username, and the corresponding
+You can create a :ref:`service account <service-accounts-overview>` to
+manage programmatic authentication to your Atlas organization using the industry standard
+{+oauth-2+} protocol with the 
+`Client Credentials flow <https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/>`__. 
+
+A service account is created with a client ID and a secret 
+that function as a username and password for generating access tokens.
+An access token is used to authenticate your API requests, and each token 
+expires after 1 hour. 
+
+|service| also provides |api| key-based authentication to securely manage
+programmatic access. This is a legacy method of authenticating to Atlas 
+that uses |http| Digest authentication to protect requests.
+The |api| public key functions as the username, and the corresponding
 private key serves as the password. 
 You should store these keys in a third party secrets management system, 
 such as |aws| or {+vault+}. To learn how to securely store these 
