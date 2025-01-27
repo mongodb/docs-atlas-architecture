@@ -65,7 +65,7 @@
    }
 
    # Assign the Project the Group with Specific Roles
-   resource "mongodbatlas_project" "project__team_role" {
+   resource "mongodbatlas_project" "project_team_role" {
      project_id = mongodbatlas_project.atlas-project.id
      team_id    = mongodbatlas_team.atlas_group.team_id
      role_names = ["GROUP_READ_ONLY", "GROUP_CLUSTER_MANAGER"] 
