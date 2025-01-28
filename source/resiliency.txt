@@ -1,15 +1,15 @@
 .. _arch-center-resiliency:
 
-===================================
-Application and Database Resiliency
-===================================
+=================================================
+Atlas Features and Recommendations for Resiliency
+=================================================
 
 .. default-domain:: mongodb
 
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 3
+   :depth: 2
    :class: onecol
 
 .. tabs-selector:: drivers
@@ -32,8 +32,8 @@ Database Replication
 with a minimum of three nodes, and you can increase the node count to any odd 
 number of nodes you require. |service| first writes data from your application 
 to a `primary node <https://www.mongodb.com/docs/manual/core/replica-set-primary/>`__, and then |service| incrementally replicates and stores that 
-data across all `secondary nodes <https://www.mongodb.com/docs/manual/core/replica-set-secondary/>`__ within your {+cluster+}. Additionally, you can 
-control the durability of your data storage by adjusting the `write concern <https://www.mongodb.com/docs/manual/reference/write-concern/>`__ of 
+data across all `secondary nodes <https://www.mongodb.com/docs/manual/core/replica-set-secondary/>`__ within your {+cluster+}. To 
+control the durability of your data storage, you can adjust the `write concern <https://www.mongodb.com/docs/manual/reference/write-concern/>`__ of 
 your application code to complete the write only once a certain number of secondaries 
 have committed the write. To learn more, see :ref:`resiliency-read-write-concerns`.
 
@@ -50,8 +50,8 @@ Self-Healing Deployments
 
 |service| {+clusters+} must consist of an odd number of nodes, because the node 
 pool must elect a primary node to and from which your application writes 
-and reads directly, and a cluster consisting of an even number of nodes may
-result in a deadlock that would prevent a primary node from being elected.
+and reads directly. A cluster consisting of an even number of nodes might
+result in a deadlock that prevents a primary node from being elected.
 
 In the event that a primary node is unavailable, because of infrastructure 
 outages, maintenance windows or any other reason, |service| {+clusters+} self-heal 
@@ -136,7 +136,7 @@ related to resilience:
 Connecting Your Application to |service|
 `````````````````````````````````````````
 
-We recommend that you use a connection method that is built on the most `current driver version <https://www.mongodb.com/docs/drivers/>`__ 
+We recommend that you use a connection method built on the most `current driver version <https://www.mongodb.com/docs/drivers/>`__ 
 for your application's programming language whenever possible. And while the 
 default connection string |service| provides is a good place to start, you might 
 want to tune it for performance in the context of your specific application 
@@ -173,19 +173,19 @@ Min and Max Connection Pool Size
 `````````````````````````````````
 
 If your ``minPoolSize`` and ``maxPoolSize`` values are similar, the majority of your 
-database client connections will open at application startup. For example, if your
+database client connections open at application startup. For example, if your
 ``minPoolSize`` is set to ``10`` and your ``maxPoolSize`` is set to ``12``, 10 
-client connections will open at application startup, and only 2 more connections 
+client connections open at application startup, and only 2 more connections 
 can then be opened during application runtime. However, if your ``minPoolSize`` 
 is set to ``10`` and your ``maxPoolSize`` is set to ``100``, up to 90 additional 
 connections can be opened as needed during application runtime.
 
-As there is additional network overhead associated with opening new client connections,
-it is worth considering whether would prefer to incur that network cost at 
+Additional network overhead associated with opening new client connections.
+So, consider whether you would prefer to incur that network cost at 
 application startup, or to incur it dynamcially in as as-needed basis during 
-application runtime, which - if there is a sudden spike in requests that would 
-require a large number of additional connections to be opened at once - has the 
-potential to impact operational latency and perceived performance for end-users.
+application runtime, which has the potential to impact operational latency and 
+perceived performance for end-users if there is a sudden spike in requests that 
+requires a large number of additional connections to be opened at once.
 
 Your application's architecture is central to this consideration. If, for example, 
 you deploy your application as microservices, consider which services should 
