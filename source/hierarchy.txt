@@ -401,8 +401,8 @@ These examples also apply other recommended configurations, including:
 
       .. include:: /includes/encryption-with-cmk-recommendations-short.rst
 
-      You can't manage encryption with customer key management with the {+atlas-cli+}. 
-      Use the following methods to configure encryption with customer key management:
+      You can't use the the {+atlas-cli+} to manage encryption with customer key management.
+      Instead, use the following methods:
 
       - :atlas:`{+atlas-ui+} </security-kms-encryption>`
       - :oas-atlas-tag:`{+atlas-admin-api+} </Encryption-at-Rest-using-Customer-Key-Management>`
@@ -531,8 +531,8 @@ These examples also apply other recommended configurations, including:
          .. tab:: Dev and Test Environments
             :tabid: devtest
 
-            For your development and testing environments, consider skipping encryption with customer key management 
-            environments to save costs, unless you're in a highly-regulated industry
+            For your development and testing environments, consider skipping encryption 
+            with customer key management to save costs, unless you're in a highly-regulated industry
             or storing sensitive data. To learn more, see :ref:`arch-center-recommendations`.
 
          .. tab:: Staging and Prod Environments

@@ -88,7 +88,7 @@ on the client by using a MongoDB driver. CSFLE uses AES-256 in
 authenticated CBC mode to encrypt data.
 
 Additionally, you can select :manual:`randomized encryption 
-</csfle/fundamentals/encryption-algorithms/#randomized-encryption>`, 
+</core/csfle/fundamentals/encryption-algorithms/#randomized-encryption>`, 
 which is not queryable but might be required for certain security requirements.
 
 The following diagram demonstrates a CSFLE workflow where user records 
