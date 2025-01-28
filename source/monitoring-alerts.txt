@@ -170,124 +170,143 @@ same condition, one for a low priority / "warning" level of severity, and one fo
 
 .. list-table:: 
    :header-rows: 1
-   :widths: 30 35 35
+   :widths: 20 25 25 30
    :stub-columns: 1 
 
    * - Condition
      - Recommended Alert Threshold: Low Priority
      - Recommended Alert Threshold: High Priority
+     - Key Insights
 
    * - Oplog Window
      - < 24h for 5 minutes 
      - < 1h for 10 minutes
+     - Ensures secondary nodes stay updated, reducing risk of data inconsistency. 
     
    * - :manual:`Election </core/replica-set-elections/>` events
      - > 3 for 5 minutes 
      - > 30 for 5 minutes
+     - Frequent leadership changes can disrupt operations and impact availability.
 
    * - Read :atlas:`IOPS </reference/alert-resolutions/disk-io-utilization/>`
      - > 4000 for 2 minutes
      - > 9000 for 5 minutes
+     - High read load can strain storage resources, affecting performance.
 
    * - Write :atlas:`IOPS </reference/alert-resolutions/disk-io-utilization/>`
      - > 4000 for 2 minutes
      - > 9000 for 5 minutes
+     - Elevated writes may indicate storage stress, risking data integrity.
 
    * - Read Latency
      - > 20ms for 5 minutes
      - > 50 s for 5 minutes
+     - Delays in data retrieval can degrade application responsiveness.
 
    * - Write Latency
      - > 20ms for 5 minutes 
      - > 50ms for more than 5 minutes
+     - Slow writes can impact data durability and user experience.
 
    * - Swap use
      - > 2GB for 15 minutes
      - > 2GB for 15 minutes
+     - Heavy swapping indicates insufficient RAM, harming performance.
 
    * - Host down
      - 15 minutes
      - 24 hours
+     - Detects hardware or network failures, crucial for high availability.
 
    * - No primary
      - 5 minutes
      - 5 minutes
+     - A missing primary halts writes. Quick action is crucial for uptime.
 
    * - Missing active ``mongos``
      - 15 minutes
      - 15 minutes
+     - Critical for query routing in sharded clusters. ``mongos`` must remain active.
 
    * - Page faults
      - > 50/second for 5 minutes
      - > 100/second for 5 minutes
+     - High rates suggest RAM insufficiency, impacting performance.
 
    * - Replication lag
      - > 240 second for 5 minutes
      - > 1 hour for 5 minutes
+     - Ensure data is up-to-date. High lag risks stale reads.
 
    * - Failed backup
      - Any occurrence
      - None
+     - Backup failures threaten data recovery and risk data loss.
 
    * - Restored backup
      - Any occurrence
      - None
+     - Tracking restorations verifies backup reliability and recovery.
 
    * - Fallback snapshot failed
      - Any occurrence
      - None
+     - Failed snapshots endanger disaster recovery plans.
 
    * - Backup schedule behind
      - > 12 hours
      - > 12 hours
+     - Delayed backups increase risk of data loss. Timely execution is key.
 
-   * - Available write tickets
-     - < 75 for 5 minutes
-     - < 25 for 5 minutes
+   * - Queued Reads    
+     - > 0-10    
+     - > 10+    
+     - Indicates high demand on read resources. Monitor load and optimize queries.
 
-   * - Available read tickets
-     - < 75 for 5 minutes
-     - < 25 for 5 minutes
+   * - Queued Writes    
+     - > 0-10    
+     - > 10+    
+     - Suggests write bottleneck or resource saturation. Assess and address underlying issues.
 
    * - Restarts last hour
      - > 2
      - > 2
+     - Frequent restarts signal instability, impacting service continuity.
 
    * - :manual:`Primary election </core/replica-set-elections/>`
      - Any occurrence
      - None
+     - Monitor elections to manage operational continuity during roles shifts.
 
    * - Maintenance no longer needed
      - Any occurrence
      - None
+     - Identifies redundant resource allocation during maintenance tasks.
 
    * - Maintenance started
      - Any occurrence
      - None
+     - Awareness of maintenance schedules helps mitigate unexpected disruptions.
 
    * - Maintenance scheduled
      - Any occurrence
      - None
+     - Prepares teams for planned maintenance, optimizing resource use.
 
    * - :atlas:`Steal </alert-basics/#cpu-steal>`
      - > 5% for 5 minutes
      - > 20% for 5 minutes
+     - CPU contention on virtualized hosts can degrade database performance.
 
    * - CPU
      - > 75% for 5 minutes
      - > 75% for 5 minutes
+     - Monitoring CPU ensures adequate performance, avoiding bottlenecks.
 
    * - Disk partition usage
      - > 90%
      - > 95% for 5 minutes
-
-   * - Index partition usage
-     - > 90%
-     - > 95% for 5 minutes
-
-   * - Journal partition usage
-     - > 90%
-     - > 95% for 5 minutes
+     - Prevent storage depletion, which can disrupt service.
 
 To learn more, see :atlas:`Configure and Resolve Alerts </alerts>`. 
 
