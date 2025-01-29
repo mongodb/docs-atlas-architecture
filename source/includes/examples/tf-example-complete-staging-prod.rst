@@ -58,7 +58,7 @@ output "project_name"      { value = mongodbatlas_project.atlas-project.name }
 # Set up an alert notification by email when there is replication lag
 # Greater than 1 hour for more than 5 minutes
 resource "mongodbatlas_alert_configuration" "test_replication_lag_alert" {
-  project_id = var.atlas_project_id
+  project_id = mongodbatlas_project.atlas-project.id
   event_type = "OUTSIDE_METRIC_THRESHOLD"
   enabled    = true
 
@@ -85,19 +85,14 @@ resource "mongodbatlas_alert_configuration" "test_replication_lag_alert" {
   }
 }
 
-# Connection string to use in this configuration
-locals {
-  mongodb_uri = var.connection_strings[0]
-}
-
 # Atlas organization details to use in the configuration
 data "mongodbatlas_federated_settings" "this" {
-  org_id = var.org_id
-  name   = var.project_name
-  project_id = var.project_id
+	  org_id = mongodbatlas_project.atlas-project.org_id
 }
 
 # Configure an identity provider for federated authentication
+# For IAM roles and Azure assigned identities, you must create the 
+# role or identity before you use this Terraform resource
 resource "mongodbatlas_federated_settings_identity_provider" "oidc" {
   federation_settings_id = data.mongodbatlas_federated_settings.this.id
   audience               = var.token_audience
@@ -114,13 +109,15 @@ resource "mongodbatlas_federated_settings_identity_provider" "oidc" {
 
 resource "mongodbatlas_federated_settings_org_config" "this" {
   federation_settings_id            = data.mongodbatlas_federated_settings.this.id
-  org_id                            = var.org_id
+  org_id                            = mongodbatlas_project.atlas-project.org_id
   domain_restriction_enabled        = false
   domain_allow_list                 = []
   data_access_identity_provider_ids = [mongodbatlas_federated_settings_identity_provider.oidc.idp_id]
 }
 
 # Create an OIDC federated authentication user
+# For IAM roles and Azure assigned identities, you must create the 
+# role or identity before you use this Terraform resource
 resource "mongodbatlas_database_user" "oidc" {
   project_id         = var.project_id
   username           = "${mongodbatlas_federated_settings_identity_provider.oidc.idp_id}/${azurerm_user_assigned_identity.this.principal_id}"
@@ -158,10 +155,22 @@ resource "mongodbatlas_custom_db_role" "create_role" {
   }
 }
 
-# Create a Private Link
+# AWS ONLY- remove for other cloud providers: Create a Private Link
 resource "mongodbatlas_privatelink_endpoint" "test" {
-  project_id    = "<project-id>"
-  provider_name = "AWS/AZURE"
+  project_id = mongodbatlas_project.atlas-project.id
+  provider_name = "AWS"
+  region        = "US_EAST_1"
+
+  timeouts {
+    create = "30m"
+    delete = "20m"
+  }
+}
+
+# AZURE ONLY- remove for other cloud providers: Create a Private Link
+resource "mongodbatlas_privatelink_endpoint" "test" {
+  project_id = mongodbatlas_project.atlas-project.id
+  provider_name = "AZURE"
   region        = "US_EAST_1"
 
   timeouts {
@@ -172,12 +181,15 @@ resource "mongodbatlas_privatelink_endpoint" "test" {
 
 # AWS ONLY- remove for other cloud providers: Enable BYOK encryption
 resource "mongodbatlas_cloud_provider_access_setup" "setup_only" {
-  project_id    = var.atlas_project_id
+  project_id = mongodbatlas_project.atlas-project.id
   provider_name = "AWS"
 }
 
+# AWS ONLY- remove for other cloud providers: Enable BYOK encryption
+# For IAM roles and Azure assigned identities, you must create the 
+# role or identity before you use this Terraform resource
 resource "mongodbatlas_cloud_provider_access_authorization" "auth_role" {
-  project_id = var.atlas_project_id
+  project_id = mongodbatlas_project.atlas-project.id
   role_id    = mongodbatlas_cloud_provider_access_setup.setup_only.role_id
 
   aws {
@@ -185,8 +197,11 @@ resource "mongodbatlas_cloud_provider_access_authorization" "auth_role" {
   }
 }
 
+# AWS ONLY- remove for other cloud providers: Enable BYOK encryption
+# For KMS keys, you must create the 
+# key before you use this Terraform resource
 resource "mongodbatlas_encryption_at_rest" "test" {
-  project_id = var.atlas_project_id
+  project_id = mongodbatlas_project.atlas-project.id
 
   aws_kms_config {
     enabled                = true
@@ -196,17 +211,13 @@ resource "mongodbatlas_encryption_at_rest" "test" {
   }
 }
 
-data "mongodbatlas_encryption_at_rest" "test" {
-  project_id = mongodbatlas_encryption_at_rest.test.project_id
-}
-
 output "is_aws_kms_encryption_at_rest_valid" {
   value = data.mongodbatlas_encryption_at_rest.test.aws_kms_config.valid
 }
 
 # AZURE ONLY- remove for other cloud providers: Enable BYOK encryption
  resource "mongodbatlas_encryption_at_rest" "test" {
-  project_id = var.atlas_project_id
+  project_id = mongodbatlas_project.atlas-project.id
 
   azure_key_vault_config {
     enabled           = true
@@ -233,7 +244,7 @@ output "is_azure_encryption_at_rest_valid" {
 
 #GCP ONLY- remove for other cloud providers: Enable BYOK encryption
 resource "mongodbatlas_encryption_at_rest" "test" {
-  project_id = var.atlas_project_id
+  project_id = mongodbatlas_project.atlas-project.id
 
   google_cloud_kms_config {
     enabled                 = true
@@ -244,7 +255,7 @@ resource "mongodbatlas_encryption_at_rest" "test" {
 
 # Enable auditing and create an audit filter for your cluster
 resource "mongodbatlas_auditing" "test" {
-     project_id                  = "mongodbatlas_project.atlas-project.id"
+     project_id = mongodbatlas_project.atlas-project.id
      audit_filter                = "{ 'atype': 'authenticate', 'param': {   'user': 'auditAdmin',   'db': 'admin',   'mechanism': 'SCRAM-SHA-1' }}"
      audit_authorization_success = false
      enabled                     = true
@@ -256,11 +267,6 @@ resource "mongodbatlas_auditing" "test" {
     "cluster_1" = { name = "m10-aws-1e", region = "US_EAST_1" },
     "cluster_2" = { name = "m10-aws-2e", region = "US_EAST_2" },
   }
-}
-
-resource "mongodbatlas_project" "atlas-project" {
-  org_id = var.org_id
-  name   = var.project_name
 }
 
 resource "mongodbatlas_advanced_cluster" "automated_backup_test_cluster" {
@@ -346,21 +352,21 @@ resource "mongodbatlas_cloud_backup_schedule" "test" {
 # Configure backup and PIT restore
 # Specify number of days to retain backup snapshots
 resource "mongodbatlas_cloud_backup_snapshot" "test" {
-  project_id        = mongodbatlas_advanced_cluster.cluster_test.project_id
-  cluster_name      = mongodbatlas_advanced_cluster.cluster_test.name
+  project_id        = mongodbatlas_project.atlas-project.id
+  cluster_name      = mongodbatlas_advanced_cluster.atlas-cluster
   description       = "My description"
   retention_in_days = "1"
 }
 # Specify the snapshot ID to use to restore
 resource "mongodbatlas_cloud_backup_snapshot_restore_job" "test" {
   count        = (var.point_in_time_utc_seconds == 0 ? 0 : 1)
-  project_id   = mongodbatlas_cloud_backup_snapshot.test.project_id
-  cluster_name = mongodbatlas_cloud_backup_snapshot.test.cluster_name
-  snapshot_id  = mongodbatlas_cloud_backup_snapshot.test.id
+  project_id   = mongodbatlas_project.atlas-project.id
+  cluster_name = mongodbatlas_advanced_cluster.atlas-cluster
+  snapshot_id  = mongodbatlas_advanced_cluster.atlas-cluster.test.id
   delivery_type_config {
     point_in_time             = true
-    target_cluster_name       = mongodbatlas_advanced_cluster.cluster_test.name
-    target_project_id         = mongodbatlas_advanced_cluster.cluster_test.project_id
+    target_cluster_name       = mongodbatlas_advanced_cluster.atlas-cluster.name
+    target_project_id         = mongodbatlas_advanced_cluster.atlas-cluster.project_id
     point_in_time_utc_seconds = var.point_in_time_utc_seconds
   }
 }
