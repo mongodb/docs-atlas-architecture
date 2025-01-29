@@ -78,7 +78,6 @@
      }
      policy_item_monthly {
        frequency_interval = 28 # accepted values = 1 to 28 -> 1 to 28 every nth day of the month  
-       # accepted values = 40 -> every last day of the month
        retention_unit  = "months"
        retention_value = 3 # retain for 3 months
      }

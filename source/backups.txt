@@ -310,7 +310,6 @@ backup is enabled for the {+cluster+}.
 
       .. include:: /includes/examples/tf-example-backup-variables.rst
 
-
       Configure Backup Schedule for the {+Cluster+} 
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
