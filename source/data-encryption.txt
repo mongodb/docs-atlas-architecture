@@ -109,18 +109,18 @@ CSFLE supports all major cloud and on-premises key management services.
 Queryable Encryption
 ````````````````````
 
-:ref:`Queryable encryption <qe-manual-feature-qe>` helps organizations 
+:ref:`Queryable Encryption <qe-manual-feature-qe>` helps organizations 
 protect sensitive data when it is queried. Like CSFLE, it allows applications 
 to encrypt your data on the client side before storing it in the MongoDB database. 
 It also enables applications to perform expressive queries such as equality queries 
 directly on the encrypted data by using an encrypted search algorithm. Queryable Encryption ensures 
 protection for sensitive information without sacrificing the ability to perform queries 
-on it. Queryable encryption always uses non-deterministic encryption.
+on it. Queryable Encryption always uses non-deterministic encryption.
 
-To learn about the algorithms used in queryable encryption, see 
+To learn about the algorithms used in Queryable Encryption, see 
 :website:`Queryable Encryption White Paper </resources/products/capabilities/queryable-encryption-technical-paper>`.
 
-The following diagram demonstrates a queryable encryption workflow where 
+The following diagram demonstrates a Queryable Encryption workflow where 
 user records are stored in a MongoDB database and queried by the client. 
 The user's date of birth (DOB) is encrypted before being stored in the 
 database. When the application submits an expressive range query on the field, 
@@ -132,7 +132,7 @@ client as readable plaintext.
 
 .. figure:: /includes/images/queryable-encryption.svg
    :figwidth: 750px
-   :alt: An image showing an example queryable encryption workflow.
+   :alt: An image showing an example Queryable Encryption workflow.
 
 Recommendations for Data Encryption
 -----------------------------------
@@ -164,7 +164,7 @@ During the provisioning process, we also recommend assessing the
 sensitivity of certain fields in your data and classifying
 them to determine which data requires encryption and what global 
 restrictions to apply to these groups. As a general guideline, we recommend
-that you apply queryable encryption on all sensitive fields, in addition 
+that you apply Queryable Encryption on all sensitive fields, in addition 
 to following :manual:`data modeling </data-modeling/>` best practices.
 
 Consider the following data classification levels as a starting point:
@@ -182,7 +182,7 @@ Consider the following data classification levels as a starting point:
   or destruction of data occurs. By default, all 
   institutional data that is not explicitly classified as restricted or 
   public data should be treated as private data. 
-  Apply CSFLE or queryable encryption on any fields that 
+  Apply CSFLE or Queryable Encryption on any fields that 
   carry private data such as {+PII+}.
   
   Examples: Customer Information, Contracts, Product Costs
@@ -191,7 +191,7 @@ Consider the following data classification levels as a starting point:
   risk to the company if unauthorized disclosure, alteration, 
   or destruction of data occurs. Apply the highest 
   level of security controls to restricted data, including
-  CSFLE or queryable encryption on all fields and
+  CSFLE or Queryable Encryption on all fields and
   encryption with customer key management for additional security.
   
   Examples: Revenue information, Payroll, Security Risks
