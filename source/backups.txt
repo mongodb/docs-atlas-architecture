@@ -30,9 +30,9 @@ ensure data retention and recovery:
   and fast restores. You choose a backup policy that specifies a certain
   number of daily, weekly, and monthly snapshots.
 - Continuous Cloud Backups: This is an additive feature to cloud backups
-  that provides Point In Time (PIT) recovery. This allows you to recover
+  that provides Point In Time (PIT) recovery. This feature allows you to recover
   back to a specific minute during the restore process by backing up the
-  oplog and capturing data changes between snapshots. This allows you to
+  oplog and capturing data changes between snapshots. This feature allows you to
   recover your data to the exact moment (a point in time) right before
   any failure or event, meeting Recovery Point Objectives (RPOs) as low
   as 1 minute.   
@@ -52,14 +52,14 @@ Features
 point-in-time data recovery and consistent, cluster-wide snapshots of
 all {+clusters+}, including sharded {+clusters+}. In |service|, you can
 choose from four snapshot frequencies: hourly, daily, weekly, and
-monthly, ach with its own retention period.
+monthly, each with its own retention period.
 
 .. list-table:: 
    :widths: 20 80 
    :stub-columns: 1
 
    * - Cloud Backups
-     - This provides localized backup storage using the native snapshot
+     - This feature provides localized backup storage using the native snapshot
        functionality of your {+cluster+}'s cloud service provider.
        Benefits include a strong default backup retention schedule of 12
        months, full flexibility to customize snapshot and retention
@@ -71,7 +71,7 @@ monthly, ach with its own retention period.
        the backup data, saving time and resources.  
 
    * - Continuous Cloud Backups
-     - This provides Point In Time (PIT) recovery, which allows you to
+     - This feature provides Point In Time (PIT) recovery, which allows you to
        recover back to any timestamp. This allows you to recover your
        data to the exact moment (a point in time) right before any
        failure or event, like a cyber attack. You can also set a
@@ -79,7 +79,7 @@ monthly, ach with its own retention period.
        like to be able to restore back to a specific point in time.  
 
    * - Multi-region Snapshot Distribution
-     - This allows you to increase resilience by automatically
+     - This feature allows you to increase resilience by automatically
        distributing backup snapshots and oplogs across geographic
        regions instead of just storing them in their primary region. You
        can meet compliance requirements of storing backups in different,
@@ -95,7 +95,7 @@ monthly, ach with its own retention period.
        specified by you, guaranteeing that your backups are fully WORM
        (Write Once Read Many) compliant. Only a designated, authorized
        user can turn off this protection after completing a verification
-       process with MongoDB support. This adds a mandatory manual delay
+       process with MongoDB support. This feature adds a mandatory manual delay
        and cooldown period so that an attacker cannot change the backup 
        policy and export the data. To learn more, see `Configure a Backup Compliance Policy <https://www.mongodb.com/docs/atlas/backup/cloud-backup/backup-compliance-policy/>`__.
 
@@ -197,7 +197,7 @@ regions, enabling restores by using backup copies. You can also copy
 critical backups, with the point-in-time data, to any secondary region
 available from your cloud provider in |service| .
 
-When configuring your snapshot frequency, retention, and distribution,
+When you configure your snapshot frequency, retention, and distribution,
 we recommend striking a balance between availability and cost. However,
 your critical workloads might require multiple copies of snapshots in
 various locations. 
@@ -212,7 +212,7 @@ data integrity and supporting robust disaster recovery.
 Recommendations for PIT Recovery
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Continuous Cloud Backups enable precise Point In Time (PIT) recovery, minimizing
+Continuous Cloud Backups enable precise Point In Time (PIT) recovery, which minimizes
 data loss during failures. |service| can quickly recover to the exact
 timestamp before a failure event, giving you at least a one minute
 :abbr:`RPO (Recovery Point Objective)` and an :abbr:`RTO (Recovery Time
@@ -221,7 +221,7 @@ even in the event of the outage of the primary region. This is because
 |service| restores the most recent snapshot from before the desired
 point in time and then replays the oplog changes to restore to that
 particular point. Recovery times can vary due to cloud provider disk
-warming and how much of the oplog must be replayed during recovery. Your
+warming and how much of the oplog must replay during recovery. Your
 cluster performance might be slow until the cloud provider disk warming
 completes after a restore. If you can be flexible in your requirements
 for recovery, we recommend designing templates that identify the best

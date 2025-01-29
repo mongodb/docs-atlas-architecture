@@ -67,7 +67,7 @@
       retention_value     = 7 # retain for 7 days
      }
      policy_item_weekly {
-       frequency_interval = 7 # every Saturday, accepted values = 1 to 7 -> every 1=Monday,2=Tuesday,3=Wednesday,4=Thursday,5=Friday,6=Saturday,7=Sunday day of the week
+       frequency_interval = 7 # every Sunday, accepted values = 1 to 7 -> every 1=Monday,2=Tuesday,3=Wednesday,4=Thursday,5=Friday,6=Saturday,7=Sunday day of the week
        retention_unit     = "weeks"
        retention_value    = 4 # retain for 4 weeks
      }
