@@ -56,10 +56,10 @@ ensure that {+service+} stores data in a particular geographical area.
 Recommended Deployment Topologies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Single Region, 3 Node Replica Set / Shard (Primary with Two Secondary Members)
+Single Region, 3 Node Replica Set / Shard (Primary Secondary Secondary)
 ````````````````````````````````````````````````
 This topology is appropriate if low latency is required but high availability requirements 
-are limited to a single region. This topology can tolerate any 1 node failure, easily satisfy majority write 
+are limited to a single region. This topology can tolerate any 1 node failure and easily satisfy majority write 
 concern within region secondaries. This will maintain a primary in the preferred region upon any node 
 failure, limits cost, and is the least complicated from an application architecture perspective. 
 The reads and writes from secondaries in this topology encounter low latency in your preferred region.
@@ -73,8 +73,8 @@ This topology can tolerate any 1 node failure, any 1 region outage, and is the l
 
 If the application requires high durability and the app server code has the write majority option set 
 in the driver, this topology will experience higher latency for writes as they need to replicate to a second region. 
-Additionally, any reads off the secondary always exist in a different region than the preferred primary region which 
-and will require a different app server architecture. Furthermore, any failover event will occur to a different region and your 
+Additionally, any reads off the secondary always exist in a different region than the preferred primary region
+and will require a different app server architecture. Furthermore, any failover event will occur to a different region, and your 
 application architecture must adjust as a result.
 
 3-Region, 5 Node Replica Set / Shard (PS - SS - S)
@@ -85,7 +85,7 @@ while keeping the new primary in the preferred region, and tolerate any 1 region
 
 If the application requires high durability and the app server code has the write majority option set 
 in the driver, this topology will experience higher latency for writes as they need to replicate to a second region. 
-In order to accommodate a regional outage, the application tier must be configured to also failover and shift work to 
+In order to accommodate a regional outage, the application tier must be configured to also fail over and shift work to 
 the elected primary.
 
 Examples
