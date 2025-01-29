@@ -92,7 +92,8 @@ data "mongodbatlas_federated_settings" "this" {
 
 # Configure an identity provider for federated authentication
 # For IAM roles and Azure assigned identities, you must create the 
-# role or identity before you use this Terraform resource
+# role or identity and declare the variable before you use this 
+# Terraform resource
 resource "mongodbatlas_federated_settings_identity_provider" "oidc" {
   federation_settings_id = data.mongodbatlas_federated_settings.this.id
   audience               = var.token_audience
@@ -117,9 +118,10 @@ resource "mongodbatlas_federated_settings_org_config" "this" {
 
 # Create an OIDC federated authentication user
 # For IAM roles and Azure assigned identities, you must create the 
-# role or identity before you use this Terraform resource
+# role or identity and declare the variable before you use this 
+# Terraform resource
 resource "mongodbatlas_database_user" "oidc" {
-  project_id         = var.project_id
+  project_id         = mongodbatlas_project.atlas-project.id
   username           = "${mongodbatlas_federated_settings_identity_provider.oidc.idp_id}/${azurerm_user_assigned_identity.this.principal_id}"
   oidc_auth_type     = "USER"
   auth_database_name = "$external" # required when using OIDC USER authentication
@@ -132,7 +134,7 @@ resource "mongodbatlas_database_user" "oidc" {
 
 # Configure a custom role
 resource "mongodbatlas_custom_db_role" "create_role" {
-  project_id = var.project_id
+  project_id = mongodbatlas_project.atlas-project.id
   role_name  = "my_custom_role"
 
   actions {
@@ -187,7 +189,8 @@ resource "mongodbatlas_cloud_provider_access_setup" "setup_only" {
 
 # AWS ONLY- remove for other cloud providers: Enable BYOK encryption
 # For IAM roles and Azure assigned identities, you must create the 
-# role or identity before you use this Terraform resource
+# role or identity and declare the variable before you use this 
+# Terraform resource
 resource "mongodbatlas_cloud_provider_access_authorization" "auth_role" {
   project_id = mongodbatlas_project.atlas-project.id
   role_id    = mongodbatlas_cloud_provider_access_setup.setup_only.role_id
@@ -199,7 +202,8 @@ resource "mongodbatlas_cloud_provider_access_authorization" "auth_role" {
 
 # AWS ONLY- remove for other cloud providers: Enable BYOK encryption
 # For KMS keys, you must create the 
-# key before you use this Terraform resource
+# key and declare the variable before you use this 
+# Terraform resource
 resource "mongodbatlas_encryption_at_rest" "test" {
   project_id = mongodbatlas_project.atlas-project.id
 
@@ -210,9 +214,11 @@ resource "mongodbatlas_encryption_at_rest" "test" {
     role_id                = mongodbatlas_cloud_provider_access_authorization.auth_role.role_id
   }
 }
-
 output "is_aws_kms_encryption_at_rest_valid" {
-  value = data.mongodbatlas_encryption_at_rest.test.aws_kms_config.valid
+  value = data.mongodbatlas_project.atlas-project.id.aws_kms_config.valid
+}
+data "mongodbatlas_encryption_at_rest" "test" {
+  project_id = mongodbatlas_project.atlas-project.id
 }
 
 # AZURE ONLY- remove for other cloud providers: Enable BYOK encryption
@@ -233,11 +239,6 @@ output "is_aws_kms_encryption_at_rest_valid" {
     key_identifier      = var.azure_key_identifier
   }
 }
-
-data "mongodbatlas_encryption_at_rest" "test" {
-  project_id = mongodbatlas_encryption_at_rest.test.project_id
-}
-
 output "is_azure_encryption_at_rest_valid" {
   value = data.mongodbatlas_encryption_at_rest.test.azure_key_vault_config.valid
 }
@@ -347,26 +348,4 @@ resource "mongodbatlas_cloud_backup_schedule" "test" {
   depends_on = [
     mongodbatlas_advanced_cluster.automated_backup_test_cluster
   ]
-}
-
-# Configure backup and PIT restore
-# Specify number of days to retain backup snapshots
-resource "mongodbatlas_cloud_backup_snapshot" "test" {
-  project_id        = mongodbatlas_project.atlas-project.id
-  cluster_name      = mongodbatlas_advanced_cluster.atlas-cluster
-  description       = "My description"
-  retention_in_days = "1"
-}
-# Specify the snapshot ID to use to restore
-resource "mongodbatlas_cloud_backup_snapshot_restore_job" "test" {
-  count        = (var.point_in_time_utc_seconds == 0 ? 0 : 1)
-  project_id   = mongodbatlas_project.atlas-project.id
-  cluster_name = mongodbatlas_advanced_cluster.atlas-cluster
-  snapshot_id  = mongodbatlas_advanced_cluster.atlas-cluster.test.id
-  delivery_type_config {
-    point_in_time             = true
-    target_cluster_name       = mongodbatlas_advanced_cluster.atlas-cluster.name
-    target_project_id         = mongodbatlas_advanced_cluster.atlas-cluster.project_id
-    point_in_time_utc_seconds = var.point_in_time_utc_seconds
-  }
 }
