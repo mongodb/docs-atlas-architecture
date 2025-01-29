@@ -66,7 +66,7 @@ The reads and writes from secondaries in this topology encounter low latency in 
 
 This topology, however, can't tolerate a regional outage.
 
-3-Region, 3 Node Replica Set / Shard (P - S - S)
+3-Region, 3 Node Replica Set / Shard (Primary - Secondary - Secondary)
 ``````````````````````````````````````````````````
 This topology is the standard multi-regional topology where high availability can be provided to tolerate a regional outage. 
 This topology can tolerate any 1 node failure, any 1 region outage, and is the least expensive multi-region topology. 
@@ -77,7 +77,7 @@ Additionally, any reads off the secondary always exist in a different region tha
 and will require a different app server architecture. Furthermore, any failover event will occur to a different region, and your 
 application architecture must adjust as a result.
 
-3-Region, 5 Node Replica Set / Shard (PS - SS - S)
+3-Region, 5 Node Replica Set / Shard (Primary Secondary - Secondary Secondary - Secondary)
 ````````````````````````````````````````````````````
 This topology is the preferred topology that balances high availability, performance, and cost across multiple regions. 
 This topology can tolerate any 2 nodes' failure, tolerate primary node failure 
