@@ -539,7 +539,7 @@ These examples also apply other recommended configurations, including:
             :tabid: stagingprod
 
             For your staging and production environments environments, we
-            recommend enabling encryption with customer key management when provisioning your {+clusters+}.
+            recommend that you enable encryption with customer key management when you provision your {+clusters+}.
             To learn more, see :ref:`arch-center-recommendations`.
 
       To enable encryption with customer key management with Terraform, 

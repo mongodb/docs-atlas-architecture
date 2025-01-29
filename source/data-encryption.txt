@@ -50,7 +50,7 @@ at rest using AES-256. This process utilizes your cloud provider's
 disk encryption, with the provider managing the encryption keys. 
 This process cannot be disabled.
 
-By default, encryption at rest is volume-level encryption.
+By default, Encryption at Rest is volume-level encryption.
 
 Additionally, you can enable database-level encryption by bringing your own
 customer-managed key (CMK) with a key management service (KMS) 
@@ -89,7 +89,7 @@ authenticated CBC mode to encrypt data.
 
 Additionally, you can select :manual:`randomized encryption 
 </core/csfle/fundamentals/encryption-algorithms/#randomized-encryption>`, 
-which is not queryable but might be required for certain security requirements.
+which is not queryable, but might be required for certain security requirements.
 
 The following diagram demonstrates a CSFLE workflow where user records 
 are stored in a MongoDB database and queried by the client. The user's 
@@ -109,11 +109,11 @@ CSFLE supports all major cloud and on-premises key management services.
 Queryable Encryption
 ````````````````````
 
-:ref:`Queryable Encryption <qe-manual-feature-qe>` helps organizations 
+:ref:`Queryable encryption <qe-manual-feature-qe>` helps organizations 
 protect sensitive data when it is queried. Like CSFLE, it allows applications 
 to encrypt your data on the client side before storing it in the MongoDB database. 
 It also enables applications to perform expressive queries such as equality queries 
-directly on the encrypted data by using an encrypted search algorithm. This ensures 
+directly on the encrypted data by using an encrypted search algorithm. Queryable Encryption ensures 
 protection for sensitive information without sacrificing the ability to perform queries 
 on it. Queryable encryption always uses non-deterministic encryption.
 
@@ -164,7 +164,7 @@ During the provisioning process, we also recommend assessing the
 sensitivity of certain fields in your data and classifying
 them to determine which data requires encryption and what global 
 restrictions to apply to these groups. As a general guideline, we recommend
-applying queryable encryption on all sensitive fields, in addition 
+that you apply queryable encryption on all sensitive fields, in addition 
 to following :manual:`data modeling </data-modeling/>` best practices.
 
 Consider the following data classification levels as a starting point:
