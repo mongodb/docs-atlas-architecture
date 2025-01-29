@@ -441,11 +441,10 @@ The following examples configure authentication and custom roles using
 
             .. include:: /includes/examples/tf-example-auth-scram-devtest.rst
 
-            Use the following to set up an :abbr:`OIDC (OpenID Connect)`
+            Use the following example to set up an :abbr:`OIDC (OpenID Connect)`
             federated identity provider in |service|, for using it with
             |azure| and then create an :abbr:`OIDC (OpenID Connect)`
-            federated authentication user. It allows access by using
-            OIDC tokens issued by |azure| Active Directory. 
+            federated authentication user. It uses OIDC tokens issued by |azure| Active Directory to allow access. 
 
             main.tf 
             ```````
