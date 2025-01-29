@@ -88,7 +88,7 @@ Find features and best practices for each {+waf+} pillar.
       :icon: general_security
       :icon-alt: Security icon
 
-      Network security, auth, encryption, compliance, and auditing features and best practices.
+      Network security, authentication, encryption, compliance, and auditing features and best practices.
 
    .. card::
       :headline: Reliability
