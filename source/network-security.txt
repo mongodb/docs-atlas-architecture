@@ -103,8 +103,8 @@ change <scale-cluster-region>` require that you use new IP addresses.
 
 In the case of converting from a replica set to a sharded cluster, the 
 failure to reconnect the application clients may cause your application 
-to suffer from data outages. If you are using a {+dns+} seed list 
-connection string, your application automatically connects to the {+mongos+} 
+to suffer from data outages. If you are using a |dns| seed list 
+connection string, your application automatically connects to the |mongos| 
 for your sharded cluster. If you are using a standard connection string, 
 you must update your connection string to reflect your new cluster topology.
 
@@ -124,7 +124,7 @@ outbound access requests to peer |vpc|\s. However, if you configure {+service+}
 to use |ldap| authentication, you must enable {+service+} to
 connect outbound to the authentication endpoint of your peer |vpc| over the |ldap|
 protocol. Note that |ldap| authentication is deprecated on {+service+} with 8.0. 
-We recommend that you use |wif| and |workload| instead.
+We recommend that you use {+wif+} and |workload| instead.
 
 You can choose your {+service+} |cidr| block with the |vpc| peering wizard
 before you deploy your first {+cluster+}. The {+service+} |vpc| |cidr|
