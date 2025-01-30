@@ -71,19 +71,19 @@ Recommendations for {+atlas-ui+}
 
 We recommend federated authentication for {+atlas-ui+} access. To
 configure federated authentication, you must create {+service+}
-credentials or login with Google or Github. 
+credentials or log in with Google or Github. 
 
 For {+service+} credentials,
 we recommend that you use a strong password accompanied by a
 phishing-resistant :abbr:`MFA (Multi-Factor Authentication)`, such as
-biometrics. Setting up a secondary 
-:abbr:`MFA (Multi-Factor Authentication)` factor is highly recommended
+biometrics. We highly recommend that you set up a secondary 
+:abbr:`MFA (Multi-Factor Authentication)` factor
 to avoid account lock-outs. To ensure 
 :abbr:`MFA (Multi-Factor Authentication)` access for {+service+} 
 credentials, turn on :abbr:`MFA (Multi-Factor Authentication)`
-enforcement in Organization Settings. After you set up federation for
-your domain, you should only use {+service+} credentials to
-authenticate in emergency break-glass scenarios if federated
+enforcement in the Organization Settings. After you set up federation
+for your domain, you should use {+service+} credentials to
+authenticate only in the emergency break-glass scenarios when federated
 authentication is broken.
 
 Federated Authentication
@@ -192,7 +192,7 @@ If you don't have an identity provider for federation,
 user authentication. X.509 certificates provide the security of mutual TLS, 
 making them suitable for staging and production environments, and you
 can bring your own certificate authority for use with X.509.
-The The disadvantage of X.509 is that you must manage certificates and
+The disadvantage of X.509 is that you must manage certificates and
 the security of these certificates on the application side, while
 Workload Identity Federation allows for passwordless access and easier
 application security.
@@ -257,12 +257,11 @@ To further enhance security and
 minimize the risk of unauthorized access:
 
 - Follow best practices for
-rotating |api| keys regularly. To learn how to rotate these keys with 
-{+vault+}, see 
-`the Hashicorp documentation <https://developer.hashicorp.com/vault/docs/secrets/mongodbatlas>`__.
+  rotating |api| keys regularly. To learn how to rotate these keys with 
+  {+vault+}, see `the Hashicorp documentation <https://developer.hashicorp.com/vault/docs/secrets/mongodbatlas>`__.
+
 - Use the IP access list for your API keys. To learn more, see
-  :atlas:`Require an IP Access List for the {+atlas-admin-api+} 
-  </configure-api-access/#optional--require-an-ip-access-list-for-the-atlas-administration-api>`.
+  :atlas:`Require an IP Access List for the {+atlas-admin-api+} </configure-api-access/#optional--require-an-ip-access-list-for-the-atlas-administration-api>`.
 
 To learn more, see :ref:`api-authentication`.
 
@@ -331,11 +330,11 @@ commonly used roles can serve as a general guideline:
   configurations. This role should be assigned to a service account which you use 
   only to initially set up and configure the organization. Minimize configuration 
   changes after the initial creation. To avoid account lockouts, you
-  can: 
+  can create the following items: 
   
-  - Create a SAML Organization Owner group with
+  - SAML Organization Owner group with
     :ref:`arch-center-just-in-time`. 
-  - Create an API key with the Organization Owner role. Keep it in a
+  - API key with the Organization Owner role. Keep it in a
     secure place with strong access management for break-glass
     emergency scenarios.
 
