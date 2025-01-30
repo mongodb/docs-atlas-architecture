@@ -366,7 +366,7 @@ unavailable, follow these steps to bring your deployment back online:
 ``````````````````
 
 In the highly unlikely event that the {+service+} Control Plane is
-unavailable, your {+cluster+} might still be available and accessible even
+unavailable, your {+cluster+} is still available and accessible even
 if the {+atlas-ui+} is unavailable. Open a high-priority :atlas:`support ticket </support/#request-support>`
 to investigate this further.
 
