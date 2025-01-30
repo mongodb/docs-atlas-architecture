@@ -52,16 +52,22 @@ Use the following proactive configuration recommendations to configure your
 Members of the Same Replica Sets Should Not Share Resources
 ```````````````````````````````````````````````````````````
 
-MongoDB provides high availability by having multiple copies of data in replica sets. Members of the same replica set should not share the same resources. For example, members of the same replica set should not
-share the same physical hosts and disks. You can ensure that replica
-sets don't share resources by :ref:`distributing data across data centers <arch-center-distribute-data>`.
+MongoDB provides high availability by having multiple copies of data in replica sets.
+Members of the same replica set don't share the same resources. For example, members
+of the same replica set don't share the same physical hosts and disks.
+|service| satisfies this requirement by default: it deploys nodes in
+different availability zones, on different physical hosts and disks.
+
+Additionally, you can ensure that replica sets don't share resources by
+:ref:`distributing data across data centers <arch-center-distribute-data>`.
 
 Use an Odd Number of Replica Set Members
 ````````````````````````````````````````
 
 To elect a :manual:`primary </core/replica-set-members>`, you need a majority of :manual:`voting </core/replica-set-elections>` replica set members available. We recommend that you create replica sets with an
 odd number of voting replica set members. There is no benefit in having
-an even number of voting replica set members.
+an even number of voting replica set members. |service| satisfies this
+requirement by default, as |service| requires having 3,5, or 7 nodes.
 
 Fault tolerance is the number of replica set members that can become
 unavailable with enough members still available for a primary election. 
@@ -73,12 +79,20 @@ voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
 
 .. _arch-center-distribute-data:
 
-Distribute Data Across At Least Three Data Centers
-``````````````````````````````````````````````````
+Distribute Data Across At Least Three Data Centers in Different Availability Zones
+````````````````````````````````````````````````````````````````````````````````````
 
 To guarantee that a replica set can elect a primary if a data center
 becomes unavailable, you must distribute nodes across at least three
-data centers.
+data centers. 
+
+If you choose a region for your data centers that supports
+availability zones, you can distribute nodes in data centers in different
+availability zones. This way you can have multiple separate physical data
+centers, each in its own availability zone and in the same region.
+
+This section aims to illustrate the need for a deployment with five data centers.
+To begin, we will consider deployments with two and three data centers first.
 
 Consider the following diagram, which shows data distributed across
 two data centers:
@@ -101,10 +115,16 @@ When you distribute nodes across three data centers, if one data
 center becomes unavailable, you still have two out of three replica set
 members available, which maintains a majority to elect a primary.
 
-You can distribute data across at least three data centers within the same region by choosing a region with at least three availability zones. Availability zones consist of one or more discrete data centers, each with redundant power, networking and connectivity, housed in separate facilities.
+You can distribute data across at least three data centers within the same region by choosing a region with at least three availability zones. Each
+availability zone contains one or more discrete data centers, each with redundant power, networking and connectivity, often housed in separate
+facilities.
 
 {+service+} uses availability zones for all cloud providers
-automatically when you deploy a dedicated cluster to a region that supports availability zones. Atlas splits the cluster's nodes across availability zones. For example, for a three-node replica set {+cluster+} deployed to a three-availability-zone region, {+service+} deploys one node in each zone. A local failure in the data center hosting one node doesn't impact the operation of data centers hosting the other nodes.
+automatically when you deploy a dedicated cluster to a region that supports availability zones. |service| splits the cluster's nodes across
+availability zones. For example, for a three-node replica set {+cluster+} deployed to a three-availability-zone region, {+service+} deploys one node
+in each zone. A local failure in the data center hosting one node doesn't impact the operation of data centers hosting the other nodes.
+
+
 
 We recommend that you deploy replica sets to the following regions because they support at least three availability zones:
 
@@ -156,16 +176,20 @@ two nodes before an acknowledgment of completion sends to the driver
 that issued said write operation. For protection during a regional
 outage, we recommend that you set the write concern to ``majority``.
 
-To understand the importance of ``majorty`` write concern, imagine a
+To understand the importance of ``majority`` write concern, consider a
 five-node replica set spread across three separate regions with a 2-2-1
 topology (two regions with two nodes and one region with one node),
-with a write concern of ``4``. If one of the regions
-with two nodes becomes unavailable due to an outage and only three
-nodes are available, no write operations complete and the
-operation hangs because it is unable to persist data on four nodes.
+with a write concern of ``4``. If one of the regions with two nodes becomes
+unavailable due to an outage and only three nodes are available, no write
+operations complete and the operation hangs because it is unable to persist data on four nodes.
 In this scenario, despite the availability of the majority of nodes in the replica set, the database
 behaves the same as if a majority of the nodes in the replica set were
 unavailable. If you use ``majority`` write concern rather than a numeric value, it prevents this scenario.
+
+Even though using ``majority`` write concern increases latency, compared
+with write concern ``1``, we recommend that you use ``majority`` write
+concern because it allows your data centers to continue having write
+operations even if a replica set loses the primary.
 
 Consider Backup Configuration
 `````````````````````````````
@@ -205,11 +229,17 @@ If you encounter resource capacity issues, see :ref:`arch-center-resource-capaci
 Plan Your MongoDB Version Changes
 `````````````````````````````````
 
-Ensure that you perform MongoDB major version upgrades far before 
-your current version reaches `end of life <https://www.mongodb.com/legal/support-policy/lifecycles>`__. 
+We recommend that you run the latest MongoDB version as it allows you to
+take advantage of new features and provides improved security guarantees
+compared with previous versions.
 
-You can't downgrade your MongoDB version using the {+atlas-ui+}, so we recommend that you work directly with MongoDB Professional or Technical
-Services when planning and executing a major version upgrade to avoid any issues that might occur during the upgrade process.
+Ensure that you perform MongoDB major version upgrades far before your
+current version reaches `end of life <https://www.mongodb.com/legal/support-policy/lifecycles>`__. 
+
+You can't downgrade your MongoDB version using the {+atlas-ui+}. Because of this,
+we recommend that you work directly with MongoDB Professional or Technical Services
+when planning and executing a major version upgrade. This will help you avoid
+any issues that might occur during the upgrade process.
 
 Disaster Recovery Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -319,6 +349,9 @@ unavailable, follow these steps to bring your deployment back online:
 
       Your new {+cluster+} must have an identical topology of the original cluster.
 
+      Alternatively, instead of creating a full new cluster, you can also add new
+      nodes hosted by an alternative cloud provider to the existing cluster.
+
    .. step:: Restore the most recent snapshot from the previous step into the new {+cluster+}
 
       To learn how to restore your snapshot, see :atlas:`Restore Your Cluster </backup/cloud-backup/restore-overview/>`.
@@ -333,11 +366,9 @@ unavailable, follow these steps to bring your deployment back online:
 ``````````````````
 
 In the highly unlikely event that the {+service+} Control Plane is
-unavailable, open a high-priority :atlas:`support ticket </support/#request-support>`. 
-
-Your {+cluster+}
-might still be available and accessible even if the {+atlas-ui+} is
-unavailable.
+unavailable, your {+cluster+} might still be available and accessible even
+if the {+atlas-ui+} is unavailable. Open a high-priority :atlas:`support ticket </support/#request-support>`
+to investigate this further.
 
 .. _arch-center-resource-capacity:
 
