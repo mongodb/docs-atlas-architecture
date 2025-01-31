@@ -40,8 +40,11 @@ configuration of your {+clusters+}.
 {+service+} enforces |tls-ssl| encryption for all connections to your
 databases.
 
-We recommend using M10+ dedicated {+clusters+} because all {+service+} projects with one or more M10+ dedicated {+clusters+} receive
-their own dedicated |vpc| on {+aws+} or {+gcp+}, (or {+vnet+}, if you use |azure|).
+We recommend using M10+ dedicated {+clusters+} because all {+service+} projects with 
+one or more M10+ dedicated {+clusters+} receive their own dedicated: 
+- |vpc| on {+aws+} or {+gcp+}. 
+- {+vnet+} on |azure|.
+
 {+service+} deploys all dedicated clusters inside this |vpc| or {+vnet+}.
 
 By default, all access to your {+clusters+} is blocked. You must explicitly allow 
@@ -102,10 +105,10 @@ to sharded cluster <scale-cluster-sharding>`, the
 change <scale-cluster-region>` require that you use new IP addresses. 
 
 In the case of converting from a replica set to a sharded cluster, the 
-failure to reconnect the application clients may cause your application 
-to suffer from data outages. If you are using a |dns| seed list 
+failure to reconnect the application clients might cause your application 
+to suffer from data outages. If you use a |dns| seed list 
 connection string, your application automatically connects to the |mongos| 
-for your sharded cluster. If you are using a standard connection string, 
+for your sharded cluster. If you use a standard connection string, 
 you must update your connection string to reflect your new cluster topology.
 
 In the case of adding new shards, the failure to reconnect the application 
