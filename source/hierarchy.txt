@@ -49,13 +49,11 @@ security settings and governance for your {+service+} enterprise estate:
        :atlas:`cross-organization billing <billing/#std-label-cross-org-billing>` 
        to share a billing subscription across multiple organizations. 
        To learn more about setting up your paying organization when 
-       you establish the |service| subscription, see :atlas:`Manage Billing <billing>`. 
-       A paying organization lets you set up 
-       :atlas:`cross-organization billing <billing/#std-label-cross-org-billing>` 
-       to share a billing subscription across multiple organizations. 
+       you establish the |service| subscription, see :atlas:`Manage Billing <billing>`.  
        In order to enable cross-organization billing, the user performing 
        the action must have an Org Owner or Billing Admin role of both 
-       organizations that they wish to link.
+       organizations that they wish to link. To learn more, see 
+       :atlas:`User Roles <user-roles>`.
 
        A paying organization is common for large enterprises with many
        {+BU+}\s or departments that operate independently but where the
@@ -64,23 +62,23 @@ security settings and governance for your {+service+} enterprise estate:
    * - Organization
      - An organization can contain many projects under it and provides
        a container to apply shared integration and security settings. If 
-       you are managing multiple {+service+} organizations, 
+       you manage multiple {+service+} organizations, the 
        :atlas:`Atlas Federation Management Console <atlas-federated-authentication>` 
        allows users with an Org Owner role to manage |idp|s for |sso|, 
        then link them to multiple organizations. 
        An organization often maps to a {+BU+} or department within a
        company. The built-in {+service+} Cost Explorer aggregates cloud
        spend at the organization level and breaks out line items at the 
-       project and {+cluster+} level below it. You can customize further
+       project-level and {+cluster+} level below it. You can customize further
        by leveraging the billing API.
 
    * - Project
      - Security configuration for the data plane (including database
        clusters, network security, and other data services) occurs at the 
-       project level. A project often maps to an application and environment 
+       project-level. A project often maps to an application and environment 
        (for example: Customer Portal app - Production environment). For each 
        project, based on the selected cloud provider, there is one dedicated 
-       VPC/VNet per region in AWS and Azure. 
+       VPC or VNet per region in AWS and Azure. 
 
    * - {+Cluster+}
      - |service| provisions each {+cluster+} within the dedicated 
@@ -153,15 +151,15 @@ Org and Project Hierarchies
 Generally, we recommend a paying organization that is managed
 centrally, and one organization for each {+BU+} or department that is
 linked to the paying org. Then, create a project with one {+cluster+}
-each for your lower (dev/test) and upper environments; cluster(s) can 
-be created in said projects. To learn more, see the following information 
+each for your lower (dev or test) and upper environments; you can create 
+clusters in these projects. To learn more, see the following information 
 for :ref:`<project-hierarchy-1>`.
 
 If you will easily hit the 250 project limit per organization, we
 recommend creating one organization per environment, such as one each
 for lower and upper environments, or one each for dev, test, staging,
-and prod. This has an added benefit of additional isolation. You can also 
-increase the limits. See :atlas:`<atlas-limits>` for more informaiton.
+and production. This setup has the benefit of additional isolation. You can also 
+increase the limits. To learn more, see :atlas:`<atlas-limits>`.
 
 .. _project-hierarchy-1:
 
@@ -201,7 +199,7 @@ this hierarchy.
 {+Cluster+} Hierarchy
 `````````````````````
 
-To maintain isolation between environments, we recommend deploying 
+To maintain isolation between environments, we recommend that you deploy 
 {+cluster+}s that belong to the same application and are administered 
 by the same team in the same project, as shown in the following diagram:
 
