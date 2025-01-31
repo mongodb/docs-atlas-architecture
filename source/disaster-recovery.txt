@@ -433,6 +433,9 @@ Deletion of Production Data
 
 Production data might be accidentally deleted due to human error or a bug
 in the application built on top of the database.
+If the cluster itself was accidentally deleted, Atlas may have retained
+the volume temporarily.
+
 
 If the contents of a collection or database have been deleted, follow these steps to restore your data:
 
@@ -447,8 +450,9 @@ If the contents of a collection or database have been deleted, follow these step
 
    .. step:: Restore your data
    
-      If the deletion occurred within the last 72 hours, use Point in Time (PIT) restore to restore from the point in time right before the deletion occurred.
-
+      If the deletion occurred within the last 72 hours, and you configured continuous backup,
+      use Point in Time (PIT) restore to restore from the point in time right before the deletion occurred.
+      
       If the deletion did not occur in the past 72 hours, restore the most recent backup from before the deletion occurred into the cluster.
 
       To learn more, see :atlas:`Restore Your Cluster </backup/cloud-backup/restore-overview/>`.
