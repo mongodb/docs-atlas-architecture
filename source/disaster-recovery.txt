@@ -289,7 +289,7 @@ If a single region outage or multi-region outage degrades the state of your {+cl
 
    .. step:: Identify how many nodes are still online
 
-      You can find info about {+cluster+} health in the {+cluster+}\'s :guilabel:`Overview` tab of the
+      You can find information about {+cluster+} health in the {+cluster+}\'s :guilabel:`Overview` tab of the
       {+atlas-ui+}.
 
    .. step:: Determine how many nodes you require
