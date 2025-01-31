@@ -35,7 +35,7 @@ or a launch, MongoDB recommends that you pre-scale programmatically.
 provide you with horizontal and vertical scaling options. Specifically, sharding distributes data across 
 numerous machines, which is useful when no single server can handle your workloads. Sharding follows a 
 shared-nothing architecture, a distributed computing architecture where none of the nodes share any 
-resources with each other. See :ref:`Choose a Shard Key <sharding-choose-a-shard-key>` to learn more 
+resources with each other. See :manual:`Choose a Shard Key </core/sharding-choose-a-shard-key>` to learn more 
 about the ideal choice of shard key that allows MongoDB to distribute documents evenly throughout your cluster 
 while faciliating common query patterns. Furthermore, see `Performance Best Practices: Sharding <https://www.mongodb.com/blog/post/performance-best-practices-sharding>`__ 
 to learn about the key sharding strategies, such as ranged sharding, hashed sharding, and zoned sharding.
@@ -43,7 +43,7 @@ to learn about the key sharding strategies, such as ranged sharding, hashed shar
 Upgrading an {+service+} {+cluster+} to the next available {+service+} tier is available through the 
 {+service+} control plane GUI, the 
 `Atlas Administration API <https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/#tag/Clusters/operation/upgradeSharedCluster>`__, 
-or through IaC tools, such as the |ak8so|, the |service-terraform|, or the |atlas-cli|. See 
+or through IaC tools, such as the |ak8so|, the |service-terraform|, or the {+atlas-cli+}. See 
 :ref:`Automation <arch-center-automation>` to learn more. Changing an {+service+} tier, either upscaling or 
 downscaling, allows zero downtime. The tier changes in a rolling fashion, which involves electing a secondary 
 member as a replacement, promoting this secondary member to become the new primary, then restoring or replacing 
