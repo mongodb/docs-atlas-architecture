@@ -66,8 +66,8 @@ security settings and governance for your {+service+} enterprise estate:
        a container to apply shared integration and security settings. If 
        you are managing multiple {+service+} organizations, 
        :atlas:`Atlas Federation Management Console <atlas-federated-authentication>` 
-       allows users with an Org Owner role to manage |idp|s for {+sso+}, 
-       then link them to multiple organizations.
+       allows users with an Org Owner role to manage |idp|s for |sso|, 
+       then link them to multiple organizations. 
        An organization often maps to a {+BU+} or department within a
        company. The built-in {+service+} Cost Explorer aggregates cloud
        spend at the organization level and breaks out line items at the 
