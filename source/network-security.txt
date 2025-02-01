@@ -141,7 +141,7 @@ based on the |cidr| block. For example, a project with a |cidr| block of
    :figwidth: 750px
 
 Private Endpoints
-`````````````````
+```````````````````
 
 A private endpoint facilitates a one-way connection from your own |vpc|
 to your {+service+} |vpc|, without permitting {+service+} to initiate a
