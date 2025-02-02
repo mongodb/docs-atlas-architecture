@@ -189,14 +189,14 @@ In addition to the following examples, see the blogpost
       Create an audit filter to only audit the authenticate operations
       that occur against the test database.
 
-      .. include:: /includes/examples/cli-example-audit-fiter.rst
+      .. include:: /includes/examples/cli-example-audit-filter.rst
 
       To learn more,
       see :manual:`Audit Messages </reference/audit-message/>`.
 
       To use an audit filter that you created, update the audit configuration:
 
-      .. include:: /includes/examples/cli-example-audit-fiter-use.rst
+      .. include:: /includes/examples/cli-example-audit-filter-use.rst
 
       Retrieve Logs
       ~~~~~~~~~~~~~
