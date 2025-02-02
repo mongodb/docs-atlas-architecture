@@ -252,7 +252,7 @@ current version reaches `end of life <https://www.mongodb.com/legal/support-poli
 You can't downgrade your MongoDB version using the {+atlas-ui+}. Because of this,
 when planning and executing a major version upgrade, we recommend that you
 work directly with MongoDB Professional or Technical Services to help you
-avoid  any issues that might occur during the upgrade process.
+avoid any issues that might occur during the upgrade process.
 
 Disaster Recovery Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
