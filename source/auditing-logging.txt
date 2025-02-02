@@ -103,23 +103,23 @@ additional security. We recommend that you audit the following events at a minim
 - Logon and logoff
 - Attempts to perform unauthorized functions
 - Password change
-- Database User Access Changes
+- Database User Access changes
 - DDL & System configuration stored procedures
 - Modification of Native audit
-- Run a backup or restore
-- Alter DBMS native audit settings
-- Alter security
-- Database Start and Stop Commands
+- Running a backup or restore operation
+- Altering DBMS native audit settings
+- Altering security
+- Running database start and stop commands
 
-For all of the previous events, you should include the following
+For all of the previous events, you should include in the audit log the following
 information at a minimum:
 
 - Session ID
 - Client hostname and IP address
 - Database server hostname and IP address
 - Database user
-- OS user
 - Database name
+- OS user
 - Service/instance name
 - Port
 - Application
@@ -133,17 +133,18 @@ Recommendations for Programmatic Access to Audit Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To integrate with tools beyond the built-in integrations, we recommend
-that you retrieve logs with the following programmatic tools and feed the JSON-formatted output to your external tools:
+that you retrieve logs with the following programmatic tools and feed
+the JSON-formatted output to your external tools:
 
-- If you use |aws|, you can continually push logs to an |aws| S3
-  bucket. To learn more, see the
-  :oas-atlas-tag:`Push-Based Log Export <Push-Based-Log-Export>` {+atlas-admin-api+} endpoints.
-- Use the {+atlas-admin-api+} endpoints for :oas-atlas-tag:`Logs <MongoDB-Cloud-Users>` and :oas-atlas-tag:`Project and Organization Events <Events>` to
-  retrieve deployment logs and lists of project events.
-- Use the ``atlas deployments logs`` command in the {+atlas-cli+}
-  to retrieve deployment logs. To learn more,
-  see :atlas:`Atlas Deployment Logs 
-  </cli/current/command/atlas-deployments-logs/>`.
+- To continually push logs to an |aws| |s3| bucket, use the {+atlas-admin-api+}
+  endpoints for :oas-atlas-tag:`Push-Based Log Export <Push-Based-Log-Export>`.
+- To retrieve deployment logs and lists of project events,
+  use the {+atlas-admin-api+} endpoints for :oas-atlas-tag:`Logs <MongoDB-Cloud-Users>`
+  and :oas-atlas-tag:`Project and Organization Events <Events>`.
+- To retrieve deployment logs, use the ``atlas deployments logs`` command
+  in the {+atlas-cli+}.
+  
+To learn more, see :atlas:`Atlas Deployment Logs </cli/current/command/atlas-deployments-logs/>`.
 
 Examples
 --------
@@ -161,11 +162,66 @@ In addition to the following examples, see the blogpost
    .. tab:: CLI
       :tabid: cli
 
+      Update Audit Configuration
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Run the following CLI command to audit all authentication events
+      for known users in your project:
+
+      .. include:: /includes/examples/cli-example-audit-logs-known-users.rst
+
+      Run the following CLI command to audit a known user
+      via a configuration file:
+
+      .. include:: /includes/examples/cli-example-audit-logs-config-file.rst
+
+      Describe Audit Configuration
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Run the following CLI command to return the auditing configuration
+      for the specified project:
+
+      .. include:: /includes/examples/cli-example-audit-logs-describe.rst
+
+      Create and Use Audit Filter
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Create an audit filter to only audit the authenticate operations
+      that occur against the test database.
+
+      .. include:: /includes/examples/cli-example-audit-fiter.rst
+
+      To learn more,
+      see :manual:`Audit Messages </reference/audit-message/>`.
+
+      To use an audit filter that you created, update the audit configuration:
+
+      .. include:: /includes/examples/cli-example-audit-fiter-use.rst
+
+      Retrieve Logs
+      ~~~~~~~~~~~~~
+
+      To retrieve the access log, use a command similar to the following.
+      This command returns a JSON-formatted list of all authentication
+      requests made against the cluster named ``Cluster0`` for the project
+      with the ID ``618d48e05277a606ed2496fe``:
+
+      .. include:: /includes/examples/cli-example-retrieve-logs.rst
+
+      Retrieve All Log Events for Organization in a JSON File
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      To return all events for the specified organization, use a command
+      similar to the following. This command returns a JSON-formatted list
+      of events for the organization with the ID ``5dd5a6b6f10fab1d71a58495``:
+
+      .. include:: /includes/examples/cli-example-retrieve-logs-org.rst
+
       Download Logs
       ~~~~~~~~~~~~~
 
-      Run the following CLI command to download a compressed file that contains the
-      MongoDB logs for the specified host in your project.
+      Run the following CLI command to download a compressed file that
+      contains the MongoDB logs for the specified host in your project.
 
       .. include:: /includes/examples/cli-example-download-logs.rst
 
