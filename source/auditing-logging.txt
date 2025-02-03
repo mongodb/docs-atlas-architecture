@@ -251,52 +251,23 @@ In addition to the following examples, see the blogpost
       Enable Auditing and Create an Auditing Filter for the {+Cluster+}
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+      You can :manual:`configure manual auditing </core/auditing>` of most of the
+      documented :manual:`system event actions </reference/audit-message/mongo/>`
+      by creating audit filters. To learn more about configuring audit filters,
+      see :manual:`Configure Audit Filters </tutorial/configure-audit-filters/>`.
+
       .. include:: /includes/examples/tf-example-auditing-filter.rst
 
-   .. tab:: Admin API
-      :tabid: api
-
-      Return Audit Configuration for One Project
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      Run the following {+atlas-admin-api+} request to return the auditing configuration
-      for the specified project. The auditing configuration defines the
-      events that {+service+} records in the audit log. To learn more,
-      see :oas-atlas-tag:`Auditing Admin API </Auditing>`.
-
-      .. include:: /includes/examples/api-example-update-audit-log.rst
-
-      Update Audit Configuration for One Project
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      Run the following {+atlas-admin-api+} request to update the auditing configuration
-      for the specified project. The auditing configuration defines the
-      events that {+service+} records in the audit log. To learn more,
-      see :oas-atlas-tag:`Auditing Admin API </Auditing>`.
-
-      Return Access History by Hostname
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      Run the following command with the {+atlas-admin-api+} to return the access logs
-      for all authentication attempts for the database, identified by the
-      cluster's hostname. To learn more, see :oas-atlas-tag:`Access Tracking Admin API </Access-Tracking>`.
-
-      .. include:: /includes/examples/api-example-return-access-logs-host.rst
-
-      Return Access History by Cluster Name
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      Run the following command with the {+atlas-admin-api+} to return the access logs
-      for all authentication attempts for the database, identified by the
-      cluster's name. To learn more, see :oas-atlas-tag:`Access Tracking Admin API </Access-Tracking>`.
-      
-      .. include:: /includes/examples/api-example-return-access-logs-clustername.rst
-
-      Download Logs
+      Retrieve Logs
       ~~~~~~~~~~~~~
 
-      Run the following {+atlas-admin-api+} request to retrieve a compressed (.gz) log file
-      that contains a range of log messages for the specified host for
-      the specified project. To learn more, see :oas-atlas-tag:`Monitoring and Logs APIs </Monitoring-and-Logs>`.
+      You can't retrieve logs with Terraform. Instead, use the following
+      {+atlas-admin-api+} endpoints:
 
-      .. include:: /includes/examples/api-example-download-logs.rst
+      - Use :oas-atlas-tag:`Access Tracking Admin API </Access-Tracking>`
+        to return access logs for all authentication attempts for the database,
+        identified by the cluster's name or hostname.
+
+      - Use :oas-atlas-tag:`Monitoring and Logs APIs </Monitoring-and-Logs>`
+        to retrieve a compressed log file with log messages for the specified
+        host.
