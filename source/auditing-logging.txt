@@ -225,6 +225,30 @@ In addition to the following examples, see the blogpost
 
       .. include:: /includes/examples/cli-example-download-logs.rst
 
+   .. tab:: Terraform
+      :tabid: Terraform
+ 
+      The following example demonstrates how to enable auditing for
+      your deployment. Before you can create resources with Terraform,
+      you must:
+
+      - :ref:`Create your paying organization <configure-paying-org>`
+        and :ref:`create an API key <atlas-admin-api-access>` for the
+        paying organization. Store your public and private keys as
+        environment variables by running the following commands in the terminal:
+
+        .. code-block::
+
+           export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+           export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+      - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__.
+
+      Enable Auditing and Create an Auditing Filter for the {+Cluster+}
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      .. include:: /includes/examples/tf-example-auditing-filter.rst
+
    .. tab:: Admin API
       :tabid: api
 
@@ -272,27 +296,3 @@ In addition to the following examples, see the blogpost
       the specified project. To learn more, see :oas-atlas-tag:`Monitoring and Logs APIs </Monitoring-and-Logs>`.
 
       .. include:: /includes/examples/api-example-download-logs.rst
-
-   .. tab:: Terraform
-      :tabid: Terraform
- 
-      The following example demonstrates how to enable auditing for
-      your deployment. Before you can create resources with Terraform,
-      you must:
-
-      - :ref:`Create your paying organization <configure-paying-org>`
-        and :ref:`create an API key <atlas-admin-api-access>` for the
-        paying organization. Store your public and private keys as
-        environment variables by running the following commands in the terminal:
-
-        .. code-block::
-
-           export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
-           export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
-
-      - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__.
-
-      Enable Auditing and Create an Auditing Filter for the {+Cluster+}
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      .. include:: /includes/examples/tf-example-auditing-filter.rst
