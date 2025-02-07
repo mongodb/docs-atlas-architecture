@@ -219,6 +219,24 @@ In addition to the following examples, see the blogpost
 
       .. include:: /includes/examples/cli-example-audit-filter-use.rst
 
+     Create an audit filter to only audit the failed authenticate operations that occur 
+     against the test database. This filter will return event audit logs that include the 
+     following information: 
+
+     - Session ID
+     - Client hostname and IP address
+     - Database server hostname and IP address
+     - Database user
+     - Database name
+     - OS user
+     - Service/instance name
+     - Port
+     - Application
+     - Query
+     - SQL command
+     - Object
+     - Timestamp   
+
       Retrieve Logs
       ~~~~~~~~~~~~~
 
