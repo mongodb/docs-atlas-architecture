@@ -1,5 +1,5 @@
 .. code-block::
    :copyable: true
 
-   atlas auditing update --auditFilter '{"atype": "authenticate", "param.db": "test"}'
+   atlas auditing update --enabled --auditFilter '{"atype": "authenticate", "param.db": "test"}'
    

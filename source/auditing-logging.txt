@@ -134,8 +134,10 @@ We recommend that you audit the following events at a minimum:
 - Altering security
 - Running database start and stop commands
 
-For all of the previous events, you should include in the audit log the following
-information at a minimum:
+For a full list of audit action types and their associated ``param`` documents and 
+``result`` values, see :manual:`Audit Event Actions, Details and Results </reference/audit-message/mongo/#audit-event-actions--details--and-results>`.   
+
+For all of the previous events, audit log messages include the following information: 
 
 - Session ID
 - Client hostname and IP address
@@ -213,29 +215,16 @@ In addition to the following examples, see the blogpost
 
       .. include:: /includes/examples/cli-example-audit-filter.rst
 
-      To use an audit filter that you created, update the audit configuration
-      using the :ref:`atlas auditing update <atlas-auditing-describe>`
-      {+atlas-cli+} command:
+      To enable an audit filter, use the :ref:`atlas auditing update <atlas-auditing-describe>`
+      {+atlas-cli+} command with the ``--enabled`` flag and specify the audit filter:
 
       .. include:: /includes/examples/cli-example-audit-filter-use.rst
 
-     Create an audit filter to only audit the failed authenticate operations that occur 
-     against the test database. This filter will return event audit logs that include the 
-     following information: 
+      To enable an audit filter that you created, 
 
-     - Session ID
-     - Client hostname and IP address
-     - Database server hostname and IP address
-     - Database user
-     - Database name
-     - OS user
-     - Service/instance name
-     - Port
-     - Application
-     - Query
-     - SQL command
-     - Object
-     - Timestamp   
+     Create an audit filter to only audit the failed authenticate operations that occur 
+     against the test database. A failed ``authenticate`` operation returns a ``result`` value 
+     of the error code ``18``. 
 
       Retrieve Logs
       ~~~~~~~~~~~~~
