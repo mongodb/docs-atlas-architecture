@@ -204,7 +204,7 @@ In addition to the following examples, see the blogpost
       Run the following {+atlas-cli+} command to enable an audit filter that is defined in 
       a JSON configuration file: 
 
-      .. include:: /includes/examples/cli-example-audit-filter.rst
+      .. literalinclude:: /includes/examples/cli-example-audit-filter.rst
          :caption: auditFilter.json 
 
       .. include:: /includes/examples/cli-example-audit-logs-config-file.rst
