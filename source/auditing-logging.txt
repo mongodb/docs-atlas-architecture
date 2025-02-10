@@ -134,8 +134,9 @@ We recommend that you audit the following events at a minimum:
 - Altering security
 - Running database start and stop commands
 
-For a full list of audit action types and their associated ``param`` documents and 
-``result`` values, see :manual:`Audit Event Actions, Details and Results </reference/audit-message/mongo/#audit-event-actions--details--and-results>`.   
+For a full list of audit action types that can be specified 
+in an audit filter using the ``atype`` field, see 
+:manual:`Audit Event Actions, Details and Results </reference/audit-message/mongo/#audit-event-actions--details--and-results>`.   
 
 For all of the previous events, audit log messages include the following information: 
 
@@ -185,18 +186,37 @@ In addition to the following examples, see the blogpost
    .. tab:: CLI
       :tabid: cli
 
+      Create and Enable Audit Filter
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      The following audit filter document only audits the
+      authentication operations that occur against the test database. 
+      To learn more, see :manual:`Configure Audit Filters </tutorial/configure-audit-filters/>`.
+
+      .. include:: /includes/examples/cli-example-audit-filter.rst
+
+      To enable an audit filter, use the :ref:`atlas auditing update <atlas-auditing-describe>`
+      {+atlas-cli+} command with the ``--enabled`` flag and specify the audit filter document in single quotes
+      to pass the document as a string: 
+
+      .. include:: /includes/examples/cli-example-audit-filter-use.rst
+
+      Run the following {+atlas-cli+} command to enable an audit filter that is defined in 
+      a JSON configuration file: 
+
+      .. include:: /includes/examples/cli-example-audit-filter.rst
+         :caption: auditFilter.json 
+
+      .. include:: /includes/examples/cli-example-audit-logs-config-file.rst
+
       Update Audit Configuration
       ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      Run the following {+atlas-cli+} command to audit all authentication events
-      for known users in your project:
+      To update an existing audit filter, use the :ref:`atlas auditing update <atlas-auditing-describe>`
+      {+atlas-cli+} command and specify the new audit filter. The following command replaces the existing 
+      audit filter with a new filter that audits all authentication events for known users in your project: 
 
       .. include:: /includes/examples/cli-example-audit-logs-known-users.rst
-
-      Run the following {+atlas-cli+} command to audit a known user
-      via a configuration file:
-
-      .. include:: /includes/examples/cli-example-audit-logs-config-file.rst
 
       Describe Audit Configuration
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -205,26 +225,6 @@ In addition to the following examples, see the blogpost
       {+atlas-cli+} command to return the auditing configuration for the specified project:
 
       .. include:: /includes/examples/cli-example-audit-logs-describe.rst
-
-      Create and Use Audit Filter
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      Create an audit filter to only audit the authenticate operations
-      that occur against the test database. To learn more,
-      see :manual:`Configure Audit Filters </tutorial/configure-audit-filters/>`.
-
-      .. include:: /includes/examples/cli-example-audit-filter.rst
-
-      To enable an audit filter, use the :ref:`atlas auditing update <atlas-auditing-describe>`
-      {+atlas-cli+} command with the ``--enabled`` flag and specify the audit filter:
-
-      .. include:: /includes/examples/cli-example-audit-filter-use.rst
-
-      To enable an audit filter that you created, 
-
-     Create an audit filter to only audit the failed authenticate operations that occur 
-     against the test database. A failed ``authenticate`` operation returns a ``result`` value 
-     of the error code ``18``. 
 
       Retrieve Logs
       ~~~~~~~~~~~~~
