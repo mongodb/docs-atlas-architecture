@@ -145,7 +145,7 @@ To learn more about how to plan for and respond to disasters, see
 :ref:`arch-center-dr`.
 
 Choose a Deployment Type and Cluster Tier that Fits your Deployment Goals
-`````````````````````````````````````````````````````````````````````````
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 When creating a new cluster, you can choose between between a range of {+cluster+} tiers 
 available under the Dedicated, Flex, or Free deployment types. 
@@ -154,7 +154,7 @@ To determine the recommended cluster tier for your
 application size, see the :ref:`arch-center-cluster-size-guide` .
 
 Use an Odd Number of Replica Set Members and Test Failover
-``````````````````````````````````````````````````````````
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 To elect a :manual:`primary </core/replica-set-members>`, you need a majority of :manual:`voting </core/replica-set-elections>` replica set members available. We recommend that you create replica sets with an
 odd number of voting replica set members. There is no benefit in having
@@ -184,6 +184,8 @@ voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
 Distribute Data Across At Least Three Data Centers in Different Availability Zones
 ``````````````````````````````````````````````````````````````````````````````````
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 MongoDB provides high availability by storing multiple copies of data across replica sets.
 To ensure that members of the same replica set don't share the same resources, and that 
 a replica set can elect a primary if a data center becomes unavailable, you must distribute 
@@ -204,20 +206,13 @@ which shows data distributed across two data centers:
    :alt: An image showing two data centers: Data Center 1, with a primary and a secondary node, and Data Center 2, with only a secondary node
 
 In the previous diagram, if Data Center 2 becomes unavailable, a majority of the replica set members remain available and {+service+} can elect a primary.
+In the previous diagram, if Data Center 2 becomes unavailable, a majority of replica set members remain available and {+service+} can elect a primary.
 However, if you lose Data Center 1, you have only one out of three replica set members available, no majority, and the system degrades into read-only mode.
 
 Consider the following diagram, which shows a five-node replica set {+cluster+} deployed to a region with three availability zones:
-Consider the following diagram, which shows a five-node replica set {+cluster+} deployed to a region with three availability zones:
 
-.. figure:: /includes/images/highavailabilityPS-SS-S.svg	
 .. figure:: /includes/images/highavailabilityPS-SS-S.svg	
    :figwidth: 750px
-   :alt: An image showing three data centers: Data Center 1, with a primary and secondary node, Data Center, 2 with two secondary nodes, and Data Center 3, with one secondary node
-
-The 2-2-1 topology in the previous diagram is our recommended topology to balance high availability, performance, and cost across multiple regions.
-In this topology, if any one data center fails, a majority of replica set members remain available and {+service+} can perform automatic faiilover. 
-While a three-node, three-region topology can also tolerate any one-region failure, any failover event in a 1-1-1 topology forces a new primary to be elected in a different region.
-The 2-2-1 topology can tolerate a primary node failure while keeping the new primary in the preferred region.
    :alt: An image showing three data centers: Data Center 1, with a primary and secondary node, Data Center, 2 with two secondary nodes, and Data Center 3, with one secondary node
 
 The 2-2-1 topology in the previous diagram is our recommended topology to balance high availability, performance, and cost across multiple regions.
@@ -275,24 +270,14 @@ for write operations by using :manual:`write concern
 you have a three-node replica set with a write concern of
 ``majority``, every write operation needs to be persisted on 
 two nodes before an acknowledgment of completion is sent to the driver
-you have a three-node replica set with a write concern of
-``majority``, every write operation needs to be persisted on 
-two nodes before an acknowledgment of completion is sent to the driver
 that issued said write operation. For the best protection from a regional
 node outage, we recommend that you set the write concern to ``majority``.
 
 Even though using ``majority`` write concern increases write latency compared
-Even though using ``majority`` write concern increases write latency compared
 with write concern ``1``, we recommend that you use ``majority`` write
-concern because it allows your data centers to continue performing write
 concern because it allows your data centers to continue performing write
 operations even if a replica set loses the primary.
 
-To understand the advantage of using ``majority`` write concern over a numeric write concern, 
-consider a three-region, five-node replica set with a 2-2-1 topology, with a numeric write concern of ``4``.
-If one of the two-node regions becomes unavailable, write operations cannot complete because they are unable to persist data on four nodes.
-Using ``majority`` will allow write operations to continue when they persist data across at least two nodes, 
-maintaining data redundancy as well as write continuity. 
 To understand the advantage of using ``majority`` write concern over a numeric write concern, 
 consider a three-region, five-node replica set with a 2-2-1 topology, with a numeric write concern of ``4``.
 If one of the two-node regions becomes unavailable, write operations cannot complete because they are unable to persist data on four nodes.
