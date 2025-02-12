@@ -42,11 +42,11 @@ multiple users. As an |service| administrator, you can:
   skip using the managed {+atlas-ui+} auditing filter builder and configure
   your own tailored filter of event auditing. For a full list of
   events you can configure for auditing, and for a list of examples,
-  see :manual:`MongoDB auditing </core/auditing>` and :atlas:`Example Auditing Filters 
+  see :atlas:`MongoDB auditing </core/auditing>` and :atlas:`Example Auditing Filters 
   </database-auditing/#example-auditing-filters>`.
   
   You can :manual:`configure manual auditing </core/auditing>` of most of the
-  documented :manual:`system event actions </reference/audit-message/mongo/>`
+  documented :manual:`system event actions </reference/audit-message/mongo/#audit-event-actions--details--and-results>`
   in |service|. Granular MongoDB database auditing allows you to track
   usage of all DDL (Data Definition Language), DML (Data Manipulation Language),
   and DCL (Data Control Language) commands in detail. See also
@@ -134,8 +134,9 @@ We recommend that you audit the following events at a minimum:
 - Altering security
 - Running database start and stop commands
 
-The ``mongo`` schema is the default schema of an audit log message.
-Following this schema, audit log messages include the following information:
+Each |mongod|, |mongos|, and :bic:`mongosqld </reference/mongosqld>` instance keeps an account of
+its system event audit messages in its own audit log file.
+Following the default :manual:`mongo schema </reference/audit-message/mongo/>`, audit log messages include the following information:
 
 - Action type 
 - Timestamp 
@@ -152,8 +153,13 @@ Following this schema, audit log messages include the following information:
 To learn more about the ``mongo`` schema and see a full list of audit action types
 and their associated return values, see :manual:`mongo Schema Audit Messages </reference/audit-message/mongo/>`. 
 
+<<<<<<< HEAD
 Programmatic Access to Audit Logs
 `````````````````````````````````
+=======
+Recommendations for Programmatic Access to Audit Logs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>>>>>>> 03ec61c ((DOCSP-47103) Fix links and reorganize download logs.)
 
 To integrate with tools beyond the built-in integrations, we recommend
 that you retrieve logs with the following programmatic tools and feed
@@ -226,18 +232,18 @@ In addition to the following examples, see the blogpost
       Retrieve Logs
       ~~~~~~~~~~~~~
 
-      Each |mongod| and |mongos| instance in a cluster outputs its own
+      Each |mongod|, |mongos|, and :bic:`mongosqld </reference/mongosqld>` instance in a cluster outputs its own
       :manual:`MongoDB log </reference/log-messages/>` and audit log messages with potentially different contents. 
       You can view these log messages in the {+atlas-cli+} using the 
       :ref:`atlas deployment logs <atlas-deployments-logs>` command. 
 
       To retrieve audit log entries for a |mongod| instance in your cluster, 
-      provide the |mongod| hostname and specify ``mongodb-audit-log.gz`` as the name of the log file: 
+      provide the |mongod| hostname and specify ``mongodb-audit-log.gz`` as the name of the audit log file: 
 
       .. include:: /includes/examples/cli-example-retrieve-audit-logs-mongod.rst
 
       To retrieve audit log entries for a |mongos| instance in a sharded cluster deployment, 
-      provide the |mongos| hostname and specify ``mongos-audit-log.gz`` as the name of the log file: 
+      provide the |mongos| hostname and specify ``mongos-audit-log.gz`` as the name of the audit log file: 
 
       .. include:: /includes/examples/cli-example-retrieve-audit-logs-mongos.rst
 
@@ -245,33 +251,33 @@ In addition to the following examples, see the blogpost
       specify ``mongodb.gz`` or ``mongos.gz`` as the name of the log file for your specified |mongod| or |mongos| 
       instance, respectively: 
 
-      .. include:: /includes/examples/cli-example-retrieve-audit-logs.rst
+      .. include:: /includes/examples/cli-example-retrieve-logs.rst
 
-      You can also use the {+atlas-cli+} to view the access log for your project.
-      The access log is a JSON-formatted list of all authentication requests against your project. 
+      You can also use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command to view the access log for
+      a node or cluster.
+      The access log is a JSON-formatted list of all authentication requests against your specified node or cluster. 
       To retrieve the access log, use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command 
-      and specify the project ID and {+cluster+} name for the project: 
+      and specify the hostname or {+cluster+} name of the target node or {+cluster+}: 
 
       .. include:: /includes/examples/cli-example-retrieve-access-logs.rst
 
       Download Logs
       ~~~~~~~~~~~~~
 
-      Each |mongod| and |mongos| instance in a cluster has its own
+      Each |mongod|, |mongos| and :bic:`mongosqld </reference/mongosqld>` instance in a cluster has its own
       :manual:`MongoDB log </reference/log-messages/>` and audit log with potentially different contents. 
       You can download each log as a compressed file using the 
       :ref:`atlas logs download <atlas-deployments-logs>` command. 
 
       To download the audit log for a |mongod| instance in your cluster, 
-      provide as arguments 
-      specify the |mongod| hostname and the audit log file name ``mongodb-auditlog.gz`` as arguments to 
-      the :ref:`atlas logs download <atlas-deployments-logs>` command: 
+      run the :ref:`atlas logs download <atlas-deployments-logs>` command and provide 
+      the |mongod| hostname and the audit log file name ``mongodb-auditlog.gz`` as arguments: 
 
       .. include:: /includes/examples/cli-example-download-audit-logs-mongod.rst
 
       To downlaod the audit log for a |mongos| instance in a sharded cluster deployment, 
-      specify the |mongos| hostname and the audit log file name ``mongos-audit-log.gz`` as arguments to
-      the :ref:`atlas logs download <atlas-deployments-logs>` command: 
+      run the :ref:`atlas logs download <atlas-deployments-logs>` command and provide 
+      the |mongos| hostname and the audit log file name ``mongos-auditlog.gz`` as arguments: 
 
       .. include:: /includes/examples/cli-example-download-audit-logs-mongos.rst
 
