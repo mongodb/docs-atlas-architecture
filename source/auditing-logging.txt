@@ -134,8 +134,6 @@ We recommend that you audit the following events at a minimum:
 - Altering security
 - Running database start and stop commands
 
-Each |mongod|, |mongos|, and :bic:`mongosqld </reference/mongosqld>` instance keeps an account of
-its system event audit messages in its own audit log file.
 Following the default :manual:`mongo schema </reference/audit-message/mongo/>`, audit log messages include the following information:
 
 - Action type 
@@ -207,9 +205,6 @@ In addition to the following examples, see the blogpost
       Run the following {+atlas-cli+} command to enable an audit filter that is defined in 
       a JSON configuration file: 
 
-      .. literalinclude:: /includes/examples/cli-example-audit-filter.rst
-         :caption: auditFilter.json 
-
       .. include:: /includes/examples/cli-example-audit-logs-config-file.rst
 
       Update Audit Configuration
@@ -247,16 +242,16 @@ In addition to the following examples, see the blogpost
 
       .. include:: /includes/examples/cli-example-retrieve-audit-logs-mongos.rst
 
-      To view :manual:`MongoDB log messages </reference/log-messages/>` in the {+atlas-cli+}, 
+      To retrieve :manual:`MongoDB log messages </reference/log-messages/>` in the {+atlas-cli+}, 
       specify ``mongodb.gz`` or ``mongos.gz`` as the name of the log file for your specified |mongod| or |mongos| 
-      instance, respectively: 
+      host, respectively: 
 
       .. include:: /includes/examples/cli-example-retrieve-logs.rst
 
-      You can also use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command to view the access log for
+      You can also use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` {+atlas-cli+} command to view the access log for
       a node or cluster.
       The access log is a JSON-formatted list of all authentication requests against your specified node or cluster. 
-      To retrieve the access log, use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command 
+      To retrieve the access log, use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` {+atlas-cli+} command 
       and specify the hostname or {+cluster+} name of the target node or {+cluster+}: 
 
       .. include:: /includes/examples/cli-example-retrieve-access-logs.rst
@@ -267,10 +262,10 @@ In addition to the following examples, see the blogpost
       Each |mongod|, |mongos| and :bic:`mongosqld </reference/mongosqld>` instance in a cluster has its own
       :manual:`MongoDB log </reference/log-messages/>` and audit log with potentially different contents. 
       You can download each log as a compressed file using the 
-      :ref:`atlas logs download <atlas-deployments-logs>` command. 
+      :ref:`atlas logs download <atlas-deployments-logs>` {+atlas-cli+} command. 
 
       To download the audit log for a |mongod| instance in your cluster, 
-      run the :ref:`atlas logs download <atlas-deployments-logs>` command and provide 
+      run the :ref:`atlas logs download <atlas-deployments-logs>` {+atlas-cli+} command and provide 
       the |mongod| hostname and the audit log file name ``mongodb-auditlog.gz`` as arguments: 
 
       .. include:: /includes/examples/cli-example-download-audit-logs-mongod.rst
@@ -282,7 +277,7 @@ In addition to the following examples, see the blogpost
       .. include:: /includes/examples/cli-example-download-audit-logs-mongos.rst
 
       To download the :manual:`MongoDB log </reference/log-messages/>` for a |mongod| or |mongos| instance, 
-      run the :ref:`atlas logs download <atlas-deployments-logs>` command and provide as arguments 
+      run the :ref:`atlas logs download <atlas-deployments-logs>` {+atlas-cli+} command and provide as arguments 
       the hostname of the instance and the log file names ``mongodb.gz`` or ``mongos.gz``, respectively: 
 
       .. include:: /includes/examples/cli-example-download-logs.rst
