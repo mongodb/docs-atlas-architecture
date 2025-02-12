@@ -248,8 +248,8 @@ Recommendations for {+atlas-admin-api+}
 |service| provides two ways to authenticate to the {+atlas-admin-api+}:
 
 - :atlas:`Service accounts </api/service-accounts-overview/>`
-  (currently available as a `Preview feature 
-  <https://www.mongodb.com/resources/products/early-access>`__)
+  (currently available as a :website:`Preview feature 
+  </resources/products/early-access>`\)
 - |api| keys
 
 Service Accounts
