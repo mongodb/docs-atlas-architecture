@@ -11,15 +11,17 @@
       :visible: false
 
       {
-        "t": <Datetime>, // timestamp
-        "s": <String>, // severity
-        "c": <String>, // component
-        "id": <Integer>, // unique identifier
-        "ctx": <String>, // context
-        "svc": <String>, // service
-        "msg": <String>, // message body
-        "attr": <Object>, // additional attributes (optional)
-        "tags": <Array of strings>, // tags (optional)
-        "truncated": <Object>, // truncation info (if truncated)
-        "size": <Object> // original size of entry (if truncated)
+        {
+            "t": <Datetime>, // timestamp
+            "s": <String>, // severity
+            "c": <String>, // component
+            "id": <Integer>, // unique identifier
+            "ctx": <String>, // context
+            "svc": <String>, // service
+            "msg": <String>, // message body
+            "attr": <Object>, // additional attributes (optional)
+            "tags": <Array of strings>, // tags (optional)
+            "truncated": <Object>, // truncation info (if truncated)
+            "size": <Object> // original size of entry (if truncated)
+        }
       }

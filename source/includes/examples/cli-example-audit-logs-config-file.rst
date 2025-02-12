@@ -1,4 +1,4 @@
 .. code-block::
    :copyable: true
 
-   atlas auditing update -f auditFilter.json
+   atlas auditing update --enabled -f filter.json
