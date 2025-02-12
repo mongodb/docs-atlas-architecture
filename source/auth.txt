@@ -268,7 +268,7 @@ To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-over
 API Keys
 ````````
 
-If you don't use Service Accounts, you can use |api| key-based authentication to securely manage
+If you don't use service accounts, you can use |api| key-based authentication to securely manage
 programmatic access. |api| key-based authentication uses |http| Digest authentication to protect requests.
 The |api| public key functions as the username, and the corresponding
 private key serves as the password. 
