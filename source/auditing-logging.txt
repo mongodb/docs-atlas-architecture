@@ -188,8 +188,8 @@ In addition to the following examples, see the blogpost
    .. tab:: CLI
       :tabid: cli
 
-      Create and Enable Audit Filter
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Create and Enable Filter
+      ~~~~~~~~~~~~~~~~~~~~~~~~
 
       The following audit filter document only audits the
       authentication operations that occur against the test database. 
