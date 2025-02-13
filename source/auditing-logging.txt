@@ -42,7 +42,7 @@ multiple users. As an |service| administrator, you can:
   skip using the managed {+atlas-ui+} auditing filter builder and configure
   your own tailored filter of event auditing. For a full list of
   events you can configure for auditing, and for a list of examples,
-  see :atlas:`MongoDB auditing </core/auditing>` and :atlas:`Example Auditing Filters 
+  see :manual:`MongoDB auditing </core/auditing>` and :atlas:`Example Auditing Filters 
   </database-auditing/#example-auditing-filters>`.
   
   You can :manual:`configure manual auditing </core/auditing>` of most of the
@@ -134,6 +134,7 @@ We recommend that you audit the following events at a minimum:
 - Altering security
 - Running database start and stop commands
 
+Audit log messages 
 Following the default :manual:`mongo schema </reference/audit-message/mongo/>`, audit log messages include the following information:
 
 - Action type 
@@ -196,23 +197,23 @@ In addition to the following examples, see the blogpost
 
       .. include:: /includes/examples/cli-example-audit-filter.rst
 
-      To enable an audit filter, use the :ref:`atlas auditing update <atlas-auditing-update>`
-      {+atlas-cli+} command with the ``--enabled`` flag and specify the audit filter document in single quotes
+      To enable an audit filter, run the :ref:`atlas auditing update <atlas-auditing-update>`
+      command with the ``--enabled`` flag and specify the audit filter document in single quotes
       to pass the document as a string: 
 
       .. include:: /includes/examples/cli-example-audit-filter-use.rst
 
-      Run the following {+atlas-cli+} command to enable an audit filter that is defined in 
-      a JSON configuration file: 
+      The following {+atlas-cli+} command enables an audit filter that is defined in 
+      the specified JSON configuration file: 
 
       .. include:: /includes/examples/cli-example-audit-logs-config-file.rst
 
       Update Audit Configuration
       ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      To update an existing audit filter, use the :ref:`atlas auditing update <atlas-auditing-describe>`
-      {+atlas-cli+} command and specify the new audit filter. The following command replaces the existing 
-      audit filter with a new filter that audits all authentication events for known users in your project: 
+      To update your project's audit configuration, use the :ref:`atlas auditing update <atlas-auditing-describe>`
+      command and specify the new audit filter. The following command replaces the existing 
+      audit filter configuration with a new filter that audits all authentication events for known users in the project: 
 
       .. include:: /includes/examples/cli-example-audit-logs-known-users.rst
 
@@ -220,14 +221,14 @@ In addition to the following examples, see the blogpost
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
       Run the :ref:`atlas auditing describe <atlas-auditing-describe>`
-      {+atlas-cli+} command to return the auditing configuration for the specified project:
+      command to return the auditing configuration for the specified project:
 
       .. include:: /includes/examples/cli-example-audit-logs-describe.rst
 
       Retrieve Logs
       ~~~~~~~~~~~~~
 
-      Each |mongod|, |mongos|, and :bic:`mongosqld </reference/mongosqld>` instance in a cluster outputs its own
+      Each |mongod| and |mongos| instance in a cluster outputs its own
       :manual:`MongoDB log </reference/log-messages/>` and audit log messages with potentially different contents. 
       You can view these log messages in the {+atlas-cli+} using the 
       :ref:`atlas deployment logs <atlas-deployments-logs>` command. 
@@ -248,10 +249,10 @@ In addition to the following examples, see the blogpost
 
       .. include:: /includes/examples/cli-example-retrieve-logs.rst
 
-      You can also use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` {+atlas-cli+} command to view the access log for
+      You can also use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command to view the access log for
       a node or cluster.
       The access log is a JSON-formatted list of all authentication requests against your specified node or cluster. 
-      To retrieve the access log, use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` {+atlas-cli+} command 
+      To retrieve the access log, run the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command 
       and specify the hostname or {+cluster+} name of the target node or {+cluster+}: 
 
       .. include:: /includes/examples/cli-example-retrieve-access-logs.rst
@@ -259,13 +260,13 @@ In addition to the following examples, see the blogpost
       Download Logs
       ~~~~~~~~~~~~~
 
-      Each |mongod|, |mongos| and :bic:`mongosqld </reference/mongosqld>` instance in a cluster has its own
+      Each |mongod| and |mongos| instance in a cluster has its own
       :manual:`MongoDB log </reference/log-messages/>` and audit log with potentially different contents. 
       You can download each log as a compressed file using the 
       :ref:`atlas logs download <atlas-deployments-logs>` {+atlas-cli+} command. 
 
       To download the audit log for a |mongod| instance in your cluster, 
-      run the :ref:`atlas logs download <atlas-deployments-logs>` {+atlas-cli+} command and provide 
+      run the :ref:`atlas logs download <atlas-deployments-logs>` command and provide 
       the |mongod| hostname and the audit log file name ``mongodb-auditlog.gz`` as arguments: 
 
       .. include:: /includes/examples/cli-example-download-audit-logs-mongod.rst
@@ -277,7 +278,7 @@ In addition to the following examples, see the blogpost
       .. include:: /includes/examples/cli-example-download-audit-logs-mongos.rst
 
       To download the :manual:`MongoDB log </reference/log-messages/>` for a |mongod| or |mongos| instance, 
-      run the :ref:`atlas logs download <atlas-deployments-logs>` {+atlas-cli+} command and provide as arguments 
+      run the :ref:`atlas logs download <atlas-deployments-logs>` command and provide as arguments 
       the hostname of the instance and the log file names ``mongodb.gz`` or ``mongos.gz``, respectively: 
 
       .. include:: /includes/examples/cli-example-download-logs.rst
