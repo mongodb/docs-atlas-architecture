@@ -1,4 +1,18 @@
-.. code-block::
-   :copyable: true
+.. io-code-block:: 
+   :copyable: true 
 
-   atlas auditing describe --output json
+   .. input:: 
+      :language: sh 
+
+      atlas auditing describe --output json
+
+   .. output:: 
+      :language: sh 
+      :visible: false
+
+      {
+        "auditAuthorizationSuccess": false,
+        "auditFilter": "{\"atype\":\"authorization\"}",
+        "configurationType": "FILTER_JSON",
+        "enabled": true
+      }
