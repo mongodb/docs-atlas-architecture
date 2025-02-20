@@ -134,7 +134,6 @@ We recommend that you audit the following events at a minimum:
 - Altering security
 - Running database start and stop commands
 
-Audit log messages 
 Following the default :manual:`mongo schema </reference/audit-message/mongo/>`, audit log messages include the following information:
 
 - Action type 
@@ -191,8 +190,8 @@ In addition to the following examples, see the blogpost
       Create and Enable Filter
       ~~~~~~~~~~~~~~~~~~~~~~~~
 
-      The following audit filter document only audits the
-      authentication operations that occur against the test database. 
+      The following document defines an audit filter that restricts audits to only the
+      authentication operations that occur against the ``test`` database. 
       To learn more, see :manual:`Configure Audit Filters </tutorial/configure-audit-filters/>`.
 
       .. include:: /includes/examples/cli-example-audit-filter.rst
