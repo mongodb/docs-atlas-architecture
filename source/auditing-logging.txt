@@ -49,7 +49,7 @@ multiple users. As an |service| administrator, you can:
   </database-auditing/#example-auditing-filters>`.
   
   You can :manual:`configure manual auditing </core/auditing>` of most of the
-  documented :manual:`system event actions </reference/audit-message/mongo/>`
+  documented :manual:`system event actions </reference/audit-message/mongo/#audit-event-actions--details--and-results>`
   in |service|. Granular MongoDB database auditing allows you to track
   usage of all DDL (Data Definition Language), DML (Data Manipulation Language),
   and DCL (Data Control Language) commands in detail. See also
@@ -115,23 +115,19 @@ We recommend that you audit the following events at a minimum:
 - Altering security
 - Running database start and stop commands
 
-For all of the previous events, you should include in the audit log the following
-information at a minimum:
+Following the default :manual:`mongo schema </reference/audit-message/mongo/>`, audit log messages include the following information:
 
-- Session ID
-- Client hostname and IP address
-- Database server hostname and IP address
-- Database user
-- Database name
-- OS user
-- Service/instance name
-- Port
-- Application
-- Query
-- SQL command
-- Object
-- Timestamp
-- Error code (if applicable)
+- Action type 
+- Timestamp 
+- Client connection ID (UUID) 
+- Client IP address and port number
+- Incoming connection IP address and port numbe
+- Username(s)
+- User authentication database(s)
+- User role(s)
+- User role database(s)
+- ``param`` document containing specific details for the event 
+- Error code (if applicable)   
 
 Recommendations for Programmatic Access to Audit Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -145,8 +141,8 @@ the JSON-formatted output to your external tools:
 - To retrieve deployment logs and lists of project events,
   use the {+atlas-admin-api+} endpoints for :oas-atlas-tag:`Logs <MongoDB-Cloud-Users>`
   and :oas-atlas-tag:`Project and Organization Events <Events>`.
-- To retrieve deployment logs, use :ref:`atlas deployment logs <atlas-deployments-logs>`
-  command in the {+atlas-cli+}. To learn more, see :atlas:`Atlas Deployment Logs </cli/current/command/atlas-deployments-logs/>`.
+- To retrieve deployment logs, use the :ref:`atlas deployment logs <atlas-deployments-logs>`
+  command in the {+atlas-cli+}. 
 
 Examples
 --------
@@ -164,51 +160,100 @@ In addition to the following examples, see the blogpost
    .. tab:: CLI
       :tabid: cli
 
+      Create and Enable Filter
+      ~~~~~~~~~~~~~~~~~~~~~~~~
+
+      The following document defines an audit filter that restricts audits to only the
+      authentication operations that occur against the ``test`` database. 
+      To learn more, see :manual:`Configure Audit Filters </tutorial/configure-audit-filters/>`.
+
+      .. include:: /includes/examples/cli-example-audit-filter.rst
+
+      To enable an audit filter, run the :ref:`atlas auditing update <atlas-auditing-update>`
+      command with the ``--enabled`` flag and specify the audit filter document in single quotes
+      to pass the document as a string: 
+
+      .. include:: /includes/examples/cli-example-audit-filter-use.rst
+
+      The following {+atlas-cli+} command enables an audit filter that is defined in 
+      the specified JSON configuration file: 
+
+      .. include:: /includes/examples/cli-example-audit-logs-config-file.rst
+
       Update Audit Configuration
       ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      Run the following {+atlas-cli+} command to audit all authentication events
-      for known users in your project:
+      To update your project's audit configuration, use the :ref:`atlas auditing update <atlas-auditing-describe>`
+      command and specify the new audit filter. The following command replaces the existing 
+      audit filter configuration with a new filter that audits all authentication events for known users in the project: 
 
       .. include:: /includes/examples/cli-example-audit-logs-known-users.rst
-
-      Run the following {+atlas-cli+} command to audit a known user
-      via a configuration file:
-
-      .. include:: /includes/examples/cli-example-audit-logs-config-file.rst
 
       Describe Audit Configuration
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
       Run the :ref:`atlas auditing describe <atlas-auditing-describe>`
-      {+atlas-cli+} command to return the auditing configuration for the specified project:
+      command to return the auditing configuration for the specified project:
 
       .. include:: /includes/examples/cli-example-audit-logs-describe.rst
-
-      Create and Use Audit Filter
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      Create an audit filter to only audit the authenticate operations
-      that occur against the test database. To learn more,
-      see :manual:`Configure Audit Filters </tutorial/configure-audit-filters/>`.
-
-      .. include:: /includes/examples/cli-example-audit-filter.rst
-
-      To use an audit filter that you created, update the audit configuration
-      using the :ref:`atlas auditing update <atlas-auditing-describe>`
-      {+atlas-cli+} command:
-
-      .. include:: /includes/examples/cli-example-audit-filter-use.rst
 
       Retrieve Logs
       ~~~~~~~~~~~~~
 
-      To retrieve the access log, use a command similar to the following.
-      This command returns a JSON-formatted list of all authentication
-      requests made against the {+clusters+} named ``Cluster0`` for the project
-      with the ID ``618d48e05277a606ed2496fe``:
+      Each |mongod| and |mongos| instance in a cluster outputs its own
+      :manual:`MongoDB log </reference/log-messages/>` and audit log messages with potentially different contents. 
+      You can view these log messages in the {+atlas-cli+} using the 
+      :ref:`atlas deployment logs <atlas-deployments-logs>` command. 
+
+      To retrieve audit log entries for a |mongod| instance in your cluster, 
+      provide the |mongod| hostname and specify ``mongodb-audit-log.gz`` as the name of the audit log file: 
+
+      .. include:: /includes/examples/cli-example-retrieve-audit-logs-mongod.rst
+
+      To retrieve audit log entries for a |mongos| instance in a sharded cluster deployment, 
+      provide the |mongos| hostname and specify ``mongos-audit-log.gz`` as the name of the audit log file: 
+
+      .. include:: /includes/examples/cli-example-retrieve-audit-logs-mongos.rst
+
+      To retrieve :manual:`MongoDB log messages </reference/log-messages/>` in the {+atlas-cli+}, 
+      specify ``mongodb.gz`` or ``mongos.gz`` as the name of the log file for your specified |mongod| or |mongos| 
+      host, respectively: 
 
       .. include:: /includes/examples/cli-example-retrieve-logs.rst
+
+      You can also use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command to view the access log for
+      a node or cluster.
+      The access log is a JSON-formatted list of all authentication requests against your specified node or cluster. 
+      To retrieve the access log, run the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command 
+      and specify the hostname or {+cluster+} name of the target node or {+cluster+}: 
+
+      .. include:: /includes/examples/cli-example-retrieve-access-logs.rst
+
+      Download Logs
+      ~~~~~~~~~~~~~
+
+      Each |mongod| and |mongos| instance in a cluster has its own
+      :manual:`MongoDB log </reference/log-messages/>` and audit log with potentially different contents. 
+      You can download each log as a compressed file using the 
+      :ref:`atlas logs download <atlas-deployments-logs>` {+atlas-cli+} command. 
+
+      To download the audit log for a |mongod| instance in your cluster, 
+      run the :ref:`atlas logs download <atlas-deployments-logs>` command and provide 
+      the |mongod| hostname and the audit log file name ``mongodb-auditlog.gz`` as arguments: 
+
+      .. include:: /includes/examples/cli-example-download-audit-logs-mongod.rst
+
+      To downlaod the audit log for a |mongos| instance in a sharded cluster deployment, 
+      run the :ref:`atlas logs download <atlas-deployments-logs>` command and provide 
+      the |mongos| hostname and the audit log file name ``mongos-auditlog.gz`` as arguments: 
+
+      .. include:: /includes/examples/cli-example-download-audit-logs-mongos.rst
+
+      To download the :manual:`MongoDB log </reference/log-messages/>` for a |mongod| or |mongos| instance, 
+      run the :ref:`atlas logs download <atlas-deployments-logs>` command and provide as arguments 
+      the hostname of the instance and the log file names ``mongodb.gz`` or ``mongos.gz``, respectively: 
+
+      .. include:: /includes/examples/cli-example-download-logs.rst
 
       Retrieve All Log Events for Organization in a JSON File
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -218,14 +263,6 @@ In addition to the following examples, see the blogpost
       of events for the organization with the ID ``5dd5a6b6f10fab1d71a58495``:
 
       .. include:: /includes/examples/cli-example-retrieve-logs-org.rst
-
-      Download Logs
-      ~~~~~~~~~~~~~
-
-      Run the following {+atlas-cli+} command to download a compressed file that
-      contains the MongoDB logs for the specified host in your project.
-
-      .. include:: /includes/examples/cli-example-download-logs.rst
 
    .. tab:: Terraform
       :tabid: Terraform
