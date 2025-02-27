@@ -11,7 +11,7 @@ Landing Zone Design
    :values: reference
 
 .. meta::
-   :keywords: atlas architecture center
+   :keywords: landing zone
    :description: Learn how to design a landing zone for MongoDB Atlas.
 
 .. contents:: On this page
@@ -27,48 +27,13 @@ This page:
 - Helps you design a starter landing zone that gives
   prescriptive guidance on:
 
-  - How your teams can implement {+service+} in accordance with both
-    the {+waf+} pillars and your organization's unique requirements.
-  - How {+service+} fits into your organization's larger ecosystem and
-    architecture.
-
-MongoDB's Professional Services team partners with enterprise
-customers to create custom landing zones for {+service+}. If you're
-working with MongoDB's Professional Services, the resources on this
-page can also help you plan for those discussions.
-
-Landing Zone Overview
----------------------
-
-What Is A Landing Zone?
-~~~~~~~~~~~~~~~~~~~~~~~
-
-A landing zone is a framework for establishing a well-architected and
-pre-configured cloud environment for {+service+} that conforms to your organization's unique requirements across security, compliance, and governance. A landing zone is often a prerequisite for enterprises to
-move workloads to the cloud, and it is often provisioned
-programmatically using an API or tools like Terraform.
-
-An {+service+} landing zone defines the default, minimum, and maximum
-settings that teams use to deploy workloads in {+service+}. A landing
-zone also defines the tools and settings that teams should leverage in
-order to integrate systems with {+service+} and their applications
-connecting to {+service+}.
-
-Why Do You Need a Landing Zone?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Establishing a landing zone gives you confidence that
-every workload your team deploys aligns with your requirements around
-security, performance, reliability, operational efficiency, and cost
-optimization. Designing and sharing out a landing zone helps
-ensure alignment across all teams and stakeholders on how your
-organization will work in {+service+}, and it prevents developers on 
-all of your teams following different standards.
+  - How your teams can implement {+service+}...
+  - How {+service+} fits into your organization's larger ecosystem...
 
 .. _landing-zone-considerations:
 
 What Are Some Important Landing Zone Considerations?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------------
 
 Consider the following organization-specific
 requirements when you create a landing zone:
