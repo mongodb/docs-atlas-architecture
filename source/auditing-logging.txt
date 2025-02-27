@@ -270,7 +270,7 @@ In addition to the following examples, see the blogpost
 
       .. include:: /includes/examples/cli-example-download-audit-logs-mongod.rst
 
-      To downlaod the audit log for a |mongos| instance in a sharded cluster deployment, 
+      To download the audit log for a |mongos| instance in a sharded cluster deployment, 
       run the :ref:`atlas logs download <atlas-deployments-logs>` command and provide 
       the |mongos| hostname and the audit log file name ``mongos-auditlog.gz`` as arguments: 
 
