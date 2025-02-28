@@ -19,27 +19,36 @@ Guidance for {+service+} Automated Infrastructure Provisioning
    :depth: 3
    :class: onecol
 
-|service-fullname| provides an easy way to host and manage your data in
-the cloud. It includes tools that enable programmatic management of the
-deployment, scaling, and maintenance of your {+service+} {+clusters+} to
-streamline operations, reduce manual interventions, and ensure
-consistent, policy-compliant deployments. These tools offer you the
-flexibility to work with {+service+} through direct scripting (such as
-scripts that use the GoSDK Client or call the {+atlas-admin-api+}
-directly), or Infrastructure as Code (IaC) tooling that uses declarative
-configuration, like our Kubernetes Operator, Terraform, Cloud Formation
-or AWS CDK.
+|service-fullname| provides tools for you to achieve Infrastructure as Code (IaC)
+through the automation of various deployment and management tasks, ensuring 
+the efficiency, consistency, and scalability of your {+service+} deployments. 
+{+service+} tools offer you the flexibility to implement {+iac+} using
+imperative scripting with tool kits like the {+atlas-go-sdk+}, or 
+declarative programming with tools like the {+ak8so+}, Terraform, 
+{+aws-cf+}, or the {+aws-cdk+}. 
+
+We recommend that enterprise customers use {+service+}'s {+iac+} tools for the following benefits: 
+
+- **Consistency**: {+iac+} tools enable repeatability across environments, so that deployments and testing
+  generate consistent results. 
+- **Scalability**: 
+- **Reduced Human Error**: {+iac+} tools automate operational overhead to reduce manual interventions
+  that produce common human errors.
+- **Faster Development**: {+iac+} tools automate operational overhead and streamline operations, 
+  leading to more efficient development. 
+- **Improved Change Management**: {+iac+} tools support reviews and standardization of infrastructure,
+  allowing for better change management practices and compliance. 
 
 Features for Atlas Automation
 -----------------------------
 
-You can automate the management, provisioning, and configuration of
-|service| building blocks like database users and roles, |service|
-{+clusters+}, projects and organizations. Additionally, you can automate
-setting up and managing additional {+clusters+} resources, including
+You can automate the configuration, provisioning, and management of
+|service| building blocks like database users and roles, and |service|
+{+clusters+}, projects, and organizations. You can also automate
+various configuration and management tasks for {+cluster+} resources, including 
 enabling auto-scaling compute and storage, creating and updating
 multi-cloud {+clusters+}, monitoring {+cluster+} performance and health,
-automating backups and restores, defining backup policies, and many more.
+automating backups and restores, defining backup policies, and more.
 
 You can align your choice of tools with your preferred workflow to
 ensure seamless integration of |service-fullname| into your existing
@@ -79,8 +88,8 @@ Cluster<arch-center-hierarchy>` examples to get started.
 
 .. include:: /includes/complete-examples.rst
 
-GoSDK Client 
-````````````
+{+atlas-go-sdk+} Client
+``````````````````````````````````````````````````````
 
 The {+service+} Go SDK client simplifies interaction with the
 {+atlas-admin-api+} by providing pre-built functions and full |api|
@@ -144,13 +153,13 @@ the same tooling and pipelines and use the |ak8so| to automate updating
 {+service+}. 
 
 If you don't already have an existing tool integrated into your
-development workflow, we recommend an :ref:`IaC tool <arch-center-iac>` 
+development workflow, we recommend an :ref:`{+iac+} tool <arch-center-iac>` 
 because they provide more robust options for infrastructure provisioning
 and state management.
 
 You can also use a combination of multiple tools. For example, use IaC
 tool for provisioning and state management, and leverage the
-{+atlas-admin-api+}, GoSDK, and {+atlas-cli+} for quick administrative
+{+atlas-admin-api+}, {+atlas-go-sdk+}, and {+atlas-cli+} for quick administrative
 tasks that are ephemeral in nature. The {+atlas-cli+} is great for
 local development as well as integration into a suite of tests as part
 of your CI/CD pipeline for application development because it improves
