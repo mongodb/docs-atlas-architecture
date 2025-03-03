@@ -1,8 +1,8 @@
 .. _arch-center-dr:
 
-==============================================================
-Features and Recommendations for {+service+} Disaster Recovery
-==============================================================
+==========================================
+Guidance for {+service+} Disaster Recovery
+==========================================
 
 .. default-domain:: mongodb
 

@@ -1,8 +1,8 @@
 .. _arch-center-auditing-logging:
 
-=================================================================
-Features and Recommendations for {+service+} Auditing and Logging
-=================================================================
+=============================================
+Guidance for {+service+} Auditing and Logging
+=============================================
 
 .. default-domain:: mongodb
 

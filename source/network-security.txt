@@ -1,8 +1,8 @@
 .. _arch-center-network-security:
 
-=============================================================
-Features and Recommendations for {+service+} Network Security 
-=============================================================
+=========================================
+Guidance for {+service+} Network Security 
+=========================================
 
 .. default-domain:: mongodb
 

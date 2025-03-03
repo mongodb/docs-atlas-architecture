@@ -1,8 +1,8 @@
 .. _arch-center-resiliency:
 
-===========================================================
-Features and Recommendations for {+service+} for Resiliency
-===========================================================
+=======================================
+Guidance for {+service+} for Resiliency
+=======================================
 
 .. default-domain:: mongodb
 

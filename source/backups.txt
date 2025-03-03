@@ -1,8 +1,8 @@
 .. _arch-center-backups:
 
-====================================================
-Features and Recommendations for {+service+} Backups
-====================================================
+================================
+Guidance for {+service+} Backups
+================================
 
 .. default-domain:: mongodb
 

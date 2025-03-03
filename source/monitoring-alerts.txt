@@ -1,8 +1,8 @@
 .. _arch-center-monitoring-alerts:
 
-==================================================================
-Features and Recommendations for {+service+} Monitoring and Alerts
-==================================================================
+==============================================
+Guidance for {+service+} Monitoring and Alerts
+==============================================
 
 .. default-domain:: mongodb
 

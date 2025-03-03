@@ -1,8 +1,8 @@
 .. _arch-center-automation:
 
-======================================================================
-Features and Recommendations for Automated Infrastructure Provisioning
-======================================================================
+==============================================================
+Guidance for {+service+} Automated Infrastructure Provisioning
+==============================================================
 
 .. default-domain:: mongodb
 

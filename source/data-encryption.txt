@@ -1,8 +1,8 @@
 .. _arch-center-data-encryption:
 
-============================================================
-Features and Recommendations for {+service+} Data Encryption 
-============================================================
+========================================
+Guidance for {+service+} Data Encryption 
+========================================
 
 .. default-domain:: mongodb
 

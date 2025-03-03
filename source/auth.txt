@@ -1,8 +1,8 @@
 .. _arch-center-auth:
 
-======================================================================================
-Features and Recommendations for {+service+} Authorization and Authentication
-======================================================================================
+=========================================================
+Guidance for {+service+} Authorization and Authentication
+=========================================================
 
 .. default-domain:: mongodb
 

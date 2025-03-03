@@ -1,8 +1,8 @@
 .. _arch-center-scalability:
 
-========================================================
-Features and Recommendations for {+service+} Scalability
-========================================================
+====================================
+Guidance for {+service+} Scalability
+====================================
 
 .. default-domain:: mongodb
 

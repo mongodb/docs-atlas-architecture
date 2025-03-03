@@ -1,8 +1,8 @@
 .. _arch-center-high-availability:
 
-==============================================================
-Features and Recommendations for {+service+} High Availability
-==============================================================
+==========================================
+Guidance for {+service+} High Availability
+==========================================
 
 .. default-domain:: mongodb
 
