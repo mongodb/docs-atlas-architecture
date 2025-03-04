@@ -44,7 +44,7 @@ Features for {+service+} Monitoring and Alerts
 ----------------------------------------------
 
 .. list-table:: 
-   :widths: 20 80 
+   :widths: 15 85 
    :stub-columns: 1
 
    * - Metrics 
@@ -58,17 +58,13 @@ Features for {+service+} Monitoring and Alerts
        the next finer granularity level. Many metrics have a burst
        reporting equivalent. 
        
-       You can view metrics in the {+atlas-ui+} using the Metrics page, Real-Time
+       You can monitor metrics in the {+atlas-ui+} using the Metrics view, Real-Time
        Performance Panel, Query Profiler, Performance Advisor and
        Namespace Insights page. You can also use the {+atlas-cli+} or 
        {+atlas-admin-api+} to funnel metrics into a tool of your choice. 
 
-       For example, the following sample cluster Metrics view includes charts
-       representing the number of operations performed against each of the 3 n
-       the number of operations on each of 
-
-       The following image shows the variety of metrics available on the Status view 
-       of a sample cluster node:
+       The following {+atlas-ui+} Metrics view shows the variety of metrics available
+       to monitor for a sample cluster with three nodes: 
 
        .. figure:: /includes/images/sample-metrics-view.png
           :alt: An image showing an example Metrics view for a 3 node replica set.   
