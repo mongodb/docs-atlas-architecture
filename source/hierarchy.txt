@@ -94,6 +94,20 @@ security settings and governance for your {+service+} enterprise estate:
 Recommendations for {+service+} Orgs, Projects, and {+Clusters+}
 ----------------------------------------------------------------
 
+.. collapsible::
+   :heading: Multi-Region Recommendations
+   :sub_heading: Recommendations for teams deploying across multiple regions
+   :expanded: false
+
+   Recommendations that we add that are specific to multi-region
+
+.. collapsible::
+   :heading: Single-Region Recommendations
+   :sub_heading: Recommendations for teams deploying to one region
+   :expanded: false
+
+   Recommendations that we add that are specific to single region
+
 Development, Testing, Staging, and Production Environments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
