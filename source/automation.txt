@@ -104,7 +104,7 @@ Cluster<arch-center-hierarchy>` examples to get started.
 .. include:: /includes/complete-examples.rst
 
 {+atlas-go-sdk+} Client
-``````````````````````````````````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The {+service+} Go SDK client simplifies interaction with the
 {+atlas-admin-api+} by providing pre-built functions and full |api|
