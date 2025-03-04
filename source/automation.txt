@@ -22,7 +22,7 @@ Guidance for {+service+} Automated Infrastructure Provisioning
 |service-fullname| provides tools for you to achieve Infrastructure as Code (IaC)
 through the automation of various deployment and management tasks. 
 These tools offer you the flexibility to implement {+iac+} through imperative scripting
-(such as scripts that use the {+atlas-go-sdk+} Client or call the {+atlas-admin-api+} directly), or declarative 
+(such as scripts that use the {+atlas-go-sdk+} client or call the {+atlas-admin-api+} directly), or declarative 
 programming using {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
 
 By utilizing {+service+} tools and their seamless integrations with popular 
@@ -32,8 +32,9 @@ By utilizing {+service+} tools and their seamless integrations with popular
   generate consistent results. 
 - **Scalability**: {+iac+} tools enable :ref:`auto-scaling <arch-center-scalability>` to automatically adjust 
   the tier or storage capacity of {+clusters+} in response to real-time use. 
-- **Reduced Human Error**: {+iac+} tools reduce manual interventions that produce common human errors.
-- **Faster Development**: {+iac+} tools streamline operations to foster more efficient development. 
+- **Reduced Human Error**: {+iac+} tools automate operational overhead, reducing manual interventions 
+  that produce common human errors.
+- **Faster Development**: {+iac+} tools streamline operations to promote more efficient development. 
 - **Improved Change Management**: {+iac+} tools support reviews and standardization of infrastructure,
   allowing for better change management practices and compliance. 
 
