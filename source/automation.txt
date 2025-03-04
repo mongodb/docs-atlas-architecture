@@ -29,13 +29,13 @@ declarative programming with tools like the {+ak8so+}, Terraform,
 
 We recommend that enterprise customers use {+service+}'s {+iac+} tools for the following benefits: 
 
-- **Consistency**: {+iac+} tools enable repeatability across environments, so that deployments and testing
+- **Consistency**: {+iac+} tools enable repeatability across environments, so that testing and deployments
   generate consistent results. 
-- **Scalability**: 
+- **Scalability**: {+service+} supports :ref:`auto-scaling <arch-center-scalability>` to automatically adjust 
+  the tier or storage capacity of {+clusters+} in response to real-time use. 
 - **Reduced Human Error**: {+iac+} tools automate operational overhead to reduce manual interventions
   that produce common human errors.
-- **Faster Development**: {+iac+} tools automate operational overhead and streamline operations, 
-  leading to more efficient development. 
+- **Faster Development**: {+iac+} tools streamline operations, resulting in more efficient development. 
 - **Improved Change Management**: {+iac+} tools support reviews and standardization of infrastructure,
   allowing for better change management practices and compliance. 
 
