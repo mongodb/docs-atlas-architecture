@@ -58,10 +58,16 @@ Features for {+service+} Monitoring and Alerts
        the next finer granularity level. Many metrics have a burst
        reporting equivalent. 
        
-       You can view metrics by using the {+atlas-ui+} Real-Time
+       You can view metrics in the {+atlas-ui+} using the Metrics page, Real-Time
        Performance Panel, Query Profiler, Performance Advisor and
-       Namespace Insights page, {+atlas-cli+}, or {+atlas-admin-api+} to funnel metrics into a tool of your
-       choice. 
+       Namespace Insights page. You can also use the {+atlas-cli+} or 
+       {+atlas-admin-api+} to funnel metrics into a tool of your choice. 
+
+       .. figure:: /includes/images/sample-metrics-view.png
+          :figwidth: 750px
+          :alt: An image showing an example Metrics view for a 3 node replica set.   
+          :align: center
+          :lightbox:
 
    * - Alerts 
      - |service| provides alerts for over 200 event types, allowing you
