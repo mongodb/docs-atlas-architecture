@@ -20,22 +20,20 @@ Guidance for {+service+} Automated Infrastructure Provisioning
    :class: onecol
 
 |service-fullname| provides tools for you to achieve Infrastructure as Code (IaC)
-through the automation of various deployment and management tasks, ensuring 
-the efficiency, consistency, and scalability of your {+service+} deployments. 
-{+service+} tools offer you the flexibility to implement {+iac+} using
-imperative scripting with tool kits like the {+atlas-go-sdk+}, or 
-declarative programming with tools like the {+ak8so+}, Terraform, 
-{+aws-cf+}, or the {+aws-cdk+}. 
+through the automation of various deployment and management tasks. 
+These tools offer you the flexibility to implement {+iac+} through imperative scripting
+(such as scripts that use the {+atlas-go-sdk+} Client or call the {+atlas-admin-api+} directly), or declarative 
+programming using {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
 
-We recommend that enterprise customers use {+service+}'s {+iac+} tools for the following benefits: 
+By utilizing {+service+} tools and their seamless integrations with popular 
+{+iac+} tools, enterprise customers can enjoy the following benefits: 
 
-- **Consistency**: {+iac+} tools enable repeatability across environments, so that testing and deployments
+- **Consistency**: {+iac+} tools enable repeatability across environments, so that deployments
   generate consistent results. 
-- **Scalability**: {+service+} supports :ref:`auto-scaling <arch-center-scalability>` to automatically adjust 
+- **Scalability**: {+iac+} tools enable :ref:`auto-scaling <arch-center-scalability>` to automatically adjust 
   the tier or storage capacity of {+clusters+} in response to real-time use. 
-- **Reduced Human Error**: {+iac+} tools automate operational overhead to reduce manual interventions
-  that produce common human errors.
-- **Faster Development**: {+iac+} tools streamline operations, resulting in more efficient development. 
+- **Reduced Human Error**: {+iac+} tools reduce manual interventions that produce common human errors.
+- **Faster Development**: {+iac+} tools streamline operations to foster more efficient development. 
 - **Improved Change Management**: {+iac+} tools support reviews and standardization of infrastructure,
   allowing for better change management practices and compliance. 
 
@@ -66,6 +64,22 @@ resources. They can also be directly called in your favorite
 programming language or bash script.
 
 To learn more, see :ref:`atlas-admin-api-access`.
+
+{+atlas-cli+} 
+~~~~~~~~~~~~~
+
+Enables you to manually or programmatically create, manage, and automate
+tasks related to |service| resources from a unified command line tool.
+
+To learn more, see the following resources:
+
+- :ref:`Atlas CLI <atlascli>`
+- :ref:`Quick Start <atlas-cli-quick-start>`
+- :ref:`atlas-cli-ephemeral-cluster`
+
+You can also use the {+atlas-cli+}
+examples in the {+atlas-arch-center+} such as the :ref:`Org, Project,
+and Cluster<arch-center-hierarchy>` examples to get started.
 
 .. _arch-center-iac:
 
@@ -113,22 +127,6 @@ Resources to manage |service| include:
   JavaScript, TypeScript, Python, Java, C#, and Go. 
 
 To learn more, see `Deploy MongoDB Atlas with AWS CloudFormation <https://www.mongodb.com/developer/products/atlas/deploy-mongodb-atlas-aws-cloudformation/>`__.
-   
-{+atlas-cli+} 
-~~~~~~~~~~~~~
-
-Enables you to manually or programmatically create, manage, and automate
-tasks related to |service| resources from a unified command line tool.
-
-To learn more, see the following resources:
-
-- :ref:`Atlas CLI <atlascli>`
-- :ref:`Quick Start <atlas-cli-quick-start>`
-- :ref:`atlas-cli-ephemeral-cluster`
-
-You can also use the {+atlas-cli+}
-examples in the {+atlas-arch-center+} such as the :ref:`Org, Project,
-and Cluster<arch-center-hierarchy>` examples to get started.
 
 |ak8so| 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -157,8 +155,8 @@ development workflow, we recommend an :ref:`{+iac+} tool <arch-center-iac>`
 because they provide more robust options for infrastructure provisioning
 and state management.
 
-You can also use a combination of multiple tools. For example, use IaC
-tool for provisioning and state management, and leverage the
+You can also use a combination of multiple tools. For example, use {+iac+}
+tools for provisioning and state management, and leverage the
 {+atlas-admin-api+}, {+atlas-go-sdk+}, and {+atlas-cli+} for quick administrative
 tasks that are ephemeral in nature. The {+atlas-cli+} is great for
 local development as well as integration into a suite of tests as part

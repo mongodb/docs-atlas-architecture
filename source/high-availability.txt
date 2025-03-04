@@ -81,8 +81,17 @@ expedite recovery from disasters.
 To learn more about how to plan for and respond to disasters, see
 :ref:`arch-center-dr`.
 
-Members of the Same Replica Sets Should Not Share Resources
-```````````````````````````````````````````````````````````
+Choose a Deployment Type and Cluster Tier that Matches your Deployment Goals
+````````````````````````````````````````````````````````````````````````````
+
+When creating a new cluster, you can choose between between a range of different {+cluster+} tiers 
+available under the Dedicated, Flex, or Shared (Free) deployment types. 
+
+Use the :ref:`arch-center-cluster-size-guide` to learn the recommended cluster tier for your 
+application size.
+
+Don't Share Resources Between Members of the Same Replica Set
+`````````````````````````````````````````````````````````````
 
 MongoDB provides high availability by having multiple copies of data in replica sets.
 Members of the same replica set don't share the same resources. For example, members
@@ -111,7 +120,7 @@ voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
 .. _arch-center-distribute-data:
 
 Distribute Data Across At Least Three Data Centers in Different Availability Zones
-````````````````````````````````````````````````````````````````````````````````````
+``````````````````````````````````````````````````````````````````````````````````
 
 To guarantee that a replica set can elect a primary if a data center
 becomes unavailable, you must distribute nodes across at least three
@@ -211,9 +220,9 @@ Use ``majority`` Write Concern
 MongoDB allows you to specify the level of acknowledgment requested
 for write operations by using :manual:`write concern 
 </reference/write-concern/>`. For example, if
-you had a three-node replica set and had a write concern of
-``majority``, every write operation would need to be persisted on 
-two nodes before an acknowledgment of completion sends to the driver
+you have a three-node replica set with a write concern of
+``majority``, every write operation needs to be persisted on 
+two nodes before an acknowledgment of completion is sent to the driver
 that issued said write operation. For the best protection from a regional
 node outage, we recommend that you set the write concern to ``majority``.
 
