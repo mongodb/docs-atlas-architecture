@@ -151,7 +151,7 @@ the same tooling and pipelines and use the |ak8so| to automate updating
 {+service+}. 
 
 If you don't already have an existing tool integrated into your
-development workflow, we recommend an :ref:`{+iac+} tool <arch-center-iac>` 
+development workflow, we recommend an :ref:`{+iac+} tool<arch-center-iac>` 
 because they provide more robust options for infrastructure provisioning
 and state management.
 
