@@ -64,7 +64,7 @@ Features for {+service+} Monitoring and Alerts
        {+atlas-admin-api+} to funnel metrics into a tool of your choice. 
 
        The following {+atlas-ui+} Metrics view shows the variety of metrics available
-       to monitor for a sample cluster with three nodes: 
+       to monitor for a sample three-node replica set: 
 
        .. figure:: /includes/images/sample-metrics-view.png
           :alt: An image showing an example Metrics view for a 3 node replica set.   
