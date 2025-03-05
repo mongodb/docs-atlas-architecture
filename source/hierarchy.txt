@@ -208,15 +208,20 @@ by the same team in the same project, as shown in the following diagram:
    :align: center
    :lightbox:
 
-Grouping multiple {+clusters+} and therefore applications into one
-project by environment as shown in the following diagram simplifies
-administration when the same team is responsible for multiple
-applications across environments. This eases the setup cost for
-features such as private endpoints and customer-managed keys, since 
-all {+clusters+} in the same project share this configuration. However,
-this {+cluster+} hierarchy may violate the least-privilege rule.
+When to Consider Multiple Clusters Per Project 
+``````````````````````````````````````````````
 
-You should use this hierarchy only if both of the following are true:
+Grouping multiple {+clusters+} into one project by environment 
+as shown in the following diagram simplifies
+administration when one application uses multiple backing clusters, or 
+the same team is responsible for multiple applications across environments. 
+This eases the setup cost for features such as private endpoints and customer-managed keys, 
+since all {+clusters+} in the same project share this configuration. 
+However, this {+cluster+} hierarchy may violate the priniciple of least privilege, 
+which states that users should only be granted the least level of access necessary for their
+role.
+
+You should group multiple {+clusters+} in one project only if both of the following are true:
 
 - Every team member with access to the project is working on all other
   applications and {+clusters+} in the project. 
