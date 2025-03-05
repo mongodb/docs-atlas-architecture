@@ -137,12 +137,12 @@ development and test environments. To learn more, see
 :atlascli:`Create a Local {+service+} Deployment
 </atlas-cli-deploy-local>`.
 
-Developers can also :atlascli:`run {+atlas-cli+} commands with Docker </atlac-cli-docker>`
-to build, run, and manage {+service+} deployments using containers.
+Developers can also run {+atlas-cli+} commands with `Docker <https://www.docker.com/>`__
+to build local {+service+} deployments using containers.
 Containers are standardized units that contain all of the software 
-needed to run an application. Containerization allows developers to build and test
-multiple local {+service+} deployments within separate, secure, and portable runtime 
-environments. 
+needed to run an application. Containerization allows developers to build
+local {+service+} deployments within multiple secure, reliable, and portable test 
+environments. To learn more, see :atlascli:`Create a Local {+service+} Deployment with Docker </atlas-cli-deploy-docker>`.
 
 Org and Project Hierarchies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
