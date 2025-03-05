@@ -131,11 +131,18 @@ Local {+service+} Deployments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For your dev and test environments, you can also develop {+service+}
-{+clusters+} locally with the {+atlas-cli+}. This can enable developers
+{+clusters+} locally with the {+atlas-cli+}. This enables developers
 to work locally from their machine and cut down on costs for
 development and test environments. To learn more, see 
 :atlascli:`Create a Local {+service+} Deployment
 </atlas-cli-deploy-local>`.
+
+Developers can also :atlascli:`run {+atlas-cli+} commands with Docker </atlac-cli-docker>`
+to build, run, and manage {+service+} deployments using containers.
+Containers are standardized units that contain all of the software 
+needed to run an application. Containerization allows developers to build and test
+multiple local {+service+} deployments within separate, secure, and portable runtime 
+environments. 
 
 Org and Project Hierarchies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
