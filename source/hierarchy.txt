@@ -137,8 +137,8 @@ development and test environments. To learn more, see
 :atlascli:`Create a Local {+service+} Deployment
 </atlas-cli-deploy-local>`.
 
-Developers can also run {+atlas-cli+} commands with `Docker <https://www.docker.com/>`__
-to build local {+service+} deployments using containers.
+Developers can also :atlascli:`run {+atlas-cli+} commands with Docker </atlas-cli-docker>`
+to build, run, and manage local {+service+} deployments using containers.
 Containers are standardized units that contain all of the software 
 needed to run an application. Containerization allows developers to build
 local {+service+} deployments within multiple secure, reliable, and portable test 
@@ -289,7 +289,7 @@ the {+cluster+} resources required by using your organization's approximate data
 - **Total RAM Required**: 10% of the total raw data size
 - **Total CPU Cores Required**: expected peak read/write database
   operations per second ÷ 4000
-- **Total Storage IOPS Required**: expected peak database writes per
+- **Total Storage IOPS Required**: expected peak database reads/writes per
   second (min IOPS = 5%, max IOPS = 95%)
 
 .. list-table::
@@ -342,6 +342,46 @@ the {+cluster+} resources required by using your organization's approximate data
      - Prod
 
 .. [1] ``M10`` is a shared CPU tier. For highly-regulated industries or sensitive data, your minimum and smallest starting tier should be ``M30``.
+
+For example, consider a fictional fintech company, MongoFinance, that represents the median MongoDB customer with an ``M30`` tier {+service+} cluster. 
+MongoFinance databases store a total of 23 GB of data, with an average document size of 1.3 KB. MongoFinance employeees and customers query or write to MongoFinance 
+databases at a combined average rate of 40 reads or writes every second, and these operations are facilitated by 40 indexes. 
+
+The following table represents the statistics of median real-world MongoDB customer workloads, according to {+service+} {+cluster+} tier: 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 20 20
+
+   * - Instance Size
+     - Average Document Size
+     - Total Data Size
+     - IOPS (reads + writes)
+     - Index Count
+   
+   * - Small (``M10``)
+     - .8 KB to 1.0 KB 
+     - 1 GB to 2 GB
+     - 15 to 25
+     - 9 to 11
+
+   * - Medium (``M30``)
+     - 1.2 KB to 1.5 KB 
+     - 20 GB to 25 GB
+     - 30 to 50
+     - 35 to 45
+
+   * - Large (``M50``)
+     - 1.45 KB to 1.8 KB 
+     - 360 GB to 420 GB
+     - 15 to 25
+     - 80 to 100
+
+   * - Extra-Large (``M10``)
+     - 1.15 KB to 1.5 KB 
+     - 1200 GB to 1750 GB
+     - 1200 to 1750
+     - 1450 to 2400
 
 To learn more about {+cluster+} tiers and the regions that support
 them, see the {+service+} documentation for each cloud provider:
