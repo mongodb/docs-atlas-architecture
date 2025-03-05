@@ -95,21 +95,26 @@ Recommendations for {+service+} Orgs, Projects, and {+Clusters+}
 ----------------------------------------------------------------
 
 .. collapsible::
-   :heading: Multi-Region Recommendations
-   :sub_heading: Recommendations for teams deploying across multiple regions
-   :expanded: false
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
 
-   Recommendations that we add that are specific to multi-region
+   Recommendations here
+
+.. _arch-center-orgs-projects-clusters-recs-multi:
 
 .. collapsible::
-   :heading: Single-Region Recommendations
-   :sub_heading: Recommendations for teams deploying to one region
-   :expanded: false
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
 
-   Recommendations that we add that are specific to single region
+   Recommendations here
 
-Recommendations for All Teams
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
 
 Development, Testing, Staging, and Production Environments
 ``````````````````````````````````````````````````````````

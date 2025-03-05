@@ -1,0 +1,28 @@
+.. _arch-center-paradigms-multi-cloud:
+
+===============================
+Multi-Cloud Deployment Paradigm
+===============================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+This page will include:
+
+- Overview
+- Diagram
+- Use cases
+
+Recommendations for Multi-Cloud Deployments
+--------------------------------------------
+
+To learn about recommendations that apply multi-cloud deployments, see
+the following sections:
+
+.. include:: /includes/rec-list.rst
+

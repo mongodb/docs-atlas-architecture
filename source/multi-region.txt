@@ -1,0 +1,28 @@
+.. _arch-center-paradigms-multi-region:
+
+================================
+Multi-Region Deployment Paradigm
+================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+This page will include:
+
+- Overview
+- Diagram
+- Use cases
+
+Recommendations for Multi-Region Deployments
+--------------------------------------------
+
+To learn about recommendations that apply multi-region deployments, see
+the following sections:
+
+.. include:: /includes/rec-list.rst
+

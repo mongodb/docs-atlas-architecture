@@ -1,0 +1,23 @@
+.. _arch-center-paradigms:
+
+================================
+{+service+} Deployment Paradigms
+================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+Info about each paradigm and comparison
+
+.. toctree::
+   :titlesonly:
+
+   Single-Region Deployment </single-region>
+   Multi-Region Deployment </multi-region>
+   Multi-Cloud Deployment </multi-cloud>
+
