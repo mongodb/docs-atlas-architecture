@@ -33,4 +33,5 @@ Use the following resources to get started with |service| and the
    :titlesonly:
 
    Landing Zone Design </landing-zone>
+   Deployment Paradigms </deployment-paradigms>
    Orgs, Projects, and Clusters </hierarchy>
