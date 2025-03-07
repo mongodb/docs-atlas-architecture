@@ -141,7 +141,7 @@ Developers can also :atlascli:`run {+atlas-cli+} commands with Docker </atlas-cl
 to build, run, and manage local {+service+} deployments using containers.
 Containers are standardized units that contain all of the software 
 needed to run an application. Containerization allows developers to build
-local {+service+} deployments within multiple secure, reliable, and portable test 
+local {+service+} deployments in secure, reliable, and portable test 
 environments. To learn more, see :atlascli:`Create a Local {+service+} Deployment with Docker </atlas-cli-deploy-docker>`.
 
 Org and Project Hierarchies
@@ -287,12 +287,11 @@ You can estimate the {+cluster+} resources required by using your organization's
   second (min IOPS = 5%, max IOPS = 95%)
 
 Use the following {+cluster+} size guide to select a {+cluster+} tier that ensures performance without over-provisioning. 
-This guide represents the default storage and performance capabilities for each {+cluster+} tier, as well as the 
-ranges for the average total data size and IOPS of {+clusters+} in each tier,
-based on analytics from large enterprise accounts across our {+service+} fleet.
-The {+cluster+} size guide also provides recommendations on which {+cluster+} tiers
-are suitable for development and testing environments, and which are
-suitable for staging and production environments.
+This table displays the default storage and performance capabilities for each {+cluster+} tier, as well as 
+whether or not the {+cluster+} tier is suitable for staging and production environments. 
+The {+cluster+} size guide also suggests an expected range of values for a {+cluster+}'s 
+total data size and IOPS, based on analytics from existing enterprise account {+clusters+}
+from each {+cluster+} tier.  
 
 .. list-table::
    :header-rows: 1
@@ -305,9 +304,9 @@ suitable for staging and production environments.
      - CPUs (#)
      - Default RAM
      - Default IOPS
-     - Avg Total Data Size
-     - Avg Peak IOPS
-     - Recommended For
+     - Expected Total Data Size
+     - Expected Peak IOPS
+     - Suitable For
 
    * - Small
      - ``M10`` [1]_
@@ -353,10 +352,11 @@ suitable for staging and production environments.
      - 1430 to 2400
      - Prod
 
-.. [1] ``M10`` is a shared CPU tier. For highly-regulated industries or sensitive data, your minimum and smallest starting tier should be ``M30``.
+.. [1] ``M10`` is a shared CPU tier. This is recommended only for development and testing environments.
+   For highly-regulated industries or sensitive data, your minimum starting tier should be ``M30``.
 
 For example, consider a fictional fintech company, MongoFinance, that must store a total of 400 GB of processed data.
-MongoFinance employees and customers perform an average of 500 queries or writes to MongoFinance databases every second. 
+At peak activity, MongoFinance employees and customers perform up to 500 reads or writes to MongoFinance databases every second. 
 MongoFinance's storage and performance requirements are best satisfied by a large, or ``M30``, {+cluster+} tier.  
 
 To learn more about {+cluster+} tiers and the regions that support
