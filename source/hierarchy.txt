@@ -352,8 +352,7 @@ from each {+cluster+} tier.
      - 1430 to 2400
      - Prod
 
-.. [1] ``M10`` is a shared CPU tier. This is recommended only for development and testing environments.
-   For highly-regulated industries or sensitive data, your minimum starting tier should be ``M30``.
+.. [1] ``M10`` is a shared CPU tier. For highly-regulated industries or sensitive data, your minimum and smallest starting tier should be ``M30``.
 
 For example, consider a fictional fintech company, MongoFinance, that must store a total of 400 GB of processed data.
 At peak activity, MongoFinance employees and customers perform up to 500 reads or writes to MongoFinance databases every second. 
