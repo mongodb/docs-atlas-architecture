@@ -262,12 +262,7 @@ allocates resources exclusively. We recommend dedicated deployments
 because they provide higher security and performance than shared
 clusters.
 
-Use the following {+cluster+} size guide to select a {+cluster+} tier that ensures performance without over-provisioning. The {+cluster+} size guide also provides recommendations on which {+cluster+} tiers
-are suitable for development and testing environments, and which are
-suitable for staging and production environments.
-
-The {+cluster+}
-size guide uses "t-shirt sizing," a common analogy used in software
+The {+cluster+} size guide uses "t-shirt sizing," a common analogy used in software
 development and infrastructure to describe capacity planning in a
 simplified manner. You should consider t-shirt sizes as approximate
 starting points. Sizing a {+cluster+} is an iterative process based on
@@ -281,8 +276,7 @@ characteristics, and growth expectations.
    applications, high-memory workloads, and high-CPU workloads, contact
    |mdb-support| for customized guidance.
 
-You can estimate 
-the {+cluster+} resources required by using your organization's approximate data size and workload:
+You can estimate the {+cluster+} resources required by using your organization's approximate data size and workload:
 
 - **Total Storage Required**: 50% of the
   total raw data size
@@ -292,9 +286,17 @@ the {+cluster+} resources required by using your organization's approximate data
 - **Total Storage IOPS Required**: expected peak database reads/writes per
   second (min IOPS = 5%, max IOPS = 95%)
 
+Use the following {+cluster+} size guide to select a {+cluster+} tier that ensures performance without over-provisioning. 
+This guide represents the default storage and performance capabilities of each {+cluster+} tier, as well as the expected
+ranges for the total raw data size and IOPS of {+clusters+} in each tier,
+based on the analytics of large enterprise accounts across our {+service+} fleet.
+The {+cluster+} size guide also provides recommendations on which {+cluster+} tiers
+are suitable for development and testing environments, and which are
+suitable for staging and production environments.
+
 .. list-table::
    :header-rows: 1
-   :widths: 10 10 20 20 10 10 10 20
+   :widths: 10 10 10 10 10 10 10 10 10 10
 
    * - T-Shirt Size
      - Cluster Tier
@@ -303,6 +305,8 @@ the {+cluster+} resources required by using your organization's approximate data
      - CPUs (#)
      - Default RAM
      - Default IOPS
+     - Expected Total Raw Data Size
+     - Expected IOPS
      - Recommended For
 
    * - Small
@@ -312,6 +316,8 @@ the {+cluster+} resources required by using your organization's approximate data
      - 2
      - 2 GB
      - 1000
+     - 1 GB to 10 GB
+     - 15 to 25
      - Dev/Test only
 
    * - Med
@@ -321,6 +327,8 @@ the {+cluster+} resources required by using your organization's approximate data
      - 2
      - 8 GB
      - 3000
+     - 20 GB to 50 GB
+     - 30 to 50
      - Prod
 
    * - Large
@@ -330,6 +338,8 @@ the {+cluster+} resources required by using your organization's approximate data
      - 16
      - 32 GB
      - 3000
+     - 360 GB to 420 GB
+     - 380 to 600
      - Prod
 
    * - X-Large
@@ -339,49 +349,15 @@ the {+cluster+} resources required by using your organization's approximate data
      - 32
      - 128 GB
      - 3000
+     - 1200 GB to 1750 GB
+     - 1430 to 2400
      - Prod
 
 .. [1] ``M10`` is a shared CPU tier. For highly-regulated industries or sensitive data, your minimum and smallest starting tier should be ``M30``.
 
-For example, consider a fictional fintech company, MongoFinance, that represents the median MongoDB customer with an ``M30`` tier {+service+} cluster. 
-MongoFinance databases store a total of 23 GB of data, with an average document size of 1.3 KB. MongoFinance employeees and customers query or write to MongoFinance 
-databases at a combined average rate of 40 reads or writes every second, and these operations are facilitated by 40 indexes. 
-
-The following table represents the statistics of median real-world MongoDB customer workloads, according to {+service+} {+cluster+} tier: 
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 20 20
-
-   * - Instance Size
-     - Average Document Size
-     - Total Data Size
-     - IOPS (reads + writes)
-     - Index Count
-   
-   * - Small (``M10``)
-     - .8 KB to 1.0 KB 
-     - 1 GB to 2 GB
-     - 15 to 25
-     - 9 to 11
-
-   * - Medium (``M30``)
-     - 1.2 KB to 1.5 KB 
-     - 20 GB to 25 GB
-     - 30 to 50
-     - 35 to 45
-
-   * - Large (``M50``)
-     - 1.45 KB to 1.8 KB 
-     - 360 GB to 420 GB
-     - 15 to 25
-     - 80 to 100
-
-   * - Extra-Large (``M10``)
-     - 1.15 KB to 1.5 KB 
-     - 1200 GB to 1750 GB
-     - 1200 to 1750
-     - 1450 to 2400
+For example, consider a fictional fintech company, MongoFinance, that must store a total of 400 GB of processed data.
+MongoFinance employees and customers perform an average of 500 queries or writes to MongoFinance databases every second. 
+MongoFinance's storage and performance requirements are best satisfied by a large, or ``M30``, {+cluster+} tier.  
 
 To learn more about {+cluster+} tiers and the regions that support
 them, see the {+service+} documentation for each cloud provider:
