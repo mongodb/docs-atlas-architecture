@@ -287,8 +287,8 @@ You can estimate the {+cluster+} resources required by using your organization's
   second (min IOPS = 5%, max IOPS = 95%)
 
 Use the following {+cluster+} size guide to select a {+cluster+} tier that ensures performance without over-provisioning. 
-This guide represents the default storage and performance capabilities of each {+cluster+} tier, as well as the expected
-ranges for the total raw data size and IOPS of {+clusters+} in each tier,
+This guide represents the default storage and performance capabilities for each {+cluster+} tier, as well as the 
+ranges for the average total data size and IOPS of {+clusters+} in each tier,
 based on analytics from large enterprise accounts across our {+service+} fleet.
 The {+cluster+} size guide also provides recommendations on which {+cluster+} tiers
 are suitable for development and testing environments, and which are
@@ -305,8 +305,8 @@ suitable for staging and production environments.
      - CPUs (#)
      - Default RAM
      - Default IOPS
-     - Expected Total Raw Data Size
-     - Expected Peak IOPS
+     - Avg Total Data Size
+     - Avg Peak IOPS
      - Recommended For
 
    * - Small
