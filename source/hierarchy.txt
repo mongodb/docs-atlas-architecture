@@ -283,13 +283,13 @@ You can estimate the {+cluster+} resources required by using your organization's
 - **Total RAM Required**: 10% of the total raw data size
 - **Total CPU Cores Required**: expected peak read/write database
   operations per second ÷ 4000
-- **Total Storage IOPS Required**: expected peak database reads/writes per
+- **Total Storage IOPS Required**: expected peak read/write database operations per
   second (min IOPS = 5%, max IOPS = 95%)
 
 Use the following {+cluster+} size guide to select a {+cluster+} tier that ensures performance without over-provisioning. 
 This guide represents the default storage and performance capabilities of each {+cluster+} tier, as well as the expected
 ranges for the total raw data size and IOPS of {+clusters+} in each tier,
-based on the analytics of large enterprise accounts across our {+service+} fleet.
+based on analytics from large enterprise accounts across our {+service+} fleet.
 The {+cluster+} size guide also provides recommendations on which {+cluster+} tiers
 are suitable for development and testing environments, and which are
 suitable for staging and production environments.
@@ -306,7 +306,7 @@ suitable for staging and production environments.
      - Default RAM
      - Default IOPS
      - Expected Total Raw Data Size
-     - Expected IOPS
+     - Expected Peak IOPS
      - Recommended For
 
    * - Small
