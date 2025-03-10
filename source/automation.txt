@@ -21,9 +21,9 @@ Guidance for {+service+} Automated Infrastructure Provisioning
 
 |service-fullname| provides tools for you to implement Infrastructure as Code (IaC)
 through the automation of various deployment and management tasks. 
-With {+service+}, you can achieve {+iac+} through imperative scripting
-using tools like the {+atlas-go-sdk+} client or calls to the {+atlas-admin-api+}, or declarative 
-programming using {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
+{+service+} offers developers the flexibility to implement {+iac+} using either imperative or declarative programming.
+For example, developers can write imperative scripts that call functions from our {+atlas-go-sdk+} client, 
+or manage {+service+} resources using declarative {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
 
 {+service+}'s {+iac+} tools are especially useful for streamlining processes on an enterprise scale. 
 We recommend that our enterprise customers use {+iac+} tools for the following benefits: 
@@ -106,7 +106,7 @@ Cluster<arch-center-hierarchy>` examples to get started.
 {+atlas-go-sdk+} Client
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The {+service+} Go SDK client simplifies interaction with the
+The {+atlas-go-sdk+} client simplifies interaction with the
 {+atlas-admin-api+} by providing pre-built functions and full |api|
 endpoint coverage. The SDK provides platform-specific and GoLang
 language-specific tools, libraries, and documentation to help build
