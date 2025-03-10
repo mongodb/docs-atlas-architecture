@@ -90,8 +90,8 @@ available under the Dedicated, Flex, or Shared (Free) deployment types.
 To determine the recommended cluster tier for your 
 application size, see the :ref:`arch-center-cluster-size-guide` .
 
-Use an Odd Number of Replica Set Members
-````````````````````````````````````````
+Use an Odd Number of Replica Set Members and Test Failover
+``````````````````````````````````````````````````````````
 
 To elect a :manual:`primary </core/replica-set-members>`, you need a majority of :manual:`voting </core/replica-set-elections>` replica set members available. We recommend that you create replica sets with an
 odd number of voting replica set members. There is no benefit in having
@@ -102,6 +102,11 @@ Fault tolerance is the number of replica set members that can become
 unavailable with enough members still available for a primary election. 
 Fault tolerance of a four-member replica set is the same as for a three-member replica set because both can withstand a single-node
 outage.
+
+To test if your application can handle a failure of the replica set primary,
+submit a request to :ref:`test primary failover <test-failover>`. 
+When {+service+} simulates a failover event, {+service+} shuts down the current 
+primary and holds an election to elect a new primary.
 
 To learn more about replica set members, see :manual:`Replica Set Members </core/replica-set-members>`. To learn more about replica set elections and 
 voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
@@ -188,8 +193,8 @@ configuration.
 
 .. _arch-center-majority-write-concern:
 
-Use ``majority`` Write Concern and Test Failover
-````````````````````````````````````````````````
+Use ``majority`` Write Concern
+``````````````````````````````
 
 MongoDB allows you to specify the level of acknowledgment requested
 for write operations by using :manual:`write concern 
@@ -205,20 +210,14 @@ with write concern ``1``, we recommend that you use ``majority`` write
 concern because it allows your data centers to continue performing write
 operations even if a replica set loses the primary.
 
-To understand the importance of ``majority`` write concern, consider a
+To understand the advantage of using ``majority`` write concern, consider a
 five-node replica set spread across three separate regions with a 2-2-1
 topology (two regions with two nodes and one region with one node),
 with a numeric write concern of ``4``. If one of the two-node regions becomes
-unavailable and only three nodes remain available, write operations cannot complete 
-because they are unable to persist data on four nodes.
-In this scenario, despite the availability of the majority of nodes in the replica set, the database
-behaves as if a majority of the nodes in the replica set are unavailable. 
+unavailable, write operations cannot complete because they are unable to persist data on four nodes.
+In this scenario, the database behaves as if a majority of the nodes in the replica set are unavailable,
+despite the majority of nodes remaining available. 
 You can prevent this scenario by using ``majority`` write concern instead of a numeric value. 
-
-To test if your application can handle a failure of the replica set primary,
-submit a request to :ref:`test primary failover <test-failover>`. 
-When {+service+} simulates a failover event, {+service+} shuts down the current 
-primary and holds an election to elect a new primary.
 
 Consider Backup Configuration
 `````````````````````````````
