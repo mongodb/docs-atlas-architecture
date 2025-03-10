@@ -22,7 +22,7 @@ Guidance for {+service+} Automated Infrastructure Provisioning
 |service-fullname| provides tools for you to implement Infrastructure as Code (IaC)
 through the automation of various deployment and management tasks. 
 With {+service+}, you can achieve {+iac+} through imperative scripting
-using tools like the {+atlas-go-sdk+} client or calls to the {+atlas-admin-api+} directly, or declarative 
+using tools like the {+atlas-go-sdk+} client or calls to the {+atlas-admin-api+}, or declarative 
 programming using {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
 
 {+service+}'s {+iac+} tools are especially useful for streamlining processes on an enterprise scale. 
@@ -152,7 +152,7 @@ the same tooling and pipelines and use the |ak8so| to automate updating
 {+service+}. 
 
 If you don't already have an existing tool integrated into your
-development workflow, we recommend an :ref:`{+iac+} tool<arch-center-iac>` 
+development workflow, we recommend an :ref:`IaC tool <arch-center-iac>` 
 because they provide more robust options for infrastructure provisioning
 and state management.
 
