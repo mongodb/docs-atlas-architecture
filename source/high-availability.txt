@@ -214,8 +214,8 @@ configuration.
 
 .. _arch-center-majority-write-concern:
 
-Use ``majority`` Write Concern
-``````````````````````````````
+Use ``majority`` Write Concern and Test Failover
+````````````````````````````````````````````````
 
 MongoDB allows you to specify the level of acknowledgment requested
 for write operations by using :manual:`write concern 
@@ -228,7 +228,7 @@ node outage, we recommend that you set the write concern to ``majority``.
 
 Even though using ``majority`` write concern increases latency, compared
 with write concern ``1``, we recommend that you use ``majority`` write
-concern because it allows your data centers to continue having write
+concern because it allows your data centers to continue performing write
 operations even if a replica set loses the primary.
 
 To understand the importance of ``majority`` write concern, consider a
@@ -240,6 +240,11 @@ operations complete and the operation hangs because it is unable to persist data
 In this scenario, despite the availability of the majority of nodes in the replica set, the database
 behaves the same as if a majority of the nodes in the replica set were
 unavailable. If you use ``majority`` write concern rather than a numeric value, it prevents this scenario.
+
+To test if your application can handle a failure of the replica set primary,
+submit a request to :ref:`test primary failover <test-failover>`. 
+When {+service+} simulates a failover event, {+service+} shuts down the current 
+primary and holds an election to elect a new primary.
 
 Consider Backup Configuration
 `````````````````````````````
@@ -280,8 +285,8 @@ utilization, see :ref:`arch-center-monitoring-alerts`.
 
 If you encounter resource capacity issues, see :ref:`arch-center-resource-capacity`.
 
-Plan Your MongoDB Version Changes
-`````````````````````````````````
+Plan Your MongoDB Version Changes and Maintenance
+`````````````````````````````````````````````````
 
 We recommend that you run the latest MongoDB version as it allows you to
 take advantage of new features and provides improved security guarantees
@@ -294,6 +299,17 @@ You can't downgrade your MongoDB version using the {+atlas-ui+}. Because of this
 when planning and executing a major version upgrade, we recommend that you
 work directly with MongoDB Professional or Technical Services to help you
 avoid any issues that might occur during the upgrade process.
+
+Configure Maintenance Windows
+`````````````````````````````
+
+MongoDB allows you to :ref:`configure a maintenance window <configure-maintenance-window>` for your {+cluster+},
+which sets the hour of the day when {+service+} starts weekly maintenance on your {+cluster+}.  
+Setting a custom maintenance window allows you to schedule maintenance, which requires at least one replica set election per replica set, 
+outside of business-critical hours. 
+
+You can also set protected hours for your project, which defines a daily window of time in which standard updates cannot begin. 
+Standard updates do not involve {+cluster+} restarts or resyncs. 
 
 Automation Examples: {+service+} High Availability
 --------------------------------------------------
