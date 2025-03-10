@@ -121,57 +121,42 @@ voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
 
 Distribute Data Across At Least Three Data Centers in Different Availability Zones
 ``````````````````````````````````````````````````````````````````````````````````
+MongoDB provides high availability by storing multiple copies of data across replica sets.
+To ensure that members of the same replica set don't share the same resources, and that 
+a replica set can elect a primary if a data center becomes available, you must distribute 
+nodes across at least three data centers. We recommend that you use at least five data centers.
 
-To guarantee that a replica set can elect a primary if a data center
-becomes unavailable, you must distribute nodes across at least three
-data centers, but we recommend that you use five data centers.
+You can distribute data across multiple data centers by choosing a region that supports multiple availability zones. 
+Each availability zone contains one or more discrete data centers, each with redundant power, networking and connectivity, often housed in separate
+facilities. When you deploy a dedicated {+cluster+} to a region that supports availability zones, {+service+} automatically splits your {+cluster+}'s 
+nodes across the availability zones. For example, for a three-node replica set {+cluster+} deployed to a region with three availability zones, 
+{+service+} deploys one node in each zone. This ensures that members of the same replica set are deployed on different physical 
+hosts and disks, and are not sharing resources. 
 
-If you choose a region for your data centers that supports
-availability zones, you can distribute nodes in data centers in different
-availability zones. This way you can have multiple separate physical data
-centers, each in its own availability zone and in the same region.
-
-This section aims to illustrate the need for a deployment with five data centers.
-To begin, consider deployments with two and three data centers.
-
-Consider the following diagram, which shows data distributed across
-two data centers:
+To understand the risks of distributing your data across fewer than three data centers, consider the following diagram, 
+which shows data distributed across two data centers:
 
 .. figure:: /includes/images/two-data-centers.png
    :figwidth: 750px
    :alt: An image showing two data centers: Data Center 1, with a primary and a secondary node, and Data Center 2, with only a secondary node
 
-In the previous diagram, if Data Center 2 becomes unavailable, a majority of replica set members remain available and {+service+} can elect a primary. However, if you lose Data Center 1, you have only one
-out of three replica set members available, no majority, and the system degrades into read-only mode.
+In the previous diagram, if Data Center 2 becomes unavailable, a majority of replica set members remain available and {+service+} can elect a primary.
+However, if you lose Data Center 1, you have only one out of three replica set members available, no majority, and the system degrades into read-only mode.
 
-Consider the following diagram, which shows data distributed across
-three data centers:
+Consider the following diagram, which shows four-node replica set {+cluster+} deployed to a region with three availability zones
 
 .. figure:: /includes/images/three-data-centers.png
    :figwidth: 750px
    :alt: An image showing three data centers: Data Center 1, with a primary node, Data Center 2, with a secondary node, and Data Center 3, with a secondary node
 
-When you distribute nodes across three data centers, if one data
-center becomes unavailable, you still have two out of three replica set
-members available, which maintains a majority to elect a primary.
+In the previous diagram, if Data Center 1 becomes unavailable, a majority of replica set members still remain available and {+service+} 
+can elect a primary. A local failure in one data center doesn't impact the operation of the other data centers because MongoDB
+performs automatic failover and leader election. Applications automatically recover in the event of local failures.
 
-In addition to ensuring high availability, we recommend that you ensure the continuity of write
-operations. For this reason, we recommend that you deploy five data centers,
-to achieve a 2+2+1 topology required for the majority write concern.
-See the following section on :ref:`majority write concern <arch-center-majority-write-concern>` in this topic for detailed explanations of this
-requirement.
-
-You can distribute data across at least three data centers within the same region by choosing a region with at least three availability zones. Each
-availability zone contains one or more discrete data centers, each with redundant power, networking and connectivity, often housed in separate
-facilities.
-
-{+service+} uses availability zones for all cloud providers
-automatically when you deploy a dedicated cluster to a region that supports availability zones. |service| splits the cluster's nodes across
-availability zones. For example, for a three-node replica set {+cluster+} deployed to a three-availability-zone region, {+service+} deploys one node
-in each zone. A local failure in the data center hosting one node doesn't
-impact the operation of data centers hosting the other nodes because MongoDB
-performs automatic failover and leader election. Applications automatically
-recover in the event of local failures.
+While distributing your data across three data centers ensures high availability, we also 
+recommend that you ensure the continuity of write operations by deploying at least five data centers. 
+This achieves the 2-2-1 topology required to set ``majority`` write concern. To learn more about write concern,
+see the :ref:`majority write concern <arch-center-majority-write-concern>` section below. 
 
 We recommend that you deploy replica sets to the following regions because they support at least three availability zones:
 
@@ -234,12 +219,12 @@ operations even if a replica set loses the primary.
 To understand the importance of ``majority`` write concern, consider a
 five-node replica set spread across three separate regions with a 2-2-1
 topology (two regions with two nodes and one region with one node),
-with a write concern of ``4``. If one of the regions with two nodes becomes
-unavailable due to an outage and only three nodes are available, no write
-operations complete and the operation hangs because it is unable to persist data on four nodes.
+with a numeric write concern of ``4``. If one of the two-node regions becomes
+unavailable and only three nodes remain available, write operations cannot complete 
+because they are unable to persist data on four nodes.
 In this scenario, despite the availability of the majority of nodes in the replica set, the database
-behaves the same as if a majority of the nodes in the replica set were
-unavailable. If you use ``majority`` write concern rather than a numeric value, it prevents this scenario.
+behaves as if a majority of the nodes in the replica set are unavailable. 
+You can prevent this scenario by using ``majority`` write concern instead of a numeric value. 
 
 To test if your application can handle a failure of the replica set primary,
 submit a request to :ref:`test primary failover <test-failover>`. 
