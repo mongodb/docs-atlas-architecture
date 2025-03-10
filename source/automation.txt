@@ -20,9 +20,10 @@ Guidance for {+service+} Automated Infrastructure Provisioning
    :class: onecol
 
 |service-fullname| provides tools that enable programmatic management of the deployment, 
-scaling, and maintenance of your Atlas {+clusters+}. These tools offer you the flexibility to implement Infrastructure as Code (IaC) 
-through imperative scripting (such as through scripts that use the {+atlas-go-sdk+} Client or call the {+atlas-admin-api+} directly), 
-or declarative configuration using {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
+scaling, and maintenance of your Atlas {+clusters+}. 
+{+service+} provides the flexibility to implement Infrastructure as Code (IaC) using either imperative or declarative programming.
+For example, developers can write imperative scripts that call functions from our {+atlas-go-sdk+} client, 
+or manage {+service+} resources using declarative {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
 
 {+service+}'s {+iac+} tools are especially useful at the enterprise scale. 
 We recommend that our enterprise customers use {+iac+} tools for the following benefits: 
