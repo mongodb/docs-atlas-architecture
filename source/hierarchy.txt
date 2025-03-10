@@ -287,7 +287,7 @@ Use the following {+cluster+} size guide to select a {+cluster+} tier that ensur
 This table displays the default storage and performance capabilities for each {+cluster+} tier, as well as 
 whether or not the {+cluster+} tier is suitable for staging and production environments. 
 The {+cluster+} size guide also suggests an expected range of values for a {+cluster+}'s 
-total data size and IOPS, based on analytics from existing enterprise account {+clusters+}
+total data size and peak IOPS, based on analytics from existing enterprise account {+clusters+}
 from each {+cluster+} tier.  
 
 .. list-table::
