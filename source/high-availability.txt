@@ -87,19 +87,8 @@ Choose a Deployment Type and Cluster Tier that Fits your Deployment Goals
 When creating a new cluster, you can choose between between a range of {+cluster+} tiers 
 available under the Dedicated, Flex, or Shared (Free) deployment types. 
 
-To learn the recommended cluster tier for your 
+To determine the recommended cluster tier for your 
 application size, see the :ref:`arch-center-cluster-size-guide` .
-
-Don't Share Resources Between Members of the Same Replica Set
-`````````````````````````````````````````````````````````````
-
-MongoDB provides high availability by having multiple copies of data in replica sets.
-Members of the same replica set don't share the same resources. For example, members
-of the same replica set don't share the same physical hosts and disks.
-|service| satisfies this requirement by default: it deploys nodes in
-different availability zones, on different physical hosts and disks.
-
-Ensure that replica sets don't share resources by :ref:`distributing data across data centers <arch-center-distribute-data>`.
 
 Use an Odd Number of Replica Set Members
 ````````````````````````````````````````
@@ -123,17 +112,17 @@ Distribute Data Across At Least Three Data Centers in Different Availability Zon
 ``````````````````````````````````````````````````````````````````````````````````
 MongoDB provides high availability by storing multiple copies of data across replica sets.
 To ensure that members of the same replica set don't share the same resources, and that 
-a replica set can elect a primary if a data center becomes available, you must distribute 
+a replica set can elect a primary if a data center becomes unavailable, you must distribute 
 nodes across at least three data centers. We recommend that you use at least five data centers.
 
-You can distribute data across multiple data centers by choosing a region that supports multiple availability zones. 
+You can distribute data across multiple data centers by deploying your {+cluster+} to a region that supports multiple availability zones. 
 Each availability zone contains one or more discrete data centers, each with redundant power, networking and connectivity, often housed in separate
 facilities. When you deploy a dedicated {+cluster+} to a region that supports availability zones, {+service+} automatically splits your {+cluster+}'s 
 nodes across the availability zones. For example, for a three-node replica set {+cluster+} deployed to a region with three availability zones, 
-{+service+} deploys one node in each zone. This ensures that members of the same replica set are deployed on different physical 
-hosts and disks, and are not sharing resources. 
+{+service+} deploys one node in each zone. This ensures that members of the same replica set are not sharing resources, so that your database remains 
+available even if one zone experiences an outage.
 
-To understand the risks of distributing your data across fewer than three data centers, consider the following diagram, 
+To understand the risks associated with using fewer than three data centers, consider the following diagram, 
 which shows data distributed across two data centers:
 
 .. figure:: /includes/images/two-data-centers.png
@@ -143,7 +132,7 @@ which shows data distributed across two data centers:
 In the previous diagram, if Data Center 2 becomes unavailable, a majority of replica set members remain available and {+service+} can elect a primary.
 However, if you lose Data Center 1, you have only one out of three replica set members available, no majority, and the system degrades into read-only mode.
 
-Consider the following diagram, which shows four-node replica set {+cluster+} deployed to a region with three availability zones
+Consider the following diagram, which shows a four-node replica set {+cluster+} deployed to a region with three availability zones:
 
 .. figure:: /includes/images/three-data-centers.png
    :figwidth: 750px
@@ -151,9 +140,9 @@ Consider the following diagram, which shows four-node replica set {+cluster+} de
 
 In the previous diagram, if Data Center 1 becomes unavailable, a majority of replica set members still remain available and {+service+} 
 can elect a primary. A local failure in one data center doesn't impact the operation of the other data centers because MongoDB
-performs automatic failover and leader election. Applications automatically recover in the event of local failures.
+performs automatic failover and leader election. Applications distributed across three or more data centers automatically recover in the event of local failures.
 
-While distributing your data across three data centers ensures high availability, we also 
+While distributing your data across three data centers promotes high availability, we also 
 recommend that you ensure the continuity of write operations by deploying at least five data centers. 
 This achieves the 2-2-1 topology required to set ``majority`` write concern. To learn more about write concern,
 see the :ref:`majority write concern <arch-center-majority-write-concern>` section below. 
