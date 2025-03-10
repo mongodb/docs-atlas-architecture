@@ -19,14 +19,14 @@ Guidance for {+service+} Automated Infrastructure Provisioning
    :depth: 3
    :class: onecol
 
-|service-fullname| provides tools for you to achieve Infrastructure as Code (IaC)
+|service-fullname| provides tools for you to implement Infrastructure as Code (IaC)
 through the automation of various deployment and management tasks. 
-These tools offer you the flexibility to implement {+iac+} through imperative scripting
-(such as scripts that use the {+atlas-go-sdk+} client or call the {+atlas-admin-api+} directly), or declarative 
+With {+service+}, you can achieve {+iac+} through imperative scripting
+using tools like the {+atlas-go-sdk+} client or calls to the {+atlas-admin-api+} directly, or declarative 
 programming using {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
 
-By utilizing {+service+} tools and their seamless integrations with popular 
-{+iac+} tools, enterprise customers can enjoy the following benefits: 
+{+service+}'s {+iac+} tools are especially useful for streamlining processes on an enterprise scale. 
+We recommend that our enterprise customers use {+iac+} tools for the following benefits: 
 
 - **Consistency**: {+iac+} tools enable repeatability across environments, so that deployments
   generate consistent results. 
