@@ -12,17 +12,141 @@ Multi-Region Deployment Paradigm
    :depth: 2
    :class: onecol
 
-This page will include:
+Multi-region {+service+} deployments set up {+cluster+} nodes across
+multiple geographic regions. Multi-region
+deployments enhance protection in the case of a :ref:`regional outage
+<arch-center-regional-outage>` by automatically rerouting traffic to a
+node in another region for continuous availability and a
+smooth user experience. Multi-region deployments can also enhance
+performance and can help meet
+compliance requirements for :ref:`data sovereignty
+<arch-center-compliance-data-sovereignty>`.
 
-- Overview
-- Diagram
-- Use cases
+To learn how to configure multi-region deployments and learn about the
+different types of nodes you can add, see 
+:atlas:`Configure High Availability and Workload Isolation 
+</cluster-config/multi-cloud-distribution/>` in the {+service+}
+documentation.
+
+Multi-region deployments can deploy nodes
+across a single cloud provider or multiple cloud providers. As each
+cloud provider has its own set of regions, multi-cloud deployments are
+also multi-region deployments. To learn about multi-cloud deployments,
+see :ref:`arch-center-paradigms-multi-cloud`.
+
+The following diagram shows a multi-region, single-cloud {+service+}
+deployment for regions that support availability zones:
+
+.. figure:: /includes/images/multi-region-single-cloud.svg
+   :figwidth: 750px
+   :alt: An image a five-node deployment spread across three regions in AWS. Each region contains one zone per node.
+
+Use Cases for Multi-Region Deployments
+--------------------------------------
+
+To learn the use cases for multi-region, multi-cloud deployments, see
+:ref:`arch-center-paradigms-multi-cloud`.
+
+Multi-region, single-cloud deployments are best for the following use
+cases:
+
+Region-Specific Applications that Require Low Latency and High Availability Within One Cloud Provider
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To improve performance for critical operations,
+all {+service+} deployments allow you to deploy data
+close to your users' geographic location, which reduces latency. However, deploying to a single region sacrifices high availability if
+there is a regional outage. 
+You can configure a multi-region, single-cloud deployment for both
+high availability and low latency.
+
+A multi-region, single-cloud deployment may be best for you if you have
+the following requirements:
+
+- You want to use a single cloud provider 
+- You want to deploy to more than one region for high availability
+- Your application requires low latency *and* has a majority of users
+  in one geographic location, since multi-region deployments allow you
+  to deploy nodes to different regions within the same geographic area.
+
+For example, for an application deployed with |aws| with users
+primarily located in the US, you can deploy a multi-region deployment
+to three regions within the US (such as ``us-east-1``, ``us-east-2``,
+and ``us-west-2``). This
+ensures low latency since all regions are within the US, while offering
+high availability if there's a regional outage that affects the primary
+node in ``us-east-1``.
+
+If your application requires low latency for users in any region across
+a global user base, consider a :ref:`arch-center-paradigms-global`.
+
+If your application requires low latency but doesn't require
+cross-region high
+availability, consider a :ref:`arch-center-paradigms-single`.
+
+If your application requires low latency, high availability, and
+deployment across
+multiple cloud providers, consider a
+:ref:`arch-center-paradigms-multi-cloud`.
+
+Applications that Require Data Sovereignty and High Availability Within One Cloud Provider
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For compliance with data residency laws, data can be partitioned to
+reside in specific regions, ensuring adherence to local regulations.
+However, deploying to a single region sacrifices high availability if
+there is a regional outage. 
+You can configure a multi-region, single-cloud deployment for both
+high availability and data sovereignty.
+
+A multi-region, single-cloud deployment may be best for you if you have
+the following requirements:
+
+- You want to use a single cloud provider 
+- You want to deploy to more than one region for high availability
+- Your application requires data sovereignty, since multi-region
+  deployments allow you to deploy nodes to different regions within the
+  same geographic area.
+
+For example, for an application deployed with |aws| that requires data
+storage in Europe, you can deploy a multi-region deployment
+to three regions within the EU (such as ``eu-west-1``,
+``eu-west-2``, and ``eu-west-3``). This
+ensures data sovereignty since all regions are within the EU, while
+offering high availability if there's a regional outage that affects
+the primary node in ``eu-west-1``.
+
+If your application requires data sovereignty but doesn't require
+cross-region high
+availability, consider a :ref:`arch-center-paradigms-single`.
+
+If your application requires data sovereignty and deployment across
+multiple cloud providers, consider a
+:ref:`arch-center-paradigms-multi-cloud`.
+
+Considerations for Multi-Region Deployments
+-------------------------------------------
+
+Other considerations for multi-region deployments include:
+
+- High availability depends on the deployment of nodes across
+  regions as well as the number, distribution, and priority order of
+  nodes. To learn more about recommended
+  {+cluster+} topologies for high availability, see
+  :ref:`arch-center-high-availability`.
+- Multi-region deployments are available only for ``M10`` dedicated
+  {+clusters+} and larger.
+
+For more considerations, see 
+:atlas:`Considerations 
+</cluster-config/multi-cloud-distribution/#considerations>` in the
+{+service+} documentation.
 
 Recommendations for Multi-Region Deployments
 --------------------------------------------
 
-To learn about recommendations that apply multi-region deployments, see
-the following sections:
+To learn about all recommendations that apply multi-region deployments,
+see the following sections:
 
 .. include:: /includes/rec-list.rst
 
