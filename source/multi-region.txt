@@ -50,8 +50,8 @@ To learn the use cases for multi-region, multi-cloud deployments, see
 Multi-region, single-cloud deployments are best for the following use
 cases:
 
-Region-Specific Applications that Require Low Latency and High Availability Within One Cloud Provider
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Region-Specific Applications that Require Low Latency and High Availability (One Cloud Provider)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To improve performance for critical operations,
 all {+service+} deployments allow you to deploy data
@@ -89,8 +89,8 @@ deployment across
 multiple cloud providers, consider a
 :ref:`arch-center-paradigms-multi-cloud`.
 
-Applications that Require Data Sovereignty and High Availability Within One Cloud Provider
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Applications that Require Data Sovereignty and High Availability (One Cloud Provider)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For compliance with data residency laws, data can be partitioned to
 reside in specific regions, ensuring adherence to local regulations.
