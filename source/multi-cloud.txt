@@ -162,8 +162,18 @@ For more considerations, see
 Recommendations for Multi-Cloud Deployments
 --------------------------------------------
 
-To learn about recommendations that apply multi-cloud deployments, see
-the following sections:
+To learn about recommendations that apply to multi-region and
+multi-cloud deployments, see the following sections.
+
+.. important::
+
+   All recommendations that apply to multi-region deployments also
+   apply to multi-cloud deployments because all multi-cloud deployments
+   are also multi-region. There may be other considerations
+   for multi-cloud deployments that are not covered in the
+   {+atlas-arch-center+}. Contact MongoDB's Professional Services
+   team to create a custom landing zone for your {+service+} multi-cloud
+   deployments that covers all considerations.
 
 .. include:: /includes/rec-list.rst
 
