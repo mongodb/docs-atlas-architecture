@@ -21,8 +21,8 @@ This page will include:
 Recommendations for Global Deployments
 --------------------------------------
 
-To learn about recommendations that apply global deployments, see
-the following sections:
-
-.. include:: /includes/rec-list.rst
+The {+atlas-arch-center+} does not currently cover recommendations
+specific to global deployments. Contact MongoDB's Professional Services
+team to create a custom landing zone for your {+service+} global
+deployments.
 
