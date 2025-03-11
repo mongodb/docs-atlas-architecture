@@ -12,11 +12,113 @@ Single-Region Deployment Paradigm
    :depth: 2
    :class: onecol
 
-This page will include:
+Single-region {+service+} deployments set up {+cluster+} nodes within
+one region of one cloud provider. Single-region
+deployments to regions that support availability zones offer
+protection in the case of a zonal outage by automatically rerouting
+traffic to a node in another availability zone for continuous
+availability and a smooth user experience. Single-region {+service+}
+deployments are supported on all {+cluster+} tiers, so they include
+less expensive options for non-mission-critical deployments, and, when
+configured correctly, single-region deployments can support performance
+and help meet compliance requirements for :ref:`data sovereignty
+<arch-center-compliance-data-sovereignty>`. 
 
-- Overview
-- Diagram
-- Use cases
+To learn how to configure a single-region deployment, see 
+:atlas:`Create a Cluster </tutorial/create-new-cluster/>` in the
+{+service+} documentation.
+
+The following diagram shows a single-region {+service+}
+deployment for regions that support availability zones:
+
+.. figure:: /includes/images/single-region.svg
+   :figwidth: 750px
+   :alt: An image a three-node deployment in a single region. The region contains one zone per node.
+
+Use Cases for Single-Region Deployments
+---------------------------------------
+
+Single-region deployments are best for the following use
+cases:
+
+Region-Specific Applications that Require Low Latency and Zonal High Availability (One Cloud Provider)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To improve performance for critical operations,
+all {+service+} deployments allow you to deploy data
+close to your users' geographic location, which reduces latency.
+You can configure a single-region deployment for
+high availability across zones and low latency.
+
+A single-region deployment may be best for you if you have
+the following requirements:
+
+- You want to use one cloud provider
+- You want to deploy to more than one availability zone for high
+  availability, and you don't need to deploy to more than one region
+- Your application requires low latency *and* has a majority of users
+  in one geographic location, since single-region deployments allow you
+  to choose your geographic area.
+
+For example, for an application deployed with |aws| with
+users primarily located in the eastern US, you can deploy a 
+single-region deployment to ``us-east-1`` 
+(a region that supports availability zones). This
+ensures low latency since all nodes are within the eastern US, while
+offering high availability if there's a zonal outage that affects the
+primary node.
+
+If your application requires low latency and
+cross-region or cross-provider high
+availability, consider a :ref:`arch-center-paradigms-multi-region` or :ref:`arch-center-paradigms-multi-cloud`, respectively.
+
+If your application requires low latency for users in any region across
+a global user base, consider a :ref:`arch-center-paradigms-global`.
+
+Applications that Require Data Sovereignty and Zonal High Availability(One Cloud Provider)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For compliance with data residency laws, data can be partitioned to
+reside in a specific region, ensuring adherence to local regulations.
+You can configure a single-region deployment for
+high zonal availability and data sovereignty.
+
+A single-region deployment may be best for you if you have
+the following requirements:
+
+- You want to use one cloud provider
+- You want to deploy to more than one availability zone for high
+  availability, and you don't need to deploy to more than one region
+- Your application requires data sovereignty, since single-region
+  deployments allow you to choose your geographic area.
+
+For example, for an application deployed with |aws| that
+requires data storage in Europe, you can deploy a single-region
+deployment to a region within the EU (such as
+``eu-west-1``, a region that supports availability zones). This
+ensures data sovereignty since the region is within the EU, while
+offering high availability if there's a zonal outage that affects the
+primary node.
+
+If your application requires data sovereignty and
+cross-region or cross-provider high
+availability, consider a :ref:`arch-center-paradigms-multi-region` or :ref:`arch-center-paradigms-multi-cloud`, respectively.
+
+Considerations for Single-Region Deployments
+--------------------------------------------
+
+Other considerations for single-region deployments include:
+
+- High availability depends on the deployment of nodes across
+  regions as well as the number, distribution, and priority order of
+  nodes. To learn more about recommended
+  {+cluster+} topologies for high availability, see
+  :ref:`arch-center-high-availability`.
+
+For more considerations, see 
+:atlas:`Considerations 
+</cluster-config/multi-cloud-distribution/#considerations>` in the
+{+service+} documentation.
 
 Recommendations for Single-Region Deployments
 ---------------------------------------------

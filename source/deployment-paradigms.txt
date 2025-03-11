@@ -20,4 +20,3 @@ Info about each paradigm and comparison
    Single-Region Deployment </single-region>
    Multi-Region Deployment </multi-region>
    Multi-Cloud Deployment </multi-cloud>
-
