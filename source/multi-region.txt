@@ -39,7 +39,7 @@ deployment for regions that support availability zones:
 
 .. figure:: /includes/images/multi-region-single-cloud.svg
    :figwidth: 750px
-   :alt: An image a five-node deployment spread across three regions in AWS. Each region contains one zone per node.
+   :alt: An image showing three global cluster zones, each with three nodes in its highest priority region.
 
 Use Cases for Multi-Region Deployments
 --------------------------------------
@@ -77,8 +77,9 @@ ensures low latency since all regions are within the US, while offering
 high availability if there's a regional outage that affects the primary
 node in ``us-east-1``.
 
-If your application requires low latency for users in any region across
-a global user base, consider a :ref:`arch-center-paradigms-global`.
+If your application requires low latency for users in many regions
+across a global user base, consider a
+:ref:`arch-center-paradigms-global`.
 
 If your application requires low latency but doesn't require
 cross-region high

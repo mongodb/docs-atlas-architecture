@@ -32,8 +32,8 @@ The following diagram shows a single-region {+service+}
 deployment for regions that support availability zones:
 
 .. figure:: /includes/images/single-region.svg
-   :figwidth: 750px
-   :alt: An image a three-node deployment in a single region. The region contains one zone per node.
+   :figwidth: 500px
+   :alt: An image showing a three-node deployment in a single region. The region contains one zone per node.
 
 Use Cases for Single-Region Deployments
 ---------------------------------------
@@ -75,7 +75,7 @@ availability, consider a :ref:`arch-center-paradigms-multi-region` or :ref:`arch
 If your application requires low latency for users in any region across
 a global user base, consider a :ref:`arch-center-paradigms-global`.
 
-Applications that Require Data Sovereignty and Zonal High Availability(One Cloud Provider)
+Applications that Require Data Sovereignty and Zonal High Availability (One Cloud Provider)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For compliance with data residency laws, data can be partitioned to

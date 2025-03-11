@@ -46,7 +46,7 @@ deployment for regions that support availability zones:
 
 .. figure:: /includes/images/multi-region-multi-cloud.svg
    :figwidth: 750px
-   :alt: An image a five-node deployment spread across three regions and two cloud providers. Each region contains one zone per node.
+   :alt: An image showing a five-node deployment spread across three regions and two cloud providers. Each region contains one zone per node.
 
 Use Cases for Multi-Cloud Deployments
 -------------------------------------
