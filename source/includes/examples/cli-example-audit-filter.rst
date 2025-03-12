@@ -1,4 +1,4 @@
 .. code-block::
    :copyable: true
 
-   { atype: "authenticate", "param.db": "test" }
+   { "atype": "authenticate", "param.db": "test" }
