@@ -25,7 +25,7 @@ deployments, global deployments can enhance protection in the case of a
 regional outage by automatically rerouting traffic to a
 shard in another region for continuous availability and a
 smooth user experience. However, global deployments differ from
-multi-region deployments because they maximize performance around
+multi-region deployments because they maximize global performance around
 latency reduction by serving content from regions closest to users,
 rather than using a set priority region for all users.
 
@@ -74,7 +74,7 @@ to six :guilabel:`Highest Priority` regions, as shown in the following
 image:
 
 .. image:: /includes/images/global-template.png
-   :alt: "An showing latency per geographic area for a global cluster with six regions."
+   :alt: "An image showing latency per geographic area for a global cluster with six regions."
    :width: 600px
    :align: center
 
