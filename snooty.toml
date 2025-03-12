@@ -173,6 +173,7 @@ vnet = "VNet"
 waf = "`Well-Architected Framework <https://www.mongodb.com/resources/products/capabilities/well-architected-framework>`__"
 wif = "Workforce Identity Federation"
 workload = "Workload Identity Federation"
+ocsf = ":abbr:`OCSF (Open Cybersecurity Schema)`"
 
 [substitutions]
 service-register = ":mdbacct:`MongoDB Atlas registration page </register?tck=docs_atlas>`"
