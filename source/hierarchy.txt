@@ -225,8 +225,12 @@ This allows administrators to maintain different project configurations between 
 and uphold the principle of least privilege, which states that users should 
 only be granted the least level of access necessary for their role.
 
+<<<<<<< HEAD
 However, this hierarchy might make it more complicated to share project-level configurations such as private endpoints and |cmk|\s across clusters.
 
+=======
+However, this hierarchy may make it more complicated to share project-level configurations such as private endpoints and |cmk|\s across clusters.
+>>>>>>> 0ca1b60 ((DOCSP-47820) [Atlas Architecture] Make follow-up edits from the Orgs, Projects, and Clusters page (#129))
 To learn more, see :ref:`hierarchy-multiple-clusters`. 
 
 .. figure:: /includes/images/deployment-hierarchy.svg
