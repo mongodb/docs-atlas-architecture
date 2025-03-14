@@ -203,10 +203,15 @@ This allows administrators to maintain different project configurations between 
 and uphold the principle of least privilege, which states that users should 
 only be granted the least level of access necessary for their role.
 
+However, this hierarchy may make it more complicated to share project-level configurations such as private endpoints and |cmk| across clusters.
+To learn more, see :ref:`hierarchy-multiple-clusters`. 
+
 .. figure:: /includes/images/deployment-hierarchy.svg
    :alt: An image showing one deployment per project in each organization.
    :align: center
    :lightbox:
+
+.. _hierarchy-multiple-clusters: 
 
 When to Consider Multiple {+Clusters+} Per Project 
 ``````````````````````````````````````````````````
@@ -286,13 +291,10 @@ You can estimate the {+cluster+} resources that your deployment requires by usin
 Use the following {+cluster+} size guide to select a {+cluster+} tier that ensures performance without over-provisioning. 
 This table displays the default storage and performance capabilities for each {+cluster+} tier, as well as 
 whether or not the {+cluster+} tier is suitable for staging and production environments. 
-The {+cluster+} size guide also suggests an expected range of values for a {+cluster+}'s 
-total data size and peak IOPS, based on analytics from existing enterprise account {+clusters+}
-from each {+cluster+} tier.  
 
 .. list-table::
    :header-rows: 1
-   :widths: 10 10 10 10 10 10 10 10 10 10
+   :widths: 10 10 20 20 10 10 10 10
 
    * - T-Shirt Size
      - Cluster Tier
@@ -301,8 +303,6 @@ from each {+cluster+} tier.
      - CPUs (#)
      - Default RAM
      - Default IOPS
-     - Expected Total Data Size
-     - Expected Peak IOPS
      - Suitable For
 
    * - Small
@@ -312,8 +312,6 @@ from each {+cluster+} tier.
      - 2
      - 2 GB
      - 1000
-     - 1 GB to 10 GB
-     - 15 to 25
      - Dev/Test only
 
    * - Med
@@ -323,8 +321,6 @@ from each {+cluster+} tier.
      - 2
      - 8 GB
      - 3000
-     - 20 GB to 50 GB
-     - 30 to 50
      - Prod
 
    * - Large
@@ -334,8 +330,6 @@ from each {+cluster+} tier.
      - 16
      - 32 GB
      - 3000
-     - 360 GB to 420 GB
-     - 380 to 600
      - Prod
 
    * - X-Large
@@ -345,15 +339,9 @@ from each {+cluster+} tier.
      - 32
      - 128 GB
      - 3000
-     - 1200 GB to 1750 GB
-     - 1430 to 2400
      - Prod
 
 .. [1] ``M10`` is a shared CPU tier. For highly-regulated industries or sensitive data, your minimum and smallest starting tier should be ``M30``.
-
-For example, consider a fictional fintech company, MongoFinance, that must store a total of 400 GB of processed data.
-At peak activity, MongoFinance employees and customers perform up to 500 reads or writes to MongoFinance databases per second. 
-MongoFinance's storage and performance requirements are best satisfied by a large, or ``M30``, {+cluster+} tier.  
 
 To learn more about {+cluster+} tiers and the regions that support
 them, see the {+service+} documentation for each cloud provider:
