@@ -144,7 +144,7 @@ important categories of metrics to monitor:
 
 You can use the {+atlas-ui+}, {+atlas-admin-api+}, and {+atlas-cli+} to
 view |service| {+cluster+} metrics. Additionally, |service| provides
-built-in integrations with third-party tools such as Datadog, and you
+built-in integrations with third-party tools such as :ref:`Datadog <datadog-integration>` and :ref:`Prometheus <prometheus-integration>`, and you
 can also leverage the {+atlas-admin-api+} to integrate with other
 custom metrics tools.
 
