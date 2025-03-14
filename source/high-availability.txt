@@ -121,7 +121,7 @@ a replica set can elect a primary if a data center becomes unavailable, you must
 nodes across at least three data centers. We recommend that you use at least five data centers.
 
 You can distribute data across multiple data centers by deploying your {+cluster+} to a region that supports multiple availability zones. 
-Each availability zone contains one or more discrete data centers, each with redundant power, networking and connectivity, often housed in separate
+Each availability zone typically contains one or more discrete data centers, each with redundant power, networking and connectivity, often housed in separate
 facilities. When you deploy a dedicated {+cluster+} to a region that supports availability zones, {+service+} automatically splits your {+cluster+}'s 
 nodes across the availability zones. For example, for a three-node replica set {+cluster+} deployed to a region with three availability zones, 
 {+service+} deploys one node in each zone. This ensures that members of the same replica set are not sharing resources, so that your database remains 
@@ -137,20 +137,16 @@ which shows data distributed across two data centers:
 In the previous diagram, if Data Center 2 becomes unavailable, a majority of replica set members remain available and {+service+} can elect a primary.
 However, if you lose Data Center 1, you have only one out of three replica set members available, no majority, and the system degrades into read-only mode.
 
-Consider the following diagram, which shows a four-node replica set {+cluster+} deployed to a region with three availability zones:
+Consider the following diagram, which shows a five-node replica set {+cluster+} deployed to a region with three availability zones:
 
-.. figure:: /includes/images/three-data-centers.png
+.. figure:: /includes/images/highavailabilityPS-SS-S.svg	
    :figwidth: 750px
-   :alt: An image showing three data centers: Data Center 1, with a primary node, Data Center 2, with a secondary node, and Data Center 3, with a secondary node
+   :alt: An image showing three data centers: Data Center 1, with a primary and secondary node, Data Center, 2 with two secondary nodes, and Data Center 3, with one secondary node
 
-In the previous diagram, if Data Center 1 becomes unavailable, a majority of replica set members still remain available and {+service+} 
-can elect a primary. A local failure in one data center doesn't impact the operation of the other data centers because MongoDB
-performs automatic failover and leader election. Applications distributed across three or more data centers automatically recover in the event of local failures.
-
-While distributing your data across three data centers promotes high availability, we also 
-recommend that you ensure the continuity of write operations by deploying at least five data centers. 
-This achieves the 2-2-1 topology required to set ``majority`` write concern. To learn more about write concern,
-see the :ref:`majority write concern <arch-center-majority-write-concern>` section below. 
+The 2-2-1 topology in the previous diagram is our recommended topology to balance high availability, performance, and cost across multiple regions.
+In this topology, if any one data center fails, a majority of replica set members remain available and {+service+} can perform automatic faiilover. 
+While a three-node, three-region topology can also tolerate any one-region failure, any failover event in a 1-1-1 topology forces a new primary to be elected in a different region.
+The 2-2-1 topology can tolerate a primary node failure while keeping the new primary in the preferred region.
 
 We recommend that you deploy replica sets to the following regions because they support at least three availability zones:
 
@@ -205,19 +201,16 @@ two nodes before an acknowledgment of completion is sent to the driver
 that issued said write operation. For the best protection from a regional
 node outage, we recommend that you set the write concern to ``majority``.
 
-Even though using ``majority`` write concern increases latency, compared
+Even though using ``majority`` write concern increases write latency compared
 with write concern ``1``, we recommend that you use ``majority`` write
 concern because it allows your data centers to continue performing write
 operations even if a replica set loses the primary.
 
-To understand the advantage of using ``majority`` write concern, consider a
-five-node replica set spread across three separate regions with a 2-2-1
-topology (two regions with two nodes and one region with one node),
-with a numeric write concern of ``4``. If one of the two-node regions becomes
-unavailable, write operations cannot complete because they are unable to persist data on four nodes.
-In this scenario, the database behaves as if a majority of the nodes in the replica set are unavailable,
-despite the majority of nodes remaining available. 
-You can prevent this scenario by using ``majority`` write concern instead of a numeric value. 
+To understand the advantage of using ``majority`` write concern over a numeric write concern, 
+consider a three-region, five-node replica set with a 2-2-1 topology, with a numeric write concern of ``4``.
+If one of the two-node regions becomes unavailable, write operations cannot complete because they are unable to persist data on four nodes.
+Using ``majority`` will allow write operations to continue when they persist data across at least two nodes, 
+maintaining data redundancy as well as write continuity. 
 
 Consider Backup Configuration
 `````````````````````````````
