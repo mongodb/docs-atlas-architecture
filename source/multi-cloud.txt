@@ -83,9 +83,9 @@ the following requirements:
 For example, for an application deployed with |aws| and |azure| with
 users primarily located in the US, you can deploy a multi-region,
 multi-cloud deployment to three regions within the US (such as
-``us-east-1`` and ``us-east-2`` for |aws|, and ____ for |azure|). This
-ensures low latency since all regions are within the eastern US, while
-offering high availability if there's a regional outage or a cloud
+``us-east-1`` and ``us-east-2`` for |aws|, and ``eastus`` for |azure|).
+This ensures low latency since all regions are within the eastern US,
+while offering high availability if there's a regional outage or a cloud
 provider outage that affects the primary
 node. Additionally, it makes it easier to transition off of one of these
 cloud providers if needed.
@@ -127,8 +127,8 @@ the following requirements:
 For example, for an application deployed with |aws| and |azure| that
 requires data storage in Europe, you can deploy a multi-region,
 multi-cloud deployment to three regions within the EU (such as
-``eu-west-1`` and ``eu-west-2`` for |aws|, and _____ for |azure|). This
-ensures data sovereignty since all regions are within the EU, while
+``eu-west-1`` and ``eu-west-2`` for |aws|, and ``uksouth`` for |azure|).
+This ensures data sovereignty since all regions are within the EU, while
 offering high availability if there's a regional outage or a cloud
 provider outage that affects the primary node. Additionally, it makes
 it easier to transition off of one of these cloud providers if needed.
