@@ -262,7 +262,7 @@ To learn more about parsing billing data using tags, see
 
 In a dedicated deployment ({+cluster+} size ``M10``\+), {+service+}
 allocates resources exclusively. We recommend dedicated deployments
-because they provide higher security and performance than shared
+for production use cases because they provide higher security and performance than shared
 clusters.
 
 The following {+cluster+} size guide uses "t-shirt sizing," a common analogy used in software
