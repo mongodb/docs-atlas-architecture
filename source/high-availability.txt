@@ -117,6 +117,26 @@ the elected primary.
 Recommended Configurations for High Availability and Recovery
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+```````````````````````````````````````
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 Use the following recommendations to configure your
 {+service+} deployments and backups for high availability and to
 expedite recovery from disasters.
@@ -125,7 +145,7 @@ To learn more about how to plan for and respond to disasters, see
 :ref:`arch-center-dr`.
 
 Members of the Same Replica Sets Should Not Share Resources
-```````````````````````````````````````````````````````````
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 MongoDB provides high availability by having multiple copies of data in replica sets.
 Members of the same replica set don't share the same resources. For example, members
@@ -136,7 +156,7 @@ different availability zones, on different physical hosts and disks.
 Ensure that replica sets don't share resources by :ref:`distributing data across data centers <arch-center-distribute-data>`.
 
 Use an Odd Number of Replica Set Members
-````````````````````````````````````````
+++++++++++++++++++++++++++++++++++++++++
 
 To elect a :manual:`primary </core/replica-set-members>`, you need a majority of :manual:`voting </core/replica-set-elections>` replica set members available. We recommend that you create replica sets with an
 odd number of voting replica set members. There is no benefit in having
@@ -154,7 +174,7 @@ voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
 .. _arch-center-distribute-data:
 
 Distribute Data Across At Least Three Data Centers in Different Availability Zones
-````````````````````````````````````````````````````````````````````````````````````
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 To guarantee that a replica set can elect a primary if a data center
 becomes unavailable, you must distribute nodes across at least three
@@ -225,7 +245,7 @@ Recommended Google Cloud Regions
 .. include:: /includes/gcp-recommended-regions.rst
 
 Use ``mongos`` Redundancy for Sharded {+Clusters+}
-```````````````````````````````````````````````````
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 When a client connects to a sharded {+cluster+}, we recommend that you include multiple :manual:`mongos </reference/program/mongos/>`
 processes, separated by commas, in the connection URI. To learn more,
@@ -249,7 +269,7 @@ configuration.
 .. _arch-center-majority-write-concern:
 
 Use ``majority`` Write Concern
-``````````````````````````````
+++++++++++++++++++++++++++++++
 
 MongoDB allows you to specify the level of acknowledgment requested
 for write operations by using :manual:`write concern 
@@ -276,7 +296,8 @@ behaves the same as if a majority of the nodes in the replica set were
 unavailable. If you use ``majority`` write concern rather than a numeric value, it prevents this scenario.
 
 Consider Backup Configuration
-`````````````````````````````
++++++++++++++++++++++++++++++
+
 Frequent data backups is critical for business continuity and disaster recovery. Frequent backups ensure that data loss and downtime is
 minimal if a disaster or cyber attack disrupts normal operations. 
 
@@ -297,11 +318,11 @@ We recommend that you:
 For more backup recommendations, see :ref:`arch-center-backups`.
 
 Plan Your Resource Utilization
-``````````````````````````````
+++++++++++++++++++++++++++++++
 
 To avoid resource capacity issues, we recommend that you monitor
 resource utilization and hold regular capacity planning sessions.
-MongoDB Professional Services offers these sessions.
+{+ps+} offers these sessions.
 
 Over-utilized clusters could fail causing a disaster. 
 Scale up clusters to higher tiers if your utilization is regularly alerting at a steady state,
@@ -315,7 +336,7 @@ utilization, see :ref:`arch-center-monitoring-alerts`.
 If you encounter resource capacity issues, see :ref:`arch-center-resource-capacity`.
 
 Plan Your MongoDB Version Changes
-`````````````````````````````````
++++++++++++++++++++++++++++++++++
 
 We recommend that you run the latest MongoDB version as it allows you to
 take advantage of new features and provides improved security guarantees

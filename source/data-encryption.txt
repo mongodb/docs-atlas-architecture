@@ -139,13 +139,30 @@ client as readable plaintext.
 Recommendations for {+service+} Data Encryption
 -----------------------------------------------
 
-Consider the following security recommendations when 
-provisioning your {+clusters+}.
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
 
 .. _arch-center-cmk:
 
 Encryption with Customer Key Management
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````````````````````
 
 .. include:: /includes/encryption-with-cmk-recommendations.rst
 
@@ -160,7 +177,7 @@ when provisioning a new |service| organization, project, and {+cluster+},
 see :ref:`arch-center-create-hierarchy-example`.
 
 Data Classification
-~~~~~~~~~~~~~~~~~~~
+```````````````````
 
 During the provisioning process, we also recommend assessing the 
 sensitivity of certain fields in your data and classifying
