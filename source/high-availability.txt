@@ -117,6 +117,26 @@ the elected primary.
 Recommended Configurations for High Availability and Recovery
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+```````````````````````````````````````
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 Use the following recommendations to configure your
 {+service+} deployments and backups for high availability and to
 expedite recovery from disasters.
@@ -209,7 +229,7 @@ Recommended Google Cloud Regions
 .. include:: /includes/gcp-recommended-regions.rst
 
 Use ``mongos`` Redundancy for Sharded {+Clusters+}
-```````````````````````````````````````````````````
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 When a client connects to a sharded {+cluster+}, we recommend that you include multiple :manual:`mongos </reference/program/mongos/>`
 processes, separated by commas, in the connection URI. To learn more,
@@ -233,7 +253,7 @@ configuration.
 .. _arch-center-majority-write-concern:
 
 Use ``majority`` Write Concern
-``````````````````````````````
+++++++++++++++++++++++++++++++
 
 MongoDB allows you to specify the level of acknowledgment requested
 for write operations by using :manual:`write concern 
@@ -256,7 +276,8 @@ Using ``majority`` will allow write operations to continue when they persist dat
 maintaining data redundancy as well as write continuity. 
 
 Consider Backup Configuration
-`````````````````````````````
++++++++++++++++++++++++++++++
+
 Frequent data backups is critical for business continuity and disaster recovery. Frequent backups ensure that data loss and downtime is
 minimal if a disaster or cyber attack disrupts normal operations. 
 
@@ -277,11 +298,11 @@ We recommend that you:
 For more backup recommendations, see :ref:`arch-center-backups`.
 
 Plan Your Resource Utilization
-``````````````````````````````
+++++++++++++++++++++++++++++++
 
 To avoid resource capacity issues, we recommend that you monitor
 resource utilization and hold regular capacity planning sessions.
-MongoDB Professional Services offers these sessions.
+{+ps+} offers these sessions.
 
 Over-utilized clusters could fail causing a disaster. 
 Scale up clusters to higher tiers if your utilization is regularly alerting at a steady state,

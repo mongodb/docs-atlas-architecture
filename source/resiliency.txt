@@ -116,8 +116,28 @@ For recommendations on backups, see :ref:`arch-center-backups`.
 Recommendations for {+service+} Resiliency
 ------------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 Use MongoDB 8.0 or Later
-~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````
 
 To improve the resiliency of your cluster, upgrade your cluster to MongoDB 8.0. 
 MongoDB 8.0 introduces the following performance improvements and new features 
@@ -134,7 +154,7 @@ related to resilience:
 
 
 Connecting Your Application to |service|
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````````````````````
 
 We recommend that you use a connection method built on the most `current driver version <https://www.mongodb.com/docs/drivers/>`__ 
 for your application's programming language whenever possible. And while the 
@@ -151,7 +171,7 @@ analytics job request against the cluster.
 is particularly important in the context of enterprise level application deployments. 
 
 Connection Pool Considerations for Performant Applications
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````````````````````````````````````````
 
 Opening database client connections is one of the most
 resource-intensive processes
@@ -170,7 +190,7 @@ doesn't undermine your application's time-sensitive need for increased
 database operations. 
 
 Min and Max Connection Pool Size 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````````````
 
 If your ``minPoolSize`` and ``maxPoolSize`` values are similar, the majority of your 
 database client connections open at application startup. For example, if your
@@ -196,7 +216,7 @@ only ever be able to open and use one client connection, so your ``minPoolSize``
 and your ``maxPoolSize`` should both be set to ``1``.
 
 Query Timeout
-~~~~~~~~~~~~~
+`````````````
 
 Almost invariably, workload-specific queries from your application will vary in 
 terms of the amount of time they take to execute in |service| and in terms of 
@@ -206,7 +226,7 @@ You can set `query timeout <https://www.mongodb.com/docs/manual/tutorial/query-d
 behavior globally in |service|, and you can also define it at the query level. 
 
 Retryable Database Reads and Writes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````````````````
 
 |service| supports `retryable read <https://www.mongodb.com/docs/manual/core/retryable-reads/>`__ 
 and `retryable write <https://www.mongodb.com/docs/manual/core/retryable-writes/>`__ 
@@ -216,7 +236,7 @@ safeguard against intermittent network outages.
 .. _resiliency-read-write-concerns:
 
 Configure Read and Write Concerns 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````````````````
 
 |service| {+clusters+} eventually replicate all data across all nodes. However, 
 you can configure the number of nodes across which data must be replicated before 
@@ -233,12 +253,12 @@ one node in your cluster
 .. _arch-center-move-collection:
 
 Isolate the Impact of Busy, Unsharded Collections
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````````````````````````````````
 
 .. include:: /includes/cloud-docs/move-collection.rst
 
 Disaster Recovery 
-~~~~~~~~~~~~~~~~~
+`````````````````
 
 For recommendations on disaster recovery best practices for |service|,
 see :ref:`arch-center-dr` and :ref:`arch-center-ha-configurations`.

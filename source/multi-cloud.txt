@@ -172,7 +172,7 @@ multi-cloud deployments, see the following sections:
    are also multi-region. There may be other considerations
    for multi-cloud deployments that are not covered in the
    {+atlas-arch-center+}, such as cloud-provider-aware application-side
-   settings. Contact MongoDB's Professional Services
+   settings. Contact {+ps+}
    team to create a custom landing zone for your {+service+} multi-cloud
    deployments that covers all considerations.
 
