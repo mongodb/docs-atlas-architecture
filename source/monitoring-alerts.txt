@@ -106,8 +106,6 @@ Recommendations for {+service+} Monitoring and Alerts
 
    Recommendations here
 
-.. _arch-center-monitoring-alerts-recs-multi:
-
 .. collapsible::
    :heading: Multi-Region and Multi-Cloud Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
@@ -117,6 +115,9 @@ Recommendations for {+service+} Monitoring and Alerts
 
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
 
 Monitor by Using Metrics
 ````````````````````````

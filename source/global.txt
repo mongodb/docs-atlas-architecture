@@ -114,7 +114,7 @@ Recommendations for Global Deployments
 --------------------------------------
 
 The {+atlas-arch-center+} does not currently cover recommendations
-specific to global deployments. Contact MongoDB's Professional Services
+specific to global deployments. Contact {+ps+}
 team to create a custom landing zone for your {+service+} global
 deployments.
 
