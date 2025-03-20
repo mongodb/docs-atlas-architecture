@@ -161,8 +161,28 @@ based on the |cidr| block. For example, a project with a |cidr| block of
 Recommendations for {+service+} Network Security
 ------------------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 Private Endpoints
-~~~~~~~~~~~~~~~~~
+`````````````````
 
 We recommend that you set up private endpoints for all new staging and production projects to limit the extension of your network trust
 boundary.
@@ -181,7 +201,7 @@ endpoints for your {+clusters+}, see
 :atlas:`Set Up a Private Endpoint for a Dedicated Cluster </security-cluster-private-endpoint/>`.
 
 IP Access Lists
-~~~~~~~~~~~~~~~
+```````````````
 
 We recommend that you configure an {+ip-access-list+} for your API keys and programmatic 
 access to allow access only from trusted IP addresses such as your CI/CD pipeline 
@@ -201,7 +221,7 @@ When you configure your {+ip-access-list+}, we recommend that you:
   and avoid large |cidr| blocks.
 
 VPC/{+vnet+} Peering
-~~~~~~~~~~~~~~~~~~~~
+````````````````````
 
 If you configure |vpc| or {+vnet+} peering, we recommend that you:
 
