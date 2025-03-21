@@ -17,7 +17,8 @@ Info about each paradigm and comparison
 .. toctree::
    :titlesonly:
 
-   Single-Region Deployment </single-region>
-   Multi-Region Deployment </multi-region>
-   Global Deployment </global>
-   Multi-Cloud Deployment </multi-cloud>
+   Single-Region </single-region>
+   Multi-Region </multi-region>
+   Global </global>
+   Multi-Cloud </multi-cloud>
+   Hybrid </hybrid>
