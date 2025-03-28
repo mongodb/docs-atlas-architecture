@@ -143,6 +143,8 @@ For more considerations, see
 </cluster-config/multi-cloud-distribution/#considerations>` in the
 {+service+} documentation.
 
+.. _arch-center-multi-region-rec-summary:
+
 Recommendations for Multi-Region Deployments
 --------------------------------------------
 

@@ -159,6 +159,8 @@ For more considerations, see
 </cluster-config/multi-cloud-distribution/#considerations>` in the
 {+service+} documentation.
 
+.. _arch-center-multi-cloud-rec-summary:
+
 Recommendations for Multi-Cloud Deployments
 --------------------------------------------
 
