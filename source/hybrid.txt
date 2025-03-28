@@ -1,0 +1,133 @@
+.. _arch-center-paradigms-hybrid:
+
+==========================
+Hybrid Deployment Paradigm
+==========================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+Hybrid {+service+} deployments set up both: 
+
+- **MongoDB {+clusters+} located in the cloud**. Cloud deployments
+  can be:
+  
+  - In one or more regions
+  - Spread across one or more cloud providers
+  - Global deployments
+
+- **MongoDB {+clusters+} located on premises**. On-premises
+  deployments can be local deployments that you create with the
+  {+atlas-cli+} or self-managed deployments in 
+  :manual:`MongoDB Enterprise </administration/install-enterprise/>` or
+  :manual:`MongoDB Community </administration/install-community/>`.
+
+Hybrid deployments allow you to keep some data on premises for
+development or compliance, while still leveraging
+the following benefits of {+service+} cloud deployments:
+
+- Scalability and cost savings
+- High availability and low latency on a regional or global scale
+- Features to help meet cloud compliance requirements for 
+  :ref:`data sovereignty <arch-center-compliance-data-sovereignty>` 
+
+To learn how to configure cloud deployments and learn about the
+different types of nodes you can add, see :atlas:`Create a Cluster 
+</tutorial/create-new-cluster/>` in the {+service+} documentation.
+
+To learn how to configure an on-premises deployment, see the following
+resources:
+
+- :atlascli:`Create a Local {+service+} Deployment 
+  </atlas-cli-deploy-local>` with the {+atlas-cli+}
+- :manual:`Install MongoDB </installation/>` for self-managed
+  deployments in MongoDB Enterprise or MongoDB Community
+
+The following diagram shows a hybrid deployment:
+
+.. figure:: /includes/images/hybrid.svg
+   :figwidth: 750px
+   :alt: An image showing a single-region, three-node cloud deployment and a three-node on-premises deployment.
+
+Use Case for Hybrid Deployments
+-------------------------------
+
+Hybrid deployments are best for the following use
+cases:
+
+Cloud-Based Applications with Local Development Environments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A hybrid deployment may be best for you if you have
+the following requirements:
+
+- You want to deploy your production workloads in the cloud, which
+  allows you to scale your resources based on the needs of your
+  application and pay only for the resources you use.
+- You want to develop on local {+clusters+}, which reduces
+  costs when compared to cloud-hosted development.
+- You want to use a single cloud provider *or* multiple cloud providers.
+- You want to deploy to one cloud region *or* multiple cloud regions.
+
+If this is your use case, we recommend that you deploy locally 
+by using the :atlascli:`{+atlas-cli+} </atlas-cli-deploy-local>`. You
+can deploy your cloud databases as single-region, multi-region,
+multi-cloud, or global deployments.
+
+Use the following resources to select your cloud deployment type based
+on your cloud needs:
+
+- :ref:`arch-center-paradigms-single`
+- :ref:`arch-center-paradigms-multi-region`
+- :ref:`arch-center-paradigms-multi-cloud`
+- :ref:`arch-center-paradigms-global`
+
+Cloud-Based Applications with On-premises Compliance Requirements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A hybrid deployment may be best for you if you have
+the following requirements:
+
+- You want to deploy some production workloads in the cloud, which
+  allows you to scale your resources based on the needs of your
+  application and pay only for the resources you use.
+- You want to deploy some production workloads on premises to meet
+  internal compliance requirements.
+- You want to use a single cloud provider *or* multiple cloud providers.
+- You want to deploy to one cloud region *or* multiple cloud regions.
+
+If this is your use case, we recommend that you deploy a self-managed
+database with :manual:`MongoDB Enterprise 
+</administration/install-enterprise/>` or :manual:`MongoDB Community 
+</administration/install-community/>`. You can deploy
+your cloud databases as single-region, multi-region, multi-cloud, or
+global deployments.
+
+Use the following resources to select your cloud deployment type based
+on your cloud needs:
+
+- :ref:`arch-center-paradigms-single`
+- :ref:`arch-center-paradigms-multi-region`
+- :ref:`arch-center-paradigms-multi-cloud`
+- :ref:`arch-center-paradigms-global`
+
+Recommendations for Hybrid Deployments
+--------------------------------------
+
+The {+atlas-arch-center+} does not currently cover recommendations
+specific to hybrid deployments. Contact {+ps+}
+team to create a custom landing zone for your {+service+} hybrid
+deployments.
+
+To find recommendations for your {+service+} cloud deployments,
+see the following resources:
+
+- :ref:`arch-center-single-region-rec-summary`
+- :ref:`arch-center-multi-region-rec-summary`
+- :ref:`arch-center-multi-cloud-rec-summary`
+
