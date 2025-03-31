@@ -24,13 +24,13 @@ Authentication is the process of verifying the identity of a user.
 to determine their access. Authorization is the process of assigning 
 permissions to an authenticated user.
 
-For Authentication, |service| provides robust authentication mechanisms that 
+For **Authentication**, |service| provides robust authentication mechanisms that 
 seamlessly integrate with your existing identity systems, providing secure access
 to the UI, database, and |api|\s through strong identity federation.
 You can manage access to |service-fullname| {+clusters+} by
 configuring authentication. 
 
-For Authorization, |service| provides Role-Based Access Control (RBAC) to govern 
+For **Authorization**, |service| provides Role-Based Access Control (RBAC) to govern 
 access to |service|. You must grant a user one or more roles that determine the
 user's access to database resources and operations. Outside of role
 assignments, the user has no access to the system.
@@ -40,7 +40,6 @@ assignments, the user has no access to the system.
    In this context, a "user" can be a human or an application. We refer to 
    human users as "Workforce Identity" and applications as 
    "Workload Identity".
-
 
 Features for {+service+} Authentication
 ---------------------------------------
@@ -63,13 +62,45 @@ environments.
      - Options for Dev and Test
 
    * - Atlas UI 
-     - Workload (Human)
-     - | line 1
-         line 2
-         Line 3
-     - | line A
-         line B
+     - Workforce (Human)
+     - | Use Federated Auth with an SAML 2.0 identity provider, such as Okta, 
+         Microsoft Entra ID, or Ping Identity. Combine this with  
+         Atlas credentials.  To learn more, see :ref:`atlas-federated-authentication`.
+       | Use Multi-factor Authentication (MFA) for added authentication security. 
+         To learn more, see :ref:`atlas-enable-mfa`.
+       | Use IP access restrictions.
+     - | Use Federated Auth with an SAML 2.0 Identity Provider, such as Okta, 
+         Microsoft Entra ID, or Ping Identity. Combine this with  
+         Atlas credentials. To learn more, see :ref:`atlas-federated-authentication`.
+    
+   * - Atlas Database
+     - Workforce (Human)
+     - | Use :ref:`Workforce Identity Federation <oidc-authentication-workforce>` 
+         with {+oidc+}.
+     - X.509 Client Certificates and SCRAM
+    
+   * - Atlas Database
+     - Workload (Application)
+     - | Use :ref:`Workload Identity Federation <oidc-authentication-workload>`
+       | *or*
+       | :ref:`AWS-IAM authentication <set-up-pwdless-auth>`
+     - :manual:`X.509 </core/security-x.509/>`X.509 certificates and 
+       :manual:`SCRAM </core/security-scram>`
 
+   * - Atlas APIs
+     - Workforce (Human)
+     - | Use Service Accounts: :manual:`X.509 </core/security-x.509/>`X.509 
+         certificates and :manual:`SCRAM </core/security-scram>`
+     - |api| keys
+
+   * - Atlas APIs
+     - Workload (Application)
+     - | Use Service Accounts: :manual:`X.509 </core/security-x.509/>`X.509 
+         certificates and :manual:`SCRAM </core/security-scram>`
+     - |api| keys
+
+- :ref:`oidc-authentication-workload`
+- :ref:`set-up-pwdless-auth`
 
 The following
 authentication methods for each |service| resource ensure that
@@ -137,7 +168,7 @@ Authentication)` within your identity provider.
 You must configure the IP access list in the {+atlas-ui+} to allow only connections 
 from IP ranges that include your users and application servers.
 
-To learn more, see :ref:`atlas-federated-authentication`.
+
 
 Multi-Factor Authentication 
 +++++++++++++++++++++++++++
