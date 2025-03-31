@@ -169,12 +169,14 @@ multi-cloud deployments, see the following sections:
 
 .. important::
 
-   All recommendations that apply to multi-region deployments also
+   Most recommendations that apply to multi-region deployments also
    apply to multi-cloud deployments because all multi-cloud deployments
    are also multi-region. There may be other considerations
    for multi-cloud deployments that are not covered in the
    {+atlas-arch-center+}, such as cloud-provider-aware application-side
-   settings. Contact {+ps+}
+   settings. 
+   
+   Contact {+ps+}
    team to create a custom landing zone for your {+service+} multi-cloud
    deployments that covers all considerations.
 
