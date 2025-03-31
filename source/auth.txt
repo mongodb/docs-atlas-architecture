@@ -68,45 +68,38 @@ environments.
      - | Use :ref:`Federated Auth <arch-center-federated_auth>` with an SAML 2.0 
          identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
          Combine this with Atlas credentials.
-       |    -- *and* --
+       | -- *and* --
        | Use :ref:`Multi-factor Authentication (MFA) <arch-center-MFA>` for 
          added authentication security.
-       |    -- *and* --
+       | -- *and* --
        | Use IP access restrictions.
      - | Use Federated Auth, combined this with Atlas credentials.
     
    * - Atlas Database
      - Workforce (Human) via tools such as {+mongodbsh+} and Compass
-     - | You shouldn't allow human users to connect except in the most 
-       | extreme break-glass emergency scenarios.
-     - | Use :ref:`X.509 <arch-center-x509>` certificates or :manual:`SCRAM </core/security-scram>`
-       | Consider ref:`creating temporary database users <arch-center-just-in-time>`
+     - | Not recommended, except in the most extreme break-glass emergency scenarios.
+     - | Use :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`
+       | Consider :ref:`creating temporary database users <arch-center-just-in-time>`
          with just-in-time database access 
     
    * - Atlas Database
      - Workload (Application)
      - | Use :ref:`Workload Identity Federation <arch-center-workload_if>`
-       |    -- *or* --
+       | -- *or* --
        | :ref:`AWS-IAM authentication <arch-center-iam>`
-     - :manual:`X.509 </core/security-x.509/>` certificates and 
-       :manual:`SCRAM </core/security-scram>`
+     - :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`
 
    * - Atlas APIs
      - Workforce (Human)
-     - | Use :atlas:`Service accounts </api/service-accounts-overview/>`
-         (currently available as a :website:`Preview feature 
-         </resources/products/early-access>`\)
-     - |api| keys
+     - | Use :ref:`<arch-center-admin-service-accounts>` (currently available as 
+         a :website:`Preview feature </resources/products/early-access>`\)
+     - :ref:`<arch-center-admin-api-keys>`
 
    * - Atlas APIs
      - Workload (Application)
-     - | Use :atlas:`Service accounts </api/service-accounts-overview/>`
-         (currently available as a :website:`Preview feature 
-         </resources/products/early-access>`\)
-     - |api| keys
-
-
-
+     - | Use :ref:`<arch-center-admin-service-accounts>` (currently available as 
+         a :website:`Preview feature </resources/products/early-access>`\)
+     - :ref:`<arch-center-admin-api-keys>`
 
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
@@ -260,21 +253,10 @@ To learn more, see the blog :website:`Manage
 MongoDB Atlas Database Secrets in HashiCorp Vault 
 </blog/post/manage-atlas-database-secrets-hashicorp-vault>`.
 
-
-.. _arch-center-admin-api-recs:
-
-{+atlas-admin-api+} Authentication
-````````````````````````````````````````````````````
-
-|service| provides two ways to authenticate to the {+atlas-admin-api+}:
-
-- :atlas:`Service accounts </api/service-accounts-overview/>`
-  (currently available as a :website:`Preview feature 
-  </resources/products/early-access>`\)
-- |api| keys
+.. _arch-center-admin-service-accounts:
 
 Service Accounts
-++++++++++++++++
+~~~~~~~~~~~~~~~~
 
 Service accounts use industry-standard OAuth2.0 to securely authenticate
 with {+service+} through the {+atlas-admin-api+}. We recommend that you use service accounts instead of |api| keys when possible because they provide added security through use short-lived
@@ -286,8 +268,10 @@ programmatic access for service accounts through the {+atlas-cli+} or Terraform.
 
 To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-overview/>`.
 
+.. _arch-center-admin-api-keys: 
+
 API Keys
-++++++++
+~~~~~~~~
 
 If you don't use service accounts, you can use |api| key-based authentication to securely manage
 programmatic access. |api| key-based authentication uses |http| Digest authentication to protect requests.
@@ -298,27 +282,32 @@ such as |aws| Secrets Manager or {+vault+}. To learn how to securely store these
 keys in Vault, see the blog 
 `Manage MongoDB Atlas Database Secrets in HashiCorp Vault <https://www.mongodb.com/blog/post/manage-atlas-database-secrets-hashicorp-vault>`__.
 
-To further enhance security and
-minimize the risk of unauthorized access:
+To further enhance security and minimize the risk of unauthorized access:
 
 - Follow best practices for
   rotating |api| keys regularly. To learn how to rotate these keys with 
   {+vault+}, for example, see `the Hashicorp documentation <https://developer.hashicorp.com/vault/docs/secrets/mongodbatlas>`__.
 
 - Use the IP access list for your API keys. To learn more, see
-  :atlas:`Require an IP Access List for the {+atlas-admin-api+} </configure-api-access/#optional--require-an-ip-access-list-for-the-atlas-administration-api>`.
+  :atlas:`Require an IP Access List for the {+atlas-admin-api+} 
+  </configure-api-access/#optional--require-an-ip-access-list-for-the-atlas-administration-api>`.
 
 To learn more, see :ref:`api-authentication`.
 
+
 Deployments 
 ```````````
+To learn our recommendations for deployments, which relate to authentication, 
+see :ref:`arch-center-hierarchy`.
 
-To learn our recommendations for deployments, which relate to authentication, see :ref:`arch-center-hierarchy`.
 
 .. _arch-center-authorization-recs:
 
 Recommendations for {+service+} Authorization 
 ------------------------------------------------------------------
+
+When planning |service| authorization, consider both access to the 
+control plane (UI and API access) and the database (or "data plane".)
 
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
@@ -337,91 +326,97 @@ Recommendations for {+service+} Authorization
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following recommendations apply to all :ref:`deployment paradigms
-<arch-center-paradigms>`.
+The following recommendations apply to both workforce (human) and workload 
+(application) users in all :ref:`deployment paradigms <arch-center-paradigms>`.
+You must use :ref:`Role-Based Access Control (RBAC) <arch-center-rbac>` for 
+authorization. Using an :ref:`Identity Federation Provider's <arch-center-fip>` 
+groups with RBAC simplifies management.
 
 .. list-table:: 
-   :widths: 10 13 40 37
+   :widths: 20 50 30
    :header-rows: 1
 
    * - Resource
-     - User 
      - Recommendations for Production
      - Options for Dev and Test
 
-   * - Atlas UI 
-     - Workforce and Workload
+   * - Atlas Control Plane (UI and APIs)
      - | *Not recommended for production environments.*
-     - | Use:
-       | - Predefined roles with Role-Based Access Control (RBAC). Using Identity 
-         Federation groups with RBAC makes management easier.
-       | - Domain restrictions
-       | And assign the lowest-needed roles
-
-   * - Atlas APIs
-     - Workforce (Human)
-     - | Use:
-       | - Predefined roles with Role-Based Access Control (RBAC). Using Identity 
-         Federation groups with RBAC makes management easier.
-       | - Domain restrictions
-       | And assign the lowest-needed roles
-     - TBD
+     - | - Restrict access by assigning the lowest-needed RBAC roles. 
+       | - Assign roles directly using the ``users`` claim instead of ``groups``. 
+       | - Use domain restrictions.
 
    * - Atlas Database
-     - Workforce (Human)
-     - | Use Identity Federation groups with RBAC 
-       |    -- *and* --
-       | Define group membership in the Identity Provider
-     - TBD
-    
-   * - Atlas Database
-     - Workload (Application)
-     - | Use Identity Federation groups with RBAC 
-     - TBD
+     - | Use custom fine-grained database roles. For human users, assign roles 
+       | directly using the ``users`` claim instead of ``groups``.
+     - Use the predefined ``readWriteAny`` role
 
+.. _arch-center-rbac:
 
+Role-Based Access Control (RBAC) and Predefined Roles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You must implement |service|'s robust Role-Based Access Control (RBAC) 
-to effectively manage access across all resources. |service| includes 
-built-in roles that provide different levels of access commonly needed 
-for managing the |service| control plane. For connecting to |service| 
-{+clusters+} in the data plane, we recommend using database 
-fine-grained custom roles to provide granular scoping based on the access 
-to the data access required for the role to perform its function.
-This approach enables you to follow the principle of least privilege.
+|service| uses Role-Based Access Control (RBAC) to simplify management of user 
+authorization. |service| includes predefined :atlas:`user roles <user-roles>` that 
+provide specific levels of access commonly needed for managing the |service| with 
+the UI and APIs. To simplify management, you can then map the roles to to 
+:abbr:`IdP (Identity Provider)` groups.
 
-Additionally, by integrating |service| with a federated identity provider, 
-you can use just-in-time provisioning by mapping identity provider groups to |service| roles. 
-This streamlines access management and ensures secure and organized role 
-assignments throughout the platform. You can grant access programmatically 
-based on the provisioning process of your orchestration layer.
+To learn more about mapping roles to Federated Identity provider groups, refer 
+to :atlas:`Role Mapping Process </security/manage-role-mapping/#role-mapping-process>`. 
 
-In general, it is a best practice to always restrict access to upper 
-environments  to only programmatic service accounts with scripts that 
-are tested for security and deterministic outcomes. Human access should 
-only be allowed in lower environments during development and testing.
+For connecting to |service| {+clusters+}, use fine-grained custom database roles 
+to provide granular scoping based on the access required for the role to perform 
+its function. This approach enables you to follow the principle of least privilege.
 
-{+atlas-ui+} and {+atlas-admin-api+} (Control Plane) Authorization
-``````````````````````````````````````````````````````````````````````
+To learn more, refer to :atlas:`<mongodb-users-roles-and-privileges>`.
 
-You can assign users, service accounts, and API keys to predefined
-roles, specifying the
-actions they can perform within |service| organizations, projects, or
-both. Use Identity Federation to manage access by linking your identity
-provider groups to |service| roles through group-role mappings.  
+.. _arch-center-fip:
 
-We recommend that you use a modern federated Identity Provider (IdP) that 
-provides SSO with SAML such as Azure Entra ID, Okta, or Ping Identity
-as this makes the authorization process more secure and supports the 
+Federated Identity Providers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By integrating |service| with a federated identity provider, 
+you can use just-in-time provisioning by mapping identity provider groups to 
+|service| roles. This streamlines access management and ensures secure and 
+organized role assignments throughout the platform. You can grant access 
+programmatically based on the provisioning process of your orchestration layer.
+
+In general, you should always restrict access in production ("upper") 
+environments to only programmatic service accounts with scripts that 
+are fully tested for security and deterministic outcomes. Human access should 
+only be allowed in development and test ("lower") environments.
+
+You should use a modern federated Identity Provider (IdP) that 
+provides SSO with SAML such as Azure Entra ID, Okta, or Ping Identity. 
+This makes the authorization process more secure and supports the 
 flexibility needed to programmatically assign :abbr:`IdP (Identity Provider)` 
-groups to |service| roles. You should restrict your company's domain from 
-preventing users from logging into |service| when they are not authorized 
-for access, which you can do by following the procedure in
+groups to |service| roles. You should restrict access to your company's domain, 
+which prevents users from logging into |service| when they are not authorized 
+for access. You can do by following the procedure in 
 :atlas:`Manage Domain Mapping for Federated Authentication 
-</security/manage-domain-mapping/>`. From here,  we recommend that
-you map your :abbr:`IdP (Identity Provider)` groups to |service| roles
-as shown in :atlas:`Role Mapping Process
-</security/manage-role-mapping/#role-mapping-process>`.   
+</security/manage-domain-mapping/>`. 
+
+Database Authorization
+``````````````````````
+Workforce and workload users can be assigned predefined or custom fine-grained 
+database roles, with permissions tailored to specific 
+projects or individual {+clusters+}.
+
+For workload (human) identities, we recommend assigning roles directly using the
+``users`` claim instead of ``groups``. In development and test environments,
+you can default to the predefined ``readWriteAny`` role to simplify the
+development and testing process. When moving the application to higher
+environments, you should build a custom role to restrict the access that
+the application server has based on the principle of least privilege.
+
+To learn more, see the following: 
+
+- :ref:`mongodb-users-roles-and-privileges`
+- :ref:`mongodb-roles`
+
+Organization and Project Authorization
+--------------------------------------
 
 If you have followed the standard |service| hierarchy of a single billing 
 organization with a linked organization for each {+BU+} or department, then 
@@ -472,40 +467,15 @@ commonly used roles can serve as a general guideline:
   ability to view and edit data, including creating and dropping databases, 
   collections, and indexes on the {+cluster+}, which is useful for rapid 
   experimentation and development. 
-  If you are not comfortable giving development teams this level of access in the development environment, you 
-  can grant them read-only access to the {+cluster+}\'s data and performance 
-  statistics with the ``Project Data Access Read Only`` role.
+  If you are not comfortable giving development teams this level of access in 
+  the development environment, you can grant them read-only access to the 
+  {+cluster+}\'s data and performance statistics with the 
+  ``Project Data Access Read Only`` role.
 
   To grant read-only access to the {+cluster+}'s 
   data in production environments, use the ``Project Observability Viewer`` role. 
 
 To learn more, see :ref:`user-roles`.
-
-Database Authorization
-``````````````````````
-
-Workforce and workload users can be assigned fine-grained database
-roles, predefined or custom, with permissions tailored to specific
-projects or individual {+clusters+}. In staging and production
-environments, we recommend using Identity Federation to streamline 
-access management by linking your Identity Provider (IdP) to |service| 
-for a more modern and streamlined authentication and authorization flow
-for data access.  
-
-By configuring :atlas:`Group Membership </workforce-oidc/>` in your :abbr:`IdP (Identity
-Provider)`, you can map groups to database users, simplifying access
-control within the :abbr:`IdP (Identity Provider)`. However, for
-workload identities, we recommend assigning roles directly using the
-``users`` claim instead of ``groups``. In development and test environments,
-you can default to the predefined ``readWriteAny`` role to simplify the
-development and testing process. When moving the application to higher
-environments, you should build a custom role to restrict the access that
-the application server has based on the principle of least privilege.
-
-To learn more, see the following: 
-
-- :ref:`mongodb-users-roles-and-privileges`
-- :ref:`mongodb-roles`
 
 Automation Examples: {+service+} Authentication and Authorization
 -----------------------------------------------------------------
