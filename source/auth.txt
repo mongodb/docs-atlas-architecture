@@ -21,43 +21,57 @@ Guidance for {+service+} Authorization and Authentication
 
 Authentication is the process of verifying the identity of a user.
 |service| requires all users to authenticate themselves in order 
-to determine their access. 
+to determine their access. Authorization is the process of assigning 
+permissions to an authenticated user.
 
-Although authentication and authorization are closely connected,
-authentication is distinct from authorization: 
+For Authentication, |service| provides robust authentication mechanisms that 
+seamlessly integrate with your existing identity systems, providing secure access
+to the UI, database, and |api|\s through strong identity federation.
+You can manage access to |service-fullname| {+clusters+} by
+configuring authentication. 
 
-- Authentication verifies the identity of a user.
+For Authorization, |service| provides Role-Based Access Control (RBAC) to govern 
+access to |service|. You must grant a user one or more roles that determine the
+user's access to database resources and operations. Outside of role
+assignments, the user has no access to the system.
 
-  |service| provides robust authentication mechanisms that seamlessly
-  integrate with your existing identity systems, providing secure access
-  to the UI, database, and |api|\s through strong identity federation.
-  You can manage access to |service-fullname| {+clusters+} by
-  configuring authentication. 
+.. note:: 
 
-- Authorization determines the verified user's access to resources and
-  operations. 
+   In this context, a "user" can be a human or an application. We refer to 
+   human users as "Workforce Identity" and applications as 
+   "Workload Identity".
 
-  |service| provides Role-Based Access Control (RBAC) to govern access to
-  |service|. You must grant a user one or more roles that determine the
-  user's access to database resources and operations. Outside of role
-  assignments, the user has no access to the system.
 
 Features for {+service+} Authentication
 ---------------------------------------
 
 |service-fullname| supports a variety of authentication methods to
-ensure robust security.   
+ensure robust security. |service| requires all users to authenticate to 
+access {+atlas-ui+}, |service| database, and {+atlas-admin-api+}. 
 
-- The best practice for user authentication is utilizing |service|'s 
-  seamless integration with identity providers using federated authentication 
-  through OpenID Connect (OIDC) or SAML 2.0, and enhancing security with Multi-Factor
-  Authentication (MFA) to ensure a modern authentication and security posture. 
-- For workload authentication, |service| supports OAuth2.0, allowing
-  seamless compatibility with authorization services and integration 
-  into your federated :abbr:`IdP (Identity Provider)`.
+The following table provides guidance on the recommended authentication methods 
+for production and other methods you might use in development and test 
+environments. 
 
-|service| requires all users to authenticate to access {+atlas-ui+}, 
-|service| database, and {+atlas-admin-api+}. The following
+.. list-table:: 
+   :widths: 10 10 40 40
+   :header-rows: 1
+
+   * - Resource
+     - User 
+     - Recommendations for Production
+     - Options for Dev and Test
+
+   * - Atlas UI 
+     - Workload (Human)
+     - | line 1
+         line 2
+         Line 3
+     - | line A
+         line B
+
+
+The following
 authentication methods for each |service| resource ensure that
 authentication is both secure and adaptable. |service| provides the
 following authentication mechanisms:
