@@ -41,8 +41,10 @@ assignments, the user has no access to the system.
    human users as "Workforce Identity" and applications as 
    "Workload Identity".
 
-Features for {+service+} Authentication
----------------------------------------
+.. _arch-center-authentication-recs:
+
+Recommendations for {+service+} Authentication
+--------------------------------------------------------------------------
 
 |service-fullname| supports a variety of authentication methods to
 ensure robust security. |service| requires all users to authenticate to 
@@ -53,7 +55,7 @@ for production and other methods you might use in development and test
 environments. 
 
 .. list-table:: 
-   :widths: 10 10 40 40
+   :widths: 10 13 40 37
    :header-rows: 1
 
    * - Resource
@@ -63,54 +65,48 @@ environments.
 
    * - Atlas UI 
      - Workforce (Human)
-     - | Use Federated Auth with an SAML 2.0 identity provider, such as Okta, 
-         Microsoft Entra ID, or Ping Identity. Combine this with  
-         Atlas credentials.  To learn more, see :ref:`atlas-federated-authentication`.
-       | Use Multi-factor Authentication (MFA) for added authentication security. 
-         To learn more, see :ref:`atlas-enable-mfa`.
+     - | Use :ref:`Federated Auth <arch-center-federated_auth>` with an SAML 2.0 
+         identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
+         Combine this with Atlas credentials.
+       |    -- *and* --
+       | Use :ref:`Multi-factor Authentication (MFA) <arch-center-MFA>` for 
+         added authentication security.
+       |    -- *and* --
        | Use IP access restrictions.
-     - | Use Federated Auth with an SAML 2.0 Identity Provider, such as Okta, 
-         Microsoft Entra ID, or Ping Identity. Combine this with  
-         Atlas credentials. To learn more, see :ref:`atlas-federated-authentication`.
+     - | Use Federated Auth, combined this with Atlas credentials.
     
    * - Atlas Database
-     - Workforce (Human)
-     - | Use :ref:`Workforce Identity Federation <oidc-authentication-workforce>` 
-         with {+oidc+}.
-     - X.509 Client Certificates and SCRAM
+     - Workforce (Human) via tools such as {+mongodbsh+} and Compass
+     - | You shouldn't allow human users to connect except in the most 
+       | extreme break-glass emergency scenarios.
+     - | Use :ref:`X.509 <arch-center-x509>` certificates or :manual:`SCRAM </core/security-scram>`
+       | Consider ref:`creating temporary database users <arch-center-just-in-time>`
+         with just-in-time database access 
     
    * - Atlas Database
      - Workload (Application)
-     - | Use :ref:`Workload Identity Federation <oidc-authentication-workload>`
-       | *or*
-       | :ref:`AWS-IAM authentication <set-up-pwdless-auth>`
-     - :manual:`X.509 </core/security-x.509/>`X.509 certificates and 
+     - | Use :ref:`Workload Identity Federation <arch-center-workload_if>`
+       |    -- *or* --
+       | :ref:`AWS-IAM authentication <arch-center-iam>`
+     - :manual:`X.509 </core/security-x.509/>` certificates and 
        :manual:`SCRAM </core/security-scram>`
 
    * - Atlas APIs
      - Workforce (Human)
-     - | Use Service Accounts: :manual:`X.509 </core/security-x.509/>`X.509 
-         certificates and :manual:`SCRAM </core/security-scram>`
+     - | Use :atlas:`Service accounts </api/service-accounts-overview/>`
+         (currently available as a :website:`Preview feature 
+         </resources/products/early-access>`\)
      - |api| keys
 
    * - Atlas APIs
      - Workload (Application)
-     - | Use Service Accounts: :manual:`X.509 </core/security-x.509/>`X.509 
-         certificates and :manual:`SCRAM </core/security-scram>`
+     - | Use :atlas:`Service accounts </api/service-accounts-overview/>`
+         (currently available as a :website:`Preview feature 
+         </resources/products/early-access>`\)
      - |api| keys
 
-- :ref:`oidc-authentication-workload`
-- :ref:`set-up-pwdless-auth`
 
-The following
-authentication methods for each |service| resource ensure that
-authentication is both secure and adaptable. |service| provides the
-following authentication mechanisms:
 
-.. _arch-center-authentication-recs:
-
-Recommendations for {+service+} Authentication
-----------------------------------------------
 
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
@@ -126,34 +122,12 @@ Recommendations for {+service+} Authentication
 
    Recommendations here
 
-All Deployment Paradigm Recommendations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The following sections provide details about these authentication methods. 
 
-The following recommendations apply to all :ref:`deployment paradigms
-<arch-center-paradigms>`.
-
-{+atlas-ui+} Authentication
-```````````````````````````
-
-We recommend federated authentication for {+atlas-ui+} access. To
-configure federated authentication, you must create {+service+}
-credentials or log in with Google or Github. 
-
-For {+service+} credentials,
-we recommend that you use a strong password accompanied by a
-phishing-resistant :abbr:`MFA (Multi-Factor Authentication)`, such as
-biometrics. We highly recommend that you set up a secondary 
-:abbr:`MFA (Multi-Factor Authentication)` factor
-to avoid account lock-outs. To ensure 
-:abbr:`MFA (Multi-Factor Authentication)` access for {+service+} 
-credentials, turn on :abbr:`MFA (Multi-Factor Authentication)`
-enforcement in the Organization Settings. After you set up federation
-for your domain, you should use {+service+} credentials to
-authenticate only in the emergency break-glass scenarios when federated
-authentication is broken.
+.. _arch-center-federated_auth:
 
 Federated Authentication
-++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Federated authentication allows you to manage all authentication to
 the {+atlas-ui+} across multiple systems and applications through a
@@ -168,10 +142,12 @@ Authentication)` within your identity provider.
 You must configure the IP access list in the {+atlas-ui+} to allow only connections 
 from IP ranges that include your users and application servers.
 
+To learn more, refer to :ref:`atlas-federated-authentication`.
 
+.. _arch-center-mfa:
 
 Multi-Factor Authentication 
-+++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For any human user that has access to the |service| control plane, we recommend
 that you require :abbr:`MFA (Multi-Factor Authentication)` for enhanced security.
@@ -190,40 +166,19 @@ two forms of identification:
 
 To learn more, see :ref:`atlas-enable-mfa`.
 
-|service| Database Authentication 
-`````````````````````````````````
-
-|service| supports various database authentication mechanisms.
-
-To configure workforce (human user) access to your |service| 
-database via tools such as {+mongodbsh+} and Compass, 
-use :ref:`Workforce Identity Federation <oidc-authentication-workforce>` with {+oidc+}. 
-
-To configure workload (application) access to your |service|
-database using MongoDB drivers, use :ref:`Workload Identity Federation <oidc-authentication-workload>`, 
-AWS-IAM authentication, or X.509 certificate authentication. We recommend :manual:`SCRAM </core/security-scram>` 
-password authentication for use only in development or testing environments. 
-
-|service| also supports: 
-
-- :ref:`Creating temporary database users <arch-center-just-in-time>`
-  with just-in-time database access 
-- :ref:`Third-party secrets manangement <arch-center-secrets>`
+.. _arch-center-workforce_if:
 
 Workforce Identity Federation
-+++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Workforce Identity Federation allows you to manage all authentication to 
-the |service| database through your identity provider. For database
-access, we recommend {+oidc+}-compatible identity
-providers such as Okta, Microsoft Entra ID, or Ping Identity to enforce
-security policies such as password complexity, credential rotation, and
-:abbr:`MFA (Multi-Factor Authentication)` within your identity provider. 
+the |service| database through your identity provider. To learn more, 
+see :ref:`oidc-authentication-workforce`.
 
-To learn more, see :ref:`oidc-authentication-workforce`.
+.. _arch-center-workload_if:
 
-Workload Identity Federation and AWS IAM Role Authentication
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Workload Identity Federation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Workload Identity Federation enables applications running in cloud
 environments like |azure| and Google Cloud to authenticate with
@@ -234,20 +189,20 @@ OAuth 2.0-compliant service. These authentication mechanisms simplify
 management and enhance security by allowing for passwordless access to
 the |service| database. 
 
-We recommend Workload Identity Federation for all applications running in 
-production. You shouldn't allow human users to connect except in the most 
-extreme break-glass emergency scenarios.
+To learn more, refer to :ref:`oidc-authentication-workload`.
 
-You can also authenticate
-through |aws| |iam| roles.
+.. _arch-center-iam:
 
-To learn more, see the following: 
+AWS IAM Role Authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- :ref:`oidc-authentication-workload`
-- :ref:`set-up-pwdless-auth`
+You can also authenticate through |aws| |iam| roles. To learn more, 
+refer to :ref:`set-up-pwdless-auth`.
 
-X.509 Client Certificates and SCRAM 
-+++++++++++++++++++++++++++++++++++
+.. _arch-center-x509:
+
+X.509 Client Certificates 
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We recommend that you use Workforce or Workload Identity Federation 
 through an identity provider for security and ease of access to all aspects of the 
@@ -263,38 +218,37 @@ the security of these certificates on the application side, while
 Workload Identity Federation allows for passwordless access and easier
 application security.
 
-|service| {+clusters+} also support SCRAM password authentication for user authentication, 
+To learn more, refer to :manual:`X.509 </core/security-x.509/>`.
+
+.. _arch-center-scram:
+
+SCRAM Password Authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|service| {+clusters+} support SCRAM password authentication for user authentication, 
 but we recommend SCRAM only for use in development and test environments. 
 
 If you leverage X.509 or SCRAM authentication, we recommend that you use 
-third-party secrets manager like
+third-party secrets manager like 
 `HashiCorp Vault <https://developer.hashicorp.com/vault/docs/secrets/databases/mongodbatlas>`__
 or |aws| Secrets Manager to generate and store complex database credentials. 
 
-To learn more, see the following manual pages: 
-
-- :manual:`X.509 </core/security-x.509/>`
-- :manual:`SCRAM </core/security-scram/>`
+To learn more, refer to :manual:`SCRAM </core/security-scram/>`.
 
 .. _arch-center-just-in-time:
 
 Just-in-Time Access 
-+++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~
 
 |service| also supports creating temporary database users
 that automatically expire after the predefined times. A user can be
-created for the following periods: 
-
-- 6 hours
-- 1 day
-- 1 week
+created for 6 hours, 1 day, or 1 week.
 
 To learn more, see :ref:`mongodb-users`. 
 
 .. _arch-center-secrets:
 
 Secrets Management
-++++++++++++++++++
+~~~~~~~~~~~~~~~~~~
 
 We recommend using a third-party secrets manager like `HashiCorp Vault
 <https://developer.hashicorp.com/vault/docs/secrets/databases/mongodbatlas>`__
@@ -305,6 +259,7 @@ roles for |service| databases.
 To learn more, see the blog :website:`Manage
 MongoDB Atlas Database Secrets in HashiCorp Vault 
 </blog/post/manage-atlas-database-secrets-hashicorp-vault>`.
+
 
 .. _arch-center-admin-api-recs:
 
@@ -363,7 +318,7 @@ To learn our recommendations for deployments, which relate to authentication, se
 .. _arch-center-authorization-recs:
 
 Recommendations for {+service+} Authorization 
----------------------------------------------
+------------------------------------------------------------------
 
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
@@ -384,6 +339,47 @@ All Deployment Paradigm Recommendations
 
 The following recommendations apply to all :ref:`deployment paradigms
 <arch-center-paradigms>`.
+
+.. list-table:: 
+   :widths: 10 13 40 37
+   :header-rows: 1
+
+   * - Resource
+     - User 
+     - Recommendations for Production
+     - Options for Dev and Test
+
+   * - Atlas UI 
+     - Workforce and Workload
+     - | *Not recommended for production environments.*
+     - | Use:
+       | - Predefined roles with Role-Based Access Control (RBAC). Using Identity 
+         Federation groups with RBAC makes management easier.
+       | - Domain restrictions
+       | And assign the lowest-needed roles
+
+   * - Atlas APIs
+     - Workforce (Human)
+     - | Use:
+       | - Predefined roles with Role-Based Access Control (RBAC). Using Identity 
+         Federation groups with RBAC makes management easier.
+       | - Domain restrictions
+       | And assign the lowest-needed roles
+     - TBD
+
+   * - Atlas Database
+     - Workforce (Human)
+     - | Use Identity Federation groups with RBAC 
+       |    -- *and* --
+       | Define group membership in the Identity Provider
+     - TBD
+    
+   * - Atlas Database
+     - Workload (Application)
+     - | Use Identity Federation groups with RBAC 
+     - TBD
+
+
 
 You must implement |service|'s robust Role-Based Access Control (RBAC) 
 to effectively manage access across all resources. |service| includes 
