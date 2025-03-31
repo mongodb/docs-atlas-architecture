@@ -107,8 +107,28 @@ Features for {+service+} Monitoring and Alerts
 Recommendations for {+service+} Monitoring and Alerts
 -----------------------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 Monitor by Using Metrics
-~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````
 
 To monitor your {+cluster+} or database performance, you can view the {+cluster+} metrics such as historical throughput,
 performance, and utilization metrics. The following table lists some
@@ -151,7 +171,7 @@ custom metrics tools.
 To learn more, see :ref:`monitor-cluster-metrics`. 
 
 Monitor by Configuring Alerts 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````````````
 
 |service| extends into your existing observability stack so that you can get alerts and make data-driven decisions without replacing your
 current tools or changing your workflows. {+service+} can send alert notifications with third-party tools like
@@ -173,7 +193,7 @@ available filters to limit results by host, replica set, cluster,
 shard, and more to help focus on the most critical alerts.
 
 Recommended {+service+} Alert Configurations
-````````````````````````````````````````````
+############################################
 
 At the minimum, we recommend configuring the following alerts. These
 alerts recommendations provide a baseline, but you should adjust them
@@ -348,13 +368,13 @@ multiple alerts for the same condition, one for a low priority level of severity
 To learn more, see :atlas:`Configure and Resolve Alerts </alerts>`. 
 
 Monitor by Using {+service+} Built-In Tools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````````````````````````
 
 |service| provides several tools that allow you to proactively monitor and
 improve the performance of your database. 
 
 Real-Time Performance Panel
-```````````````````````````
+###########################
 
 The Real-Time Performance Panel (RTPP) in the {+atlas-ui+} provides
 insights into current network traffic, database operations, and hardware
@@ -377,7 +397,7 @@ with :oas-atlas-op:`Update One Project Settings
 To learn more, see :ref:`real-time-metrics-status-tab`.
 
 Query Profiler 
-``````````````
+##############
 
 The Query Profiler identifies slow queries and bottlenecks, and suggests
 index refinement and query restructuring to improve the performance of
@@ -394,7 +414,7 @@ with :oas-atlas-op:`Return Slow Queries
 To learn more, see :ref:`query-profiler`.
 
 Performance Advisor 
-```````````````````
+###################
 
 The Performance Advisor automatically analyzes logs for slow-running
 queries and recommends indexes to create and drop. It analyzes slow
@@ -416,7 +436,7 @@ with :oas-atlas-op:`Return Slow Queries
 To learn more, see :ref:`performance-advisor`.
 
 Namespace Insights 
-``````````````````
+##################
 
 The Namespace Insights page in the {+atlas-ui+} allows you to monitor
 collection-level performance and usage metrics. It displays metrics
@@ -430,7 +450,7 @@ decisions about scaling, indexing, and query tuning.
 To learn more, see :ref:`namespace-insights`.  
 
 Monitor by Using Logs 
-~~~~~~~~~~~~~~~~~~~~~
+`````````````````````
 
 .. include:: /includes/cloud-docs/logs.rst
 

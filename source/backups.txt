@@ -100,8 +100,28 @@ monthly, each with its own retention period.
 Recommendations for {+service+} Backups
 ---------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 Recommendations for Backup Strategy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````````````````
 
 You must align your backup strategy with specific Recovery Point
 Objectives (RPO) and Recovery Time Objectives (RTO) to meet business
@@ -139,7 +159,7 @@ your RTO.
 .. _backup-policy-recommendations:
 
 Recommendations for Backup Policy 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````````````````
 
 |service| provides predefined backup snapshot schedules including
 frequency of snapshots, and retention period. Retaining backup snapshots
@@ -187,7 +207,7 @@ the following:
 .. _atlas-backup-distribution:
 
 Recommendations for Backup Distribution 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````````````````````
 
 |service| provides options for backup locations. To further enhance
 resilience, we recommend distributing backups to a local region and to an
@@ -204,14 +224,14 @@ your critical workloads might require multiple copies of snapshots in
 various locations. 
 
 Recommendations for Backup Compliance Policy 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````````````````````````
 
 We recommend enforcing |service|'s `Backup Compliance Policy <https://www.mongodb.com/docs/atlas/backup/cloud-backup/backup-compliance-policy/>`__ to prevent
 unauthorized modifications or deletions of backups, thereby maintaining
 data integrity and supporting robust disaster recovery.  
 
 Recommendations for PIT Recovery
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````````````
 
 Continuous Cloud Backups enable precise Point In Time (PIT) recovery, which minimizes
 data loss during failures. |service| can quickly recover to the exact
@@ -229,7 +249,7 @@ for recovery, we recommend designing templates that identify the best
 compromise between reasonable recovery options and cost. 
 
 Recommendations for Backup Costs 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````````````
 
 To optimize |service| backup costs, you must adjust the backup frequency 
 and retention policies to align with data criticality, reducing

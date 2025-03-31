@@ -31,9 +31,9 @@ This page:
   - How {+service+} fits into your organization's larger ecosystem and
     architecture.
 
-MongoDB's Professional Services team partners with enterprise
+{+ps+} team partners with enterprise
 customers to create custom landing zones for {+service+}. If you're
-working with MongoDB's Professional Services, the resources on this
+working with {+ps+}, the resources on this
 page can also help you plan for those discussions.
 
 Landing Zone Overview

@@ -55,6 +55,26 @@ It is imperative that you test the plans in this section regularly (ideally quar
 
 Some disaster recovery testing might require actions that cannot be performed by EDM users. In these cases, open a support case for the purpose of performing artificial outages at least a week in advance of when you plan on running a test exercise.
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 This section covers the following disaster recovery procedures:
 
 - :ref:`arch-center-single-node-outage`
@@ -70,7 +90,7 @@ This section covers the following disaster recovery procedures:
 .. _arch-center-single-node-outage:
 
 Single Node Outage
-~~~~~~~~~~~~~~~~~~
+``````````````````
 
 If a single node in your replica set fails due to a regional outage, your deployment should still be available, assuming you have followed best practices. If you are reading from secondaries, you might experience degraded performance because you have one less node to read from.
 
@@ -81,7 +101,7 @@ You can test a primary node outage in {+service+} using the
 .. _arch-center-regional-outage:
 
 Regional Outage
-~~~~~~~~~~~~~~~
+```````````````
 
 Multi-region clusters reroute traffic to another region in the event of a 
 regional outage to ensure high availability. To learn more, see :ref:`<arch-center-paradigms-multi-region>`.
@@ -131,7 +151,7 @@ You can test a region outage in {+service+} using the
 .. _arch-center-provider-outage:
 
 Cloud Provider Outage
-~~~~~~~~~~~~~~~~~~~~~
+`````````````````````
 
 With multi-cloud clusters, you can select electable nodes across cloud providers 
 to maintain high availability. Should the provider in which your primary node is 
@@ -180,7 +200,7 @@ unavailable, follow these steps to bring your deployment back online:
 .. _arch-center-atlas-outage:
 
 {+service+} Outage
-~~~~~~~~~~~~~~~~~~
+``````````````````
 
 In the highly unlikely event that the {+service+} Control Plane and
 the {+atlas-ui+} are unavailable, your {+cluster+} is still available and accessible.
@@ -191,7 +211,7 @@ to investigate this further.
 .. _arch-center-resource-capacity:
 
 Resource Capacity Issues
-~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````
 
 Computational resource (such as disk space, RAM, or CPU) capacity
 issues can result from poor planning or unexpected database traffic.
@@ -224,7 +244,7 @@ amount and causes a disaster, follow these steps:
 .. _arch-center-resource-failure:
 
 Resource Failure
-~~~~~~~~~~~~~~~~
+````````````````
 
 .. include:: /includes/temporary-cluster-fix.rst
 
@@ -247,7 +267,7 @@ unavailable, follow these steps:
 .. _arch-center-data-deletion:
 
 Deletion of Production Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````````
 
 Production data might be accidentally deleted due to human error or a bug
 in the application built on top of the database.
@@ -281,7 +301,7 @@ If the contents of a collection or database have been deleted, follow these step
 .. _arch-center-driver-failure:
 
 Driver Failure
-~~~~~~~~~~~~~~
+``````````````
 
 If a driver fails, follow these steps:
 
@@ -313,7 +333,7 @@ If a driver fails, follow these steps:
 .. _arch-center-data-corruption:
 
 Data Corruption
-~~~~~~~~~~~~~~~
+```````````````
 
 .. include:: /includes/temporary-cluster-fix.rst
 
