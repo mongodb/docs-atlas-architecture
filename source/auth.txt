@@ -51,8 +51,8 @@ ensure robust security. |service| requires all users to authenticate to
 access {+atlas-ui+}, |service| database, and {+atlas-admin-api+}. 
 
 The following table provides guidance on the recommended authentication methods 
-for production and other methods you might use in development and test 
-environments. 
+for staging and production ("upper") environments, and other methods you might 
+use in development and test ("lower") environments. 
 
 .. list-table:: 
    :widths: 10 13 40 37
@@ -76,11 +76,11 @@ environments.
      - | Use Federated Auth, combined this with Atlas credentials.
     
    * - Atlas Database
-     - Workforce (Human) via tools such as {+mongodbsh+} and Compass
+     - Workforce (Human)
      - | Not recommended, except in the most extreme break-glass emergency scenarios.
-     - | Use :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`
+     - | Use :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`.
        | Consider :ref:`creating temporary database users <arch-center-just-in-time>`
-         with just-in-time database access 
+         with just-in-time database access.
     
    * - Atlas Database
      - Workload (Application)
@@ -106,16 +106,17 @@ environments.
    :sub_heading: Recommendations that apply only to deployments in a single region
    :expanded: true
 
-   Recommendations here
+   <<Recommendations that apply only to deployments in a single region here>>
 
 .. collapsible::
    :heading: Multi-Region and Multi-Cloud Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
    :expanded: true
 
-   Recommendations here
+   <<Recommendations that apply only to deployments across multiple regions or multiple cloud providers here>>
 
-The following sections provide details about these authentication methods. 
+
+The following sections provide details about the authentication methods. 
 
 .. _arch-center-federated_auth:
 
@@ -294,12 +295,10 @@ To further enhance security and minimize the risk of unauthorized access:
 
 To learn more, see :ref:`api-authentication`.
 
-
 Deployments 
 ```````````
 To learn our recommendations for deployments, which relate to authentication, 
 see :ref:`arch-center-hierarchy`.
-
 
 .. _arch-center-authorization-recs:
 
@@ -309,19 +308,6 @@ Recommendations for {+service+} Authorization
 When planning |service| authorization, consider both access to the 
 control plane (UI and API access) and the database (or "data plane".)
 
-.. collapsible::
-   :heading: Single-Region Deployment Recommendations
-   :sub_heading: Recommendations that apply only to deployments in a single region
-   :expanded: true
-
-   Recommendations here
-
-.. collapsible::
-   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
-   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
-   :expanded: true
-
-   Recommendations here
 
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -348,8 +334,23 @@ groups with RBAC simplifies management.
 
    * - Atlas Database
      - | Use custom fine-grained database roles. For human users, assign roles 
-       | directly using the ``users`` claim instead of ``groups``.
+         directly using the ``users`` claim instead of ``groups``.
      - Use the predefined ``readWriteAny`` role
+
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   <<Recommendations that apply only to deployments in a single region here>>
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   <<Recommendations that apply only to deployments across multiple regions or multiple cloud providers here>>
+
 
 .. _arch-center-rbac:
 
@@ -398,7 +399,8 @@ for access. You can do by following the procedure in
 </security/manage-domain-mapping/>`. 
 
 Database Authorization
-``````````````````````
+~~~~~~~~~~~~~~~~~~~~~~
+
 Workforce and workload users can be assigned predefined or custom fine-grained 
 database roles, with permissions tailored to specific 
 projects or individual {+clusters+}.
