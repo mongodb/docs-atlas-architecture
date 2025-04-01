@@ -69,7 +69,7 @@ use in development and test ("lower") environments.
          identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
          Combine this with Atlas credentials.
        | -- *and* --
-       | Use :ref:`Multi-factor Authentication (MFA) <arch-center-MFA>` for 
+       | Use :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>` for 
          added authentication security.
        | -- *and* --
        | Use IP access restrictions.
@@ -306,11 +306,7 @@ Recommendations for {+service+} Authorization
 ------------------------------------------------------------------
 
 When planning |service| authorization, consider both access to the 
-control plane (UI and API access) and the database (or "data plane".)
-
-
-All Deployment Paradigm Recommendations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+control plane (UI and API access) and the database (or "data plane").
 
 The following recommendations apply to both workforce (human) and workload 
 (application) users in all :ref:`deployment paradigms <arch-center-paradigms>`.
