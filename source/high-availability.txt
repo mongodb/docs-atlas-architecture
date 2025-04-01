@@ -147,6 +147,7 @@ To learn more about how to plan for and respond to disasters, see
 Choose a Deployment Type and Cluster Tier that Fits your Deployment Goals
 `````````````````````````````````````````````````````````````````````````
 
+
 When creating a new cluster, you can choose between between a range of {+cluster+} tiers 
 available under the Dedicated, Flex, or Free deployment types. 
 
