@@ -48,7 +48,7 @@ Recommendations for {+service+} Authentication
 
 |service-fullname| supports a variety of authentication methods to
 ensure robust security. |service| requires all users to authenticate to 
-access {+atlas-ui+}, |service| database, and {+atlas-admin-api+}. 
+access the {+atlas-ui+}, |service| databases, and  the {+atlas-admin-api+}. 
 
 The following table provides guidance on the recommended authentication methods 
 for staging and production ("upper") environments, and other methods you might 
@@ -73,11 +73,11 @@ use in development and test ("lower") environments.
          added authentication security.
        | -- *and* --
        | Use IP access restrictions.
-     - | Use Federated Auth, combined this with Atlas credentials.
+     - | Use Federated Auth, combined with Atlas credentials.
     
    * - Atlas Database
      - Workforce (Human)
-     - | Not recommended, except in the most extreme break-glass emergency scenarios.
+     - Not recommended, except in the most extreme break-glass emergency scenarios.
      - | Use :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`.
        | Consider :ref:`creating temporary database users <arch-center-just-in-time>`
          with just-in-time database access.
@@ -92,13 +92,13 @@ use in development and test ("lower") environments.
    * - Atlas APIs
      - Workforce (Human)
      - | Use :ref:`<arch-center-admin-service-accounts>` (currently available as 
-         a :website:`Preview feature </resources/products/early-access>`\)
+         a :website:`Preview feature </resources/products/early-access>`\).
      - :ref:`<arch-center-admin-api-keys>`
 
    * - Atlas APIs
      - Workload (Application)
      - | Use :ref:`<arch-center-admin-service-accounts>` (currently available as 
-         a :website:`Preview feature </resources/products/early-access>`\)
+         a :website:`Preview feature </resources/products/early-access>`\).
      - :ref:`<arch-center-admin-api-keys>`
 
 .. collapsible::
