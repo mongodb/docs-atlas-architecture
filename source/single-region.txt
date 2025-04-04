@@ -30,9 +30,9 @@ To learn how to configure a single-region deployment, see
 
 .. note:: 
 
-   In a Single-region deployment, you do not specify which zone has the primary 
+   In a single-region deployment, you don't specify which zone has the primary 
    cluster. {+service+} determines its location, and the location should be 
-   considered random, as it may change.
+   considered random, as it might change.
 
 The following diagram shows a single-region {+service+} deployment for regions 
 that support availability zones. In this example, {+service+} has placed the
