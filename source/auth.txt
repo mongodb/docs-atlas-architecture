@@ -84,9 +84,9 @@ use in development and test ("lower") environments.
     
    * - Atlas Database
      - Workload (Application)
-     - | Use :ref:`Workload Identity Federation <arch-center-workload_if>`
+     - | Use :ref:`Workload Identity Federation <arch-center-workload_if>`.
        | -- *or* --
-       | :ref:`AWS-IAM authentication <arch-center-iam>`
+       | Use :ref:`AWS-IAM authentication <arch-center-iam>`.
      - :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`
 
    * - Atlas APIs
@@ -331,7 +331,7 @@ groups with RBAC simplifies management.
    * - Atlas Database
      - | Use custom fine-grained database roles. For human users, assign roles 
          directly using the ``users`` claim instead of ``groups``.
-     - Use the predefined ``readWriteAny`` role
+     - Use the predefined ``readWriteAny`` role.
 
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
