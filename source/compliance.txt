@@ -61,6 +61,60 @@ standard to ensure compliance.
 To learn more, visit the |atlas-trust|, a comprehensive compliance and
 trust program for MongoDB {+service+}.
 
+.. _arch-center-resource-policies:
+
+{+arps+} 
+-----------------------
+
+To support your compliance requirements, {+arps+} offer 
+organization-wide controls for configuring and managing {+service+} resources in 
+alignment with your security, compliance, and operational best practices. Organization 
+Owners can define rules that govern user actions when creating or modifying resources 
+such as clusters, network configurations, and project settings.
+
+{+arps+} support your compliance objectives by enabling you to:
+
+- **Enforce Minimum TLS Version:** Mandate the use of modern |tls| protocols across 
+  all {+service+} deployments, enhancing security and mitigating risks associated with 
+  older, less secure versions. This ensures adherence to contemporary encryption 
+  standards for all data in transit.
+
+- **Customize Default TLS Ciphers:** Select a specific set of allowed |tls|ciphers 
+  to optimize security based on operational needs while eliminating 
+  vulnerabilities associated with legacy encryption methods. This allows for fine-tuning 
+  encryption protocols to meet specific compliance requirements.
+
+- **Restrict VPC Peering Modifications:** Enable secure cross-network communication 
+  through established |vpc| peering connections while preventing configuration changes. 
+  Current project-level peerings remain active with their existing routing tables 
+  and security protocols, allowing customers to view but not alter these one-to-one 
+  |vpc| relationships and their associated network control mechanisms.
+
+- **Restrict Private Endpoint Modifications:** Maintain secure service connectivity 
+  through existing private endpoint configurations with read-only access. Project-level 
+  connections remain functional with their current private IP addressing scheme, while 
+  customers can view but not modify these dedicated service connection points within 
+  their |vpc|.
+
+- **Control IP Access Lists:** Prevent unauthorized modifications to IP access lists, 
+  ensuring consistent and controlled network access to your databases. This strengthens 
+  database security by preserving carefully defined network boundaries and protecting 
+  against accidental configuration changes.
+  
+- **Set Cluster Tier Limits:** Define deployment guardrails by establishing both 
+  maximum and minimum cluster size limits that developers must adhere to when 
+  provisioning resources. This boundary-setting approach ensures teams can deploy 
+  appropriately sized environments within organization-approved parameters, optimizing 
+  infrastructure utilization while enforcing consistent resource allocation policies 
+  across all project workloads.
+
+- **Set Maintenance Window Requirement:** Enhance platform stability by requiring 
+  a maintenance window for all projects. This governance control ensures organizations 
+  establish a predictable update period (without dictating a specific timeframe) 
+  to supporting consistent system maintenance according to operational needs.
+
+To learn more, see :atlas:`Atlas Resource Policies </atlas-resource-policies/>`.
+
 .. _arch-center-compliance-encryption:
 
 Encryption
