@@ -61,6 +61,18 @@ standard to ensure compliance.
 To learn more, visit the |atlas-trust|, a comprehensive compliance and
 trust program for MongoDB {+service+}.
 
+.. _arch-center-compliance-atlas-gov:
+
+MongoDB {+service+} for Government
+-----------------------------------
+
+MongoDB |atlas-gov| is the first fully-managed multi-cloud developer data platform
+authorized at FedRAMP® Moderate that:
+
+- Uses a secure, fully-managed, dedicated FedRAMP® authorized environment
+- Supports the unique requirements and missions of the U.S. Government
+- Offers a set of features and the scalability needed to modernize legacy applications
+
 .. _arch-center-compliance-encryption:
 
 Encryption
