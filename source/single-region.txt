@@ -28,12 +28,20 @@ To learn how to configure a single-region deployment, see
 :atlas:`Create a Cluster </tutorial/create-new-cluster/>` in the
 {+service+} documentation.
 
-The following diagram shows a single-region {+service+}
-deployment for regions that support availability zones:
+.. note:: 
+
+   In a Single-region deployment, you do not specify which zone has the primary 
+   cluster. {+service+} determines its location, and the location should be 
+   considered random, as it may change.
+
+The following diagram shows a single-region {+service+} deployment for regions 
+that support availability zones. In this example, {+service+} has placed the
+primary node in Zone 1 and the secondary nodes in Zones 2 and 3:
 
 .. figure:: /includes/images/single-region.svg
    :figwidth: 500px
    :alt: An image showing a three-node deployment in a single region. The region contains one zone per node.
+
 
 Use Cases for Single-Region Deployments
 ---------------------------------------
