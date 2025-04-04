@@ -63,7 +63,7 @@ trust program for MongoDB {+service+}.
 
 .. _arch-center-compliance-atlas-gov:
 
-|atlas-gov|
+MongoDB {+service+} for Government
 -----------------------------------
 
 MongoDB |atlas-gov| is the first fully-managed multi-cloud developer data platform
