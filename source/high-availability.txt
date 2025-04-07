@@ -58,7 +58,7 @@ Single Region, 3 Node Replica Set / Shard (Primary Secondary Secondary)
 ```````````````````````````````````````````````````````````````````````
 
 .. figure:: /includes/images/highavailabilityPSS.svg
-   :figwidth: 750px
+   :figwidth: 750px 
    :alt: A topology with a single region with 3 nodes: one primary and two secondaries.
 
 This topology is appropriate if low latency is required but high availability requirements 
