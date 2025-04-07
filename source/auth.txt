@@ -315,6 +315,35 @@ Deployments
 
 To learn our recommendations for deployments, which relate to authentication, see :ref:`arch-center-hierarchy`.
 
+Features for {+service+} Authorization
+--------------------------------------
+
+{+service+} Resource Policies provide organization-wide control over {+service+} 
+resource configuration and management. The ``Organization Owner`` can define rules 
+that constrain user actions when creating or modifying resources like {+clusters+}, 
+IP access lists, |vpc| peering, and private endpoints. 
+This helps enforce security, compliance, and best practice standards across all projects 
+within the organization.
+
+{+service+} Resource Policies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+{+service+} Resource Policies enable you to:
+
+- Limit {+cluster+} deployment to specific cloud platforms ({+aws+}, {+gcp+}, {+azure+}).
+- Restrict {+cluster+} deployment to designated regions within a cloud provider. 
+  For example, ``aws:us-east-1``.
+- Prohibit the use of the wildcard IP (``0.0.0.0/0``) for stricter network controls.
+- Prohibit public network traffic by requiring an empty IP access list or preventing additions.
+- Prevent users from provisioning, updating, or :ref:`auto-scaling <cluster-autoscaling>` 
+  {+clusters+} above or below a specified tier.
+- Require that a project has a :ref:`maintenance window <configure-maintenance-window>` configured.
+- Prevent modifications to |vpc| peering and private endpoint connections across cloud providers. 
+- Impose a minimum |tls| version or require a specific |tls| cipher suite 
+  for {+cluster+} connections.
+
+To learn more, see :atlas:`Atlas Resource Policies </atlas-resource-policies/>`.
+
 .. _arch-center-authorization-recs:
 
 Recommendations for {+service+} Authorization 
