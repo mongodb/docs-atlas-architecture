@@ -144,6 +144,26 @@ To learn more, see :ref:`ak8so-quick-start-ref`.
 Recommendations for {+service+} Automation
 ------------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 If you already have an existing tool integrated into your deployment
 workflow that you use today, we recommend that you use that tool for
 automation. For example, if your developers and operations team are

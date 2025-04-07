@@ -27,6 +27,14 @@ performance in {+service+}:
       Use auto-scaling to dynamically allocate resources based on growing workload
       demands. For horizontal and vertical scaling, use {+service+} deployment templates.
 
+   .. card::
+      :headline: Latency Reduction
+      :url: https://mongodb.com/docs/atlas/architecture/latency-reduction/
+      :icon: general_features_realtime
+      :icon-alt: real time icon
+
+      Review best practices for reducing latency.
+
 .. toctree::
    :titlesonly:
 

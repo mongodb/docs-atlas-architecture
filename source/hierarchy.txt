@@ -43,14 +43,14 @@ security settings and governance for your {+service+} enterprise estate:
    * - (Optional) Paying Organization
      - One organization can be a paying organization for other
        organization(s). A paying organization lets you set up 
-       :atlas:`cross-organization billing <billing/#std-label-cross-org-billing>` 
+       :atlas:`cross-organization billing </billing/#std-label-cross-org-billing>` 
        to share a billing subscription across multiple organizations. 
        To learn more about setting up your paying organization when 
-       you establish the |service| subscription, see :atlas:`Manage Billing <billing>`.  
+       you establish the |service| subscription, see :atlas:`Manage Billing </billing>`.  
        In order to enable cross-organization billing, the user performing 
        the action must have an Org Owner or Billing Admin role of both 
        organizations that they wish to link. To learn more, see 
-       :atlas:`User Roles <user-roles>`.
+       :atlas:`User Roles </reference/user-roles>`.
 
        A paying organization is common for large enterprises with many
        {+BU+}\s or departments that operate independently but where the
@@ -60,7 +60,7 @@ security settings and governance for your {+service+} enterprise estate:
      - An organization can contain many projects under it and provides
        a container to apply shared integration and security settings. If 
        you manage multiple {+service+} organizations, the 
-       :atlas:`Atlas Federation Management Console <atlas-federated-authentication>` 
+       :ref:`Atlas Federation Management Console <atlas-federated-authentication>` 
        allows users with an Org Owner role to manage |idps| for |sso|, 
        then link them to multiple organizations. 
        An organization often maps to a {+BU+} or department within a
@@ -94,8 +94,30 @@ security settings and governance for your {+service+} enterprise estate:
 Recommendations for {+service+} Orgs, Projects, and {+Clusters+}
 ----------------------------------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. _arch-center-orgs-projects-clusters-recs-multi:
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 Development, Testing, Staging, and Production Environments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````````````````````````````````````````
 
 We recommend that you use the following four environments to isolate
 your sandbox and test projects and {+clusters+} from your application
@@ -128,7 +150,7 @@ projects and {+clusters+}:
        end users.
 
 Local {+service+} Deployments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````````````
 
 For development and testing purposes, developers can use the {+atlas-cli+} to 
 :atlascli:`create a local {+service+} deployment</atlas-cli-deploy-local>`.
@@ -143,7 +165,7 @@ local {+service+} deployments in secure, reliable, and portable test
 environments. To learn more, see :atlascli:`Create a Local {+service+} Deployment with Docker </atlas-cli-deploy-docker>`.
 
 Org and Project Hierarchies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````````
 
 Generally, we recommend a paying organization that is managed
 centrally, and one organization for each {+BU+} or department that is
@@ -162,7 +184,7 @@ increase the limits. To learn more, see
 .. _project-hierarchy-1:
 
 Recommended Hierarchy
-`````````````````````
+#####################
 
 Consider the following hierarchy, which creates fewer |service| organizations, if you have common teams and permissions across the 
 {+BU+} and less than the raiseable limit of 250 projects per organization. 
@@ -175,7 +197,7 @@ Consider the following hierarchy, which creates fewer |service| organizations, i
 .. _project-hierarchy-2:
 
 Recommended Hierarchy 2: Decentralized Business Units/Departments
-`````````````````````````````````````````````````````````````````
+#################################################################
 
 Consider the following hierarchy if your organization is highly
 decentralized without a centralized function to serve as the contract
@@ -195,7 +217,7 @@ this hierarchy.
 .. _deployment-hierarchy:
 
 {+Cluster+} Hierarchy
-~~~~~~~~~~~~~~~~~~~~~
+`````````````````````
 
 To maintain isolation between environments, we recommend that you deploy 
 each cluster within its own project, as shown in the following diagram. 
@@ -238,7 +260,7 @@ Deploy multiple {+clusters+} within the same project only if both of the followi
    :lightbox:
 
 Resource Tagging
-~~~~~~~~~~~~~~~~
+````````````````
 
 We recommend that you :atlas:`tag {+clusters+} or projects <database-deployment-tags>` 
 with the following details to enable easy parsing for reporting and integrations:
@@ -258,7 +280,7 @@ To learn more about parsing billing data using tags, see
 .. _arch-center-cluster-size-guide:
 
 {+service+} {+Cluster+} Size Guide
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````````````````
 
 In a dedicated deployment ({+cluster+} size ``M10``\+), {+service+}
 allocates resources exclusively. We recommend dedicated deployments

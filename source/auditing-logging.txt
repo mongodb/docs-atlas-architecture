@@ -85,6 +85,26 @@ To perform a full audit, you can use a combination of audit logs,
 Recommendations for {+service+} Auditing and Logging
 ----------------------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 We recommend that you :atlas:`set up database auditing </database-auditing>`
 when you provision your {+clusters+}. 
 Auditing puts additional load on your {+clusters+} and increases costs. 
@@ -133,7 +153,7 @@ information at a minimum:
 - Error code (if applicable)
 
 Programmatic Access to Audit Logs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````````````````
 
 To integrate with tools beyond the built-in integrations, we recommend
 that you retrieve logs with the following programmatic tools and feed
