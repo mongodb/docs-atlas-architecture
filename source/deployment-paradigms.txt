@@ -16,7 +16,21 @@
 When deploying your database, you must choose between deploying to a single region or multiple regions. The following diagram 
 shows these options, which are explained further below:
 
-.. figure:: /includes/images/deployment-types.png
+- A :ref:`single-region deployment <arch-center-paradigms-single>`, in which 
+  your data is stored one of a provider's regions (such as AWS's ``us-west-2``).
+- A multi-region deployment, in which you have data in at least one region in 
+  multiple "geographies" (continents or large countries). A minimal example 
+  is having your data in one region in the Europe geography and one in the Asia 
+  Pacific geography. A more robust example of a multi-region deployment is 
+  having clusters in 3 Asia-Pacific regions, one European region, and 3 US 
+  regions.
+- A Global deployment. This option exists for the most complex situations; for 
+  example, where you need global aggregation of user data, or where legal terms 
+  dictate specific hosting requirements.
+
+The following diagram shows these options:
+
+.. figure:: /includes/images/deployment_types.png
    :figwidth: 750px
    :alt: An image showing the different deployment options.
 
