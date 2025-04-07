@@ -27,7 +27,7 @@ Use the following resources to get started with |service| and the
       :icon: general_cloud_global
       :icon-alt:  icon
 
-      Choose your deployment paradigm, such as a multi-region or global deployment.
+      Choose your deployment paradigm, such as a multi-region, global, or hybrid deployment.
 
    .. card::
       :headline: Orgs, Projects, and Clusters
