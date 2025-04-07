@@ -93,6 +93,8 @@ multiple cloud providers, consider a
 Applications that Require Data Sovereignty and High Availability (One Cloud Provider)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Data Sovereignty and High Availability Considerations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For compliance with data residency laws, data can be partitioned to
 reside in specific regions, ensuring adherence to local regulations.
 However, deploying to a single region sacrifices high availability if
