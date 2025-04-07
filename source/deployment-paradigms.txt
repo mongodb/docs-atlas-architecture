@@ -14,13 +14,13 @@
 
 When deploying your database, you have 3 main choices:
 
-**:ref:`Single-Region Deployment<arch-center-paradigms-single>`**
+** :ref:`Single-Region Deployment<arch-center-paradigms-single>` **
 
 This is the simplest deployment option. In a single-region deployment, your 
 data is stored in one of a provider's regions (such as AWS's ``us-west-2`` 
 or Google's ``asia-northeast3``).
 
-**:ref:`Multi-Region Deployment <arch-center-paradigms-multi-region>`**
+** :ref:`Multi-Region Deployment <arch-center-paradigms-multi-region>` **
 
 This deployment paradigm provides a more robust option with higher availability. 
 There are several types of multi-region deployments:
@@ -43,7 +43,7 @@ There are several types of multi-region deployments:
   For example, you deploy clusters in the AWS region ``us-west-1`` and the GCP 
   region ``us-east4``.
   
-**:ref:`Global Deployment <arch-center-paradigms-global>`**
+** :ref:`Global Deployment <arch-center-paradigms-global>` **
 
   This option should be considered for only the most complex situations; for 
   example, where you need global aggregation of user data, or where legal terms 
@@ -51,7 +51,7 @@ There are several types of multi-region deployments:
 
 The following diagram shows these options:
 
-.. figure:: /includes/images/deployment_types.png
+.. figure:: /includes/images/deployment-types.png
    :figwidth: 750px
    :alt: An image showing the different deployment options.
 
