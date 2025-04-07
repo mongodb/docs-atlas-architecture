@@ -116,3 +116,10 @@ can review cloud computing costs in the :guilabel:`Summary By Service`
 card of any invoice within the |service| :guilabel:`Billing` section.
 The :guilabel:`Summary By Service` view shows the costs of all
 {+clusters+} by provider, tier, and region.
+
+Choose the Right Deployment Paradigm and Topology
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The deployment topology you choose can change your |service| costs.
+
+To learn more about cost savings for {+cluster+} configurations, see :ref:`arch-center-high-availability`. 
