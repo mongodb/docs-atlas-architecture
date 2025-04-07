@@ -30,7 +30,7 @@ performance in {+service+}:
    .. card::
       :headline: Latency Reduction
       :url: https://mongodb.com/docs/atlas/architecture/latency-reduction/
-      :icon: general_features_real_time
+      :icon: general_features_realtime
       :icon-alt: real time icon
 
       Review best practices for reducing latency.
