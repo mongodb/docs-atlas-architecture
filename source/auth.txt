@@ -67,17 +67,15 @@ use in development and test ("lower") environments.
      - Workforce (Human)
      - | Use :ref:`Federated Auth <arch-center-federated_auth>` with an SAML 2.0 
          identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
-         Combine this with Atlas credentials.
        | -- *and* --
-       | Use :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>` for 
-         added authentication security.
+       | Use :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
        | -- *and* --
        | Use IP access restrictions.
-     - | Use Federated Auth, combined with Atlas credentials.
+     - | Use Atlas credentials and MFA.
     
    * - Atlas Database
      - Workforce (Human)
-     - Not recommended, except in the most extreme break-glass emergency scenarios.
+     - Use :ref:`Workforce Identity Federation <arch-center-workforce_if>`
      - | Use :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`.
        | Consider :ref:`creating temporary database users <arch-center-just-in-time>`
          with just-in-time database access.
@@ -91,14 +89,12 @@ use in development and test ("lower") environments.
 
    * - Atlas APIs
      - Workforce (Human)
-     - | Use :ref:`<arch-center-admin-service-accounts>` (currently available as 
-         a :website:`Preview feature </resources/products/early-access>`\).
+     - Use :ref:`<arch-center-admin-service-accounts>`.
      - :ref:`<arch-center-admin-api-keys>`
 
    * - Atlas APIs
      - Workload (Application)
-     - | Use :ref:`<arch-center-admin-service-accounts>` (currently available as 
-         a :website:`Preview feature </resources/products/early-access>`\).
+     - Use :ref:`<arch-center-admin-service-accounts>`.
      - :ref:`<arch-center-admin-api-keys>`
 
 .. collapsible::
@@ -143,9 +139,9 @@ To learn more, refer to :ref:`atlas-federated-authentication`.
 Multi-Factor Authentication 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For any human user that has access to the |service| control plane, we recommend
-that you require :abbr:`MFA (Multi-Factor Authentication)` for enhanced security.
-When :abbr:`MFA (Multi-Factor Authentication)` is enabled, |service| requires 
+For any human user that has access to the |service| control plane, we recommend 
+:abbr:`MFA (Multi-Factor Authentication)` for enhanced security. When 
+:abbr:`MFA (Multi-Factor Authentication)` is enabled, |service| requires 
 two forms of identification: 
 
 - The user's credentials 
@@ -157,6 +153,13 @@ two forms of identification:
   - Push notifications
   - SMS (not recommended as primary factor)
   - Email (not recommended as primary factor)
+
+.. note::
+   
+   If you are using Federated Auth, you configure and manage MFA in the 
+   :abbr:`IdP (Identity Provider)`. If you are using |service| credentials, 
+   MFA is configured and managed within |service|. MFA is required when 
+   using |service| credentials.
 
 To learn more, see :ref:`atlas-enable-mfa`.
 
