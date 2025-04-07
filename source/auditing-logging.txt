@@ -141,7 +141,7 @@ Audit log messages that follow the ``mongo`` schema always include the following
 - User role(s)
 - User role database(s)
 - ``param`` document containing specific details for the event 
-- ``result`` success value or error code
+- Result value or error code
 
 For a full list of audit action types and their associated ``param`` details and ``result`` values, 
 see :manual:`mongo Schema Audit Messages </reference/audit-message/mongo/>`. 
