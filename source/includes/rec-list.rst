@@ -1,7 +1,8 @@
 To find recommendations for your {+service+} cloud deployments,
 refer to the following resources:
 
-- :ref:`arch-center-orgs-projects-clusters-recs`
+- Getting Started
+  - :ref:`arch-center-orgs-projects-clusters-recs`
 
 - Operational Efficiency
 
