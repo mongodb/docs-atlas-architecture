@@ -20,16 +20,16 @@ Claim Management Using LLMS and Vector Search for RAG
    :depth: 2
    :class: onecol
 
-- Use cases: `Generative AI<https://www.mongodb.com/basics/generative-ai>`__, 
-  `Content Management<https://www.mongodb.com/solutions/use-cases/content-management>`__
-- Industries: `Insurance<https://www.mongodb.com/solutions/industries/insurance>`__,
-  `Financial Services<https://www.mongodb.com/solutions/industries/financial-services>`__,
-  `Manufacturing and Mobility<https://www.mongodb.com/solutions/industries/manufacturing>`__,
-  `Retail<https://www.mongodb.com/solutions/industries/retail>`__
+- Use cases: `Generative AI <https://www.mongodb.com/basics/generative-ai/>`__, 
+  `Content Management <https://www.mongodb.com/solutions/use-cases/content-management/>`__
+- Industries: `Insurance <https://www.mongodb.com/solutions/industries/insurance/>`__,
+  `Financial Services <https://www.mongodb.com/solutions/industries/financial-services/>`__,
+  `Manufacturing and Mobility <https://www.mongodb.com/solutions/industries/manufacturing/>`__,
+  `Retail <https://www.mongodb.com/solutions/industries/retail/>`__
 - Products: :ref:`MongoDB Atlas<atlas-getting-started>`, :ref:`Vector Search<avs-overview>`
-- Partners: `Langchain<https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`__,
-  `OpenAI<https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb/>`__,
-  `FastAPI<https://www.mongodb.com/developer/technologies/fastapi/>`__
+- Partners: `Langchain <https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`__,
+  `OpenAI <https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb/>`__,
+  `FastAPI <https://www.mongodb.com/developer/technologies/fastapi/>`__
 
 Overview
 --------
