@@ -1,0 +1,11 @@
+.. _arch-center-industry-solutions:
+
+==================
+Industry Solutions
+==================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
