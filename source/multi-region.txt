@@ -85,12 +85,9 @@ For more considerations, see
 {+service+} documentation.
 
 .. _arch-center-multi-region-rec-summary:
-.. _arch-center-multi-cloud-rec-summary:
 
 Recommendations for Single-Region Deployments
 ---------------------------------------------
-
-.. _arch-center-multi-region-rec-summary:
 
 .. include:: /includes/rec-list.rst
 
