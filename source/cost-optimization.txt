@@ -44,4 +44,3 @@ optimization in {+service+}:
 
    Cost-Saving Configurations </cost-saving-config>
    Billing Data </billing-data>
-   Claim Migration with LLMs and Vector Search </claim-management-llm-vs.txt>

@@ -3,3 +3,8 @@
 ==================
 Industry Solutions
 ==================
+
+.. toctree::
+   :titlesonly:
+
+   Claim Migration with LLMs and Vector Search </claim-management-llm-vs.txt>
