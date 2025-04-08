@@ -62,4 +62,5 @@ There are several types of multi-region deployments:
    Single-Region </single-region>
    Multi-Region </multi-region>
    Multi-Cloud </multi-cloud>
+   Global </global>
    Hybrid </hybrid>
