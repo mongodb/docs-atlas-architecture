@@ -100,6 +100,8 @@ ensures data sovereignty since the region is within the EU, while
 offering high availability if there's a zonal outage that affects the
 primary node.
 
+.. include:: /includes/data-sovereignty.rst
+
 If your application requires data sovereignty and
 cross-region or cross-provider high
 availability, consider a :ref:`arch-center-paradigms-multi-region` or :ref:`arch-center-paradigms-multi-cloud`, respectively.
