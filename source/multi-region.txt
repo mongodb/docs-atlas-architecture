@@ -103,7 +103,9 @@ Other considerations for multi-region deployments include:
   :ref:`arch-center-high-availability`.
 - Multi-region deployments are available only for ``M10`` dedicated
   {+clusters+} and larger.
-- High availability also depends on how and where you deploy your application.
+- High availability and low latency also depend on where you deploy 
+  your application. When optimizing for availability and latency, plan the 
+  deployment of your entire application stack, not just the database.
 
 For more considerations, see 
 :atlas:`Considerations 

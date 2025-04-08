@@ -13,27 +13,28 @@ Single-Region Deployment Paradigm
    :class: onecol
 
 Single-region {+service+} deployments set up {+cluster+} nodes within
-one region of one cloud provider. Single-region
-deployments to regions that support availability zones offer
-protection in the case of a zonal outage by automatically rerouting
-traffic to a node in another availability zone for continuous
-availability and a smooth user experience. Single-region {+service+}
-deployments are supported on all {+cluster+} tiers, so they include
-less expensive options for non-mission-critical deployments, and, when
-configured correctly, single-region deployments can support performance
-and help meet compliance requirements for :ref:`data sovereignty
-<arch-center-compliance-data-sovereignty>`. 
+a single region of one cloud provider. Single-region {+service+}
+deployments are supported on all {+cluster+} tiers. They provide 
+a less expensive option for non-mission-critical deployments and for 
+applications that have a geographically-similar user base.
+
+Some providers' regions support availability zones within a region, which add 
+protection in the case of a single zone outage. The provider automatically 
+reroutes traffic to a node in another availability zone within the region to 
+ensure availability. This is similar to multi-regional deployments but on a smaller 
+scale.
+
+The following diagram shows a single-region {+service+}
+deployment for a region that has 3 availability zones:
+
+.. figure:: /includes/images/single-region.png
+   :figwidth: 200px
+   :alt: An image showing a three-zone deployment in a single region.
 
 To learn how to configure a single-region deployment, see 
 :atlas:`Create a Cluster </tutorial/create-new-cluster/>` in the
 {+service+} documentation.
 
-The following diagram shows a single-region {+service+}
-deployment for regions that support availability zones:
-
-.. figure:: /includes/images/single-region.svg
-   :figwidth: 500px
-   :alt: An image showing a three-node deployment in a single region. The region contains one zone per node.
 
 Use Cases for Single-Region Deployments
 ---------------------------------------
