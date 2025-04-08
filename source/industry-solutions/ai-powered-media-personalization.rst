@@ -10,7 +10,8 @@ AI-driven Media Personalization: MongoDB and Vector Search
    :name: genre
    :values: reference
 
-.. meta::   
+.. meta::
+   :keywords: AI,
    :description: Learn about how to leverage data to create personalized user
    experiences.
 
@@ -26,7 +27,7 @@ AI-driven Media Personalization: MongoDB and Vector Search
   Media
 - Products and Tools: `Atlas <https://www.mongodb.com/products/platform/atlas-database>`_,
   `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_,
-  `PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`
+  `PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`_
 
 Solution overview
 -----------------
@@ -173,7 +174,7 @@ MongoDB developer data platform
 
 - `Atlas Database <https://www.mongodb.com/products/platform/atlas-database>`_
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_
-- `PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`
+- `PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`_
 
 Authors
 -------
