@@ -314,12 +314,12 @@ Use the following {+cluster+} size guide to select a {+cluster+} tier that ensur
 This table displays the default storage and performance capabilities for each {+cluster+} tier, as well as 
 whether or not the {+cluster+} tier is suitable for staging and production environments. 
 The {+cluster+} size guide also includes expected values for a {+cluster+}'s
-total data size and peak IOPS, based on median {+cluster+} sizes and 98th percentile peak IOPS analytics from existing enterprise account {+clusters+}
+total data size and peak IOPS, based on median {+cluster+} sizes and 98th percentile IOPS analytics from existing enterprise account {+clusters+}
 in each {+cluster+} tier.
 
 .. list-table::
    :header-rows: 1
-   :widths: 10 10 10 10 10 10 10 10 10 10
+   :widths: 10 10 10 10 10 10 10 10å 10 10
 
    * - T-Shirt Size
      - Cluster Tier
