@@ -1,7 +1,7 @@
 Consider these strategies for optimizing your |service| costs.
 
-Underutilized {+Clusters+}
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Scale Down Underutilized {+Clusters+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Enable :ref:`auto-scaling <cluster-autoscaling>` on your {+cluster+}
   tier to match your usage and prevent over-provisioning.
@@ -47,9 +47,8 @@ Underutilized {+Clusters+}
       <https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs/resources/cluster#termination_protection_enabled-2>`__
       by setting the ``termination_protection_enabled`` field to ``false``.
 
-
-High Backup Frequency
-~~~~~~~~~~~~~~~~~~~~~
+Optimize Backup Frequency
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - :ref:`Continuous backups <pit-restore>` are expensive, but they give
   you the most safety to recover data from any point in time within the
@@ -120,6 +119,6 @@ The :guilabel:`Summary By Service` view shows the costs of all
 Choose the Right Deployment Paradigm and Topology
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The deployment topology you choose can change your |service| costs.
+The deployment paradigm and topology you choose can change your |service| costs.
 
-To learn more about cost savings for {+cluster+} configurations, see :ref:`arch-center-high-availability`. 
+To learn more about cost savings for different topologies, see :ref:`arch-center-high-availability`. 
