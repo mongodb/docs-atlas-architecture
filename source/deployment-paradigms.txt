@@ -12,7 +12,13 @@
    :depth: 2
    :class: onecol
 
-When deploying your database, you have 3 main choices:
+When deploying your database, you have 3 main choices. The following diagram 
+shows these options, which are explained further below:
+
+.. figure:: /includes/images/deployment-types.png
+   :figwidth: 750px
+   :alt: An image showing the different deployment options.
+
 
 :ref:`Single-Region Deployment<arch-center-paradigms-single>`
 
@@ -41,26 +47,19 @@ There are several types of multi-region deployments:
 - Deploying clusters to multiple regions hosted by _multiple_ cloud providers. 
   For example, you deploy clusters in the AWS region ``us-west-1`` and the GCP 
   region ``us-east4``.
-  
+
+
 :ref:`Global Deployment <arch-center-paradigms-global>`
 
-  This option should be considered for only the most complex situations; for 
-  example, where you need global aggregation of user data, or where legal terms 
-  dictate specific hosting requirements.
-
-The following diagram shows these options:
-
-.. figure:: /includes/images/deployment-types.png
-   :figwidth: 750px
-   :alt: An image showing the different deployment options.
-
+This option should be considered for only the most complex situations; for 
+example, where you need global aggregation of user data, or where legal terms 
+dictate specific hosting requirements.
 
 .. toctree::
    :titlesonly:
 
    Single-Region </single-region>
    Multi-Region </multi-region>
-   Global </global>
    Multi-Cloud </multi-cloud>
+   Global </global>
    Hybrid </hybrid>
-
