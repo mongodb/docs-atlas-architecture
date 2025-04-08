@@ -20,16 +20,16 @@ Claim Management Using LLMS and Vector Search for RAG
    :depth: 2
    :class: onecol
 
-- Use cases: :ref:`Generative AI<https://www.mongodb.com/basics/generative-ai>`, 
-  :ref`Content Management<https://www.mongodb.com/solutions/use-cases/content-management>`
-- Industries: :ref:`Insurance<https://www.mongodb.com/solutions/industries/insurance>`,
-  :ref:`Financial Services<https://www.mongodb.com/solutions/industries/financial-services>`,
-  :ref:`Manufacturing and Mobility<https://www.mongodb.com/solutions/industries/manufacturing>`,
-  :ref:`Retail<https://www.mongodb.com/solutions/industries/retail>`
+- Use cases: `Generative AI<https://www.mongodb.com/basics/generative-ai>`, 
+  `Content Management<https://www.mongodb.com/solutions/use-cases/content-management>`
+- Industries: `Insurance<https://www.mongodb.com/solutions/industries/insurance>`,
+  `Financial Services<https://www.mongodb.com/solutions/industries/financial-services>`,
+  `Manufacturing and Mobility<https://www.mongodb.com/solutions/industries/manufacturing>`,
+  `Retail<https://www.mongodb.com/solutions/industries/retail>`
 - Products: :ref:`MongoDB Atlas<atlas-getting-started>`, :ref:`Vector Search<avs-overview>`
-- Partners: :ref:`Langchain<https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`,
-  :ref:`OpenAI<https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb/>`,
-  :ref:`FastAPI<https://www.mongodb.com/developer/technologies/fastapi/>`
+- Partners: `Langchain<https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`,
+  `OpenAI<https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb/>`,
+  `FastAPI<https://www.mongodb.com/developer/technologies/fastapi/>`
 
 Overview
 --------
@@ -44,7 +44,7 @@ formats that have been historically nearly impossible to index with
 traditional methods. 
 
 Over the years, insurance companies have been accumulating terabytes of 
-:ref:`unstructured data<https://www.mongodb.com/resources/basics/unstructured-data>`
+`unstructured data<https://www.mongodb.com/resources/basics/unstructured-data>`
 in their datastores, but failing to capitalize on the possibility 
 of accessing and leveraging it to uncover business insights, 
 deliver better customer experiences, and streamline operations. 
@@ -55,9 +55,9 @@ organizations and their customers.
 
 Our solution addresses these challenges by combining the power of 
 :ref:`|avs|<avs-overview>` and a 
-:ref:`Large Language Model (LLM)<https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>` 
+`Large Language Model (LLM)<https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>` 
 in a 
-:ref:`retrieval augmented generation (RAG)<https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>` 
+`retrieval augmented generation (RAG)<https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>` 
 system, allowing organizations to go beyond the limitations of 
 baseline foundational models, making them context-aware by feeding 
 them proprietary data. In this way, they can leverage the 
@@ -105,7 +105,7 @@ Building the Solution
 ---------------------
 
 The instructions to build the demo are included in the readme of 
-:ref:`this Github repo<https://github.com/mongodb-industry-solutions/RAG-Insurance/tree/main>`, 
+`this Github repo<https://github.com/mongodb-industry-solutions/RAG-Insurance/tree/main>`, 
 where you can use the following steps:
 
 1. OpenAI API key setup
