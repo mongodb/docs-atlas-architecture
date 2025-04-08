@@ -59,7 +59,7 @@ now to leverage all of this unstructured data to the benefit of these
 organizations and their customers.
 
 Our solution addresses these challenges by combining the power of 
-:ref:`|avs| <avs-overview>` and a 
+:ref:`Atlas Vector Search <avs-overview>` and a 
 `Large Language Model (LLM) <https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`__ 
 in a 
 `retrieval augmented generation (RAG) <https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__ 
