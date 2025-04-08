@@ -3,3 +3,13 @@
 ==================
 Industry Solutions
 ==================
+
+:ref:`arch-center-is-pdf-search`
+  Streamline operations and claims processing with powerful PDF search
+  capabilities by integrating MongoDB Atlas Vector Search,
+  Superduper.io, and LLMs.
+
+.. toctree::
+   :titlesonly:
+
+   PDF Search </industry-solutions/pdf-search>

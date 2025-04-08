@@ -1,0 +1,42 @@
+.. _arch-center-is-pdf-search:
+
+==========================================================
+Build a PDF Search Application with Vector Search and LLMs
+==========================================================
+
+.. facet::
+   :name: genre
+   :values: tutorial
+
+.. meta:: 
+   :keywords: pdf, vector search
+   :description: Streamline operations and claims processing with powerful PDF search
+  capabilities
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+Streamline operations and claims processing with powerful PDF search
+capabilities by integrating MongoDB Atlas Vector Search,
+Superduper.io, and LLMs.
+
+**Use cases:** `Gen AI
+<https://www.mongodb.com/use-cases/artificial-intelligence?tck=docs_atlas>`__
+
+**Industries:** `Insurance
+<https://www.mongodb.com/industries/insurance?tck=docs_atlas>`__,
+`Financial Services
+<https://www.mongodb.com/industries/financial-services?tck=docs_atlas>`__,
+`Manufacturing and Mobility
+<https://www.mongodb.com/industries/manufacturing?tck=docs_atlas>`__,
+`Retail <https://www.mongodb.com/industries/retail?tck=docs_atlas>`__
+
+**Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search?tck=docs_atlas>`__
+
+**Partners:** `Superduper.io <http://superduper.io/>`__, `OpenAI
+<https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb?tck=docs_atlas>`__,
+`FastAPI <https://www.mongodb.com/developer/technologies/fastapi?tck=docs_atlas>`__
