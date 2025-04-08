@@ -124,6 +124,7 @@ the following requirements:
   deployments allow you to deploy nodes to different regions within the
   same geographic area.
 
+<<<<<<< HEAD
 For example, for an application deployed with |aws| and |azure| that
 requires data storage in Europe, you can deploy a multi-region,
 multi-cloud deployment to three regions within the EU (such as
@@ -132,6 +133,12 @@ This ensures data sovereignty since all regions are within the EU, while
 offering high availability if there's a regional outage or a cloud
 provider outage that affects the primary node. Additionally, it makes
 it easier to transition off of one of these cloud providers if needed.
+=======
+.. include:: /includes/data-sovereignty.rst
+
+Considerations and Recommendations
+----------------------------------
+>>>>>>> 8e67e55 (update cloud page)
 
 If your application requires data sovereignty but doesn't require
 cross-region or cross-provider high
@@ -172,9 +179,17 @@ multi-cloud deployments, see the following sections:
    are also multi-region. There may be other considerations
    for multi-cloud deployments that are not covered in the
    {+atlas-arch-center+}, such as cloud-provider-aware application-side
+<<<<<<< HEAD
    settings. Contact {+ps+}
    team to create a custom landing zone for your {+service+} multi-cloud
    deployments that covers all considerations.
 
 .. include:: /includes/rec-list.rst
 
+=======
+   settings. 
+   
+   Contact {+ps+}
+   team to create a custom landing zone for your {+service+} multi-cloud
+   deployments that covers all considerations.
+>>>>>>> 8e67e55 (update cloud page)
