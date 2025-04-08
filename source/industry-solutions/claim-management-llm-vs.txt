@@ -1,4 +1,4 @@
-.. _claim-management-llm-vs:
+.. _arch-center-is-claim-management-llm*:
 
 =====================================================
 Claim Management Using LLMS and Vector Search for RAG
