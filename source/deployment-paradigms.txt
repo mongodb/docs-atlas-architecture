@@ -43,7 +43,8 @@ There are several types of multi-region deployments:
 - Deploying clusters to multiple regions hosted by _multiple_ cloud providers. 
   For example, you deploy clusters in the AWS region ``us-west-1`` and the GCP 
   region ``us-east4``.
-  
+
+
 :ref:`Global Deployment <arch-center-paradigms-global>`
 
   This option should be considered for only the most complex situations; for 
