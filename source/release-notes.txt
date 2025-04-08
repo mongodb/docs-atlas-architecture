@@ -34,8 +34,7 @@ v20250411
  
   - :ref:`arch-center-migration`: Describes how to migrate data from your on-premises MongoDB deployments to |service|.
   - :atlas:`Operational Readiness Checklist </architecture/operational-readiness-checklist/>`: Checklist to help you prepare a {+cluster+} for deployment.
-  - :ref:`arch-center-paradigms`: Top-level page to introduce and compare different |service| deployment paradigms, which are described in more detail with 
-    use-cases and recommendations in the following new pages:
+  - :ref:`arch-center-paradigms`: Introduces and compares different |service| deployment paradigms, which are described with use-cases in the following new pages:
 
     - :ref:`arch-center-paradigms-single` 
     - :ref:`arch-center-paradigms-multi-region`
