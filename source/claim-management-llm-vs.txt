@@ -20,16 +20,21 @@ Claim Management Using LLMS and Vector Search for RAG
    :depth: 2
    :class: onecol
 
-- Use cases: `Generative AI <https://www.mongodb.com/basics/generative-ai/>`__, 
-  `Content Management <https://www.mongodb.com/solutions/use-cases/content-management/>`__
-- Industries: `Insurance <https://www.mongodb.com/solutions/industries/insurance/>`__,
-  `Financial Services <https://www.mongodb.com/solutions/industries/financial-services/>`__,
-  `Manufacturing and Mobility <https://www.mongodb.com/solutions/industries/manufacturing/>`__,
-  `Retail <https://www.mongodb.com/solutions/industries/retail/>`__
-- Products: :ref:`MongoDB Atlas<atlas-getting-started>`, :ref:`Vector Search<avs-overview>`
-- Partners: `Langchain <https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`__,
-  `OpenAI <https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb/>`__,
-  `FastAPI <https://www.mongodb.com/developer/technologies/fastapi/>`__
+Discover how to combine Atlas Vector Search and large language models (LLMs) to streamline the claim adjustment process.
+
+**Use cases:** `Generative AI <https://www.mongodb.com/basics/generative-ai/>`__, 
+`Content Management <https://www.mongodb.com/solutions/use-cases/content-management/>`__
+
+**Industries:** `Insurance <https://www.mongodb.com/solutions/industries/insurance/>`__,
+`Financial Services <https://www.mongodb.com/solutions/industries/financial-services/>`__,
+`Manufacturing and Mobility <https://www.mongodb.com/solutions/industries/manufacturing/>`__,
+`Retail <https://www.mongodb.com/solutions/industries/retail/>`__
+
+**Products:** :ref:`MongoDB Atlas<atlas-getting-started>`, :ref:`Vector Search<avs-overview>`
+
+**Partners:** `Langchain <https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`__,
+`OpenAI <https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb/>`__,
+`FastAPI <https://www.mongodb.com/developer/technologies/fastapi/>`__
 
 Overview
 --------
@@ -44,7 +49,7 @@ formats that have been historically nearly impossible to index with
 traditional methods. 
 
 Over the years, insurance companies have been accumulating terabytes of 
-`unstructured data<https://www.mongodb.com/resources/basics/unstructured-data>`__
+`unstructured data <https://www.mongodb.com/resources/basics/unstructured-data>`__
 in their datastores, but failing to capitalize on the possibility 
 of accessing and leveraging it to uncover business insights, 
 deliver better customer experiences, and streamline operations. 
@@ -55,9 +60,9 @@ organizations and their customers.
 
 Our solution addresses these challenges by combining the power of 
 :ref:`|avs|<avs-overview>` and a 
-`Large Language Model (LLM)<https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`__ 
+`Large Language Model (LLM) <https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`__ 
 in a 
-`retrieval augmented generation (RAG)<https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__ 
+`retrieval augmented generation (RAG) <https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__ 
 system, allowing organizations to go beyond the limitations of 
 baseline foundational models, making them context-aware by feeding 
 them proprietary data. In this way, they can leverage the 
@@ -65,6 +70,8 @@ full potential of AI to streamline operations.
 
 Reference Architectures
 -----------------------
+
+**With MongoDB**
 
 MongoDB Atlas combines transactional and search capabilities in the same 
 platform, providing a unified development experience. As embeddings are 
@@ -105,7 +112,7 @@ Building the Solution
 ---------------------
 
 The instructions to build the demo are included in the readme of 
-`this Github repo<https://github.com/mongodb-industry-solutions/RAG-Insurance/tree/main>`__, 
+`the GitHub repository <https://github.com/mongodb-industry-solutions/RAG-Insurance/tree/main>`__, 
 where you can use the following steps:
 
 1. OpenAI API key setup
@@ -153,3 +160,9 @@ Key Learnings
   for developers because they don’t need to learn a different language or change context.
 - Using LangChain as the framework that glues together MongoDB Atlas Vector Search and 
   the LLM, allowing for an easy and fast RAG implementation.
+
+Authors
+-------
+
+- Luca Napoli, Industry Solutions, MongoDB
+- Jeff Needham, Industry Solutions, MongoDB
