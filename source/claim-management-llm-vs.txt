@@ -17,7 +17,7 @@ Claim Management Using LLMS and Vector Search for RAG
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 3
    :class: onecol
 
 - Use cases: :ref:`Generative AI<https://www.mongodb.com/basics/generative-ai>`, 
