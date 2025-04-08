@@ -11,7 +11,7 @@ AI-driven Media Personalization: MongoDB and Vector Search
    :values: reference
 
 .. meta::
-   :keywords: AI,
+   :keywords: AI, vector search
    :description: Learn about how to leverage data to create personalized user
    experiences.
 
