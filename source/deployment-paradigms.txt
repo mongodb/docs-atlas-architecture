@@ -16,36 +16,35 @@
 When deploying your database, you must choose between deploying to a single region or multiple regions. The following diagram 
 shows these options, which are explained further below:
 
-** :ref:`Single-Region Deployment<arch-center-paradigms-single>` **
+:ref:`Single-Region Deployment<arch-center-paradigms-single>`
 
 This is the simplest deployment option. In a single-region deployment, your 
 data is stored in one of a provider's regions (such as AWS's ``us-west-2`` 
-or Google's ``asia-northeast3``).
+or Google's ``asia-northeast3``). With this simplicity and lower cost comes 
+the risk of lower availability and potentially lower latency, depending on the 
+distribution of your application's users.
 
-** :ref:`Multi-Region Deployment <arch-center-paradigms-multi-region>` **
+:ref:`Multi-Region Deployment <arch-center-paradigms-multi-region>`
 
 This deployment paradigm provides a more robust option with higher availability. 
 There are several types of multi-region deployments:
 
 - Deploying clusters to multiple regions hosted by a _single_ cloud provider 
-  within a single "geography" (large areas like a continent or countries).
-
+  within a single "geography" (large areas like a continent or countries). 
   For example, you deploy clusters in regions called ``us-1`` and ``us-3``, 
-  both of which are in the Unites States and are managed by the same cloud 
+  both of which are in the United States and are managed by the same cloud 
   provider.
 
-- Deploying clusters to one or more regions in two or more geographies.
-
+- Deploying clusters to one or more regions in two or more geographies. 
   For example, you deploy clusters in regions called ``us-1`` and ``us-3``, 
-  both of which are in the Unites States, and a third cluster in ``eu-2``, 
-  which is in the Europe geography. 
+  both of which are in the United States, and a third cluster in ``eu-2``, 
+  which is in Europe. 
   
-- Deploying clusters to multiple regions hosted by _multiple_ cloud providers.
-
+- Deploying clusters to multiple regions hosted by _multiple_ cloud providers. 
   For example, you deploy clusters in the AWS region ``us-west-1`` and the GCP 
   region ``us-east4``.
   
-** :ref:`Global Deployment <arch-center-paradigms-global>` **
+:ref:`Global Deployment <arch-center-paradigms-global>`
 
   This option should be considered for only the most complex situations; for 
   example, where you need global aggregation of user data, or where legal terms 
