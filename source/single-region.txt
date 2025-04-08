@@ -28,7 +28,7 @@ The following diagram shows a single-region {+service+}
 deployment for a region that has 3 availability zones:
 
 .. figure:: /includes/images/single-region.png
-   :figwidth: 200px
+   :figwidth: 600px
    :alt: An image showing a three-zone deployment in a single region.
 
 To learn how to configure a single-region deployment, see 
@@ -67,14 +67,12 @@ availability, consider a :ref:`arch-center-paradigms-multi-region` or
 Considerations for Single-Region Deployments
 --------------------------------------------
 
-Other considerations for single-region deployments include:
-
-- Single-region deployments ensure a minimum level of availability. High 
-  availability depends on the deployment of nodes across
-  regions as well as the number, distribution, and priority order of
-  nodes. To learn more about recommended
-  {+cluster+} topologies for high availability, see
-  :ref:`arch-center-high-availability`.
+Single-region deployments ensure a minimum level of availability. High 
+availability depends on the deployment of nodes across
+regions as well as the number, distribution, and priority order of
+nodes. To learn more about recommended
+{+cluster+} topologies for high availability, see
+:ref:`arch-center-high-availability`.
 
 For more considerations, see 
 :atlas:`Considerations 
@@ -85,9 +83,6 @@ For more considerations, see
 
 Recommendations for Single-Region Deployments
 ---------------------------------------------
-
-To learn about recommendations that apply single-region deployments, see
-the following sections:
 
 .. include:: /includes/rec-list.rst
 
