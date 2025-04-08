@@ -18,14 +18,22 @@ Building continuously updating RAG applications
    :depth: 1
    :class: singlecol
 
-**Use cases:** `Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__
+Use native stream processing and vector search in MongoDB Atlas to continuously
+update, store, and search embeddings through a unified interface.
+
+**Use cases:** `Gen AI
+<https://www.mongodb.com/use-cases/artificial-intelligence>`__
+
 **Industries:** `Finance
 <https://www.mongodb.com/industries/financial-services>`__,
 `Healthcare <https://www.mongodb.com/industries/healthcare>`__, `Retail
 <https://www.mongodb.com/industries/retail>`__
+
 **Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__, `Atlas
-Stream Processing <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
+Stream Processing
+<https://www.mongodb.com/products/platform/atlas-stream-processing>`__
+
 **Partners:** `Confluent <http://confluent.io/>`__, `AWS <http://aws.com/>`__
 
 Solution Overview
