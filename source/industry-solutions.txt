@@ -3,3 +3,8 @@
 ==================
 Industry Solutions
 ==================
+
+.. toctree::
+   :titlesonly:
+
+   RAG Applications </rag-applications>
