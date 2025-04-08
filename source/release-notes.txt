@@ -22,13 +22,13 @@ v20250411
 
 - :ref:`arch-center-migration` page: New page that describes how to migrate data from your on-premises MongoDB deployments to |service|. 
 - :ref:`arch-center-paradigms` page: New top-level page to introduce and compare different |service| deployment paradigms.
-- :ref:`arch-center-landing-zone` page: Minor updates to add use cases from the :ref:`arch-center-hierarchy` page, mention that the primary is 
-  *randomly* mapped to a zone, and link to a new Operational Readiness checklist. 
+- :ref:`arch-center-landing-zone` page: Minor updates to link to the :ref:`arch-center-paradigms` pages, mention that the primary is 
+  mapped *randomly* to a zone, and link to a new Operational Readiness checklist. 
 - :ref:`arch-center-hierarchy` page: Adds Terraform organization creation example. 
-- :ref:`arch-center-network-security` page: [STRAWMAN CHANGES] Minor update to add limitation for changing the number of service attachments 
+- :ref:`arch-center-network-security` page: Minor update to add limitation for changing the number of service attachments 
   and recommendation to use the DNS seedlist connection string. 
 - :ref:`arch-center-compliance` page: Minor update to introduce |atlas-gov| as an |service| compliance option.
-- :ref:`arch-center-high-availability` page: [STRAWMAN CHANGES]
+- :ref:`arch-center-high-availability` page: Adds guidance for 3-region, 3 node and 3-region, 5 node replica set topologies. 
 - :ref:`arch-center-dr` page: Minor update to recommend multi region clusters and electable nodes for high availability,
   and link to other pages with existing guidance.
 - :ref:`arch-center-cost-saving-config` page: Minor update to link to a cost-analysis table for deployment topology. 
