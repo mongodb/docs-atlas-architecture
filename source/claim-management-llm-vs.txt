@@ -1,0 +1,155 @@
+.. _claim-management-llm-vs:
+
+=====================================================
+Claim Management Using LLMS and Vector Search for RAG
+=====================================================
+
+.. default-domain:: mongodb
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: Vector Search, 
+   :description: Learn how to combine |avs| and LLMs to streamline the claim adjustment process. 
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: onecol
+
+- Use cases: :ref:`Generative AI<https://www.mongodb.com/basics/generative-ai>`, 
+  :ref`Content Management<https://www.mongodb.com/solutions/use-cases/content-management>`
+- Industries: :ref:`Insurance<https://www.mongodb.com/solutions/industries/insurance>`,
+  :ref:`Financial Services<https://www.mongodb.com/solutions/industries/financial-services>`,
+  :ref:`Manufacturing and Mobility<https://www.mongodb.com/solutions/industries/manufacturing>`,
+  :ref:`Retail<https://www.mongodb.com/solutions/industries/retail>`
+- Products: :ref:`MongoDB Atlas<atlas-getting-started>`, :ref:`Vector Search<avs-overview>`
+- Partners: :ref:`Langchain<https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`,
+  :ref:`OpenAI<https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb/>`,
+  :ref:`FastAPI<https://www.mongodb.com/developer/technologies/fastapi/>`
+
+Overview
+--------
+
+One of the biggest challenges for claim adjusters is pulling and 
+aggregating information from disparate systems and diverse data 
+formats. PDFs of policy guidelines might be stored in a content-sharing 
+platform, customer information locked in a legacy CRM, and claim-related 
+pictures and voice reports in yet another tool. All of this data is not 
+just fragmented across siloed sources and hard to find but also in 
+formats that have been historically nearly impossible to index with 
+traditional methods. 
+
+Over the years, insurance companies have been accumulating terabytes of 
+:ref:`unstructured data<https://www.mongodb.com/resources/basics/unstructured-data>`
+in their datastores, but failing to capitalize on the possibility 
+of accessing and leveraging it to uncover business insights, 
+deliver better customer experiences, and streamline operations. 
+Some of our customers even admit they’re not fully aware of all of the 
+data that’s truly in their archives. There’s a tremendous opportunity 
+now to leverage all of this unstructured data to the benefit of these 
+organizations and their customers.
+
+Our solution addresses these challenges by combining the power of 
+:ref:`|avs|<avs-overview>` and a 
+:ref:`Large Language Model (LLM)<https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>` 
+in a 
+:ref:`retrieval augmented generation (RAG)<https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>` 
+system, allowing organizations to go beyond the limitations of 
+baseline foundational models, making them context-aware by feeding 
+them proprietary data. In this way, they can leverage the 
+full potential of AI to streamline operations.
+
+Reference Architectures
+-----------------------
+
+MongoDB Atlas combines transactional and search capabilities in the same 
+platform, providing a unified development experience. As embeddings are 
+stored alongside existing data, when running a vector search query, we 
+get the document containing both the vector embeddings and the associated 
+metadata, eliminating the need to retrieve the data elsewhere. This is a 
+great advantage for developers who don’t need to learn to use and maintain 
+a separate technology and can fully focus on building their apps. Ultimately, 
+the data obtained from MongoDB Vector Search is fed to the LLM as context.
+
+.. [picture of RAG querying flow]
+
+Data Model Approach
+-------------------
+
+The “claim” collection contains documents including a number of fields related 
+to the claim. In particular, we are interested in the “claimDescription” field,
+which we vectorize and add to the document as “claimDescriptionEmbedding.” This 
+embedding is then indexed and used to retrieve documents associated with the user prompt.
+
+.. code-block:: javascript
+   :emphasize-lines: 4,10
+
+   { 
+      _id: ObjectId('64d39175e65'),
+      customerID: "c113",
+      claimDescription: "A motorist driving...",
+      damageDescription: "Front-ends of both...",
+      lossAmount: 1250,
+      photo: "image_65.jpg",
+      claimClosedDate: "2024-02-03",
+      coverages: Array(2),
+      claimDescriptionEmbedding: [0.3, 0.6, <...>, 11.2],
+      ...
+   }
+
+Building the Solution
+---------------------
+
+The instructions to build the demo are included in the readme of 
+:ref:`this Github repo<https://github.com/mongodb-industry-solutions/RAG-Insurance/tree/main>`, 
+where you can use the following steps:
+
+1. OpenAI API key setup
+2. Atlas connection setup
+3. Dataset download
+4. LLM configuration options
+5. Vector Search index creation
+
+Visit the :ref:`vector-search-quick-start` guide to try our semantic search tool now.
+
+Step 4 of the :ref:`avs-overview` tutorial walks you through the creation and configuration of the 
+Vector Search index within the Atlas UI. Make sure you follow this structure:
+
+.. code-block:: javascript
+
+   {
+      "fields": [
+         {
+            "type": "vector",
+            "path": "claimDescriptionEmbedding",
+            "numDimensions": 350,
+            "similarity": "cosine"
+         }
+      ]
+   }
+
+Ultimately, you must run both the front and the back end. You can access a web UI 
+that allows you to ask questions of the LLM, obtain an answer, and see the reference 
+documents used as context.
+
+Key Learnings
+-------------
+
+- **Text embedding creation**: The embedding generation process can be carried out 
+  using different models and deployment options. It is always important to be mindful 
+  of privacy and data protection requirements. A locally deployed model is recommended 
+  if we need our data to never leave our servers. Otherwise, we can simply call an API 
+  and get our vectors back, as explained in :ref`this tutorial<vector-search-tutorial>` 
+  that tells you how to do it with OpenAI.
+- **Creation of a Vector Search index in Atlas**: It is now possible to create indexes for 
+  local deployments.
+- **Performing a Vector Search query**: Notably, :ref:`Vector Search queries<return-vector-search-results>` 
+  have a dedicated operator within MongoDB’s :ref:`aggregation pipeline<aggregation-pipeline-operators>`.
+  This means they can be concatenated with other operations, making it extremely convenient 
+  for developers because they don’t need to learn a different language or change context.
+- Using LangChain as the framework that glues together MongoDB Atlas Vector Search and 
+  the LLM, allowing for an easy and fast RAG implementation.
