@@ -12,7 +12,11 @@
    :depth: 2
    :class: onecol
 
+<<<<<<< HEAD
 When deploying your database, you have 2 main choices. The following diagram 
+=======
+When deploying your database, you have 3 main choices. The following diagram 
+>>>>>>> origin/DOCSP-49018
 shows these options, which are explained further below:
 
 .. figure:: /includes/images/deployment-types.png
