@@ -59,8 +59,6 @@ the following requirements:
   offering high availability if there's a regional outage or a cloud
   provider outage that affects the primary node.
 
-.. include:: /includes/data-sovereignty.rst
-
 Considerations and Recommendations
 ----------------------------------
 
