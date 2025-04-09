@@ -39,6 +39,10 @@ one of your chosen cloud provider's `availability regions <https://docs.aws.amaz
 {+cluster+} is deployed to the cloud provider region ``us-east``, |service| deploys 
 nodes to ``us-east-a``, ``us-east-b`` and ``us-east-c`` by default. 
 
+.. figure:: /includes/images/atlas-database-replication.png
+   :figwidth: 500px
+   :alt: Atlas Database Replication diagram.
+
 To learn more about high availability and node distribution across regions, 
 see :ref:`arch-center-high-availability`.
 
@@ -53,7 +57,14 @@ result in a deadlock that prevents a primary node from being elected.
 In the event that a primary node is unavailable, because of infrastructure 
 outages, maintenance windows or any other reason, |service| {+clusters+} self-heal 
 by promoting an existing secondary node to the role of primary node to maintain 
-database availability. To learn more about this process, see `How does MongoDB Atlas deliver high availability? <https://www.mongodb.com/docs/atlas/reference/faq/deployment/#how-does-service-fullname-deliver-high-availability->`__
+database availability. 
+
+.. figure:: /includes/images/atlas-self-healing.png
+   :figwidth: 650px
+   :alt: Atlas Self-Healing Deployment diagram.
+
+To learn more about this process, see 
+`How does MongoDB Atlas deliver high availability? <https://www.mongodb.com/docs/atlas/reference/faq/deployment/#how-does-service-fullname-deliver-high-availability->`__
 
 Maintenance Window Uptime
 ~~~~~~~~~~~~~~~~~~~~~~~~~
