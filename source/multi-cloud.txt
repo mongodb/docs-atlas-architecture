@@ -172,22 +172,6 @@ multi-cloud deployments, see the following sections:
    are also multi-region. There may be other considerations
    for multi-cloud deployments that are not covered in the
    {+atlas-arch-center+}, such as cloud-provider-aware application-side
-<<<<<<< HEAD
-<<<<<<< HEAD
    settings. Contact {+ps+}
    team to create a custom landing zone for your {+service+} multi-cloud
    deployments that covers all considerations.
-
-.. include:: /includes/rec-list.rst
-
-=======
-   settings. 
-   
-   Contact {+ps+}
-   team to create a custom landing zone for your {+service+} multi-cloud
-   deployments that covers all considerations.
->>>>>>> 8e67e55 (update cloud page)
-=======
-   settings. Contact {+ps+} team to create a strategy for your 
-   {+service+} multi-cloud deployments that covers these considerations.
->>>>>>> 793053b (massive pruning of global; other cleanup work)
