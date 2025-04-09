@@ -75,6 +75,21 @@ You can use the {+atlas-cli+}, {+atlas-admin-api+}, or {+atlas-ui+} for the foll
   |service| logs both successful and unsuccessful authentication attempts,
   including the timestamp of each attempt and which user tried to authenticate.
 
+Programmatic Access to Audit Logs
+`````````````````````````````````
+
+To integrate with tools beyond the built-in integrations, we recommend
+that you retrieve logs with the following programmatic tools and feed
+the |json|-formatted output to your external tools:
+
+- To continually push logs to an |aws| |s3| bucket, use the {+atlas-admin-api+}
+  endpoints for :oas-atlas-tag:`Push-Based Log Export </Push-Based-Log-Export>`.
+- To retrieve deployment logs and lists of project events,
+  use the {+atlas-admin-api+} endpoints for :oas-atlas-tag:`Monitoring and Logs </Monitoring-and-Logs>`
+  and :oas-atlas-tag:`Project and Organization Events </Events>`.
+- To retrieve deployment logs, use the :ref:`atlas deployment logs <atlas-deployments-logs>`
+  command in the {+atlas-cli+}. 
+  
 .. _arch-center-auditing-logging-recs:
 
 Recommendations for {+service+} Auditing and Logging
@@ -145,26 +160,6 @@ Audit log messages that follow the ``mongo`` schema always include the following
 
 For a full list of audit action types and their associated ``param`` details and ``result`` values, 
 see :manual:`mongo Schema Audit Messages </reference/audit-message/mongo/>`. 
-
-<<<<<<< HEAD
-Programmatic Access to Audit Logs
-`````````````````````````````````
-=======
-Recommendations for Programmatic Access to Audit Logs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
->>>>>>> 03ec61c ((DOCSP-47103) Fix links and reorganize download logs.)
-
-To integrate with tools beyond the built-in integrations, we recommend
-that you retrieve logs with the following programmatic tools and feed
-the |json|-formatted output to your external tools:
-
-- To continually push logs to an |aws| |s3| bucket, use the {+atlas-admin-api+}
-  endpoints for :oas-atlas-tag:`Push-Based Log Export </Push-Based-Log-Export>`.
-- To retrieve deployment logs and lists of project events,
-  use the {+atlas-admin-api+} endpoints for :oas-atlas-tag:`Monitoring and Logs </Monitoring-and-Logs>`
-  and :oas-atlas-tag:`Project and Organization Events </Events>`.
-- To retrieve deployment logs, use the :ref:`atlas deployment logs <atlas-deployments-logs>`
-  command in the {+atlas-cli+}. 
 
 Automation Examples: {+service+} Auditing and Logging
 -----------------------------------------------------
