@@ -21,13 +21,18 @@ AI-driven Media Personalization: MongoDB and Vector Search
    :depth: 2
    :class: onecol
 
-- Use cases: `Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_,
-  Personalization
-- Industries: `Telecommunications <https://www.mongodb.com/solutions/industries/telecommunications>`_,
-  Media
-- Products and Tools: `Atlas <https://www.mongodb.com/products/platform/atlas-database>`_,
-  `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_,
-  `PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`_
+**Use cases:** 
+`Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_,
+Personalization
+
+**Industries:** 
+`Telecommunications <https://www.mongodb.com/solutions/industries/telecommunications>`_,
+Media
+
+**Products and Tools:** 
+`Atlas <https://www.mongodb.com/products/platform/atlas-database>`_,
+`Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_,
+`PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`_
 
 Solution overview
 -----------------
