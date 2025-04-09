@@ -145,8 +145,7 @@ To learn more about how to plan for and respond to disasters, see
 :ref:`arch-center-dr`.
 
 Choose a Deployment Type and Cluster Tier that Fits your Deployment Goals
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 When creating a new cluster, you can choose between between a range of {+cluster+} tiers 
 available under the Dedicated, Flex, or Free deployment types. 
@@ -172,13 +171,18 @@ submit a request to :ref:`test primary failover <test-failover>`.
 When {+service+} simulates a failover event, {+service+} shuts down the current 
 primary and holds an election to elect a new primary.
 
+To test if your application can handle a failure of the replica set primary,
+submit a request to :ref:`test primary failover <test-failover>`. 
+When {+service+} simulates a failover event, {+service+} shuts down the current 
+primary and holds an election to elect a new primary.
+
 To learn more about replica set members, see :manual:`Replica Set Members </core/replica-set-members>`. To learn more about replica set elections and 
 voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
 
 .. _arch-center-distribute-data:
 
 Distribute Data Across At Least Three Data Centers in Different Availability Zones
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 MongoDB provides high availability by storing multiple copies of data across replica sets.
 To ensure that members of the same replica set don't share the same resources, and that 

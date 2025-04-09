@@ -1,5 +1,4 @@
-.. code-block::
+.. code-block:: 
    :copyable: true
-
-   atlas accesslogs list --output json --projectId 618d48e05277a606ed2496fe --clusterName Cluster0 
    
+   atlas deployments logs --output json --type atlas --hostname cluster0-shard-00-00.a1b2c.mongodb.net --name mongodb.gz  
