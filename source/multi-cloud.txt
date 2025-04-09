@@ -59,6 +59,7 @@ the following requirements:
   offering high availability if there's a regional outage or a cloud
   provider outage that affects the primary node.
 
+.. _arch-center-multi-cloud-rec-summary
 Considerations and Recommendations
 ----------------------------------
 
