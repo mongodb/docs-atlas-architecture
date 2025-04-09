@@ -41,8 +41,8 @@ Use Cases for Single-Region Deployments
 A single-region deployment may be best for you if you have
 the following requirements:
 
-- You want to use one cloud provider
-- You don't need to deploy to more than one region
+- You want to use one cloud provider.
+- You don't need to deploy to more than one region.
 - Your application requires low latency *and* has a majority of users
   in one geographic location.
 
@@ -56,8 +56,6 @@ primary node.
 If your application requires low latency and cross-region or cross-provider high
 availability, consider a :ref:`arch-center-paradigms-multi-region` or 
 :ref:`arch-center-paradigms-multi-cloud`, respectively.
-
-.. include:: /includes/data-sovereignty.rst
 
 If your application requires data sovereignty and
 cross-region or cross-provider high

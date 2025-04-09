@@ -59,7 +59,45 @@ multiple geographies, ensures the highest level of availability with a single
 provider. If your application requires the very highest level of availability 
 and lowest latency, consider a :ref:`arch-center-paradigms-multi-cloud`.
 
-.. include:: /includes/data-sovereignty.rst
+Global Deployments 
+------------------
+
+Global {+service+} deployments are the most complex multi-region deployment 
+paradigms, and therefore require very careful planning. In almost all cases,  
+a :ref:`arch-center-paradigms-multi-region` (or its subset, a
+:ref:`arch-center-paradigms-multi-cloud`) will fulfill your needs.
+
+The following are a few reasons why you might consider a global deployment 
+strategy:
+
+- You need a single global connection string.
+- You need to perform global aggregations across all customers.
+- You need the ability to read/write for all customers from everywhere 
+  in one logical cluster, while also having regional reads/writes.
+
+.. note::
+
+   The complexity of global deployments results in many opinions on best 
+   practices. The {+atlas-arch-center+} does not currently cover recommendations
+   specific to global deployments. Contact {+ps+} team to discuss your 
+   specific requirements and to design a {+service+} global deployment 
+   strategy.
+
+Data Sovereignty and High Availability Considerations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For compliance with data residency laws, data can be partitioned to
+reside in specific regions, ensuring adherence to local regulations.
+However, deploying to a single region sacrifices high availability if
+there is a regional outage. 
+
+You can configure a multi-region deployment for both high availability 
+and data sovereignty. For example, for an application deployed with |aws| 
+that requires data storage in Europe, you can deploy a multi-region deployment
+to three regions within the EU (such as ``eu-west-1``, ``eu-west-2``, 
+and ``eu-west-3``). This ensures data sovereignty since all regions are within 
+the EU, while offering high availability if there's a regional outage that 
+affects one of the nodes.
 
 .. _arch-center-multi-region-considerations:
 
@@ -86,7 +124,7 @@ For more considerations, see
 
 .. _arch-center-multi-region-rec-summary:
 
-Recommendations for Single-Region Deployments
+Recommendations for Multi-Region Deployments
 ---------------------------------------------
 
 .. include:: /includes/rec-list.rst
