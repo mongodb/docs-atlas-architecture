@@ -11,4 +11,4 @@ Industry Solutions
 .. toctree::
    :titlesonly:
 
-   AI-driven Media Personalization: MongoDB and Vector Search <industry-solutions/media-personalization>
+   AI-driven Media Personalization </industry-solutions/media-personalization>
