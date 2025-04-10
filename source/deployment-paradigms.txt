@@ -58,8 +58,8 @@ There are several types of multi-region deployments:
 
 Comparison of Deployment Types
 ------------------------------
-To assist in determining which deployment type best fits your needs, the 
-following table provides a comparison:
+The following table provides a comparison of deployment paradigms to help you 
+determine the best fit for your needs: 
 
 .. list-table::
    :header-rows: 1
@@ -67,30 +67,30 @@ following table provides a comparison:
 
    * - Design Consideration
      - Single-Region
-     - Multi-Region in 1 Geography
+     - Multi-Region in One Geography
      - Multi-Region in Multiple Geographies
      - Multi-Cloud
 
-   * - Availability & Reliability
+   * - **Availability & Reliability**
      - Data is available if a single zone (data center) fails
      - Data is available if a single region fails
      - Data is available if multiple regions or geographies fail
      - Data is available if a cloud provider fails
 
-   * - Performance
+   * - **Performance**
      - High for regional users; lower for others
      - High for users within the chosen geography
      - High for users within all of the chosen geographies
      - High for users within all of the chosen geographies
 
-   * - Complexity
+   * - **Complexity**
      - Quick setup and easy maintenance
      - More complex than Single-Region
      - Same as Multi-region in 1 geography 
      - More difficult, as it requires an account with each provider
 
-   * - Security & Data Sovereignty
-     - Data by default exists in a single location
+   * - **Security & Data Sovereignty**
+     - Data, by default, exists in a single location
      - Data resides in a single geographic region
      - You can partition the data so that certain data resides in specific regions.
      - You can partition the data so that certain data resides in specific regions, 
