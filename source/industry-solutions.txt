@@ -3,3 +3,12 @@
 ==================
 Industry Solutions
 ==================
+
+:ref:`arch-center-is-ai-media-personalization`
+  Learn about how to leverage data to create personalized user
+  experiences by using Atlas Database, Atlas Vector Search, and Pymongo.
+
+.. toctree::
+   :titlesonly:
+
+   AI-driven Media Personalization <industry-solutions/media-personalization>
