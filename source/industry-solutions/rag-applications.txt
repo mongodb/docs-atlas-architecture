@@ -116,7 +116,7 @@ With MongoDB
    - **Tags extractor:** Python script that extracts the tags from the lyrics
      (the 10 most common nouns) and adds it to the resulting event.
 
-.. figure:: /includes/images/WIP.png
+.. figure:: /includes/images/industry-solutions/RefArchitecture_StreamProcessing_WithMongoDB.svg
    :figwidth: 750px
    :alt: Scalable vector updates reference architecture with MongoDB
 
@@ -188,20 +188,20 @@ embeddings asynchronously and at scale, leveraging MongoDB Atlas.
       Once you have created the cluster, go to cluster settings and copy the
       bootstrap URL.
 
-      .. figure:: /includes/images/WIP.png
+      .. figure:: /includes/images/industry-solutions/WIP.png
          :figwidth: 750px
          :alt: Kafka cluster settings
       
       Then, create an API key to connect to your cluster.
 
-      .. figure:: /includes/images/WIP.png
+      .. figure:: /includes/images/industry-solutions/WIP.png
          :figwidth: 750px
          :alt: API key settings
 
       The next step is to configure the topics for use in this solution:
       SpanishInputTopic, EnglishInputTopic, and OutputTopic.
       
-      .. figure:: /includes/images/WIP.png
+      .. figure:: /includes/images/industry-solutions/WIP.png
          :figwidth: 750px
          :alt: Topic settings
 
@@ -218,14 +218,14 @@ embeddings asynchronously and at scale, leveraging MongoDB Atlas.
       the bootstrap server URL, username, and password for the Connection
       Registry.
       
-      .. figure:: /includes/images/WIP.png
+      .. figure:: /includes/images/industry-solutions/WIP.png
          :figwidth: 750px
          :alt: Stream Processing connection registry settings
 
       Next, create a connection from the Atlas Stream Processing Instance to
       the MongoDB Atlas cluster.
       
-      .. figure:: /includes/images/WIP.png
+      .. figure:: /includes/images/industry-solutions/WIP.png
          :figwidth: 750px
          :alt: Stream Processing to Atlas settings
 
@@ -237,7 +237,7 @@ embeddings asynchronously and at scale, leveraging MongoDB Atlas.
       When clicking on the Connect button in the Stream Processing Instance, 
       the Atlas UI provides instructions on connecting to the instance.
 
-      .. figure:: /includes/images/WIP.png
+      .. figure:: /includes/images/industry-solutions/WIP.png
          :figwidth: 750px
          :alt: Connect to Stream Processing
 
