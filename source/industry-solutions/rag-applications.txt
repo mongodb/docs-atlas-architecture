@@ -109,12 +109,12 @@ With MongoDB
 
 - **Metadata service:**
 
-   - **Embedding generator:** Python script that subscribes to the Kafka input
-     topics (both Spanish and English). For each message received, it reads the
-     lyrics and generates an embedding using a model specific for each 
-     language.
-   - **Tags extractor:** Python script that extracts the tags from the lyrics
-     (the 10 most common nouns) and adds it to the resulting event.
+  - **Embedding generator:** Python script that subscribes to the Kafka input
+    topics (both Spanish and English). For each message received, it reads the
+    lyrics and generates an embedding using a model specific for each 
+    language.
+  - **Tags extractor:** Python script that extracts the tags from the lyrics
+    (the 10 most common nouns) and adds it to the resulting event.
 
 .. figure:: /includes/images/industry-solutions/RefArchitecture_StreamProcessing_WithMongoDB.svg
    :figwidth: 1200px
