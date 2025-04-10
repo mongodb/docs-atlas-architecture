@@ -111,7 +111,11 @@ retrieval system with ease. Let's break down the process:
    page and paragraph where the information was found and highlighting
    the specific section with a red frame (see Figure 2).
 
-(figure 1)
+.. figure:: /includes/images/industry-solutions/is-pdf-search-fig1.svg
+   :figwidth: 1200px
+   :alt: Figure 1: PDF chunking, embedding creation, and storage, orchestrated with Superduper.io
+
+   Figure 1: PDF chunking, embedding creation, and storage, orchestrated with Superduper.io
 
 Each customer has a guidelines PDF associated with their account based
 on country of residency. When the user selects a customer and asks a
@@ -133,7 +137,11 @@ scale search needs independent of the database. Search Nodes provide
 better performance at scale, delivering workload isolation, higher
 availability, and the ability to better optimize resource usage.
 
-(figure 2)
+.. figure:: /includes/images/industry-solutions/is-pdf-search-fig2.svg
+   :figwidth: 1200px
+   :alt: Figure 2: PDF querying flow, orchestrated with Superduper.io
+
+   Figure 2: PDF querying flow, orchestrated with Superduper.io
 
 .. code-block:: javascript
 
