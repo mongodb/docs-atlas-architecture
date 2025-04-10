@@ -56,8 +56,6 @@ There are several types of multi-region deployments:
   situations; for example, where you need global aggregation of user data, or 
   where legal terms dictate specific hosting requirements.
 
-Comparison of Deployment Types
-------------------------------
 The following table provides a comparison of deployment paradigms to help you 
 determine the best fit for your needs: 
 
