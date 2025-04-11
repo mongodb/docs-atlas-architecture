@@ -52,9 +52,54 @@ There are several types of multi-region deployments:
   region ``us-east4``. This provides the highest level of availability, ensuring 
   your data is available even if an entire cloud provider fails. 
 
-- Global Clusters. This option should be considered for only the most complex 
+- Global Cluster Deployment. This option should be considered for only the most complex 
   situations; for example, where you need global aggregation of user data, or 
   where legal terms dictate specific hosting requirements.
+
+The following table provides a comparison of deployment paradigms to help you 
+determine the best fit for your needs: 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 20 20 
+
+   * - Design Consideration
+     - Single-Region
+     - Multi-Region in One Geography
+     - Multi-Region in Multiple Geographies
+     - Multi-Cloud
+
+   * - **Availability & Reliability**
+     - Data is available if a single zone (data center) fails
+     - Data is available if a single region fails
+     - Data is available if multiple regions or geographies fail
+     - Data is available if a cloud provider fails
+
+   * - **Performance**
+     - High for regional users; lower for others
+     - High for users within the chosen geography
+     - High for users within all of the chosen geographies
+     - High for users within all of the chosen geographies
+
+   * - **Complexity**
+     - Quick setup and easy maintenance
+     - More complex than Single-Region
+     - Same as Multi-region in 1 geography 
+     - More difficult, as it requires an account with each provider
+
+   * - **Security & Data Sovereignty**
+     - Data, by default, exists in a single location
+     - Data resides in a single geographic region
+     - You can partition the data so that certain data resides in specific regions.
+     - You can partition the data so that certain data resides in specific regions, 
+       or even on a specific provider in a specific region.
+
+.. note::
+
+   The cost of each deployment type depends on several factors, including the 
+   provider(s) you select, the number of regions you need, the amount of storage, and 
+   the processing power of the servers. For the latest pricing information, 
+   refer to the `MongoDB Pricing <https://www.mongodb.com/pricing>`_.
 
 .. toctree::
    :titlesonly:
