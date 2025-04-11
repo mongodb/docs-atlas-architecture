@@ -1,14 +1,19 @@
 .. _arch-center-is-ai-media-personalization:
 
 ==========================================================
-AI-driven Media Personalization: MongoDB and Vector Search
+AI-Driven Media Personalization: MongoDB and Vector Search
 ==========================================================
 
 .. default-domain:: mongodb
 
 .. facet::
    :name: genre
-   :values: reference
+   :values: tutorial
+
+.. meta:: 
+   :keywords: GenAI, Atlas
+   :description: Discover how to leverage MongoDB and Vector Search effectively 
+to create more engaging, personalized user experiences.
 
 .. contents:: On this page
    :local:
@@ -116,13 +121,13 @@ or other emerging technologies, our solution seamlessly incorporates these tools
 to synthesize and summarize vast amounts of data. Here's a deeper look at how 
 this works:
 
-- Integration with Multiple Sources:  The system pulls content from a variety of
+**Integration with Multiple Sources:**  The system pulls content from a variety of
   articles and data sources, retrieved with MongoDB Atlas Vector Search. Found 
   items are then compiled into dossiers, which provide users with a detailed and
   contextual exploration of topics, curated to offer a narrative or analytical 
   perspective that adds value beyond the original content.
 
-- Customizable Output: The output is highly customizable. Publishers can set 
+**Customizable Output:** The output is highly customizable. Publishers can set 
   parameters based on their audience's preferences or specific project 
   requirements. This includes adjusting the level of detail, the use of technical
   versus layman terms, and the inclusion of multimedia elements to complement 
@@ -146,7 +151,7 @@ right users is essential to keep sales high.
 Reference architecture
 ----------------------
 
-.. figure:: /includes/images/reference-architecture.svg
+.. figure:: /includes/images/ndustry-solutions/reference-architecture.svg
    :figwidth: 750px
    :alt: An image showing the reference architecture of vector search
 
@@ -156,21 +161,21 @@ Demo application
 We have developed a showcase of the solution. It is available at 
 `<https://ist.media>`_ and incorporates the concepts discussed above.
 
-.. figure:: /includes/images/ist-homepage.svg
+.. figure:: /includes/images/industry-solutions/ist-homepage.svg
    :figwidth: 750px
    :alt: An image showing the homepage of the ist website
 
 The underlying data model is straightforward; a representative news article looks
 like this:
 
-.. figure:: /includes/images/demo-model.svg
+.. figure:: /includes/images/ndustry-solutions/demo-model.svg
    :figwidth: 750px
    :alt: An image showing an example of a news article in data model format
 
 Embeddings are calculated using the OpenAI model `text-embedding-ada-002 <https://platform.openai.com/docs/guides/embeddings/embedding-models>`_.
 A Vector Index has been created from the MongoDB Atlas web interface like this:
 
-.. figure:: /includes/images/vector-index.svg
+.. figure:: /includes/images/ndustry-solutions/vector-index.svg
    :figwidth: 750px
    :alt: An image showing an embedding model
 
