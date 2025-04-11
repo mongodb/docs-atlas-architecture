@@ -151,7 +151,7 @@ right users is essential to keep sales high.
 Reference architecture
 ----------------------
 
-.. figure:: /includes/images/ndustry-solutions/reference-architecture.svg
+.. figure:: /includes/images/industry-solutions/reference-architecture.svg
    :figwidth: 750px
    :alt: An image showing the reference architecture of vector search
 
@@ -168,14 +168,14 @@ We have developed a showcase of the solution. It is available at
 The underlying data model is straightforward; a representative news article looks
 like this:
 
-.. figure:: /includes/images/ndustry-solutions/demo-model.svg
+.. figure:: /includes/images/industry-solutions/demo-model.svg
    :figwidth: 750px
    :alt: An image showing an example of a news article in data model format
 
 Embeddings are calculated using the OpenAI model `text-embedding-ada-002 <https://platform.openai.com/docs/guides/embeddings/embedding-models>`_.
 A Vector Index has been created from the MongoDB Atlas web interface like this:
 
-.. figure:: /includes/images/ndustry-solutions/vector-index.svg
+.. figure:: /includes/images/industry-solutions/vector-index.svg
    :figwidth: 750px
    :alt: An image showing an embedding model
 
