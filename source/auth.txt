@@ -24,22 +24,16 @@ Authentication is the process of verifying the identity of a user.
 to determine their access. Authorization is the process of assigning 
 permissions to an authenticated user.
 
-For **Authentication**, |service| provides robust authentication mechanisms that 
+For :ref:`**Authentication** <arch-center-authentication-recs>`, |service| provides robust authentication mechanisms that 
 seamlessly integrate with your existing identity systems, providing secure access
 to the UI, database, and |api|\s through strong identity federation.
 You can manage access to |service-fullname| {+clusters+} by
 configuring authentication. 
 
-For **Authorization**, |service| provides Role-Based Access Control (RBAC) to govern 
+For :ref:`**Authorization** <arch-center-authorization-recs>`, |service| provides Role-Based Access Control (RBAC) to govern 
 access to |service|. You must grant a user one or more roles that determine the
 user's access to database resources and operations. Outside of role
 assignments, the user has no access to the system.
-
-.. note:: 
-
-   In this context, a "user" can be a human or an application. We refer to 
-   human users as "Workforce Identity" and applications as 
-   "Workload Identity".
 
 .. toctree::
    :titlesonly:
