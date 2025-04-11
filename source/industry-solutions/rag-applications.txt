@@ -88,7 +88,7 @@ including:
   match. Routing up-to-date, contextual data to the most accurate embedding
   model can improve these experiences.
 
-Reference architectures
+Reference Architectures
 -----------------------
 
 With MongoDB
@@ -120,11 +120,13 @@ With MongoDB
    :figwidth: 1200px
    :alt: Scalable vector updates reference architecture with MongoDB
 
-Data model approach
+   Scalable vector updates reference architecture with MongoDB
+
+Data Model Approach
 -------------------
 
 .. code-block:: javascript
-   :copyable:true
+   :copyable: true
 
    {
       "title": "Hurricane",
@@ -159,7 +161,7 @@ The benefit of using the document data model is that it allows you to store all
 the related information of a song in a single document for easy and fast 
 retrieval.
 
-Building the solution
+Building the Solution
 ---------------------
 
 In the `GitHub repository
@@ -261,7 +263,7 @@ embeddings asynchronously and at scale, leveraging MongoDB Atlas.
       follows:
 
       .. code-block:: javascript
-         :copyable:true
+         :copyable: true
 
          {
             "fields": [
@@ -278,7 +280,7 @@ embeddings asynchronously and at scale, leveraging MongoDB Atlas.
       follows:
       
       .. code-block:: javascript
-         :copyable:true
+         :copyable: true
 
          {
             "fields": [
@@ -326,17 +328,17 @@ Key Learnings
   horizontally scaling the functions responsible for embedding generation to 
   handle bursts in workload.
 
-Technologies and products used
+Technologies and Products Used
 ------------------------------
 
-MongoDB developer data platform
+MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas Database <http://mongodb.com/atlas>`__
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 - `Atlas Stream Processing <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
 
-Partner technologies
+Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
 - Confluent Cloud
