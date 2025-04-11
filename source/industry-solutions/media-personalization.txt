@@ -151,7 +151,9 @@ right users is essential to keep sales high.
 Reference architecture
 ----------------------
 
-.. [picture of reference architecture]
+.. figure:: /includes/images/reference-architecture.svg
+   :figwidth: 750px
+   :alt: An image showing the reference architecture of vector search
 
 Demo application
 ----------------
@@ -159,17 +161,23 @@ Demo application
 We have developed a showcase of the solution. It is available at 
 `<https://ist.media>`_ and incorporates the concepts discussed above.
 
-.. [picture of home page of ist]
+.. figure:: /includes/images/ist-homepage.svg
+   :figwidth: 750px
+   :alt: An image showing the homepage of the ist website
 
 The underlying data model is straightforward; a representative news article looks
 like this:
 
-.. [picture of data model]
+.. figure:: /includes/images/demo-model.svg
+   :figwidth: 750px
+   :alt: An image showing an example of a news article in data model format
 
 Embeddings are calculated using the OpenAI model `text-embedding-ada-002 <https://platform.openai.com/docs/guides/embeddings/embedding-models>`_.
 A Vector Index has been created from the MongoDB Atlas web interface like this:
 
-.. [picture of vector index]
+.. figure:: /includes/images/vector-index.svg
+   :figwidth: 750px
+   :alt: An image showing an embedding model
 
 Technologies and products used
 ------------------------------
