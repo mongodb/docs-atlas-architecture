@@ -10,8 +10,7 @@ Build a PDF Search Application with Vector Search and LLMs
 
 .. meta:: 
    :keywords: pdf, vector search
-   :description: Streamline operations and claims processing with powerful PDF search
-  capabilities
+   :description: Streamline operations and claims processing with powerful PDF search capabilities
 
 .. contents:: On this page
    :local:
