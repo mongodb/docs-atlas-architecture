@@ -27,7 +27,7 @@ Vector Search to drive efficiency through real-time, audio diagnostics.
 **Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-Solution Overview
+Solution overview
 -----------------
 
 The renewable energy sector is rapidly evolving with advancements in AI and
@@ -134,9 +134,7 @@ sound.
 
 .. figure:: /includes/images/industry-solutions/Wind-Turbine-Diagnosis-Demo.svg
    :figwidth: 1200px
-   :alt: DReal-time wind turbine diagnosis by analyzing the emitted audio,
-   allowing us to diagnose its status — whether it's operating normally,
-   stopped, or experiencing any issues.
+   :alt: DReal-time wind turbine diagnosis 
    
 Real-time wind turbine diagnosis by analyzing the emitted audio, allowing us to
 diagnose its status — whether it's operating normally, stopped, or experiencing
