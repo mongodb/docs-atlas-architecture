@@ -3,3 +3,13 @@
 ==================
 Industry Solutions
 ==================
+
+:ref:`arch-center-is-rag-applications`
+  Use native stream processing and vector search in MongoDB Atlas to
+  continuously update, store, and search embeddings through a unified
+  interface.
+
+.. toctree::
+   :titlesonly:
+
+   RAG Applications <industry-solutions/rag-applications>
