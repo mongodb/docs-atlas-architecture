@@ -131,8 +131,9 @@ maximum acceptable amount of data loss during an incident, while RTO
 defines how quickly your application must recover. Since data varies in
 importance, you must evaluate RPO and RTO for each application
 individually. For example, any mission-critical data will likely have 
-different requirements than clickstream analytics. Your requirements
-for RTO, RPO, and the backup retention period will influence the cost
+different requirements than clickstream analytics.
+
+Your requirements for RTO, RPO, and the backup retention period will influence the cost
 and performance considerations of maintaining backups. In development
 and test environments, we recommend that you disable backup to save
 costs. In staging and production environments, ensure that backup is
@@ -151,6 +152,13 @@ window of seven days. Adjust this time range with a longer setting based
 on the criticality of the workload. This allows you to replay the oplog
 to restore a {+cluster+} from a particular point in time and satisfy
 your RTO.
+
+If you select a multi-region deployment model, such as our recommended 5-node, 3-region topology,
+then restoring backups is not necessary for fault tolerance, disaster recovery, or high availability.
+However, restoring backups may be important for certain use cases, such as to revert to older versions
+of data after a large data corruption event or accidental deletion of data.
+To learn more about how multi-region deployment models ensure high availability of data, see 
+:ref:`arch-center-deployment-topologies`. 
 
 .. seealso:: 
 
@@ -281,7 +289,7 @@ backup is enabled for the {+cluster+}.
    .. tab:: CLI
       :tabid: cli
 
-      Run the following command take a backup snapshot for the {+cluster+}
+      Run the following command to take a backup snapshot for the {+cluster+}
       named myDemo and retain the snapshot for 7 days:
 
       .. include:: /includes/examples/cli-example-backup-take-snapshot.rst
