@@ -7,4 +7,4 @@ Industry Solutions
 .. toctree::
    :titlesonly:
 
-   Real-time audio-based AI diagnostics <industry-solutions/audio-based-AI-diagnostics>
+   Audio-Based AI Diagnostics <industry-solutions/audio-based-AI-diagnostics>
