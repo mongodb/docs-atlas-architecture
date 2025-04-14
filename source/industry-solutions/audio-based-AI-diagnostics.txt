@@ -27,7 +27,7 @@ Vector Search to drive efficiency through real-time, audio diagnostics.
 **Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-Solution overview
+Solution Overview
 -----------------
 
 The renewable energy sector is rapidly evolving with advancements in AI and
@@ -68,7 +68,7 @@ This approach offers several benefits:
   <https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
   and create your first index in minutes.
 
-Other applicable industries and use cases
+Other Applicable Industries and Use Cases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Manufacturing**: Implementing real-time anomaly detection in manufacturing
@@ -91,12 +91,12 @@ turbine. This demo enables real-time diagnosis by analyzing the emitted audio,
 allowing us to diagnose its condition—whether it's operating normally, stopped,
 or experiencing any issues.
 
-Reference architectures
+Reference Architectures
 -----------------------
 
 **With MongoDB**: The solution demo is divided in two parts:
 
-Audio preparation
+Audio Preparation
 ~~~~~~~~~~~~~~~~~
 
 We begin by capturing the audio from the equipment in different situations
@@ -113,7 +113,7 @@ magic begins. With just a few examples of sounds in our database, they are ready
 to be searched (and essentially compared) with the sound emitted by our
 equipment during its operation in real-time.
 
-Audio-based diagnosis
+Audio-Based Diagnosis
 ~~~~~~~~~~~~~~~~~~~~~
 
 Next we put our equipment through normal operation and start capturing the sound
@@ -140,7 +140,7 @@ sound.
    diagnose its status — whether it's operating normally, stopped, or experiencing
    any issues.
 
-Data model approach
+Data Model Approach
 -------------------
 
 The data model for the vectorized audio collection is simple, we have our audio
@@ -157,7 +157,7 @@ On the reading end, the one-second audio clips we record in real-time are
 vectorized and sent to MongoDB Atlas Vector Search to be compared against
 embeddings from the “sounds” collection above.
 
-Building the solution
+Building the Solution
 ---------------------
 
 .. procedure::
@@ -223,7 +223,7 @@ Key Learnings
   indexes for `local deployments
   <https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-local/#std-label-atlas-cli-deploy-local-avs>`__. 
   
-Technologies and products used
+Technologies and Products Used
 ------------------------------
 
 **MongoDB developer data platform:**
