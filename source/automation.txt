@@ -21,17 +21,18 @@ Guidance for {+service+} Automated Infrastructure Provisioning
 
 |service-fullname| provides tools that enable programmatic management of the deployment, 
 scaling, and maintenance of your Atlas {+clusters+}. 
-{+service+} provides the flexibility to implement Infrastructure as Code (IaC) by using either imperative or declarative programming.
-For example, you can write imperative scripts that call functions from our {+atlas-go-sdk+} client, 
-or manage {+service+} resources by using declarative {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
+
+{+service+} provides the flexibility to implement Infrastructure as Code (IaC) using either imperative or declarative programming.
+For example, developers can write imperative scripts that call functions from our {+atlas-go-sdk+} client, 
+or manage {+service+} resources using declarative {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
 
 {+service+}'s {+iac+} tools are especially useful at the enterprise scale. 
-We recommend that our you use {+iac+} tools for the following benefits: 
+We recommend that our enterprise customers use {+iac+} tools for the following benefits: 
 
-- **Consistency**: {+iac+} tools enable repeatability across environments so that deployments
+- **Consistency**: {+iac+} tools enable repeatability across environments, so that deployments
   generate consistent results. 
 - **Scalability**: {+iac+} tools enable :ref:`auto-scaling <arch-center-scalability>` to automatically adjust 
-  the tier or storage capacity of clusters in response to real-time use. 
+  the tier or storage capacity of {+clusters+} in response to real-time use. 
 - **Reduced Human Error**: {+iac+} tools automate operational overhead, reducing manual interventions 
   that produce common human errors.
 - **Faster Development**: {+iac+} tools streamline operations to promote more efficient development. 
@@ -39,7 +40,7 @@ We recommend that our you use {+iac+} tools for the following benefits:
   allowing for better change management practices and compliance. 
 
 Features for |service| Automation
------------------------------
+---------------------------------
 
 You can automate the configuration, provisioning, and management of
 |service| building blocks like database users and roles, and |service|
@@ -144,6 +145,26 @@ To learn more, see :ref:`ak8so-quick-start-ref`.
 Recommendations for {+service+} Automation
 ------------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 If you already have an existing tool integrated into your deployment
 workflow that you use today, we recommend that you use that tool for
 automation. For example, if your developers and operations team are
@@ -163,4 +184,3 @@ tasks that are ephemeral in nature. The {+atlas-cli+} is great for
 local development as well as integration into a suite of tests as part
 of your CI/CD pipeline for application development because it improves
 response times and reduces costs.
-

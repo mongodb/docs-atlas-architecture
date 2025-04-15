@@ -51,28 +51,91 @@ Recommendations for {+service+} High Availability
 
 .. _arch-center-deployment-topologies:
 
-Recommended Deployment Topology for Single Region
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Recommended Deployment Topologies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Single Region, 3 Node Replica Set / Shard (Primary Secondary Secondary)
+Single-Region, 3 Node Replica Set / Shard (Primary Secondary Secondary)
 ```````````````````````````````````````````````````````````````````````
 
 .. figure:: /includes/images/highavailabilityPSS.svg
    :figwidth: 750px 
    :alt: A topology with a single region with 3 nodes: one primary and two secondaries.
 
-This topology is appropriate if low latency is required but high availability requirements 
-are limited to a single region. This topology can tolerate any 1 node failure and easily satisfy majority write 
-concern within region secondaries. This will maintain a primary in the preferred region upon any node 
-failure, limits cost, and is the least complicated from an application architecture perspective. 
-The reads and writes from secondaries in this topology encounter low latency in your preferred region.
+This :ref:`single-region <arch-center-paradigms-single>` topology is
+appropriate if low latency is required but high availability
+requirements are limited to a single region. This topology can tolerate
+any one-node failure and easily satisfy majority write 
+concern within region secondaries. This will maintain a primary in the
+preferred region upon any node failure, limits cost, and is the least
+complicated from an application architecture perspective. 
+The reads and writes from secondaries in this topology encounter low
+latency in your preferred region.
 
 This topology, however, can't tolerate a regional outage.
+
+3-Region, 3 Node Replica Set / Shard (Primary - Secondary - Secondary)
+``````````````````````````````````````````````````````````````````````
+
+.. figure:: /includes/images/highavailabilityP-S-S.svg
+   :figwidth: 750px
+   :alt: A topology with a three regions. There is one primary node in the first region, one secondary node in the second region, and one secondary node in the third region.
+
+This topology is the standard :ref:`multi-region
+<arch-center-paradigms-multi-region>` topology where high availability
+can be provided to tolerate a regional outage. This topology can
+tolerate any one-node failure, any one-region outage, and is the least
+expensive multi-region topology. 
+
+If the application requires high durability and the app server code has the write majority option set 
+in the driver, this topology will experience higher latency for writes as they need to replicate to a second region. 
+Additionally, any reads off the secondary always exist in a different region than the preferred primary region
+and will require a different app server architecture. Furthermore, any failover event will occur to a different region, and your 
+application architecture must adjust as a result.
+
+3-Region, 5 Node Replica Set / Shard (Primary Secondary - Secondary Secondary - Secondary)
+``````````````````````````````````````````````````````````````````````````````````````````
+
+.. figure:: /includes/images/highavailabilityPS-SS-S.svg
+   :figwidth: 750px
+   :alt: A topology with a three regions. There is one primary node and one secondary node in the first region, two secondary nodes in the second region, and one secondary node in the third region.
+
+This topology is the preferred topology that balances high
+availability, performance, and cost across :ref:`multiple regions
+<arch-center-paradigms-multi-region>`. This topology can tolerate any 2
+nodes' failure, tolerate primary node failure while keeping the new
+primary in the preferred region, and tolerate any one-region outage. 
+
+If the application requires high durability and the app server code has
+the write majority option set in the driver, this topology will
+experience higher latency for writes as they need to replicate to a
+second region. In order to accommodate a regional outage, the
+application tier must be configured to also fail over and shift work to 
+the elected primary.
 
 .. _arch-center-ha-configurations:
 
 Recommended Configurations for High Availability and Recovery
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+```````````````````````````````````````
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
 
 Use the following recommendations to configure your
 {+service+} deployments and backups for high availability and to
@@ -115,6 +178,7 @@ voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
 
 Distribute Data Across At Least Three Data Centers in Different Availability Zones
 ``````````````````````````````````````````````````````````````````````````````````
+
 MongoDB provides high availability by storing multiple copies of data across replica sets.
 To ensure that members of the same replica set don't share the same resources, and that 
 a replica set can elect a primary if a data center becomes unavailable, you must distribute 
@@ -166,7 +230,7 @@ Recommended Google Cloud Regions
 .. include:: /includes/gcp-recommended-regions.rst
 
 Use ``mongos`` Redundancy for Sharded {+Clusters+}
-```````````````````````````````````````````````````
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 When a client connects to a sharded {+cluster+}, we recommend that you include multiple :manual:`mongos </reference/program/mongos/>`
 processes, separated by commas, in the connection URI. To learn more,
@@ -190,13 +254,13 @@ configuration.
 .. _arch-center-majority-write-concern:
 
 Use ``majority`` Write Concern
-``````````````````````````````
+++++++++++++++++++++++++++++++
 
 MongoDB allows you to specify the level of acknowledgment requested
 for write operations by using :manual:`write concern 
 </reference/write-concern/>`. For example, if
 you have a three-node replica set with a write concern of
-``majority``, every write operation must be persisted on 
+``majority``, every write operation needs to be persisted on 
 two nodes before an acknowledgment of completion is sent to the driver
 that issued said write operation. For the best protection from a regional
 node outage, we recommend that you set the write concern to ``majority``.
@@ -213,7 +277,8 @@ Using ``majority`` will allow write operations to continue when they persist dat
 maintaining data redundancy as well as write continuity. 
 
 Consider Backup Configuration
-`````````````````````````````
++++++++++++++++++++++++++++++
+
 Frequent data backups is critical for business continuity and disaster recovery. Frequent backups ensure that data loss and downtime is
 minimal if a disaster or cyber attack disrupts normal operations. 
 
@@ -234,11 +299,11 @@ We recommend that you:
 For more backup recommendations, see :ref:`arch-center-backups`.
 
 Plan Your Resource Utilization
-``````````````````````````````
+++++++++++++++++++++++++++++++
 
 To avoid resource capacity issues, we recommend that you monitor
 resource utilization and hold regular capacity planning sessions.
-MongoDB Professional Services offers these sessions.
+{+ps+} offers these sessions.
 
 Over-utilized clusters could fail causing a disaster. 
 Scale up clusters to higher tiers if your utilization is regularly alerting at a steady state,
@@ -475,4 +540,3 @@ These examples also apply other recommended configurations, including:
       For more configuration options and info about this example, 
       see |service-terraform| and the `MongoDB Terraform Blog Post
       <https://www.mongodb.com/developer/products/atlas/deploy-mongodb-atlas-terraform-aws/>`__.
-
