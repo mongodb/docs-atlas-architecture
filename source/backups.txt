@@ -112,18 +112,19 @@ Recommendations for {+service+} Backups
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
    :expanded: true
 
-   To ensure automatic failover in the event of a primary region failure, we recommend that you deploy your database 
-   across three or more regions. If you choose a three-region topology, such as our recommended five-node, three-region topology, then 
-   maintaining backups is not necessary for fault tolerance or disaster recovery. 
-   To learn more about which multi-region deployment models ensure high availability of data, see :ref:`arch-center-deployment-topologies`. 
-
-   If you choose a two-region topology, there is a possibility for data loss if the majority region is lost and your 
+   If you choose a multi-region deployment model with three or more regions, such as our recommended five-node, three-region topology, 
+   then maintaining backups is not necessary for fault tolerance, disaster recovery, or high availability.
+   Deploying to three or more regions guarantees automatic failover in the event of a primary region failure,
+   making backups unnecessary to prevent data loss in the event of a regional disruption.
+   Therefore, restoring backups to a three-region deployment is only necessary in cases where you want to recover back to particular timestamps, such as to revert to older versions
+   of data after a large data corruption event or accidental deletion of data. 
+   
+   However, if you choose a two-region topology, there is a possibility for data loss if the majority region is lost and your 
    MongoDB process didn't replicate write operations to the node that becomes primary after the reconfiguration.
    We don't recommend a two-region topology for customers with three supported regions. 
 
-   If you select a multi-region deployment mode, restoring backups may be important for certain use cases, such as to revert to older versions
-   of data after a large data corruption event or accidental deletion of data. 
-   
+   To learn more about which multi-region deployment models ensure high availability of data, see :ref:`arch-center-deployment-topologies`. 
+
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
