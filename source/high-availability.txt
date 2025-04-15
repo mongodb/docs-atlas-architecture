@@ -171,19 +171,12 @@ submit a request to :ref:`test primary failover <test-failover>`.
 When {+service+} simulates a failover event, {+service+} shuts down the current 
 primary and holds an election to elect a new primary.
 
-To test if your application can handle a failure of the replica set primary,
-submit a request to :ref:`test primary failover <test-failover>`. 
-When {+service+} simulates a failover event, {+service+} shuts down the current 
-primary and holds an election to elect a new primary.
-
 To learn more about replica set members, see :manual:`Replica Set Members </core/replica-set-members>`. To learn more about replica set elections and 
 voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
 
 .. _arch-center-distribute-data:
 
 Distribute Data Across At Least Three Data Centers in Different Availability Zones
-``````````````````````````````````````````````````````````````````````````````````
-
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 MongoDB provides high availability by storing multiple copies of data across replica sets.
@@ -205,7 +198,6 @@ which shows data distributed across two data centers:
    :figwidth: 750px
    :alt: An image showing two data centers: Data Center 1, with a primary and a secondary node, and Data Center 2, with only a secondary node
 
-In the previous diagram, if Data Center 2 becomes unavailable, a majority of the replica set members remain available and {+service+} can elect a primary.
 In the previous diagram, if Data Center 2 becomes unavailable, a majority of replica set members remain available and {+service+} can elect a primary.
 However, if you lose Data Center 1, you have only one out of three replica set members available, no majority, and the system degrades into read-only mode.
 
