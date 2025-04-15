@@ -13,7 +13,7 @@ AI-Driven Media Personalization: MongoDB and Vector Search
 .. meta:: 
    :keywords: GenAI, Atlas
    :description: Discover how to leverage MongoDB and Vector Search effectively 
-  to create more engaging, personalized user experiences.
+to create more engaging, personalized user experiences.
 
 .. contents:: On this page
    :local:
