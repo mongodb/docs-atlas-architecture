@@ -246,7 +246,7 @@ the same team is responsible for multiple applications across environments.
 This eases the setup cost for features such as private endpoints and customer-managed keys, 
 because all {+clusters+} in the same project share the same project configuration.
 
-However, this {+cluster+} hierarchy may violate the principle of least privilege.
+However, this {+cluster+} hierarchy might violate the principle of least privilege.
 
 Deploy multiple {+clusters+} within the same project only if both of the following are true:
 

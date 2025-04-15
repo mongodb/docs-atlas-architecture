@@ -39,7 +39,6 @@ We recommend that our enterprise customers use {+iac+} tools for the following b
 - **Improved Change Management**: {+iac+} tools support reviews and standardization of infrastructure,
   allowing for better change management practices and compliance. 
 
-
 Features for |service| Automation
 ---------------------------------
 
