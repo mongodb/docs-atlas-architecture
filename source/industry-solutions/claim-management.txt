@@ -21,9 +21,8 @@ Claim Management Using LLMs and Vector Search for RAG
 Discover how to combine Atlas Vector Search and large language models (LLMs) to 
 streamline the claim adjustment process.
 
-**Use cases:** `Gen AI
-<https://www.mongodb.com/use-cases/artificial-intelligence>`__, 
-`Content Management <https://www.mongodb.com/solutions/use-cases/content-management>`__`
+**Use cases:** `Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__, 
+`Content Management <https://www.mongodb.com/solutions/use-cases/content-management>`__
 
 **Industries:** `Insurance <https://www.mongodb.com/industries/insurance>`__,`
 `Finance <https://www.mongodb.com/industries/financial-services>`__,
@@ -56,7 +55,7 @@ tremendous opportunity now to leverage all of this unstructured data to the
 benefit of these organizations and their customers.
 
 Our solution addresses these challenges by combining the power of 
-`Altas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__`
+`Altas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 and a `Large Language Model (LLM) <https://www.mongodb.com/basics/large-language-models>`__ to
 in a `retrieval augmented generation (RAG) <https://www.mongodb.com/basics/retrieval-augmented-generation>`__
 system, allowing organizations to go beyond the limitations of baseline 
@@ -169,7 +168,7 @@ Key Learnings
   Search and the LLM, allowing for an easy and fast RAG implementation.
 
 Authors
-------
+-------
 
 - Luca Napoli, Industry Solutions, MongoDB 
 - Jeff Needham, Industry Solutions, MongoDB

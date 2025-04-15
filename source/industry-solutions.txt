@@ -4,6 +4,10 @@
 Industry Solutions
 ==================
 
+:ref:`arch-center-is-claim-management`
+  Combine Atlas Vector Search and large language models to streamline the
+  claim adjustment process.
+
 :ref:`arch-center-is-pdf-search`
   Streamline operations and claims processing with powerful PDF search
   capabilities by integrating MongoDB Atlas Vector Search,
@@ -17,5 +21,6 @@ Industry Solutions
 .. toctree::
    :titlesonly:
 
+   Claim Management <industry-solutions/claim-management>
    PDF Search </industry-solutions/pdf-search>
    RAG Applications <industry-solutions/rag-applications>
