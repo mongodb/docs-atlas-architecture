@@ -1,0 +1,194 @@
+.. _arch-center-authorization-recs:
+
+======================================
+Guidance for {+service+} Authorization
+======================================
+
+.. default-domain:: mongodb
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta:   
+   :description: Learn about the different authorization mechanisms that Atlas supports.
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+When planning |service| authorization, consider both access to the 
+control plane (UI and API access) and the database (or "data plane").
+
+.. note:: 
+
+   In this context, a "user" can be a human or an application. We refer to 
+   human users as "Workforce Identity" and applications as 
+   "Workload Identity".
+
+The following recommendations apply to both workforce (human) and workload 
+(application) users in all :ref:`deployment paradigms <arch-center-paradigms>`.
+You must use :ref:`Role-Based Access Control (RBAC) <arch-center-rbac>` for 
+authorization. Using an :ref:`Identity Federation Provider's <arch-center-fip>` 
+groups with RBAC simplifies management.
+
+.. list-table:: 
+   :widths: 20 50 30
+   :header-rows: 1
+
+   * - Resource
+     - Recommendations for Production
+     - Options for Dev and Test
+
+   * - Atlas Control Plane (UI and APIs)
+     - | *Not recommended for production environments.*
+     - | - Restrict access by assigning the lowest-needed RBAC roles. 
+       | - Assign roles directly using the ``users`` claim instead of ``groups``. 
+       | - Use domain restrictions.
+
+   * - Atlas Database
+     - | Use custom fine-grained database roles. For human users, assign roles 
+         directly using the ``users`` claim instead of ``groups``.
+     - Use the predefined ``readWriteAny`` role.
+
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   <<Recommendations that apply only to deployments in a single region here>>
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   <<Recommendations that apply only to deployments across multiple regions or multiple cloud providers here>>
+
+
+.. _arch-center-rbac:
+
+Role-Based Access Control (RBAC) and Predefined Roles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|service| uses Role-Based Access Control (RBAC) to simplify management of user 
+authorization. |service| includes predefined :atlas:`user roles <user-roles>` that 
+provide specific levels of access commonly needed for managing the |service| with 
+the UI and APIs. To simplify management, you can then map the roles to to 
+:abbr:`IdP (Identity Provider)` groups.
+
+To learn more about mapping roles to Federated Identity provider groups, refer 
+to :atlas:`Role Mapping Process </security/manage-role-mapping/#role-mapping-process>`. 
+
+For connecting to |service| {+clusters+}, use fine-grained custom database roles 
+to provide granular scoping based on the access required for the role to perform 
+its function. This approach enables you to follow the principle of least privilege.
+
+To learn more, refer to :atlas:`<mongodb-users-roles-and-privileges>`.
+
+.. _arch-center-fip:
+
+Federated Identity Providers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By integrating |service| with a federated identity provider, 
+you can use just-in-time provisioning by mapping identity provider groups to 
+|service| roles. This streamlines access management and ensures secure and 
+organized role assignments throughout the platform. You can grant access 
+programmatically based on the provisioning process of your orchestration layer.
+
+In general, you should always restrict access in production ("upper") 
+environments to only programmatic service accounts with scripts that 
+are fully tested for security and deterministic outcomes. Human access should 
+only be allowed in development and test ("lower") environments.
+
+You should use a modern federated Identity Provider (IdP) that 
+provides SSO with SAML such as Azure Entra ID, Okta, or Ping Identity. 
+This makes the authorization process more secure and supports the 
+flexibility needed to programmatically assign :abbr:`IdP (Identity Provider)` 
+groups to |service| roles. You should restrict access to your company's domain, 
+which prevents users from logging into |service| when they are not authorized 
+for access.
+
+Database Authorization
+~~~~~~~~~~~~~~~~~~~~~~
+
+Workforce and workload users can be assigned predefined or custom fine-grained 
+database roles, with permissions tailored to specific 
+projects or individual {+clusters+}.
+
+For workload (human) identities, we recommend assigning roles directly using the
+``users`` claim instead of ``groups``. In development and test environments,
+you can default to the predefined ``readWriteAny`` role to simplify the
+development and testing process. When moving the application to higher
+environments, you should build a custom role to restrict the access that
+the application server has based on the principle of least privilege.
+
+To learn more, see the following: 
+
+- :ref:`mongodb-users-roles-and-privileges`
+- :ref:`mongodb-roles`
+
+Organization and Project Authorization
+--------------------------------------
+
+If you have followed the standard |service| hierarchy of a single billing 
+organization with a linked organization for each {+BU+} or department, then 
+you should restrict organization users to the operations or platform team admins.
+In contrast, you should assign project roles to the development or product teams 
+responsible for building applications. Only programmatic access should be 
+allowed in upper environments. The following recommendations for the most 
+commonly used roles can serve as a general guideline:
+
+* The ``Organization Owner`` role should be heavily restricted and not assigned
+  to a human, as it has the ability to change organization-wide settings and delete 
+  configurations. This role should be assigned to a service account which you use 
+  only to initially set up and configure the organization. Minimize configuration 
+  changes after the initial creation. To avoid account lockouts, you
+  can create the following items: 
+  
+  - SAML Organization Owner group with
+    :ref:`arch-center-just-in-time`. 
+  - API key with the Organization Owner role. Keep it in a
+    secure place with strong access management for break-glass
+    emergency scenarios.
+
+* The ``Organization Member`` role should be for admins on the operations and 
+  platform team that can view settings and configuration for the organization.
+
+* The ``Organization Project Creator`` role should be a programmatic service 
+  account used to create projects on behalf of new applications for development 
+  and product teams.
+
+* The ``Organization Billing Admin`` role should be a programmatic service 
+  account used to pull invoices programmatically from the Billing API 
+  and feed them into your FinOps tool. This same service account should have 
+  access to all linked organizations for which it is responsible for reporting usage. 
+
+* The ``Project Owner`` role should be used for governance enforced by the 
+  operations and provisioning team. Assign this role to a programmatic service 
+  account, as it has the ability to create and delete {+clusters+}. For sandbox 
+  environments, you may consider granting a user ``Project Owner`` access to 
+  enable them to quickly provision {+clusters+} for testing code and use cases 
+  without going through the orchestration deployment pipeline.
+
+* In lower environments, use the ``Project Data Access Admin`` role to 
+  grant access to the development team building the application so they can 
+  access the query and performance metrics of the {+cluster+} during 
+  development and testing. This access allows them to debug data issues 
+  with the Data Explorer. 
+  Don't allow this role in production environments. It has the 
+  ability to view and edit data, including creating and dropping databases, 
+  collections, and indexes on the {+cluster+}, which is useful for rapid 
+  experimentation and development. 
+  If you are not comfortable giving development teams this level of access in 
+  the development environment, you can grant them read-only access to the 
+  {+cluster+}\'s data and performance statistics with the 
+  ``Project Data Access Read Only`` role.
+
+  To grant read-only access to the {+cluster+}'s 
+  data in production environments, use the ``Project Observability Viewer`` role. 
+
+To learn more, see :ref:`user-roles`.
