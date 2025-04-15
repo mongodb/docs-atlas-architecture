@@ -112,8 +112,18 @@ Recommendations for {+service+} Backups
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
    :expanded: true
 
-   Recommendations here
+   To ensure automatic failover in the event of a primary region failure, we recommend that you deploy your database 
+   across three or more regions. If you choose a three-region topology, such as our recommended five-node, three-region topology, then 
+   maintaining backups is not necessary for fault tolerance or disaster recovery. 
+   To learn more about which multi-region deployment models ensure high availability of data, see :ref:`arch-center-deployment-topologies`. 
 
+   If you choose a two-region topology, there is a possibility for data loss if the majority region is lost and your 
+   MongoDB process didn't replicate write operations to the node that becomes primary after the reconfiguration.
+   We don't recommend a two-region topology for customers with three supported regions. 
+
+   If you select a multi-region deployment mode, restoring backups may be important for certain use cases, such as to revert to older versions
+   of data after a large data corruption event or accidental deletion of data. 
+   
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -152,13 +162,6 @@ window of seven days. Adjust this time range with a longer setting based
 on the criticality of the workload. This allows you to replay the oplog
 to restore a {+cluster+} from a particular point in time and satisfy
 your RTO.
-
-If you select a multi-region deployment model, such as our recommended 5-node, 3-region topology,
-then restoring backups is not necessary for fault tolerance, disaster recovery, or high availability.
-However, restoring backups may be important for certain use cases, such as to revert to older versions
-of data after a large data corruption event or accidental deletion of data.
-To learn more about how multi-region deployment models ensure high availability of data, see 
-:ref:`arch-center-deployment-topologies`. 
 
 .. seealso:: 
 
