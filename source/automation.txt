@@ -21,29 +21,29 @@ Guidance for {+service+} Automated Infrastructure Provisioning
 
 |service-fullname| provides tools that enable programmatic management of the deployment, 
 scaling, and maintenance of your Atlas {+clusters+}. 
-{+service+} provides the flexibility to implement Infrastructure as Code (IaC) using either imperative or declarative programming.
-For example, developers can write imperative scripts that call functions from our {+atlas-go-sdk+} client, 
-or manage {+service+} resources using declarative {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
+{+service+} provides the flexibility to implement Infrastructure as Code (IaC) by using either imperative or declarative programming.
+For example, you can write imperative scripts that call functions from our {+atlas-go-sdk+} client, 
+or manage {+service+} resources by using declarative {+iac+} tools like the {+ak8so+}, Terraform, {+aws-cf+}, or the {+aws-cdk+}. 
 
 {+service+}'s {+iac+} tools are especially useful at the enterprise scale. 
-We recommend that our enterprise customers use {+iac+} tools for the following benefits: 
+We recommend that our you use {+iac+} tools for the following benefits: 
 
-- **Consistency**: {+iac+} tools enable repeatability across environments, so that deployments
+- **Consistency**: {+iac+} tools enable repeatability across environments so that deployments
   generate consistent results. 
 - **Scalability**: {+iac+} tools enable :ref:`auto-scaling <arch-center-scalability>` to automatically adjust 
-  the tier or storage capacity of {+clusters+} in response to real-time use. 
+  the tier or storage capacity of clusters in response to real-time use. 
 - **Reduced Human Error**: {+iac+} tools automate operational overhead, reducing manual interventions 
   that produce common human errors.
 - **Faster Development**: {+iac+} tools streamline operations to promote more efficient development. 
 - **Improved Change Management**: {+iac+} tools support reviews and standardization of infrastructure,
   allowing for better change management practices and compliance. 
 
-Features for Atlas Automation
+Features for |service| Automation
 -----------------------------
 
 You can automate the configuration, provisioning, and management of
 |service| building blocks like database users and roles, and |service|
-{+clusters+}, projects, and organizations. You can also automate
+clusters, projects, and organizations. You can also automate
 various configuration and management tasks for {+cluster+} resources, including 
 enabling auto-scaling compute and storage, creating and updating
 multi-cloud {+clusters+}, monitoring {+cluster+} performance and health,
