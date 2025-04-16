@@ -23,8 +23,8 @@ kick-start their projects.
          .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
             :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/pdf-search/
-            :icon: atlas_autoscaling
-            :icon-alt: Atlas auto-scaling icon
+            :icon: atlas_search
+            :icon-alt: Atlas atlas_search icon
 
             Streamline operations and claims processing with powerful PDF search
             capabilities by integrating MongoDB Atlas Vector Search,
@@ -33,8 +33,8 @@ kick-start their projects.
          .. card::
             :headline: Building Continuously Updating RAG Applications
             :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/rag-applications/
-            :icon: atlas_autoscaling
-            :icon-alt: Atlas auto-scaling icon
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
 
             Use native stream processing and vector search in MongoDB Atlas to
             continuously update, store, and search embeddings through a unified
@@ -43,8 +43,8 @@ kick-start their projects.
          .. card::
             :headline: Real-time Audio-Based AI Diagnostics
             :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/audio-based-AI-diagnostics/
-            :icon: atlas_autoscaling
-            :icon-alt: Atlas auto-scaling icon
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
 
             Find out how AI is being used in renewable energy by leveraging MongoDB 
             Atlas Vector Search to drive efficiency through real-time, audio diagnostics.
@@ -52,8 +52,8 @@ kick-start their projects.
          .. card::
             :headline: AI-Driven Media Personalization: MongoDB and Vector Search
             :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/media-personalization/
-            :icon: atlas_autoscaling
-            :icon-alt: Atlas auto-scaling icon
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
 
             Learn about how to leverage data to create personalized user
             experiences by using Atlas Database, Atlas Vector Search, and Pymongo.
@@ -61,8 +61,8 @@ kick-start their projects.
          .. card::
             :headline: Claim management using LLMs and vector search for RAG
             :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/media-personalization/
-            :icon: atlas_autoscaling
-            :icon-alt: Atlas auto-scaling icon
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
 
             Discover how to combine Atlas Vector Search and large language
             models (LLMs) to streamline the claim adjustment process.
