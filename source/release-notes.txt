@@ -20,7 +20,7 @@ v20250411
 
 **Released 11 July, 2025**
 
-- :ref:`arch-center-landing-zone` page: Minor update to add use cases for different deployment paradigms, mention that the primary is 
+- :ref:`arch-center-landing-zone` page: Minor update to add that the primary is 
   mapped *randomly* to a zone, and link to new guidance pages. 
 - :ref:`arch-center-hierarchy` page: Adds organization creation example for Terraform. 
 - :ref:`arch-center-network-security` page: Minor update to mention limitation for changing the number of service attachments 
