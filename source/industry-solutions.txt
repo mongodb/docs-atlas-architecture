@@ -13,19 +13,27 @@ kick-start their projects.
    .. tab:: Financial Services
       :tabid: financial-services
 
-      :ref:`arch-center-is-pdf-search`
-        Streamline operations and claims processing with powerful PDF search
-        capabilities by integrating MongoDB Atlas Vector Search,
-        Superduper.io, and LLMs.
+      .. card-group::
+        :columns: 2
+        :style: extra-compact
 
-      :ref:`arch-center-is-rag-applications`
-        Use native stream processing and vector search in MongoDB Atlas to
-        continuously update, store, and search embeddings through a unified
-        interface.
+        .. card::
+            :headline: Build a PDF Search Application with Vector Search and LLMs
+            :url: https://mongodb.com/docs/atlas/architecture/pdf-search
+            :icon: vector_search
+            :icon-alt: Atlas vector_search icon
 
-      :ref:`arch-center-is-ai-media-personalization`
-        Learn about how to leverage data to create personalized user
-        experiences by using Atlas Database, Atlas Vector Search, and Pymongo.
+            Use auto-scaling to dynamically allocate resources based on growing workload
+            demands. For horizontal and vertical scaling, use {+service+} deployment templates.
+
+        .. card::
+            :headline: Building Continuously Updating RAG Applications
+            :url: https://mongodb.com/docs/atlas/architecture/rag-applications
+            :icon: atlas_autoscaling
+            :icon-alt: Atlas auto-scaling icon
+
+            Use auto-scaling to dynamically allocate resources based on growing workload
+            demands. For horizontal and vertical scaling, use {+service+} deployment templates.
 
    .. tab:: Retail
       :tabid: retail
@@ -41,6 +49,21 @@ kick-start their projects.
 
    .. tab:: healthcare
       :tabid: healthcare
+
+
+      :ref:`arch-center-is-pdf-search`
+        Streamline operations and claims processing with powerful PDF search
+        capabilities by integrating MongoDB Atlas Vector Search,
+        Superduper.io, and LLMs.
+
+      :ref:`arch-center-is-rag-applications`
+        Use native stream processing and vector search in MongoDB Atlas to
+        continuously update, store, and search embeddings through a unified
+        interface.
+
+      :ref:`arch-center-is-ai-media-personalization`
+        Learn about how to leverage data to create personalized user
+        experiences by using Atlas Database, Atlas Vector Search, and Pymongo.
 
 .. toctree::
    :titlesonly:
