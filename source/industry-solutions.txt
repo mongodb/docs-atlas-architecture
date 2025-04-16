@@ -17,12 +17,12 @@ kick-start their projects.
       ------
 
       .. card-group::
-        :columns: 2
-        :style: extra-compact
+         :columns: 2
+         :style: extra-compact
 
-        .. card::
+         .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/pdf-search
+            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/pdf-search/
             :icon: vector_search
             :icon-alt: Atlas vector_search icon
 
@@ -30,9 +30,9 @@ kick-start their projects.
             capabilities by integrating MongoDB Atlas Vector Search,
             Superduper.io, and LLMs.
 
-        .. card::
+         .. card::
             :headline: Building Continuously Updating RAG Applications
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/rag-applications
+            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/rag-applications/
             :icon: atlas_autoscaling
             :icon-alt: Atlas auto-scaling icon
 
@@ -40,7 +40,13 @@ kick-start their projects.
             continuously update, store, and search embeddings through a unified
             interface.
 
-        .. card::
+         .. card::
+            :headline: Real-time Audio-Based AI Diagnostics
+            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/audio-based-AI-diagnostics/
+            :icon: atlas_autoscaling
+            :icon-alt: Atlas auto-scaling icon
+
+         .. card::
             :headline: AI-Driven Media Personalization: MongoDB and Vector Search
             :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/media-personalization/
             :icon: atlas_autoscaling
