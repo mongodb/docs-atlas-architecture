@@ -18,9 +18,9 @@ deployments enhance protection in the case of a :ref:`regional outage
 <arch-center-regional-outage>` by automatically rerouting traffic to a
 node in another region for continuous availability and a
 smooth user experience. Multi-region deployments can also enhance
-performance and can help meet
-compliance requirements for :ref:`data sovereignty
-<arch-center-compliance-data-sovereignty>`.
+performance and can help meet compliance requirements for :ref:`data sovereignty
+<arch-center-compliance-data-sovereignty>`, such as the EU's General Data 
+Protection Regulation (GDPR) law.
 
 A multi-region deployment may have multiple regions within the same geography 
 (a large area like a continent or country), single regions in multiple 
@@ -44,15 +44,18 @@ Consider the 3 use cases in the following image:
    :figwidth: 750px
    :alt: An image showing three types of multi-region deployments
 
-In the first example, you have an application that has users 
-primarily located in the US. You create a multi-region deployment
-in three regions within the US. This ensures low latency, since all regions are 
-within the US, while also offering high availability if there's a regional 
-outage on one of the nodes (for example, ``us-east-1``).
+In the first example, where you deploy to multiple regions in the same geography, 
+you have an application that has users primarily located in the US. You create a 
+multi-region deployment in three regions within the US. This ensures low latency, 
+since all regions are within the US, while also offering high availability if 
+there's a regional outage on one of the nodes (for example, ``us-east-1``).
 
-In the second example, your application requires low latency and high availability 
-for users in both the US and Europe. You create a multi-region deployment with 
-a region located in both the US and Europe.
+In the second example, where you deploy to one region in multiple geographies, 
+your application requires low latency and high availability for users in both 
+the US and Europe. You create a multi-region deployment with a region located 
+in both the US and Europe. In this scenario, European users are served from the 
+European nodes and US users are served from US servers, ensuring lower latency 
+and better performance. This also helps comply with local regulations like GDPR.
 
 The most complex example of a multi-region deployment has multiple regions in 
 multiple geographies, ensures the highest level of availability with a single 

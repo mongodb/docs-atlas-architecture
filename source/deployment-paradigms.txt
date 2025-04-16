@@ -25,10 +25,11 @@ shows these options, which are explained further below:
 This is the simplest deployment option. In a single-region deployment, your 
 data is stored in one of a provider's regions (such as AWS's ``us-west-2`` 
 or Google's ``asia-northeast3``). With this simplicity and lower cost comes 
-the risk of lower availability and potentially lower latency, depending on the 
-distribution of your application's users. {+service+} always provides a 
-minimum of zone-level availability, which means that within a single region, if 
-a single zone fails, your data is still available in the other zones.
+the risk of lower availability and potentially higher latency, depending on the 
+distribution of your application's users. Because {+service+} always provides a 
+minimum of zone-level availability, you cluster nodes are spread across the 
+availability zones within a single region, so if a single zone fails, your 
+data is still available in the other zones.
 
 :ref:`Multi-Region Deployment <arch-center-paradigms-multi-region>`
 
@@ -76,7 +77,7 @@ determine the best fit for your needs:
      - Data is available if a cloud provider fails
 
    * - **Performance**
-     - High for regional users; lower for others
+     - High for regional users; lower for users in more distant regions.
      - High for users within the chosen geography
      - High for users within all of the chosen geographies
      - High for users within all of the chosen geographies
