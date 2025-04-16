@@ -1,22 +1,46 @@
 .. _arch-center-industry-solutions:
 
-==================
-Industry Solutions
-==================
+=================
+Solutions Library
+=================
 
-:ref:`arch-center-is-pdf-search`
-  Streamline operations and claims processing with powerful PDF search
-  capabilities by integrating MongoDB Atlas Vector Search,
-  Superduper.io, and LLMs.
+Drawing from experience with over 54,500 customers, the Solutions
+Library is curated with tailored solutions to help developers 
+kick-start their projects. 
 
-:ref:`arch-center-is-rag-applications`
-  Use native stream processing and vector search in MongoDB Atlas to
-  continuously update, store, and search embeddings through a unified
-  interface.
+.. tabs::
 
-:ref:`arch-center-is-ai-media-personalization`
-  Learn about how to leverage data to create personalized user
-  experiences by using Atlas Database, Atlas Vector Search, and Pymongo.
+   .. tab:: Financial Services
+      :tabid: financial-services
+
+      :ref:`arch-center-is-pdf-search`
+        Streamline operations and claims processing with powerful PDF search
+        capabilities by integrating MongoDB Atlas Vector Search,
+        Superduper.io, and LLMs.
+
+      :ref:`arch-center-is-rag-applications`
+        Use native stream processing and vector search in MongoDB Atlas to
+        continuously update, store, and search embeddings through a unified
+        interface.
+
+      :ref:`arch-center-is-ai-media-personalization`
+        Learn about how to leverage data to create personalized user
+        experiences by using Atlas Database, Atlas Vector Search, and Pymongo.
+
+   .. tab:: Retail
+      :tabid: retail
+
+   .. tab:: Manufacturing
+      :tabid: manufacturing
+
+   .. tab:: Insurance
+      :tabid: insurance
+
+   .. tab:: Media and Telecom
+      :tabid: media-telecom
+
+   .. tab:: healthcare
+      :tabid: healthcare
 
 .. toctree::
    :titlesonly:
