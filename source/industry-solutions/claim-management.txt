@@ -79,7 +79,11 @@ can fully focus on building their apps.
 Ultimately, the data obtained from MongoDB Vector Search is fed to the LLM as 
 context.
 
+.. figure:: /includes/images/rag-querying-flow.svg
+   :figwidth: 1200px
+   :alt: RAG Querying Flow
 
+   RAG Querying Flow
 
 Data Model Approach
 -------------------
