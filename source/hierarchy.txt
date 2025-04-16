@@ -225,7 +225,8 @@ This allows administrators to maintain different project configurations between 
 and uphold the principle of least privilege, which states that users should 
 only be granted the least level of access necessary for their role.
 
-However, this hierarchy may make it more complicated to share project-level configurations such as private endpoints and |cmk|\s across clusters.
+However, this hierarchy might make it more complicated to share project-level configurations such as private endpoints and |cmk|\s across clusters.
+
 To learn more, see :ref:`hierarchy-multiple-clusters`. 
 
 .. figure:: /includes/images/deployment-hierarchy.svg
@@ -244,7 +245,7 @@ the same team is responsible for multiple applications across environments.
 This eases the setup cost for features such as private endpoints and customer-managed keys, 
 because all {+clusters+} in the same project share the same project configuration.
 
-However, this {+cluster+} hierarchy may violate the principle of least privilege.
+However, this {+cluster+} hierarchy might violate the principle of least privilege.
 
 Deploy multiple {+clusters+} within the same project only if both of the following are true:
 

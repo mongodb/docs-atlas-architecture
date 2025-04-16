@@ -1,5 +1,5 @@
 .. code-block::
    :copyable: true
 
-   atlas logs download atlas-lnmtkm-shard-00-00.ajlj3.mongodb.net mongodb.gz --projectId 56fd11f25f23b33ef4c2a331 
-   
+   atlas logs download cluster0-shard-00-00.a1b2c.mongodb.net mongodb.gz
+
