@@ -23,8 +23,8 @@ kick-start their projects.
          .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
             :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/pdf-search/
-            :icon: vector_search
-            :icon-alt: Atlas vector_search icon
+            :icon: atlas_autoscaling
+            :icon-alt: Atlas auto-scaling icon
 
             Streamline operations and claims processing with powerful PDF search
             capabilities by integrating MongoDB Atlas Vector Search,
@@ -46,6 +46,9 @@ kick-start their projects.
             :icon: atlas_autoscaling
             :icon-alt: Atlas auto-scaling icon
 
+            Find out how AI is being used in renewable energy by leveraging MongoDB 
+            Atlas Vector Search to drive efficiency through real-time, audio diagnostics.
+
          .. card::
             :headline: AI-Driven Media Personalization: MongoDB and Vector Search
             :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/media-personalization/
@@ -55,7 +58,25 @@ kick-start their projects.
             Learn about how to leverage data to create personalized user
             experiences by using Atlas Database, Atlas Vector Search, and Pymongo.
 
-   .. tab:: Retail
+         .. card::
+            :headline: Claim management using LLMs and vector search for RAG
+            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/media-personalization/
+            :icon: atlas_autoscaling
+            :icon-alt: Atlas auto-scaling icon
+
+            Discover how to combine Atlas Vector Search and large language
+            models (LLMs) to streamline the claim adjustment process.
+
+      Fraud Prevention
+      ----------------
+
+      App-Driven Analytics
+      --------------------
+
+      Modernization
+      -------------
+
+   .. tab:: Retail:
       :tabid: retail
 
    .. tab:: Manufacturing
