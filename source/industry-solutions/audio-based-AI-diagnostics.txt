@@ -199,7 +199,7 @@ Building the Solution
                   }
                }
             }
-         }
+      }
 
    .. step:: `Query the Database <https://github.com/mongodb-industry-solutions/Wind-Turbine-Diagnostics/blob/main/README.md#5-query-the-database>`__
 
