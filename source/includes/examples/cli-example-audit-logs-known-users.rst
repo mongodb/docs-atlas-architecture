@@ -1,4 +1,4 @@
 .. code-block::
    :copyable: true
 
-   atlas auditing update --auditFilter '{"atype": "authenticate"}'
+   atlas auditing update --enabled --auditFilter '{"atype": "authenticate"}'

@@ -1,4 +1,5 @@
-.. code-block::
-   :copyable: true
+.. code-block:: 
+   :copyable: true 
 
    atlas auditing describe --output json
+
