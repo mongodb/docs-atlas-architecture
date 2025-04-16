@@ -70,11 +70,7 @@ specific to hybrid deployments. Contact {+ps+}
 team to create a custom landing zone for your {+service+} hybrid
 deployments.
 
-To find recommendations for your {+service+} cloud deployments,
-see the following resources:
-
 - :ref:`arch-center-single-region-rec-summary`
-- :ref:`arch-center-multi-region-rec-summary`
 - :ref:`arch-center-multi-cloud-rec-summary`
 
 Creating Hybrid Deployments
