@@ -4,6 +4,16 @@
 Industry Solutions
 ==================
 
+:ref:`arch-center-is-pdf-search`
+  Streamline operations and claims processing with powerful PDF search
+  capabilities by integrating MongoDB Atlas Vector Search,
+  Superduper.io, and LLMs.
+
+:ref:`arch-center-is-rag-applications`
+  Use native stream processing and vector search in MongoDB Atlas to
+  continuously update, store, and search embeddings through a unified
+  interface.
+
 :ref:`arch-center-is-ai-media-personalization`
   Learn about how to leverage data to create personalized user
   experiences by using Atlas Database, Atlas Vector Search, and Pymongo.
@@ -11,4 +21,7 @@ Industry Solutions
 .. toctree::
    :titlesonly:
 
+   PDF Search </industry-solutions/pdf-search>
+   RAG Applications <industry-solutions/rag-applications>
+   Audio-Based AI Diagnostics <industry-solutions/audio-based-AI-diagnostics>
    AI-driven Media Personalization <industry-solutions/media-personalization>
