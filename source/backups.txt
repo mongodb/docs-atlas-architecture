@@ -120,7 +120,7 @@ Recommendations for {+service+} Backups
    We also recommend that multi-region and multi-cloud deployments enable local |service| cloud backups or continuous cloud backups
    for multiple regions to support recovery to previous versions of data in case of large data loss or corruption events such as
    accidental deletions of data. This backup configuration meets the same compliance requirements as enabling 
-   :ref:`multi-region snapshot distribution </backup/cloud-backup/snapshot-distribution/>` for a single-region deployment.
+   :atlas:`multi-region snapshot distribution </backup/cloud-backup/snapshot-distribution/>` for a single-region deployment.
 
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
