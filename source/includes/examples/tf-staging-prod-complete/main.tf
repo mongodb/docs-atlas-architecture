@@ -2,10 +2,7 @@
 resource "mongodbatlas_team" "project_group" {
   org_id = var.atlas_org_id
   name   = var.atlas_group_name
-  usernames = [
-    "user1@example.com",
-    "user2@example.com"
-  ]
+  usernames = ["user1@example.com", "user2@example.com"]
 }
 
 # Create a Project
