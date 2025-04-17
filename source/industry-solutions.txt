@@ -21,15 +21,14 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-             :headline: Build a PDF Search Application with Vector Search and LLMs
-             :link: arch-center-is-pdf-search
-             :link-type: ref
-             :icon: atlas_search
-             :icon-alt: Atlas atlas_search icon
+            :headline: Build a PDF Search Application with Vector Search and LLMs
+            :ref: arch-center-is-pdf-search
+            :icon: atlas_search
+            :icon-alt: Atlas atlas_search icon
 
-             Streamline operations and claims processing with powerful PDF search
-             capabilities by integrating MongoDB Atlas Vector Search,
-             Superduper.io, and LLMs. 
+            Streamline operations and claims processing with powerful PDF search
+            capabilities by integrating MongoDB Atlas Vector Search,
+            Superduper.io, and LLMs. 
 
          .. card::
             :headline: Building Continuously Updating RAG Applications
