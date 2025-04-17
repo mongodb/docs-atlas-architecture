@@ -10,11 +10,11 @@ kick-start their projects.
 
 .. tabs::
 
-   .. tab:: Financial Services
-      :tabid: financial-services
+   .. tab:: Gen AI
+      :tabid: gen-ai
 
-      Gen AI
-      ------
+      RAG
+      ---
 
       .. card-group::
          :columns: 2
@@ -28,7 +28,7 @@ kick-start their projects.
 
             Streamline operations and claims processing with powerful PDF search
             capabilities by integrating MongoDB Atlas Vector Search,
-            Superduper.io, and LLMs.
+            Superduper.io, and LLMs. 
 
          .. card::
             :headline: Building Continuously Updating RAG Applications
@@ -38,25 +38,7 @@ kick-start their projects.
 
             Use native stream processing and vector search in MongoDB Atlas to
             continuously update, store, and search embeddings through a unified
-            interface.
-
-         .. card::
-            :headline: Real-time Audio-Based AI Diagnostics
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/audio-based-AI-diagnostics/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Find out how AI is being used in renewable energy by leveraging MongoDB 
-            Atlas Vector Search to drive efficiency through real-time, audio diagnostics.
-
-         .. card::
-            :headline: AI-Driven Media Personalization: MongoDB and Vector Search
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/media-personalization/
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
-
-            Learn about how to leverage data to create personalized user
-            experiences by using Atlas Database, Atlas Vector Search, and Pymongo.
+            interface. 
 
          .. card::
             :headline: Claim management using LLMs and vector search for RAG
@@ -65,31 +47,42 @@ kick-start their projects.
             :icon-alt: Atlas mdb_vector_search icon
 
             Discover how to combine Atlas Vector Search and large language
-            models (LLMs) to streamline the claim adjustment process.
+            models (LLMs) to streamline the claim adjustment process. 
 
-      Fraud Prevention
-      ----------------
+      Media Personalization
+      ---------------------
 
-      App-Driven Analytics
-      --------------------
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
 
-      Modernization
-      -------------
+         .. card::
+            :headline: AI-Driven Media Personalization: MongoDB and Vector Search
+            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/media-personalization/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
 
-   .. tab:: Retail
-      :tabid: retail
+            Learn about how to leverage data to create personalized user
+            experiences by using Atlas Database, Atlas Vector Search, and Pymongo. 
 
-   .. tab:: Manufacturing
-      :tabid: manufacturing
+   .. tab:: IoT
+      :tabid: iot
 
-   .. tab:: Insurance
-      :tabid: insurance
+      Manufacturing and Operations
+      ----------------------------
 
-   .. tab:: Media and Telecom
-      :tabid: media-telecom
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
 
-   .. tab:: Healthcare
-      :tabid: healthcare
+         .. card::
+            :headline: Real-time Audio-Based AI Diagnostics
+            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/audio-based-AI-diagnostics/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Find out how AI is being used in renewable energy by leveraging MongoDB 
+            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
 
 .. toctree::
    :titlesonly:
