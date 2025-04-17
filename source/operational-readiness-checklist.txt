@@ -1,0 +1,288 @@
+.. _arch-center-checklist:
+
+==================================================
+|service-fullname| Operational Readiness Checklist
+==================================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+This checklist is designed to help you prepare your environment and team
+for a successful deployment and operation of |service-fullname|.
+
+Use this checklist to track your progress. For example, you can print it
+and check off each item as you complete the tasks.
+
+Consult the official |service-fullname| documentation for detailed guidance
+on each of these aspects.
+
+Account and Organization Setup
+-------------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10 50
+
+   * - Check
+     - Action
+
+   * - :icon-fa4:`square-o`
+     - Create a |service-fullname| account.
+
+   * - :icon-fa4:`square-o`
+     - Set up your Atlas Organization  and configure a root user with appropriate access.
+
+   * - :icon-fa4:`square-o`
+     - Establish multi-tenancy strategy by setting up Projects, such as
+       Production and Non-Production project at a minimum.
+
+   * - :icon-fa4:`square-o`
+     - Set up Organizations according to your internal structure.
+
+   * - :icon-fa4:`square-o`
+     - Set up Projects based on your environment and application needs.
+
+   * - :icon-fa4:`square-o`
+     - Consider Cross-Organization Billing, if applicable.
+
+Network and Security Configuration
+-----------------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10 50
+
+   * - Check
+     - Action
+
+   * - :icon-fa4:`square-o`
+     - Select Cloud Providers and Region for your |service| clusters.
+       Consider data sovereignty requirements and latency.
+
+   * - :icon-fa4:`square-o`
+     - Configure Network Security based on your organization's needs.
+
+   * - :icon-fa4:`square-o`
+     - Choose a network connectivity method:
+       
+       - VPC Peering for private and secure traffic routing within your network boundaries.
+       - Private Endpoints (AWS PrivateLink, Azure Private Link, Google Cloud Private Service Connect)
+         for a one-way private connection from your VPC to |service|.
+         for sharded multi-region clusters, enable private endpoints in each region.
+       - Public IP Access Lists to restrict inbound connections to specific IP addresses or CIDR blocks.
+         We recommend that you permit access to the smallest network segments
+         possible, such as an individual /32 address.
+
+   * - :icon-fa4:`square-o`
+     - Confirm that TLS/SSL is enabled for encrypting connections to your
+       databases. It is enabled by default and cannot be disabled. TLS 1.2 is
+       the default.
+
+       - Consider IP Allow lists as an alternative to Private Link if necessary.
+       - For on-premises connectivity to |service|, ensure that your organization
+         completes all the necessary internal processes, which may take time for approvals.
+
+   * - :icon-fa4:`square-o`
+     - Configure Authentication and Authorization.
+
+       - Set up database users and roles with the principle of least privilege.
+       - Consider setting up Federated Authentication, such as SAML 2.0,
+         for UI access via identity providers, such as Okta, Entra ID,
+         Ping Identity, or others.
+       - Enforce Multi-Factor Authentication (MFA) for enhanced security.
+       - Secure |service| API access using API key-based authentication.
+         Consider regular key rotation.
+       - For database access in cloud environments, consider Workforce and
+         Workload Identity Federation, such as OIDC, OAuth 2.0, AWS IAM roles,
+         or Azure Managed Identities, for passwordless access.
+       - Explore using X.509 client certificates for authentication.
+       - Implement Role-Based Access Control (RBAC) to manage access
+         across all resources.
+       - Consider LDAP Integration for user authentication and authorization.
+
+   * - :icon-fa4:`square-o`
+     - Implement Robust Encryption
+  
+       - Encryption at rest is enabled by default using cloud providers'
+         transparent disk encryption (AES-256).
+       - Optionally enable "Bring Your Own Key (BYOK)"" encryption using
+         Key Management Service (KMS) providers
+         (AWS KMS, Azure Key Vault, GCP KMS).|service| cannot rotate
+         customer-managed encryption keys.
+       - Consider Client-Side Field Level Encryption (CSFLE) to encrypt
+         data within your application before transmitting it to |service|.
+       - Explore Queryable Encryption for performing queries on encrypted data.
+  
+   * - :icon-fa4:`square-o`
+     - Configure Database Auditing to track database access and actions.
+       Create custom filters if needed.
+  
+   * - - :icon-fa4:`square-o`
+     - Be aware of Hard coded certificate authority: |service| clusters
+       use TLS certificates signed by a widely trusted Certificate Authority (CA).
+       While applications using recent MongoDB drivers handle certificate
+       validation automatically, older applications or those with custom
+       TLS configurations might require updates to trust the new CA
+       certificates if MongoDB updates its certificate provider.
+       [https://www.mongodb.com/docs/atlas/reference/faq/security/#hard-coded-certificate-authority]
+       Ensure that your applications are configured to handle potential
+       CA certificate updates.
+  
+   * - :icon-fa4:`square-o`
+     - Understand and plan for Compliance with relevant standards and
+       regulations, such as ISO/IEC 27001, HIPAA, GDPR, PCI DSS, FedRAMP,
+       and others.
+
+Backup and Restore Strategy
+----------------------------
+
+.. list-table::
+   :widths: 10 50
+
+   * - :icon-fa4:`square-o`
+     - Enable |service| Cloud Backup, which provides localized backup
+       storage using the cloud provider's native snapshot functionality.  
+  
+   * - :icon-fa4:`square-o`
+     - Enable Continuous Cloud Backup with a restore window that meets
+       your Recovery Point Objective (RPO). We recommend having a restore
+       window of 7 days to allow for Point In Time (PIT) recovery using the oplog.
+  
+   * - :icon-fa4:`square-o`
+     - Define a backup schedule and retention policy that aligns with your
+       business continuity and compliance requirements. Consider hourly,
+       daily, weekly, and monthly snapshots with appropriate retention periods.
+  
+   * - :icon-fa4:`square-o`
+     - Consider multi-region snapshot distribution for increased resilience
+       by copying snapshots to other geographic regions.  
+  
+   * - :icon-fa4:`square-o`
+     - For strict data protection requirements, enable Backup Compliance Policy
+       to prevent unauthorized modifications or deletions of backups.  
+  
+   * - :icon-fa4:`square-o`
+     - Understand the process for restoring from scheduled or on-demand snapshots.
+  
+   * - :icon-fa4:`square-o`
+     - Familiarize yourself with the process for restoring from
+       Continuous Cloud Backup to a specific point in time.
+  
+   * - :icon-fa4:`square-o`
+     - Plan and test your Disaster Recovery (DR) strategy. Understand
+       Recovery Time Objective (RTO) and Recovery Point Objective (RPO).
+       Consider using the "test resilience" feature in Atlas.
+  
+   * - :icon-fa4:`square-o`
+     - Consider options for snapshot download and archive if required,
+       using the GUI, Atlas API, or Atlas CLI.
+
+Maintenance and Patching
+------------------------
+
+.. list-table::
+   :widths: 10 50
+  
+   * - :icon-fa4:`square-o`
+     - Define a Maintenance Window for |service| automated systems to apply
+       automatic minor version updates. Configure the day and hour of
+       allowed maintenance using the ``mongodbatlas_maintenance_window`` resource.
+  
+   * - :icon-fa4:`square-o`
+     - Understand that |service| has non-deferrable maintenance hours for critical security
+       patches or operational necessities. Configure Protected Hours for your
+       project, defining a daily window when standard updates cannot begin.
+       [https://www.mongodb.com/docs/atlas/tutorial/cluster-maintenance-window/]
+       |service| performs standard updates that do not involve cluster
+       restarts or resyncs outside of these hours.  
+  
+   * - :icon-fa4:`square-o`
+     - Be aware that major version upgrades are deployed in a rolling manner to minimize downtime.  
+
+Monitoring and Alerts
+---------------------
+
+.. list-table::
+   :widths: 10 50
+
+   * - :icon-fa4:`square-o`
+     - Use built-in monitoring capabilities in |service| via the Metrics tab to track cluster health and performance.  
+
+   * - :icon-fa4:`square-o`
+     - Configure Alerts for various cluster metrics and events to proactively
+       identify and respond to potential issues.
+       Consider setting up multiple alerts for different severity levels.  
+
+   * - :icon-fa4:`square-o`
+     - Review and configure Recommended Alerts as a starting point.  
+
+   * - :icon-fa4:`square-o`
+     - Integrate |service|  monitoring with your existing enterprise
+       monitoring and observability tools if required.  
+
+   * - :icon-fa4:`square-o`
+     - Familiarize yourself with Performance Advisor, Real-Time Performance Panel (RTPP),
+       and Query Profiler for performance tuning and optimization.  
+
+Operational Procedures and Team Readiness
+------------------------------------------
+
+.. list-table::
+   :widths: 10 50
+
+   * - :icon-fa4:`square-o`  
+     - Define roles and responsibilities for managing and operating |service-fullname|.
+
+   * - :icon-fa4:`square-o`  
+     - Establish change control and auditability processes.
+
+   * - :icon-fa4:`square-o`  
+     - Develop a clear Disaster Recovery Process Documentation
+       specific to your applications and |service| setup.
+
+   * - :icon-fa4:`square-o`  
+     - Ensure your team is trained on |service-fullname| fundamentals,
+       security best practices, and operational procedures.
+       Consider MongoDB University and Professional Services for
+       training and enablement.
+
+   * - :icon-fa4:`square-o`
+     - Establish a process for engaging with MongoDB support for
+       production issues or when MongoDB's access level is required.
+
+   * - :icon-fa4:`square-o`  
+     - Plan for performance improvement using tools like Query
+       Profiler and Performance Advisor.
+
+   * - :icon-fa4:`square-o`  
+     - Define how you will handle data lifecycle management,
+       including archival and deletion strategies, such as TTL
+       Indexes, or Online Archive.
+  
+   * - :icon-fa4:`square-o`  
+     - Establish integration strategies with other tooling and  
+       services, such as Datadog, Prometheus, PagerDuty, and other tools.
+  
+   * - :icon-fa4:`square-o`  
+     - Consider establishing a MongoDB Center of Excellence (CoE)
+       within your organization to foster best practices and
+       knowledge sharing.
+
+By completing these checklist items, you will enhance your operational
+readiness for deploying and managing |service-fullname|. This will ensure
+that you set up a reliable, secure, and performant database environment.
+
+Next Steps
+----------
+
+After completing the checklist, see the following suggested resources or use the left
+navigation to find features and best practices for each {+waf+} pillar.
+
+- :ref:`arch-center-monitoring-alerts`
+- :ref:`arch-center-network-security`
+- :ref:`arch-center-backups`
