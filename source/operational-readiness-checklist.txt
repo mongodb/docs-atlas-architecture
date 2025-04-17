@@ -110,7 +110,7 @@ Network and Security Configuration
        - Consider LDAP Integration for user authentication and authorization.
 
    * - :icon-fa4:`square-o`
-     - Implement Robust Encryption
+     - Implement Robust Encryption.
   
        - Encryption at rest is enabled by default using cloud providers'
          transparent disk encryption (AES-256).
@@ -148,6 +148,9 @@ Backup and Restore Strategy
 .. list-table::
    :widths: 10 50
 
+   * - Check
+     - Action
+
    * - :icon-fa4:`square-o`
      - Enable |service| Cloud Backup, which provides localized backup
        storage using the cloud provider's native snapshot functionality.
@@ -167,15 +170,15 @@ Backup and Restore Strategy
        by copying snapshots to other geographic regions.
 
    * - :icon-fa4:`square-o`
-     - For strict data protection requirements, enable Backup Compliance Policy
-       to prevent unauthorized modifications or deletions of backups.
+     - Enable Backup Compliance Policy to prevent unauthorized modifications
+       or deletions of backups and comply with strict data protection requirements.
 
    * - :icon-fa4:`square-o`
      - Understand the process for restoring from scheduled or on-demand snapshots.
 
    * - :icon-fa4:`square-o`
-     - Familiarize yourself with the process for restoring from
-       Continuous Cloud Backup to a specific point in time.
+     - Learn about the process for restoring from Continuous Cloud Backup
+       to a specific point in time.
   
    * - :icon-fa4:`square-o`
      - Plan and test your Disaster Recovery (DR) strategy. Understand
@@ -191,6 +194,9 @@ Maintenance and Patching
 
 .. list-table::
    :widths: 10 50
+
+   * - Check
+     - Action
   
    * - :icon-fa4:`square-o`
      - Define a Maintenance Window for |service| automated systems to apply
@@ -213,6 +219,9 @@ Monitoring and Alerts
 
 .. list-table::
    :widths: 10 50
+
+   * - Check
+     - Action
 
    * - :icon-fa4:`square-o`
      - Use built-in monitoring capabilities in |service| via the Metrics tab to track cluster health and performance.  
@@ -238,6 +247,9 @@ Operational Procedures and Team Readiness
 
 .. list-table::
    :widths: 10 50
+
+   * - Check
+     - Action
 
    * - :icon-fa4:`square-o`  
      - Define roles and responsibilities for managing and operating |service-fullname|.
