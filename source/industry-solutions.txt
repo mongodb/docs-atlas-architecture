@@ -22,7 +22,8 @@ kick-start their projects.
 
          .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/pdf-search/
+            :link: arch-center-is-pdf-search
+            :link-type: ref
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
