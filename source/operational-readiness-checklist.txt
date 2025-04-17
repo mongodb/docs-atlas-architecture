@@ -26,7 +26,7 @@ Account and Organization Setup
 
 .. list-table::
    :header-rows: 1
-   :widths: 10 50
+   :widths: 5 55
 
    * - Check
      - Action
@@ -56,7 +56,7 @@ Network and Security Configuration
 
 .. list-table::
    :header-rows: 1
-   :widths: 10 50
+   :widths: 5 55
 
    * - Check
      - Action
@@ -146,7 +146,7 @@ Backup and Restore Strategy
 ----------------------------
 
 .. list-table::
-   :widths: 10 50
+   :widths: 5 55
 
    * - Check
      - Action
@@ -193,7 +193,7 @@ Maintenance and Patching
 ------------------------
 
 .. list-table::
-   :widths: 10 50
+   :widths: 5 55
 
    * - Check
      - Action
@@ -218,7 +218,7 @@ Monitoring and Alerts
 ---------------------
 
 .. list-table::
-   :widths: 10 50
+   :widths: 5 55
 
    * - Check
      - Action
@@ -246,7 +246,7 @@ Operational Procedures and Team Readiness
 ------------------------------------------
 
 .. list-table::
-   :widths: 10 50
+   :widths: 5 55
 
    * - Check
      - Action
