@@ -112,17 +112,16 @@ Recommendations for {+service+} Backups
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
    :expanded: true
 
-   Deploying your cluster to three or more regions guarantees automatic failover in the event of a primary region failure,
-   making backups unnecessary to prevent data loss in the event of a regional disruption. However, we recommend that all 
-   multi-region and multi-cloud deployments enable local |service| cloud backups or continuous cloud backups
-   to support recovery back to previous versions of data in the event of a large data corruption event or accidental deletion of 
-   data that has overwritten the current data in all active regions.
-
-   If you select a multi-region deployment, the built-in replication meets compliance requirements of storing
-   backups in different geographical locations to ensure disaster recovery in case of regional outages. To learn more,
-   see :atlas:`Snapshot Distribution </backup/cloud-backup/snapshot-distribution/>`.
-
-   To learn more about which multi-region deployment models ensure high availability of data with and without backups, see :ref:`arch-center-deployment-topologies`. 
+   If you choose a multi-region deployment model, we recommend that you deploy to three or more regions to 
+   support automatic failover in the event of a primary region failure. The built-in replication of a multi-region 
+   cluster ensures high availability and fault tolerance without the use of backups. To learn more about which multi-region
+   deployment models ensure high availability of data, see :ref:`arch-center-deployment-topologies`. 
+ 
+   We also recommend that all multi-region and multi-cloud deployments enable local |service| cloud backups or continuous cloud backups
+   for multiple regions to support recovery back to previous versions of data in case of events such as accidental deletions of data or 
+   large data corruption events that have affected data across all regions. 
+   This backup configuration meets the same compliance requirements as enabling 
+   :ref:`multi-region snapshot distribution </backup/cloud-backup/snapshot-distribution/>` for a single-region deployment.
 
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
