@@ -30,14 +30,6 @@ Multi-region deployments can exist with a single cloud provider or
 multiple cloud providers. To learn about multi-cloud deployments, see 
 :ref:`arch-center-paradigms-multi-cloud`.
 
-To learn how to configure multi-region deployments and learn about the
-different types of nodes you can add, see 
-:atlas:`Configure High Availability and Workload Isolation 
-</cluster-config/multi-cloud-distribution/>` in the {+service+}
-documentation.
-
-Use Cases for Multi-Region Deployments
---------------------------------------
 Consider the 3 use cases in the following image:
 
 .. figure:: /includes/images/multi-region-types.png
@@ -106,28 +98,6 @@ and ``eu-west-3``). This ensures data sovereignty since all regions are within
 the EU, while offering high availability if there's a regional outage that 
 affects one of the nodes.
 
-.. _arch-center-multi-region-considerations:
-
-Considerations for Multi-Region Deployments
--------------------------------------------
-
-Other considerations for multi-region deployments include:
-
-- High availability depends on the deployment of nodes across
-  regions as well as the number, distribution, and priority order of
-  nodes. To learn more about recommended
-  {+cluster+} topologies for high availability, see
-  :ref:`arch-center-high-availability`.
-- Multi-region deployments are available only for ``M10`` dedicated
-  {+clusters+} and larger.
-- High availability and low latency also depend on where you deploy 
-  your application. When optimizing for availability and latency, plan the 
-  deployment of your entire application stack, not just the database.
-
-For more considerations, see 
-:atlas:`Considerations 
-</cluster-config/multi-cloud-distribution/#considerations>` in the
-{+service+} documentation.
 
 .. _arch-center-multi-region-rec-summary:
 

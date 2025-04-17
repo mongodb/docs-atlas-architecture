@@ -20,6 +20,7 @@ shows these options, which are explained further below:
    :figwidth: 750px
    :alt: An image showing the different deployment options.
 
+<<<<<<< HEAD
 Single-Region Deployments
 -------------------------
 
@@ -28,6 +29,17 @@ In a single-region deployment, your data is stored in one of a provider's region
 or {+gcp+}'s ``asia-northeast3``). Because {+service+} always provides a 
 minimum of zone-level availability, your cluster nodes are spread across the 
 availability zones within a single region. Therefore, if a single zone fails, your 
+=======
+:ref:`Single-Region Deployment<arch-center-paradigms-single>`
+
+This is the simplest deployment option. In a single-region deployment, your 
+data is stored in one of a provider's regions (such as AWS's ``us-west-2`` 
+or Google's ``asia-northeast3``). With this simplicity and lower cost comes 
+the risk of lower availability and potentially higher latency, depending on the 
+distribution of your application's users. Because {+service+} always provides a 
+minimum of zone-level availability, you cluster nodes are spread across the 
+availability zones within a single region, so if a single zone fails, your 
+>>>>>>> ce5b4ae (adding tier 1 and tier 2 scenarios)
 data is still available in the other zones.
 
 With the simplicity and lower cost of a single-region deployment 
@@ -89,11 +101,12 @@ determine the best fit for your needs:
      - Multi-Region in Multiple Geographies
      - Multi-Region and Multi-Cloud
 
-   * - **Availability & Reliability**
-     - Data is available if a single zone (data center) fails
-     - Data is available if a single region fails
-     - Data is available if multiple regions or geographies fail
-     - Data is available if a cloud provider fails
+   * - **Tier 1**
+     - Highest criticality apps. Requires fully automated failover even in the 
+       event of regional outages.
+     - 0
+     - :ref:`3 Regions with 5 or more nodes <arch-center-multi-region-tier-1>`
+     - $$$
 
    * - **Performance**
      - Low latency for users within the chosen region; higher latency for users in more distant regions
@@ -101,18 +114,19 @@ determine the best fit for your needs:
      - Low latency for users within all of the chosen geographies
      - Low latency for users within all of the chosen geographies
 
-   * - **Complexity**
-     - Quick setup and easy maintenance
-     - More complex than Single-Region
-     - Same as Multi-region in 1 geography 
-     - More difficult, as it requires an account with each provider
+   * - **Tier 3**
+     - Lowest criticality apps. Can be done for 24 hrs without significant 
+       revenue impact.
+     - > 8 hr.
+     - :ref:`3 nodes in a single region <arch-center-paradigms-single>`
+     - $+
 
-   * - **Security & Data Sovereignty**
-     - Data, by default, exists in a single location
-     - Data resides in a single geographic region
-     - You can partition the data so that certain data resides in specific regions.
-     - You can partition the data so that certain data resides in specific regions, 
-       or even on a specific provider in a specific region.
+   * - **Non-Production**
+     - Not critical. Environments that are not directly responsible for 
+       revenue and are not customer-facing. Typically Dev and Test environments.
+     - n/a
+     - :ref:`Single node, single region <arch-center-paradigms-single>`
+     - $0 and up
 
 .. note::
 
