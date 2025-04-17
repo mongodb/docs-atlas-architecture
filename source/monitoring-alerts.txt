@@ -524,7 +524,8 @@ The following examples demonstrate how to enable monitoring using |service|
          .. tab:: Atlas Go SDK
             :tabid: go-sdk
 
-            Before you can authenticate and run scripts using the Atlas Go SDK, you must:
+            Before you can authenticate and run the example scripts using
+            the Atlas Go SDK, you must:
 
             - :ref:`Create an Atlas service account <service-accounts-overview>`.
               Store your client ID and secret as environment variables by
@@ -539,7 +540,10 @@ The following examples demonstrate how to enable monitoring using |service|
 
               .. literalinclude:: /includes/examples/generated-examples/snippet.config.json
                  :language: json
-                 :caption: Example config.json
+                 :caption: configs/config.json
+
+            For more information on authenticating and creating a client, see
+            the complete Atlas SDK for Go example project `in GitHub <https://github.com/mongodb/atlas-architecture-go-sdk>`__.
 
             View Cluster Metrics
             ~~~~~~~~~~~~~~~~~~~~
@@ -548,9 +552,9 @@ The following examples demonstrate how to enable monitoring using |service|
             used and free space on the specified disk. This metric can be used
             to determine if the system is running out of free space.
 
-            .. literalinclude: /includes/examples/generated-examples/main.snippet.get-metrics-dev.go
-                 :language: go
-                 :caption: get-cluster-metrics/main.go
+            .. literalinclude:: /includes/examples/generated-examples/main.snippet.get-metrics-dev.go
+               :language: go
+               :caption: get-cluster-metrics/main.go
 
             Download Logs
             ~~~~~~~~~~~~~
@@ -667,7 +671,8 @@ The following examples demonstrate how to enable monitoring using |service|
          .. tab:: Atlas Go SDK
             :tabid: go-sdk
 
-            Before you can authenticate and run scripts using the Atlas Go SDK, you must:
+            Before you can authenticate and run the example scripts using
+            the Atlas Go SDK, you must:
 
             - :ref:`Create an Atlas service account <service-accounts-overview>`.
               Store your client ID and secret as environment variables by
@@ -682,7 +687,10 @@ The following examples demonstrate how to enable monitoring using |service|
 
               .. literalinclude:: /includes/examples/generated-examples/snippet.config.json
                  :language: json
-                 :caption: Example config.json
+                 :caption: configs/config.json
+
+            For more information on authenticating and creating a client, see
+            the complete Atlas SDK for Go example project `in GitHub <https://github.com/mongodb/atlas-architecture-go-sdk>`__.
 
             View Cluster Metrics
             ~~~~~~~~~~~~~~~~~~~~
