@@ -35,7 +35,8 @@ Account and Organization Setup
      - Create a |service-fullname| account.
 
    * - :icon-fa4:`square-o`
-     - Set up your Atlas Organization  and configure a root user with appropriate access.
+     - Set up your |service| Organization and configure a root user with
+       appropriate access.
 
    * - :icon-fa4:`square-o`
      - Establish multi-tenancy strategy by setting up Projects, such as
@@ -70,13 +71,16 @@ Network and Security Configuration
    * - :icon-fa4:`square-o`
      - Choose a network connectivity method:
        
-       - VPC Peering for private and secure traffic routing within your network boundaries.
-       - Private Endpoints (AWS PrivateLink, Azure Private Link, Google Cloud Private Service Connect)
-         for a one-way private connection from your VPC to |service|.
-         for sharded multi-region clusters, enable private endpoints in each region.
-       - Public IP Access Lists to restrict inbound connections to specific IP addresses or CIDR blocks.
-         We recommend that you permit access to the smallest network segments
-         possible, such as an individual /32 address.
+       - VPC Peering for private and secure traffic routing within your
+         network boundaries.
+       - Private Endpoints (AWS PrivateLink, Azure Private Link,
+         or Google Cloud Private Service Connect) for a one-way private
+         connection from your VPC to |service|.
+         For sharded multi-region clusters, enable private endpoints in each region.
+       - Public IP Access Lists to restrict inbound connections to specific
+         IP addresses or CIDR blocks. We recommend that you permit access
+         to the smallest network segments possible,
+         such as an individual /32 address.
 
    * - :icon-fa4:`square-o`
      - Confirm that TLS/SSL is enabled for encrypting connections to your
@@ -110,10 +114,9 @@ Network and Security Configuration
   
        - Encryption at rest is enabled by default using cloud providers'
          transparent disk encryption (AES-256).
-       - Optionally enable "Bring Your Own Key (BYOK)"" encryption using
-         Key Management Service (KMS) providers
-         (AWS KMS, Azure Key Vault, GCP KMS).|service| cannot rotate
-         customer-managed encryption keys.
+       - Optionally enable "Bring Your Own Key (BYOK)" encryption using
+         Key Management Service (KMS) providers (AWS KMS, Azure Key Vault,
+         or GCP KMS).|service| can't rotate customer-managed encryption keys.
        - Consider Client-Side Field Level Encryption (CSFLE) to encrypt
          data within your application before transmitting it to |service|.
        - Explore Queryable Encryption for performing queries on encrypted data.
@@ -122,17 +125,18 @@ Network and Security Configuration
      - Configure Database Auditing to track database access and actions.
        Create custom filters if needed.
   
-   * - - :icon-fa4:`square-o`
-     - Be aware of Hard coded certificate authority: |service| clusters
-       use TLS certificates signed by a widely trusted Certificate Authority (CA).
-       While applications using recent MongoDB drivers handle certificate
-       validation automatically, older applications or those with custom
-       TLS configurations might require updates to trust the new CA
-       certificates if MongoDB updates its certificate provider.
-       [https://www.mongodb.com/docs/atlas/reference/faq/security/#hard-coded-certificate-authority]
-       Ensure that your applications are configured to handle potential
-       CA certificate updates.
-  
+   * - :icon-fa4:`square-o`
+     - Be aware of hard-coded certificate authority certificates.
+       |service| clusters use TLS certificates signed by a widely
+       trusted Certificate Authority (CA). While applications using
+       recent MongoDB drivers handle certificate validation automatically,
+       older applications or those with custom TLS configurations might
+       require updates to trust the new CA certificates if MongoDB updates
+       its certificate provider.
+       To learn more, see :atlas:`Hard-coded certificate authority </reference/faq/security/#hard-coded-certificate-authority>`.
+       Ensure that you set up your applications in a way that lets you
+       handle potential CA certificate updates.
+
    * - :icon-fa4:`square-o`
      - Understand and plan for Compliance with relevant standards and
        regulations, such as ISO/IEC 27001, HIPAA, GDPR, PCI DSS, FedRAMP,
@@ -146,29 +150,29 @@ Backup and Restore Strategy
 
    * - :icon-fa4:`square-o`
      - Enable |service| Cloud Backup, which provides localized backup
-       storage using the cloud provider's native snapshot functionality.  
+       storage using the cloud provider's native snapshot functionality.
   
    * - :icon-fa4:`square-o`
      - Enable Continuous Cloud Backup with a restore window that meets
        your Recovery Point Objective (RPO). We recommend having a restore
        window of 7 days to allow for Point In Time (PIT) recovery using the oplog.
-  
+
    * - :icon-fa4:`square-o`
      - Define a backup schedule and retention policy that aligns with your
        business continuity and compliance requirements. Consider hourly,
        daily, weekly, and monthly snapshots with appropriate retention periods.
-  
+
    * - :icon-fa4:`square-o`
      - Consider multi-region snapshot distribution for increased resilience
-       by copying snapshots to other geographic regions.  
-  
+       by copying snapshots to other geographic regions.
+
    * - :icon-fa4:`square-o`
      - For strict data protection requirements, enable Backup Compliance Policy
-       to prevent unauthorized modifications or deletions of backups.  
-  
+       to prevent unauthorized modifications or deletions of backups.
+
    * - :icon-fa4:`square-o`
      - Understand the process for restoring from scheduled or on-demand snapshots.
-  
+
    * - :icon-fa4:`square-o`
      - Familiarize yourself with the process for restoring from
        Continuous Cloud Backup to a specific point in time.
@@ -176,11 +180,11 @@ Backup and Restore Strategy
    * - :icon-fa4:`square-o`
      - Plan and test your Disaster Recovery (DR) strategy. Understand
        Recovery Time Objective (RTO) and Recovery Point Objective (RPO).
-       Consider using the "test resilience" feature in Atlas.
+       Consider testing application's resilience in |service|.
   
    * - :icon-fa4:`square-o`
      - Consider options for snapshot download and archive if required,
-       using the GUI, Atlas API, or Atlas CLI.
+       using the {+atlas-ui+}, {+atlas-admin-api+}, or {+atlas-cli+}.
 
 Maintenance and Patching
 ------------------------
