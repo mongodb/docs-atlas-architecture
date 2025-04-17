@@ -24,7 +24,7 @@ streamline the claim adjustment process.
 **Use cases:** `Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__, 
 `Content Management <https://www.mongodb.com/solutions/use-cases/content-management>`__
 
-**Industries:** `Insurance <https://www.mongodb.com/industries/insurance>`__,`
+**Industries:** `Insurance <https://www.mongodb.com/industries/insurance>`__,
 `Finance <https://www.mongodb.com/industries/financial-services>`__,
 `Manufacturing and Mobility <https://www.mongodb.com/industries/manufacturing>`__, 
 `Retail <https://www.mongodb.com/industries/retail>`__
