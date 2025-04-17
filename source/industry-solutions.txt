@@ -87,6 +87,7 @@ kick-start their projects.
 .. toctree::
    :titlesonly:
 
+   Claim Management <industry-solutions/claim-management>
    PDF Search </industry-solutions/pdf-search>
    RAG Applications <industry-solutions/rag-applications>
    Audio-Based AI Diagnostics <industry-solutions/audio-based-AI-diagnostics>
