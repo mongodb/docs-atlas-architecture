@@ -54,8 +54,8 @@ multiple geographies, ensures the highest level of availability with a single
 provider. If your application requires the very highest level of availability 
 and lowest latency, consider a :ref:`arch-center-paradigms-multi-cloud`.
 
-Use Cases for Multi-Region Deployments
---------------------------------------
+Multi-Region Deployment Use Cases
+---------------------------------
 
 The following use cases highlight a high-criticality application ("Tier 1") 
 and a less-critical application, but one that still warrants a 
@@ -63,13 +63,13 @@ multi-region deployment ("Tier 2").
 
 .. _arch-center-multi-region-tier-1:
 
-Tier 1 Application
-~~~~~~~~~~~~~~~~~~
+Tier 1 Applications
+~~~~~~~~~~~~~~~~~~~
 
-Tier 1 Application application requires both high availability and low-latency. 
+Tier 1 applications require both high availability and low-latency. 
 To achieve this, we recommend an architecture that consists of a minimum of 5 
 nodes spread over at least 3 regions. This provides high availability in at least 
-2 regions so when a node goes down, the traffic can be served from the same 
+2 regions. If a node goes down, the traffic can be served from the same 
 region to ensure the same latency on the primary region. 
 
 .. figure:: /includes/images/multi-region-tier-1.png
@@ -79,7 +79,7 @@ region to ensure the same latency on the primary region.
 Notes and Considerations
 ````````````````````````
 
-- Your application should be deployed in each region as well, further reducing 
+- Your application should also be deployed in each region to further reduce  
   latency.
 
 - You should use Privatelink for connecting to the cluster, and VPC peering 
@@ -87,17 +87,17 @@ Notes and Considerations
   is broken or {+service+} in that region goes down, the application tier can 
   still route to the primary node, first over the vpc peering, and then over the 
   private endpoint. 
-
 - This architecture has the highest cost due to network traffic between regions 
-  and having a minimum of 5 data-bearing nodes. 
+  and having a 5 or more data-bearing nodes. 
 - This architecture provides the highest resiliency. There are no interruptions 
   to operations, and your application can sustain a full regional failure with 
   no interruption and manual intervention required. 
 
 .. _arch-center-multi-region-tier-2:
 
-Tier 2 Application
-~~~~~~~~~~~~~~~~~~
+Tier 2 Applications
+~~~~~~~~~~~~~~~~~~~
+
 If you have an application that can experience limited downtime or maintenance 
 windows without significant revenue impact, you can create an architecture that 
 provides that level of availability by using 5 nodes in 2 regions. You have 3 
@@ -143,6 +143,14 @@ above, the reduced cost comes with some caveats:
 
 - In sharded clusters, if your MongoDB process didn't replicate chunk migrations, 
   the data inconsistency might cause orphaned chunks.
+
+Alternative Solution
+````````````````````
+For further cost savings, you can design this architecture without the 2 read-only 
+nodes. In addition to the caveats listed above, data size has significant impact 
+on your decision since the data will need to be synchronized to secondaries 
+whenever adding new nodes to the cluster. For example, 1TB of data averages 1
+hour of recovery and synchronization time.
 
 
 .. _arch-center-multi-region-considerations:
