@@ -12,6 +12,7 @@ Guidance for {+service+} Monitoring and Alerts
 
 .. meta::   
    :description: Learn how to monitor and set up alerts on your Atlas cluster.
+   :keywords: code example, atlas sdk for go, terraform, atlas cli
 
 .. contents:: On this page
    :local:
@@ -461,7 +462,9 @@ When you configure this feature, {+service+} continually pushes logs from ``mong
 Automation Examples: {+service+} Monitoring and Logging
 -------------------------------------------------------
 
-.. include:: /includes/complete-examples.rst
+.. include:: /includes/complete-examples-terraform.rst
+
+.. include:: /includes/complete-examples-go-sdk.rst
 
 The following examples demonstrate how to enable monitoring using |service|
 :ref:`tools for automation <arch-center-automation>`.
@@ -518,6 +521,48 @@ The following examples demonstrate how to enable monitoring using |service|
 
             .. include:: /includes/examples/cli-example-download-logs.rst
 
+         .. tab:: Atlas Go SDK
+            :tabid: go-sdk
+
+            Before you can authenticate and run scripts using the Atlas Go SDK, you must:
+
+            - :ref:`Create an Atlas service account <service-accounts-overview>`.
+              Store your client ID and secret as environment variables by
+              running the following command in the terminal:
+
+              .. code-block:: shell
+
+                 export MONGODB_ATLAS_SERVICE_ACCOUNT_ID="<insert your client ID here>"
+                 export MONGODB_ATLAS_SERVICE_ACCOUNT_SECRET="<insert your client secret here>"
+
+            - Set the following configuration variables in your Go project:
+
+              .. literalinclude:: /includes/examples/generated-examples/snippet.config.json
+                 :language: json
+                 :caption: Example config.json
+
+            View Cluster Metrics
+            ~~~~~~~~~~~~~~~~~~~~
+
+            The following example script demonstrates how to retrieve the amount of
+            used and free space on the specified disk. This metric can be used
+            to determine if the system is running out of free space.
+
+            .. literalinclude: /includes/examples/generated-examples/main.snippet.get-metrics-dev.go
+                 :language: go
+                 :caption: get-cluster-metrics/main.go
+
+            Download Logs
+            ~~~~~~~~~~~~~
+
+            The following example script demonstrates how to download and
+            unzip a compressed file that contains the
+            MongoDB logs for the specified host in your Atlas project:
+
+            .. literalinclude:: /includes/examples/generated-examples/main.snippet.get-logs.go
+              :language: go
+              :caption: get-logs/main.go
+
          .. tab:: Terraform
             :tabid: terraform 
 
@@ -536,7 +581,7 @@ The following examples demonstrate how to enable monitoring using |service|
 
             - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__ 
             
-            We also recommend `creating a workspace for your environment <https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices/part1#one-workspace-per-environment-per-terraform-configuration>`__.  
+            We also recommend `creating a workspace for your environment <https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices/part1#one-workspace-per-environment-per-terraform-configuration>`__.
 
             Configure Alerts 
             ~~~~~~~~~~~~~~~~
@@ -579,18 +624,18 @@ The following examples demonstrate how to enable monitoring using |service|
 
             Run the sample command to retrieve the following metrics: 
       
-            - OPCOUNTERS - to monitor the amount of queries, updates, inserts,
+            - OPCOUNTERS - Monitor the amount of queries, updates, inserts,
               and deletes occurring at peak load and ensure that load doesn't
-              increase unexpectedly. 
-            - TICKETS - to ensure that the number of allowed concurrent reads
-              and writes doesn't lower much, or frequently. 
-            - CONNECTIONS - to ensure that the number of sockets used for
-              heartbeats and replication between members isn't above the 
-              set limit. 
-            - QUERY TARGETING - to ensure that number of keys and documents
+              increase unexpectedly.
+            - TICKETS - Ensure that the number of allowed concurrent reads
+              and writes doesn't lower much, or frequently.
+            - CONNECTIONS - Ensure that the number of sockets used for
+              heartbeats and replication between members isn't above the
+              set limit.
+            - QUERY TARGETING - Ensure that number of keys and documents
               scanned to the number of documents returned, averaged by second,
-              are't too high. 
-            - SYSTEM CPU - to ensure that the CPU usage is steady. 
+              are't too high.
+            - SYSTEM CPU - Ensure that the CPU usage is steady.
 
             .. include:: /includes/examples/cli-example-metrics-processes-stagingprod.rst
 
@@ -618,6 +663,59 @@ The following examples demonstrate how to enable monitoring using |service|
             MongoDB logs for the specified host in your project. 
 
             .. include:: /includes/examples/cli-example-download-logs.rst
+
+         .. tab:: Atlas Go SDK
+            :tabid: go-sdk
+
+            Before you can authenticate and run scripts using the Atlas Go SDK, you must:
+
+            - :ref:`Create an Atlas service account <service-accounts-overview>`.
+              Store your client ID and secret as environment variables by
+              running the following command in the terminal:
+
+              .. code-block:: shell
+
+                 export MONGODB_ATLAS_SERVICE_ACCOUNT_ID="<insert your client ID here>"
+                 export MONGODB_ATLAS_SERVICE_ACCOUNT_SECRET="<insert your client secret here>"
+
+            - Set the following configuration variables in your Go project:
+
+              .. literalinclude:: /includes/examples/generated-examples/snippet.config.json
+                 :language: json
+                 :caption: Example config.json
+
+            View Cluster Metrics
+            ~~~~~~~~~~~~~~~~~~~~
+
+            The following example script demonstrates how to retrieve the following metrics:
+
+            - OPCOUNTERS - Monitor the amount of queries, updates, inserts,
+              and deletes occurring at peak load and ensure that load doesn't
+              increase unexpectedly.
+            - TICKETS - Ensure that the number of allowed concurrent reads
+              and writes doesn't lower much, or frequently.
+            - CONNECTIONS - Ensure that the number of sockets used for
+              heartbeats and replication between members isn't above the
+              set limit.
+            - QUERY TARGETING - Ensure that number of keys and documents
+              scanned to the number of documents returned, averaged by second,
+              are't too high.
+            - SYSTEM CPU - Ensure that the CPU usage is steady.
+
+            .. literalinclude: /includes/examples/generated-examples/main.snippet.get-metrics-prod.go
+                 :language: go
+                 :caption: get-disk-metrics/main.go
+
+            Download Logs
+            ~~~~~~~~~~~~~
+
+            The following example script demonstrates how to download and
+            unzip a compressed file that contains the
+            MongoDB logs for the specified host in your Atlas project:
+
+            .. literalinclude:: /includes/examples/generated-examples/main.snippet.get-logs.go
+              :language: go
+              :caption: get-logs/main.go
 
          .. tab:: Terraform
             :tabid: terraform 
