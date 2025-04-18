@@ -100,28 +100,6 @@ monthly, each with its own retention period.
 Recommendations for {+service+} Backups
 ---------------------------------------
 
-.. collapsible::
-   :heading: Single-Region Deployment Recommendations
-   :sub_heading: Recommendations that apply only to deployments in a single region
-   :expanded: true
-
-   Recommendations here
-
-.. collapsible::
-   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
-   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
-   :expanded: true
-
-   If you select a multi-region deployment model, we recommend that you deploy to three or more regions to 
-   support automatic failover in the event of a primary region failure. The built-in replication of a multi-region 
-   cluster ensures high availability and fault tolerance without the use of backups. To learn more about which multi-region
-   deployment models ensure high availability of data, see :ref:`arch-center-deployment-topologies`. 
- 
-   We also recommend that multi-region and multi-cloud deployments enable local |service| cloud backups or continuous cloud backups
-   for multiple regions to support recovery to previous versions of data in case of large data loss or corruption events such as
-   accidental deletions of data. This backup configuration meets the same compliance requirements as enabling 
-   :atlas:`multi-region snapshot distribution </backup/cloud-backup/snapshot-distribution/>` for a single-region deployment.
-
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -272,7 +250,29 @@ By :ref:`selecting regions <atlas-backup-distribution>` strategically
 for backup, you can avoid cross-region data transfer fees and choose the
 right {+cluster+} disk size based on workload to prevent overspending.
 By implementing these strategies, you can effectively manage costs while
-maintaining secure and reliable backups.   
+maintaining secure and reliable backups.
+
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   If you select a multi-region deployment model, we recommend that you deploy to three or more regions to 
+   support automatic failover in the event of a primary region failure. The built-in replication of a multi-region 
+   cluster ensures high availability and fault tolerance without the use of backups. To learn more about which multi-region
+   deployment models ensure high availability of data, see :ref:`arch-center-deployment-topologies`. 
+ 
+   We also recommend that multi-region and multi-cloud deployments enable local |service| cloud backups or continuous cloud backups
+   for multiple regions to support recovery to previous versions of data in case of large data loss or corruption events such as
+   accidental deletions of data. This backup configuration meets the same compliance requirements as enabling 
+   :atlas:`multi-region snapshot distribution </backup/cloud-backup/snapshot-distribution/>` for a single-region deployment.
 
 Automation Examples: {+service+} Backups
 ----------------------------------------
