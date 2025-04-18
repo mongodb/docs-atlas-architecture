@@ -105,7 +105,7 @@ determine the best fit for your needs:
 .. toctree::
    :titlesonly:
 
-   Single-Region </single-region>
-   Multi-Region </multi-region>
-   Multi-Cloud </multi-cloud>
-   Hybrid </hybrid>
+   Single-Region </deployment-paradigms/single-region>
+   Multi-Region </deployment-paradigms/multi-region>
+   Multi-Cloud </deployment-paradigms/multi-cloud>
+   Hybrid </deployment-paradigms/hybrid>

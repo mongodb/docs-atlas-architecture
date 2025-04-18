@@ -71,7 +71,7 @@ team to create a custom landing zone for your {+service+} hybrid
 deployments.
 
 - :ref:`arch-center-single-region-rec-summary`
-- :ref:`arch-center-multi-cloud-rec-summary`
+- :ref:`arch-center-multi-region-rec-summary`
 
 Creating Hybrid Deployments
 ---------------------------
