@@ -16,8 +16,10 @@
      org_id = var.atlas_org_id
      name = var.atlas_project_name
      # Assign the Project the Group with Specific Roles
-     team_id    = mongodbatlas_team.project_group.team_id
-     role_names = ["GROUP_READ_ONLY", "GROUP_CLUSTER_MANAGER"]
+     teams {
+      team_id    = mongodbatlas_team.project_group.team_id
+      role_names = ["GROUP_READ_ONLY", "GROUP_CLUSTER_MANAGER"]
+    }
    }
    
    # Create an Atlas Advanced Cluster 
