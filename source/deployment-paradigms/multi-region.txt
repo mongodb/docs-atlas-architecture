@@ -62,6 +62,133 @@ multiple geographies, ensures the highest level of availability with a single
 provider. If your application requires the very highest level of availability 
 and lowest latency, consider a :ref:`arch-center-paradigms-multi-cloud`.
 
+Multi-Region Deployment Use Cases
+---------------------------------
+
+The following use cases highlight a high-criticality application ("Tier 1") 
+and a less-critical application, but one that still warrants a 
+multi-region deployment ("Tier 2").
+
+.. _arch-center-multi-region-tier-1:
+
+Tier 1 Applications
+~~~~~~~~~~~~~~~~~~~
+
+Tier 1 applications require both high availability and low-latency. 
+To achieve this, we recommend an architecture that consists of a minimum of 5 
+nodes spread over at least 3 regions. This provides high availability in at least 
+2 regions. If a node goes down, the traffic can be served from the same 
+region to ensure the same latency on the primary region. 
+
+.. figure:: /includes/images/multi-region-tier-1.png
+   :figwidth: 750px
+   :alt: An image showing three types of multi-region deployments
+
+Notes and Considerations
+````````````````````````
+
+- Your application should also be deployed in each region to further reduce  
+  latency.
+
+- You should use Privatelink for connecting to the cluster, and VPC peering 
+  between the your VPCs. VPC peering ensures that if a network connection 
+  is broken or {+service+} in that region goes down, the application tier can 
+  still route to the primary node, first over the vpc peering, and then over the 
+  private endpoint. 
+- This architecture has the highest cost due to network traffic between regions 
+  and having a 5 or more data-bearing nodes. 
+- This architecture provides the highest resiliency. There are no interruptions 
+  to operations, and your application can sustain a full regional failure with 
+  no interruption and manual intervention required. 
+
+.. _arch-center-multi-region-tier-2:
+
+Tier 2 Applications
+~~~~~~~~~~~~~~~~~~~
+
+If you have an application that can experience limited downtime or maintenance 
+windows without significant revenue impact, you can create an architecture that 
+provides that level of availability by using 5 nodes in 2 regions. You have 3 
+electable nodes spread across the 2 regions, and also have 2 read-only nodes in 
+the secondary region. The electable nodes are in the **majority region**, while 
+the region with fewer electable nodes is the **minority region**.
+
+.. figure:: /includes/images/multi-region-tier-2.png
+   :figwidth: 750px
+   :alt: An image showing three types of multi-region deployments
+
+Notes and Considerations
+````````````````````````
+This is a good option for:
+
+- Customers with only 2 approved regions.
+- Meeting governance compliance about data storage.
+- Applications where read operations need high uptime, but write operations can 
+  experience some outage.
+
+As with the "Tier 1" solution, this architecture provides increased protection 
+against data loss, even in full regional outage. The system remains available 
+in read-only mode in the secondary region if the primary region is lost. 
+
+While this architecture is less expensive that the "Tier 1" solution provided 
+above, the reduced cost comes with some caveats:
+
+- If the majority region is lost, the minority region is not a fully-functional 
+  cluster; it does not have a primary and can only accept reads, but not writes.
+
+  To turn it into a functional cluster again, an administrator needs to 
+  reconfigure the 2 read-only nodes to electable nodes. However, there is a 
+  possibility of data loss when the unavailable members are online again. If 
+  your MongoDB process didn't replicate the write operations to the node that
+  becomes the new primary, then the recovered replica set rolls back these 
+  writes. To learn more, refer to  
+  :atlas:`Reconfigure a Replica Set During a Regional Outage </reconfigure-replica-set-during-regional-outage>`.
+
+  .. note::
+
+     If the *minority* region is lost, no action is required, since the majority  
+     region remains a fully functional cluster.
+
+- In sharded clusters, if your MongoDB process didn't replicate chunk migrations, 
+  the data inconsistency might cause orphaned chunks.
+
+Alternative Solution
+````````````````````
+For further cost savings, you can design this architecture without the 2 read-only 
+nodes. In addition to the caveats listed above, data size has a significant impact 
+on your decision since the data will need to be synchronized to secondaries 
+whenever adding new nodes to the cluster. For example, 1TB of data averages 1
+hour of recovery and synchronization time.
+
+.. _arch-center-multi-region-considerations:
+
+Considerations for Multi-Region Deployments
+-------------------------------------------
+
+Other considerations for multi-region deployments include:
+
+- High availability depends on the deployment of nodes across
+  regions as well as the number, distribution, and priority order of
+  nodes. To learn more about recommended
+  {+cluster+} topologies for high availability, see
+  :ref:`arch-center-high-availability`.
+- Multi-region deployments are available only for ``M10`` dedicated
+  {+clusters+} and larger.
+- High availability and low latency also depend on where you deploy 
+  your application. When optimizing for availability and latency, plan the 
+  deployment of your entire application stack, not just the database.
+
+To learn how to configure multi-region deployments and learn about the
+different types of nodes you can add, see 
+:atlas:`Configure High Availability and Workload Isolation 
+</cluster-config/multi-cloud-distribution/>` in the {+service+}
+documentation.
+
+For more considerations, see 
+:atlas:`Considerations 
+</cluster-config/multi-cloud-distribution/#considerations>` in the
+{+service+} documentation.
+
 Global Deployments 
 ------------------
 
@@ -132,3 +259,8 @@ Recommendations for Multi-Region Deployments
 
 .. include:: /includes/rec-list.rst
 
+
+.. toctree::
+   :titlesonly:
+
+   Multi-Region Latency Strategies </latency-strategies>

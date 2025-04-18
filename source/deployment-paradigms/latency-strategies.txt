@@ -1,0 +1,90 @@
+.. _arch-center-latency-strategies:
+
+=========================================
+Multi-Region Latency Reduction Strategies
+=========================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+Multi-region {+service+} deployments can be used to enhance performance by reducing 
+latency. There are several factors that impact the latency in a multi-region 
+deployment that you should consider when designing your deployment architecture.
+
+Factors Contributing to Latency
+-------------------------------
+
+A fundamental factor in latency is the physical distance between users and 
+your application, between your application and your data, and between 
+{+cluster+} nodes. To reduce latency for read operations, then, it's crucial to 
+place both your application and data geographically closer to users. 
+
+How you configure Replication also contributes to latency in a 
+multi-region deployment. Factors include the following:
+
+- **Write concern levels:** There is a trade-off between write durability and 
+  write latency. The write concern level you configure (e.g., ``w: "majority"``) 
+  defines replication across multiple data centers, potentially increasing 
+  latency for more durable writes. 
+
+- **Order of regions:** The order of regions in your configuration can determine 
+  the priority for the primary node location, which will impact write latency. 
+
+- **Mirrored Reads:** Mirrored reads reduce the impact of primary elections 
+  following an outage by pre-warming the caches on the secondary nodes. 
+
+- **Read Preference:** By default, applications send read operations to the 
+  primary member. However, you can configure the read preference to send read 
+  operations to secondary members. By doing so, you ensure reads go to the 
+  geographically closest cluster. 
+  
+  ..note:: 
+  
+    It is important to keep in mind that there is the possibility of a 
+    secondary returning stale data due to replication lag.
+
+- **Data Distribution:** Distributing data across regions by using replica sets 
+  or sharded clusters is an effective approach when your data is geographically 
+  oriented. For example, you have data that is only read from the EU, and other 
+  data that is only read in North America, you could create shards that distribute 
+  that data appropriately. 
+
+For more information, refer to :manual:`</replication>`
+
+Network Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can further reduce latency using the following network connectivity options: 
+
+ - **Use Private Endpoints:** Private endpoints establish direct and secure 
+   connections between your application's virtual network and your Atlas cluster, 
+   potentially reducing network hops and improving latency.
+
+- **VPC Peering:** Configure VPC peering in your replica sets to allow 
+  applications to connect to peered regions.
+
+Data Model and Query Optimization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Data access also contributes to latency. Consider the following when modeling your 
+MongoDB data:
+
+- **Reduce the document size:** Consider shortening field names and value lengths to 
+  decrease the amount of data transferred over the network.
+
+- **Optimize query patterns:** Use indexes effectively to minimize the amount 
+  of data that needs to be read across regions.
+
+Monitoring and Testing Latency
+------------------------------
+
+{+service+} provides monitoring tools to observe latency metrics for different 
+regions. You can also implement application-level monitoring to track end-to-end 
+latency to and from the application. Finally, we suggest conducting performance 
+testing under various multi-region scenarios to identify and address latency 
+bottlenecks.
