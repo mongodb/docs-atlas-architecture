@@ -245,7 +245,7 @@ the same team is responsible for multiple applications across environments.
 This eases the setup cost for features such as private endpoints and customer-managed keys, 
 because all {+clusters+} in the same project share the same project configuration.
 
-However, this {+cluster+} hierarchy might violate the principle of least privilege.
+However, this {+cluster+} hierarchy may violate the principle of least privilege.
 
 Deploy multiple {+clusters+} within the same project only if both of the following are true:
 
@@ -314,6 +314,7 @@ You can estimate the {+cluster+} resources that your deployment requires by usin
 Use the following {+cluster+} size guide to select a {+cluster+} tier that ensures performance without over-provisioning. 
 This table displays the default storage and performance capabilities for each {+cluster+} tier, as well as 
 whether or not the {+cluster+} tier is suitable for staging and production environments. 
+
 The {+cluster+} size guide also includes expected values for a {+cluster+}'s
 total data size and peak IOPS, based on median {+cluster+} sizes and 98th percentile IOPS analytics from existing enterprise account {+clusters+}
 in each {+cluster+} tier.
@@ -329,6 +330,7 @@ in each {+cluster+} tier.
      - CPUs (#)
      - Default RAM
      - Default IOPS
+
      - Expected Total Data Size
      - Expected Peak IOPS
      - Suitable For

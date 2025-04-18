@@ -113,8 +113,8 @@ clients may cause your application to suffer from a data outage.
 Private Endpoints
 ~~~~~~~~~~~~~~~~~
 
-A private endpoint facilitates a one-way connection from your own |vpc|
-to your {+service+} |vpc|, without permitting {+service+} to initiate a
+A private endpoint facilitates a one-way connection from a |vpc| that you manage 
+directly to your {+service+} |vpc|, without permitting {+service+} to initiate a
 reciprocal connection. This allows you to make use of secure connections
 to {+service+} without extending your network trust boundary. The following
 private endpoints are available:
@@ -129,6 +129,21 @@ private endpoints are available:
 .. figure:: /includes/images/private-link.svg
    :alt: "An image representing how MongoDB Atlas private endpoints work."
    :figwidth: 750px
+
+Multi-Region Considerations
+```````````````````````````
+
+- For global private endpoints, |service| automatically generates a |srv| record 
+  that points to all |service| cluster nodes. The MongoDB driver attempts to 
+  connect to each |srv| record from your application. This allows the driver to 
+  handle a failover event without waiting for |dns| replication and without 
+  requiring you to update the driver's connection string.
+- In order to facilitate automatic |srv| record generation for all nodes in your 
+  |service| cluster, you must establish a |vpc| peering connection between the 
+  |vpc| in which your application is deployed and and your MongoDB |vpc| with 
+  `PrivateLink <https://aws.amazon.com/privatelink/>`__ or equivalent.
+- Private endpoints must be enabled in every region that you have an |service| 
+  cluster deployed.
 
 VPC/{+vnet+} Peering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -184,21 +199,55 @@ The following recommendations apply to all :ref:`deployment paradigms
 Private Endpoints
 `````````````````
 
-We recommend that you set up private endpoints for all new staging and production projects to limit the extension of your network trust
-boundary.
+We recommend that you set up private endpoints for all new staging and production 
+projects to limit the extension of your network trust boundary.
 
-In general, we recommend using private endpoints for every {+service+} project 
-because it provides the most granular security and eases the administrative burden 
-that can come from managing {+ip-access-list+}\s and large blocks of IP addresses 
-as your cloud network scales. There is a cost associated with each endpoint, so you 
-might consider not requiring private endpoints in lower environments but you should 
-leverage them in higher environments to limit the extension of your network trust 
-boundary.
+In general, we recommend using private endpoints for every {+service+} project, 
+because this approach provides the most granular security and eases the 
+administrative burden that can come from managing {+ip-access-list+}\s and large 
+blocks of IP addresses as your cloud network scales. There is a cost associated 
+with each endpoint. So, you don't need private endpoints in 
+lower environments, but you should leverage them in higher environments to limit 
+the extension of your network trust boundary.
+
+If VPCs or VNets in which your application is deployed can't be peered with one 
+another, potentially due to a combination of on-premises and cloud deployments, 
+you might want to consider a regional private endpoint. 
+
+With regional private endpoints, you can do the following:
+
+- Connect a single private endpoint to multiple VNets or VPCs without peering 
+  them directly to each other.
+
+- Mitigate partial region failures in which one or more services within a region fails.
+
+To network with regional endpoints, you must do the following:
+
+- Perform regular and robust health checks to detect an outage and update routing. 
+  
+- Use a distinct connection string for each region.
+  
+- Manage cross-region routing in |service|. 
+  
+- Deploy a Mongos server and an additional metadata server if you are running a 
+  MongoDB version older than v8.0. 
 
 To learn more about private endpoints
 in {+service+}, including limitations and considerations, see :atlas:`Learn About Private Endpoints in {+service+} </security-private-endpoint/>`. To learn how to set up private
 endpoints for your {+clusters+}, see
 :atlas:`Set Up a Private Endpoint for a Dedicated Cluster </security-cluster-private-endpoint/>`.
+
+Cloud Provider-Specific Guidance
+`````````````````````````````````
+- |aws|: We recommend |vpc| peering across all of your self-managed VPCs that 
+  need to connect to |service|. Leverage global private endpoints.
+
+- |azure|: We recommend VNet peering across all of your self-managed VNets that 
+  need to connect to |service|. Leverage global private endpoints.
+
+- |gcp|: Peering is not required across your self-managed VPCs when using 
+  GlobalConnect. All |service| regions must be networked with private endpoints 
+  to your self-managed VPC in each region. 
 
 |gcp| Private Endpoints Considerations and Limitations
 ```````````````````````````````````````````````````````
