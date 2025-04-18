@@ -19,7 +19,6 @@ shows these options, which are explained further below:
    :figwidth: 750px
    :alt: An image showing the different deployment options.
 
-
 :ref:`Single-Region Deployment<arch-center-paradigms-single>`
 
 This is the simplest deployment option. In a single-region deployment, your 
@@ -57,6 +56,40 @@ There are several types of multi-region deployments:
   situations; for example, where you need global aggregation of user data, or 
   where legal terms dictate specific hosting requirements.
 
+Availability Considerations
+---------------------------
+{+service+} has replication built into your deployments, which means: 
+
+- Database instances are kept tightly in sync with each other, typically in the 
+  range of milliseconds.
+- In the event of an outage, failover between database instances is fully automatic. 
+  It requires no human intervention, and takes only seconds.
+- There is no data loss during a failover, including operations that are in 
+  flight while the failover happens. If 
+  :manual:`writeConcern </reference/write-concern>` is set to ``majority``,  
+  these operations are retried after the failover is complete, to ensure that no 
+  writes are lost.
+
+Availability is often considered in terms of how fast your application can recover 
+from an outage (RTO) and how much data might be lost in an outage (RPO). Because 
+all {+service+} instances always have current data, failovers do not 
+require restoring of backups.
+
+.. note::
+
+   The maximum RTO and RPO should be considered holistically across the entire 
+   application, including component pieces, and not just a single database 
+   component. 
+
+Deployment Paradigm Comparison
+------------------------------
+
+To figure out which deployment pattern is right for you, it is necessary to 
+break down your applications by how critical they are to your core business. The 
+more important the application (in other words, the more money lost due to an 
+outage), the more you will want to spend on an architecture to automatically 
+handle any outage event.
+
 The following table provides a comparison of deployment paradigms to help you 
 determine the best fit for your needs: 
 
@@ -64,36 +97,39 @@ determine the best fit for your needs:
    :header-rows: 1
    :widths: 20 20 20 20 20 
 
-   * - Design Consideration
-     - Single-Region
-     - Multi-Region in One Geography
-     - Multi-Region in Multiple Geographies
-     - Multi-Cloud
+   * - Priority Level
+     - Description
+     - RTO
+     - Deployment Model
+     - Relative Cost
 
-   * - **Availability & Reliability**
-     - Data is available if a single zone (data center) fails
-     - Data is available if a single region fails
-     - Data is available if multiple regions or geographies fail
-     - Data is available if a cloud provider fails
+   * - **Tier 1**
+     - Highest criticality apps. Requires fully automated failover even in the 
+       event of regional outages.
+     - 0
+     - :ref:`3 Regions with 5 or more nodes <arch-center-multi-region-tier-1>`
+     - $$$
 
-   * - **Performance**
-     - High for regional users; lower for users in more distant regions.
-     - High for users within the chosen geography
-     - High for users within all of the chosen geographies
-     - High for users within all of the chosen geographies
+   * - **Tier 2**
+     - Lower criticality apps. Can experience some downtime or maintenance windows 
+       without significant revenue impact.
+     - > 1 hr. and < 8 hr.
+     - :ref:`2 regions with 3 nodes and backups <arch-center-multi-region-tier-2>`
+     - $$
 
-   * - **Complexity**
-     - Quick setup and easy maintenance
-     - More complex than Single-Region
-     - Same as Multi-region in 1 geography 
-     - More difficult, as it requires an account with each provider
+   * - **Tier 3**
+     - Lowest criticality apps. Can be done for 24 hrs without significant 
+       revenue impact.
+     - > 8 hr.
+     - :ref:`3 nodes in a single region <arch-center-paradigms-single>`
+     - $+
 
-   * - **Security & Data Sovereignty**
-     - Data, by default, exists in a single location
-     - Data resides in a single geographic region
-     - You can partition the data so that certain data resides in specific regions.
-     - You can partition the data so that certain data resides in specific regions, 
-       or even on a specific provider in a specific region.
+   * - **Non-Production**
+     - Not critical. Environments that are not directly responsible for 
+       revenue and are not customer-facing. Typically Dev and Test environments.
+     - n/a
+     - :ref:`Single node, single region <arch-center-paradigms-single>`
+     - $0 and up
 
 .. note::
 
