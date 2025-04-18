@@ -179,16 +179,16 @@ Recommendations for {+service+} Network Security
 Private Endpoints
 ~~~~~~~~~~~~~~~~~
 
-We recommend that you set up private endpoints for all new staging and production projects to limit the extension of your network trust
-boundary.
+We recommend that you set up private endpoints for all new staging and production 
+projects to limit the extension of your network trust boundary.
 
-In general, we recommend using private endpoints for every {+service+} project 
-because it provides the most granular security and eases the administrative burden 
-that can come from managing {+ip-access-list+}\s and large blocks of IP addresses 
-as your cloud network scales. There is a cost associated with each endpoint, so you 
-might consider not requiring private endpoints in lower environments but you should 
-leverage them in higher environments to limit the extension of your network trust 
-boundary.
+In general, we recommend using private endpoints for every {+service+} project, 
+because this approach provides the most granular security and eases the 
+administrative burden that can come from managing {+ip-access-list+}\s and large 
+blocks of IP addresses as your cloud network scales. There is a cost associated 
+with each endpoint, so you might consider not requiring private endpoints in 
+lower environments but you should leverage them in higher environments to limit 
+the extension of your network trust boundary.
 
 If VPCs or VNets in which your application is deployed can't be peered with one 
 another, potentially due to a combination of on premesis and cloud deployments, 
@@ -216,6 +216,18 @@ To learn more about private endpoints
 in {+service+}, including limitations and considerations, see :atlas:`Learn About Private Endpoints in {+service+} </security-private-endpoint/>`. To learn how to set up private
 endpoints for your {+clusters+}, see
 :atlas:`Set Up a Private Endpoint for a Dedicated Cluster </security-cluster-private-endpoint/>`.
+
+Cloud Provider-Specific Guidance
+`````````````````````````````````
+- |aws|: We recommend |vpc| peering across all of your self-managed VPCs that 
+  need to connect to |service|. Leverage global private endpoints.
+
+- |azure|: We recommend vNet peering across all of your self-managed vNets that 
+  need to connect to |service|. Leverage global private endpoints.
+
+- |gcp|: Peering is not required across your self-managed VPCs when using 
+  GlobalConnect. All |service| regions must be networked with private endpoints 
+  to your self-managed VPC in each region. 
 
 IP Access Lists
 ~~~~~~~~~~~~~~~
