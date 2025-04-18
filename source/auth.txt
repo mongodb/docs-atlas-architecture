@@ -67,8 +67,28 @@ following authentication mechanisms:
 Recommendations for {+service+} Authentication
 ----------------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 {+atlas-ui+} Authentication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````````
 
 We recommend federated authentication for {+atlas-ui+} access. To
 configure federated authentication, you must create {+service+}
@@ -88,7 +108,7 @@ authenticate only in the emergency break-glass scenarios when federated
 authentication is broken.
 
 Federated Authentication
-````````````````````````
+++++++++++++++++++++++++
 
 Federated authentication allows you to manage all authentication to
 the {+atlas-ui+} across multiple systems and applications through a
@@ -106,7 +126,7 @@ from IP ranges that include your users and application servers.
 To learn more, see :ref:`atlas-federated-authentication`.
 
 Multi-Factor Authentication 
-```````````````````````````
++++++++++++++++++++++++++++
 
 For any human user that has access to the |service| control plane, we recommend
 that you require :abbr:`MFA (Multi-Factor Authentication)` for enhanced security.
@@ -126,7 +146,7 @@ two forms of identification:
 To learn more, see :ref:`atlas-enable-mfa`.
 
 |service| Database Authentication 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````````````````
 
 |service| supports various database authentication mechanisms.
 
@@ -146,7 +166,7 @@ password authentication for use only in development or testing environments.
 - :ref:`Third-party secrets manangement <arch-center-secrets>`
 
 Workforce Identity Federation
-`````````````````````````````
++++++++++++++++++++++++++++++
 
 Workforce Identity Federation allows you to manage all authentication to 
 the |service| database through your identity provider. For database
@@ -158,7 +178,7 @@ security policies such as password complexity, credential rotation, and
 To learn more, see :ref:`oidc-authentication-workforce`.
 
 Workload Identity Federation and AWS IAM Role Authentication
-````````````````````````````````````````````````````````````
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Workload Identity Federation enables applications running in cloud
 environments like |azure| and Google Cloud to authenticate with
@@ -182,7 +202,7 @@ To learn more, see the following:
 - :ref:`set-up-pwdless-auth`
 
 X.509 Client Certificates and SCRAM 
-```````````````````````````````````
++++++++++++++++++++++++++++++++++++
 
 We recommend that you use Workforce or Workload Identity Federation 
 through an identity provider for security and ease of access to all aspects of the 
@@ -214,7 +234,7 @@ To learn more, see the following manual pages:
 .. _arch-center-just-in-time:
 
 Just-in-Time Access 
-```````````````````
++++++++++++++++++++
 
 |service| also supports creating temporary database users
 that automatically expire after the predefined times. A user can be
@@ -229,7 +249,7 @@ To learn more, see :ref:`mongodb-users`.
 .. _arch-center-secrets:
 
 Secrets Management
-``````````````````
+++++++++++++++++++
 
 We recommend using a third-party secrets manager like `HashiCorp Vault
 <https://developer.hashicorp.com/vault/docs/secrets/databases/mongodbatlas>`__
@@ -244,30 +264,29 @@ MongoDB Atlas Database Secrets in HashiCorp Vault
 .. _arch-center-admin-api-recs:
 
 {+atlas-admin-api+} Authentication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````````````````````````````````
 
 |service| provides two ways to authenticate to the {+atlas-admin-api+}:
 
 - :atlas:`Service accounts </api/service-accounts-overview/>`
-  (currently available as a :website:`Preview feature 
-  </resources/products/early-access>`\)
 - |api| keys
 
 Service Accounts
-````````````````
+++++++++++++++++
 
-Service accounts use industry-standard OAuth2.0 to securely authenticate
-with {+service+} through the {+atlas-admin-api+}. We recommend that you use service accounts instead of |api| keys when possible because they provide added security through use short-lived
+Service accounts use industry-standard OAuth2.0 to securely authenticate with {+service+}
+through the {+atlas-admin-api+}. We recommend that you use service accounts instead of
+|api| keys when possible because they provide added security through short-lived
 access tokens and required credential rotations.
 
-Service accounts are
-available as a Preview feature, and you can manage programmatic access for service accounts only by using the {+atlas-ui+} or the {+atlas-admin-api+}. You can't manage
-programmatic access for service accounts through the {+atlas-cli+} or Terraform.
+You can manage programmatic access for service accounts only through the {+atlas-ui+} or
+the {+atlas-admin-api+}. You can't manage programmatic access for service accounts through
+the {+atlas-cli+} or Terraform.
 
 To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-overview/>`.
 
 API Keys
-````````
+++++++++
 
 If you don't use service accounts, you can use |api| key-based authentication to securely manage
 programmatic access. |api| key-based authentication uses |http| Digest authentication to protect requests.
@@ -291,7 +310,7 @@ minimize the risk of unauthorized access:
 To learn more, see :ref:`api-authentication`.
 
 Deployments 
-~~~~~~~~~~~
+```````````
 
 To learn our recommendations for deployments, which relate to authentication, see :ref:`arch-center-hierarchy`.
 
@@ -299,6 +318,26 @@ To learn our recommendations for deployments, which relate to authentication, se
 
 Recommendations for {+service+} Authorization 
 ---------------------------------------------
+
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
 
 You must implement |service|'s robust Role-Based Access Control (RBAC) 
 to effectively manage access across all resources. |service| includes 
@@ -321,7 +360,7 @@ are tested for security and deterministic outcomes. Human access should
 only be allowed in lower environments during development and testing.
 
 {+atlas-ui+} and {+atlas-admin-api+} (Control Plane) Authorization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````````````````````````````````````````````````````
 
 You can assign users, service accounts, and API keys to predefined
 roles, specifying the
@@ -401,7 +440,7 @@ commonly used roles can serve as a general guideline:
 To learn more, see :ref:`user-roles`.
 
 Database Authorization
-~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````
 
 Workforce and workload users can be assigned fine-grained database
 roles, predefined or custom, with permissions tailored to specific
