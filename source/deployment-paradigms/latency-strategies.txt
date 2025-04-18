@@ -57,7 +57,7 @@ multi-region deployment. Factors include the following:
   data that is only read in North America, you could create shards that distribute 
   that data appropriately. 
 
-For more information, refer to :manual:`MongoDB Replication </replication>`
+For more information, refer to :manual:`MongoDB Replication </replication>`.
 
 Network Configuration Factors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
