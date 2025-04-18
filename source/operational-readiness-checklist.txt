@@ -200,10 +200,9 @@ Maintenance and Patching
    * - :icon-fa4:`square-o`
      - Understand that |service| has non-deferrable maintenance hours for critical security
        patches or operational necessities. Configure Protected Hours for your
-       project and define a daily window when standard updates cannot begin.
-       [https://www.mongodb.com/docs/atlas/tutorial/cluster-maintenance-window/]
-       |service| performs standard updates that don't involve cluster
-       restarts or resyncs outside of these hours.
+       project and :atlas:`define a daily window </tutorial/cluster-maintenance-window/>`
+       when standard updates cannot begin. |service| performs standard
+       updates that don't involve cluster restarts or resyncs outside of these hours.
   
    * - :icon-fa4:`square-o`
      - Be aware that |service| deploys major version upgrades in a rolling
@@ -220,7 +219,7 @@ Monitoring and Alerts
 
    * - :icon-fa4:`square-o`
      - Use built-in monitoring capabilities in |service| via the Metrics tab
-       to track cluster health and performance.  
+       to track cluster health and performance.
 
    * - :icon-fa4:`square-o`
      - Configure Alerts for various cluster metrics and events to proactively
@@ -292,8 +291,7 @@ that you set up a reliable, secure, and performant database environment.
 Next Steps
 ----------
 
-After completing the checklist, see the following suggested resources or use the left
-navigation to find features and best practices for each {+waf+} pillar.
+Use the left navigation to find features and best practices for each {+waf+} pillar.
 
 - :ref:`arch-center-monitoring-alerts`
 - :ref:`arch-center-network-security`
