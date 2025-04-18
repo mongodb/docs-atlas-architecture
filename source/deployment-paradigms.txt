@@ -20,7 +20,6 @@ shows these options, which are explained further below:
    :figwidth: 750px
    :alt: An image showing the different deployment options.
 
-<<<<<<< HEAD
 Single-Region Deployments
 -------------------------
 
@@ -29,17 +28,6 @@ In a single-region deployment, your data is stored in one of a provider's region
 or {+gcp+}'s ``asia-northeast3``). Because {+service+} always provides a 
 minimum of zone-level availability, your cluster nodes are spread across the 
 availability zones within a single region. Therefore, if a single zone fails, your 
-=======
-:ref:`Single-Region Deployment<arch-center-paradigms-single>`
-
-This is the simplest deployment option. In a single-region deployment, your 
-data is stored in one of a provider's regions (such as AWS's ``us-west-2`` 
-or Google's ``asia-northeast3``). With this simplicity and lower cost comes 
-the risk of lower availability and potentially higher latency, depending on the 
-distribution of your application's users. Because {+service+} always provides a 
-minimum of zone-level availability, you cluster nodes are spread across the 
-availability zones within a single region, so if a single zone fails, your 
->>>>>>> ce5b4ae (adding tier 1 and tier 2 scenarios)
 data is still available in the other zones.
 
 With the simplicity and lower cost of a single-region deployment 
@@ -196,8 +184,7 @@ To learn more about these deployment paradigms, see the following pages:
 .. toctree::
    :titlesonly:
 
-   Single-Region </single-region>
-   Multi-Region </multi-region>
-   Multi-Cloud </multi-cloud>
-   Global </global>
-   Hybrid </hybrid>
+   Single-Region </deployment-paradigms/single-region>
+   Multi-Region </deployment-paradigms/multi-region>
+   Multi-Cloud </deployment-paradigms/multi-cloud>
+   Hybrid </deployment-paradigms/hybrid>

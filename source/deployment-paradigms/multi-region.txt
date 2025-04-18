@@ -22,9 +22,9 @@ performance and can help meet compliance requirements for :ref:`data sovereignty
 <arch-center-compliance-data-sovereignty>`, such as the EU's General Data 
 Protection Regulation (GDPR) law.
 
-In a multi-region deployment, you may have multiple regions within the same 
-geography (a large area like a continent or country), multiple geographies, each 
-with a single region, multiple geographies with multiple regions in each.
+A multi-region deployment may have multiple regions within the same geography 
+(a large area like a continent or country), or multiple regions in multiple 
+geographies.
 
 Multi-region deployments can exist with a single cloud provider or 
 multiple cloud providers. To learn about multi-cloud deployments, see 
