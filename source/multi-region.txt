@@ -62,6 +62,8 @@ multiple geographies, ensures the highest level of availability with a single
 provider. If your application requires the very highest level of availability 
 and lowest latency, consider a :ref:`arch-center-paradigms-multi-cloud`.
 
+..  _arch-center-global-deployments:
+
 Global Deployments 
 ------------------
 
