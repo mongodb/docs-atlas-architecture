@@ -26,8 +26,8 @@ Single-Region Deployments
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A :ref:`single-region deployment <arch-center-paradigms-single>` is the simplest deployment paradigm.
-In a single-region deployment, your data is stored in one of a provider's regions (such as AWS's ``us-west-2`` 
-or Google's ``asia-northeast3``). Because {+service+} always provides a 
+In a single-region deployment, your data is stored in one of a provider's regions (such as {+aws+}'s ``us-west-2`` 
+or {+gcp+}'s ``asia-northeast3``). Because {+service+} always provides a 
 minimum of zone-level availability, your cluster nodes are spread across the 
 availability zones within a single region. Therefore, if a single zone fails, your 
 data is still available in the other zones.
@@ -39,7 +39,7 @@ distribution of your application's users.
 Multi-Region Deployments
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`multi-region deployment <arch-center-paradigms-multi-region>`is a more complex deployment paradigm that provides higher availability 
+A :ref:`multi-region deployment <arch-center-paradigms-multi-region>` is a more complex deployment paradigm that provides higher availability 
 and low latency across a larger geographic range than a single-region deployment. There are several types of multi-region deployments:
 
 - **Multi-region in one geography**:
