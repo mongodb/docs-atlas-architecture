@@ -24,7 +24,8 @@ kick-start their projects.
 
          .. card::
             :headline: Building Continuously Updating RAG Applications
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/rag-applications/
+            :link: _static/industry-solutions/rag-applications.txt
+            :link-type: url
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
