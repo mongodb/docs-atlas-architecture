@@ -41,7 +41,8 @@ Account and Organization Setup
    * - :icon-fa4:`square-o`
      - Set up Projects based on your environment and application needs.
        Establish multi-tenancy strategy by setting up Production and Non-Production
-       projects, at a minimum.
+       projects, at a minimum. To learn more about recommendations in this area,
+       see :ref:`arch-center-orgs-projects-clusters-recs`.
 
    * - :icon-fa4:`square-o`
      - Consider Cross-Organization Billing, if applicable. To get recommendations
@@ -191,10 +192,11 @@ Backup and Restore Strategy
      - Plan and test your Disaster Recovery (DR) strategy. Understand
        Recovery Time Objective (RTO) and Recovery Point Objective (RPO).
        Consider testing application's resilience in |service|.
+       To learn more, see :ref:`arch-center-dr`.
   
    * - :icon-fa4:`square-o`
      - Consider options for downloading and archiving snapshots, if required,
-       using the {+atlas-ui+}, {+atlas-admin-api+}, or {+atlas-cli+}.
+       using the {+atlas-ui+}, {+atlas-admin-api+}, or {+atlas-cli+}. To learn more, see :ref:`arch-center-resiliency`.
 
 Maintenance and Patching
 ------------------------
@@ -205,6 +207,10 @@ Maintenance and Patching
    * - Check
      - Action
   
+   * - :icon-fa4:`square-o`
+     - Be aware that |service| deploys major version upgrades in a rolling
+       manner to minimize downtime.
+
    * - :icon-fa4:`square-o`
      - Define a Maintenance Window for |service| automated systems to apply
        automatic minor version updates. Configure the day and hour of
@@ -217,9 +223,6 @@ Maintenance and Patching
        when standard updates cannot begin. |service| performs standard
        updates that don't involve cluster restarts or resyncs outside of these hours.
   
-   * - :icon-fa4:`square-o`
-     - Be aware that |service| deploys major version upgrades in a rolling
-       manner to minimize downtime.
 
 Monitoring and Alerts
 ---------------------
@@ -294,7 +297,7 @@ Operational Procedures and Team Readiness
   
    * - :icon-fa4:`square-o`  
      - Establish integration strategies with other tooling and  
-       services, such as Datadog, Prometheus, PagerDuty, and other tools. To learn more, see :ref:`_arch-center-monitoring-alerts`.
+       services, such as Datadog, Prometheus, PagerDuty, and other tools. To learn more, see :ref:`arch-center-monitoring-alerts`.
   
    * - :icon-fa4:`square-o`  
      - Consider establishing a MongoDB Center of Excellence (CoE)
