@@ -24,7 +24,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building Continuously Updating RAG Applications
-            :url: https://mongodb.com/docs/atlas/architecture
+            :url: https://mongodb.com/docs/atlas/architecture/solutions-library/financial-services/rag-applications
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -63,7 +63,7 @@ kick-start their projects.
 
          .. card::
             :headline: Real-time Audio-Based AI Diagnostics
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/audio-based-AI-diagnostics/
+            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/manufacturing/audio-based-AI-diagnostics/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -93,7 +93,7 @@ kick-start their projects.
 
          .. card::
             :headline: Claim management using LLMs and vector search for RAG
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/media-personalization/
+            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/insurance/claim-management
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -102,7 +102,7 @@ kick-start their projects.
 
          .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/pdf-search/
+            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/insurance/pdf-search
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
