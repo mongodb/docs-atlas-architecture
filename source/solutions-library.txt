@@ -24,8 +24,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building Continuously Updating RAG Applications
-            :link: arch-center-is-rag-applications
-            :link-type: ref
+            :url: https://mongodb.com/docs/atlas/architecture
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
