@@ -1,0 +1,5 @@
+
+.. toctree::
+   :titlesonly:
+
+   Audio-Based AI Diagnostics <solutions-library/manufacturing/audio-based-AI-diagnostics>

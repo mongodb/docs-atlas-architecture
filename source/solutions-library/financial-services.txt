@@ -1,0 +1,5 @@
+
+.. toctree::
+   :titlesonly:
+
+   RAG Applications <solutions-library/financial-services/rag-applications>

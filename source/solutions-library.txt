@@ -155,8 +155,9 @@ kick-start their projects.
 .. toctree::
    :titlesonly:
 
-   Claim Management <solutions-library/claim-management>
-   PDF Search </solutions-library/pdf-search>
-   RAG Applications <solutions-library/rag-applications>
-   Audio-Based AI Diagnostics <solutions-library/audio-based-AI-diagnostics>
-   AI-driven Media Personalization <solutions-library/media-personalization>
+   Financial Services <solutions-library/financial-services>
+   Retail </solutions-library/retail>
+   Manufacturing <solutions-library/manufacturing>
+   Insurance <solutions-library/insurance>
+   Media & Telco <solutions-library/media-telco>
+   Healthcare  <solutions-library/healthcare>
