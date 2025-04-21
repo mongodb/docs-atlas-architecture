@@ -156,8 +156,8 @@ kick-start their projects.
    :titlesonly:
 
    Financial Services <solutions-library/financial-services>
-   Retail </solutions-library/retail>
+   .. Retail </solutions-library/retail>
    Manufacturing <solutions-library/manufacturing>
    Insurance <solutions-library/insurance>
    Media & Telco <solutions-library/media-telco>
-   Healthcare  <solutions-library/healthcare>
+   .. Healthcare  <solutions-library/healthcare>
