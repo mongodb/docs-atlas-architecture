@@ -1,4 +1,6 @@
-.. include:: /solutions-library.txt
+.. raw:: html
+
+   <meta http-equiv="refresh" content="0"; url=static/solutions-library.txt
 
 .. toctree::
    :titlesonly:
