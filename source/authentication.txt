@@ -45,16 +45,15 @@ use in development and test ("lower") environments.
    * - Resource
      - User 
      - Recommendations for Production
-     - Options for Dev and Test
+     - Other Available Options
 
    * - Atlas UI 
      - Workforce (Human)
-     - | Use :ref:`Federated Auth <arch-center-federated_auth>` with an SAML 2.0 
-         identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
-       | -- *or* --
-       | Use :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
-       | -- *and* --
-       | Use IP access restrictions.
+     - | Use IP access restrictions, and then either:
+       | - Use :ref:`Federated Auth <arch-center-federated_auth>` with an SAML 2.0 
+           identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
+       |   *or*
+       | - Use Atlas credentials with :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
      - | Use Atlas credentials and MFA.
     
    * - Atlas Database
@@ -107,14 +106,27 @@ Federated Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Federated authentication allows you to manage all authentication to
 the {+atlas-ui+} across multiple systems and applications through a
-central identity provider. You can use any :abbr:`SAML (Security Assertion
-Markup Language)` compatible identity provider such as Okta, Microsoft
-Entra ID, or Ping Identity to enforce security policies such as password 
+central identity provider, which reduces user management complexity. With 
+federated authentication, you can enforce security policies such as password 
 complexity, credential rotation, and :abbr:`MFA (Multi-Factor
-Authentication)` within your identity provider. 
+Authentication)` within your identity provider's tools. 
+
+For the {+atlas-ui+}, you can use any :abbr:`SAML (Security Assertion
+Markup Language)` compatible identity provider such as Okta, Microsoft
+Entra ID, or Ping Identity.
+
+For for the |service| database, we support workforce identity federation using  
+OIDC compatible providers, and and workload identity federation using OAuth2.0 
+compatible providers. This includes Okta, Microsoft
+Entra ID, Ping Identity, and others for workforce identity, and Azure, GCP, and 
+others for workload identity. You can also use AWS IAM roles for workload 
+identity.
 
 You must also configure the IP access list in the {+atlas-ui+} to allow only 
 connections from IP ranges that include your users and application servers.
+
+
+.. _arch-center-workforce_if:
 
 Workforce Identity Federation
 `````````````````````````````
@@ -167,10 +179,6 @@ two forms of identification:
 
 To learn more, see :ref:`atlas-enable-mfa`.
 
-.. _arch-center-workforce_if:
-
-
-
 .. _arch-center-iam:
 
 AWS IAM Role Authentication
@@ -184,9 +192,7 @@ refer to :ref:`set-up-pwdless-auth`.
 X.509 Client Certificates 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you don't have an identity provider for federation,
-|service| also supports X.509 client certificates for 
-user authentication. X.509 certificates provide the security of mutual TLS, 
+X.509 certificates provide the security of mutual TLS, 
 making them suitable for staging and production environments, and you
 can bring your own certificate authority for use with X.509.
 The disadvantage of X.509 is that you must manage certificates and
@@ -242,12 +248,13 @@ Service Accounts
 ~~~~~~~~~~~~~~~~
 
 Service accounts use industry-standard OAuth2.0 to securely authenticate
-with {+service+} through the {+atlas-admin-api+}. We recommend that you use service accounts instead of |api| keys when possible because they provide added security through use short-lived
-access tokens and required credential rotations.
+with {+service+} through the {+atlas-admin-api+}. We recommend that you use 
+service accounts instead of |api| keys when possible because they provide added 
+security through use short-lived access tokens and required credential rotations.
 
-Service accounts are
-available as a Preview feature, and you can manage programmatic access for service accounts only by using the {+atlas-ui+} or the {+atlas-admin-api+}. You can't manage
-programmatic access for service accounts through the {+atlas-cli+} or Terraform.
+You can manage programmatic access for service accounts only by using the 
+{+atlas-ui+} or the {+atlas-admin-api+}. You can't manage programmatic access 
+for service accounts through the {+atlas-cli+} or Terraform.
 
 To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-overview/>`.
 
@@ -256,30 +263,12 @@ To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-over
 API Keys
 ~~~~~~~~
 
-If you don't use service accounts, you can use |api| key-based authentication to securely manage
-programmatic access. |api| key-based authentication uses |http| Digest authentication to protect requests.
-The |api| public key functions as the username, and the corresponding
-private key serves as the password. 
-You should store these keys in a third party secrets management system, 
-such as |aws| Secrets Manager or {+vault+}. To learn how to securely store these 
-keys in Vault, see the blog 
-`Manage MongoDB Atlas Database Secrets in HashiCorp Vault <https://www.mongodb.com/blog/post/manage-atlas-database-secrets-hashicorp-vault>`__.
-
-To further enhance security and minimize the risk of unauthorized access:
-
-- Follow best practices for
-  rotating |api| keys regularly. To learn how to rotate these keys with 
-  {+vault+}, for example, see `the Hashicorp documentation <https://developer.hashicorp.com/vault/docs/secrets/mongodbatlas>`__.
-
-- Use the IP access list for your API keys. To learn more, see
-  :atlas:`Require an IP Access List for the {+atlas-admin-api+} 
-  </configure-api-access/#optional--require-an-ip-access-list-for-the-atlas-administration-api>`.
-
-To learn more, see :ref:`api-authentication`.
+Service accounts are the preferred method of authentication. {+service+}  
+provides legacy support for |api| key-based authentication for managing 
+programmatic access. |api| key-based authentication uses |http| Digest 
+authentication to protect requests. To learn more, see :ref:`api-authentication`.
 
 Deployments 
 ```````````
 To learn our recommendations for deployments, which relate to authentication, 
 see :ref:`arch-center-hierarchy`.
-
-

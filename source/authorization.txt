@@ -34,24 +34,16 @@ You must use :ref:`Role-Based Access Control (RBAC) <arch-center-rbac>` for
 authorization. Using an :ref:`Identity Federation Provider's <arch-center-fip>` 
 groups with RBAC simplifies management.
 
-.. list-table:: 
-   :widths: 20 50 30
-   :header-rows: 1
+**Atlas Control Plane (UI and APIs)**
 
-   * - Resource
-     - Recommendations for Production
-     - Options for Dev and Test
+- Restrict access by assigning the lowest-needed RBAC roles.
+- Assign roles directly using the ``users`` claim instead of ``groups``.
+- Use domain restrictions.
 
-   * - Atlas Control Plane (UI and APIs)
-     - | *Not recommended for production environments.*
-     - | - Restrict access by assigning the lowest-needed RBAC roles. 
-       | - Assign roles directly using the ``users`` claim instead of ``groups``. 
-       | - Use domain restrictions.
+**Atlas Database:**
 
-   * - Atlas Database
-     - | Use custom fine-grained database roles. For human users, assign roles 
-         directly using the ``users`` claim instead of ``groups``.
-     - Use the predefined ``readWriteAny`` role.
+- Use custom fine-grained database roles. For human users, it is often 
+  easier to assign roles to groups rather than individual users.
 
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
@@ -71,7 +63,7 @@ groups with RBAC simplifies management.
 .. _arch-center-rbac:
 
 Role-Based Access Control (RBAC) and Predefined Roles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------------
 
 |service| uses Role-Based Access Control (RBAC) to simplify management of user 
 authorization. |service| includes predefined :atlas:`user roles <user-roles>` that 
@@ -91,7 +83,7 @@ To learn more, refer to :atlas:`<mongodb-users-roles-and-privileges>`.
 .. _arch-center-fip:
 
 Federated Identity Providers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 By integrating |service| with a federated identity provider, 
 you can use just-in-time provisioning by mapping identity provider groups to 
@@ -113,7 +105,7 @@ which prevents users from logging into |service| when they are not authorized
 for access.
 
 Database Authorization
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 Workforce and workload users can be assigned predefined or custom fine-grained 
 database roles, with permissions tailored to specific 
@@ -134,13 +126,15 @@ To learn more, see the following:
 Organization and Project Authorization
 --------------------------------------
 
-If you have followed the standard |service| hierarchy of a single billing 
-organization with a linked organization for each {+BU+} or department, then 
-you should restrict organization users to the operations or platform team admins.
-In contrast, you should assign project roles to the development or product teams 
-responsible for building applications. Only programmatic access should be 
-allowed in upper environments. The following recommendations for the most 
-commonly used roles can serve as a general guideline:
+There are two levels of roles that you can assign: organization-level and 
+project-level.
+
+Organization-Level Roles
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Organization-level roles are used by service accounts to automate tasks 
+such as creating new projects, managing IAM, and billing. They may also be 
+used for platform team members.
 
 * The ``Organization Owner`` role should be heavily restricted and not assigned
   to a human, as it has the ability to change organization-wide settings and delete 
@@ -167,6 +161,12 @@ commonly used roles can serve as a general guideline:
   and feed them into your FinOps tool. This same service account should have 
   access to all linked organizations for which it is responsible for reporting usage. 
 
+Project-Level Roles
+~~~~~~~~~~~~~~~~~~~
+
+Project-level roles are for the development, test, and product teams that are 
+responsible for application development and maintenance.
+
 * The ``Project Owner`` role should be used for governance enforced by the 
   operations and provisioning team. Assign this role to a programmatic service 
   account, as it has the ability to create and delete {+clusters+}. For sandbox 
@@ -179,16 +179,16 @@ commonly used roles can serve as a general guideline:
   access the query and performance metrics of the {+cluster+} during 
   development and testing. This access allows them to debug data issues 
   with the Data Explorer. 
-  Don't allow this role in production environments. It has the 
-  ability to view and edit data, including creating and dropping databases, 
-  collections, and indexes on the {+cluster+}, which is useful for rapid 
-  experimentation and development. 
   If you are not comfortable giving development teams this level of access in 
   the development environment, you can grant them read-only access to the 
   {+cluster+}\'s data and performance statistics with the 
-  ``Project Data Access Read Only`` role.
+  ``Project Data Access Read Only`` role. To do this, use the 
+  ``Project Observability Viewer`` role. 
 
-  To grant read-only access to the {+cluster+}'s 
-  data in production environments, use the ``Project Observability Viewer`` role. 
+  .. important::
+
+     Do not use this role in production environments. Users in this role can 
+     view and edit data, including creating and dropping databases, 
+     collections, and indexes on the {+cluster+}. 
 
 To learn more, see :ref:`user-roles`.
