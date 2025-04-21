@@ -91,7 +91,8 @@ Network and Security Configuration
          completes all the necessary internal processes, which may take time for approvals.
 
    * - :icon-fa4:`square-o`
-     - Configure Authentication and Authorization.
+     - Configure Authentication and Authorization. To get recommendations and
+       learn more about this topic, see :ref:`arch-center-auth`.
 
        - Set up database users and roles with the principle of least privilege.
        - Implement Role-Based Access Control (RBAC) to manage access
@@ -109,7 +110,7 @@ Network and Security Configuration
        - Explore using X.509 client certificates for authentication.
 
    * - :icon-fa4:`square-o`
-     - Implement Robust Encryption.
+     - Implement Robust Encryption. To learn more, see :ref:`arch-center-data-encryption`.
   
        - Encryption at rest is enabled by default using cloud providers'
          transparent disk encryption (AES-256).
@@ -119,7 +120,9 @@ Network and Security Configuration
        - Consider Client-Side Field Level Encryption (CSFLE) to encrypt
          data within your application before transmitting it to |service|.
        - Explore Queryable Encryption for performing queries on encrypted data.
-  
+       
+       
+
    * - :icon-fa4:`square-o`
      - Configure Database Auditing to track database access and actions.
        Create custom filters if needed.
@@ -139,14 +142,7 @@ Network and Security Configuration
    * - :icon-fa4:`square-o`
      - Understand and plan for compliance with relevant standards and
        regulations, such as ISO/IEC 27001, HIPAA, GDPR, PCI DSS, FedRAMP,
-       and others.
-
-To get recommendations and learn more about these items in the checklist,
-see the following resources:
-
-- :ref:`arch-center-data-encryption`
-- :ref:`arch-center-network-security`
-- :ref:`arch-center-auth`
+       and others. To learn more, see :ref:`arch-center-compliance-atlas-gov`.
 
 Backup and Restore Strategy
 ----------------------------
@@ -275,7 +271,7 @@ Operational Procedures and Team Readiness
    * - :icon-fa4:`square-o`  
      - Develop a clear Disaster Recovery Process Documentation
        specific to your applications and |service| setup. To learn more,
-       see :ref:`arch-center-high-availability`.
+       see :ref:`arch-center-dr`.
 
    * - :icon-fa4:`square-o`  
      - Ensure your team is trained on |service-fullname| fundamentals,
