@@ -14,3 +14,7 @@ raw: ${bucket_prefix}/index.html -> ${base}/current/
 # All Arch Center versions
 
 [*]: ${bucket_prefix}/${version}/changelog -> ${base}/${version}/release-notes/
+
+# Solutions Library landing pages 
+
+raw: docs/atlas/architecture/solutions-library/financial-services -> ${base}/solutions-library/financial-services
