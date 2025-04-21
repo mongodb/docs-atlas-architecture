@@ -8,6 +8,7 @@ symlink: current -> main
 # Base URL
 raw: ${bucket_prefix}/ -> ${base}/current/
 raw: ${bucket_prefix}/index.html -> ${base}/current/
+raw: ${bucket_prefix}/solutions-library -> ${base}/current/
 
 ########
 

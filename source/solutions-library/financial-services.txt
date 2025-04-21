@@ -1,15 +1,3 @@
-.. meta::
-   :http-equiv=refresh:
-   :content=0;url=about:blank
-
-.. raw:: html
-
-   <script type="text/javascript">
-       window.onload = function() {
-           var newUrl = "{{ ref('arch-center-industry-solutions') }}";
-           window.location.href = newUrl;
-       };
-   </script>
 
 .. toctree::
    :titlesonly:
