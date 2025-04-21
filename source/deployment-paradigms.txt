@@ -62,7 +62,7 @@ and low latency across a larger geographic range than a single-region deployment
   both of which are in the United States, and a third cluster in ``eu-2``, 
   which is in Europe. 
   
-- **Multi-region and multi-cloud** : 
+- **Multi-cloud** : 
   Deploys to one or more regions hosted by multiple cloud providers. 
   This provides the highest level of availability, ensuring 
   your data is available if any given region fails or if an entire cloud provider fails. 
