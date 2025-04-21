@@ -10,11 +10,11 @@ kick-start their projects.
 
 .. tabs::
 
-   .. tab:: Gen AI
+   .. tab:: Financial Services
       :tabid: gen-ai
 
-      RAG
-      ---
+      Gen AI
+      ------
 
       .. card-group::
          :columns: 2
@@ -65,9 +65,6 @@ kick-start their projects.
             Learn about how to leverage data to create personalized user
             experiences by using Atlas Database, Atlas Vector Search, and Pymongo. 
 
-   .. tab:: IoT
-      :tabid: iot
-
       Manufacturing and Operations
       ----------------------------
 
@@ -83,6 +80,21 @@ kick-start their projects.
 
             Find out how AI is being used in renewable energy by leveraging MongoDB 
             Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
+
+   .. .. tab:: Retail
+      .. :tabid: retail
+
+   .. .. tab:: Manufacturing
+      .. :tabid: manufacturing
+
+   .. .. tab:: Insurance
+      .. :tabid: insurance
+
+   .. .. tab:: Media & Telco
+      .. :tabid: media-telco 
+
+   .. .. tab:: Healthcare
+      .. :tabid: healthcare
 
 .. toctree::
    :titlesonly:
