@@ -21,9 +21,6 @@ Guidance for {+service+} Authentication
    :class: onecol
 
 
-Recommendations for {+service+} Authentication
---------------------------------------------------------------------------
-
 |service-fullname| supports a variety of authentication methods to
 ensure robust security. |service| requires all users to authenticate to 
 access the {+atlas-ui+}, |service| databases, and  the {+atlas-admin-api+}. 
@@ -103,7 +100,7 @@ The following sections provide details about the authentication methods.
 .. _arch-center-federated_auth:
 
 Federated Authentication
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 Federated authentication allows you to manage all authentication to
 the {+atlas-ui+} across multiple systems and applications through a
 central identity provider, which reduces user management complexity. With 
@@ -129,7 +126,7 @@ connections from IP ranges that include your users and application servers.
 .. _arch-center-workforce_if:
 
 Workforce Identity Federation
-`````````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Workforce Identity Federation allows you to manage all authentication to 
 the |service| database through your identity provider. To learn more, 
 see :ref:`oidc-authentication-workforce`.
@@ -137,7 +134,7 @@ see :ref:`oidc-authentication-workforce`.
 .. _arch-center-workload_if:
 
 Workload Identity Federation
-````````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Workload Identity Federation enables applications running in cloud
 environments like |azure| and Google Cloud to authenticate with
 |service| without the need to manage separate database user credentials.
@@ -153,7 +150,7 @@ To learn more, refer to :ref:`oidc-authentication-workload` and
 .. _arch-center-mfa:
 
 Multi-Factor Authentication 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 For any human user that has access to the |service| control plane, we recommend 
 :abbr:`MFA (Multi-Factor Authentication)` for enhanced security. When 
@@ -182,7 +179,7 @@ To learn more, see :ref:`atlas-enable-mfa`.
 .. _arch-center-iam:
 
 AWS IAM Role Authentication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 You can also authenticate through |aws| |iam| roles. To learn more, 
 refer to :ref:`set-up-pwdless-auth`.
@@ -190,7 +187,7 @@ refer to :ref:`set-up-pwdless-auth`.
 .. _arch-center-x509:
 
 X.509 Client Certificates 
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 X.509 certificates provide the security of mutual TLS, 
 making them suitable for staging and production environments, and you
@@ -205,7 +202,7 @@ To learn more, refer to :manual:`X.509 </core/security-x.509/>`.
 .. _arch-center-scram:
 
 SCRAM Password Authentication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 |service| {+clusters+} support SCRAM password authentication for user authentication, 
 but we recommend SCRAM only for use in development and test environments. 
 
@@ -219,7 +216,7 @@ To learn more, refer to :manual:`SCRAM </core/security-scram/>`.
 .. _arch-center-just-in-time:
 
 Just-in-Time Access 
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 |service| also supports creating temporary database users
 that automatically expire after the predefined times. A user can be
@@ -230,7 +227,7 @@ To learn more, see :ref:`mongodb-users`.
 .. _arch-center-secrets:
 
 Secrets Management
-~~~~~~~~~~~~~~~~~~
+------------------
 
 We recommend using a third-party secrets manager like `HashiCorp Vault
 <https://developer.hashicorp.com/vault/docs/secrets/databases/mongodbatlas>`__
@@ -245,7 +242,7 @@ MongoDB Atlas Database Secrets in HashiCorp Vault
 .. _arch-center-admin-service-accounts:
 
 Service Accounts
-~~~~~~~~~~~~~~~~
+----------------
 
 Service accounts use industry-standard OAuth2.0 to securely authenticate
 with {+service+} through the {+atlas-admin-api+}. We recommend that you use 
@@ -261,7 +258,7 @@ To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-over
 .. _arch-center-admin-api-keys: 
 
 API Keys
-~~~~~~~~
+--------
 
 Service accounts are the preferred method of authentication. {+service+}  
 provides legacy support for |api| key-based authentication for managing 
@@ -269,6 +266,7 @@ programmatic access. |api| key-based authentication uses |http| Digest
 authentication to protect requests. To learn more, see :ref:`api-authentication`.
 
 Deployments 
-```````````
-To learn our recommendations for deployments, which relate to authentication, 
+-----------
+
+To learn our recommendations for deployments that relate to authentication, 
 see :ref:`arch-center-hierarchy`.
