@@ -1,3 +1,4 @@
+.. include:: /solutions-library.txt
 
 .. toctree::
    :titlesonly:
