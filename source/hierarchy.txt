@@ -43,14 +43,14 @@ security settings and governance for your {+service+} enterprise estate:
    * - (Optional) Paying Organization
      - One organization can be a paying organization for other
        organization(s). A paying organization lets you set up 
-       :atlas:`cross-organization billing <billing/#std-label-cross-org-billing>` 
+       :atlas:`cross-organization billing </billing/#std-label-cross-org-billing>` 
        to share a billing subscription across multiple organizations. 
        To learn more about setting up your paying organization when 
-       you establish the |service| subscription, see :atlas:`Manage Billing <billing>`.  
+       you establish the |service| subscription, see :atlas:`Manage Billing </billing>`.  
        In order to enable cross-organization billing, the user performing 
        the action must have an Org Owner or Billing Admin role of both 
        organizations that they wish to link. To learn more, see 
-       :atlas:`User Roles <user-roles>`.
+       :atlas:`User Roles </reference/user-roles>`.
 
        A paying organization is common for large enterprises with many
        {+BU+}\s or departments that operate independently but where the
@@ -60,7 +60,7 @@ security settings and governance for your {+service+} enterprise estate:
      - An organization can contain many projects under it and provides
        a container to apply shared integration and security settings. If 
        you manage multiple {+service+} organizations, the 
-       :atlas:`Atlas Federation Management Console <atlas-federated-authentication>` 
+       :ref:`Atlas Federation Management Console <atlas-federated-authentication>` 
        allows users with an Org Owner role to manage |idps| for |sso|, 
        then link them to multiple organizations. 
        An organization often maps to a {+BU+} or department within a
@@ -225,7 +225,8 @@ This allows administrators to maintain different project configurations between 
 and uphold the principle of least privilege, which states that users should 
 only be granted the least level of access necessary for their role.
 
-However, this hierarchy may make it more complicated to share project-level configurations such as private endpoints and |cmk|\s across clusters.
+However, this hierarchy might make it more complicated to share project-level configurations such as private endpoints and |cmk|\s across clusters.
+
 To learn more, see :ref:`hierarchy-multiple-clusters`. 
 
 .. figure:: /includes/images/deployment-hierarchy.svg
@@ -314,9 +315,13 @@ Use the following {+cluster+} size guide to select a {+cluster+} tier that ensur
 This table displays the default storage and performance capabilities for each {+cluster+} tier, as well as 
 whether or not the {+cluster+} tier is suitable for staging and production environments. 
 
+The {+cluster+} size guide also includes expected values for a {+cluster+}'s
+total data size and peak IOPS, based on median {+cluster+} sizes and 98th percentile IOPS analytics from existing enterprise account {+clusters+}
+in each {+cluster+} tier.
+
 .. list-table::
    :header-rows: 1
-   :widths: 10 10 20 20 10 10 10 10
+   :widths: 10 10 10 10 10 10 10 10 10 10
 
    * - T-Shirt Size
      - Cluster Tier
@@ -325,6 +330,9 @@ whether or not the {+cluster+} tier is suitable for staging and production envir
      - CPUs (#)
      - Default RAM
      - Default IOPS
+
+     - Expected Total Data Size
+     - Expected Peak IOPS
      - Suitable For
 
    * - Small
@@ -334,6 +342,8 @@ whether or not the {+cluster+} tier is suitable for staging and production envir
      - 2
      - 2 GB
      - 1000
+     - 1 GB to 10 GB
+     - 120
      - Dev/Test only
 
    * - Med
@@ -342,6 +352,8 @@ whether or not the {+cluster+} tier is suitable for staging and production envir
      - 8 GB to 512 GB
      - 2
      - 8 GB
+     - 3000
+     - 20 GB to 50 GB
      - 3000
      - Prod
 
@@ -352,6 +364,8 @@ whether or not the {+cluster+} tier is suitable for staging and production envir
      - 16
      - 32 GB
      - 3000
+     - 360 GB to 420 GB
+     - 3000
      - Prod
 
    * - X-Large
@@ -361,9 +375,15 @@ whether or not the {+cluster+} tier is suitable for staging and production envir
      - 32
      - 128 GB
      - 3000
+     - 1200 GB to 1750 GB
+     - 6000
      - Prod
 
 .. [1] ``M10`` is a shared CPU tier. For highly-regulated industries or sensitive data, your minimum and smallest starting tier should be ``M30``.
+
+For example, consider a fictional fintech company, MongoFinance, that must store a total of 400 GB of processed data.
+At peak activity, MongoFinance employees and customers perform up to 3000 reads or writes to MongoFinance databases per second. 
+MongoFinance's storage and performance requirements are best satisfied by a large, or ``M50``, {+cluster+} tier.  
 
 To learn more about {+cluster+} tiers and the regions that support
 them, see the {+service+} documentation for each cloud provider:

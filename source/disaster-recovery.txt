@@ -103,7 +103,10 @@ You can test a primary node outage in {+service+} using the
 Regional Outage
 ```````````````
 
-If a single region outage or multi-region outage degrades the state of your {+cluster+}, follow these steps:
+Multi-region clusters reroute traffic to another region in the event of a 
+regional outage to ensure high availability. To learn more, see :ref:`<arch-center-paradigms-multi-region>`.
+If a single region outage or multi-region outage degrades the state of your 
+{+cluster+}, follow these steps:
 
 .. procedure::
    :style: normal
@@ -149,6 +152,14 @@ You can test a region outage in {+service+} using the
 
 Cloud Provider Outage
 `````````````````````
+
+With multi-cloud clusters, you can select electable nodes across cloud providers 
+to maintain high availability. Should the provider in which your primary node is 
+deployed become unavailable, electable nodes can be converted to primary nodes 
+to ensure continuous operation. For example, you can create electable nodes on 
+{+aws+}, {+gcp+}, and {+azure+} to ensure that if one cloud provider experiences 
+an outage, an electable node on a separate provider can take over as your 
+{+cluster+}'s primary node. To learn more, see :ref:`<arch-center-paradigms-multi-cloud>`.
 
 In the highly unlikely event that an entire cloud provider is
 unavailable, follow these steps to bring your deployment back online:

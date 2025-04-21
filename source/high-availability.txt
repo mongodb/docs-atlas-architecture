@@ -58,7 +58,7 @@ Single-Region, 3 Node Replica Set / Shard (Primary Secondary Secondary)
 ```````````````````````````````````````````````````````````````````````
 
 .. figure:: /includes/images/highavailabilityPSS.svg
-   :figwidth: 750px
+   :figwidth: 750px 
    :alt: A topology with a single region with 3 nodes: one primary and two secondaries.
 
 This :ref:`single-region <arch-center-paradigms-single>` topology is
@@ -145,7 +145,7 @@ To learn more about how to plan for and respond to disasters, see
 :ref:`arch-center-dr`.
 
 Choose a Deployment Type and Cluster Tier that Fits your Deployment Goals
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+`````````````````````````````````````````````````````````````````````````
 
 When creating a new cluster, you can choose between between a range of {+cluster+} tiers 
 available under the Dedicated, Flex, or Free deployment types. 
@@ -154,7 +154,7 @@ To determine the recommended cluster tier for your
 application size, see the :ref:`arch-center-cluster-size-guide` .
 
 Use an Odd Number of Replica Set Members and Test Failover
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+``````````````````````````````````````````````````````````
 
 To elect a :manual:`primary </core/replica-set-members>`, you need a majority of :manual:`voting </core/replica-set-elections>` replica set members available. We recommend that you create replica sets with an
 odd number of voting replica set members. There is no benefit in having
@@ -177,7 +177,7 @@ voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
 .. _arch-center-distribute-data:
 
 Distribute Data Across At Least Three Data Centers in Different Availability Zones
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+``````````````````````````````````````````````````````````````````````````````````
 
 MongoDB provides high availability by storing multiple copies of data across replica sets.
 To ensure that members of the same replica set don't share the same resources, and that 
@@ -317,7 +317,7 @@ utilization, see :ref:`arch-center-monitoring-alerts`.
 If you encounter resource capacity issues, see :ref:`arch-center-resource-capacity`.
 
 Plan Your MongoDB Version Changes and Maintenance
-+++++++++++++++++++++++++++++++++++++++++++++++++
+`````````````````````````````````````````````````
 
 We recommend that you run the latest MongoDB version as it allows you to
 take advantage of new features and provides improved security guarantees
@@ -332,7 +332,7 @@ work directly with MongoDB Professional or Technical Services to help you
 avoid any issues that might occur during the upgrade process.
 
 Configure Maintenance Windows
-+++++++++++++++++++++++++++++
+`````````````````````````````
 
 MongoDB allows you to :ref:`configure a maintenance window <configure-maintenance-window>` for your {+cluster+},
 which sets the hour of the day when {+service+} starts weekly maintenance on your {+cluster+}.  
@@ -540,4 +540,3 @@ These examples also apply other recommended configurations, including:
       For more configuration options and info about this example, 
       see |service-terraform| and the `MongoDB Terraform Blog Post
       <https://www.mongodb.com/developer/products/atlas/deploy-mongodb-atlas-terraform-aws/>`__.
-
