@@ -117,12 +117,12 @@ kick-start their projects.
    .. tab:: Media & Telco
       :tabid: media-telco 
 
+      Gen AI
+      ------
+
       .. card-group::
          :columns: 2
          :style: extra-compact
-
-         Gen AI
-         ------
 
          .. card::
             :headline: AI-Driven Media Personalization: MongoDB and Vector Search
@@ -130,8 +130,9 @@ kick-start their projects.
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
-            Learn about how to leverage data to create personalized user
-            experiences by using Atlas Database, Atlas Vector Search, and Pymongo. 
+            Learn about how to leverage data to create personalized 
+            user experiences by using Atlas Database, 
+            Atlas Vector Search, and Pymongo. 
 
    .. .. tab:: Healthcare
       .. :tabid: healthcare
