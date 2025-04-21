@@ -36,6 +36,7 @@ Account and Organization Setup
    * - :icon-fa4:`square-o`
      - Set up your |service| Organization and configure a root user with
        appropriate access. Set up Organizations according to your internal structure.
+       To get recommendations and learn more about this topic, see :ref:`arch-center-hierarchy`.
 
    * - :icon-fa4:`square-o`
      - Set up Projects based on your environment and application needs.
@@ -43,7 +44,8 @@ Account and Organization Setup
        projects, at a minimum.
 
    * - :icon-fa4:`square-o`
-     - Consider Cross-Organization Billing, if applicable.
+     - Consider Cross-Organization Billing, if applicable. To get recommendations
+       and learn more about this topic, see :ref:`arch-center-billing-data`.
 
 Network and Security Configuration
 -----------------------------------
@@ -61,6 +63,8 @@ Network and Security Configuration
 
    * - :icon-fa4:`square-o`
      - Configure Network Security based on your organization's needs.
+       To get recommendations and learn more about this topic, see
+       :ref:`arch-center-auth`.
 
    * - :icon-fa4:`square-o`
      - Choose a network connectivity method:
@@ -136,6 +140,13 @@ Network and Security Configuration
        regulations, such as ISO/IEC 27001, HIPAA, GDPR, PCI DSS, FedRAMP,
        and others.
 
+To get recommendations and learn more about these items in the checklist,
+see the following resources:
+
+- :ref:`arch-center-data-encryption`
+- :ref:`arch-center-network-security`
+- :ref:`arch-center-auth`
+
 Backup and Restore Strategy
 ----------------------------
 
@@ -148,6 +159,8 @@ Backup and Restore Strategy
    * - :icon-fa4:`square-o`
      - Enable |service| Cloud Backup, which provides localized backup
        storage using the cloud provider's native snapshot functionality.
+       To get recommendations and learn more about this topic, see
+       :ref:`arch-center-backups`.
   
    * - :icon-fa4:`square-o`
      - Enable Continuous Cloud Backup with a restore window that meets
@@ -237,6 +250,9 @@ Monitoring and Alerts
      - Familiarize yourself with Performance Advisor, Real-Time Performance Panel (RTPP),
        and Query Profiler for performance tuning and optimization.
 
+To get recommendations and learn more about monitoring performance and alerts,
+see :ref:`arch-center-monitoring-alerts`.
+
 Operational Procedures and Team Readiness
 ------------------------------------------
 
@@ -247,14 +263,16 @@ Operational Procedures and Team Readiness
      - Action
 
    * - :icon-fa4:`square-o`  
-     - Define roles and responsibilities for managing and operating |service-fullname|.
+     - Define roles and responsibilities for managing and operating |service-fullname|.`
 
    * - :icon-fa4:`square-o`  
-     - Establish change control and auditability processes.
+     - Establish change control and auditability processes. To learn more,
+       see :ref:`arch-center-auditing-logging`.
 
    * - :icon-fa4:`square-o`  
      - Develop a clear Disaster Recovery Process Documentation
-       specific to your applications and |service| setup.
+       specific to your applications and |service| setup. To learn more,
+       see :ref:`arch-center-high-availability`.
 
    * - :icon-fa4:`square-o`  
      - Ensure your team is trained on |service-fullname| fundamentals,
@@ -263,21 +281,20 @@ Operational Procedures and Team Readiness
        training and enablement.
 
    * - :icon-fa4:`square-o`
-     - Establish a process for engaging with MongoDB support for
+     - Establish a process for engaging with |mdb-support| for
        production issues or when MongoDB's access level is required.
 
    * - :icon-fa4:`square-o`  
      - Plan for performance improvement using tools like Query
-       Profiler and Performance Advisor.
+       Profiler and Performance Advisor. To learn more, see :ref:`arch-center-monitoring-alerts`.`
 
    * - :icon-fa4:`square-o`  
-     - Define how you will handle data lifecycle management,
-       including archival and deletion strategies, such as TTL
-       Indexes, or Online Archive.
+     - Define how you will handle data lifecycle management.
+       Configure archival strategies, such as :manual:`TTL indexes </core/index-ttl/>`, or :ref:`online archive <online-archive-overview>`.
   
    * - :icon-fa4:`square-o`  
      - Establish integration strategies with other tooling and  
-       services, such as Datadog, Prometheus, PagerDuty, and other tools.
+       services, such as Datadog, Prometheus, PagerDuty, and other tools. To learn more, see :ref:`_arch-center-monitoring-alerts`.
   
    * - :icon-fa4:`square-o`  
      - Consider establishing a MongoDB Center of Excellence (CoE)
