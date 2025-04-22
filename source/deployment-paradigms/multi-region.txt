@@ -23,22 +23,14 @@ performance and can help meet compliance requirements for :ref:`data sovereignty
 Protection Regulation (GDPR) law.
 
 A multi-region deployment may have multiple regions within the same geography 
-(a large area like a continent or country), single regions in multiple 
-geographies, or multiple regions in multiple geographies.
+(a large area like a continent or country), or multiple regions in multiple 
+geographies.
 
 Multi-region deployments can exist with a single cloud provider or 
 multiple cloud providers. To learn about multi-cloud deployments, see 
 :ref:`arch-center-paradigms-multi-cloud`.
 
-To learn how to configure multi-region deployments and learn about the
-different types of nodes you can add, see 
-:atlas:`Configure High Availability and Workload Isolation 
-</cluster-config/multi-cloud-distribution/>` in the {+service+}
-documentation.
-
-Use Cases for Multi-Region Deployments
---------------------------------------
-Consider the 3 use cases in the following image:
+Consider the 2 use cases in the following image:
 
 .. figure:: /includes/images/multi-region-types.png
    :figwidth: 750px
@@ -65,16 +57,23 @@ and lowest latency, consider a :ref:`arch-center-paradigms-multi-cloud`.
 Multi-Region Deployment Use Cases
 ---------------------------------
 
-The following use cases highlight a high-criticality application ("Tier 1") 
-and a less-critical application, but one that still warrants a 
-multi-region deployment ("Tier 2").
+The following use cases highlight different scenarios. In the first use case, we 
+have a high-criticality application that we need to have distributed globally for 
+availability and low latency. In this case, we want to deploy to at least 5 
+regions in 3 or more regions.
+
+The second scenario applies to a few different use cases. We may have a 
+less-critical application, but one that still warrants a multi-region deployment. 
+We may also have a high-criticality application but the users are in a single 
+geography that only has 2 regions. In these scenarios, we can use a 3-node, 
+2-region deployment architecture.
 
 .. _arch-center-multi-region-tier-1:
 
-Tier 1 Applications
-~~~~~~~~~~~~~~~~~~~
+5 Node, 3 Zone Architecture
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tier 1 applications require both high availability and low-latency. 
+Mission critical applications require both high availability and low latency. 
 To achieve this, we recommend an architecture that consists of a minimum of 5 
 nodes spread over at least 3 regions. This provides high availability in at least 
 2 regions. If a node goes down, the traffic can be served from the same 
@@ -87,24 +86,29 @@ region to ensure the same latency on the primary region.
 Notes and Considerations
 ````````````````````````
 
-- Your application should also be deployed in each region to further reduce  
-  latency.
+- Your app servers should be deployed in each region that MongoDB nodes are 
+  deployed. This gives you the ability to route read requests to the in-region  
+  node, which reduces the response time to your end-users, and offloads requests 
+  from the primary node. Write requests will always be directed to the primary.
 
 - You should use Privatelink for connecting to the cluster, and VPC peering 
-  between the your VPCs. VPC peering ensures that if a network connection 
+  between your app server VPCs. VPC peering ensures that if a network connection 
   is broken or {+service+} in that region goes down, the application tier can 
   still route to the primary node, first over the vpc peering, and then over the 
   private endpoint. 
+
 - This architecture has the highest cost due to network traffic between regions 
-  and having a 5 or more data-bearing nodes. 
+  and having 5 or more data-bearing nodes. 
+
 - This architecture provides the highest resiliency. There are no interruptions 
-  to operations, and your application can sustain a full regional failure with 
-  no interruption and manual intervention required. 
+  during {+service+} operations (like an automated upgrade), and your application 
+  can sustain a full regional failure with no interruption and manual 
+  intervention required. 
 
 .. _arch-center-multi-region-tier-2:
 
-Tier 2 Applications
-~~~~~~~~~~~~~~~~~~~
+3 Nodes, 2 Regions Architecture
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have an application that can experience limited downtime or maintenance 
 windows without significant revenue impact, you can create an architecture that 
@@ -112,6 +116,9 @@ provides that level of availability by using 5 nodes in 2 regions. You have 3
 electable nodes spread across the 2 regions, and also have 2 read-only nodes in 
 the secondary region. The electable nodes are in the **majority region**, while 
 the region with fewer electable nodes is the **minority region**.
+
+This is also an appropriate architecture if you need high availability and low 
+latency in a geography that only has 2 regions.
 
 .. figure:: /includes/images/multi-region-tier-2.png
    :figwidth: 750px
@@ -155,10 +162,11 @@ above, the reduced cost comes with some caveats:
 Alternative Solution
 ````````````````````
 For further cost savings, you can design this architecture without the 2 read-only 
-nodes. In addition to the caveats listed above, data size has a significant impact 
+nodes. In addition to the caveats listed above, data size has significant impact 
 on your decision since the data will need to be synchronized to secondaries 
 whenever adding new nodes to the cluster. For example, 1TB of data averages 1
 hour of recovery and synchronization time.
+
 
 .. _arch-center-multi-region-considerations:
 
@@ -229,6 +237,7 @@ and ``eu-west-3``). This ensures data sovereignty since all regions are within
 the EU, while offering high availability if there's a regional outage that 
 affects one of the nodes.
 
+
 .. _arch-center-multi-region-rec-summary:
 
 Recommendations for Multi-Region Deployments
@@ -236,8 +245,3 @@ Recommendations for Multi-Region Deployments
 
 .. include:: /includes/rec-list.rst
 
-
-.. toctree::
-   :titlesonly:
-
-   Multi-Region Latency Strategies </deployment-paradigms/latency-strategies>
