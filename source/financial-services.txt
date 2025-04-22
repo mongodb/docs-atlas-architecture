@@ -1,3 +1,5 @@
+.. _financial-services:
+
 ==================
 financial services  
 ==================
