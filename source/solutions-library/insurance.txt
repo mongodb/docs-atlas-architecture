@@ -157,4 +157,5 @@ kick-start their projects.
 .. toctree::
    :titlesonly:
 
-   Audio-Based AI Diagnostics <solutions-library/manufacturing/audio-based-AI-diagnostics>
+   Claim Management <solutions-library/insurance/claim-management>
+   PDF Search </solutions-library/insurance/pdf-search>
