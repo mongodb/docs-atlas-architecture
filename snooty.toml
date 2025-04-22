@@ -181,6 +181,7 @@ waf = "`Well-Architected Framework <https://www.mongodb.com/resources/products/c
 wif = "Workforce Identity Federation"
 workload = "Workload Identity Federation"
 iac = ":abbr:`IaC (Infrastructure as Code)`"
+byok = ":abbr:`BYOK (Bring Your Own Key)`"
 
 [substitutions]
 service-register = ":mdbacct:`MongoDB Atlas registration page </register?tck=docs_atlas>`"

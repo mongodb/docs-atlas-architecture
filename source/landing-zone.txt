@@ -43,7 +43,8 @@ What Is A Landing Zone?
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 A landing zone is a framework for establishing a well-architected and
-pre-configured cloud environment for {+service+} that conforms to your organization's unique requirements across security, compliance, and governance. A landing zone is often a prerequisite for enterprises to
+pre-configured cloud environment for {+service+} that conforms to your organization's unique requirements across security, compliance, and governance.
+A landing zone is often a prerequisite for enterprises to
 move workloads to the cloud, and it is often provisioned
 programmatically using an API or tools like Terraform.
 
@@ -56,28 +57,54 @@ connecting to {+service+}.
 Why Do You Need a Landing Zone?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Establishing a landing zone gives you confidence that
-every workload your team deploys aligns with your requirements around
-security, performance, reliability, operational efficiency, and cost
-optimization. Designing and sharing out a landing zone helps
-ensure alignment across all teams and stakeholders on how your
-organization will work in {+service+}, and it prevents developers on 
-all of your teams following different standards.
+Designing and implementing a landing zone framework ensures that all teams and stakeholders 
+are aligned with your requirements around security, performance, reliability, operational efficiency,
+and cost optimization.
+
+Following a thorough landing zone can also save your enterprise from spending unnecessary time and resources
+to redesign and rearchitect initial setups later down the line.
+For example, while in talks to move their on-premises databases to MongoDB {+service+} in 2024, 
+a large financial services company cited concerns that peer companies were struggling to enforce
+security, governance, and cost-efficiency across teams. One peer had accumulated runaway
+cloud costs because FinOps integrations to tag and track spending were not enforced during provisioning time,
+while another peer had faced security risks when individual teams failed to enforce the company's standard
+of encryption at rest with {+byok+}. To avoid these risks, our enterprise customer chose to implement a landing zone
+to enforce company-wide policies and set up their cloud infrastructure for future growth. 
 
 .. _landing-zone-considerations:
 
-What Are Some Important Landing Zone Considerations?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What Are Some Landing Zone Considerations?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Consider the following organization-specific
-requirements when you create a landing zone:
+When you create your landing zone, consider how your organization 
+defines the following requirements and how that aligns with {+service+}'s 
+default configurations:
+
+The following considerations include critical and advanced requirements that a landing framework 
+should define before your enterprise begins to move any workload to the cloud. 
+These are the minimum requirements necessary 
+to architect a strong landing zone, which can prevent your enterprise from spending time 
+and resources to redesign and rearchitect its initial setups later down the line: 
+
+Critical Considerations
+```````````````````````
+
+You should define the following requirements in a landing zone framework 
+before your enterprise begins to move any workload to the cloud:
+
+Advanced Considerations 
+```````````````````````
+
+To design a more thorough and reliable landing zone, consider definiing the following advanced requirements
+for your organization: 
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 40
+   :widths: 16 42 42 
 
    * - Consideration
      - Description
+     - Default Configuration
    
    * - System Hierarchy Requirements
      - Identify how you will group database {+clusters+} for management
@@ -111,7 +138,10 @@ requirements when you create a landing zone:
        deployment topology.
 
        To get recommendations and learn more about this topic, see
-       :ref:`arch-center-network-security`.
+       the following resources: 
+
+       - :ref:`arch-center-network-security`
+       - :ref:`deployment-paradigms` 
    * - High Availability Requirements
      - Identify high availability requirements such as cluster topology
        with node count and priority per region, global write
