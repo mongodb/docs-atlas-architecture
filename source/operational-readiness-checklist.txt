@@ -126,7 +126,8 @@ Network and Security Configuration
 
    * - :icon-fa4:`square-o`
      - Configure Database Auditing to track database access and actions.
-       Create custom filters if needed.
+       Create custom filters if needed. To get recommendations and learn
+       more about this topic, see :ref:`arch-center-auditing-logging`.
   
    * - :icon-fa4:`square-o`
      - Be aware of hard-coded certificate authority certificates.
@@ -171,19 +172,21 @@ Backup and Restore Strategy
        daily, weekly, and monthly snapshots with appropriate retention periods.
 
    * - :icon-fa4:`square-o`
-     - Consider multi-region snapshot distribution for increased resilience
-       by copying snapshots to other geographic regions.
+     - Consider :ref:`multi-region snapshot distribution <atlas-backup-distribution>`
+       for increased resilience by copying snapshots to other geographic regions.
 
    * - :icon-fa4:`square-o`
-     - Enable Backup Compliance Policy to prevent unauthorized modifications
-       or deletions of backups and comply with strict data protection requirements.
+     - Enable :ref:`Backup Compliance Policy <atlas-backup-compliance>` to
+       prevent unauthorized modifications or deletions of backups and comply
+       with strict data protection requirements.
 
    * - :icon-fa4:`square-o`
      - Understand the process for restoring from scheduled or on-demand snapshots.
+       To learn more, see :ref:`backup-policy-recommendations`.
 
    * - :icon-fa4:`square-o`
      - Learn about the process for restoring from Continuous Cloud Backup
-       to a specific point in time.
+       to a specific point in time. To learn more, see :ref:`backup-policy-recommendations`.
   
    * - :icon-fa4:`square-o`
      - Plan and test your Disaster Recovery (DR) strategy. Understand
@@ -213,6 +216,7 @@ Maintenance and Patching
      - Define a Maintenance Window for |service| automated systems to apply
        automatic minor version updates. Configure the day and hour of
        allowed maintenance using the ``mongodbatlas_maintenance_window`` resource.
+       To ee :ref:`arch-center-resiliency`.
   
    * - :icon-fa4:`square-o`
      - Understand that |service| has non-deferrable maintenance hours for critical security

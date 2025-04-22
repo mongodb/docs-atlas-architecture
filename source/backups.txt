@@ -223,6 +223,8 @@ we recommend striking a balance between availability and cost. However,
 your critical workloads might require multiple copies of snapshots in
 various locations. 
 
+.. _atlas-backup-compliance:
+
 Recommendations for Backup Compliance Policy 
 ````````````````````````````````````````````
 
