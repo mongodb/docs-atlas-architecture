@@ -167,8 +167,8 @@ kick-start their projects.
 .. toctree::
    :titlesonly:
 
-   Financial Services <solutions-library/financial-services#gen-ai>
-   Manufacturing <solutions-library#iot>
+   Financial Services <solutions-library/financial-services>
+   Manufacturing <insurance#iot>
    Insurance <solutions-library/insurance>
    Media & Telco <solutions-library/media-telco>
 
