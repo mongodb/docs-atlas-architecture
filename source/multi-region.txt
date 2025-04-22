@@ -23,14 +23,14 @@ performance and can help meet compliance requirements for :ref:`data sovereignty
 Protection Regulation (GDPR) law.
 
 A multi-region deployment may have multiple regions within the same geography 
-(a large area like a continent or country), single regions in multiple 
-geographies, or multiple regions in multiple geographies.
+(a large area like a continent or country), or multiple regions in multiple 
+geographies.
 
 Multi-region deployments can exist with a single cloud provider or 
 multiple cloud providers. To learn about multi-cloud deployments, see 
 :ref:`arch-center-paradigms-multi-cloud`.
 
-Consider the 3 use cases in the following image:
+Consider the 2 use cases in the following image:
 
 .. figure:: /includes/images/multi-region-types.png
    :figwidth: 750px
