@@ -1,4 +1,24 @@
-financial services - outside solutions-library folder
+==================
+financial services  
+==================
+
+.. default-domain:: mongodb
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta:: 
+   :description: How to load sample datasets into your Atlas cluster.
+   :keywords: atlas cli, sample dataset, atlas ui
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+outside solutions-library folder
 
 .. toctree::
    :titlesonly:
