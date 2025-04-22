@@ -34,9 +34,8 @@ Account and Organization Setup
      - Create a |service-fullname| account.
 
    * - :icon-fa4:`square-o`
-     - Set up your |service| Organization and configure a root user with
-       appropriate access. Set up Organizations according to your internal structure.
-       To get recommendations and learn more about this topic, see :ref:`arch-center-hierarchy`.
+     - Set up your |service| Organizations according to your internal structure
+       and configure a root user with appropriate access. To get recommendations and learn more about this topic, see :ref:`arch-center-hierarchy`.
 
    * - :icon-fa4:`square-o`
      - Set up Projects based on your environment and application needs.
@@ -60,7 +59,9 @@ Network and Security Configuration
 
    * - :icon-fa4:`square-o`
      - Select Cloud Providers and Regions for your |service| clusters.
-       Consider data sovereignty requirements and latency.
+       Consider data sovereignty requirements and latency. To get
+       recommendations and learn more about this topic, see
+       :ref:`arch-center-paradigms`.
 
    * - :icon-fa4:`square-o`
      - Configure Network Security based on your organization's needs.
@@ -70,25 +71,26 @@ Network and Security Configuration
    * - :icon-fa4:`square-o`
      - Choose a network connectivity method:
        
-       - VPC Peering for private and secure traffic routing within your
-         network boundaries.
-       - Private Endpoints (AWS PrivateLink, Azure Private Link,
-         or Google Cloud Private Service Connect) for a one-way private
+       - :ref:`VPC Peering <arch-center-vpc-vnet-peering>` for setting up
+         private and secure traffic routing within your network boundaries.
+       - :ref:`Private Endpoints <arch-center-private-endpoints>`
+         (AWS PrivateLink, Azure Private Link, or
+         Google Cloud Private Service Connect) for a one-way private
          connection from your VPC to |service|.
-         For sharded multi-region clusters, enable private endpoints in each region.
-       - Public IP Access Lists to restrict inbound connections to specific
-         IP addresses or CIDR blocks. We recommend that you permit access
-         to the smallest network segments possible,
-         such as an individual /32 address.
+         For sharded multi-region clusters, enable private endpoints in each region. To learn more, see :ref:`Recommendations for Multi-Region
+         Deployments <arch-center-multi-region-recs-private-endpoints>`.
+       - Public :ref:`IP Access Lists <arch-center-ip-access-list>`
+         to restrict inbound connections to specific IP addresses or CIDR
+         blocks. Consider IP Allow lists as an alternative to Private Link if necessary.
 
    * - :icon-fa4:`square-o`
      - Confirm that TLS/SSL is enabled for encrypting connections to your
-       databases. TLS is enabled by default and cannot be disabled. TLS 1.2 is
-       the default.
+       databases. TLS is mandatory and is enabled by default and cannot
+       be disabled. TLS 1.2 is the default. To learn more, see :ref:`<arch-center-tls>`.
 
-       - Consider IP Allow lists as an alternative to Private Link if necessary.
-       - For on-premises connectivity to |service|, ensure that your organization
-         completes all the necessary internal processes, which may take time for approvals.
+   * - :icon-fa4:`square-o`
+     - For on-premises connectivity to |service|, ensure that your organization
+       completes all the necessary internal processes, which may take time for approvals.
 
    * - :icon-fa4:`square-o`
      - Configure Authentication and Authorization. To get recommendations and
@@ -120,8 +122,7 @@ Network and Security Configuration
        - Consider Client-Side Field Level Encryption (CSFLE) to encrypt
          data within your application before transmitting it to |service|.
        - Explore Queryable Encryption for performing queries on encrypted data.
-       
-       
+
 
    * - :icon-fa4:`square-o`
      - Configure Database Auditing to track database access and actions.
@@ -192,7 +193,8 @@ Backup and Restore Strategy
   
    * - :icon-fa4:`square-o`
      - Consider options for downloading and archiving snapshots, if required,
-       using the {+atlas-ui+}, {+atlas-admin-api+}, or {+atlas-cli+}. To learn more, see :ref:`arch-center-resiliency`.
+       using the {+atlas-ui+}, {+atlas-admin-api+}, or {+atlas-cli+}.
+       To learn more, see :ref:`arch-center-resiliency`.
 
 Maintenance and Patching
 ------------------------
