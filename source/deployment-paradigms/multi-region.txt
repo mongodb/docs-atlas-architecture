@@ -96,7 +96,7 @@ Notes and Considerations
 - You should use Privatelink for connecting to the cluster, and VPC peering 
   between your app server VPCs. VPC peering ensures that if a network connection 
   is broken or {+service+} in that region goes down, the application tier can 
-  still route to the primary node, first over the vpc peering, and then over the 
+  still route to the primary node, first over the VPC peering, and then over the 
   private endpoint. 
 
 - This architecture has the highest cost due to network traffic between regions 
@@ -143,7 +143,7 @@ While this architecture is less expensive that the "Tier 1" solution provided
 above, the reduced cost comes with some caveats:
 
 - If the majority region is lost, the minority region is not a fully-functional 
-  cluster; it does not have a primary and can only accept reads, but not writes.
+  cluster; it does not have a primary and can only accept reads but not writes.
 
   To turn it into a functional cluster again, an administrator needs to 
   reconfigure the 2 read-only nodes to electable nodes. However, there is a 
@@ -247,3 +247,8 @@ Recommendations for Multi-Region Deployments
 
 .. include:: /includes/rec-list.rst
 
+
+.. toctree::
+   :titlesonly:
+
+   Latency Reduction Strategies </deployment-paradigms/latency-strategies>
