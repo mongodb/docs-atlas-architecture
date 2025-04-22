@@ -102,6 +102,9 @@ requirements when you create a landing zone:
    * - Data Residency Requirements
      - Identify data residency requirements, such as data sovereignty
        requirements, or application data partitioning rules.
+
+       To get recommendations and learn more about this topic, see
+       :ref:`arch-center-resiliency`.
    * - Network Topology Requirements
      - Identify network topology requirements, including Cloud Provider
        regions, private connectivity options, and application
