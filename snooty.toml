@@ -33,7 +33,7 @@ toc_landing_pages = [
     "/performance",
     "/cost-optimization",
     "/solutions-library",
-    "/solutions-library/financial-services"
+    "/solutions-library/#gen-ai"
 ]
 
 [constants]
