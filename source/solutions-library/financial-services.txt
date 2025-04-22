@@ -1,158 +1,41 @@
 .. _financial-services:
 
-=================
-Solutions Library
-=================
+==================
+Financial Services
+==================
 
 Drawing from experience with over 54,500 customers, the Solutions
 Library is curated with tailored solutions to help developers 
 kick-start their projects. 
 
-.. tabs::
+Gen AI
+------
 
-   .. tab:: Financial Services
-      :tabid: gen-ai
+.. card-group::
+   :columns: 2
+   :style: extra-compact
 
-      Gen AI
-      ------
+   .. card::
+      :headline: Building Continuously Updating RAG Applications
+      :url: https://mongodb.com/docs/atlas/architecture/solutions-library/financial-services/rag-applications
+      :icon: industry_ai
+      :icon-alt: Atlas industry_ai icon
 
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
+      Use native stream processing and vector search in MongoDB Atlas to
+      continuously update, store, and search embeddings through a unified
+      interface. 
 
-         .. card::
-            :headline: Building Continuously Updating RAG Applications
-            :url: https://mongodb.com/docs/atlas/architecture/solutions-library/financial-services/rag-applications
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
+.. IoT 
+.. ---
 
-            Use native stream processing and vector search in MongoDB Atlas to
-            continuously update, store, and search embeddings through a unified
-            interface. 
+.. Fraud Prevention
+.. ----------------
 
-      .. IoT 
-      .. ---
+.. App-Driven Analytics
+.. --------------------
 
-      .. Fraud Prevention
-      .. ----------------
-
-      .. App-Driven Analytics
-      .. --------------------
-
-      .. Modernization
-      .. -------------
-
-   .. .. tab:: Retail
-      .. :tabid: retail
-
-      .. retail-solutions-lib
-
-   .. tab:: Manufacturing
-      :tabid: manufacturing
-
-      IoT 
-      ---
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Real-time Audio-Based AI Diagnostics
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/manufacturing/audio-based-AI-diagnostics/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Find out how AI is being used in renewable energy by leveraging MongoDB 
-            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
-
-      .. Fraud Prevention
-      .. ----------------
-
-      .. App-Driven Analytics
-      .. --------------------
-
-      .. Modernization
-      .. -------------
-
-   .. tab:: Insurance
-      :tabid: insurance
-
-      Gen AI
-      ------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Claim management using LLMs and vector search for RAG
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/insurance/claim-management
-            :icon: mdb_vector_search
-            :icon-alt: Atlas mdb_vector_search icon
-
-            Discover how to combine Atlas Vector Search and large language
-            models (LLMs) to streamline the claim adjustment process. 
-
-         .. card::
-            :headline: Build a PDF Search Application with Vector Search and LLMs
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/insurance/pdf-search
-            :icon: atlas_search
-            :icon-alt: Atlas atlas_search icon
-
-            Streamline operations and claims processing with powerful PDF search
-            capabilities by integrating MongoDB Atlas Vector Search,
-            Superduper.io, and LLMs. 
-
-      .. IoT 
-      .. ---
-
-      .. Fraud Prevention
-      .. ----------------
-
-      .. App-Driven Analytics
-      .. --------------------
-
-      .. Modernization
-      .. -------------
-
-   .. tab:: Media & Telco
-      :tabid: media-telco 
-
-      Gen AI
-      ------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: AI-Driven Media Personalization: MongoDB and Vector Search
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/media-personalization/
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
-
-            Learn about how to leverage data to create personalized 
-            user experiences by using Atlas Database, 
-            Atlas Vector Search, and Pymongo. 
-
-.. .. tab:: Healthcare
-   .. :tabid: healthcare
-
-   .. Gen AI
-   .. ------
-
-   .. IoT 
-   .. ---
-
-   .. Fraud Prevention
-   .. ----------------
-
-   .. App-Driven Analytics
-   .. --------------------
-
-   .. Modernization
-   .. -------------
+.. Modernization
+.. -------------
 
 .. toctree::
    :titlesonly:
