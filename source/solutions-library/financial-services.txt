@@ -1,0 +1,28 @@
+.. _financial-services:
+
+==================
+Financial Services  
+==================
+
+Gen AI
+------
+
+.. card-group::
+   :columns: 2
+   :style: extra-compact
+
+   .. card::
+      :headline: Building Continuously Updating RAG Applications
+      :url: https://mongodb.com/docs/atlas/architecture/solutions-library/financial-services/rag-applications
+      :icon: industry_ai
+      :icon-alt: Atlas industry_ai icon
+
+      Use native stream processing and vector search in MongoDB Atlas to
+      continuously update, store, and search embeddings through a unified
+      interface. 
+
+.. toctree::
+   :titlesonly:
+   :hidden:
+
+   RAG Applications <solutions-library/financial-services/rag-applications>
