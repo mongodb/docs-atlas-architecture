@@ -24,11 +24,11 @@ your application, between your application and your data, and between
 {+cluster+} nodes. To reduce latency for read operations, then, it's crucial to 
 place both your application and data geographically closer to users. 
 
-Replication Configuration Factors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Replication Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-How you configure Replication also contributes to latency in a 
-multi-region deployment. Factors include the following:
+How you configure replication also contributes to latency in a 
+multi-region deployment, including the following factors:
 
 - **Write concern levels:** There is a trade-off between write durability and 
   write latency. The write concern level you configure (e.g., ``w: "majority"``) 
@@ -59,13 +59,13 @@ multi-region deployment. Factors include the following:
 
 For more information, refer to :manual:`MongoDB Replication </replication>`.
 
-Network Configuration Factors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Network Configuration
+~~~~~~~~~~~~~~~~~~~~~
 
 You can further reduce latency using the following network connectivity options: 
 
  - **Use Private Endpoints:** Private endpoints establish direct and secure 
-   connections between your application's virtual network and your Atlas cluster, 
+   connections between your application's virtual network and your |service| cluster, 
    potentially reducing network hops and improving latency.
 
 - **VPC Peering:** Configure VPC peering in your replica sets to allow 
