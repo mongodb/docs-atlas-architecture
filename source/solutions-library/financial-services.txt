@@ -50,8 +50,6 @@ kick-start their projects.
    .. tab:: Manufacturing
       :tabid: manufacturing
 
-      .. _manufacturing-solutions-lib
-
       IoT 
       ---
 
@@ -79,8 +77,6 @@ kick-start their projects.
 
    .. tab:: Insurance
       :tabid: insurance
-   
-      .. insurance-solutions-lib
 
       Gen AI
       ------
@@ -123,8 +119,6 @@ kick-start their projects.
    .. tab:: Media & Telco
       :tabid: media-telco 
 
-      .. media-telco-solutions-lib
-
       Gen AI
       ------
 
@@ -144,8 +138,6 @@ kick-start their projects.
 
 .. .. tab:: Healthcare
    .. :tabid: healthcare
-
-   .. healthcare-solutions-lib
 
    .. Gen AI
    .. ------
