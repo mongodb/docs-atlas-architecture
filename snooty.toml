@@ -32,11 +32,7 @@ toc_landing_pages = [
     "/reliability",
     "/performance",
     "/cost-optimization",
-    "/solutions-library",
-    "/solutions-library/financial-services",
-    "/solutions-library/manufacturing",
-    "/solutions-library/insurance",
-    "/solutions-library/media-telco"
+    "/solutions-library"
 ]
 
 [constants]
