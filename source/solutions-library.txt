@@ -171,4 +171,4 @@ kick-start their projects.
 .. toctree::
    :titlesonly:
 
-   Financial Services </solutions-library/#gen-ai>
+   Financial Services </solutions-library#gen-ai>
