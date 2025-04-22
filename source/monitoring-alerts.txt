@@ -10,9 +10,13 @@ Guidance for {+service+} Monitoring and Alerts
    :name: genre
    :values: reference
 
+.. facet::
+   :name: programming_language
+   :values: go, shell
+
 .. meta::   
    :description: Learn how to monitor and set up alerts on your Atlas cluster.
-   :keywords: code example, atlas sdk for go, terraform, atlas cli
+   :keywords: code example, atlas sdk for go, terraform configuration, atlas cli
 
 .. contents:: On this page
    :local:
@@ -464,8 +468,6 @@ Automation Examples: {+service+} Monitoring and Logging
 
 .. include:: /includes/complete-examples-terraform.rst
 
-.. include:: /includes/complete-examples-go-sdk.rst
-
 The following examples demonstrate how to enable monitoring using |service|
 :ref:`tools for automation <arch-center-automation>`.
 
@@ -524,6 +526,8 @@ The following examples demonstrate how to enable monitoring using |service|
          .. tab:: Atlas Go SDK
             :tabid: go-sdk
 
+            .. include:: /includes/complete-examples-go-sdk.rst
+
             Before you can authenticate and run the example scripts using
             the Atlas Go SDK, you must:
 
@@ -541,9 +545,6 @@ The following examples demonstrate how to enable monitoring using |service|
               .. literalinclude:: /includes/examples/generated-examples/snippet.config.json
                  :language: json
                  :caption: configs/config.json
-
-            For more information on authenticating and creating a client, see
-            the complete Atlas SDK for Go example project `in GitHub <https://github.com/mongodb/atlas-architecture-go-sdk>`__.
 
             View Cluster Metrics
             ~~~~~~~~~~~~~~~~~~~~
@@ -670,6 +671,8 @@ The following examples demonstrate how to enable monitoring using |service|
 
          .. tab:: Atlas Go SDK
             :tabid: go-sdk
+
+            .. include:: /includes/complete-examples-go-sdk.rst
 
             Before you can authenticate and run the example scripts using
             the Atlas Go SDK, you must:
