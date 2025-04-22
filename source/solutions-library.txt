@@ -13,8 +13,6 @@ kick-start their projects.
    .. tab:: Financial Services
       :tabid: gen-ai
 
-      .. _fin-services-solutions-lib
-
       Gen AI
       ------
 
@@ -164,13 +162,15 @@ kick-start their projects.
       .. Modernization
       .. -------------
 
+.. Healthcare  <solutions-library/healthcare>
+.. Retail </solutions-library/retail>
+.. Manufacturing </solutions-library/manufacturing>
+.. Insurance </solutions-library/insurance>
+.. Media & Telco </solutions-library/media-telco>
+
 .. toctree::
    :titlesonly:
 
    Financial Services </financial-services>
-   Manufacturing </solutions-library/manufacturing>
-   Insurance </solutions-library/insurance>
-   Media & Telco </solutions-library/media-telco>
 
-.. Healthcare  <solutions-library/healthcare>
-.. Retail </solutions-library/retail>
+
