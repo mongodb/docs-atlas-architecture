@@ -167,10 +167,10 @@ kick-start their projects.
 .. toctree::
    :titlesonly:
 
-   Financial Services <solutions-library/financial-services>
-   Manufacturing <insurance#iot>
-   Insurance <solutions-library/insurance>
-   Media & Telco <solutions-library/media-telco>
+   Financial Services </financial-services>
+   Manufacturing </insurance#iot>
+   Insurance </solutions-library/insurance>
+   Media & Telco </solutions-library/media-telco>
 
 .. Healthcare  <solutions-library/healthcare>
 .. Retail </solutions-library/retail>
