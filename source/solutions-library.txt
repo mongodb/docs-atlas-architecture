@@ -168,8 +168,8 @@ kick-start their projects.
    :titlesonly:
 
    Financial Services </financial-services>
-   Manufacturing </insurance#iot>
-   Insurance </solutions-library/insurance>
+   Manufacturing </solutions-library/manufacturing>
+   Insurance </solutions-library/insurance#iot>
    Media & Telco </solutions-library/media-telco>
 
 .. Healthcare  <solutions-library/healthcare>
