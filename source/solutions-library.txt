@@ -142,25 +142,25 @@ kick-start their projects.
             user experiences by using Atlas Database, 
             Atlas Vector Search, and Pymongo. 
 
-   .. .. tab:: Healthcare
-      .. :tabid: healthcare
+.. .. tab:: Healthcare
+   .. :tabid: healthcare
 
-      .. healthcare-solutions-lib
+   .. healthcare-solutions-lib
 
-      .. Gen AI
-      .. ------
+   .. Gen AI
+   .. ------
 
-      .. IoT 
-      .. ---
+   .. IoT 
+   .. ---
 
-      .. Fraud Prevention
-      .. ----------------
+   .. Fraud Prevention
+   .. ----------------
 
-      .. App-Driven Analytics
-      .. --------------------
+   .. App-Driven Analytics
+   .. --------------------
 
-      .. Modernization
-      .. -------------
+   .. Modernization
+   .. -------------
 
 .. Healthcare  <solutions-library/healthcare>
 .. Retail </solutions-library/retail>
@@ -172,5 +172,3 @@ kick-start their projects.
    :titlesonly:
 
    Financial Services </financial-services>
-
-
