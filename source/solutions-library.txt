@@ -42,11 +42,6 @@ kick-start their projects.
       .. Modernization
       .. -------------
 
-   .. .. tab:: Retail
-      .. :tabid: retail
-
-      .. retail-solutions-lib
-
    .. tab:: Manufacturing
       :tabid: manufacturing
 
@@ -153,6 +148,12 @@ kick-start their projects.
 
    .. Modernization
    .. -------------
+
+.. .. tab:: Retail
+   .. :tabid: retail
+
+   .. retail-solutions-lib
+
 
 .. toctree::
    :titlesonly:
