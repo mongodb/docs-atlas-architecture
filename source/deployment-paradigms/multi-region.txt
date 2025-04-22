@@ -238,6 +238,7 @@ and ``eu-west-3``). This ensures data sovereignty since all regions are within
 the EU, while offering high availability if there's a regional outage that 
 affects one of the nodes.
 
+
 .. _arch-center-multi-region-rec-summary:
 
 Recommendations for Multi-Region Deployments
