@@ -23,5 +23,7 @@ financial services
 outside solutions-library folder
 
 .. toctree::
+   :titlesonly:
+   :hidden:
 
    RAG Applications <solutions-library/financial-services/rag-applications>
