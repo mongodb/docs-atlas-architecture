@@ -20,7 +20,7 @@ Landing Zone Design
    :class: onecol
 
 A landing zone is an organization-specific framework for establishing a well-architected and
-pre-configured cloud environment for {+service+}. Before moving any enterprise workload to MongoDB {+service+},
+pre-configured cloud environment. Before moving any enterprise workload to MongoDB {+service+},
 we recommend that our enterprise customers design a landing zone to align all teams and stakeholders
 on requirements for operational efficiency, security, reliability, performance, and cost. 
 
@@ -30,7 +30,7 @@ zone also defines the tools and settings that teams should leverage in
 order to integrate systems with {+service+} and their applications
 connecting to {+service+}.
 
-Designing and implementing a landing zone can save you from spending unnecessary time and resources
+Designing and implementing a landing zone can save a company from spending unnecessary time and resources
 to redesign and rearchitect initial setups later down the line.
 For example, while in talks to move their on-premises databases to MongoDB {+service+}, 
 one of our recent enterprise customers voiced concern over how peer companies are struggling to maintain
@@ -39,46 +39,23 @@ while another peer had faced widely publicized security risks due to inconsisten
 To avoid these risks, our enterprise customer partnered with MongoDB's Professional Services team
 to design a landing zone that enforces company-wide policies including encryption at rest with {+byok+} and FinOps integrations to tag and track spending. 
 
-Why Do You Need a Landing Zone?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Designing and implementing a landing zone framework ensures that all teams and stakeholders 
-are aligned with your requirements around security, performance, reliability, operational efficiency,
-and cost optimization.
-
-Following a thorough landing zone can also save your enterprise from spending unnecessary time and resources
-to redesign and rearchitect initial setups later down the line.
-For example, while in talks to move their on-premises databases to MongoDB {+service+} in 2024, 
-a large financial services company cited concerns that peer companies were struggling to enforce
-security, governance, and cost-efficiency across teams. One peer had accumulated runaway
-cloud costs because FinOps integrations to tag and track spending were not enforced during provisioning time,
-while another peer had faced security risks when individual teams failed to enforce the company's standard
-of encryption at rest with {+byok+}. To avoid these risks, our enterprise customer chose to implement a landing zone
-to enforce company-wide policies and set up their cloud infrastructure for future growth. 
-
 .. _landing-zone-considerations:
 
 What Are Some Landing Zone Considerations?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------
 
 When you create your landing zone, consider how your organization 
 defines the following requirements and how that aligns with {+service+}'s 
 default configurations:
 
-The following considerations include critical and advanced requirements that a landing framework 
-should define before your enterprise begins to move any workload to the cloud. 
-These are the minimum requirements necessary 
-to architect a strong landing zone, which can prevent your enterprise from spending time 
-and resources to redesign and rearchitect its initial setups later down the line: 
-
 Critical Considerations
-```````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~
 
 You should define the following requirements in a landing zone framework 
 before your enterprise begins to move any workload to the cloud:
 
 Advanced Considerations 
-```````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~
 
 To design a more thorough and reliable landing zone, consider definiing the following advanced requirements
 for your organization: 
@@ -150,7 +127,6 @@ for your organization:
 
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-auditing-logging`.
-
    * - Security Requirements
      - Define security requirements including the following: 
 
@@ -189,8 +165,6 @@ for your organization:
 
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-billing-data`.
-
-Finally, prioritize requirements based on their importance and impact.
 
 Design Your Landing Zone
 ------------------------
