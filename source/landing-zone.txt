@@ -106,38 +106,14 @@ for your organization:
      - Description
      - Default Configuration
    * - System Hierarchy Requirements
-     - Define how you will arrange your {+service+} organizations, projects, and clusters
+     - Define how you will organize your {+service+} organizations, projects, and clusters
        to isolate between teams, environments, and billable groups. 
        For example, you can create a separate organization for each business unit to meet 
        security and authorization requirements across teams. 
        
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-hierarchy`.
-   * - Access Controls
-     - Identify MongoDB {+service+} Control Plane access controls, and
-       database access controls for both workload and workforce principals. 
-       Create a comprehensive list of principals and mechanisms for how you will authenticate and authorize.
-       Define {+service+} API key policies, including authorizations and internal policies for key rotation.
 
-       To get recommendations and learn more about this topic, see
-       :ref:`arch-center-auth`.
-   * - Change Control and Auditability Requirements
-     - Clarify any change control or audit controls requirements. This
-       can include change approval processes and tools, along with
-       reporting guidelines.
-
-       To get recommendations and learn more about this topic, see
-       :ref:`arch-center-auditing-logging`.
-
-   * - Network Topology Requirements
-     - Identify network topology requirements, including Cloud Provider
-       regions, private connectivity options, and application
-       deployment topology.
-
-       To get recommendations and learn more about this topic, see
-       the following pages: 
-
-       - :ref:`arch-center-network-security`
    * - Data Retention Requirements
      - Identify and record your data retention policies. This may
        require creating a classification for automation, including
@@ -172,26 +148,38 @@ for your organization:
        - :ref:`arch-center-paradigms`
      - {+service+} automatically configures a minimum three-node replica set when you launch a new cluster. 
        A cluster performs automatic failover if a primary replica set member experiences an outage. 
-   * - Observability Requirements
-     - Identify requirements for external system integrations that you
-       use for observability, such as
-       ingestion of {+service+} log files, activity
-       feed data, audit logs, alerts, and metrics. Identify required alert events, thresholds, recipients, and
-       alert delivery mechanism(s).
+   * - Monitoring and Observability Requirements
+     - Set standards for observability that define which logs and metrics you will monitor and how you will monitor them. For example, set up
+       external system integrations that ingest {+service+} log files, audit logs, or activity feed data, 
+       or configure alerts and reporting guidelines for certain event types.
 
        To get recommendations and learn more about this topic, see
-       :ref:`arch-center-monitoring-alerts`.
+       the following pages:
+       
+       - :ref:`arch-center-monitoring-alerts`.
+       - :ref:`arch-center-auditing-logging`.
+   * - Auditing and Change Control Requirements
+     - Define  any auditing or change control requirements. This
+       can include change approval processes and tools, along with
+       reporting guidelines.
 
-   * - Security
-     - Identify and define any specific security
-       requirements, including requirements for encryption, network security, authentication, and authorization. Consider integration requirements with Security
-       Information and Event Management (SIEM) systems.
+       To get recommendations and learn more about this topic, see
+       :ref:`arch-center-auditing-logging`.
+
+   * - Security Requirements
+     - Define security requirements including the following: 
+
+       - Principals and mechanisms for how to authenticate and authorize access to 
+         the |service| control plane (|service| UI and {+atlas-admin-api+}), database resources, and database operations
+       - Standards for data encryption in transit, at rest, and in use
+       - Network security configurations, such as requiring |tls-ssl| connection encryption, private endpoints and |vpc| connections 
+         to isolate your data flow from the public internet. 
 
        To get recommendations and learn more about this topic, see the following pages:
 
+       - :ref:`arch-center-auth`
        - :ref:`arch-center-data-encryption`
        - :ref:`arch-center-network-security`
-       - :ref:`arch-center-auth`
    * - Compliance Requirements
      - Consider how your data residency determines data sovereignty
        and therefore which laws apply to your data. Identify and account for any specific legal and regulatory
