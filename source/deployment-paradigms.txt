@@ -132,7 +132,8 @@ determine the best fit for your needs:
      - Lower criticality apps. Can experience some downtime or maintenance windows 
        without significant revenue impact.
      - > 1 hr. and < 8 hr.
-     - :ref:`2 regions with 3 nodes and backups <arch-center-multi-region-3+2>`
+     - | :ref:`2 regions with 3 nodes and backups <arch-center-multi-region-5+2>` or
+       | :ref:`3 regions with 1 node in each <arch-center-multi-region-3+3>`
      - $$
 
    * - **Tier 3**
