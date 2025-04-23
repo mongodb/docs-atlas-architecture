@@ -70,8 +70,8 @@ geography that only has 2 regions. In these scenarios, we can use a 3-node,
 
 .. _arch-center-multi-region-5+3:
 
-5 Node, 3 Zone Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5 Node, 3 Region Architecture
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mission critical applications require both high availability and low latency. 
 To achieve this, we recommend an architecture that consists of a minimum of 5 
@@ -85,13 +85,15 @@ region to ensure the same latency on the primary region.
 
 Notes and Considerations
 ````````````````````````
-
 - Your app servers should be deployed in each region that MongoDB nodes are 
   deployed. This gives you the ability to route read requests to the in-region  
   node, which reduces the response time to your end-users, and offloads requests 
   from the primary node. Write requests will always be directed to the primary.
 
-- You should use Privatelink for connecting to the cluster, and VPC peering 
+- You should use 
+  :atlas:`private endpoints <data-federation/admin/manage-private-endpoint/>`
+  for connecting to the cluster, and 
+  :atlas:`VPC peering <atlas-stream-processing/manage-vpc-peering-connections/>` 
   between your app server VPCs. VPC peering ensures that if a network connection 
   is broken or {+service+} in that region goes down, the application tier can 
   still route to the primary node, first over the vpc peering, and then over the 
@@ -110,9 +112,9 @@ Notes and Considerations
 3 Nodes, 2 Regions Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have an application that can experience limited downtime or maintenance 
+If your application can experience limited downtime or maintenance 
 windows without significant revenue impact, you can create an architecture that 
-provides that level of availability by using 5 nodes in 2 regions. You have 3 
+is less expensive by using 3 nodes in 2 regions. You have 3 
 electable nodes spread across the 2 regions, and also have 2 read-only nodes in 
 the secondary region. The electable nodes are in the **majority region**, while 
 the region with fewer electable nodes is the **minority region**.
@@ -133,12 +135,12 @@ This is a good option for:
 - Applications where read operations need high uptime, but write operations can 
   experience some outage.
 
-As with the "Tier 1" solution, this architecture provides increased protection 
+This architecture provides increased protection 
 against data loss, even in full regional outage. The system remains available 
 in read-only mode in the secondary region if the primary region is lost. 
 
-While this architecture is less expensive that the "Tier 1" solution provided 
-above, the reduced cost comes with some caveats:
+While this architecture is less expensive than the 5 Node/3 Region solution 
+provided above, the reduced cost comes with some caveats:
 
 - If the majority region is lost, the minority region is not a fully-functional 
   cluster; it does not have a primary and can only accept reads, but not writes.
@@ -162,10 +164,19 @@ above, the reduced cost comes with some caveats:
 Alternative Solution
 ````````````````````
 For further cost savings, you can design this architecture without the 2 read-only 
-nodes. In addition to the caveats listed above, data size has significant impact 
-on your decision since the data will need to be synchronized to secondaries 
-whenever adding new nodes to the cluster. For example, 1TB of data averages 1
-hour of recovery and synchronization time.
+nodes in the secondary region. In addition to the caveats listed above, data 
+size has significant impact on your decision since the data will need to be 
+synchronized to secondaries whenever adding new nodes to the cluster.
+
+1 Node, 3 Regions Architecture
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If cost is more of a factor, and some downtime is acceptable, you 
+can create an architecture that is less expensive by using 1 node in each of 
+3 regions. You have a electable node in each of the regions, which means if the 
+primary node is unavailable, there is latency as another node is elected primary 
+and writes are routed to that region. However, you still have availability if 
+any region is unavailable.
 
 
 .. _arch-center-multi-region-considerations:
