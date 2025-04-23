@@ -49,13 +49,11 @@ Consider the 3 deployments in the following image:
    :figwidth: 750px
    :alt: An image showing three types of multi-region deployments
 
-The first example shows a deployment to multiple regions in the same geography.  
-This is a good solution if you have an application that has users primarily 
-located in a single geography (in this case, the U.S.). You create a multi-region 
-deployment in three regions within the U.S. This ensures low latency, 
-since all regions are within the same geography, while also offering high 
-availability if there's a regional outage on one of the nodes 
-(for example, if ``us-east-1`` goes down).
+In the first example, where you deploy to multiple regions in the same geography, 
+you have an application that has users primarily located in the US. You create a 
+multi-region deployment in three regions within the US. This ensures low latency, 
+since all regions are within the US, while also offering high availability if 
+there's a regional outage on one of the nodes (for example, ``us-east-1``).
 
 The second example shows a deployment to a single region in each of multiple 
 geographies. This is a good option if your application requires  
@@ -106,7 +104,7 @@ Notes and Considerations
   :atlas:`VPC peering <atlas-stream-processing/manage-vpc-peering-connections/>` 
   between your application server VPCs. VPC peering ensures that if a network connection 
   is broken or {+service+} in that region goes down, the application tier can 
-  still route to the primary node, first over the VPC peering, and then over the 
+  still route to the primary node, first over the vpc peering, and then over the 
   private endpoint. 
 
 - This architecture has the highest cost due to network traffic between regions 
@@ -122,9 +120,9 @@ Notes and Considerations
 5-Node, 2-Region Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have an application that can experience limited downtime or maintenance 
+If your application can experience limited downtime or maintenance 
 windows without significant revenue impact, you can create an architecture that 
-provides that level of availability by using 5 nodes in 2 regions. You have 3 
+is less expensive by using 3 nodes in 2 regions. You have 3 
 electable nodes spread across the 2 regions, and also have 2 read-only nodes in 
 the secondary region. The electable nodes are in the **majority region**, while 
 the region with fewer electable nodes is the **minority region**.
