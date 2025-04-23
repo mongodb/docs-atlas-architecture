@@ -68,7 +68,7 @@ We may also have a high-criticality application but the users are in a single
 geography that only has 2 regions. In these scenarios, we can use a 3-node, 
 2-region deployment architecture.
 
-.. _arch-center-multi-region-tier-1:
+.. _arch-center-multi-region-5+3:
 
 5 Node, 3 Zone Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -105,7 +105,7 @@ Notes and Considerations
   can sustain a full regional failure with no interruption and manual 
   intervention required. 
 
-.. _arch-center-multi-region-tier-2:
+.. _arch-center-multi-region-3+2:
 
 3 Nodes, 2 Regions Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
