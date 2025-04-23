@@ -13,22 +13,25 @@ Multi-Region Latency Reduction Strategies
    :class: onecol
 
 Multi-region {+service+} deployments can be used to enhance performance by reducing 
-latency. There are several factors that impact the latency in a multi-region 
-deployment that you should consider when designing your deployment architecture.
+latency. There are several factors that impact the latency. The following 
+sections list the factors and configuration choices you can make to reduce the 
+associated latency.
 
-Factors Contributing to Latency
--------------------------------
+Physical Distance
+-----------------
+The physical distance is the primary cause of latency. The distance between 
+users and your application, between your application and your data, and between 
+{+cluster+} nodes all impact system latency.
 
-A fundamental factor in latency is the physical distance between users and 
-your application, between your application and your data, and between 
-{+cluster+} nodes. To reduce latency for read operations, then, it's crucial to 
-place both your application and data geographically closer to users. 
+To reduce latency for read operations, it's crucial to place both your 
+application and data geographically closer to users. 
 
 Replication Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
-How you configure replication also contributes to latency in a 
-multi-region deployment, including the following factors:
+:manual:`Replication </replication>` is the copying of data from the Primary 
+node to Secondary nodes. How you configure replication contributes to latency. 
+Consider the following factors:
 
 - **Write concern levels:** There is a trade-off between write durability and 
   write latency. The write concern level you configure (e.g., ``w: "majority"``) 
@@ -36,7 +39,9 @@ multi-region deployment, including the following factors:
   latency for more durable writes. 
 
 - **Order of regions:** The order of regions in your configuration can determine 
-  the priority for the primary node location, which will impact write latency. 
+  the priority for the primary node location, which will impact write latency 
+  depending on where your users are located. For example, if most of your users 
+  are in Asia, your Primary node should also be in a region in Asia. 
 
 - **Mirrored Reads:** Mirrored reads reduce the impact of primary elections 
   following an outage by pre-warming the caches on the secondary nodes. 
@@ -46,21 +51,19 @@ multi-region deployment, including the following factors:
   operations to secondary members. By doing so, you ensure reads go to the 
   geographically closest cluster. 
   
-  .. note:: 
+  .. important:: 
   
-     It is important to keep in mind that there is the possibility of a 
-     secondary returning stale data due to replication lag.
+     Keep in mind that there is the possibility of a secondary returning stale 
+     data due to replication lag.
 
 - **Data Distribution:** Distributing data across regions by using replica sets 
   or sharded clusters is an effective approach when your data is geographically 
-  oriented. For example, you have data that is only read from the EU, and other 
+  oriented. For example, if you have data that is only read from the EU, and other 
   data that is only read in North America, you could create shards that distribute 
   that data appropriately. 
 
-For more information, refer to :manual:`MongoDB Replication </replication>`.
-
 Network Configuration
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 You can further reduce latency using the following network connectivity options: 
 
@@ -72,7 +75,7 @@ You can further reduce latency using the following network connectivity options:
   applications to connect to peered regions.
 
 Data Model and Query Optimization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 Data access also contributes to latency. Consider the following when modeling your 
 MongoDB data:
