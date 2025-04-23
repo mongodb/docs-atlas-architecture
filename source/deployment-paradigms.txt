@@ -54,7 +54,7 @@ and low latency across a larger geographic range than a single-region deployment
 
   For example, you deploy clusters in the {+aws+} regions ``us-east-1`` and ``us-east-2``, 
   both of which are in the United States, and a third cluster in ``eu-west-2``, 
-  which is in Europe. 
+  which is in Europe.
   
 - **Multi-cloud** : 
   Deploys to one or more regions hosted by multiple cloud providers. 
