@@ -2,4 +2,4 @@
    :titlesonly:
    :hidden:
 
-   RAG Applications <solutions-library/financial-services/rag-applications>
+   RAG Applications <solutions-library/rag-applications>

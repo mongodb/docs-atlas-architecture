@@ -1,4 +1,4 @@
 .. toctree::
    :titlesonly:
 
-   AI-driven Media Personalization <solutions-library/media-telco/media-personalization>
+   AI-driven Media Personalization <solutions-library/media-personalization>

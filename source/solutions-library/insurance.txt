@@ -1,5 +1,5 @@
 .. toctree::
    :titlesonly:
 
-   Claim Management <solutions-library/insurance/claim-management>
-   PDF Search </solutions-library/insurance/pdf-search>
+   Claim Management <solutions-library/claim-management>
+   PDF Search </solutions-library/pdf-search>
