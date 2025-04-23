@@ -105,17 +105,19 @@ for your organization:
    * - Consideration
      - Description
      - Default Configuration
-   
    * - System Hierarchy Requirements
-     - Identify how you will group database {+clusters+} for management
-       and isolation. For example, clarify how your team should arrange
-       {+service+} organizations, projects, and {+clusters+}. 
+     - Define how you will arrange your {+service+} organizations, projects, and clusters
+       to isolate between teams, environments, and billable groups. 
+       For example, you can create a separate organization for each business unit to meet 
+       security and authorization requirements across teams. 
        
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-hierarchy`.
    * - Access Controls
      - Identify MongoDB {+service+} Control Plane access controls, and
-       database access controls for both workload and workforce principals. Create a comprehensive list of principals and mechanisms for how you will authenticate and authorize. Define {+service+} API key policies, including authorizations and internal policies for key rotation.
+       database access controls for both workload and workforce principals. 
+       Create a comprehensive list of principals and mechanisms for how you will authenticate and authorize.
+       Define {+service+} API key policies, including authorizations and internal policies for key rotation.
 
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-auth`.
@@ -126,29 +128,16 @@ for your organization:
 
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-auditing-logging`.
-   * - Data Residency Requirements
-     - Identify data residency requirements, such as data sovereignty
-       requirements, or application data partitioning rules.
 
-       To get recommendations and learn more about this topic, see
-       :ref:`arch-center-resiliency`.
    * - Network Topology Requirements
      - Identify network topology requirements, including Cloud Provider
        regions, private connectivity options, and application
        deployment topology.
 
        To get recommendations and learn more about this topic, see
-       the following resources: 
+       the following pages: 
 
        - :ref:`arch-center-network-security`
-       - :ref:`deployment-paradigms` 
-   * - High Availability Requirements
-     - Identify high availability requirements such as cluster topology
-       with node count and priority per region, global write
-       requirements, and partitioning tolerances.
-
-       To get recommendations and learn more about this topic, see
-       :ref:`arch-center-high-availability`.
    * - Data Retention Requirements
      - Identify and record your data retention policies. This may
        require creating a classification for automation, including
@@ -157,21 +146,32 @@ for your organization:
        data must be purged after some duration. Identify performance
        characteristics of retrieval of archived records.
    * - Disaster Recovery Requirements
-     - Identify all disaster recovery requirements, including:
+     - Define and record a disaster recovery plan that meets the following criteria: 
+     
+       - Defines an optimal |rpo| and |rpo| for your organization
+       - Defines a backup snapshot schedule and requirements for snapshot retention and mutli-region distribution 
+       - Identifies recovery methods such as snapshot restores, queryable backups, document versioning, region shifting, 
+         or provider pivot
+       - Defines disaster recovery procedures for possible disaster scenarios such as zonal, regional, or cloud-provider 
+         outages, resource failures, data corruption events, and more. 
 
-       - Identify and record your current disaster recovery plan. 
-       - Define backup snapshot schedules and retentions.
-       - Identify Restore Time Objective (RTO) and Restore Point
-         Objective (RPO). 
-       - Define backup snapshot locations. 
-       - Identify Point-in-time restore option selection. 
-       - Define recovery methodologies such as restore, queryable
-         backups, document versioning, region shifting, and cloud
-         provider pivot.
+       To get recommendations and learn more about this topic, see
+       the following pages: 
+       
+       - :ref:`arch-center-dr`
+       - :ref:`arch-center-backups`
+   * - High Availability Requirements
+     - Set standards for high availability that ensure system operation during planned or 
+       unplanned outages. These requirements will partially determine the number of nodes, 
+       regions, and cloud providers in your deployment paradigm. 
 
-       To get recommendations and learn more about this topic, see :ref:`arch-center-dr` and
-       :ref:`arch-center-backups`.
+       To get recommendations and learn more about this topic, see
+       the following pages: 
 
+       - :ref:`arch-center-high-availability`
+       - :ref:`arch-center-paradigms`
+     - {+service+} automatically configures a minimum three-node replica set when you launch a new cluster. 
+       A cluster performs automatic failover if a primary replica set member experiences an outage. 
    * - Observability Requirements
      - Identify requirements for external system integrations that you
        use for observability, such as
@@ -187,33 +187,26 @@ for your organization:
        requirements, including requirements for encryption, network security, authentication, and authorization. Consider integration requirements with Security
        Information and Event Management (SIEM) systems.
 
-       To get recommendations and learn more about this topic, see the following resources:
+       To get recommendations and learn more about this topic, see the following pages:
 
        - :ref:`arch-center-data-encryption`
        - :ref:`arch-center-network-security`
        - :ref:`arch-center-auth`
-   * - Legal and Compliance Requirements
-     - Identify and define any specific legal or compliance
-       requirements not clearly articulated within other requirements
-       definitions. 
+   * - Compliance Requirements
+     - Consider how your data residency determines data sovereignty
+       and therefore which laws apply to your data. Identify and account for any specific legal and regulatory
+       requirements not clearly articulated within other categories of requirements. 
 
-       To learn more about compliance, see
-       :ref:`arch-center-compliance`.
+       Your data residency depends on which regions and geographies you choose to deploy to in your deployment paradigm, 
+       and whether you choose to partition your data between geographies.  
+
+       To get recommendations and learn more about this topic, see the following pages:
+
+       - :ref:`arch-center-compliance`
+       - :ref:`arch-center-paradigms`
    * - Maintenance Requirements
      - Identify whether you have any specific requirements regarding
        Maintenance windows or upgrade deferments.
-   * - Backup Snapshot Requirements
-     - Identify all backup snapshot requirements, including:
-     
-       - Identify snapshot schedule, retention, and multi-region
-         distribution requirements.  
-       - Identify Point-in-time (PIT) backup requirements. 
-       - Identify Encryption at rest requirements for backup snapshots.
-       - Identify snapshot access requirements (for example, should
-         snapshot download be allowed?).
-
-       To get recommendations and learn more about this topic, see
-       :ref:`arch-center-backups`.
    * - Billing Requirements
      - Identify any specific requirements to billing, such as
        integrations with FinOps tools for reporting and charge-back.
