@@ -1,42 +1,43 @@
 .. \_arch-center-is-framework-rapid-agent-deployment:
 
-====================================
+=======================================
 Framework for Rapid AI Agent Deployment
-====================================
+=======================================
 
 .. facet::
-:name: genre
-:values: tutorial
+   :name: genre
+   :values: tutorial
 
 .. contents:: On this page
-:local:
-:backlinks: none
-:depth: 1
-:class: singlecol
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
 
 MongoDB Atlas enables rapid development of AI agents across industries.
 
 **Use cases:** `App Driven-Analytics
-<https://www.mongodb.com/resources/solutions/use-cases/application-driven-intelligence>`**, `Gen AI
-<https://www.mongodb.com/use-cases/artificial-intelligence>`**
+<https://www.mongodb.com/resources/solutions/use-cases/application-driven-intelligence>`__, `Gen AI
+<https://www.mongodb.com/use-cases/artificial-intelligence>`__
 
 **Industries:** `Manufacturing and Mobility
-<https://www.mongodb.com/solutions/industries/manufacturing>`**, `Financial Services
-<https://www.mongodb.com/solutions/industries/financial-services>`**, `Insurance
-<https://www.mongodb.com/solutions/industries/insurance>`**, `Retail
-<https://www.mongodb.com/solutions/industries/retail>`**, `Healthcare
-<https://www.mongodb.com/solutions/industries/healthcare>`**, `Telecommunications
-<https://www.mongodb.com/solutions/industries/telecommunications>`**
+<https://www.mongodb.com/solutions/industries/manufacturing>`__, `Financial Services
+<https://www.mongodb.com/solutions/industries/financial-services>`__, `Insurance
+<https://www.mongodb.com/solutions/industries/insurance>`__, `Retail
+<https://www.mongodb.com/solutions/industries/retail>`__, `Healthcare
+<https://www.mongodb.com/solutions/industries/healthcare>`__, `Telecommunications
+<https://www.mongodb.com/solutions/industries/telecommunications>`__
 
-**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`**, `Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`**, `Atlas Database 
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__, `Atlas Database 
 <https://www.mongodb.com/products/platform/atlas-database>`
 
-**Partners:** `Langchain <https://cloud.mongodb.com/ecosystem/langchain>`**, `Cohere
-<https://cloud.mongodb.com/ecosystem/cohere>`**, `AWS Bedrock 
+**Partners:** `Langchain <https://cloud.mongodb.com/ecosystem/langchain>`__, `Cohere
+<https://cloud.mongodb.com/ecosystem/cohere>`__, `AWS Bedrock 
 <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`
 
-## Solution Overview
+Solution Overview
+-----------------
 
 In 2025, agentic AI applications are no longer just a hobby project.
 Companies around the world are investing in software to incorporate
@@ -104,7 +105,8 @@ to meet the unique demands of their industries or projects.
 
 Basic components of an AI agent.
 
-## Reference Architectures
+Reference Architectures
+-----------------------
 
 **With MongoDB**:
 
@@ -161,7 +163,7 @@ computational load, and maintain high availability, ensuring consistent performa
 data grows exponentially. MongoDB replica sets provide robust high availability out of the box that underpins
 the reliability and resilience of AI agents.
 
-`Coinbase <https://www.mongodb.com/solutions/customer-case-studies/coinbase>`\_\_,
+`Coinbase <https://www.mongodb.com/solutions/customer-case-studies/coinbase>`__,
 one of the largest cryptocurrency exchanges in the U.S.,
 has effectively leveraged MongoDB to significantly enhance its platform scalability across
 700 MongoDB clusters and overcome high volumes of unpredictable market traffic spikes.
