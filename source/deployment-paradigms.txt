@@ -96,11 +96,13 @@ determine the best fit for your needs:
      - :ref:`3 Regions with 5 or more nodes <arch-center-multi-region-tier-1>`
      - $$$
 
-   * - **Performance**
-     - Low latency for users within the chosen region; higher latency for users in more distant regions
-     - Low latency for users within the chosen geography
-     - Low latency for users within all of the chosen geographies
-     - Low latency for users within all of the chosen geographies
+   * - **Tier 2**
+     - Lower criticality apps. Can experience some downtime or maintenance windows 
+       without significant revenue impact.
+     - > 1 hr. and < 8 hr.
+     - | :ref:`2 regions with 3 nodes and backups <arch-center-multi-region-5+2>` or
+       | :ref:`3 regions with 1 node in each <arch-center-multi-region-3+3>`
+     - $$
 
    * - **Tier 3**
      - Lowest criticality apps. Can be done for 24 hrs without significant 

@@ -101,7 +101,10 @@ Notes and Considerations
   node, which reduces the response time to your end-users, and offloads requests 
   from the primary node. Write requests will always be directed to the primary.
 
-- You should use Privatelink for connecting to the cluster, and VPC peering 
+- You should use 
+  :atlas:`private endpoints <data-federation/admin/manage-private-endpoint/>`
+  for connecting to the cluster, and 
+  :atlas:`VPC peering <atlas-stream-processing/manage-vpc-peering-connections/>` 
   between your app server VPCs. VPC peering ensures that if a network connection 
   is broken or {+service+} in that region goes down, the application tier can 
   still route to the primary node, first over the VPC peering, and then over the 
@@ -115,9 +118,9 @@ Notes and Considerations
   can sustain a full regional failure with no interruption and manual 
   intervention required. 
 
-.. _arch-center-multi-region-tier-2:
+.. _arch-center-multi-region-5+2:
 
-3-Node, 2-Region Architecture
+5-Node, 2-Region Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have an application that can experience limited downtime or maintenance 
@@ -130,7 +133,7 @@ the region with fewer electable nodes is the **minority region**.
 This is also an appropriate architecture if you need high availability and low 
 latency in a geography that only has 2 regions.
 
-.. figure:: /includes/images/multi-region-3+2.png
+.. figure:: /includes/images/multi-region-5+2.png
    :figwidth: 750px
    :alt: An image showing three types of multi-region deployments
 
@@ -169,28 +172,16 @@ provided above, the reduced cost comes with some caveats:
 - In sharded clusters, if your MongoDB process didn't replicate chunk migrations, 
   the data inconsistency might cause orphaned chunks.
 
-Alternative Solution
+Lower-Cost Variation
 ````````````````````
-For further cost savings, you can design this architecture without the 2 read-only 
-<<<<<<< HEAD
-<<<<<<< HEAD
-nodes. In addition to the caveats listed above, data size has significant impact 
+For further cost savings, you can design this architecture without the 2 read-only nodes. In addition to the caveats listed above, data size has significant impact 
 on your decision since the data will need to be synchronized to secondaries 
 whenever adding new nodes to the cluster. For example, 1TB of data averages 1
 hour of recovery and synchronization time.
-=======
-nodes in the secondary region. In addition to the caveats listed above, data 
-size has significant impact on your decision since the data will need to be 
-synchronized to secondaries whenever adding new nodes to the cluster.
-=======
-nodes. In addition to the caveats listed above, data size has a significant impact 
-on your decision since the data will need to be synchronized to secondaries 
-whenever adding new nodes to the cluster. For example, 1TB of data averages 1
-hour of recovery and synchronization time.
->>>>>>> 92812a5 (more combining of multi-region.txt pages)
 
+.. _arch-center-multi-region-3+3:
 
-1-Node, 3-Region Architecture
+3-Node, 3-Region Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If cost is more of a factor, and some downtime is acceptable, you 
@@ -200,12 +191,11 @@ primary node is unavailable, there is latency as another node is elected primary
 and writes are routed to that region. However, you still have availability if 
 any region is unavailable.
 
-<<<<<<< HEAD
->>>>>>> 94cf535 (fix TOC and move content in wrong multi-region page to correct location)
+.. figure:: /includes/images/multi-region-5+3.png
+   :figwidth: 750px
+   :alt: An image showing three types of multi-region deployments
 
 
-=======
->>>>>>> 92812a5 (more combining of multi-region.txt pages)
 .. _arch-center-multi-region-considerations:
 
 Considerations for Multi-Region Deployments
@@ -284,10 +274,6 @@ Recommendations for Multi-Region Deployments
 
 .. include:: /includes/rec-list.rst
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 92812a5 (more combining of multi-region.txt pages)
 .. toctree::
    :titlesonly:
 
