@@ -192,7 +192,7 @@ primary node is unavailable, there is latency as another node is elected primary
 and writes are routed to that region. However, you still have availability if 
 any region is unavailable.
 
-.. figure:: /includes/images/multi-region-5+3.png
+.. figure:: /includes/images/multi-region-3+3.png
    :figwidth: 750px
    :alt: An image showing three types of multi-region deployments
 
