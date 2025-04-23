@@ -22,7 +22,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building Continuously Updating RAG Applications
-            :url: https://mongodb.com/docs/atlas/architecture/solutions-library/financial-services/rag-applications
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/financial-services/rag-applications/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -54,7 +54,7 @@ kick-start their projects.
 
          .. card::
             :headline: Real-time Audio-Based AI Diagnostics
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/manufacturing/audio-based-AI-diagnostics/
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/manufacturing/audio-based-AI-diagnostics/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -82,7 +82,7 @@ kick-start their projects.
 
          .. card::
             :headline: Claim management using LLMs and vector search for RAG
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/insurance/claim-management
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/insurance/claim-management/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -91,7 +91,7 @@ kick-start their projects.
 
          .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/insurance/pdf-search
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/insurance/pdf-search/
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
@@ -123,7 +123,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Driven Media Personalization: MongoDB and Vector Search
-            :url: https://mongodb.com/docs/atlas/architecture/industry-solutions/media-personalization/
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/media-telco/media-personalization/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -153,7 +153,6 @@ kick-start their projects.
    .. :tabid: retail
 
    .. retail-solutions-lib
-
 
 .. toctree::
    :titlesonly:
