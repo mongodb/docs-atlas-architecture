@@ -19,25 +19,22 @@ Landing Zone Design
    :depth: 2
    :class: onecol
 
-A landing zone is an organization-specific framework for establishing a well-architected and
-pre-configured cloud environment. Before moving any enterprise workload to MongoDB {+service+},
-we recommend that our enterprise customers design a landing zone to align all teams and stakeholders
-on requirements for operational efficiency, security, reliability, performance, and cost. 
+A landing zone is a framework for establishing a well-architected and
+pre-configured cloud environment. An {+service+} landing zone defines company-wide requirements
+for operational efficiency, security, reliability, performance, and cost,
+as well as the tools and procedures that teams must use to meet these requirements. 
+We recommend that all enterprise customers design and publicize a landing zone before moving workloads to MongoDB {+service+}.
 
-An {+service+} landing zone defines the default, minimum, and maximum
-settings that teams use to deploy workloads in {+service+}. A landing
-zone also defines the tools and settings that teams should leverage in
-order to integrate systems with {+service+} and their applications
-connecting to {+service+}.
-
-Designing and implementing a landing zone can save a company from spending unnecessary time and resources
+Designing and implementing a landing zone can save you from spending unnecessary time and resources
 to redesign and rearchitect initial setups later down the line.
 For example, while in talks to move their on-premises databases to MongoDB {+service+}, 
-one of our recent enterprise customers voiced concern over how peer companies are struggling to maintain
-security and cost-efficiency across teams. One peer had accumulated runaway cloud costs due to a lack of spending oversight,
-while another peer had faced widely publicized security risks due to inconsistent encryption policies across teams.
+one of our recent enterprise customers voiced concerns over how peer financial services companies are struggling to enforce
+company-wide standards for security and cost-efficiency. 
+One peer had faced widely publicized security risks due to inconsistent encryption policies across teams,
+while another had accumulated runaway cloud costs due to forgotten and redundant servers.
 To avoid these risks, our enterprise customer partnered with MongoDB's Professional Services team
-to design a landing zone that enforces company-wide policies including encryption at rest with {+byok+} and FinOps integrations to tag and track spending. 
+to design a landing zone that aligns all teams and stakeholders on requirements
+including encryption at rest with {+byok+} and FinOps integrations to tag and track spending. 
 
 .. _landing-zone-considerations:
 
