@@ -41,21 +41,14 @@ including encryption at rest with {+byok+} and FinOps integrations to tag and tr
 What Are Some Landing Zone Considerations?
 ------------------------------------------
 
-When you create your landing zone, consider how your organization 
-defines the following requirements and how that aligns with {+service+}'s 
-default configurations:
+As you create your landing zone, define requirements for the following considerations 
+and consider how your requirements align with {+service+}'s default configurations.
 
 Critical Considerations
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Before moving any workload to MongoDB {+service+}, design a landing zone 
 that defines requirements for the following critical considerations: 
-
-Advanced Considerations 
-~~~~~~~~~~~~~~~~~~~~~~~
-
-To design a more comprehensive landing zone, consider definiing requirements for the following advanced considerations
-for your organization: 
 
 .. list-table::
    :header-rows: 1
@@ -72,14 +65,32 @@ for your organization:
        
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-hierarchy`.
+   * - Security
+     - Define security requirements including the following: 
 
-   * - Data Retention
-     - Identify and record your data retention policies. This may
-       require creating a classification for automation, including
-       creation of archive or purge automation. In some cases, data
-       must be preserved for a certain duration, whereas in other cases
-       data must be purged after some duration. Identify performance
-       characteristics of retrieval of archived records.
+       - Principals and mechanisms for how to authenticate and authorize access to 
+         the |service| control plane (|service| UI and {+atlas-admin-api+}), database resources, and database operations
+       - Standards for data encryption in transit, at rest, and in use
+       - Network security configurations, such as requiring |tls-ssl| connection encryption, private endpoints and |vpc| connections 
+         to isolate your data flow from the public internet
+
+       To get recommendations and learn more about this topic, see the following pages:
+
+       - :ref:`arch-center-auth`
+       - :ref:`arch-center-data-encryption`
+       - :ref:`arch-center-network-security`
+   * - Compliance
+     - Consider how your data residency determines data sovereignty
+       and therefore which laws apply to your data. Identify and account for any specific legal and regulatory
+       requirements not clearly articulated within other categories of requirements. 
+
+       Your data residency depends on which regions and geographies you choose to deploy to in your deployment paradigm, 
+       and whether you choose to partition your data between geographies.  
+
+       To get recommendations and learn more about this topic, see the following pages:
+
+       - :ref:`arch-center-compliance`
+       - :ref:`arch-center-paradigms`
    * - Disaster Recovery
      - Define and record a disaster recovery plan that meets the following criteria: 
      
@@ -107,6 +118,36 @@ for your organization:
        - :ref:`arch-center-paradigms`
      - {+service+} automatically configures a minimum three-node replica set when you launch a new cluster. 
        A cluster performs automatic failover if a primary replica set member experiences an outage. 
+   * - Billing
+     - Identify any specific requirements to billing, such as
+       integrations with FinOps tools for reporting and charge-back.
+       You can build these requirements into the automation and
+       provisioning process for {+service+} {+clusters+} to facilitate
+       this integration.
+
+       To get recommendations and learn more about this topic, see
+       :ref:`arch-center-billing-data`.
+
+Advanced Considerations 
+~~~~~~~~~~~~~~~~~~~~~~~
+
+To design a more comprehensive landing zone, consider definiing requirements for the following advanced considerations
+for your organization: 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 50 35 
+
+   * - Consideration
+     - Description
+     - Default Configuration
+   * - Data Retention
+     - Identify and record your data retention policies. This may
+       require creating a classification for automation, including
+       creation of archive or purge automation. In some cases, data
+       must be preserved for a certain duration, whereas in other cases
+       data must be purged after some duration. Identify performance
+       characteristics of retrieval of archived records.
    * - Monitoring and Observability
      - Set standards for observability that define which logs and metrics you will monitor and how you will monitor them. For example, set up
        external system integrations that ingest {+service+} log files, audit logs, or activity feed data, 
@@ -124,44 +165,9 @@ for your organization:
 
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-auditing-logging`.
-   * - Security
-     - Define security requirements including the following: 
-
-       - Principals and mechanisms for how to authenticate and authorize access to 
-         the |service| control plane (|service| UI and {+atlas-admin-api+}), database resources, and database operations
-       - Standards for data encryption in transit, at rest, and in use
-       - Network security configurations, such as requiring |tls-ssl| connection encryption, private endpoints and |vpc| connections 
-         to isolate your data flow from the public internet. 
-
-       To get recommendations and learn more about this topic, see the following pages:
-
-       - :ref:`arch-center-auth`
-       - :ref:`arch-center-data-encryption`
-       - :ref:`arch-center-network-security`
-   * - Compliance
-     - Consider how your data residency determines data sovereignty
-       and therefore which laws apply to your data. Identify and account for any specific legal and regulatory
-       requirements not clearly articulated within other categories of requirements. 
-
-       Your data residency depends on which regions and geographies you choose to deploy to in your deployment paradigm, 
-       and whether you choose to partition your data between geographies.  
-
-       To get recommendations and learn more about this topic, see the following pages:
-
-       - :ref:`arch-center-compliance`
-       - :ref:`arch-center-paradigms`
    * - Maintenance
      - Identify whether you have any specific requirements regarding
        Maintenance windows or upgrade deferments.
-   * - Billing
-     - Identify any specific requirements to billing, such as
-       integrations with FinOps tools for reporting and charge-back.
-       You can build these requirements into the automation and
-       provisioning process for {+service+} {+clusters+} to facilitate
-       this integration.
-
-       To get recommendations and learn more about this topic, see
-       :ref:`arch-center-billing-data`.
 
 Design Your Landing Zone
 ------------------------
