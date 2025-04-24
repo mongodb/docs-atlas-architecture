@@ -358,7 +358,7 @@ started with building agentic solutions, as well as maintain them, via common, c
 
 Working in this framework can not only teach you and your software teams how to get started with building agentic solutions,
 it can also help them build repeatable patterns and components that make it easier
-to scale and maintain your business solutions for the long term. FOR TESTING
+to scale and maintain your business solutions for the long term.
 
 Authors
 -------
