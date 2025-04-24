@@ -30,7 +30,7 @@ MongoDB Atlas enables rapid development of AI agents across industries.
 
 **Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__, `Atlas Database 
-<https://www.mongodb.com/products/platform/atlas-database>`
+<https://www.mongodb.com/products/platform/atlas-database>`__
 
 **Partners:** `Langchain <https://cloud.mongodb.com/ecosystem/langchain>`__, `Cohere
 <https://cloud.mongodb.com/ecosystem/cohere>`__, `AWS Bedrock 
@@ -128,7 +128,8 @@ while enabling efficient querying and reusability of past insights.
 
 Agentic AI reference architecture.
 
-## Why MongoDB
+Why MongoDB
+-----------
 
 MongoDB plays a pivotal role in enabling agentic AI. MongoDB's unique combination of flexibility,
 performance, and scalability makes it an ideal choice for enabling artificial intelligence.
@@ -185,7 +186,8 @@ MongoDB enables LangGraph-powered AI Agents to maintain sophisticated data and m
 track multi-step reasoning processes, and implement advanced state management that can
 persist across sessions and provide comprehensive auditability of AI decision-making processes.
 
-## Building the Solution
+Building the Solution
+---------------------
 
 .. procedure::
    :style: normal
@@ -335,7 +337,8 @@ persist across sessions and provide comprehensive auditability of AI decision-ma
 
       Logical architecture.
 
-## Key Learnings
+Key Learnings
+-------------
 
 Agentic AI ushers in an entirely new type of software—one with the ability to dramatically alter the way we process data to drive richer
 and more efficient business data processing outcomes.
@@ -357,7 +360,8 @@ Working in this framework can not only teach you and your software teams how to 
 it can also help them build repeatable patterns and components that make it easier
 to scale and maintain your business solutions for the long term. FOR TESTING
 
-## Authors
+Authors
+-------
 
 - Julian Boronat, MongoDB
 - Peyman Parsi, MongoDB
