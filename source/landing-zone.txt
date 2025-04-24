@@ -20,17 +20,17 @@ Landing Zone Design
    :class: onecol
 
 A landing zone is a framework for establishing a well-architected and
-pre-configured cloud environment. An {+service+} landing zone defines company-wide requirements
+pre-configured cloud environment. An {+service+} landing zone defines organization-specific requirements
 for operational efficiency, security, reliability, performance, and cost,
-as well as the tools and procedures that teams must use to meet these requirements. 
-We recommend that all enterprise customers design and publicize a landing zone before moving workloads to MongoDB {+service+}.
+as well as the tools, procedures, and {+service+} configurations that teams must use to meet these requirements. 
+We recommend that all enterprise customers design a landing zone before moving workloads to MongoDB {+service+}.
 
-Designing and implementing a landing zone can save you from spending unnecessary time and resources
-to redesign and rearchitect initial setups later down the line.
+Designing and implementing a landing zone can help you avoid expensive 
+efforts to redesign initial setups later down the line. 
 For example, while in talks to move their on-premises databases to MongoDB {+service+}, 
-one of our recent enterprise customers voiced concerns over how peer financial services companies are struggling to enforce
-company-wide standards for security and cost-efficiency. 
-One peer had faced widely publicized security risks due to inconsistent encryption policies across teams,
+one of our recent enterprise customers voiced concerns over how peer financial services 
+companies were struggling to enforce standards for security and cost-efficiency across teams. 
+One peer had faced security risks due to inconsistent encryption policies across business units,
 while another had accumulated runaway cloud costs due to forgotten and redundant servers.
 To avoid these risks, our enterprise customer partnered with MongoDB's Professional Services team
 to design a landing zone that aligns all teams and stakeholders on requirements
@@ -58,10 +58,10 @@ that defines requirements for the following critical considerations:
      - Description
      - Default Configuration
    * - System Hierarchy
-     - Define how you will organize your {+service+} organizations, projects, and clusters
-       to isolate between teams, environments, and billable groups. 
-       For example, you can create a separate organization for each business unit to meet 
-       security and authorization requirements across teams. 
+     - Choose a deployment hierarchy that groups your {+service+} organizations, projects, and clusters
+       in order to isolate between business units, environments, and billable groups as needed. 
+       For example, you can group business units into individual organizations to ensure that 
+       sales credentials cannot authenticate to product resources. 
        
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-hierarchy`.
@@ -79,8 +79,13 @@ that defines requirements for the following critical considerations:
        - :ref:`arch-center-auth`
        - :ref:`arch-center-data-encryption`
        - :ref:`arch-center-network-security`
+     - By default, all access to your clusters is blocked and 
+       you must explicitly allow inbound connections through your IP access list or with {+vpc+} peering.
+       Atlas requires all users to authenticate to access {+service+} resources, and administrators must 
+       set up authentication and authorization methods. 
+       {+service+} automatically encrypts data in transit using |tls| and data at rest using :ref:`cloud provider disk encryption <security-kms-encryption>`. 
    * - Compliance
-     - Consider how your data residency determines data sovereignty
+     - Consider how your deployment's data residency determines data sovereignty
        and therefore which laws apply to your data. Identify and account for any specific legal and regulatory
        requirements not clearly articulated within other categories of requirements. 
 
@@ -116,10 +121,13 @@ that defines requirements for the following critical considerations:
 
        - :ref:`arch-center-high-availability`
        - :ref:`arch-center-paradigms`
-     - {+service+} automatically configures a minimum three-node replica set when you launch a new cluster. 
-       A cluster performs automatic failover if a primary replica set member experiences an outage. 
+     - {+service+} automatically configures a minimum three-node replica set when you launch a new cluster,
+       and supports automatic failover if a primary replica set member experiences an outage. If you deploy 
+       to a region that supports availability zones, {+service+} automatically distributes nodes across zones. 
+       Deploying to additional regions, geographies, and cloud providers can provide additional availability in the case of 
+       regional, geographic, or cloud provider outages. 
    * - Billing
-     - Identify any specific requirements to billing, such as
+     - Identify any specific requirements for billing, such as
        integrations with FinOps tools for reporting and charge-back.
        You can build these requirements into the automation and
        provisioning process for {+service+} {+clusters+} to facilitate
@@ -127,12 +135,13 @@ that defines requirements for the following critical considerations:
 
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-billing-data`.
+     - MongoDB Charts billing dashboards contain prebuilt charts that display 
+       billing data across categories and periods of time. 
 
 Advanced Considerations 
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-To design a more comprehensive landing zone, consider definiing requirements for the following advanced considerations
-for your organization: 
+To design a more comprehensive landing zone, consider definiing requirements for the following advanced considerations: 
 
 .. list-table::
    :header-rows: 1
@@ -168,6 +177,9 @@ for your organization:
    * - Maintenance
      - Identify whether you have any specific requirements regarding
        Maintenance windows or upgrade deferments.
+     - {+service+} automatically performs maintenance on your cluster in a rolling manner, 
+       but you can configure custom maintenance windows or protected hours for more control 
+       over when maintenance and standard updates can occur. 
 
 Design Your Landing Zone
 ------------------------
