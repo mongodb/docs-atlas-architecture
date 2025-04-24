@@ -99,11 +99,11 @@ to meet the unique demands of their industries or projects.
 
                     ????? HOW TO UPLOAD SVG IMAGES
 
-.. figure:: /includes/images/industry-solutions/framework-rapid-ai-agent.svg
-:figwidth: 1200px
-:alt: Real-time wind turbine diagnosis
+.. figure:: /includes/images/industry-solutions/ai-agent.svg
+   :figwidth: 1200px
+   :alt: Real-time wind turbine diagnosis
 
-Basic components of an AI agent.
+   Figure 1. Basic components of an AI agent.
 
 Reference Architectures
 -----------------------
@@ -123,8 +123,8 @@ while enabling efficient querying and reusability of past insights.
                     ????? HOW TO UPLOAD SVG IMAGES
 
 .. figure:: /includes/images/industry-solutions/framework-rapid-reference-architecture.svg
-:figwidth: 1200px
-:alt: Real-time wind turbine diagnosis
+   :figwidth: 1200px
+   :alt: Real-time wind turbine diagnosis
 
 Agentic AI reference architecture.
 
@@ -188,9 +188,9 @@ persist across sessions and provide comprehensive auditability of AI decision-ma
 ## Building the Solution
 
 .. procedure::
-:style: normal
+   :style: normal
 
-.. step:: **Step 1: Include meaningful CSV data for your use case**
+   .. step:: **Include meaningful CSV data for your use case**
 
       The data should be relevant to your use case and respect the following guidelines:
 
@@ -201,7 +201,7 @@ persist across sessions and provide comprehensive auditability of AI decision-ma
 
       Sample data:
 
-      .. code-block:: sh
+      .. code-block:: none
 
          timestamp,gdp,interest_rate,unemployment_rate,vix
          2025-02-19T13:00:00Z,2.5,1.75,3.8,15
@@ -222,7 +222,7 @@ persist across sessions and provide comprehensive auditability of AI decision-ma
 
       Sample data:
 
-     .. code-block:: sh
+      .. code-block:: none
 
          query,recommendation
          GDP growth slowing,Consider increasing bond assets to mitigate risks from potential economic slowdown.
@@ -236,7 +236,7 @@ persist across sessions and provide comprehensive auditability of AI decision-ma
          VIX within normal range (12-20),Maintain current asset allocation as market conditions are stable.
          Combination of rising interest rates and high VIX,Focus on bond assets to hedge against market volatility and borrowing cost impacts.
 
-.. step:: **Step 2: Set up MongoDB database and collections**
+   .. step:: **Step 2: Set up MongoDB database and collections**
 
       Log in to MongoDB Atlas and create a database named “agentic_<YOUR_USE_CASE>,” e.g.” agentic_macro_indicators.” Ensure the name is reflected in the environment variables.
       Create the following collections:
@@ -247,7 +247,7 @@ persist across sessions and provide comprehensive auditability of AI decision-ma
 
       Go to the config folder and create or update the JSON config.json file. The file should contain the following structure:
 
-      .. code-block:: sh
+      .. code-block:: json
 
                 {
         "CSV_DATA": "data/csv/<YOUR_FILE_NAME>.csv",
@@ -355,7 +355,7 @@ started with building agentic solutions, as well as maintain them, via common, c
 
 Working in this framework can not only teach you and your software teams how to get started with building agentic solutions,
 it can also help them build repeatable patterns and components that make it easier
-to scale and maintain your business solutions for the long term.
+to scale and maintain your business solutions for the long term. FOR TESTING
 
 ## Authors
 
