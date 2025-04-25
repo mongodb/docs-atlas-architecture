@@ -262,7 +262,7 @@ create the following resources. Change the IDs and names to use your values:
          Alternatively, to simplify the configuration process, you can use the
          `encryption at rest Terraform module <https://registry.terraform.io/modules/terraform-mongodbatlas-modules/encryption-at-rest/mongodbatlas/latest>`__.
 
-      .. include:: /includes/examples/tf-example-aws-kms.rst
+      .. include:: /includes/examples/terraform/tf-example-aws-kms.rst
    
    .. tab:: Azure
       :tabid: azure
@@ -272,12 +272,12 @@ create the following resources. Change the IDs and names to use your values:
          For a complete configuration example, see
          :github:`Atlas Terraform Provider Example <mongodb/terraform-provider-mongodbatlas/tree/master/examples/mongodbatlas_encryption_at_rest/azure>`.
 
-      .. include:: /includes/examples/tf-example-azure-key-vault.rst
+      .. include:: /includes/examples/terraform/tf-example-azure-key-vault.rst
    
    .. tab:: GCP
       :tabid: gcp
 
-      .. include:: /includes/examples/tf-example-gcp-kms.rst
+      .. include:: /includes/examples/terraform/tf-example-gcp-kms.rst
 
 For more configuration options and info about this example, 
 see `Terraform documentation 
