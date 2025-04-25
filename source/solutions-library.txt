@@ -42,7 +42,7 @@ kick-start their projects.
       .. Modernization
       .. -------------
 
-   .. tab:: Manufacturing
+   .. tab:: Manufacturing & Motion
       :tabid: manufacturing
 
       IoT 
@@ -158,7 +158,7 @@ kick-start their projects.
    :titlesonly:
 
    Financial Services </solutions-library/financial-services>
-   Manufacturing </solutions-library/manufacturing>
+   Manufacturing & Motion </solutions-library/manufacturing>
    Insurance </solutions-library/insurance>
    Media & Telco </solutions-library/media-telco>
 

@@ -1,5 +1,5 @@
 .. toctree::
    :titlesonly:
 
-   Claim Management <solutions-library/claim-management>
-   PDF Search </solutions-library/pdf-search>
+   Gen AI <solutions-library/insurance-gen-ai>
+   App-Driven Analytics <solutions-library/insurance-app-driven-analytics>
