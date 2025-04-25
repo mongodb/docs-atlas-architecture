@@ -32,7 +32,7 @@ one of our recent enterprise customers voiced concerns over how peer financial s
 companies were struggling to enforce standards for security and cost-efficiency across teams. 
 One peer had faced security risks due to inconsistent encryption policies across business units,
 while another had accumulated runaway cloud costs due to forgotten and redundant servers.
-To avoid these risks, our enterprise customer partnered with MongoDB's Professional Services team
+To avoid these risks, our enterprise customer partnered with {+ps+} team
 to design a landing zone that aligns all teams and stakeholders on requirements
 including encryption at rest with {+byok+} and FinOps integrations to tag and track spending. 
 
@@ -169,9 +169,9 @@ To design a more comprehensive landing zone, consider definiing requirements for
 Design Your Landing Zone
 ------------------------
 
-MongoDB's Professional Services team partners with enterprise
+{+ps+} team partners with enterprise
 customers to create custom landing zones for {+service+}. If you're
-working with MongoDB's Professional Services, the resources on this
+working with {+ps+}, the resources on this
 page can also help you plan for those discussions.
 
 Use the following resources as a starting point for your {+service+} landing zone.
