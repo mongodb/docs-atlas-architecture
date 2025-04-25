@@ -30,9 +30,6 @@ kick-start their projects.
             continuously update, store, and search embeddings through a unified
             interface. 
 
-      .. IoT 
-      .. ---
-
       .. Fraud Prevention
       .. ----------------
 
@@ -61,14 +58,11 @@ kick-start their projects.
             Find out how AI is being used in renewable energy by leveraging MongoDB 
             Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
 
-      .. Fraud Prevention
-      .. ----------------
+      .. Gen AI 
+      .. ------
 
       .. App-Driven Analytics
       .. --------------------
-
-      .. Modernization
-      .. -------------
 
    .. tab:: Insurance
       :tabid: insurance
@@ -99,20 +93,11 @@ kick-start their projects.
             capabilities by integrating MongoDB Atlas Vector Search,
             Superduper.io, and LLMs. 
 
-      .. IoT 
-      .. ---
-
-      .. Fraud Prevention
-      .. ----------------
-
       .. App-Driven Analytics
       .. --------------------
 
-      .. Modernization
-      .. -------------
-
-   .. tab:: Media & Telco
-      :tabid: media-telco 
+   .. tab:: Media
+      :tabid: media
 
       Gen AI
       ------
@@ -131,28 +116,33 @@ kick-start their projects.
             user experiences by using Atlas Database, 
             Atlas Vector Search, and Pymongo. 
 
-.. .. tab:: Healthcare
-   .. :tabid: healthcare
-
-   .. Gen AI
-   .. ------
-
-   .. IoT 
-   .. ---
-
-   .. Fraud Prevention
-   .. ----------------
-
-   .. App-Driven Analytics
-   .. --------------------
-
-   .. Modernization
-   .. -------------
+      .. App-Driven Analytics
+      .. --------------------
 
 .. .. tab:: Retail
    .. :tabid: retail
 
-   .. retail-solutions-lib
+   .. Catalog
+   .. -------
+
+   .. Gen AI
+   .. ------
+
+   .. Personalization
+   .. ---------------
+
+.. .. tab:: Telco
+   .. :tabid: Telco
+
+   .. Gen AI
+   .. ------
+
+.. .. tab:: Healthcare
+   .. :tabid: healthcare
+
+   .. Interoperability
+   .. ----------------
+
 
 .. toctree::
    :titlesonly:
@@ -160,7 +150,8 @@ kick-start their projects.
    Financial Services </solutions-library/financial-services>
    Manufacturing & Motion </solutions-library/manufacturing>
    Insurance </solutions-library/insurance>
-   Media & Telco </solutions-library/media-telco>
+   Media </solutions-library/media>
 
 .. Healthcare  <solutions-library/healthcare>
 .. Retail </solutions-library/retail>
+.. Telco </solutions-library/telco>
