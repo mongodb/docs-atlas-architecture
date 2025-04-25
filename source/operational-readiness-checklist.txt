@@ -103,13 +103,14 @@ Network and Security Configuration
        - Consider setting up Federated Authentication, such as SAML 2.0,
          for UI access via identity providers, such as Okta, Entra ID,
          Ping Identity, or others. To learn more, see :ref:`arch-center-authorization-recs`.
-       - Consider LDAP Integration for user authentication and authorization.
+      
        - Enforce Multi-Factor Authentication (MFA) for enhanced security.
        - Secure |service| API access using API key-based authentication.
          Consider regular key rotation.
        - For database access in cloud environments, consider Workforce and
          Workload Identity Federation, such as OIDC, OAuth 2.0, AWS IAM roles,
          or Azure Managed Identities, for passwordless access.
+       - Consider LDAP Integration for user authentication and authorization.
        - Explore using X.509 client certificates for authentication.
 
    * - :icon-fa4:`square-o`
