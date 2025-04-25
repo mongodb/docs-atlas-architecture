@@ -79,7 +79,8 @@ attempt authentication to your database.
 
 Your {+service+} {+clusters+} allow access only from the IP addresses
 and |cidr| block IP ranges that you add to your {+ip-access-list+}.
-We recommend that you permit access to the smallest network segments possible,such as an individual ``/32`` address.
+We recommend that you permit access to the smallest network segments
+possible, such as an individual ``/32`` address.
 
 Application servers and other clients can't access your {+service+}
 {+clusters+} if their IP addresses aren't included in your {+ip-access-list+}.

@@ -38,7 +38,7 @@ Account and Organization Setup
 
    * - :icon-fa4:`square-o`
      - Set up projects based on your environment and application needs.
-       Establish multi-tenancy strategy by setting up production and non-production
+       Isolate environments by setting up production and non-production
        projects, at a minimum. To get recommendations and learn more about
        this topic, see :ref:`arch-center-orgs-projects-clusters-recs`.
 
@@ -69,23 +69,25 @@ Network and Security Configuration
 
    * - :icon-fa4:`square-o`
      - Choose a network connectivity method:
-       
-       - :ref:`VPC Peering <arch-center-vpc-vnet-peering>` for setting up
-         private and secure traffic routing within your network boundaries.
+
        - :ref:`Private Endpoints <arch-center-private-endpoints>`
          (AWS PrivateLink, Azure Private Link, or
          Google Cloud Private Service Connect) for a one-way private
-         connection from your VPC to |service|.
-         For sharded multi-region clusters, enable private endpoints in each region. To learn more, see :ref:`Recommendations for Multi-Region
-         Deployments <arch-center-multi-region-recs-private-endpoints>`.
-       - Public :ref:`IP Access Lists <arch-center-ip-access-list>`
-         to restrict inbound connections to specific IP addresses or CIDR
-         blocks. Consider IP Allow lists as an alternative to Private Link if necessary.
+         connection from your VPC to |service|. For multi-region clusters,
+         enable private endpoints in each region. To learn more,
+         see :ref:`Recommendations for Multi-Region Deployments <arch-center-multi-region-recs-private-endpoints>`.
+       - :ref:`VPC Peering <arch-center-vpc-vnet-peering>` to set up private
+         secure traffic routing within your network boundaries.
+       - Public :ref:`IP Access Lists <arch-center-ip-access-list>` to restrict
+         inbound connections to specific IP addresses or CIDR blocks.
+         Consider IP Allow lists as an alternative to endpoints if necessary.
 
    * - :icon-fa4:`square-o`
-     - Confirm that TLS/SSL is enabled for encrypting connections to your
+     - Confirm that TLS is enabled for encrypting connections to your
        databases. TLS is mandatory and is enabled by default and cannot
-       be disabled. TLS 1.2 is the default. To learn more, see :ref:`<arch-center-tls>`.
+       be disabled. TLS 1.2+ is the default, which ensures support for
+       the next version once |service| supports it. To learn more,
+       see :ref:`<arch-center-tls>`.
 
    * - :icon-fa4:`square-o`
      - For on-premises connectivity to |service|, ensure that your organization
@@ -97,11 +99,11 @@ Network and Security Configuration
 
        - Set up database users and roles with the principle of least privilege.
        - Implement Role-Based Access Control (RBAC) to manage access
-         across all resources.
-       - Consider LDAP Integration for user authentication and authorization.
+         across all resources. To learn more, see :ref:`arch-center-authorization-recs`.
        - Consider setting up Federated Authentication, such as SAML 2.0,
          for UI access via identity providers, such as Okta, Entra ID,
-         Ping Identity, or others.
+         Ping Identity, or others. To learn more, see :ref:`arch-center-authorization-recs`.
+       - Consider LDAP Integration for user authentication and authorization.
        - Enforce Multi-Factor Authentication (MFA) for enhanced security.
        - Secure |service| API access using API key-based authentication.
          Consider regular key rotation.
@@ -117,11 +119,11 @@ Network and Security Configuration
          transparent disk encryption (AES-256).
        - Optionally enable "Bring Your Own Key (BYOK)" encryption using
          Key Management Service (KMS) providers (AWS KMS, Azure Key Vault,
-         or GCP KMS).|service| can't rotate customer-managed encryption keys.
+         or GCP KMS). |service| can't rotate customer-managed encryption keys.
        - Consider Client-Side Field Level Encryption (CSFLE) to encrypt
          data within your application before transmitting it to |service|.
-       - Explore Queryable Encryption for performing queries on encrypted data.
-
+       - Explore :manual:`Queryable Encryption </core/queryable-encryption/>`
+         for applications that run queries on encrypted data.
 
    * - :icon-fa4:`square-o`
      - Configure database auditing to track database access and actions.
@@ -138,7 +140,8 @@ Network and Security Configuration
        recent MongoDB drivers handle certificate validation automatically,
        older applications or those with custom TLS configurations might
        require updates to trust the new CA certificates if MongoDB updates
-       its certificate provider. To learn more, see :atlas:`Hard-coded certificate authority </reference/faq/security/#hard-coded-certificate-authority>`.
+       its certificate provider. To learn more,
+       see :atlas:`Hard-coded certificate authority </reference/faq/security/#hard-coded-certificate-authority>`.
 
 
    * - :icon-fa4:`square-o`
@@ -216,15 +219,14 @@ Maintenance and Patching
      - Define a Maintenance Window for |service| automated systems to apply
        automatic minor version updates. Configure the day and hour of
        allowed maintenance using the ``mongodbatlas_maintenance_window`` resource.
-       To ee :ref:`arch-center-resiliency`.
+       To learn more, see :ref:`arch-center-resiliency`.
   
    * - :icon-fa4:`square-o`
      - Understand that |service| has non-deferrable maintenance hours for critical security
        patches or operational necessities. Configure Protected Hours for your
        project and :atlas:`define a daily window </tutorial/cluster-maintenance-window/>`
-       when standard updates cannot begin. |service| performs standard
-       updates that don't involve cluster restarts or resyncs outside of these hours.
-  
+       when standard updates cannot begin. |service| performs standard updates
+       that don't involve cluster restarts or resyncs outside of these hours.
 
 Monitoring and Alerts
 ---------------------
@@ -241,8 +243,8 @@ Monitoring and Alerts
 
    * - :icon-fa4:`square-o`
      - Configure alerts for various cluster metrics and events to proactively
-       identify and respond to potential issues. As a starting point, review and
-       configure recommended alerts. Consider setting up multiple alerts
+       identify and respond to potential issues. As a starting point, review
+       and configure recommended alerts. Consider setting up multiple alerts
        for different severity levels.
 
    * - :icon-fa4:`square-o`
@@ -266,7 +268,7 @@ Operational Procedures and Team Readiness
      - Action
 
    * - :icon-fa4:`square-o`  
-     - Define roles and responsibilities for managing and operating |service-fullname|.`
+     - Define roles and responsibilities for managing and operating |service-fullname|.
 
    * - :icon-fa4:`square-o`  
      - Establish change control and auditability processes. To learn more,
@@ -288,16 +290,18 @@ Operational Procedures and Team Readiness
        production issues or when MongoDB's access level is required.
 
    * - :icon-fa4:`square-o`  
-     - Plan for performance improvement using tools like Query
-       Profiler and Performance Advisor. To learn more, see :ref:`arch-center-monitoring-alerts`.`
+     - Plan for performance improvement using tools like Query Profiler
+       and Performance Advisor. To learn more, see :ref:`arch-center-monitoring-alerts`.
 
    * - :icon-fa4:`square-o`  
      - Define how you will handle data lifecycle management.
-       Configure archival strategies, such as :manual:`TTL indexes </core/index-ttl/>`, or :ref:`online archive <online-archive-overview>`.
+       Configure archival strategies, such as :manual:`TTL indexes </core/index-ttl/>`,
+       or :ref:`online archive <online-archive-overview>`.
   
    * - :icon-fa4:`square-o`  
      - Establish integration strategies with other tooling and  
-       services, such as Datadog, Prometheus, PagerDuty, and other tools. To learn more, see :ref:`arch-center-monitoring-alerts`.
+       services, such as Datadog, Prometheus, PagerDuty, and other tools.
+       To learn more, see :ref:`arch-center-monitoring-alerts`.
   
    * - :icon-fa4:`square-o`  
      - Consider establishing a MongoDB Center of Excellence (CoE)
