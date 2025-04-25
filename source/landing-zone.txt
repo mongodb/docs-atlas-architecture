@@ -41,8 +41,7 @@ including encryption at rest with {+byok+} and FinOps integrations to tag and tr
 What Are Some Landing Zone Considerations?
 ------------------------------------------
 
-As you create your landing zone, define requirements for the following considerations 
-and consider how your requirements align with {+service+}'s default configurations.
+As you create your landing zone, define requirements for the following considerations.
 
 Critical Considerations
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,11 +51,10 @@ that defines requirements for the following critical considerations:
 
 .. list-table::
    :header-rows: 1
-   :widths: 15 50 35 
+   :widths: 20 80 
 
    * - Consideration
      - Description
-     - Default Configuration
    * - System Hierarchy
      - Choose a deployment hierarchy that groups your {+service+} organizations, projects, and clusters
        in order to isolate between business units, environments, and billable groups as needed. 
@@ -66,23 +64,21 @@ that defines requirements for the following critical considerations:
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-hierarchy`.
    * - Security
-     - Define security requirements including the following: 
+     - By default, {+service+} blocks all access to your clusters, enforces |tls-ssl| encryption for all connections to your databases, 
+       and encrypts data at rest using :ref:`cloud provider disk encryption <security-kms-encryption>`.
+       You must define the following security requirements to enable secure access to your clusters: 
 
+       - Network security configurations such as IP access list restrictions, or required private endpoints and |vpc| connections to limit 
+         the extension of your network trust boundary
        - Principals and mechanisms for how to authenticate and authorize access to 
          the |service| control plane (|service| UI and {+atlas-admin-api+}), database resources, and database operations
-       - Standards for data encryption in transit, at rest, and in use
-       - Network security configurations, such as requiring |tls-ssl| connection encryption, private endpoints and |vpc| connections 
-         to isolate your data flow from the public internet
+       - Additional data encryption requirements for data in transit, at rest, and in use
 
        To get recommendations and learn more about this topic, see the following pages:
 
+       - :ref:`arch-center-network-security`
        - :ref:`arch-center-auth`
        - :ref:`arch-center-data-encryption`
-       - :ref:`arch-center-network-security`
-     - By default, all access to your clusters is blocked and 
-       you must explicitly allow inbound connections through your IP access list or with {+vpc+} peering.
-       Atlas requires all users to authenticate to access {+service+} resources, and administrators must 
-       set up authentication and authorization methods. 
        {+service+} automatically encrypts data in transit using |tls| and data at rest using :ref:`cloud provider disk encryption <security-kms-encryption>`. 
    * - Compliance
      - Consider how your deployment's data residency determines data sovereignty
@@ -121,11 +117,6 @@ that defines requirements for the following critical considerations:
 
        - :ref:`arch-center-high-availability`
        - :ref:`arch-center-paradigms`
-     - {+service+} automatically configures a minimum three-node replica set when you launch a new cluster,
-       and supports automatic failover if a primary replica set member experiences an outage. If you deploy 
-       to a region that supports availability zones, {+service+} automatically distributes nodes across zones. 
-       Deploying to additional regions, geographies, and cloud providers can provide additional availability in the case of 
-       regional, geographic, or cloud provider outages. 
    * - Billing
      - Identify any specific requirements for billing, such as
        integrations with FinOps tools for reporting and charge-back.
@@ -135,8 +126,6 @@ that defines requirements for the following critical considerations:
 
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-billing-data`.
-     - MongoDB Charts billing dashboards contain prebuilt charts that display 
-       billing data across categories and periods of time. 
 
 Advanced Considerations 
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -145,11 +134,10 @@ To design a more comprehensive landing zone, consider definiing requirements for
 
 .. list-table::
    :header-rows: 1
-   :widths: 15 50 35 
+   :widths: 20 80 
 
    * - Consideration
      - Description
-     - Default Configuration
    * - Data Retention
      - Identify and record your data retention policies. This may
        require creating a classification for automation, including
@@ -177,9 +165,6 @@ To design a more comprehensive landing zone, consider definiing requirements for
    * - Maintenance
      - Identify whether you have any specific requirements regarding
        Maintenance windows or upgrade deferments.
-     - {+service+} automatically performs maintenance on your cluster in a rolling manner, 
-       but you can configure custom maintenance windows or protected hours for more control 
-       over when maintenance and standard updates can occur. 
 
 Design Your Landing Zone
 ------------------------
