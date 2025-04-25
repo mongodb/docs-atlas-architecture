@@ -1,4 +1,6 @@
 .. toctree::
    :titlesonly:
 
-   AI-driven Media Personalization <solutions-library/media-personalization>
+   Gen AI <solutions-library/media-gen-ai>
+
+.. App-Driven Analytics <solutions-library/media-app-driven-analytics>
