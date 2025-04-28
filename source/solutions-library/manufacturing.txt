@@ -1,0 +1,7 @@
+.. toctree::
+   :titlesonly:
+
+   IoT <solutions-library/manufacturing-iot>
+
+.. Gen AI <solutions-library/manufacturing-gen-ai>
+.. App-Driven Analytics <solutions-library/manufacturing-app-driven-analytics>
