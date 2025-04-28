@@ -95,8 +95,6 @@ By prioritizing adaptability and modularity, the agentic framework empowers deve
 to create AI agents that are not only efficient but also highly customizable
 to meet the unique demands of their industries or projects.
 
-                    ????? HOW TO UPLOAD SVG IMAGES
-
 .. figure:: /includes/images/industry-solutions/ai-agent.svg
    :figwidth: 1200px
    :alt: Real-time wind turbine diagnosis
@@ -120,8 +118,6 @@ producing a diagnostic recommendation.
 MongoDB serves as the backbone for storing agent profiles, historical recommendations, time-series data,
 and session logs, ensuring full traceability of the diagnostic process
 while enabling efficient querying and reusability of past insights.
-
-                    ????? HOW TO UPLOAD SVG IMAGES
 
 .. figure:: /includes/images/industry-solutions/framework-rapid-reference-architecture.svg
    :figwidth: 1200px
@@ -239,14 +235,14 @@ Building the Solution
          VIX within normal range (12-20),Maintain current asset allocation as market conditions are stable.
          Combination of rising interest rates and high VIX,Focus on bond assets to hedge against market volatility and borrowing cost impacts.
 
-   .. step:: **Step 2: Set up MongoDB database and collections**
+   .. step:: **Set up MongoDB database and collections**
 
       Log in to MongoDB Atlas and create a database named “agentic_<YOUR_USE_CASE>,” e.g.” agentic_macro_indicators.” Ensure the name is reflected in the environment variables.
       Create the following collections:
       - agent_profiles (for storing agent profiles): You can import some sample data to this collection using this file.
       - queries (for storing queries): You must import the queries from the queries.csv file created in Step 1.
 
-.. step:: **Step 3: Configure your agentic worklfow through a JSON config file**
+   .. step:: **Configure your agentic worklfow through a JSON config file**
 
       Go to the config folder and create or update the JSON config.json file. The file should contain the following structure:
 
@@ -341,31 +337,39 @@ Building the Solution
 Key Learnings
 -------------
 
-Agentic AI ushers in an entirely new type of software—one with the ability to dramatically alter the way we process data to drive richer
-and more efficient business data processing outcomes.
-In order to leverage agents within business applications, software delivery teams will need to learn:
+Agentic AI ushers in an entirely new type of software—one with the
+ability to dramatically alter the way we process data to drive richer
+and more efficient business data processing outcomes. In order to
+leverage agents within business applications, software delivery teams
+will need to learn:
 
-- How agents get instructions for reacting within predetermined workflows.
-- How agents access and interact with tooling like APIs and databases.
-- How agents persist and manage state.
+   - How agents get instructions for reacting within predetermined workflows.
+   - How agents access and interact with tooling like APIs and databases.
+   - How agents persist and manage state.
 
-Many of these items can be considered baseline activities and setup for software delivery teams,
-regardless of the actual use case, workflow, or industry context for which an agent, or agentic workflow, will be deployed.
+Many of these items can be considered baseline activities and setup for
+software delivery teams, regardless of the actual use case, workflow, or
+industry context for which an agent, or agentic workflow, will be
+deployed.
 
-For high performing software delivery teams, the use of a framework to abstract common tasks and components has often been
-employed to speed up the development and deployment of business software solutions, as well as decrease the subsequent
-complexity of maintaining them. This agentic framework makes it easier for software delivery teams to get
-started with building agentic solutions, as well as maintain them, via common, configurable components and assets.
+For high performing software delivery teams, the use of a framework to
+abstract common tasks and components has often been employed to speed up
+the development and deployment of business software solutions, as well
+as decrease the subsequent complexity of maintaining them. This agentic
+framework makes it easier for software delivery teams to get started
+with building agentic solutions, as well as maintain them, via common,
+configurable components and assets.
 
-Working in this framework can not only teach you and your software teams how to get started with building agentic solutions,
-it can also help them build repeatable patterns and components that make it easier
-to scale and maintain your business solutions for the long term.
+Working in this framework can not only teach you and your software teams
+how to get started with building agentic solutions, it can also help
+them build repeatable patterns and components that make it easier to
+scale and maintain your business solutions for the long term.
 
 Authors
 -------
 
-- Julian Boronat, MongoDB
-- Peyman Parsi, MongoDB
-- Jeff Needham, MongoDB
-- Luca Napoli, MongoDB
-- Humza Akthar, MongoDB
+   - Julian Boronat, MongoDB
+   - Peyman Parsi, MongoDB
+   - Jeff Needham, MongoDB
+   - Luca Napoli, MongoDB
+   - Humza Akthar, MongoDB
