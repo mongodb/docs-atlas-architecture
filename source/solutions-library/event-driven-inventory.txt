@@ -123,8 +123,6 @@ domains.
 
 .. video:: https://www.youtube.com/watch?v=sV2KfMk1CdM&t=371s
    
-   A video recording of the demo in action
-
 Reference Architectures
 -----------------------
 
