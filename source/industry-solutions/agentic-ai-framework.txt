@@ -8,6 +8,10 @@ Framework for Rapid AI Agent Deployment
    :name: genre
    :values: tutorial
 
+.. meta:: 
+   :keywords: agentic AI, gen AI, vector search
+   :description: A modular solution for building diagnostic and recommendation agents with MongoDB Atlas
+
 .. contents:: On this page
    :local:
    :backlinks: none
