@@ -519,7 +519,7 @@ These examples also apply other recommended configurations, including:
       accessEntryForAddress1.tf
       `````````````````````````````
 
-      .. include:: /includes/examples/tf-example-access-entry-for-add-1.rst
+      .. include:: /includes/examples/terraform/tf-example-access-entry-for-add-1.rst
 
       After you create the files, navigate to your project directory
       and run the following command to initialize Terraform:
@@ -556,7 +556,7 @@ These examples also apply other recommended configurations, including:
       vpcConnection.tf
       ````````````````
 
-      .. include:: /includes/examples/tf-example-vpc-connection.rst
+      .. include:: /includes/examples/terraform/tf-example-vpc-connection.rst
 
       After you create the file, navigate to your project directory
       and run the following command to initialize Terraform:
@@ -593,7 +593,7 @@ These examples also apply other recommended configurations, including:
       privateLink.tf
       ``````````````
 
-      .. include:: /includes/examples/tf-example-private-link.rst
+      .. include:: /includes/examples/terraform/tf-example-private-link.rst
 
       After you create the file, navigate to your project directory
       and run the following command to initialize Terraform:
