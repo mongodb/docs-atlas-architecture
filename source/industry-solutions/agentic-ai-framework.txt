@@ -123,7 +123,7 @@ while enabling efficient querying and reusability of past insights.
    :figwidth: 1200px
    :alt: Real-time wind turbine diagnosis
 
-Agentic AI reference architecture.
+   Agentic AI reference architecture.
 
 Why MongoDB
 -----------
@@ -320,8 +320,8 @@ Building the Solution
                 {"from": "recommendation_node", "to": "END"}
             ],
             "entry_point": "reasoning_node"
+            }
          }
-      }
 
       Once the config file is updated, environment variables need to be configured and vector embeddings created. Finally the vector search index must be created.
 
@@ -329,10 +329,10 @@ Building the Solution
       for detailed explanations of all the steps.
 
       .. figure:: /includes/images/industry-solutions/framework-rapid-reference-architecture.svg
-      :figwidth: 1200px
-      :alt: Real-time wind turbine diagnosis
+         :figwidth: 1200px
+         :alt: Real-time wind turbine diagnosis
 
-      Logical architecture.
+         Logical architecture.
 
 Key Learnings
 -------------
