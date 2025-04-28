@@ -383,5 +383,3 @@ Authors
 - Jeff Needham, MongoDB
 - Luca Napoli, MongoDB
 - Humza Akthar, MongoDB
-
-:ref: `Testing reference <arch-center-is-audio-based-ai-diagnostics>`
