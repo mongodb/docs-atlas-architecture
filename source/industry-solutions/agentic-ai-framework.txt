@@ -66,8 +66,8 @@ and deploying them at scale, presents certain challenges.
   decisions. A slow database becomes a bottleneck that increases total
   response time, reducing the agent’s ability to act in real time.
 
-- **Data governance and security:** Sensitive data like user logs,
-  sensor readings, and PII must be stored and accessed securely all while
+-  **Data governance and security:** Sensitive data like user logs,
+   sensor readings, and PII must be stored and accessed securely all while
    maintaining compliance (e.g. GDPR, SOC 2). Secure databases like MongoDB
    Atlas provide built-in, advanced security controls such as client side
    field-level encryption, queryable encryption, and extensive auditing
@@ -194,9 +194,13 @@ Building the Solution
       The data should be relevant to your use case and respect the following guidelines:
 
       - The CSV file should contain a header row with column names.
-      - The first column must be named “timestamp” and contain timestamps in the format YYYY-MM-DDTHH:MM:SSZ, e.g. 2025-02-19T13:00:00Z.
+      - The first column must be named “timestamp” and contain
+      timestamps in the format YYYY-MM-DDTHH:MM:SSZ, e.g.
+      2025-02-19T13:00:00Z.
       - The remaining columns should contain relevant data for your use case.
-      - There is no column nor row limit, but for framework testing purposes the suggestion is to keep the data size as small as possible.
+      - There is no column nor row limit, but for framework testing
+      purposes the suggestion is to keep the data size as small as
+      possible.
 
       Sample data:
 
