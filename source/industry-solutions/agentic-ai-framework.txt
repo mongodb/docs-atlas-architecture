@@ -37,7 +37,7 @@ MongoDB Atlas enables rapid development of AI agents across industries.
 <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
 
 Solution Overview
------------------
+
 
 In 2025, agentic AI applications are no longer just a hobby project.
 Companies around the world are investing in software to incorporate
@@ -246,9 +246,9 @@ Building the Solution
       the name is reflected in the environment variables. Create the
       following collections:
 
-      - agent_profiles (for storing agent profiles): You can import some
+      - Agent_profiles (for storing agent profiles): You can import some
         sample data to this collection using this file.
-      - queries (for storing queries): You must import the queries from
+      - Queries (for storing queries): You must import the queries from
         the queries.csv file created in Step 1.
 
    .. step:: **Configure your agentic worklfow through a JSON config file**
