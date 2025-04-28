@@ -293,14 +293,14 @@ backup is enabled for the {+cluster+}.
       Run the following command to take a backup snapshot for the {+cluster+}
       named myDemo and retain the snapshot for 7 days:
 
-      .. include:: /includes/examples/cli-example-backup-take-snapshot.rst
+      .. include:: /includes/examples/cli/cli-example-backup-take-snapshot.rst
 
       Enable backup compliance policy for your project with a
       designated, authorized user (``governance@example.org``) who alone can turn
       off this protection after completing a verification process with
       MongoDB support. 
 
-      .. include:: /includes/examples/cli-example-backup-compliance-policy-enable.rst
+      .. include:: /includes/examples/cli/cli-example-backup-compliance-policy-enable.rst
 
       Run the following command to create a compliance policy for
       scheduled backup snapshots that enforces the number of times
@@ -308,7 +308,7 @@ backup is enabled for the {+cluster+}.
       the duration for retaining the snapshots, which is set to ``1``
       month.   
 
-      .. include:: /includes/examples/cli-example-backup-compliance-policy-schedule.rst
+      .. include:: /includes/examples/cli/cli-example-backup-compliance-policy-schedule.rst
 
    .. tab:: Terraform
       :tabid: Terraform
@@ -340,7 +340,7 @@ backup is enabled for the {+cluster+}.
       variables.tf 
       ````````````
 
-      .. include:: /includes/examples/tf-example-backup-variables.rst
+      .. include:: /includes/examples/terraform/tf-example-backup-variables.rst
 
       Configure Backup Schedule for the {+Cluster+} 
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -351,7 +351,7 @@ backup is enabled for the {+cluster+}.
       main.tf 
       ```````
 
-      .. include:: /includes/examples/tf-example-backup-snapshot-schedule-tier1.rst
+      .. include:: /includes/examples/terraform/tf-example-backup-snapshot-schedule-tier1.rst
 
       Use the following to configure a :ref:`Tier 2
       <backup-policy-recommendations>` backup schedule for the {+cluster+}. 
@@ -359,7 +359,7 @@ backup is enabled for the {+cluster+}.
       main.tf 
       ```````
 
-      .. include:: /includes/examples/tf-example-backup-snapshot-schedule-tier2.rst
+      .. include:: /includes/examples/terraform/tf-example-backup-snapshot-schedule-tier2.rst
 
       Use the following to configure a :ref:`Tier 3
       <backup-policy-recommendations>` backup schedule for the {+cluster+}. 
@@ -367,7 +367,7 @@ backup is enabled for the {+cluster+}.
       main.tf 
       ```````
 
-      .. include:: /includes/examples/tf-example-backup-snapshot-schedule-tier3.rst
+      .. include:: /includes/examples/terraform/tf-example-backup-snapshot-schedule-tier3.rst
 
       Configure Backup and PIT Restore for the {+Cluster+}
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -378,4 +378,4 @@ backup is enabled for the {+cluster+}.
       main.tf 
       ```````
       
-      .. include:: /includes/examples/tf-example-backup-snapshot-pit-restore.rst
+      .. include:: /includes/examples/terraform/tf-example-backup-snapshot-pit-restore.rst
