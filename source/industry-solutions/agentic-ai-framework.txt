@@ -51,11 +51,11 @@ using the agents for research and summarization tasks.
 However, leveraging an AI agent for more complex tasks than research and summarization,
 and deploying them at scale, presents certain challenges.
 
-   - **Complex data integration and handling:** AI agents often rely on
-      disparate data sources and formats (structured logs, unstructured text,
-      and sensor streams) making it difficult to unify data for real‐time
-      decision‐making. Having all relevant data stored in one database for the
-      agent to consume helps speed up the development process.
+- **Complex data integration and handling:** AI agents often rely on
+  disparate data sources and formats (structured logs, unstructured text,
+  and sensor streams) making it difficult to unify data for real‐time
+  decision‐making. Having all relevant data stored in one database for the
+  agent to consume helps speed up the development process.
 
    - **High concurrency and low latency:** Agents in production must handle
       a large volume of requests and respond quickly, which can overwhelm
@@ -237,10 +237,15 @@ Building the Solution
 
    .. step:: **Set up MongoDB database and collections**
 
-      Log in to MongoDB Atlas and create a database named “agentic_<YOUR_USE_CASE>,” e.g.” agentic_macro_indicators.” Ensure the name is reflected in the environment variables.
-      Create the following collections:
-      - agent_profiles (for storing agent profiles): You can import some sample data to this collection using this file.
-      - queries (for storing queries): You must import the queries from the queries.csv file created in Step 1.
+      Log in to MongoDB Atlas and create a database named
+      “agentic_<YOUR_USE_CASE>,” e.g.” agentic_macro_indicators.” Ensure
+      the name is reflected in the environment variables. Create the
+      following collections:
+
+      - agent_profiles (for storing agent profiles): You can import some
+      sample data to this collection using this file.
+      - queries (for storing queries): You must import the queries from
+      the queries.csv file created in Step 1.
 
    .. step:: **Configure your agentic worklfow through a JSON config file**
 
