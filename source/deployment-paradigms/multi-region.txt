@@ -22,7 +22,7 @@ performance and can help meet compliance requirements for :ref:`data sovereignty
 <arch-center-compliance-data-sovereignty>`, such as the EU's General Data 
 Protection Regulation (GDPR) law.
 
-A multi-region deployment may have multiple regions within the same geography 
+A multi-region deployment might have multiple regions within the same geography 
 (a large area like a continent or country), a single region in each of several 
 geographies, or multiple regions in multiple geographies.
 
@@ -41,9 +41,9 @@ documentation.
    Multi-region deployments are available only for ``M10`` dedicated
    {+clusters+} and larger.
 
-Use Cases for Multi-Region Deployments
---------------------------------------
-Consider the 3 use cases in the following image:
+Multi-Region Deployment Strategies
+----------------------------------
+Consider the 3 deployments in the following image:
 
 .. figure:: /includes/images/multi-region-types.png
    :figwidth: 750px
@@ -61,38 +61,34 @@ The second example shows a deployment to a single region in each of multiple
 geographies. This is a good option if your application requires  
 high availability for users in multiple geographies but you are willing to trade 
 slightly higher latency for lower costs. You create a multi-region 
-deployment with a region located in the U.S., Europe, and Asia. In this scenario, 
- This also helps comply with local regulations like GDPR.
+deployment with a region located in the U.S., Europe, and Asia.  
+
+This is also a good strategy for complying with local regulations like GDPR.
 
 The most complex example of a multi-region deployment has multiple regions in 
 multiple geographies, ensures the highest level of availability with a single 
 provider. If your application requires the very highest level of availability 
 and lowest latency, consider a :ref:`arch-center-paradigms-multi-cloud`.
 
-Multi-Region Deployment Use Cases
----------------------------------
-
-The following use cases highlight different scenarios. In the first use case, we 
-have a high-criticality application that we need to have distributed globally for 
-availability and low latency. In this case, we want to deploy to at least 5 
-regions in 3 or more regions.
-
-The second scenario applies to a few different use cases. We may have a 
-less-critical application, but one that still warrants a multi-region deployment. 
-We may also have a high-criticality application but the users are in a single 
-geography that only has 2 regions. In these scenarios, we can use a 3-node, 
-2-region deployment architecture.
+Within these broad deployment strategies, there are additional configurations 
+to meet your more specific needs. The following use cases outline specific 
+examples that may be similar to your own needs.
 
 .. _arch-center-multi-region-5+3:
 
 5-Node, 3-Region Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mission critical applications require both high availability and low latency. 
-To achieve this, we recommend an architecture that consists of a minimum of 5 
-nodes spread over at least 3 regions. This provides high availability in at least 
-2 regions. If a node goes down, the traffic can be served from the same 
-region to ensure the same latency on the primary region. 
+If you have a mission-critical application that requires both high availability 
+and low latency, you need to deploy your MongoDB nodes and your application in 
+multiple regions. Depending on your customers' locations, you may need to deploy 
+to regions in several different geographies. 
+
+To achieve this level of availability and latency, we recommend an architecture 
+that consists of a minimum of 5 nodes spread over at least 3 regions. This 
+architecture provides high availability in at least 2 regions. If a node goes 
+down, the traffic can be served from the same region to ensure the same latency 
+on the primary region. 
 
 .. figure:: /includes/images/multi-region-5+3.png
    :figwidth: 750px
@@ -101,13 +97,12 @@ region to ensure the same latency on the primary region.
 Notes and Considerations
 ````````````````````````
 
-- Your app servers should be deployed in each region that MongoDB nodes are 
+- Deploy your app servers in each region that MongoDB nodes are 
   deployed. This gives you the ability to route read requests to the in-region  
   node, which reduces the response time to your end-users, and offloads requests 
-  from the primary node. Write requests will always be directed to the primary.
+  from the primary node. Write requests are always be directed to the primary.
 
-- You should use 
-  :atlas:`private endpoints <data-federation/admin/manage-private-endpoint/>`
+- Use :atlas:`private endpoints <data-federation/admin/manage-private-endpoint/>`
   for connecting to the cluster, and 
   :atlas:`VPC peering <atlas-stream-processing/manage-vpc-peering-connections/>` 
   between your app server VPCs. VPC peering ensures that if a network connection 
@@ -138,12 +133,6 @@ the region with fewer electable nodes is the **minority region**.
 This is also an appropriate architecture if you need high availability and low 
 latency in a geography that only has 2 regions.
 
-.. figure:: /includes/images/multi-region-5+2.png
-   :figwidth: 750px
-   :alt: An image showing three types of multi-region deployments
-
-Notes and Considerations
-````````````````````````
 This is a good option for:
 
 - Customers with only 2 approved regions.
@@ -151,6 +140,12 @@ This is a good option for:
 - Applications where read operations need high uptime, but write operations can 
   experience some outage.
 
+.. figure:: /includes/images/multi-region-5+2.png
+   :figwidth: 750px
+   :alt: An image showing three types of multi-region deployments
+
+Notes and Considerations
+````````````````````````
 This architecture provides increased protection 
 against data loss, even in full regional outage. The system remains available 
 in read-only mode in the secondary region if the primary region is lost. 
@@ -181,8 +176,8 @@ Lower-Cost Variation
 ````````````````````
 For further cost savings, you can design this architecture without the 2 read-only 
 nodes. In addition to the caveats listed above, data size has a significant impact 
-on your decision since the data will need to be synchronized to secondaries 
-whenever adding new nodes to the cluster. For example, 1TB of data averages 1
+on your decision since the data needs to be synchronized to secondaries 
+whenever adding new nodes to the cluster. For example, 1 TB of data averages 1
 hour of recovery and synchronization time.
 
 .. _arch-center-multi-region-3+3:
@@ -190,7 +185,8 @@ hour of recovery and synchronization time.
 3-Node, 3-Region Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If cost is more of a factor, and some downtime is acceptable, you 
+If you have an application that can experience some downtime, and 
+the cost of deployment is more of a factor than availability or latency, you 
 can create an architecture that is less expensive by using 1 node in each of 
 3 regions. You have a electable node in each of the regions, which means if the 
 primary node is unavailable, there is latency as another node is elected primary 
@@ -201,7 +197,6 @@ any region is unavailable.
    :figwidth: 750px
    :alt: An image showing three types of multi-region deployments
 
-
 ..  _arch-center-global-deployments:
 
 Global Deployments 
@@ -210,7 +205,7 @@ Global Deployments
 Global {+service+} deployments are the most complex multi-region deployment 
 paradigms, and therefore require very careful planning. In almost all cases,  
 a :ref:`arch-center-paradigms-multi-region` (or its subset, a
-:ref:`arch-center-paradigms-multi-cloud`) will fulfill your needs.
+:ref:`arch-center-paradigms-multi-cloud`) can fulfill your needs.
 
 The following are a few reasons why you might consider a global deployment 
 strategy:
