@@ -76,6 +76,12 @@ and low latency across a larger geographic range than a single-region deployment
 Choosing a Deployment Paradigm
 ------------------------------
 
+To figure out which deployment pattern is right for you, break down your 
+applications by how critical they are to your core business. The 
+more important the application (in other words, the more impact an 
+outage has on your business), the more you should consider an architecture that  
+automatically handles any outage event.
+
 The following table provides a comparison of deployment paradigms to help you 
 determine the best fit for your needs: 
 
@@ -90,30 +96,31 @@ determine the best fit for your needs:
      - Multi-Region and Multi-Cloud
 
    * - **Tier 1**
-     - Highest criticality apps. Requires fully automated failover even in the 
-       event of regional outages.
+     - Highest criticality applications. Requires fully-automated failover even 
+       in the event of regional outages.
      - 0
      - :ref:`3 Regions with 5 or more nodes <arch-center-multi-region-tier-1>`
      - $$$
 
    * - **Tier 2**
-     - Lower criticality apps. Can experience some downtime or maintenance windows 
-       without significant revenue impact.
-     - > 1 hr. and < 8 hr.
+     - Lower criticality applications. Can experience some downtime or 
+       maintenance windows warmingithout significant revenue impact.
+     - > 1 hour and < 8 hours
      - | :ref:`2 regions with 3 nodes and backups <arch-center-multi-region-5+2>` or
        | :ref:`3 regions with 1 node in each <arch-center-multi-region-3+3>`
      - $$
 
    * - **Tier 3**
-     - Lowest criticality apps. Can be done for 24 hrs without significant 
+     - Lowest criticality applications. Can be down for 24 hours without significant 
        revenue impact.
-     - > 8 hr.
+     - > 8 hours
      - :ref:`3 nodes in a single region <arch-center-paradigms-single>`
      - $+
 
    * - **Non-Production**
-     - Not critical. Environments that are not directly responsible for 
-       revenue and are not customer-facing. Typically Dev and Test environments.
+     - Noncritical applications. Environments that are not directly responsible for 
+       revenue and are not customer-facing. Typically development and testing 
+       environments.
      - n/a
      - :ref:`Single node, single region <arch-center-paradigms-single>`
      - $0 and up
