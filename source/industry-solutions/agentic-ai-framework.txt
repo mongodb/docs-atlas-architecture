@@ -52,27 +52,27 @@ However, leveraging an AI agent for more complex tasks than research and summari
 and deploying them at scale, presents certain challenges.
 
    - **Complex data integration and handling:** AI agents often rely on
-   disparate data sources and formats (structured logs, unstructured text,
-   and sensor streams) making it difficult to unify data for real‐time
-   decision‐making. Having all relevant data stored in one database for the
-   agent to consume helps speed up the development process.
+      disparate data sources and formats (structured logs, unstructured text,
+      and sensor streams) making it difficult to unify data for real‐time
+      decision‐making. Having all relevant data stored in one database for the
+      agent to consume helps speed up the development process.
 
    - **High concurrency and low latency:** Agents in production must handle
-   a large volume of requests and respond quickly, which can overwhelm
-   databases that aren’t built for high throughput and performance. While
-   LLM inference can add latency, database performance is still important,
-   especially as agents scale. Production agents will run in parallel, make
-   multiple tool calls, and rely on up-to-date information to make
-   decisions. A slow database becomes a bottleneck that increases total
-   response time, reducing the agent’s ability to act in real time.
+      a large volume of requests and respond quickly, which can overwhelm
+      databases that aren’t built for high throughput and performance. While
+      LLM inference can add latency, database performance is still important,
+      especially as agents scale. Production agents will run in parallel, make
+      multiple tool calls, and rely on up-to-date information to make
+      decisions. A slow database becomes a bottleneck that increases total
+      response time, reducing the agent’s ability to act in real time.
 
    - **Data governance and security:** Sensitive data like user logs,
-   sensor readings, and PII must be stored and accessed securely all while
-   maintaining compliance (e.g. GDPR, SOC 2). Secure databases like MongoDB
-   Atlas provide built-in, advanced security controls such as client side
-   field-level encryption, queryable encryption, and extensive auditing
-   capabilities. These features help ensure that agents only access the
-   data they are authorized to see and traceability is maintained.
+      sensor readings, and PII must be stored and accessed securely all while
+      maintaining compliance (e.g. GDPR, SOC 2). Secure databases like MongoDB
+      Atlas provide built-in, advanced security controls such as client side
+      field-level encryption, queryable encryption, and extensive auditing
+      capabilities. These features help ensure that agents only access the
+      data they are authorized to see and traceability is maintained.
 
 Figure 1 shows the major components of an AI agent.
 The agent will first receive a task from a human or via an automated trigger and will
