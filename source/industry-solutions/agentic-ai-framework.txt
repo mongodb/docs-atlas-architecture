@@ -51,13 +51,13 @@ using the agents for research and summarization tasks.
 However, leveraging an AI agent for more complex tasks than research and summarization,
 and deploying them at scale, presents certain challenges.
 
-- **Complex data integration and handling:** AI agents often rely on
+   - **Complex data integration and handling:** AI agents often rely on
    disparate data sources and formats (structured logs, unstructured text,
    and sensor streams) making it difficult to unify data for real‐time
    decision‐making. Having all relevant data stored in one database for the
    agent to consume helps speed up the development process.
 
-- **High concurrency and low latency:** Agents in production must handle
+   - **High concurrency and low latency:** Agents in production must handle
    a large volume of requests and respond quickly, which can overwhelm
    databases that aren’t built for high throughput and performance. While
    LLM inference can add latency, database performance is still important,
@@ -66,7 +66,7 @@ and deploying them at scale, presents certain challenges.
    decisions. A slow database becomes a bottleneck that increases total
    response time, reducing the agent’s ability to act in real time.
 
-- **Data governance and security:** Sensitive data like user logs,
+   - **Data governance and security:** Sensitive data like user logs,
    sensor readings, and PII must be stored and accessed securely all while
    maintaining compliance (e.g. GDPR, SOC 2). Secure databases like MongoDB
    Atlas provide built-in, advanced security controls such as client side
@@ -320,8 +320,8 @@ Building the Solution
                 {"from": "recommendation_node", "to": "END"}
             ],
             "entry_point": "reasoning_node"
-        }
-    }
+         }
+      }
 
       Once the config file is updated, environment variables need to be configured and vector embeddings created. Finally the vector search index must be created.
 
