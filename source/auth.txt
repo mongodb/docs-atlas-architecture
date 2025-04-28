@@ -279,18 +279,20 @@ through the {+atlas-admin-api+}. We recommend that you use service accounts inst
 |api| keys when possible because they provide added security through short-lived
 access tokens and required credential rotations.
 
-You can manage programmatic access for service accounts only through the {+atlas-ui+} or
+You can manage service accounts only through the {+atlas-ui+} or
 the {+atlas-admin-api+}. Currently, you can't manage programmatic access for service accounts through
 the {+atlas-cli+} or Terraform, but support will be added soon.
 
 To further enhance security and
 minimize the risk of unauthorized access:
 
-- Rotate service account secrets before they expire. To learn how to rotate service 
-  account secrets, see :ref:`rotate-service-account-secrets`.
+- Rotate service account secrets before they expire. To learn more, see :ref:`rotate-service-account-secrets`.
 
 - Use the IP access list for your service accounts. To learn more, see
   :atlas:`Require an IP Access List for the {+atlas-admin-api+} </configure-api-access/#optional--require-an-ip-access-list-for-the-atlas-administration-api>`.
+
+- Assign the least privileged |service| role required for the service account's intended 
+  purpose to adhere to the principle of least privilege.
 
 To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-overview/>`.
 
