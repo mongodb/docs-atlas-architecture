@@ -57,14 +57,14 @@ and deploying them at scale, presents certain challenges.
   decision‐making. Having all relevant data stored in one database for the
   agent to consume helps speed up the development process.
 
-   - **High concurrency and low latency:** Agents in production must handle
-      a large volume of requests and respond quickly, which can overwhelm
-      databases that aren’t built for high throughput and performance. While
-      LLM inference can add latency, database performance is still important,
-      especially as agents scale. Production agents will run in parallel, make
-      multiple tool calls, and rely on up-to-date information to make
-      decisions. A slow database becomes a bottleneck that increases total
-      response time, reducing the agent’s ability to act in real time.
+- **High concurrency and low latency:** Agents in production must handle
+  a large volume of requests and respond quickly, which can overwhelm
+  databases that aren’t built for high throughput and performance. While
+   LLM inference can add latency, database performance is still important,
+   especially as agents scale. Production agents will run in parallel, make
+   multiple tool calls, and rely on up-to-date information to make
+   decisions. A slow database becomes a bottleneck that increases total
+   response time, reducing the agent’s ability to act in real time.
 
    - **Data governance and security:** Sensitive data like user logs,
       sensor readings, and PII must be stored and accessed securely all while
@@ -348,9 +348,9 @@ and more efficient business data processing outcomes. In order to
 leverage agents within business applications, software delivery teams
 will need to learn:
 
-   - How agents get instructions for reacting within predetermined workflows.
-   - How agents access and interact with tooling like APIs and databases.
-   - How agents persist and manage state.
+- How agents get instructions for reacting within predetermined workflows.
+- How agents access and interact with tooling like APIs and databases.
+- How agents persist and manage state.
 
 Many of these items can be considered baseline activities and setup for
 software delivery teams, regardless of the actual use case, workflow, or
@@ -373,8 +373,8 @@ scale and maintain your business solutions for the long term.
 Authors
 -------
 
-   - Julian Boronat, MongoDB
-   - Peyman Parsi, MongoDB
-   - Jeff Needham, MongoDB
-   - Luca Napoli, MongoDB
-   - Humza Akthar, MongoDB
+- Julian Boronat, MongoDB
+- Peyman Parsi, MongoDB
+- Jeff Needham, MongoDB
+- Luca Napoli, MongoDB
+- Humza Akthar, MongoDB
