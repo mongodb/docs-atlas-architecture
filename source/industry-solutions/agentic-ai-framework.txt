@@ -95,7 +95,7 @@ By prioritizing adaptability and modularity, the agentic framework empowers deve
 to create AI agents that are not only efficient but also highly customizable
 to meet the unique demands of their industries or projects.
 
-.. figure:: /includes/images/industry-solutions/ai-agent.svg
+.. figure:: /includes/images/industry-solutions/framework-rapid-ai-agent.svg
    :figwidth: 1200px
    :alt: Real-time wind turbine diagnosis
 
@@ -123,7 +123,7 @@ while enabling efficient querying and reusability of past insights.
    :figwidth: 1200px
    :alt: Real-time wind turbine diagnosis
 
-   Agentic AI reference architecture.
+   Figure 2. Agentic AI reference architecture.
 
 Why MongoDB
 -----------
@@ -328,11 +328,11 @@ Building the Solution
       Check out the `readme <https://github.com/mongodb-industry-solutions/agentic-framework/tree/a14ed55e9b4a5628da1798b5e4bbc59d695d43a7?tab=readme-ov-file#step-4-configure-your-agentic-workflow-through-a-json-config-file>`__
       for detailed explanations of all the steps.
 
-      .. figure:: /includes/images/industry-solutions/framework-rapid-reference-architecture.svg
+      .. figure:: /includes/images/industry-solutions/framework-rapid-logical-architecture.svg
          :figwidth: 1200px
          :alt: Real-time wind turbine diagnosis
 
-         Logical architecture.
+         Figure 3. Logical architecture.
 
 Key Learnings
 -------------
