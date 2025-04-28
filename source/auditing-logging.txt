@@ -322,13 +322,13 @@ In addition to the following examples, see the blogpost
       command and specify your organization ID. The following command returns a JSON-formatted list of events for the
       organization with the ID ``5dd5a6b6f10fab1d71a58495``:
 
-      .. include:: /includes/examples/cli-example-retrieve-logs-org.rst
+      .. include:: /includes/examples/cli/cli-example-retrieve-logs-org.rst
 
       To return all events for your project, use the :ref:`atlas events projects list <atlas-events-projects-list>` 
       command and specify your project ID. The following command returns a JSON-formatted list of events for the
       project with the ID ``64ac57bfe9810c0263e9d655``:
 
-      .. include:: /includes/examples/cli-example-retrieve-logs-org.rst
+      .. include:: /includes/examples/cli/cli-example-retrieve-logs-org.rst
 
    .. tab:: Terraform
       :tabid: Terraform
