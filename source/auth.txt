@@ -486,17 +486,17 @@ The following examples configure authentication and custom roles using
             Run the following command to create a user authentication
             with IAM credentials to a specified {+cluster+}. 
             
-            .. include:: /includes/examples/cli-example-auth-aws-iam-devtest.rst
+            .. include:: /includes/examples/cli/dev-test/cli-example-auth-aws-iam-devtest.rst
 
             Run the following command to create a temporary user with
             SCRAM authentication.
 
-            .. include:: /includes/examples/cli-example-auth-temp-user-devtest.rst
+            .. include:: /includes/examples/cli/dev-test/cli-example-auth-temp-user-devtest.rst
 
             Run the following command to configure Workforce Identity
             Federation with OIDC. 
 
-            .. include:: /includes/examples/cli-example-auth-oid-devtest.rst
+            .. include:: /includes/examples/cli/dev-test/cli-example-auth-oid-devtest.rst
 
          .. tab:: Terraform
             :tabid: Terraform
@@ -530,17 +530,17 @@ The following examples configure authentication and custom roles using
             azure.tf 
             ````````
 
-            .. include:: /includes/examples/tf-example-auth-tfazure.rst
+            .. include:: /includes/examples/terraform/tf-example-auth-tfazure.rst
 
             variables.tf 
             ````````````
 
-            .. include:: /includes/examples/tf-example-auth-variables-devtest.rst
+            .. include:: /includes/examples/terraform/dev-test/tf-example-auth-variables-devtest.rst
 
             terraform.tfvars 
             ````````````````
 
-            .. include:: /includes/examples/tf-example-auth-tfvars-devtest.rst
+            .. include:: /includes/examples/terraform/dev-test/tf-example-auth-tfvars-devtest.rst
 
 
             Authentication Example 
@@ -552,7 +552,7 @@ The following examples configure authentication and custom roles using
             main.tf 
             ```````
 
-            .. include:: /includes/examples/tf-example-auth-scram-devtest.rst
+            .. include:: /includes/examples/terraform/dev-test/tf-example-auth-scram-devtest.rst
 
             Use the following example to set up an :abbr:`OIDC (OpenID Connect)`
             federated identity provider in |service|, for using it with
@@ -562,12 +562,12 @@ The following examples configure authentication and custom roles using
             main.tf 
             ```````
 
-            .. include:: /includes/examples/tf-example-auth-oidc-devtest.rst 
+            .. include:: /includes/examples/terraform/dev-test/tf-example-auth-oidc-devtest.rst 
 
             outputs.tf 
             ``````````
 
-            .. include:: /includes/examples/tf-example-auth-tfoutputs-devtest.rst
+            .. include:: /includes/examples/terraform/dev-test/tf-example-auth-tfoutputs-devtest.rst
 
             Authorization Example 
             ~~~~~~~~~~~~~~~~~~~~~
@@ -579,7 +579,7 @@ The following examples configure authentication and custom roles using
             main.tf 
             ```````
 
-            .. include:: /includes/examples/tf-example-auth-grant-roles-devtest.rst  
+            .. include:: /includes/examples/terraform/dev-test/tf-example-auth-grant-roles-devtest.rst  
 
    .. tab:: Staging and Prod Environments
       :tabid: stagingprod
@@ -596,13 +596,13 @@ The following examples configure authentication and custom roles using
             group ``dbAdmin`` and ``readWrite`` privileges on the |service|
             {+cluster+}. 
 
-            .. include:: /includes/examples/cli-example-auth-okta-stagingprod.rst 
+            .. include:: /includes/examples/cli/staging-prod/cli-example-auth-okta-stagingprod.rst 
 
             Run the following command to create an :abbr:`OIDC (OpenID
             Connect)`-compatible identity providers from your federation
             settings.  
 
-            .. include:: /includes/examples/cli-example-auth-oidc-stagingprod.rst 
+            .. include:: /includes/examples/cli/staging-prod/cli-example-auth-oidc-stagingprod.rst 
 
          .. tab:: Terraform
             :tabid: Terraform
@@ -636,21 +636,21 @@ The following examples configure authentication and custom roles using
             azure.tf 
             ````````
 
-            .. include:: /includes/examples/tf-example-auth-tfazure.rst
+            .. include:: /includes/examples/terraform/tf-example-auth-tfazure.rst
 
             variables.tf 
             ````````````
 
-            .. include:: /includes/examples/tf-example-auth-variables-stagingprod.rst
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-variables-stagingprod.rst
 
             terraform.tfvars 
             ````````````````
-            .. include:: /includes/examples/tf-example-auth-tfvars-stagingprod.rst
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-tfvars-stagingprod.rst
 
             outputs.tf 
             ``````````
 
-            .. include:: /includes/examples/tf-example-auth-tfoutputs-stagingprod.rst
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-tfoutputs-stagingprod.rst
 
             Configure Federated Settings for Identity Provider 
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -660,12 +660,12 @@ The following examples configure authentication and custom roles using
             |azure|. It allows access by using OIDC tokens issued by |azure|
             Active Directory. 
 
-            .. include:: /includes/examples/tf-example-auth-oidc-stagingprod.rst
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-oidc-stagingprod.rst
 
             Use the following to create an :abbr:`OIDC (OpenID Connect)`
             federated authentication user. 
 
-            .. include:: /includes/examples/tf-example-auth-create-oidc-user-stagingprod.rst
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-create-oidc-user-stagingprod.rst
 
             Configure Custom Role 
             ~~~~~~~~~~~~~~~~~~~~~
@@ -674,7 +674,7 @@ The following examples configure authentication and custom roles using
             which allows update, add, and delete operations on any collection
             in the database named ``myDb``.
 
-            .. include:: /includes/examples/tf-example-auth-create-custom-role-stagingprod.rst
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-create-custom-role-stagingprod.rst
 
 For an example of an |service| project with the |service| role assigned
 to a specific group, see :ref:`Examples <arch-center-hierarchy>`.

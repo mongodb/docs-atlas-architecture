@@ -492,7 +492,7 @@ The following examples demonstrate how to enable monitoring using |service|
             space on the specified disk. This metric can be used to determine
             if the system is running out of free space. 
 
-            .. include:: /includes/examples/cli-example-metrics-disk-devtest.rst
+            .. include:: /includes/examples/cli/dev-test/cli-example-metrics-disk-devtest.rst
 
             Configure Alerts 
             ~~~~~~~~~~~~~~~~
@@ -500,7 +500,7 @@ The following examples demonstrate how to enable monitoring using |service|
             Run the following command to create an alert notification to an
             email address when your deployment doesn't have a primary.
 
-            .. include:: /includes/examples/cli-example-alerts-no-primary-devtest.rst
+            .. include:: /includes/examples/cli/dev-test/cli-example-alerts-no-primary-devtest.rst
 
             Monitor Database Performance 
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -508,7 +508,7 @@ The following examples demonstrate how to enable monitoring using |service|
             Run the following command to enable |service|-managed slow operation threshold
             for your project. 
 
-            .. include:: /includes/examples/cli-example-performance-advisor-enable-devtest.rst 
+            .. include:: /includes/examples/cli/dev-test/cli-example-performance-advisor-enable-devtest.rst 
 
             Download Logs 
             ~~~~~~~~~~~~~
@@ -516,7 +516,7 @@ The following examples demonstrate how to enable monitoring using |service|
             Run the following command to download a compressed file that contains the
             MongoDB logs for the specified host in your project. 
 
-            .. include:: /includes/examples/cli-example-download-logs.rst
+            .. include:: /includes/examples/cli/cli-example-download-logs.rst
 
          .. tab:: Terraform
             :tabid: terraform 
@@ -550,12 +550,12 @@ The following examples demonstrate how to enable monitoring using |service|
             variables.tf 
             ````````````
 
-            .. include:: /includes/examples/tf-example-monitoring-variables-devtest.rst 
+            .. include:: /includes/examples/terraform/dev-test/tf-example-monitoring-variables-devtest.rst 
 
             terraform.tfvars 
             ````````````````
 
-            .. include:: /includes/examples/tf-example-monitoring-tfvars-devtest.rst
+            .. include:: /includes/examples/terraform/dev-test/tf-example-monitoring-tfvars-devtest.rst
 
             **Example:** Use the following to send an alert notification
             by email to users with the ``GROUP_CLUSTER_MANAGER`` role
@@ -565,7 +565,7 @@ The following examples demonstrate how to enable monitoring using |service|
             main.tf 
             ```````
 
-            .. include:: /includes/examples/tf-example-alerts-replication-lag-devtest.rst
+            .. include:: /includes/examples/terraform/dev-test/tf-example-alerts-replication-lag-devtest.rst
 
    .. tab:: Staging and Prod Environments
       :tabid: stagingprod
@@ -593,7 +593,7 @@ The following examples demonstrate how to enable monitoring using |service|
               are't too high. 
             - SYSTEM CPU - to ensure that the CPU usage is steady. 
 
-            .. include:: /includes/examples/cli-example-metrics-processes-stagingprod.rst
+            .. include:: /includes/examples/cli/staging-prod/cli-example-metrics-processes-stagingprod.rst
 
             Configure Alerts 
             ~~~~~~~~~~~~~~~~
@@ -602,7 +602,7 @@ The following examples demonstrate how to enable monitoring using |service|
             there are possible connection storms based on the number of
             connections in your project. 
 
-            .. include:: /includes/examples/cli-example-alerts-connection-storms-stagingprod.rst
+            .. include:: /includes/examples/cli/staging-prod/cli-example-alerts-connection-storms-stagingprod.rst
 
             Monitor Database Performance 
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -610,7 +610,7 @@ The following examples demonstrate how to enable monitoring using |service|
             Run the following command to retrieve the suggested indexes for collections
             experiencing slow queries. 
 
-            .. include:: /includes/examples/cli-example-return-suggested-indexes-stagingprod.rst
+            .. include:: /includes/examples/cli/staging-prod/cli-example-return-suggested-indexes-stagingprod.rst
 
             Download Logs 
             ~~~~~~~~~~~~~
@@ -618,7 +618,7 @@ The following examples demonstrate how to enable monitoring using |service|
             Run the following command to download a compressed file that contains the
             MongoDB logs for the specified host in your project. 
 
-            .. include:: /includes/examples/cli-example-download-logs.rst
+            .. include:: /includes/examples/cli/cli-example-download-logs.rst
 
          .. tab:: Terraform
             :tabid: terraform 
@@ -650,12 +650,12 @@ The following examples demonstrate how to enable monitoring using |service|
             variables.tf 
             ````````````
 
-            .. include:: /includes/examples/tf-example-monitoring-variables-stagingprod.rst 
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-monitoring-variables-stagingprod.rst 
 
             terraform.tfvars 
             ````````````````
 
-            .. include:: /includes/examples/tf-example-monitoring-tfvars-stagingprod.rst
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-monitoring-tfvars-stagingprod.rst
 
             **Example 1:** Use the following to integrate with
             third-party services like Datadog and Prometheus for alert notification.
@@ -663,7 +663,7 @@ The following examples demonstrate how to enable monitoring using |service|
             main.tf 
             ```````
 
-            .. include:: /includes/examples/tf-example-third-party-integration-stagingprod.rst 
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-third-party-integration-stagingprod.rst 
 
             **Example 2:** Use the following to send alert notification
             to third-party services like Datadog and Prometheus when
@@ -672,7 +672,7 @@ The following examples demonstrate how to enable monitoring using |service|
             main.tf 
             ```````
 
-            .. include:: /includes/examples/tf-example-alerts-no-primary-stagingprod.rst  
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-alerts-no-primary-stagingprod.rst  
 
             **Example 3:** Use the following to send an alert
             notification by email to users with the
@@ -682,4 +682,4 @@ The following examples demonstrate how to enable monitoring using |service|
             main.tf 
             ```````
 
-            .. include:: /includes/examples/tf-example-alerts-replication-lag-stagingprod.rst
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-alerts-replication-lag-stagingprod.rst
