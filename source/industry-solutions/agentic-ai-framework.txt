@@ -43,7 +43,7 @@ In 2025, agentic AI applications are no longer just a hobby project.
 Companies around the world are investing in software to incorporate
 AI agents into their business workflows. The most common use of an AI agent
 is to assist with research analysis or writing code.
-Langchain’s `recent survey <https://www.langchain.com/stateofaiagents>`\_\_
+Langchain’s `recent survey <https://www.langchain.com/stateofaiagents>`__
 of over 1,000 professionals across multiple industries showed
 that over 51% have already deployed agents in production—with 60%
 using the agents for research and summarization tasks.
@@ -51,13 +51,11 @@ using the agents for research and summarization tasks.
 However, leveraging an AI agent for more complex tasks than research and summarization,
 and deploying them at scale, presents certain challenges.
 
-                    ????? HOW TO SEPARATE THIS CODE INTO SECTIONS (INDENT)
-
 - **Complex data integration and handling:** AI agents often rely on
-disparate data sources and formats (structured logs, unstructured text,
-and sensor streams) making it difficult to unify data for real‐time
-decision‐making. Having all relevant data stored in one database for the
-agent to consume helps speed up the development process.
+   disparate data sources and formats (structured logs, unstructured text,
+   and sensor streams) making it difficult to unify data for real‐time
+   decision‐making. Having all relevant data stored in one database for the
+   agent to consume helps speed up the development process.
 
 - **High concurrency and low latency:** Agents in production must handle
 a large volume of requests and respond quickly, which can overwhelm
