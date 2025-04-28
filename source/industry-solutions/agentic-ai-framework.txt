@@ -37,7 +37,7 @@ MongoDB Atlas enables rapid development of AI agents across industries.
 <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
 
 Solution Overview
-
+-----------------
 
 In 2025, agentic AI applications are no longer just a hobby project.
 Companies around the world are investing in software to incorporate
@@ -48,8 +48,8 @@ of over 1,000 professionals across multiple industries showed
 that over 51% have already deployed agents in production—with 60%
 using the agents for research and summarization tasks.
 
-However, leveraging an AI agent for more complex tasks than research and summarization,
-and deploying them at scale, presents certain challenges.
+However, using an AI agent for more complex tasks than research and summarization,
+specially when implemented on a large scale, presents certain challenges.
 
 - **Complex data integration and handling:** AI agents often rely on
   disparate data sources and formats (structured logs, unstructured text,
@@ -242,9 +242,10 @@ Building the Solution
    .. step:: **Set up MongoDB database and collections**
 
       Log in to MongoDB Atlas and create a database named
-      “agentic_<YOUR_USE_CASE>,” e.g.” agentic_macro_indicators.” Ensure
-      the name is reflected in the environment variables. Create the
-      following collections:
+      “agentic_<YOUR_USE_CASE>,” e.g. “agentic_macro_indicators”. Ensure
+      the name is reflected in the environment variables. 
+      
+      Create the following collections:
 
       - Agent_profiles (for storing agent profiles): You can import some
         sample data to this collection using this file.
