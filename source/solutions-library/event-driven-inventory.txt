@@ -1,0 +1,5 @@
+.. _arch-center-is-event-driven-inventory:
+
+====================================================
+Building an Event-Driven Inventory Management System
+====================================================
