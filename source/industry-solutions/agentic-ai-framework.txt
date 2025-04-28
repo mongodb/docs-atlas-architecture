@@ -34,7 +34,7 @@ MongoDB Atlas enables rapid development of AI agents across industries.
 
 **Partners:** `Langchain <https://cloud.mongodb.com/ecosystem/langchain>`__, `Cohere
 <https://cloud.mongodb.com/ecosystem/cohere>`__, `AWS Bedrock 
-<https://cloud.mongodb.com/ecosystem/amazon-bedrock>`
+<https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
 
 Solution Overview
 -----------------
@@ -110,11 +110,14 @@ Reference Architectures
 
 **With MongoDB**:
 
-The agentic framework is a versatile AI-driven recommendation assistant designed to understand your data,
-execute a multi-step diagnostic workflow using LangGraph, and generate actionable insights. It seamlessly
-integrates multiple technologies, reading time-series data from a CSV file or MongoDB (simulating diverse data sources),
-generating text embeddings, and performing vector searches to identify similar past queries.
-The framework also persists session and run data, ultimately producing a diagnostic recommendation.
+The agentic framework is a versatile AI-driven recommendation assistant
+designed to understand your data, execute a multi-step diagnostic
+workflow using LangGraph, and generate actionable insights. It
+seamlessly integrates multiple technologies, reading time-series data
+from a CSV file or MongoDB (simulating diverse data sources), generating
+text embeddings, and performing vector searches to identify similar past
+queries. The framework also persists session and run data, ultimately
+producing a diagnostic recommendation.
 
 MongoDB serves as the backbone for storing agent profiles, historical recommendations, time-series data,
 and session logs, ensuring full traceability of the diagnostic process
