@@ -92,4 +92,4 @@ kick-start their projects.
    RAG Applications <industry-solutions/rag-applications>
    Audio-Based AI Diagnostics <industry-solutions/audio-based-AI-diagnostics>
    AI-driven Media Personalization <industry-solutions/media-personalization>
-   Framework for Rapid AI Agent Deployment <industry-solutions/agentic-ai-framework>
+   Rapid AI Agent Deployment <industry-solutions/agentic-ai-framework>
