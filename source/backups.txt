@@ -112,7 +112,15 @@ Recommendations for {+service+} Backups
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
    :expanded: true
 
-   Recommendations here
+   If you select a multi-region deployment model, we recommend that you deploy to three or more regions to 
+   support automatic failover in the event of a primary region failure. The built-in replication of a multi-region 
+   cluster ensures high availability and fault tolerance without the use of backups. To learn more about which multi-region
+   deployment models ensure high availability of data, see :ref:`arch-center-deployment-topologies`. 
+ 
+   We also recommend that multi-region and multi-cloud deployments enable local |service| cloud backups or continuous cloud backups
+   for multiple regions to support recovery to previous versions of data in case of large data loss or corruption events such as
+   accidental deletions of data. This backup configuration meets the same compliance requirements as enabling 
+   :atlas:`multi-region snapshot distribution </backup/cloud-backup/snapshot-distribution/>` for a single-region deployment.
 
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -131,8 +139,9 @@ maximum acceptable amount of data loss during an incident, while RTO
 defines how quickly your application must recover. Since data varies in
 importance, you must evaluate RPO and RTO for each application
 individually. For example, any mission-critical data will likely have 
-different requirements than clickstream analytics. Your requirements
-for RTO, RPO, and the backup retention period will influence the cost
+different requirements than clickstream analytics.
+
+Your requirements for RTO, RPO, and the backup retention period will influence the cost
 and performance considerations of maintaining backups. In development
 and test environments, we recommend that you disable backup to save
 costs. In staging and production environments, ensure that backup is
@@ -223,6 +232,8 @@ we recommend striking a balance between availability and cost. However,
 your critical workloads might require multiple copies of snapshots in
 various locations. 
 
+.. _atlas-backup-compliance:
+
 Recommendations for Backup Compliance Policy 
 ````````````````````````````````````````````
 
@@ -263,7 +274,7 @@ By :ref:`selecting regions <atlas-backup-distribution>` strategically
 for backup, you can avoid cross-region data transfer fees and choose the
 right {+cluster+} disk size based on workload to prevent overspending.
 By implementing these strategies, you can effectively manage costs while
-maintaining secure and reliable backups.   
+maintaining secure and reliable backups.
 
 Automation Examples: {+service+} Backups
 ----------------------------------------
@@ -281,17 +292,17 @@ backup is enabled for the {+cluster+}.
    .. tab:: CLI
       :tabid: cli
 
-      Run the following command take a backup snapshot for the {+cluster+}
+      Run the following command to take a backup snapshot for the {+cluster+}
       named myDemo and retain the snapshot for 7 days:
 
-      .. include:: /includes/examples/cli-example-backup-take-snapshot.rst
+      .. include:: /includes/examples/cli/cli-example-backup-take-snapshot.rst
 
       Enable backup compliance policy for your project with a
       designated, authorized user (``governance@example.org``) who alone can turn
       off this protection after completing a verification process with
       MongoDB support. 
 
-      .. include:: /includes/examples/cli-example-backup-compliance-policy-enable.rst
+      .. include:: /includes/examples/cli/cli-example-backup-compliance-policy-enable.rst
 
       Run the following command to create a compliance policy for
       scheduled backup snapshots that enforces the number of times
@@ -299,7 +310,7 @@ backup is enabled for the {+cluster+}.
       the duration for retaining the snapshots, which is set to ``1``
       month.   
 
-      .. include:: /includes/examples/cli-example-backup-compliance-policy-schedule.rst
+      .. include:: /includes/examples/cli/cli-example-backup-compliance-policy-schedule.rst
 
    .. tab:: Terraform
       :tabid: Terraform
@@ -331,7 +342,7 @@ backup is enabled for the {+cluster+}.
       variables.tf 
       ````````````
 
-      .. include:: /includes/examples/tf-example-backup-variables.rst
+      .. include:: /includes/examples/terraform/tf-example-backup-variables.rst
 
       Configure Backup Schedule for the {+Cluster+} 
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -342,7 +353,7 @@ backup is enabled for the {+cluster+}.
       main.tf 
       ```````
 
-      .. include:: /includes/examples/tf-example-backup-snapshot-schedule-tier1.rst
+      .. include:: /includes/examples/terraform/tf-example-backup-snapshot-schedule-tier1.rst
 
       Use the following to configure a :ref:`Tier 2
       <backup-policy-recommendations>` backup schedule for the {+cluster+}. 
@@ -350,7 +361,7 @@ backup is enabled for the {+cluster+}.
       main.tf 
       ```````
 
-      .. include:: /includes/examples/tf-example-backup-snapshot-schedule-tier2.rst
+      .. include:: /includes/examples/terraform/tf-example-backup-snapshot-schedule-tier2.rst
 
       Use the following to configure a :ref:`Tier 3
       <backup-policy-recommendations>` backup schedule for the {+cluster+}. 
@@ -358,7 +369,7 @@ backup is enabled for the {+cluster+}.
       main.tf 
       ```````
 
-      .. include:: /includes/examples/tf-example-backup-snapshot-schedule-tier3.rst
+      .. include:: /includes/examples/terraform/tf-example-backup-snapshot-schedule-tier3.rst
 
       Configure Backup and PIT Restore for the {+Cluster+}
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -369,4 +380,4 @@ backup is enabled for the {+cluster+}.
       main.tf 
       ```````
       
-      .. include:: /includes/examples/tf-example-backup-snapshot-pit-restore.rst
+      .. include:: /includes/examples/terraform/tf-example-backup-snapshot-pit-restore.rst
