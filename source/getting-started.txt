@@ -9,7 +9,6 @@ Getting Started with the {+atlas-arch-center+}
 Use the following resources to get started with |service| and the
 {+atlas-arch-center+}:
 
-<<<<<<< HEAD
 .. card-group::
    :columns: 2
    :style: extra-compact
