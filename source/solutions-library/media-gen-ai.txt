@@ -1,0 +1,4 @@
+.. toctree::
+   :titlesonly:
+
+   AI-driven Media Personalization <solutions-library/media-personalization>

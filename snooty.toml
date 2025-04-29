@@ -32,7 +32,7 @@ toc_landing_pages = [
     "/reliability",
     "/performance",
     "/cost-optimization",
-    "/industry-solutions"
+    "/solutions-library"
 ]
 
 [constants]

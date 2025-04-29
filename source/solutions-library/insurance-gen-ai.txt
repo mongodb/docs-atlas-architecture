@@ -1,0 +1,5 @@
+.. toctree::
+   :titlesonly:
+
+   PDF Search </solutions-library/pdf-search>
+   Claim Management <solutions-library/claim-management>

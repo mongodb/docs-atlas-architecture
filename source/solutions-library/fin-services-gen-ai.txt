@@ -1,0 +1,5 @@
+.. toctree::
+   :titlesonly:
+   :hidden:
+
+   RAG Applications <solutions-library/rag-applications>
