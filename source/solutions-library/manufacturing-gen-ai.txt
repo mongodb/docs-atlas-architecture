@@ -1,2 +1,4 @@
 .. toctree::
    :titlesonly:
+
+   Rapid AI Agent Deployment </solutions-library/agentic-ai-framework>
