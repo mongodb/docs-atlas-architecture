@@ -1,6 +1,7 @@
-.. cta-banner::
-   :url: https://github.com/mongodb/docs-atlas-architecture/blob/main/source/includes/examples/tf-example-complete-staging-prod.tf
-   :icon: Code
+.. tip::
 
-   See Terraform examples to enforce our Staging/Prod recommendations across all pillars in one place `in Github <https://github.com/mongodb/docs-atlas-architecture/blob/main/source/includes/examples/tf-example-complete-staging-prod.tf>`__.
+   For Terraform examples that enforce our recommendations across all
+   pillars, see one of the following examples in Github:
 
+   - `Staging/Prod <https://github.com/mongodb/docs-atlas-architecture/blob/main/source/includes/examples/tf-staging-prod-complete/>`__
+   - `Dev/Test <https://github.com/mongodb/docs-atlas-architecture/blob/main/source/includes/examples/tf-dev-test-complete/>`__

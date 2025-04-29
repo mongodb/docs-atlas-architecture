@@ -12,50 +12,69 @@
    :depth: 2
    :class: onecol
 
-When deploying your database, you have 2 main choices. The following diagram 
+
+When deploying your database, you must choose between deploying to a single region or multiple regions. The following diagram 
 shows these options, which are explained further below:
 
 .. figure:: /includes/images/deployment-types.png
    :figwidth: 750px
    :alt: An image showing the different deployment options.
 
+Single-Region Deployments
+-------------------------
 
-:ref:`Single-Region Deployment<arch-center-paradigms-single>`
-
-This is the simplest deployment option. In a single-region deployment, your 
-data is stored in one of a provider's regions (such as AWS's ``us-west-2`` 
-or Google's ``asia-northeast3``). With this simplicity and lower cost comes 
-the risk of lower availability and potentially higher latency, depending on the 
-distribution of your application's users. Because {+service+} always provides a 
-minimum of zone-level availability, you cluster nodes are spread across the 
-availability zones within a single region, so if a single zone fails, your 
+A :ref:`single-region deployment <arch-center-paradigms-single>` is the simplest deployment paradigm.
+In a single-region deployment, your data is stored in one of a provider's regions (such as {+aws+}'s ``us-west-2`` 
+or {+gcp+}'s ``asia-northeast3``). Because {+service+} always provides a 
+minimum of zone-level availability, your cluster nodes are spread across the 
+availability zones within a single region. Therefore, if a single zone fails, your 
 data is still available in the other zones.
 
-:ref:`Multi-Region Deployment <arch-center-paradigms-multi-region>`
+With the simplicity and lower cost of a single-region deployment 
+comes the risk of lower availability and potentially higher latency, depending on the 
+distribution of your application's users. 
 
-This deployment paradigm provides a more robust option with higher availability. 
-There are several types of multi-region deployments:
+Multi-Region Deployments
+------------------------
 
-- Deploying clusters to multiple regions hosted by a *single* cloud provider 
-  within a single "geography" (large areas like a continent or countries). 
-  For example, you deploy clusters in regions called ``us-1`` and ``us-3``, 
-  both of which are in the United States and are managed by the same cloud 
-  provider. This ensures availability if any given region fails.
+A :ref:`multi-region deployment <arch-center-paradigms-multi-region>` is a more complex deployment paradigm that provides higher availability 
+and low latency across a larger geographic range than a single-region deployment. There are several types of multi-region deployments:
 
-- Deploying clusters to one or more regions in two or more geographies. 
-  For example, you deploy clusters in regions called ``us-1`` and ``us-3``, 
-  both of which are in the United States, and a third cluster in ``eu-2``, 
-  which is in Europe. This ensures availability if any given region fails, or 
+- **Multi-region in one geography**:
+  Deploys to multiple regions hosted by a single cloud provider 
+  within a single geography, which is a large area like a country or continent.
+  This ensures availability if any given region fails.
+
+  For example, you deploy clusters to the {+aws+} regions ``us-west-1`` and ``us-east-1``,
+  both of which are in the United States.
+
+- **Multi-region in multiple geographies**:
+  Deploys to one or more regions in two or more geographies.
+  This ensures availability if any given region fails, or 
   if an entire geographic area is unavailable.
-  
-- Deploying clusters to multiple regions hosted by *multiple* cloud providers. 
-  For example, you deploy clusters in the AWS region ``us-west-1`` and the GCP 
-  region ``us-east4``. This provides the highest level of availability, ensuring 
-  your data is available even if an entire cloud provider fails. 
 
-- Global Cluster Deployment. This option should be considered for only the most complex 
+  For example, you deploy clusters in the {+aws+} regions ``us-east-1`` and ``us-east-2``, 
+  both of which are in the United States, and a third cluster in ``eu-west-2``, 
+  which is in Europe. 
+  
+- **Multi-cloud** : 
+  Deploys to one or more regions hosted by multiple cloud providers. 
+  This provides the highest level of availability, ensuring 
+  your data is available if any given region fails or if an entire cloud provider fails. 
+
+  For example, you deploy clusters in the {+aws+} region ``us-west-1`` and the {+gcp+} 
+  region ``us-east4``. 
+
+- **Global**:
+  Deploys a global cluster with up to nine single or multi-region zones.
+  Consider this option for only the most complex 
   situations; for example, where you need global aggregation of user data, or 
   where legal terms dictate specific hosting requirements.
+
+.. _arch-center-choosing-paradigms:
+
+Choosing a Deployment Paradigm
+------------------------------
 
 The following table provides a comparison of deployment paradigms to help you 
 determine the best fit for your needs: 
@@ -68,7 +87,7 @@ determine the best fit for your needs:
      - Single-Region
      - Multi-Region in One Geography
      - Multi-Region in Multiple Geographies
-     - Multi-Cloud
+     - Multi-Region and Multi-Cloud
 
    * - **Availability & Reliability**
      - Data is available if a single zone (data center) fails
@@ -77,10 +96,10 @@ determine the best fit for your needs:
      - Data is available if a cloud provider fails
 
    * - **Performance**
-     - High for regional users; lower for users in more distant regions.
-     - High for users within the chosen geography
-     - High for users within all of the chosen geographies
-     - High for users within all of the chosen geographies
+     - Low latency for users within the chosen region; higher latency for users in more distant regions
+     - Low latency for users within the chosen geography
+     - Low latency for users within all of the chosen geographies
+     - Low latency for users within all of the chosen geographies
 
    * - **Complexity**
      - Quick setup and easy maintenance
@@ -101,6 +120,64 @@ determine the best fit for your needs:
    provider(s) you select, the number of regions you need, the amount of storage, and 
    the processing power of the servers. For the latest pricing information, 
    refer to the `MongoDB Pricing <https://www.mongodb.com/pricing>`_.
+
+Use Cases 
+~~~~~~~~~
+
+When choosing your deployment paradigm, start by identifying the smallest number of regions that you can deploy to serve 
+the widest geographical distribution of your users. Then, consider adding additional regions or 
+cloud providers according to your requirements for availability, performance, and
+:ref:`data sovereignty <arch-center-compliance-data-sovereignty>`. 
+
+Consider the following use cases to help decide which deployment paradigm works for the geographical distribution of your application's users: 
+
+Users Mostly in One Geography
+`````````````````````````````
+
+If the majority of your application's users are located in one geography,
+we recommend that you deploy to one or more regions within the same geography.
+While a single-region deployment can protect against an outage in a single availability zone,
+a multi-region deployment covers a larger geographical area and ensures availability during both zonal and regional outages.
+For even higher availability, you can deploy across multiple regions *and* multiple cloud providers to protect against cloud-provider outages.
+These options all support low latency and simplify compliance with data sovereignty requirements 
+because all user data is accessed and stored within the same geography. 
+
+To learn more about these deployment paradigms, see the following paradigm pages: 
+
+- :ref:`Single-Region Deployment <arch-center-paradigms-single>`
+- :ref:`Multi-Region Deployment in One Geography <arch-center-paradigms-multi-region>`
+- :ref:`Multi-Region and Multi-Cloud Deployment in One Geography <arch-center-paradigms-multi-cloud>`
+
+Users Distributed Across Multiple Geographies
+`````````````````````````````````````````````
+
+If your application's users are distributed across multiple geographies, such as between the US and Europe,
+we recommend that you deploy to one or more regions in each geography. 
+Deploying to one region in each geography where you serve customers provides low latency and 
+availability in case of a geographical outage. You can also meet data sovereignty requirements
+by partitioning your data so that user data from each geography is hosted within that geography.
+
+To ensure high availability in case of regional outages without increasing latency or violating data sovereignty requirements,
+you can also deploy to multiple regions in each geography. You can achieve the highest availabilty for a multi-region deployment 
+by deploying clusters to multiple regions, in multiple geographies, hosted by multiple cloud providers. 
+
+To learn more about these deployment paradigms, see the following paradigm pages: 
+
+- :ref:`Multi-Region Deployment in Multiple Geographies <arch-center-paradigms-multi-region>`
+- :ref:`Multi-Region and Multi-Cloud Deployment in Multiple Geographies <arch-center-paradigms-multi-cloud>`
+
+Users Distributed Worldwide
+```````````````````````````
+
+If you are deploying an application to a worldwide audience, we recommend that you deploy a multi-region deployment 
+across multiple geographies before considering a global deployment. Global |service| deployments are the most complex multi-region deployment paradigms,
+and therefore require very careful planning. In most cases, a multi-region deployment in multiple geographies can fulfill your requirements
+for high availability, low latency, and data sovereignty.
+
+To learn more about these deployment paradigms, see the following pages: 
+
+- :ref:`Multi-Region Deployment in Multiple Geographies <arch-center-paradigms-multi-region>`
+- :ref:`Global Deployment <arch-center-global-deployments>`
 
 .. toctree::
    :titlesonly:

@@ -390,7 +390,7 @@ These examples also apply other recommended configurations, including:
             For your development and testing environments, run the following command for each project. Change
             the IDs and names to use your values:
 
-            .. include:: /includes/examples/cli-example-create-clusters-devtest.rst
+            .. include:: /includes/examples/cli/dev-test/cli-example-create-clusters-devtest.rst
 
          .. tab:: Staging and Prod Environments
             :tabid: stagingprod
@@ -398,13 +398,13 @@ These examples also apply other recommended configurations, including:
             For your staging and production environments, create the following ``cluster.json`` file for each project. 
             Change the IDs and names to use your values:
 
-            .. include:: /includes/examples/cli-json-example-create-clusters.rst
+            .. include:: /includes/examples/cli/cli-json-example-create-clusters.rst
 
             After you create the ``cluster.json`` file, run the
             following command for each project. The
             command uses the ``cluster.json`` file to create a cluster.
 
-            .. include:: /includes/examples/cli-example-create-clusters-stagingprod.rst 
+            .. include:: /includes/examples/cli/staging-prod/cli-example-create-clusters-stagingprod.rst 
 
       For more configuration options and info about this example, 
       see :ref:`atlas-clusters-create`.
@@ -446,22 +446,22 @@ These examples also apply other recommended configurations, including:
             main.tf
             ```````
 
-            .. include:: /includes/examples/tf-example-main-devtest.rst 
+            .. include:: /includes/examples/terraform/dev-test/tf-example-main-devtest.rst 
 
             variables.tf
             ````````````
 
-            .. include:: /includes/examples/tf-example-variables.rst
+            .. include:: /includes/examples/terraform/tf-example-variables.rst
 
             terraform.tfvars
             ````````````````
 
-            .. include:: /includes/examples/tf-example-tfvars-devtest.rst
+            .. include:: /includes/examples/terraform/dev-test/tf-example-tfvars-devtest.rst
 
             provider.tf
             ```````````
 
-            .. include:: /includes/examples/tf-example-provider.rst
+            .. include:: /includes/examples/terraform/tf-example-provider.rst
 
             After you create the files, navigate to each application and environment pair's directory and run the following
             command to initialize Terraform:
@@ -497,22 +497,22 @@ These examples also apply other recommended configurations, including:
             main.tf
             ```````
 
-            .. include:: /includes/examples/tf-example-main-stagingprod.rst 
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-main-stagingprod.rst 
 
             variables.tf
             ````````````
 
-            .. include:: /includes/examples/tf-example-variables.rst
+            .. include:: /includes/examples/terraform/tf-example-variables.rst
 
             terraform.tfvars
             ````````````````
 
-            .. include:: /includes/examples/tf-example-tfvars-stagingprod.rst
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-tfvars-stagingprod.rst
 
             provider.tf
             ```````````
 
-            .. include:: /includes/examples/tf-example-provider.rst
+            .. include:: /includes/examples/terraform/tf-example-provider.rst
 
             After you create the files, navigate to each application and environment pair's directory and run the following
             command to initialize Terraform:
