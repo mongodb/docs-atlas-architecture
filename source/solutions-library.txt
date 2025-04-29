@@ -122,12 +122,13 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Driven Media Personalization: MongoDB and Vector Search
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/agentic-ai-framework/
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/media-personalization/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
-            A modular solution for building diagnostic and
-            recommendation agents with MongoDB Atlas
+            Learn about how to leverage data to create personalized 
+            user experiences by using Atlas Database, 
+            Atlas Vector Search, and Pymongo. 
 
 
 
