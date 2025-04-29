@@ -39,4 +39,4 @@ assignments, the user has no access to the system.
    :titlesonly:
 
    Authentication </auth/authentication>
-   Authorization </auyth/authorization>
+   Authorization </auth/authorization>
