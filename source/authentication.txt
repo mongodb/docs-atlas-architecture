@@ -31,54 +31,59 @@ access the {+atlas-ui+}, |service| databases, and  the {+atlas-admin-api+}.
    human users as "Workforce Identity" and applications as 
    "Workload Identity".
 
-The following table provides guidance on the recommended authentication methods 
-for staging and production ("upper") environments, and other methods you might 
-use in development and test ("lower") environments. 
+There are two factors in determining which authentication types to use: 
+the identity type (human or machine), and the resource that the identity 
+needs access to (|service| UI, |service| Database, or |service| APIs). 
 
-.. list-table:: 
-   :widths: 10 13 40 37
-   :header-rows: 1
+.. note:: 
 
-   * - Resource
-     - User 
-     - Recommendations for Production
-     - Other Available Options
+   We define users as "Workforce" and machines as "Workload".
 
-   * - Atlas UI 
-     - Workforce (Human)
-     - | Use IP access restrictions, and then either:
-       | - Use :ref:`Federated Auth <arch-center-federated_auth>` with an SAML 2.0 
-           identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
-       |   *or*
-       | - Use Atlas credentials with :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
-     - | Use Atlas credentials and MFA.
-    
-   * - Atlas Database
-     - Workforce (Human)
-     - Use :ref:`Workforce Identity Federation <arch-center-workforce_if>`
-     - | Use :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`.
-       | Consider :ref:`creating temporary database users <arch-center-just-in-time>`
-         with just-in-time database access.
-    
-   * - Atlas Database
-     - Workload (Application)
-     - | Use :ref:`Workload Identity Federation <arch-center-workload_if>`.
-       | -- *or* --
-       | Use :ref:`AWS-IAM authentication <arch-center-iam>`.
-       | -- *or* --
-       | Use :ref:`X.509 <arch-center-x509>` certificates
-     - :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`
+|service| UI Access
+-------------------
+Use IP access restrictions, and then either:
+  - Use :ref:`Federated Auth <arch-center-federated_auth>` with an SAML 2.0 
+    identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
+    *or*
+  -  Use Atlas credentials with :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
 
-   * - Atlas APIs
-     - Workforce (Human)
-     - Use :ref:`<arch-center-admin-service-accounts>`.
-     - Use :ref:`<arch-center-admin-service-accounts>` or 
-       :ref:`<arch-center-admin-api-keys>`.
+For development and test environments, you can also use Atlas credentials and MFA.
 
-   * - Atlas APIs
-     - Workload (Application)
-     - Use :ref:`<arch-center-admin-service-accounts>`.
-     - :ref:`<arch-center-admin-api-keys>`
+.. note::
+
+   This only applies to Workforce users.
+
+|service| Database Access
+-------------------------
+
+Workforce Users
+~~~~~~~~~~~~~~~
+Use :ref:`Workforce Identity Federation <arch-center-workforce_if>`
+
+For development and test environments, you can also use 
+:ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`.
+Consider :ref:`creating temporary database users <arch-center-just-in-time>` 
+with just-in-time database access.
+
+Workload Users
+~~~~~~~~~~~~~~~
+Use one of the following:
+
+- :ref:`Workload Identity Federation <arch-center-workload_if>`.
+- :ref:`AWS-IAM authentication <arch-center-iam>`.
+- :ref:`X.509 <arch-center-x509>` certificates
+
+For development and test environments, you can also use 
+:ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`
+
+
+|service| API Access
+--------------------
+Both Workforce and Workload Users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use :ref:`<arch-center-admin-service-accounts>`.
+For development and test environments, you can also use 
+:ref:`<arch-center-admin-service-accounts>` or :ref:`<arch-center-admin-api-keys>`.
 
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
@@ -95,7 +100,18 @@ use in development and test ("lower") environments.
    <<Recommendations that apply only to deployments across multiple regions or multiple cloud providers here>>
 
 
-The following sections provide details about the authentication methods. 
+The following sections provide details about the authentication methods used when 
+accession the Atlas UI, Atlas Database, or the Atlas APIs.
+
+Atlas UI Authentication
+-----------------------
+     - | Use IP access restrictions, and then either:
+       | - Use :ref:`Federated Auth <arch-center-federated_auth>` with an SAML 2.0 
+           identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
+       |   *or*
+       | - Use Atlas credentials with :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
+     - | Use Atlas credentials and MFA.
+
 
 .. _arch-center-federated_auth:
 
@@ -144,6 +160,14 @@ OAuth 2.0-compliant service. These authentication mechanisms simplify
 management and enhance security by allowing for passwordless access to
 the |service| database. 
 
+.. _arch-center-iam:
+
+AWS IAM Role Authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can also authenticate through |aws| |iam| roles. To learn more, 
+refer to :ref:`set-up-pwdless-auth`.
+
 To learn more, refer to :ref:`oidc-authentication-workload` and 
 :ref:`atlas-federated-authentication`.
 
@@ -175,14 +199,6 @@ two forms of identification:
    using |service| credentials.
 
 To learn more, see :ref:`atlas-enable-mfa`.
-
-.. _arch-center-iam:
-
-AWS IAM Role Authentication
----------------------------
-
-You can also authenticate through |aws| |iam| roles. To learn more, 
-refer to :ref:`set-up-pwdless-auth`.
 
 .. _arch-center-x509:
 
