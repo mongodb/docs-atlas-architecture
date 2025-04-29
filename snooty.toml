@@ -30,6 +30,7 @@ toc_landing_pages = [
     "/deployment-paradigms",
     "/operational-efficiency",
     "/security",
+    "/security/auth",
     "/reliability",
     "/performance",
     "/cost-optimization",

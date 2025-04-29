@@ -42,7 +42,7 @@ needs access to (|service| UI, |service| Database, or |service| APIs).
 |service| UI Access
 -------------------
 Use IP access restrictions, and then either:
-  - Use :ref:`Federated Auth <arch-center-federated_auth>` with an SAML 2.0 
+  - Use :ref:`Federated Authentication <arch-center-federated_auth>` with an SAML 2.0 
     identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
     *or*
   -  Use Atlas credentials with :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
@@ -61,9 +61,8 @@ Workforce Users
 Use :ref:`Workforce Identity Federation <arch-center-workforce_if>`
 
 For development and test environments, you can also use 
-:ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`.
-Consider :ref:`creating temporary database users <arch-center-just-in-time>` 
-with just-in-time database access.
+:ref:`SCRAM <arch-center-scram>`. Consider :ref:`creating temporary database 
+users <arch-center-just-in-time>` with just-in-time database access.
 
 Workload Users
 ~~~~~~~~~~~~~~~
@@ -90,13 +89,14 @@ accession the Atlas UI, Atlas Database, or the Atlas APIs.
 
 Atlas UI Authentication
 -----------------------
-     - | Use IP access restrictions, and then either:
-       | - Use :ref:`Federated Auth <arch-center-federated_auth>` with an SAML 2.0 
-           identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
-       |   *or*
-       | - Use Atlas credentials with :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
-     - | Use Atlas credentials and MFA.
+Use IP access restrictions, and then either:
 
+- Use :ref:`Federated Authentication <arch-center-federated_auth>` with an SAML 2.0 
+  identity provider, such as Okta, Microsoft Entra ID, or Ping Identity, or 
+- Use Atlas credentials with 
+  :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
+
+For development and test environments, you can also use Atlas credentials and MFA.
 
 Authentication Types
 --------------------
@@ -115,8 +115,8 @@ For the {+atlas-ui+}, you can use any :abbr:`SAML (Security Assertion
 Markup Language)` compatible identity provider such as Okta, Microsoft
 Entra ID, or Ping Identity.
 
-For for the |service| database, we support workforce identity federation using  
-OIDC compatible providers, and and workload identity federation using OAuth2.0 
+For the |service| database, we support workforce identity federation using  
+OIDC compatible providers, and workload identity federation using OAuth2.0 
 compatible providers. This includes Okta, Microsoft
 Entra ID, Ping Identity, and others for workforce identity, and Azure, GCP, and 
 others for workload identity. You can also use AWS IAM roles for workload 
@@ -209,17 +209,6 @@ third-party secrets manager like
 or |aws| Secrets Manager to generate and store complex database credentials. 
 
 To learn more, refer to :manual:`SCRAM </core/security-scram/>`.
-
-.. _arch-center-just-in-time:
-
-Just-in-Time Access 
-~~~~~~~~~~~~~~~~~~~
-
-|service| also supports creating temporary database users
-that automatically expire after the predefined times. A user can be
-created for 6 hours, 1 day, or 1 week.
-
-To learn more, see :ref:`mongodb-users`. 
 
 .. _arch-center-admin-service-accounts:
 Service Accounts
