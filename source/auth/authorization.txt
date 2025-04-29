@@ -132,7 +132,7 @@ you can use just-in-time provisioning by mapping identity provider groups to
 organized role assignments throughout the platform. You can grant access 
 programmatically based on the provisioning process of your orchestration layer.
 
-You should use a modern federated Identity Provider (IdP) that 
+You should use a modern Federated Identity Provider (FIP) that 
 provides SSO, such as Azure Entra ID, Okta, or Ping Identity. 
 This makes the authorization process more secure and supports the 
 flexibility needed to programmatically assign :abbr:`IdP (Identity Provider)` 
@@ -152,6 +152,8 @@ that automatically expire after the predefined times. A user can be
 created for 6 hours, 1 day, or 1 week.
 
 To learn more, see :ref:`mongodb-users`. 
+
+
 
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
