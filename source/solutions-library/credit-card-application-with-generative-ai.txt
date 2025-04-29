@@ -135,10 +135,10 @@ coupled with robust querying and indexing capabilities, ensures efficient retrie
 organization of complex credit application information. As a scalable solution, MongoDB
 accommodates growing volumes of credit data while maintaining performance. Its seamless
 integration with `JavaScript and other popular programming
-languages<https://www.mongodb.com/resources/products/compatibilities/compatibility>`_,
-`tools<https://www.mongodb.com/try/download/tools>`_, and technologies (e.g.,
-:doc:`Spark</atlas/cluster-config/multi-cloud-distribution/>`,
-:doc:`Kafka</kafka-connector/current/>`) enhances development workflows, while features
+languages <https://www.mongodb.com/resources/products/compatibilities/compatibility>`_,
+`tools <https://www.mongodb.com/try/download/tools>`_, and technologies (e.g.,
+:doc:`Spark </atlas/cluster-config/multi-cloud-distribution/>`,
+:doc:`Kafka </kafka-connector/current/>`) enhances development workflows, while features
 such as document validation and support for open banking standards further contribute to
 data integrity and standardized information exchange. 
 
