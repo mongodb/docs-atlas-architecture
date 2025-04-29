@@ -38,5 +38,5 @@ assignments, the user has no access to the system.
 .. toctree::
    :titlesonly:
 
-   Authentication </authentication>
-   Authorization </authorization>
+   Authentication </auth/authentication>
+   Authorization </auyth/authorization>

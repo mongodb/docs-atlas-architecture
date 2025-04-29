@@ -17,7 +17,7 @@ Guidance for {+service+} Authentication
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 2
+   :depth: 1
    :class: onecol
 
 
@@ -39,26 +39,29 @@ needs access to (|service| UI, |service| Database, or |service| APIs).
 
    We define users as "Workforce" and machines as "Workload".
 
-|service| UI Access
--------------------
-Use IP access restrictions, and then either:
-  - Use :ref:`Federated Authentication <arch-center-federated_auth>` with an SAML 2.0 
-    identity provider, such as Okta, Microsoft Entra ID, or Ping Identity. 
-    *or*
-  -  Use Atlas credentials with :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
-
-For development and test environments, you can also use Atlas credentials and MFA.
+|service| UI Authentication
+---------------------------
 
 .. note::
 
    This only applies to Workforce users.
 
-|service| Database Access
--------------------------
+
+Use IP access restrictions, and then either:
+
+- Use :ref:`Federated Authentication <arch-center-federated_auth>` with an SAML 2.0 
+  identity provider, such as Okta, Microsoft Entra ID, or Ping Identity, or 
+- Use Atlas credentials with 
+  :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
+
+For development and test environments, you can also use Atlas credentials and MFA.
+
+|service| Database Authentication
+---------------------------------
 
 Workforce Users
 ~~~~~~~~~~~~~~~
-Use :ref:`Workforce Identity Federation <arch-center-workforce_if>`
+Use :ref:`Workforce Identity Federation <arch-center-workforce_if>`.
 
 For development and test environments, you can also use 
 :ref:`SCRAM <arch-center-scram>`. Consider :ref:`creating temporary database 
@@ -76,27 +79,19 @@ For development and test environments, you can also use
 :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`
 
 
-|service| API Access
---------------------
-Both Workforce and Workload Users
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Use :ref:`<arch-center-admin-service-accounts>`.
+|service| API Authentication
+----------------------------
+
+.. note::
+
+   This applies to both Workforce and Workload users.
+
+Use :ref:`<arch-center-admin-service-accounts>`. 
 For development and test environments, you can also use 
 :ref:`<arch-center-admin-service-accounts>` or :ref:`<arch-center-admin-api-keys>`.
 
 The following sections provide details about the authentication methods used when 
 accession the Atlas UI, Atlas Database, or the Atlas APIs.
-
-Atlas UI Authentication
------------------------
-Use IP access restrictions, and then either:
-
-- Use :ref:`Federated Authentication <arch-center-federated_auth>` with an SAML 2.0 
-  identity provider, such as Okta, Microsoft Entra ID, or Ping Identity, or 
-- Use Atlas credentials with 
-  :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
-
-For development and test environments, you can also use Atlas credentials and MFA.
 
 Authentication Types
 --------------------
