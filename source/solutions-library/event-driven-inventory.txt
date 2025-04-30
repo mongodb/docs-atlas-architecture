@@ -130,27 +130,33 @@ With MongoDB
 ~~~~~~~~~~~~
 
 The inventory management solution leverages a `Next.js <https://nextjs.org/>`__ application
-seamlessly integrated with MongoDB Atlas, providing a flexible and
-scalable backend. At the core of this architecture is a MongoDB Atlas
-Database that houses four key collections: products, transactions,
+seamlessly integrated with `MongoDB Atlas <https://www.mongodb.com/atlas>`__, providing a flexible and
+scalable backend. At the core of this architecture is a `MongoDB Atlas
+Database <https://www.mongodb.com/products/platform/atlas-database>`__ that houses four key collections: products, transactions,
 users, and locations. These collections are central to managing
 inventory, processing transactions, and tracking user and location data.
 
-MongoDB ensures data consistency and integrity through ACID-compliant
-operations. For instance, when a stock level changes due to a
+MongoDB ensures data consistency and integrity through `ACID-compliant
+operations
+<https://www.mongodb.com/products/capabilities/transactions>`__. For
+instance, when a stock level changes due to a
 transaction, updates are made to both the products and transactions
 collections in a way that guarantees reliability and consistency across
 the system.
 
 Data access between the Next.js application and MongoDB is facilitated
-by the MongoDB Node.js driver, enabling efficient retrieval and
-manipulation of information. To enhance the application’s search
-capabilities, Atlas Search is utilized, offering advanced full-text
-search features. This allows users to perform complex queries, such as
-searching by product category or applying filters through facets,
+by the `MongoDB Node.js driver
+<https://www.mongodb.com/docs/drivers/node/current/>`__, enabling
+efficient retrieval and manipulation of information. To enhance the
+application’s search capabilities, `Atlas Search
+<https://www.mongodb.com/products/platform/atlas-search>`__ is utilized,
+offering advanced full-text search features. This allows users to
+perform complex queries, such as searching by product category or
+applying filters through `facets
+<https://www.mongodb.com/docs/atlas/atlas-search/tutorial/facet-tutorial/>`__,
 improving the overall user experience with quick, intuitive searches.
 
-The system's responsiveness is further enriched by MongoDB Triggers and
+The system's responsiveness is further enriched by `MongoDB Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__ and
 Change Streams. Triggers automate backend logic by executing functions
 in response to database changes. For example, when a product’s stock
 falls below a certain threshold, a Trigger can automatically reorder
