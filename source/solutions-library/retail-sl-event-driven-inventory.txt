@@ -388,7 +388,7 @@ MongoDB Developer Data Platform
 
 - `MongoDB Atlas Search <https://www.mongodb.com/products/platform/atlas-search>`__
 - `MongoDB Aggregation Pipeline <https://www.mongodb.com/docs/manual/aggregation/>`__
-- `Change Streams <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
+- `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__
 - `MongoDB Atlas Charts <https://www.mongodb.com/docs/charts/>`__
 - `MongoDB Node.js driver <https://www.mongodb.com/docs/drivers/node/current/>`__
 - `MongoDB Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__
