@@ -9,8 +9,8 @@ Automating Product Descriptions Using Generative AI
    :values: tutorial
 
 .. meta:: 
-   :keywords: pdf, vector search
-   :description: Streamline operations and claims processing with powerful PDF search capabilities
+   :keywords: document model, retail, together AI, gen AI
+   :description: Discover how to build a generative AI system with MongoDB and Together AI to automate writing product descriptions.
    
 .. contents:: On this page
    :local:
