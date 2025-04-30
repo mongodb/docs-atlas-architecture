@@ -68,9 +68,8 @@ used for platform team members.
   changes after the initial creation. To avoid account lockouts, you
   can create the following items: 
   
-  - SAML Organization Owner group with
-    :ref:`arch-center-just-in-time`. 
-  - API key with the Organization Owner role. Keep it in a
+  - SAML Organization Owner group with :ref:`arch-center-just-in-time`. 
+  - Service account with the Organization Owner role. Keep it in a
     secure place with strong access management for break-glass
     emergency scenarios.
 
@@ -90,33 +89,14 @@ Project-Level Roles
 ~~~~~~~~~~~~~~~~~~~
 
 Project-level roles are for the development, test, and product teams that are 
-responsible for application development and maintenance.
+responsible for application development and maintenance. As with 
+organization-level roles, you should always follow the principle of least 
+privilege. For example, the ``Project Owner`` role should only be used for 
+governance enforced by the operations and provisioning team. Because a Project
+Owner can create and delete {+clusters+}, you should assign this role to a 
+programmatic service account unless you are working in a sandbox environment.
 
-* The ``Project Owner`` role should be used for governance enforced by the 
-  operations and provisioning team. Assign this role to a programmatic service 
-  account, as it has the ability to create and delete {+clusters+}. For sandbox 
-  environments, you may consider granting a user ``Project Owner`` access to 
-  enable them to quickly provision {+clusters+} for testing code and use cases 
-  without going through the orchestration deployment pipeline.
-
-* In lower environments, use the ``Project Data Access Admin`` role to 
-  grant access to the development team building the application so they can 
-  access the query and performance metrics of the {+cluster+} during 
-  development and testing. This access allows them to debug data issues 
-  with the Data Explorer. 
-  If you are not comfortable giving development teams this level of access in 
-  the development environment, you can grant them read-only access to the 
-  {+cluster+}\'s data and performance statistics with the 
-  ``Project Data Access Read Only`` role. To do this, use the 
-  ``Project Observability Viewer`` role. 
-
-  .. important::
-
-     A user with the ``Organization Owner``, ``Project Owner``, or 
-     ``Project Data Access Admin`` role can view and edit data, including 
-     creating and dropping databases, collections, and indexes on the {+cluster+}. 
-
-To learn more, refer to:
+To learn more about project-level roles, refer to:
 
 - :atlas:`Atlas User Roles </reference/user-roles/>`
 - :atlas:`<mongodb-users-roles-and-privileges>`.
