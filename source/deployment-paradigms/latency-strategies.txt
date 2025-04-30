@@ -83,10 +83,10 @@ Good :manual:`data modeling </data-modeling>` and
 :atlas:`query optimization </atlas-search/performance/query-performance/>` can 
 improve data access speeds. For example, you can:
 
-- **Reduce the document size:** Consider shortening field names and value lengths to 
+- **Reduce Document Size:** Consider shortening field names and value lengths to 
   decrease the amount of data transferred over the network.
 
-- **Optimize query patterns:** Use indexes effectively to minimize the amount 
+- **Optimize Query Patterns:** Use indexes effectively to minimize the amount 
   of data that needs to be read across regions.
 
 Monitoring and Testing Latency
