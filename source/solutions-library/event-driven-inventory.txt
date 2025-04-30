@@ -463,24 +463,23 @@ embeddings asynchronously and at scale, leveraging MongoDB Atlas.
 Key Learnings
 -------------
 
-- **Maintain embedding relevancy:** Regularly update data embeddings to ensure
-  your semantic searches remain accurate, especially if your documents change 
-  frequently.
-- **Optimize language-model pairing:** To maximize semantic search accuracy,
-  ensure your large language model (LLM) closely aligns with the language of
-  your data to significantly enhance the relevance and precision of your search results.
-- **Embrace Flexible Embeddings:** MongoDB's flexible data model eliminates the
-  need for rigid schema definitions. This flexibility allows you to store
-  embeddings directly alongside your data, regardless of their length or the 
-  model used to generate them.
-- **Choose the right similarity function:** The effectiveness of your semantic
-  searches depends on the chosen similarity function. Tailor your selection to 
-  your specific use case.
-- **Asynchronous Embedding Generation:** Generating embeddings can be
-  computationally expensive. Consider running this task asynchronously to avoid
-  impacting your application's performance. Leverage the cloud's elasticity by
-  horizontally scaling the functions responsible for embedding generation to 
-  handle bursts in workload.
+Throughout this solution, we’ve covered multiple MongoDB topics. Here’s
+a quick recap of the key learnings: 
+
+- **Real-time alerts** Implement real-time low-stock alerts in your
+  frontend using Change Streams. 
+
+- **Workflow automation:** Leverage database triggers to
+  automate stock replenishment workflows.
+
+- **Real-time analytics:** Stay on top of your data, analyze trends, and
+  make informed decisions in a timely manner with Atlas Charts.
+
+- **Single view of inventory:** Take advantage of the
+  flexibility of the document model to create a comprehensive single view
+  of inventory. 
+
+Remember that this is just the beginning. Feel free to explore, tweak, and enhance your inventory management system to fit your own needs.
 
 Technologies and Products Used
 ------------------------------
@@ -488,17 +487,22 @@ Technologies and Products Used
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Atlas Database <http://mongodb.com/atlas>`__
-- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
-- `Atlas Stream Processing <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
+- `MongoDB Atlas Search <https://www.mongodb.com/products/platform/atlas-search>`__
+- `MongoDB Aggregation Pipeline <https://www.mongodb.com/resources/products/capabilities/aggregation-pipeline>`__
+- `Change Streams <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
+- `MongoDB Atlas Charts <https://www.mongodb.com/docs/charts/>`__
+- `MongoDB Node.js driver <https://www.mongodb.com/docs/drivers/node/current/>`__
+- `MongoDB Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
-- Confluent Cloud
-- AWS EC2
+- Next.js `<https://nextjs.org/>`__
+- React `<https://react.dev/>`__
 
 Author
 ------
 
-David Sanchez, MongoDB
+- Dr. Humza Akhtar, MongoDB
+- Ramiro Pinto Prieto, MongoDB 
+- Tamar Alphaidze, MongoDB
