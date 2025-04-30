@@ -26,28 +26,21 @@ as well as the tools, procedures, and {+service+} configurations that teams must
 We recommend that all enterprise customers design a landing zone before moving workloads to MongoDB {+service+}.
 
 Designing and implementing a landing zone can help you avoid expensive 
-efforts to redesign initial setups later down the line. 
-For example, while in talks to move their on-premises databases to MongoDB {+service+}, 
-one of our recent enterprise customers voiced concerns over how peer financial services 
-companies were struggling to enforce standards for security and cost-efficiency across teams. 
-One peer had faced security risks due to inconsistent encryption policies across business units,
-while another had accumulated runaway cloud costs due to forgotten and redundant servers.
-To avoid these risks, our enterprise customer partnered with {+ps+} team
-to design a landing zone that aligns all teams and stakeholders on requirements
-including encryption at rest with {+byok+} and FinOps integrations to tag and track spending. 
+efforts to redesign initial setups later down the line.
+For example, one enterprise customer worked with {+ps+} in 2024 to set
+company-wide standards for security and cost-efficiency before moving their workload to {+service+}.
+Peer financial services companies had published new reports of user data leaks and runaway cloud costs due to
+inconsistent encryption policies and redundant servers across business units. 
+To avoid these risks, {+ps+} helped our enterprise customer design a landing zone that aligns all of their
+teams and stakeholders on company requirements, including encryption at rest with {+byok+} and FinOps integrations to tag and track spending. 
+
 
 .. _landing-zone-considerations:
 
 What Are Some Landing Zone Considerations?
 ------------------------------------------
 
-As you create your landing zone, define requirements for the following considerations.
-
-Critical Considerations
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Before moving any workload to MongoDB {+service+}, design a landing zone 
-that defines requirements for the following critical considerations: 
+As you create your landing zone, define requirements for the following considerations: 
 
 .. list-table::
    :header-rows: 1
@@ -63,6 +56,7 @@ that defines requirements for the following critical considerations:
        
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-hierarchy`.
+
    * - Security
      - By default, {+service+} blocks all access to your clusters, enforces |tls-ssl| encryption for all connections to your databases, 
        and encrypts data at rest using :ref:`cloud provider disk encryption <security-kms-encryption>`.
@@ -79,7 +73,7 @@ that defines requirements for the following critical considerations:
        - :ref:`arch-center-network-security`
        - :ref:`arch-center-auth`
        - :ref:`arch-center-data-encryption`
-       {+service+} automatically encrypts data in transit using |tls| and data at rest using :ref:`cloud provider disk encryption <security-kms-encryption>`. 
+
    * - Compliance
      - Consider how your deployment's data residency determines data sovereignty
        and therefore which laws apply to your data. Identify and account for any specific legal and regulatory
@@ -92,6 +86,7 @@ that defines requirements for the following critical considerations:
 
        - :ref:`arch-center-compliance`
        - :ref:`arch-center-paradigms`
+
    * - Disaster Recovery
      - Define and record a disaster recovery plan that meets the following criteria: 
      
@@ -107,6 +102,7 @@ that defines requirements for the following critical considerations:
        
        - :ref:`arch-center-dr`
        - :ref:`arch-center-backups`
+
    * - High Availability
      - Set standards for high availability that ensure system operation during planned or 
        unplanned outages. These requirements will partially determine the number of nodes, 
@@ -117,27 +113,17 @@ that defines requirements for the following critical considerations:
 
        - :ref:`arch-center-high-availability`
        - :ref:`arch-center-paradigms`
+
    * - Billing
      - Identify any specific requirements for billing, such as
        integrations with FinOps tools for reporting and charge-back.
        You can build these requirements into the automation and
-       provisioning process for {+service+} {+clusters+} to facilitate
+       provisioning process for {+service+} clusters to facilitate
        this integration.
 
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-billing-data`.
 
-Advanced Considerations 
-~~~~~~~~~~~~~~~~~~~~~~~
-
-To design a more comprehensive landing zone, consider definiing requirements for the following advanced considerations: 
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 80 
-
-   * - Consideration
-     - Description
    * - Data Retention
      - Identify and record your data retention policies. This may
        require creating a classification for automation, including
@@ -145,6 +131,7 @@ To design a more comprehensive landing zone, consider definiing requirements for
        must be preserved for a certain duration, whereas in other cases
        data must be purged after some duration. Identify performance
        characteristics of retrieval of archived records.
+
    * - Monitoring and Observability
      - Set standards for observability that define which logs and metrics you will monitor and how you will monitor them. For example, set up
        external system integrations that ingest {+service+} log files, audit logs, or activity feed data, 
@@ -155,13 +142,15 @@ To design a more comprehensive landing zone, consider definiing requirements for
        
        - :ref:`arch-center-monitoring-alerts`.
        - :ref:`arch-center-auditing-logging`.
+
    * - Auditing and Change Control
-     - Define  any auditing or change control requirements. This
+     - Define any auditing or change control requirements. This
        can include change approval processes and tools, along with
        reporting guidelines.
 
        To get recommendations and learn more about this topic, see
        :ref:`arch-center-auditing-logging`.
+
    * - Maintenance
      - Identify whether you have any specific requirements regarding
        Maintenance windows or upgrade deferments.
