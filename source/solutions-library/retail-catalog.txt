@@ -1,4 +1,4 @@
 .. toctree::
    :titlesonly:
 
-   Event-driven Inventory System <solutions-library/event-driven-inventory.txt>
+   Inventory Management System <solutions-library/event-driven-invent
