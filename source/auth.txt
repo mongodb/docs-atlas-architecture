@@ -281,7 +281,7 @@ access tokens and required credential rotations.
 
 You can manage service accounts only through the {+atlas-ui+} or
 the {+atlas-admin-api+}. Currently, you can't manage programmatic access for service accounts through
-the {+atlas-cli+} or Terraform, but support will be added soon.
+the {+atlas-cli+} or Terraform.
 
 To further enhance security and
 minimize the risk of unauthorized access:
