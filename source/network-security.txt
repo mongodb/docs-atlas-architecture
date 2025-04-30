@@ -52,7 +52,7 @@ an inbound connection by one of the following methods:
 
 - Add private endpoints, which {+service+} adds automatically to your {+ip-access-list+}. 
   No other access is automatically added.
-- Use |vpc| / {+vnet+} peering to add private IP addresses.
+- Use |vpc| or {+vnet+} peering to add private IP addresses.
 - Add public IP addresses to your {+ip-access-list+}.
 
 You can also use multiple methods together for added security.
