@@ -35,10 +35,6 @@ There are two factors in determining which authentication types to use:
 the identity type (human or machine), and the resource that the identity 
 needs access to (|service| UI, |service| Database, or |service| APIs). 
 
-.. note:: 
-
-   We define users as "Workforce" and machines as "Workload".
-
 |service| UI Authentication
 ---------------------------
 
@@ -53,8 +49,6 @@ Use IP access restrictions, and then either:
   identity provider, such as Okta, Microsoft Entra ID, or Ping Identity, or 
 - Use Atlas credentials with 
   :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
-
-For development and test environments, you can also use Atlas credentials and MFA.
 
 |service| Database Authentication
 ---------------------------------
@@ -78,7 +72,6 @@ Use one of the following:
 For development and test environments, you can also use 
 :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`
 
-
 |service| API Authentication
 ----------------------------
 
@@ -90,11 +83,12 @@ Use :ref:`<arch-center-admin-service-accounts>`.
 For development and test environments, you can also use 
 :ref:`<arch-center-admin-service-accounts>` or :ref:`<arch-center-admin-api-keys>`.
 
-The following sections provide details about the authentication methods used when 
-accession the Atlas UI, Atlas Database, or the Atlas APIs.
-
 Authentication Types
 --------------------
+
+The following sections provide details about the authentication methods used when 
+accessing the Atlas UI, Atlas Database, or the Atlas APIs.
+
 
 .. _arch-center-federated_auth:
 Federated Authentication
@@ -109,16 +103,6 @@ Authentication)` within your identity provider's tools.
 For the {+atlas-ui+}, you can use any :abbr:`SAML (Security Assertion
 Markup Language)` compatible identity provider such as Okta, Microsoft
 Entra ID, or Ping Identity.
-
-For the |service| database, we support workforce identity federation using  
-OIDC compatible providers, and workload identity federation using OAuth2.0 
-compatible providers. This includes Okta, Microsoft
-Entra ID, Ping Identity, and others for workforce identity, and Azure, GCP, and 
-others for workload identity. You can also use AWS IAM roles for workload 
-identity.
-
-You must also configure the IP access list in the {+atlas-ui+} to allow only 
-connections from IP ranges that include your users and application servers.
 
 .. _arch-center-workforce_if:
 Workforce Identity Federation
