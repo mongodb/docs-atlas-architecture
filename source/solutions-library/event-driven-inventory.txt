@@ -318,147 +318,48 @@ Document model
 Building the Solution
 ---------------------
 
-In the `GitHub repository
-<https://github.com/dsdlt/mongodb-scalable-document-embeddings>`__ you will
-find detailed instructions on how to build the solution to update your 
-embeddings asynchronously and at scale, leveraging MongoDB Atlas.
+Building this solution involves five major steps, encompassing MongoDB
+Atlas setup, your app configuration, and optional personalization steps.
+
 
 .. procedure::
    :style: normal
 
-   .. step:: Create a MongoDB cluster
+   .. step:: Replicate the Demo Database
 
-      The first step is to create a MongoDB cluster. If you don't have an 
-      Atlas account, create one following the steps in this link: https://www.mongodb.com/docs/guides/atlas/account/
-
-      We will create a cluster in Atlas using AWS as our cloud provider and
-      us-east-1 as our region. Additionally, create an Atlas Stream Processing
-      Instance (SPI) following the instructions in the documentation:
-      https://www.mongodb.com/docs/atlas/atlas-sp/manage-processing-instance/
+      Create a MongoDB Atlas cluster and replicate the collections,
+      views, and indexes from the demo database.
       
-   .. step:: Create a Kafka cluster in Confluent
+   .. step:: Add the Auto-Replenishment Trigger
 
-      To create a Kafka cluster in Confluent Cloud follow the instructions in 
-      their documentation: https://docs.confluent.io/cloud/current/clusters/create-cluster.html#create-ak-clusters
+      Create a database trigger that automatically issues a
+      replenishment order when stock levels fall below a defined
+      threshold. For demo purposes, set up a second trigger to simulate
+      an order’s progress from placement to fulfillment.
 
-      Once you have created the cluster, go to cluster settings and copy the
-      bootstrap URL.
+   .. step:: Enable full-text search and filter facets
 
-      .. figure:: /includes/images/industry-solutions/createkafkacluster1.png
-         :figwidth: 750px
-         :alt: Kafka cluster settings
-      
-      Then, create an API key to connect to your cluster.
+      Configure search indexes for `full-text search
+      <https://www.mongodb.com/resources/basics/full-text-search>`__ and
+      filter facets in the products and transactions collections.
 
-      .. figure:: /includes/images/industry-solutions/createkafkacluster2.png
-         :figwidth: 750px
-         :alt: API key settings
+   .. step::  Set up real-time analytics with Atlas Charts
 
-      The next step is to configure the topics for use in this solution:
-      SpanishInputTopic, EnglishInputTopic, and OutputTopic.
-      
-      .. figure:: /includes/images/industry-solutions/createkafkacluster3.png
-         :figwidth: 1200px
-         :alt: Topic settings
+      Enhance your application's visualization and analytics
+      capabilities with `Atlas Charts
+      <https://www.mongodb.com/products/platform/atlas-charts>`__.
+      Unlock real-time analytics and create custom charts based on your
+      preferences.
 
-   .. step:: Configure the Stream Processing connection registry
+   .. step:: Configure your app frontend
 
-      To configure a new connection, click the configure button in the Stream
-      Processing Instance, then click Connection Registry and add a new 
-      connection.
+      Clone the GitHub repository to your local machine, update the
+      environment variables with your own values, install the
+      dependencies, and run the app locally on http://localhost:3000.
 
-      You will use this to connect the Atlas Stream Processing Instance with 
-      the Kafka Cluster.
-
-      Once you have created your Kafka cluster, Confluent will provide you with
-      the bootstrap server URL, username, and password for the Connection
-      Registry.
-      
-      .. figure:: /includes/images/industry-solutions/configurespconnection1.png
-         :figwidth: 1200px
-         :alt: Stream Processing connection registry settings
-
-      Next, create a connection from the Atlas Stream Processing Instance to
-      the MongoDB Atlas cluster.
-      
-      .. figure:: /includes/images/industry-solutions/configurespconnection2.png
-         :figwidth: 1200px
-         :alt: Stream Processing to Atlas settings
-
-   .. step:: Connect to the Stream Processing Instance
-
-      To configure the pipelines and connections in the Stream Processing 
-      Instance, you can connect to the cluster using the Mongo Shell (mongosh).
-
-      When clicking on the Connect button in the Stream Processing Instance, 
-      the Atlas UI provides instructions on connecting to the instance.
-
-      .. figure:: /includes/images/industry-solutions/connectstreamprocessing1.png
-         :figwidth: 1200px
-         :alt: Connect to Stream Processing
-
-   .. step:: Configuring Atlas Stream Processing
-
-      You can follow the steps to configure Atlas Stream Processing in the
-      README file in the GitHub repo. There you will learn how to create the
-      pipelines to subscribe to changes in MongoDB, emit to each
-      language-specific topic, and merge the events containing the processed
-      data with the embeddings received from the Kafka cluster into MongoDB 
-      using a MongoDB aggregation stage.
-
-   .. step:: Create the Atlas Vector Search indexes
-
-      Next, you will create language-specific vector indexes in Atlas Search.
-
-      Visit the `Atlas Vector Search Quick Start guide <https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__ 
-      and start building smarter searches.
-
-      The definition for the Atlas Vector Search Index for Spanish is as 
-      follows:
-
-      .. code-block:: javascript
-         :copyable: true
-
-         {
-            "fields": [
-               {
-                  "type": "vector",
-                  "path": "lyrics_embeddings_es",
-                  "numDimensions": 768,
-                  "similarity": "cosine"
-               }
-            ]
-         }
-
-      The definition for the Atlas Vector Search Index for English is as
-      follows:
-      
-      .. code-block:: javascript
-         :copyable: true
-
-         {
-            "fields": [
-               {
-                  "type": "vector",
-                  "path": "lyrics_embeddings_en",
-                  "numDimensions": 384,
-                  "similarity": "cosine"
-               }
-            ]
-         }
-
-   .. step:: Run the metadata service
-
-      The metadata service is a Python script that will subscribe to the input
-      topics, create the tags and embeddings for the corresponding language
-      according to the information received in the event, and write the event 
-      to the output topic.
-
-   .. step:: Run a semantic search
-
-      We created a script in Python to help you interactively run semantic
-      queries. You can find the script in the repository under the client 
-      folder.
+In the `GitHub repository
+<https://github.com/mongodb-industry-solutions/inventory-management>`__ you will
+find detailed instructions on how to build this solution.
 
 Key Learnings
 -------------
@@ -497,8 +398,8 @@ MongoDB Developer Data Platform
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
-- Next.js `<https://nextjs.org/>`__
-- React `<https://react.dev/>`__
+- `Next.js <https://nextjs.org/>`__
+- `React <https://react.dev/>`__
 
 Author
 ------
@@ -506,5 +407,3 @@ Author
 - Dr. Humza Akhtar, MongoDB
 - Ramiro Pinto Prieto, MongoDB 
 - Tamar Alphaidze, MongoDB
-
-Test line
