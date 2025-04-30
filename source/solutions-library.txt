@@ -122,9 +122,6 @@ kick-start their projects.
    .. tab:: Retail
       :tabid: retail
 
-   .. Catalog
-   .. -------
-
       Gen AI
       ------
 
@@ -140,6 +137,9 @@ kick-start their projects.
 
             Write engaging and multilingual product descriptions in
             practically no time with MongoDB and Together AI. 
+
+   .. Catalog
+   .. -------
 
    .. Personalization
    .. ---------------
