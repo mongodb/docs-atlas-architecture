@@ -131,7 +131,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building an event-driven inventory management system
-            :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/event-driven-inventory/
+            :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
