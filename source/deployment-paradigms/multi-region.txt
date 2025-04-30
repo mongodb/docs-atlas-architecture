@@ -61,7 +61,7 @@ The second example shows a deployment to a single region in each of multiple
 geographies. This is a good option if your application requires  
 high availability for users in multiple geographies but you are willing to trade 
 slightly higher latency for lower costs. You create a multi-region 
-deployment with a region located in the U.S. and two in Europe. This is also a 
+deployment with a region located in the U.S. Europe, and Asia. This is also a 
 good strategy for complying with local regulations like GDPR.
 
 The most complex example of a multi-region deployment has multiple regions in 
