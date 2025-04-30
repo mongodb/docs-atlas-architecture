@@ -1,2 +1,4 @@
 .. toctree::
    :titlesonly:
+
+   Product Descriptions with Gen AI <solutions-library/retail-asset-product-description.txt>
