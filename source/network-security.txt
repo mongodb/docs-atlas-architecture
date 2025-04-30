@@ -56,6 +56,8 @@ an inbound connection by one of the following methods:
 
 You can also use multiple methods together for added security.
 
+.. _arch-center-tls:
+
 |tls|
 ~~~~~~~~~~~~~~
 
@@ -64,6 +66,8 @@ databases. |tls| 1.2 is the default protocol. To learn more, see the
 :guilabel:`Set Minimum TLS Protocol Version` section of
 :ref:`Configure Additional Settings
 <create-cluster-additional-settings>`.
+
+.. _arch-center-ip-access-list:
 
 {+ip-access-list+}s
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,6 +79,9 @@ attempt authentication to your database.
 
 Your {+service+} {+clusters+} allow access only from the IP addresses
 and |cidr| block IP ranges that you add to your {+ip-access-list+}.
+We recommend that you permit access to the smallest network segments
+possible, such as an individual ``/32`` address.
+
 Application servers and other clients can't access your {+service+}
 {+clusters+} if their IP addresses aren't included in your {+ip-access-list+}.
 
@@ -110,6 +117,8 @@ you must update your connection string to reflect your new cluster topology.
 In the case of adding new shards, the failure to reconnect the application 
 clients may cause your application to suffer from a data outage.
 
+.. _arch-center-private-endpoints:
+
 Private Endpoints
 ~~~~~~~~~~~~~~~~~
 
@@ -130,6 +139,8 @@ private endpoints are available:
    :alt: "An image representing how MongoDB Atlas private endpoints work."
    :figwidth: 750px
 
+.. _arch-center-multi-region-recs-private-endpoints:
+
 Multi-Region Considerations
 ```````````````````````````
 
@@ -144,6 +155,8 @@ Multi-Region Considerations
   `PrivateLink <https://aws.amazon.com/privatelink/>`__ or equivalent.
 - Private endpoints must be enabled in every region that you have an |service| 
   cluster deployed.
+
+.. _arch-center-vpc-vnet-peering:
 
 VPC/{+vnet+} Peering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
