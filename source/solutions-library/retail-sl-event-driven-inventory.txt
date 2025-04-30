@@ -320,7 +320,9 @@ Building the Solution
 
 Building this solution involves five major steps, encompassing MongoDB
 Atlas setup, your app configuration, and optional personalization steps.
-
+In the `GitHub repository
+<https://github.com/mongodb-industry-solutions/inventory-management>`__
+you will find detailed instructions on how to build this solution.
 
 .. procedure::
    :style: normal
@@ -357,17 +359,13 @@ Atlas setup, your app configuration, and optional personalization steps.
       environment variables with your own values, install the
       dependencies, and run the app locally on http://localhost:3000.
 
-In the `GitHub repository
-<https://github.com/mongodb-industry-solutions/inventory-management>`__ you will
-find detailed instructions on how to build this solution.
-
 Key Learnings
 -------------
 
 Throughout this solution, we’ve covered multiple MongoDB topics. Here’s
 a quick recap of the key learnings: 
 
-- **Real-time alerts** Implement real-time low-stock alerts in your
+- **Real-time alerts:** Implement real-time low-stock alerts in your
   frontend using Change Streams. 
 
 - **Workflow automation:** Leverage database triggers to
@@ -389,7 +387,7 @@ MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `MongoDB Atlas Search <https://www.mongodb.com/products/platform/atlas-search>`__
-- `MongoDB Aggregation Pipeline <https://www.mongodb.com/resources/products/capabilities/aggregation-pipeline>`__
+- `MongoDB Aggregation Pipeline <https://www.mongodb.com/docs/manual/aggregation/>`__
 - `Change Streams <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
 - `MongoDB Atlas Charts <https://www.mongodb.com/docs/charts/>`__
 - `MongoDB Node.js driver <https://www.mongodb.com/docs/drivers/node/current/>`__
