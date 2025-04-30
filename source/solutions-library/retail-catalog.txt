@@ -1,4 +1,4 @@
 .. toctree::
    :titlesonly:
 
-   Inventory Management System <solutions-library/event-driven-invent
+   Inventory Management System <solutions-library/retail-sl-event-driven-invent
