@@ -105,7 +105,7 @@ across various platforms and devices.
    :figwidth: 1200px
    :alt: Real-time wind turbine diagnosis
    
-   Figure 1. Inventory management overview
+   Figure 1. Inventory management overview.
 
 **Closing the loop for a future-proof inventory management strategy**
 
@@ -156,22 +156,34 @@ applying filters through `facets
 <https://www.mongodb.com/docs/atlas/atlas-search/tutorial/facet-tutorial/>`__,
 improving the overall user experience with quick, intuitive searches.
 
-The system's responsiveness is further enriched by `MongoDB Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__ and
-Change Streams. Triggers automate backend logic by executing functions
-in response to database changes. For example, when a product’s stock
-falls below a certain threshold, a Trigger can automatically reorder
-inventory. Meanwhile, Change Streams act as real-time listeners,
-detecting data changes and pushing updates to the application instantly.
-This ensures that critical alerts, such as low stock notifications, are
-promptly delivered to inventory managers.
+The system's responsiveness is further enriched by `MongoDB Atlas
+Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__ and
+`Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__.
+Triggers automate backend logic by executing functions in response to
+database changes. For example, when a product’s stock falls below a
+certain threshold, a Trigger can automatically reorder inventory.
+Meanwhile, Change Streams act as real-time listeners, detecting data
+changes and pushing updates to the application instantly. This ensures
+that critical alerts, such as low stock notifications, are promptly
+delivered to inventory managers.
 
-For real-time analytics, Atlas Charts provides a powerful tool to
-visualize data directly from MongoDB without the need for ETL pipelines.
-This allows decision-makers to track key metrics, like inventory levels
-or sales trends, in real time. With workload isolation enabled,
-analytics queries run on a dedicated node, ensuring that operational
-performance remains unaffected. 
+For real-time analytics, `Atlas Charts
+<https://www.mongodb.com/products/platform/atlas-charts>`__ provides a
+powerful tool to visualize data directly from MongoDB without the need
+for ETL pipelines. This allows decision-makers to track key metrics,
+like inventory levels or sales trends, in real time. With `workload
+isolation
+<https://www.mongodb.com/docs/manual/core/workload-isolation/>`__
+enabled, analytics queries run on a dedicated node, ensuring that
+operational performance remains unaffected. 
 
+This cohesive architecture not only supports real-time data interactions
+but also streamlines processes by automating key tasks. It allows the
+Next.js application to provide a responsive and dynamic user experience,
+underpinned by MongoDB’s robust data management features. Through this
+integration, the solution effectively balances performance, automation,
+and scalability, making it well-suited for modern inventory management
+challenges.
 
 Inventory management system
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -196,41 +208,112 @@ Architecture with MongoDB
 Data Model Approach
 -------------------
 
+The primary collections — products, transactions, users and locations —
+form the foundation of our inventory management system. These
+collections represent your stock, incoming and outgoing movements that
+affect stock levels, your app users, and the different locations that
+the inventory system is serving.
+
+What sets the document data model apart from traditional tabular models
+is its remarkable flexibility, making it the perfect choice for
+achieving a single view of inventory. With a tabular approach, achieving
+a comprehensive overview of your inventory would typically involve
+complex joins across multiple tables. However, with MongoDB's document
+model, this complexity is eliminated. 
+
+For instance, in the transactions collection we take advantage of the
+`Extended Reference pattern
+<https://www.mongodb.com/blog/post/building-with-patterns-the-extended-reference-pattern>`__
+when referencing an item. We not only include the *product.id*, but also
+the *product.name* to be displayed in the UI without the need of a join or
+an extra query to the products collection.
+
+If we now consider the products collection, we see how it encompasses
+what would have otherwise demanded over 10 tables in a relational
+system. For example, the product variants are contained as an embedded
+array in the same document, and other attributes such as product stock
+or locations would traditionally require additional tables. This
+transformational power stems from the document model's inherent
+flexibility. It not only empowers a more intuitive design but also
+ensures that related data is stored together, optimizing access.
+
+Equivalent relational model for products
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: /includes/images/industry-solutions/event-driven-data-model.svg
+   :figwidth: 1200px
+   :alt: Equivalent relational model for product.
+
+   Figure 4. Product collection equivalent in a tabular setup.
+
+Document model
+~~~~~~~~~~~~~~
+
+.. figure:: /includes/images/industry-solutions/event-driven-document-model.svg
+   :figwidth: 1200px
+   :alt: Database model with MongoDB.
+
+   Figure 5. Take note of how complex objects and arrays are embedded
+   directly within the document.
+
 .. code-block:: javascript
    :copyable: true
 
    {
-      "title": "Hurricane",
-      "genre": "rock",
-      "artist": "Bob Dylan",
-      "year": 1976,
-      "views": 307418,
-      "lyrics": "...",
-      "language": "en",
-      "duration": 61,
-      "lyrics_embeddings_en": [...],
-      "tags": ["man", "story", "night"]
+   "type": "inbound",
+   "location": {
+      "origin": {
+         "type": "warehouse"
+      },
+      "destination": {
+         "type": "factory",
+         "id": {
+         "$oid": "65c63cb61526ffd3415fadbd"
+         },
+         "name": "Bogatell Factory"
+      }
+   },
+   "placement_timestamp": {
+      "$date": "2024-04-08T15:13:58.822Z"
+   },
+   "items": [
+      {
+         "sku": "CT001-PT-MDB0001",
+         "name": "Programmable Thermostats",
+         "unit": "pieces",
+         "delivery_time": {
+         "amount": 3,
+         "unit": "seconds"
+         },
+         "status": [
+         {
+            "name": "placed",
+            "update_timestamp": {
+               "$date": "2024-04-08T15:13:58.822Z"
+            }
+         },
+         {
+            "name": "arrived",
+            "update_timestamp": {
+               "$date": "2024-04-08T15:14:03.741Z"
+            }
+         }
+         ],
+         "amount": 15,
+         "product": {
+         "id": {
+            "$oid": "65cce1a4ccdfb7402dbb4db4"
+         },
+         "name": "Controls and Thermostats",
+         "image": {
+            "url": "/images/products/thermostats.png"
+         }
+         }
+      }
+   ],
+   "automatic": true,
+   "transaction_number": 133
    }
-
-The data we currently have about the song consists of the following fields:
-
-- **Title:** Name of the song
-- **Genre:** a single-worded string containing a music style from a list of 6 
-  genres
-- **Artist:** Name of the artist
-- **Year:** The year in which the song was written
-- **Views:** Number of times the song has been listened to
-- **Lyrics:** A string field containing the lyrics with each line separated by 
-  a new line delimiter
-- **Language:** The language of the lyrics in ISO-369. We are only storing 
-  songs in English and Spanish.
-- **Duration:** Duration of the song in seconds
-- **Lyrics embedding vector:** language-specific embeddings vector
-- **Tags:** A list of tags associated with the lyrics
-
-The benefit of using the document data model is that it allows you to store all
-the related information of a song in a single document for easy and fast 
-retrieval.
 
 Building the Solution
 ---------------------
