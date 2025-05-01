@@ -90,7 +90,7 @@ As you create your landing zone, define requirements for the following considera
    * - Disaster Recovery
      - Define and record a disaster recovery plan that meets the following criteria: 
      
-       - Defines an optimal |rpo| and |rpo| for your organization
+       - Defines an optimal :abbr: `RPO (Recovery Point Objective)` and :abbr: `RTO (Recovery Time Objective)` for your organization
        - Defines a backup snapshot schedule and requirements for snapshot retention and mutli-region distribution 
        - Identifies recovery methods such as snapshot restores, queryable backups, document versioning, region shifting, 
          or provider pivot
@@ -189,8 +189,6 @@ To begin, copy the relevant guidance and examples in :ref:`arch-center-hierarchy
 Then, review the guidance and examples for each of the pages nested under each {+waf+} pillar in the {+atlas-arch-center+}. Copy the
 diagrams, recommendations, tools, and examples that are relevant for
 your organization.
-
-.. include:: /includes/complete-examples.rst
 
 The {+atlas-arch-center+} pages include:
 
