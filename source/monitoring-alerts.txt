@@ -117,14 +117,22 @@ Recommendations for {+service+} Monitoring and Alerts
    :sub_heading: Recommendations that apply only to deployments in a single region
    :expanded: true
 
-   Recommendations here
+   Singe-region deployments have no unique considerations
+   for integrations with third-party alerting tools,
+   such as :ref:`Datadog <datadog-integration>` and :ref:`Prometheus <prometheus-integration>`.
+   See :ref:`arch-center-monitoring-alerts-recs-for-any-deployment`.
 
 .. collapsible::
    :heading: Multi-Region and Multi-Cloud Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
    :expanded: true
 
-   Recommendations here
+   Multi-region and multi-cloud deployments have no unique considerations
+   for integrations with third-party alerting tools,
+   such as :ref:`Datadog <datadog-integration>` and :ref:`Prometheus <prometheus-integration>`.
+   See :ref:`arch-center-monitoring-alerts-recs-for-any-deployment`.
+
+.. _arch-center-monitoring-alerts-recs-for-any-deployment:
 
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
