@@ -20,10 +20,10 @@ Landing Zone Design
    :class: onecol
 
 A landing zone is a framework for establishing a well-architected and
-pre-configured cloud environment. An {+service+} landing zone defines organization-specific requirements
+pre-configured cloud environment. A MongoDB {+service+} landing zone defines organization-specific requirements
 for operational efficiency, security, reliability, performance, and cost,
 as well as the tools, procedures, and {+service+} configurations that teams must use to meet these requirements. 
-We recommend that all enterprise customers design a landing zone before moving workloads to MongoDB {+service+}.
+We recommend that all enterprise customers design a landing zone before moving workloads to {+service+}.
 
 Designing and implementing a landing zone can help you avoid expensive 
 efforts to redesign initial setups later down the line.
