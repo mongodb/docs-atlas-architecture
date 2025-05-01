@@ -32,16 +32,14 @@ access the {+atlas-ui+}, |service| databases, and  the {+atlas-admin-api+}.
    "Workload Identity".
 
 There are two factors in determining which authentication types to use: 
-the identity type (human or machine), and the resource that the identity 
+the identity type (human or machine) and the resource that the identity 
 needs access to (|service| UI, |service| Database, or |service| APIs). 
 
 |service| UI Authentication
 ---------------------------
 
-.. note::
-
-   This only applies to Workforce users.
-
+Workforce Users
+~~~~~~~~~~~~~~~
 
 Use IP access restrictions, and then either:
 
@@ -49,6 +47,11 @@ Use IP access restrictions, and then either:
   identity provider, such as Okta, Microsoft Entra ID, or Ping Identity, or 
 - Use Atlas credentials with 
   :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
+
+Workload Users
+~~~~~~~~~~~~~~~
+
+This only applies to Workforce users.
 
 |service| Database Authentication
 ---------------------------------
@@ -65,12 +68,12 @@ Workload Users
 ~~~~~~~~~~~~~~~
 Use one of the following:
 
-- :ref:`Workload Identity Federation <arch-center-workload_if>`.
-- :ref:`AWS-IAM authentication <arch-center-iam>`.
+- :ref:`Workload Identity Federation <arch-center-workload_if>`
+- :ref:`AWS-IAM authentication <arch-center-iam>`
 - :ref:`X.509 <arch-center-x509>` certificates
 
 For development and test environments, you can also use 
-:ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`
+:ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`.
 
 |service| API Authentication
 ----------------------------
@@ -101,7 +104,7 @@ complexity, credential rotation, and :abbr:`MFA (Multi-Factor
 Authentication)` within your identity provider's tools. 
 
 For the {+atlas-ui+}, you can use any :abbr:`SAML (Security Assertion
-Markup Language)` compatible identity provider such as Okta, Microsoft
+Markup Language) 2.0` compatible identity provider such as Okta, Microsoft
 Entra ID, or Ping Identity.
 
 .. _arch-center-workforce_if:
@@ -179,11 +182,11 @@ To learn more, refer to :manual:`X.509 </core/security-x.509/>`.
 SCRAM Password Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|service| {+clusters+} support SCRAM password authentication for user authentication, 
+|service| clusters    support SCRAM password authentication for user authentication, 
 but we recommend SCRAM only for use in development and test environments. 
 
 If you leverage X.509 or SCRAM authentication, we recommend that you use 
-third-party secrets manager like 
+a third-party secrets manager like 
 `HashiCorp Vault <https://developer.hashicorp.com/vault/docs/secrets/databases/mongodbatlas>`__
 or |aws| Secrets Manager to generate and store complex database credentials. 
 
