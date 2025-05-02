@@ -106,20 +106,20 @@ Reference Architectures
 
 **Without MongoDB:**:
 
-.. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Solution Overview 2.svg
+.. figure:: /includes/images/industry-solutions/VideoSummarization Figure1.svg
    :figwidth: 1200px
-   :alt: Solution Overview
+   :alt: Reference Architecture Without MongoDB
 
-   Figure 3: Solution Overview
+   Figure 1: Reference Architecture (Without MongoDB)
 
 
 **With MongoDB:**:
 
-.. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Solution Overview 2.svg
+.. figure:: /includes/images/industry-solutions/VideoSummarization_Figure2.svg
    :figwidth: 1200px
-   :alt: Solution Overview
+   :alt: Reference Architecture With MongoDB
 
-   Figure 3: Solution Overview
+   Figure 2: Reference Architecture (With MongoDB)
 
 Data Model Approach
 -------------------
@@ -206,11 +206,11 @@ The code for the following steps can be found in this `GitHub repo
     relevant video summaries by querying with a phrase or sentence,
     enhancing content discoverability.
 
-.. figure:: /includes/images/industry-solutions/azure-smarthub-refarch-afterstate.svg
+.. figure:: /includes/images/industry-solutions/VideoSummarization Figure3.png
    :figwidth: 1200px
    :alt: Reference Architecture With MongoDB
 
-   Figure 2: Reference Architecture With MongoDB
+   Figure 3: Storing data in MongoDB Atlas with Vector Search
 
 You can find more information accessing the `MongoDB Atlas Vector Search
 <https://www.mongodb.com/docs/atlas/atlas-search/field-types/knn-vector/#try-an-example-for-the-fts-field-type-type>`__

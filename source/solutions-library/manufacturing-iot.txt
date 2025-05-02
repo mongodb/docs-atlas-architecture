@@ -2,3 +2,4 @@
    :titlesonly:
 
    Audio-Based AI Diagnostics <solutions-library/audio-based-AI-diagnostics>
+   Gen-AI Summarization Video <solutions-library/AI-video-summarization>
