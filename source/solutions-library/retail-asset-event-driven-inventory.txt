@@ -9,8 +9,10 @@ Building an Event-Driven Inventory Management System
    :values: tutorial
 
 .. meta:: 
-   :keywords: Event-driven, Inventory, Atlas, Real-time analytics, Retail
-   :description: Learn to build an event-driven inventory management system with real-time analytics and automation features for workforce efficiency with MongoDB Atlas.
+   :keywords: Event-driven, Inventory, Atlas, Real-time analytics,
+   Retail :description: Learn to build an event-driven inventory
+   management system with real-time analytics and automation features
+   for workforce efficiency with MongoDB Atlas.
 
 .. contents:: On this page
    :local:
@@ -129,12 +131,14 @@ Reference Architectures
 With MongoDB
 ~~~~~~~~~~~~
 
-The inventory management solution leverages a `Next.js <https://nextjs.org/>`__ application
-seamlessly integrated with `MongoDB Atlas <https://www.mongodb.com/atlas>`__, providing a flexible and
+The inventory management solution leverages a `Next.js
+<https://nextjs.org/>`__ application seamlessly integrated with `MongoDB
+Atlas <https://www.mongodb.com/atlas>`__, providing a flexible and
 scalable backend. At the core of this architecture is a `MongoDB Atlas
-Database <https://www.mongodb.com/products/platform/atlas-database>`__ that houses four key collections: products, transactions,
-users, and locations. These collections are central to managing
-inventory, processing transactions, and tracking user and location data.
+Database <https://www.mongodb.com/products/platform/atlas-database>`__
+that houses four key collections: products, transactions, users, and
+locations. These collections are central to managing inventory,
+processing transactions, and tracking user and location data.
 
 MongoDB ensures data consistency and integrity through `ACID-compliant
 operations
@@ -259,61 +263,62 @@ Document model
 .. code-block:: javascript
    :copyable: true
 
-   {
-   "type": "inbound",
-   "location": {
-      "origin": {
-         "type": "warehouse"
-      },
-      "destination": {
-         "type": "factory",
-         "id": {
-         "$oid": "65c63cb61526ffd3415fadbd"
-         },
-         "name": "Bogatell Factory"
-      }
-   },
-   "placement_timestamp": {
-      "$date": "2024-04-08T15:13:58.822Z"
-   },
-   "items": [
-      {
-         "sku": "CT001-PT-MDB0001",
-         "name": "Programmable Thermostats",
-         "unit": "pieces",
-         "delivery_time": {
-         "amount": 3,
-         "unit": "seconds"
-         },
-         "status": [
-         {
-            "name": "placed",
-            "update_timestamp": {
-               "$date": "2024-04-08T15:13:58.822Z"
-            }
-         },
-         {
-            "name": "arrived",
-            "update_timestamp": {
-               "$date": "2024-04-08T15:14:03.741Z"
-            }
-         }
-         ],
-         "amount": 15,
-         "product": {
-         "id": {
-            "$oid": "65cce1a4ccdfb7402dbb4db4"
-         },
-         "name": "Controls and Thermostats",
-         "image": {
-            "url": "/images/products/thermostats.png"
-         }
-         }
-      }
-   ],
-   "automatic": true,
-   "transaction_number": 133
-   }
+   {  
+      "type": "inbound",  
+      "location": {  
+         "origin": {  
+            "type": "warehouse"  
+         },  
+         "destination": {  
+            "type": "factory",  
+            "id": {  
+               "$oid": "65c63cb61526ffd3415fadbd"  
+            },  
+            "name": "Bogatell Factory"  
+         }  
+      },  
+      "placement_timestamp": {  
+         "$date": "2024-04-08T15:13:58.822Z"  
+      },  
+      "items": [  
+         {  
+            "sku": "CT001-PT-MDB0001",  
+            "name": "Programmable Thermostats",  
+            "unit": "pieces",  
+            "delivery_time": {  
+               "amount": 3,  
+               "unit": "seconds"  
+            },  
+            "status": [  
+               {  
+                  "name": "placed",  
+                  "update_timestamp": {  
+                     "$date": "2024-04-08T15:13:58.822Z"  
+                  }  
+               },  
+               {  
+                  "name": "arrived",  
+                  "update_timestamp": {  
+                     "$date": "2024-04-08T15:14:03.741Z"  
+                  }  
+               }  
+            ],  
+            "amount": 15,  
+            "product": {  
+               "id": {  
+                  "$oid": "65cce1a4ccdfb7402dbb4db4"  
+               },  
+               "name": "Controls and Thermostats",  
+               "image": {  
+                  "url": "/images/products/thermostats.png"  
+               }  
+            }  
+         }  
+      ],  
+      "automatic": true,  
+      "transaction_number": 133  
+   }  
+
 
 Building the Solution
 ---------------------
@@ -378,7 +383,8 @@ a quick recap of the key learnings:
   flexibility of the document model to create a comprehensive single view
   of inventory. 
 
-Remember that this is just the beginning. Feel free to explore, tweak, and enhance your inventory management system to fit your own needs.
+Remember that this is just the beginning. Feel free to explore, tweak,
+and enhance your inventory management system to fit your own needs.
 
 Technologies and Products Used
 ------------------------------
