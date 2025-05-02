@@ -9,8 +9,9 @@ Automating Product Descriptions Using Generative AI
    :values: tutorial
 
 .. meta:: 
-   :keywords: document model, retail, together AI, gen AI
-   :description: Discover how to build a generative AI system with MongoDB and Together AI to automate writing product descriptions.
+   :keywords: document model, retail, together AI, gen AI :description:
+   Discover how to build a generative AI system with MongoDB and
+   Together AI to automate writing product descriptions.
    
 .. contents:: On this page
    :local:
@@ -18,82 +19,95 @@ Automating Product Descriptions Using Generative AI
    :depth: 1
    :class: singlecol
 
-Find out how AI is being used in renewable energy by leveraging MongoDB Atlas
-Vector Search to drive efficiency through real-time, audio diagnostics.
+MongoDB and Together AI deliver generative AI-powered solutions for
+writing multilingual product descriptions, enabling faster product
+onboarding.
 
-**Use cases:** `IoT
-<https://www.mongodb.com/solutions/use-cases/internet-of-things>`__, `Gen AI
-<https://www.mongodb.com/use-cases/artificial-intelligence>`__
+**Use cases:** `Gen AI
+<https://www.mongodb.com/use-cases/artificial-intelligence>`__, `Catalog
+<https://www.mongodb.com/solutions/use-cases/catalog>`__, 
 
-**Industries:** Energy and Environmental, `Manufacturing and Mobility
-<https://www.mongodb.com/solutions/industries/manufacturing>`__
+**Industries:** `Retail
+<https://www.mongodb.com/solutions/industries/retail>`__
 
-**Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Document
+Model <https://www.mongodb.com/docs/manual/core/document/>`__, `MongoDB
+Node.js Driver <https://www.mongodb.com/docs/drivers/node/v3.6/>`
+
+**Partners:** `Together AI
+<https://cloud.mongodb.com/ecosystem/together-ai>`
 
 Solution Overview
 -----------------
 
-The renewable energy sector is rapidly evolving with advancements in AI and
-`machine learning <https://www.mongodb.com/basics/machine-learning>`__ ,
-offering significant potential for efficiency gains and cost reductions, yet
-much innovation remains untapped. By integrating AI into renewable energy
-systems, new opportunities for efficiency gains and cost reductions emerge.
+In this solution, you will learn how to build a generative AI-powered
+architecture that processes images using advanced vision models,
+generating accurate and compelling descriptions of an image. MongoDB
+Atlas serves as the operational data layer, leveraging its flexible data
+model to scale seamlessly as new descriptions are added and ensuring
+efficient data management and effortless scalability.
 
-Companies are increasingly turning to predictive maintenance to increase
-efficiency and reduce costs. However, this strategy comes with significant
-challenges:
+This solution proves particularly valuable in the retail industry. The
+process of onboarding a new product to a retailer’s catalog can be
+time-consuming, especially when it comes to crafting product
+descriptions—in multiple languages and in different geographies. This
+solution helps streamline that workflow by automating the initial
+content creation through `generative AI
+<https://www.mongodb.com/resources/basics/artificial-intelligence/generative-ai>`__,
+providing retailers with a solid foundation for each product
+description, ultimately speeding up the time to market and improving
+consistency across their catalog UX writing.
 
-- The integration of heterogeneous data of diverse formats and sources
-- Scalability becomes an issue due to the volume of IoT signals generated
-- Real-time analysis of vast data sets
-- Acquiring and effectively utilizing `unstructured data
-  <https://www.mongodb.com/resources/basics/unstructured-data/unstructured-data>`__,
-  hindering the development of robust predictive maintenance models
+.. video:: https://www.youtube.com/watch?v=7fKXd-KafLw
 
 Our solution explores the application of AI in real-time anomaly detection
 using sound input, highlighting the impact of MongoDB Atlas Vector Search.
 This approach offers several benefits:
 
-- Document data model: MongoDB's `BSON <https://www.mongodb.com/basics/bson>`__
-  (binary JSON) format stores diverse data types, including unstructured data,
-  simplifying maintenance and enabling faster responses to changes.
-- Time series collections: MongoDB efficiently handles time-series data, crucial
-  for real-time monitoring in predictive maintenance, ensuring timely
-  interventions.
-- Real-time data processing: MongoDB enables immediate diagnostics and
-  responses, vital for proactive maintenance to prevent costly repairs.
-- Data aggregation: MongoDB's powerful aggregation capabilities provide
-  comprehensive insights into fleet-wide performance trends.
-- Atlas Vector Search: MongoDB Atlas facilitates effortless search of
-  unstructured data, enabling robust predictive maintenance solutions with
-  features like vector indexing and retrieval. Visit the 
-- `Atlas Vector Search Quick Start guide
-  <https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
-  and create your first index in minutes.
+The importance of a good description
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Other Applicable Industries and Use Cases
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Did you know that around `70% of people leave a product page when the
+product description is poor or incomplete?
+<https://www.businessdasher.com/importance-of-product-description/?utm_source=chatgpt.com>`__ 
 
-**Manufacturing**: Implementing real-time anomaly detection in manufacturing
-plants to predict equipment failures and optimize production processes, leading
-to reduced downtime and increased productivity.
+Product descriptions play a crucial role in the customer's journey.
+Shoppers rely on them to make buying decisions. When descriptions are
+weak or missing, businesses risk losing potential revenue and leaving
+customers frustrated.
 
-**Transportation**: Utilizing AI and Atlas Vector Search for predictive
-maintenance in vehicles, aircraft, and logistics equipment to anticipate
-maintenance needs, minimize disruptions, and improve fleet management.
+Having a great description can enhance user engagement and satisfaction
+as `87% of online shoppers consider product descriptions to be crucial
+when making a buying decision.
+<https://www.businessdasher.com/importance-of-product-description/?utm_source=chatgpt.com>`__
+On the other hand, having inaccurate descriptions can result in revenue
+loss and trust decline with your customer base as `40% of consumers have
+returned online purchases due to poor product content.
+<https://www.ax-semantics.com/en/blog/product-descriptions>`__
 
-**Healthcare**: Applying real-time anomaly detection in medical devices and
-equipment to identify potential issues early, ensuring patient safety, and
-optimizing healthcare operations.
+Challenges with the traditional product description writing process
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. video:: https://youtu.be/-FCyBZlA2_8
+The journey of writing high-quality descriptions involves numerous
+details and careful considerations. Some of the challenges that present
+include:
 
-A fun and quick demo of MongoDB's Vector Search capabilities for anomaly
-detection through sound input, using a basic handheld fan as our makeshift wind
-turbine. This demo enables real-time diagnosis by analyzing the emitted audio,
-allowing us to diagnose its condition—whether it's operating normally, stopped,
-or experiencing any issues.
+- **Crafting compelling descriptions:** A product description that is
+  well-written will address their target’s needs and desires while
+  maintaining a consistent tone that aligns with the business’s UX writing
+  strategy and brand identity.
+
+- **SEO optimization:** Creating SEO-optimized product descriptions to
+  drive organic traffic and improve search engine rankings.
+
+- **Multilingual complexity:** For retailers with multilingual portals
+  and with multiple operating geographies this process increases in
+  complexity.
+  
+- **Content approval delays:** Even after a description is written, too
+  often there is still a writing approval process that needs to happen,
+  delaying the time to market.
+
 
 Reference Architectures
 -----------------------
