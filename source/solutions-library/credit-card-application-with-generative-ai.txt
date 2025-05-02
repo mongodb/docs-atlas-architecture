@@ -101,7 +101,7 @@ process**. Let’s delve into the details:
        cross-check the information provided. This step also involves computing the
        probability of delinquency using AI/ML algorithms.
 
-  - **Redundant information collection**: Unfortunately, banks often collect “redundant”
+- **Redundant information collection**: Unfortunately, banks often collect “redundant”
      data that they should already have. For instance:
    
      - **KYC details**: Even though they have access to your KYC (Know Your Customer)
@@ -172,11 +172,11 @@ The data pipeline for credit scoring a customer involves the following steps:
 1. **Data collection**: The process begins with collecting data from various sources such
    as credit bureaus, open banking, fraud detection systems, and other relevant sources.
 
-2. **Data processing**: The collected data is processed using tools like :doc: `Spark
-   Streaming Connectors </multi-cloud-distribution/>`_ to create a unified view of the
-   customer’s financial profile and store the same data as a single view in |service-fullname|.
-   Further, these data points can be converted to features, as shown in the sample schema
-   image above.
+2. **Data processing**: The collected data is processed using tools like `Spark Streaming
+   Connectors <https://www.mongodb.com/docs/spark-connector/v2.4/scala/streaming/>`_ to
+   create a unified view of the customer’s financial profile and store the same data as a
+   single view in |service-fullname|. Further, these data points can be converted to
+   features, as shown in the sample schema image above.
 
 3. **Risk profile generation**: From this unified view, risk profiles or product
    suggestions are generated. This involves using statistical methods to perform
