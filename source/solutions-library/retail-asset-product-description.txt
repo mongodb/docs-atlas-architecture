@@ -32,10 +32,10 @@ onboarding.
 
 **Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Document
 Model <https://www.mongodb.com/docs/manual/core/document/>`__, `MongoDB
-Node.js Driver <https://www.mongodb.com/docs/drivers/node/v3.6/>`
+Node.js Driver <https://www.mongodb.com/docs/drivers/node/v3.6/>`__
 
 **Partners:** `Together AI
-<https://cloud.mongodb.com/ecosystem/together-ai>`
+<https://cloud.mongodb.com/ecosystem/together-ai>`__
 
 Solution Overview
 -----------------
@@ -59,10 +59,6 @@ description, ultimately speeding up the time to market and improving
 consistency across their catalog UX writing.
 
 .. video:: https://www.youtube.com/watch?v=7fKXd-KafLw
-
-Our solution explores the application of AI in real-time anomaly detection
-using sound input, highlighting the impact of MongoDB Atlas Vector Search.
-This approach offers several benefits:
 
 The importance of a good description
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,55 +104,70 @@ include:
   often there is still a writing approval process that needs to happen,
   delaying the time to market.
 
-
 Reference Architectures
 -----------------------
 
-**With MongoDB**: The solution demo is divided in two parts:
+**With MongoDB**:
 
-Audio Preparation
-~~~~~~~~~~~~~~~~~
+At the core of this architecture we have three key components: 
 
-We begin by capturing the audio from the equipment in different situations
-(normal operation, high/low load, equipment obstructed, not operating).
+- `MongoDB Atlas
+  <https://www.mongodb.com/products/platform/atlas-database>`:__ A
+  powerful, general-purpose data platform that
+  seamlessly manages our data in the cloud. MongoDB's flexible document
+  model allows products to scale effortlessly by adding more descriptions
+  (i.e. for translations in multiple languages) without introducing
+  complexity. 
 
-Once each sound is collected, we use an embedding model to process the audio
-data and convert it to vector embeddings (numerical representations of data).
-This step is crucial — by generating embeddings for each audio track, which are
-high-dimensional vector representations, we are essentially capturing the unique
-characteristics of the sound.
+- The object storage: An effective system to save the product image file
+  that ensures efficient retrieval. This can be Google Cloud storage,
+  Azure Blob Storage or AWS S3. 
 
-We then upload these vectors to MongoDB Atlas, which is where the vector search
-magic begins. With just a few examples of sounds in our database, they are ready
-to be searched (and essentially compared) with the sound emitted by our
-equipment during its operation in real-time.
+- `Together AI <https://www.together.ai/>`__: Offers a variety of
+  generative AI services, making it easy to run or fine-tune leading
+  open source models with only a few lines of code. This solution uses
+  their available `vision LLMs <https://www.together.ai/models>`__ to
+  generate the product descriptions.
 
-Audio-Based Diagnosis
-~~~~~~~~~~~~~~~~~~~~~
-
-Next we put our equipment through normal operation and start capturing the sound
-it is making in real time. In this demonstration we capture one-second clips of
-audio. Then, with the same embedding model used before, we take our audio clips
-and convert them to vector embeddings in real-time. This process happens in
-milliseconds, allowing us to have real-time monitoring of the audio. The
-one-second audio clips now converted to vector embeddings are then sent to
-MongoDB Atlas Vector Search. At this step, the Atlas Vector Search algorithm
-searches for what is the most similar sound from the ones we previously recorded
-in our audio preparation phase. The result is given back with a percentage of
-similarity and it enables a very accurate diagnosis of the current status of the
-operation of the wind turbine.
-
-These steps are performed repeatedly every second, leveraging fast embedding of
-vector data and quick searches, allowing for real-time monitoring based on
-sound.
-
-.. figure:: /includes/images/industry-solutions/Wind-Turbine-Diagnosis-Demo.svg
+.. figure:: /includes/images/industry-solutions/product-description-architecture.svg
    :figwidth: 1200px
-   :alt: Real-time wind turbine diagnosis
+   :alt: Product description architecture diagram
    
-   Real-time wind turbine diagnosis by analyzing the emitted audio, allowing us to
-   diagnose its status — whether it's operating normally, stopped, or experiencing
-   any issues.
+   Figure 1. Product description generative AI architecture.
+
+The journey starts on the left side of the diagram with the *User/Event*
+label. A laptop icon represents the “Product Description Generator”
+system. First, a new product is received, this can be either manually by
+a *User* or in bulk through an automated *Event*. 
+
+Then, retailers generate the descriptions by sending a *query* to Together
+AI’s endpoint, utilizing their vision models, combining computer vision
+and natural language processing (NLP) to process and understand images
+alongside text. The request includes the image URL, the desired
+description length, the vision model utilized, and the languages for the
+description. 
+
+Then, Together AI takes this data and uses one of its Llama3 vision
+models to scan the image and generate a description that matches the
+specified requirements, and returns the *product description* to the
+application.
+
+Finally, the product along with its description will be upserted inside
+the catalog on MongoDB, ensuring real-time availability across all
+connected systems.
+
+To illustrate the scalability of this architecture, consider the diagram
+below. By integrating `MongoDB Change Streams
+<https://www.mongodb.com/docs/manual/changeStreams/>`__, it allows
+real-time updates on any application listening to the catalog. For
+example, the e-commerce portal, a social media platform, and any other
+touchpoints.
+
+.. figure:: /includes/images/industry-solutions/product-description-architecture-extended.svg
+   :figwidth: 1200px
+   :alt: Product description architecture diagram with real-time integration
+   
+   Figure 2. Product description generative AI architecture extended with real-time applications.
 
 Data Model Approach
 -------------------
