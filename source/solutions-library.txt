@@ -130,6 +130,15 @@ kick-start their projects.
             user experiences by using Atlas Database, 
             Atlas Vector Search, and Pymongo. 
 
+         .. card::
+            :headline: Gen AI-powered video summarization
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/AI-video-summarization/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Build a YouTube transcription and summarization service that
+            leverages a large language model (LLM) and semantic search.    
+
       .. App-Driven Analytics
       .. --------------------
 
