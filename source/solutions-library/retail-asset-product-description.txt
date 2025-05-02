@@ -25,7 +25,7 @@ onboarding.
 
 **Use cases:** `Gen AI
 <https://www.mongodb.com/use-cases/artificial-intelligence>`__, `Catalog
-<https://www.mongodb.com/solutions/use-cases/catalog>`__, 
+<https://www.mongodb.com/solutions/use-cases/catalog>`__ 
 
 **Industries:** `Retail
 <https://www.mongodb.com/solutions/industries/retail>`__
@@ -112,16 +112,16 @@ Reference Architectures
 At the core of this architecture we have three key components: 
 
 - `MongoDB Atlas
-  <https://www.mongodb.com/products/platform/atlas-database>`:__ A
+  <https://www.mongodb.com/products/platform/atlas-database>`__: A
   powerful, general-purpose data platform that
   seamlessly manages our data in the cloud. MongoDB's flexible document
-  model allows products to scale effortlessly by adding more descriptions
+  model allows products to scale easily by adding more descriptions
   (i.e. for translations in multiple languages) without introducing
   complexity. 
 
-- The object storage: An effective system to save the product image file
-  that ensures efficient retrieval. This can be Google Cloud storage,
-  Azure Blob Storage or AWS S3. 
+- The object storage: An effective system for efficient product image
+  file storage and retrieval. This can be built with Google Cloud
+  storage, Azure Blob Storage or AWS S3. 
 
 - `Together AI <https://www.together.ai/>`__: Offers a variety of
   generative AI services, making it easy to run or fine-tune leading
