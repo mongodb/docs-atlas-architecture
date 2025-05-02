@@ -107,7 +107,7 @@ Building the Solution
          - Creating database users with specific roles.
          - Enabling IP access to secure the database connection.
          - Connect to your cluster using the connection string provided
-          by Atlas for application integration.
+           by Atlas for application integration.
       
    .. step:: Setting up Google Cloud:
 
@@ -144,8 +144,8 @@ Building the Solution
          - Create a new Cloud Function in Google Cloud.
          - Set the function's trigger to the Pub/Sub topic you created.
          - Implement code in the function to preprocess event data,
-          invoke the Vertex AI model for predictions, and update MongoDB
-          with the results.
+           invoke the Vertex AI model for predictions, and update MongoDB
+           with the results.
 
       - Prepare dependencies:
          - Ensure the requirements.txt file includes all necessary libraries for the Cloud Function.
@@ -177,10 +177,9 @@ complexity in data management.
    Figure 2: Data structure within the events collection representing a simulated user view of MongoDB white socks, including price information.
 
 For more-detailed instructions on how to build your own dynamic
-microservice, please refer to our blog post, Building a Dynamic Pricing
+microservice, please refer to our blog post,`Building a Dynamic Pricing
 Microservice with Vertex AI and MongoDB Atlas.
-
-`Building a Dynamic Pricing Microservice with Vertex AI and MongoDB Atlas. <https://www.mongodb.com/developer/products/mongodb/dynamic-pricing-microservice-vertexai/>`__
+<https://www.mongodb.com/developer/products/mongodb/dynamic-pricing-microservice-vertexai/>`__
 
 Key Learnings
 -------------
