@@ -84,11 +84,11 @@ issues. Publishers and subscribers can independently continue processing
 their logic, ensuring a robust and flexible system that supports
 continuous operation and seamless updates.
 
-.. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Solution Overview 2.svg
+.. figure:: /includes/images/industry-solutions/Dynamic Pricing Fig1.avif
    :figwidth: 1200px
-   :alt: Solution Overview
+   :alt: Dynamic pricing architecture integrating different Google Cloud components and MongoDB Atlas as a Feature Store
 
-   Figure 3: Solution Overview
+   Figure 1: Dynamic pricing architecture integrating different Google Cloud components and MongoDB Atlas as a Feature Store
 
 
 Building the Solution
@@ -104,9 +104,9 @@ Building the Solution
         <https://www.mongodb.com/resources/products/fundamentals/mongodb-cluster-setup>`__.
       - Choose a region closest to your user base for optimal performance.
       - Configure security by:
-        - Creating database users with specific roles.
-        - Enabling IP access to secure the database connection.
-        - Connect to your cluster using the connection string provided
+         - Creating database users with specific roles.
+         - Enabling IP access to secure the database connection.
+         - Connect to your cluster using the connection string provided
           by Atlas for application integration.
       
    .. step:: Setting up Google Cloud:
@@ -114,8 +114,8 @@ Building the Solution
       - Log into `Google Cloud console <https://console.cloud.google.com/>`__ and create a new project for your microservice.
       - Ensure that the `necessary APIs <https://www.mongodb.com/developer/products/mongodb/dynamic-pricing-microservice-vertexai/#step-2--setting-up-gcp>`__  are enabled for your project.
       - Install and initialize the Google Cloud CLI.
-        - Authenticate with your Google Cloud account.
-        - Set your project as the default.
+         - Authenticate with your Google Cloud account.
+         - Set your project as the default.
         
    .. step:: Develop the microservice and model
 
@@ -132,31 +132,31 @@ Building the Solution
    .. step:: Deploy a model to an endpoint:
 
       - Deploy the model:
-        - Access the Vertex AI section in Google Cloud console.
-        - Locate and select the model you want to deploy.
-        - Click on `"Deploy to endpoint" <https://cloud.google.com/vertex-ai/docs/general/deployment>`__ under the "Deploy & Test" tab.
-        - Complete the deployment setup by configuring model settings and monitoring.
+         - Access the Vertex AI section in Google Cloud console.
+         - Locate and select the model you want to deploy.
+         - Click on `"Deploy to endpoint" <https://cloud.google.com/vertex-ai/docs/general/deployment>`__ under the "Deploy & Test" tab.
+         - Complete the deployment setup by configuring model settings and monitoring.
 
       - Retrieve endpoint ID:
-        - Go to "Endpoints" in Vertex AI and note the Endpoint ID for use in Cloud Function configuration.
+         - Go to "Endpoints" in Vertex AI and note the Endpoint ID for use in Cloud Function configuration.
 
       - Configure Cloud Function:
-        - Create a new Cloud Function in Google Cloud.
-        - Set the function's trigger to the Pub/Sub topic you created.
-        - Implement code in the function to preprocess event data,
+         - Create a new Cloud Function in Google Cloud.
+         - Set the function's trigger to the Pub/Sub topic you created.
+         - Implement code in the function to preprocess event data,
           invoke the Vertex AI model for predictions, and update MongoDB
           with the results.
 
       - Prepare dependencies:
-        - Ensure the requirements.txt file includes all necessary libraries for the Cloud Function.
+         - Ensure the requirements.txt file includes all necessary libraries for the Cloud Function.
 
       - Simulate customer events:
-        - Use a provided script to generate synthetic customer behavior data.
-        - Push this data to MongoDB and Pub/Sub to test the model and
-          microservice integration.
+          - Use a provided script to generate synthetic customer behavior data.
+          - Push this data to MongoDB and Pub/Sub to test the model and
+            microservice integration.
 
       - Run the simulation:
-        - Execute the script to validate the complete end-to-end system.
+          - Execute the script to validate the complete end-to-end system.
   
 Advantage of MongoDB for modeling events:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -170,11 +170,11 @@ collection, facilitating integrated data analytics and real-time
 decision-making while potentially increasing storage costs and
 complexity in data management.
 
-.. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Solution Overview 2.svg
+.. figure:: /includes/images/industry-solutions/Dynamic Pricing Fig2.avif
    :figwidth: 1200px
-   :alt: Solution Overview
+   :alt: Data structure within the events collection representing a simulated user view of MongoDB white socks, including price information.
 
-   Figure 3: Solution Overview
+   Figure 2: Data structure within the events collection representing a simulated user view of MongoDB white socks, including price information.
 
 For more-detailed instructions on how to build your own dynamic
 microservice, please refer to our blog post, Building a Dynamic Pricing
