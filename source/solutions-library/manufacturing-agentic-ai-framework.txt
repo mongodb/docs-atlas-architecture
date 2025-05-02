@@ -235,10 +235,10 @@ Building the Solution
         timestamps in the format YYYY-MM-DDTHH:MM:SSZ, e.g.
         2025-02-19T13:00:00Z.
       - The remaining columns should contain relevant data for your use
-        case. - There is no column nor row limit, but for framework
-        testing
-        purposes the suggestion is to keep the data size as small as
-        possible.
+        case. 
+      - There is no column nor row limit, but for framework
+        testing purposes the suggestion is to keep the data size as
+        small as possible.
 
       Sample data:
 
