@@ -1,2 +1,4 @@
 .. toctree::
    :titlesonly:
+
+   Dynamic Pricing </solutions-library/AIDriven-real-time pricing>
