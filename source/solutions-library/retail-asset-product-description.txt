@@ -169,46 +169,37 @@ touchpoints.
    
    Figure 2. Product description generative AI architecture extended with real-time applications.
 
-Data Model Approach
--------------------
-
-The data model for the vectorized audio collection is simple, we have our audio
-preparation collection called “sounds,” which contains documents including a
-status and the url of the related GIF to be displayed on the UI. Once the
-reference audio for each status is vectorized, the embedding is added to the
-document as an array alongside existing fields.
-
-.. figure:: /includes/images/industry-solutions/wind-diagnosis.svg
-   :figwidth: 1200px
-   :alt: Screenshot of documents including a status and the url of the related GIF to be displayed on the UI.
-
-On the reading end, the one-second audio clips we record in real-time are
-vectorized and sent to MongoDB Atlas Vector Search to be compared against
-embeddings from the “sounds” collection above.
-
 Building the Solution
 ---------------------
+
+Building this solution can be broken down in five major steps:
 
 .. procedure::
    :style: normal
 
-   .. step:: `MongoDB Atlas Connection <https://github.com/mongodb-industry-solutions/Wind-Turbine-Diagnostics/blob/main/README.md#1-mongodb-atlas-connection>`__
+   .. step:: Replicate the demo database
 
-      Create a file called .env in the main directory alongside the add_audio.py file
-      and add your atlas connection string in the following format:
+      Provision a cluster within your `Atlas account
+      <https://www.mongodb.com/cloud/atlas/register>`__ and populate
+      your database with the data required for the demo. A data dump can
+      be found inside the `github repository
+      <https://github.com/mongodb-industry-solutions/description-generator/tree/main/resources/dump/TogetherMDB>`__
+      to quickly replicate the database with all the necessary data and
+      metadata with one quick `mongorestore
+      <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
+      command.
 
-      MONGO_CONNECTIO_STRING="mongodb+srv://connectionstringfromatlas"
+   .. step:: Retrieve MongoDB Atlas connection string
 
-      Then copy this file into the nodeUI directory.
+      Navigate to your cluster and click on *Connect*. Copy the
+      connection string provided and save it for your *.env file*.
 
-   .. step:: `Install Python Modules <https://github.com/mongodb-industry-solutions/Wind-Turbine-Diagnostics/blob/main/README.md#2-install-python-modules>`__
+   .. step:: Create your Together AI account
 
-      Install the required python modules listed in the Github repo.
-
-   .. step:: `Record Audio Files <https://github.com/mongodb-industry-solutions/Wind-Turbine-Diagnostics/blob/main/README.md#3-record-audio-files>`__
-
-      1. Run python3 add_audio.py
-      2. Select the audio input by typing the relevant number and then press enter. Record each sound in sequence.
+      Sign in to `Together AI <https://www.together.ai/>`__. Navigate to
+      your account and retrieve your user key, which can be found inside
+      your *Profile*, then go to *Settings* and select *API Keys*. Save this
+      key, as you will need it in your *.env file*.
 
    .. step:: `Create a Search Index <https://github.com/mongodb-industry-solutions/Wind-Turbine-Diagnostics/blob/main/README.md#4-create-a-search-index>`__
 
