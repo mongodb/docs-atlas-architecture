@@ -21,23 +21,29 @@ Framework for Rapid AI Agent Deployment
 MongoDB Atlas enables rapid development of AI agents across industries.
 
 **Use cases:** `App Driven-Analytics
-<https://www.mongodb.com/resources/solutions/use-cases/application-driven-intelligence>`__, `Gen AI
-<https://www.mongodb.com/use-cases/artificial-intelligence>`__
+<https://www.mongodb.com/resources/solutions/use-cases/application-driven-intelligence>`__,
+`Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__
 
 **Industries:** `Manufacturing and Mobility
-<https://www.mongodb.com/solutions/industries/manufacturing>`__, `Financial Services
-<https://www.mongodb.com/solutions/industries/financial-services>`__, `Insurance
-<https://www.mongodb.com/solutions/industries/insurance>`__, `Retail
-<https://www.mongodb.com/solutions/industries/retail>`__, `Healthcare
-<https://www.mongodb.com/solutions/industries/healthcare>`__, `Telecommunications
+<https://www.mongodb.com/solutions/industries/manufacturing>`__,
+`Financial Services
+<https://www.mongodb.com/solutions/industries/financial-services>`__,
+`Insurance <https://www.mongodb.com/solutions/industries/insurance>`__,
+`Retail <https://www.mongodb.com/solutions/industries/retail>`__,
+`Healthcare
+<https://www.mongodb.com/solutions/industries/healthcare>`__,
+`Telecommunications
 <https://www.mongodb.com/solutions/industries/telecommunications>`__
 
-**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__, `Atlas Database 
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Atlas
+Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__,
+`Atlas Database
 <https://www.mongodb.com/products/platform/atlas-database>`__
 
-**Partners:** `LangChain <https://cloud.mongodb.com/ecosystem/langchain>`__, `Cohere
-<https://cloud.mongodb.com/ecosystem/cohere>`__, `AWS Bedrock 
+**Partners:** `LangChain
+<https://cloud.mongodb.com/ecosystem/langchain>`__, `Cohere
+<https://cloud.mongodb.com/ecosystem/cohere>`__, `AWS Bedrock
 <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
 
 Solution Overview
@@ -250,10 +256,12 @@ Building the Solution
       search capabilities as part of the agentic workflow. The file
       should respect the following guidelines:
 
-      - The CSV file should contain a header row with column names.
-      - The first column must be named “query” and contain the queries.
-      - The second column must be named “recommendation” and contain the expected recommendations.
-      - There is no column or row limit, but for framework testing purposes the suggestion is to keep the data size as small as possible.
+      - The CSV file should contain a header row with column names. 
+      - The first column must be named “query” and contain the queries. 
+      - The second column must be named “recommendation” and contain the
+        expected recommendations. - There is no column or row limit, but
+        for framework testing purposes the suggestion is to keep the data
+        size as small as possible.
 
       Sample data:
 
@@ -366,9 +374,12 @@ Building the Solution
             }
          }
 
-      Once the config file is updated, environment variables need to be configured and vector embeddings created. Finally the vector search index must be created.
+      Once the config file is updated, environment variables need to be
+      configured and vector embeddings created. Finally the vector
+      search index must be created.
 
-      Check out the `readme <https://github.com/mongodb-industry-solutions/agentic-framework/tree/a14ed55e9b4a5628da1798b5e4bbc59d695d43a7?tab=readme-ov-file#step-4-configure-your-agentic-workflow-through-a-json-config-file>`__
+      Check out the `readme
+      <https://github.com/mongodb-industry-solutions/agentic-framework/tree/a14ed55e9b4a5628da1798b5e4bbc59d695d43a7?tab=readme-ov-file#step-4-configure-your-agentic-workflow-through-a-json-config-file>`__
       for detailed explanations of all the steps.
 
       .. figure:: /includes/images/industry-solutions/framework-rapid-logical-architecture.svg
