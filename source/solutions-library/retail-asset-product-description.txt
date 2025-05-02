@@ -137,8 +137,8 @@ At the core of this architecture we have three key components:
 
 The journey starts on the left side of the diagram with the *User/Event*
 label. A laptop icon represents the “Product Description Generator”
-system. First, a new product is received, this can be either manually by
-a *User* or in bulk through an automated *Event*. 
+system. First, a new product is received, this can be added manually by
+a user or in bulk through an automated event. 
 
 Then, retailers generate the descriptions by sending a *query* to Together
 AI’s endpoint, utilizing their vision models, combining computer vision
@@ -167,7 +167,7 @@ touchpoints.
    :figwidth: 1200px
    :alt: Product description architecture diagram with real-time integration
    
-   Figure 2. Product description generative AI architecture extended with real-time applications.
+   Figure 2. Product description generative AI architecture with real-time applications.
 
 Building the Solution
 ---------------------
@@ -181,11 +181,11 @@ Building this solution can be broken down in five major steps:
 
       Provision a cluster within your `Atlas account
       <https://www.mongodb.com/cloud/atlas/register>`__ and populate
-      your database with the data required for the demo. A data dump can
-      be found inside the `github repository
+      your database with the data required for the demo. You can quickly
+      replicate the database using a data dump found in the `github
+      repository
       <https://github.com/mongodb-industry-solutions/description-generator/tree/main/resources/dump/TogetherMDB>`__
-      to quickly replicate the database with all the necessary data and
-      metadata with one quick `mongorestore
+      with a single `mongorestore
       <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
       command.
 
@@ -199,13 +199,13 @@ Building this solution can be broken down in five major steps:
       Sign in to `Together AI <https://www.together.ai/>`__. Navigate to
       your account and retrieve your user key, which can be found inside
       your *Profile*, then go to *Settings* and select *API Keys*. Save this
-      key, as you will need it in your *.env file*.
+      key, as you will need it in your .env file.
 
    .. step:: Create your object storage
 
       Create a new bucket in your AWS account and generate an IAM user
       with programmatic access. Save the access key and secret key for
-      your *.env file*.
+      your .env file.
 
    .. step:: Configure your application’s frontend
 
@@ -221,26 +221,25 @@ configuration files, and tutorial videos, visit the `GitHub repository
 Key Learnings
 -------------
 
-- **The importance of high-quality product descriptions:** A
+- **High-quality product descriptions drive business success:** A
   well-crafted product description enhances user engagement, improves
-  SEO rankings leading to increased views, and helps customers make more
+  SEO rankings with increased views, and helps customers make more
   informed purchase decisions. 
 
-- **Leveraging MongoDB and Together AI:** By combining MongoDB’s
-  flexible and scalable database with Together AI’s available vision
-  models, retailers are able to automate real-time product description
-  generation that aligns with their business needs. 
+- **MongoDB and Together AI automate product descriptions:** By
+  combining MongoDB’s flexible and scalable database with Together AI’s
+  available vision models, retailers are able to automate real-time
+  product description generation that aligns with their business needs. 
 
-- **The value of modernizing architecture:** Streamlining the product
+- **Modern architectures speed up production:** Streamlining the product
   onboarding process with AI and automation reduces manual effort and
   speeds up approvals. Providing a generative AI product description as
   a base that respects the UX writing and tone of the business ensures
   consistency across platforms while also enabling faster scalability to
   accommodate growing product catalogs with minimal additional effort.
 
-Each of these capabilities contributes to building a robust generative
-AI system that can scale with your business needs while maintaining
-efficiency and reliability.
+These capabilities form a robust generative AI system that scales with
+your business needs while ensuring efficiency and reliability.
 
 Technologies and Products Used
 ------------------------------
