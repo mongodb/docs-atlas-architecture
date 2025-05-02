@@ -192,7 +192,7 @@ Building this solution can be broken down in five major steps:
    .. step:: Retrieve MongoDB Atlas connection string
 
       Navigate to your cluster and click on *Connect*. Copy the
-      connection string provided and save it for your *.env file*.
+      connection string provided and save it for your .env file.
 
    .. step:: Create your Together AI account
 
@@ -233,13 +233,13 @@ Key Learnings
 
 - **Modern architectures speed up production:** Streamlining the product
   onboarding process with AI and automation reduces manual effort and
-  speeds up approvals. Providing a generative AI product description as
-  a base that respects the UX writing and tone of the business ensures
-  consistency across platforms while also enabling faster scalability to
-  accommodate growing product catalogs with minimal additional effort.
+  speeds up approvals. Using a generative AI for product descriptions
+  maintains consistent UX and tone, enabling quick scalability for
+  expanding product catalogs with little extra effort.
 
-These capabilities form a robust generative AI system that scales with
-your business needs while ensuring efficiency and reliability.
+Together, these capabilities form a robust generative AI system that
+scales with your business needs while ensuring efficiency and
+reliability.
 
 Technologies and Products Used
 ------------------------------
