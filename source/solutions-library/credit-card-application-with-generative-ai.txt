@@ -1,10 +1,9 @@
-
 ==========================================
 Credit Card Application with Generative AI 
 ==========================================
 
 .. meta:: 
-   :keywords: AI, Credit, Atlas, Spark, Vector Search
+   :keywords: AI, Credit, |service|, Spark, Vector Search
    :description: Learn how the convergence of alternative data, artificial intelligence, and generative AI
       is reshaping the foundations of credit scoring.
 
@@ -28,7 +27,7 @@ AI) is reshaping the foundations of credit scoring. The challenges of traditiona
 are being overcome through the adoption of alternative credit scoring methods by offering
 a more inclusive and nuanced assessment of creditworthiness. This solution provides an
 example via an online credit card application process that illustrates an approach to
-realizing the transformative opportunities of gen AI and how MongoDB can be leveraged to
+realizing the transformative opportunities of gen AI and how |service| can be leveraged to
 supercharge credit scoring. This approach can be applied to other credit products — like
 personal loans, mortgages, corporate loans, and trade finance credit lines — and their
 applications without necessarily confining them to a credit card product only.
@@ -57,7 +56,7 @@ are some of the challenges or limitations of traditional credit scoring models:
   leaves applicants in the dark, making it difficult for them to address the root cause
   and enhance their creditworthiness for future applications.
 
-Transforming Credit Scoring and Applications with MongoDB
+Transforming Credit Scoring and Applications with |service|
 ---------------------------------------------------------
 
 An online application process generally aims to provide convenience and efficiency,
@@ -67,7 +66,7 @@ scoring methods, the limitations and challenges hinder the experience provided, 
 for individuals with limited credit profiles based on the traditional credit scoring
 approach.
 
-In the following solution accelerator, we will explore how MongoDB can help transform this
+In the following solution accelerator, we will explore how |service| can help transform this
 credit application in the following key aspects of the process:
 
 1. Simplify data capture and processing
@@ -119,39 +118,39 @@ increases with other credit products (e.g., auto-loan, mortgage, trade finance, 
 Within an application form, there could be tabular but also hierarchical information that
 needs to be filled in, not to mention alternative data to be sourced from possibly
 authorized third-party data sources by the borrower. MongoDB’s flexible developer data
-platform natively supports JSON data and does not require documents to have the same
+platform natively supports :json: data and does not require documents to have the same
 schema, improving the ability to handle various types of data.
 
-Leveraging JSON for online credit application forms simplifies the data capture process
-and also the performance in data processing. JSON's structured data representation proves
+Leveraging :json: for online credit application forms simplifies the data capture process
+and also the performance in data processing. :json:'s structured data representation proves
 highly conducive for organizing the multifaceted information within credit applications,
 encompassing personal, financial, and employment details. Its human-readable format
 facilitates collaboration among developers, supporting ease of editing and understanding
 of the data model, while interoperability across various platforms ensures seamless data
-exchange. The flexibility of JSON aligns perfectly with the dynamic nature of credit
+exchange. The flexibility of :json: aligns perfectly with the dynamic nature of credit
 application requirements, enabling straightforward modifications and additions.
 
 .. Review the internal links in the following paragraph:
 
-MongoDB stands out as an optimal choice for processing JSON documents in credit
+|service| stands out as an optimal choice for processing :json: documents in credit
 applications due to its native support for `JSON-like BSON format
 <https://www.mongodb.com/resources/basics/json-and-bson>`_. The database's flexibility
 allows for dynamic schema adjustments, aligning well with the evolving nature of credit
-application forms. MongoDB's ability to handle hierarchical data structures, coupled with
+application forms. |service|'s ability to handle hierarchical data structures, coupled with
 robust querying and indexing capabilities, ensures efficient retrieval and organization of
-complex credit application information. As a scalable solution, MongoDB accommodates
+complex credit application information. As a scalable solution, |service| accommodates
 growing volumes of credit data while maintaining performance. Its seamless integration
 with `JavaScript and other popular programming languages
 <https://www.mongodb.com/resources/products/compatibilities/compatibility>`_, `tools
 <https://www.mongodb.com/try/download/tools>`_, and technologies (e.g., `Spark
-<https://www.mongodb.com/docs/spark-connector/current/>`_, `Kafka
+<https://www.mongodb.com/docs/spark-connector/current/>`_, `{+kafka+}
 <https://www.mongodb.com/docs/kafka-connector/current/>`_) enhances development workflows,
 while features such as document validation and support for open banking standards further
 contribute to data integrity and standardized information
 exchange. 
 
-In essence, MongoDB provides a versatile and efficient platform for storing and processing
-JSON documents that are highly suited for the nature of online credit applications.
+In essence, |service| provides a versatile and efficient platform for storing and processing
+:json: documents that are highly suited for the nature of online credit applications.
 
 Enhance Credit Scoring with AI
 ------------------------------
@@ -175,7 +174,7 @@ The data pipeline for credit scoring a customer involves the following steps:
 
 2. **Data processing**: The collected data is processed using tools like :doc:`Spark
    Streaming Connectors </multi-cloud-distribution/>` to create a unified view of the
-   customer’s financial profile and store the same data as a single view in MongoDB Atlas.
+   customer’s financial profile and store the same data as a single view in |service-fullname|.
    Further, these data points can be converted to features, as shown in the sample schema
    image above.
 
@@ -202,9 +201,9 @@ The data pipeline for credit scoring a customer involves the following steps:
 
 5. **Data transformation**: Before risk profile scoring is performed, the raw user data
    undergoes further processing involving data transformation/creation of new fields using
-   Spark (or any similar managed analytics framework). - Data is collated across multiple
+   {+Spark+} (or any similar managed analytics framework). - Data is collated across multiple
    sources to create a single and materialized view of data, which can be derived from the
-   MongoDB Atlas :manual: `collection </core/databases-and-collections/>`_ directly to be
+   |service-fullname| :manual: `collection </core/databases-and-collections/>`_ directly to be
    used in model development and also various descriptive analysis tasks. - This step can
    also involve model inference.
 
@@ -220,7 +219,7 @@ Explain the Credit Application Declination
 ------------------------------------------
 
 When it comes to credit application declination, understanding the reasons behind it is
-crucial. Let’s explore how MongoDB and `large language models
+crucial. Let’s explore how |service| and `large language models
 <https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`_
 (LLMs) can shed light on XGBoost model predictions (the model used in this tutorial).
 
@@ -241,7 +240,7 @@ customer.
 Here, you can `find the code and example responses
 <https://github.com/ashwin-gangadhar-mdb/mdb-bfsi-genai/blob/gcp/notebooks/mdb-credit-worthy-genai.ipynb>`_.
 The code to generate a similar message can be done using Python in a `Jupyter
-<https://jupyter.org/>`_ Notebook. The details on setting up MongoDB Atlas and fetching a
+<https://jupyter.org/>`_ Notebook. The details on setting up |service-fullname| and fetching a
 connection string are available at this `link
 <https://www.mongodb.com/resources/languages/python>`_.
 
@@ -299,12 +298,12 @@ is used to achieve this:
    :figwidth: 750px
    :alt: Recommendation System Architecture
 
-`MongoDB Atlas Vector Search
+`|service-fullname| Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`_ is a feature that allows
 you to perform semantic search and generative AI over any type of data. It integrates your
 operational database and vector search in a single, unified, and fully managed platform
-with a MongoDB native interface. You can create vector embeddings with machine learning
-models, then store and index them in MongoDB Atlas for retrieval-augmented generation
+with a |service| native interface. You can create vector embeddings with machine learning
+models, then store and index them in |service-fullname| for retrieval-augmented generation
 (RAG), semantic search, recommendation engines, dynamic personalization, and other use
 cases.
 
@@ -319,7 +318,7 @@ recommendation use case. The steps involved in the process are described below:
 1. **Load private data**: The credit card product of each financial institution varies in
    its offerings. These products change from time to time, and so do the fees charged for
    various lifestyle benefits such as movie tickets, concierge services, etc. Storing
-   product data in MongoDB as an `operational data store (ODS)
+   product data in |service| as an `operational data store (ODS)
    <https://www.mongodb.com/resources/basics/implementing-an-operational-data-layer>`_
    helps maintain changes yet builds vector indexes alongside. - The large data points can
    be suitably updated, deleted, inserted, or replaced according to the needs. - The
@@ -331,7 +330,7 @@ recommendation use case. The steps involved in the process are described below:
 2. **LLM-powered recommendations**: In this use case, the LLM is used as a recommender
    system where the user profile generated in the earlier stage can be used as an input to
    generate sub-queries that can be used to perform semantic similarity against the stored
-   product vectors in MongoDB Atlas.
+   product vectors in |service-fullname|.
 
 3. **Product recommendation with personalized messaging**: The recommended products can
    then be used in a custom prompt to the LLM to generate relevant product recommendation
@@ -357,12 +356,12 @@ transparency, efficiency, and personalization are at the forefront of the evolvi
 scoring landscape. The synergy of technology and financial acumen is shaping a future
 where credit decisions are not only accurate but also empowering for borrowers.
 
-The code to demonstrate all the features of MongoDB for building such a solution is
+The code to demonstrate all the features of |service| for building such a solution is
 available in this `GitHub repository
 <https://github.com/ashwin-gangadhar-mdb/mdb-bfsi-genai/blob/gcp/notebooks/mdb-credit-worthy-genai.ipynb>`_.
 We have `developed and deployed the application on Fireworks.AI
 <https://www.mongodb.com/blog/post/fireworks-ai-mongodb-fastest-ai-apps-with-best-models-powered-by-your-data>`_,
-a key AI partner of MongoDB, to make innovating with generative AI faster, more efficient,
+a key AI partner of |service|, to make innovating with generative AI faster, more efficient,
 and more secure.
 
 Key Considerations
@@ -396,6 +395,6 @@ The proposed solution's functional and nonfunctional features include:
 Authors
 -------
 
-- **Ashwin Gangadhar**: Solutions Architect, Partner Solutions, MongoDB
-- **Wei You Pan**: Global Director, Financial Industry Solutions, MongoDB
-- **Julian Boronat**: Senior Specialist, Industry Solutions, MongoDB
+- **Ashwin Gangadhar**: Solutions Architect, Partner Solutions, |service|
+- **Wei You Pan**: Global Director, Financial Industry Solutions, |service|
+- **Julian Boronat**: Senior Specialist, Industry Solutions, |service|
