@@ -300,12 +300,12 @@ Building the Solution
                 "timestamp": "<DEFAULT_TIMESTAMP_IN_YYYY-MM-DDTHH:MM:SSZ>",
                 // Your default data here, check config_example.json for better understanding
             }
-         ],
+            ],
          "CRITICAL_CONDITIONS": {
             // Below is an example of a critical condition for GDP growth
             "gdp": {"threshold": 2.5, "condition": "<", "message": "GDP growth slowing: {value}%"},
             // Other critical conditions for your use case here, check config_example.json for better understanding
-         },
+            },
          "MDB_TIMESERIES_TIMEFIELD": "<YOUR_TIMESTAMP_FIELD_NAME>",
          "MDB_TIMESERIES_GRANULARITY": "<YOUR_TIMESERIES_GRANULARITY>",
          "MDB_EMBEDDINGS_COLLECTION": "queries", // Using "queries" collection name for storing queries
@@ -317,7 +317,7 @@ Building the Solution
             {"query": "GDP growth slowing", "recommendation": "Consider increasing bond assets to mitigate risks from potential economic slowdown."},
             // Other similar queries for your use case here, check config_example.json for better understanding
             // This ones are going to be used for the vector search tool in case something is not found in the queries collection
-         ],
+            ],
          "MDB_CHAT_HISTORY_COLLECTION": "chat_history", // Using "chat_history" collection name for storing chat history
          "MDB_CHECKPOINTER_COLLECTION": "checkpoints", // Using "checkpoints" collection name for storing checkpoints
          "MDB_LOGS_COLLECTION": "logs", // Using "logs" collection name for storing logs
@@ -334,7 +334,7 @@ Building the Solution
             "instructions": "Follow procedures meticulously.",
             "rules": "Document all steps.",
             "goals": "Provide actionable recommendations."
-         },
+            },
          "EMBEDDINGS_MODEL_NAME": "Cohere Embed English V3 Model (within AWS Bedrock)", // Describing the embeddings model used for creating the chain of thought
          "EMBEDDINGS_MODEL_ID": "cohere.embed-english-v3", // Model ID for the embeddings model
          "CHATCOMPLETIONS_MODEL_NAME": "Anthropic Claude 3 Haiku (within AWS Bedrock)", // Describing the chat completions model used for generating responses
@@ -351,7 +351,7 @@ Building the Solution
                 {"id": "process_vector_search", "tool": "agent_tools.process_vector_search_tool"},
                 {"id": "persistence_node", "tool": "agent_tools.persist_data_tool"},
                 {"id": "recommendation_node", "tool": "agent_tools.get_llm_recommendation_tool"}
-            ],
+                ],
             "edges": [
                 {"from": "reasoning_node", "to": "data_from_csv"},
                 {"from": "data_from_csv", "to": "process_data"},
@@ -361,7 +361,7 @@ Building the Solution
                 {"from": "process_vector_search", "to": "persistence_node"},
                 {"from": "persistence_node", "to": "recommendation_node"},
                 {"from": "recommendation_node", "to": "END"}
-            ],
+                ],
             "entry_point": "reasoning_node"
             }
          }
