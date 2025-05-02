@@ -101,14 +101,14 @@ process**. Let’s delve into the details:
        cross-check the information provided. This step also involves computing the
        probability of delinquency using AI/ML algorithms.
 
-- **Redundant information collection**: Unfortunately, banks often collect “redundant”
-   data that they should already have. For instance:
+  - **Redundant information collection**: Unfortunately, banks often collect “redundant”
+     data that they should already have. For instance:
    
-   - **KYC details**: Even though they have access to your KYC (Know Your Customer)
-     details, they still ask you to submit them repeatedly.
-   - **Income verification**: Despite having your salary details, banking history, utility
-     bills, rental payments, mobile payments, shopping expenditures, etc., from your bank
-     statements, they may request additional proof to verify the same.
+     - **KYC details**: Even though they have access to your KYC (Know Your Customer)
+       details, they still ask you to submit them repeatedly.
+     - **Income verification**: Despite having your salary details, banking history, utility
+       bills, rental payments, mobile payments, shopping expenditures, etc., from your bank
+       statements, they may request additional proof to verify the same.
 
 In summary, streamlining this process by eliminating redundant requests and leveraging
 existing data could significantly enhance the user experience.
@@ -118,21 +118,21 @@ increases with other credit products (e.g., auto-loan, mortgage, trade finance, 
 Within an application form, there could be tabular but also hierarchical information that
 needs to be filled in, not to mention alternative data to be sourced from possibly
 authorized third-party data sources by the borrower. MongoDB’s flexible developer data
-platform natively supports :json: data and does not require documents to have the same
+platform natively supports |json| data and does not require documents to have the same
 schema, improving the ability to handle various types of data.
 
-Leveraging :json: for online credit application forms simplifies the data capture process
-and also the performance in data processing. :json:'s structured data representation proves
+Leveraging |json| for online credit application forms simplifies the data capture process
+and also the performance in data processing. |json|'s structured data representation proves
 highly conducive for organizing the multifaceted information within credit applications,
 encompassing personal, financial, and employment details. Its human-readable format
 facilitates collaboration among developers, supporting ease of editing and understanding
 of the data model, while interoperability across various platforms ensures seamless data
-exchange. The flexibility of :json: aligns perfectly with the dynamic nature of credit
+exchange. The flexibility of |json| aligns perfectly with the dynamic nature of credit
 application requirements, enabling straightforward modifications and additions.
 
 .. Review the internal links in the following paragraph:
 
-|service| stands out as an optimal choice for processing :json: documents in credit
+|service| stands out as an optimal choice for processing |json| documents in credit
 applications due to its native support for `JSON-like BSON format
 <https://www.mongodb.com/resources/basics/json-and-bson>`_. The database's flexibility
 allows for dynamic schema adjustments, aligning well with the evolving nature of credit
@@ -143,14 +143,14 @@ growing volumes of credit data while maintaining performance. Its seamless integ
 with `JavaScript and other popular programming languages
 <https://www.mongodb.com/resources/products/compatibilities/compatibility>`_, `tools
 <https://www.mongodb.com/try/download/tools>`_, and technologies (e.g., `Spark
-<https://www.mongodb.com/docs/spark-connector/current/>`_, `{+kafka+}
+<https://www.mongodb.com/docs/spark-connector/current/>`_, `Kafka
 <https://www.mongodb.com/docs/kafka-connector/current/>`_) enhances development workflows,
 while features such as document validation and support for open banking standards further
 contribute to data integrity and standardized information
 exchange. 
 
 In essence, |service| provides a versatile and efficient platform for storing and processing
-:json: documents that are highly suited for the nature of online credit applications.
+|json| documents that are highly suited for the nature of online credit applications.
 
 Enhance Credit Scoring with AI
 ------------------------------
@@ -172,8 +172,8 @@ The data pipeline for credit scoring a customer involves the following steps:
 1. **Data collection**: The process begins with collecting data from various sources such
    as credit bureaus, open banking, fraud detection systems, and other relevant sources.
 
-2. **Data processing**: The collected data is processed using tools like :doc:`Spark
-   Streaming Connectors </multi-cloud-distribution/>` to create a unified view of the
+2. **Data processing**: The collected data is processed using tools like :doc: `Spark
+   Streaming Connectors </multi-cloud-distribution/>`_ to create a unified view of the
    customer’s financial profile and store the same data as a single view in |service-fullname|.
    Further, these data points can be converted to features, as shown in the sample schema
    image above.
@@ -201,9 +201,9 @@ The data pipeline for credit scoring a customer involves the following steps:
 
 5. **Data transformation**: Before risk profile scoring is performed, the raw user data
    undergoes further processing involving data transformation/creation of new fields using
-   {+Spark+} (or any similar managed analytics framework). - Data is collated across multiple
+   Spark (or any similar managed analytics framework). - Data is collated across multiple
    sources to create a single and materialized view of data, which can be derived from the
-   |service-fullname| :manual: `collection </core/databases-and-collections/>`_ directly to be
+   |service-fullname| :manual:`collection </core/databases-and-collections/>` directly to be
    used in model development and also various descriptive analysis tasks. - This step can
    also involve model inference.
 
