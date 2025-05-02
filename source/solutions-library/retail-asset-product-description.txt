@@ -201,68 +201,61 @@ Building this solution can be broken down in five major steps:
       your *Profile*, then go to *Settings* and select *API Keys*. Save this
       key, as you will need it in your *.env file*.
 
-   .. step:: `Create a Search Index <https://github.com/mongodb-industry-solutions/Wind-Turbine-Diagnostics/blob/main/README.md#4-create-a-search-index>`__
+   .. step:: Create your object storage
 
-      Go to MongoDB Atlas and create an Atlas Search Index in the audio database
-      sounds collection using the content of searchindex.json.
+      Create a new bucket in your AWS account and generate an IAM user
+      with programmatic access. Save the access key and secret key for
+      your *.env file*.
 
-      .. code-block:: sh
+   .. step:: Configure your application’s frontend
 
-         {
-            "mappings": {
-               "dynamic": true,
-               "fields": {
-                  "emb": {
-                     "dimensions": 2048,
-                     "similarity": "cosine",
-                     "type": "knnVector"
-                  }
-               }
-            }
-         }
+      Obtain the demo code by cloning the GitHub repository to your
+      local machine, configure the environment variables and install the
+      dependencies. Finally, run the app locally at
+      http://localhost:3003
 
-   .. step:: `Query the Database <https://github.com/mongodb-industry-solutions/Wind-Turbine-Diagnostics/blob/main/README.md#5-query-the-database>`__
-
-      Run python3 live_query.py and place your microphone next to the fan.
-
-   .. step:: `Run the Frontend <https://github.com/mongodb-industry-solutions/Wind-Turbine-Diagnostics/blob/main/README.md#6-run-the-frontend>`__
-
-      1. Switch to a new console and cd to the 'nodeUI' directory.
-      2. Run ``npm install``
-      3. Run ``node nodeui.js``
-      4. Use a browser to open the link http://localhost:3000/
+For complete implementation details, including code samples,
+configuration files, and tutorial videos, visit the `GitHub repository
+<https://github.com/mongodb-industry-solutions/description-generator>`__.
 
 Key Learnings
 -------------
 
-- Understand the role of AI and machine learning in revolutionizing predictive
-  maintenance in the renewable energy industry.
-- Explore how MongoDB Atlas Vector Search facilitates real-time anomaly
-  detection and addresses challenges faced by businesses and development teams.
-- Creation of a Vector Search index in Atlas — It is now possible to create
-  indexes for `local deployments
-  <https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-local/#std-label-atlas-cli-deploy-local-avs>`__. 
-  
+- **The importance of high-quality product descriptions:** A
+  well-crafted product description enhances user engagement, improves
+  SEO rankings leading to increased views, and helps customers make more
+  informed purchase decisions. 
+
+- **Leveraging MongoDB and Together AI:** By combining MongoDB’s
+  flexible and scalable database with Together AI’s available vision
+  models, retailers are able to automate real-time product description
+  generation that aligns with their business needs. 
+
+- **The value of modernizing architecture:** Streamlining the product
+  onboarding process with AI and automation reduces manual effort and
+  speeds up approvals. Providing a generative AI product description as
+  a base that respects the UX writing and tone of the business ensures
+  consistency across platforms while also enabling faster scalability to
+  accommodate growing product catalogs with minimal additional effort.
+
+Each of these capabilities contributes to building a robust generative
+AI system that can scale with your business needs while maintaining
+efficiency and reliability.
+
 Technologies and Products Used
 ------------------------------
 
 **MongoDB developer data platform:**
 
 - `Atlas Database <https://www.mongodb.com/atlas/database>`__
-- `Atlas Vector Search
-  <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 **Partner technologies:**
 
-- Audio embedding generation with `panns-inference
-  <https://github.com/qiuqiangkong/panns_inference>`__.
-
+-  `Together AI <https://www.together.ai/>`__.
+-  `Next.js <https://nextjs.org/>`__.
 
 Authors
 -------
 
-- Ainhoa Múgica, MongoDB
-- Arnaldo Vera, MongoDB
-- Dr. Humza Akhtar, MongoDB
-- Dr. Han Heloir, MongoDB
-- Ralph Johnson, MongoDB
+- Angie Guemes, MongoDB
+- Prashant Juttukonda, MongoDB
