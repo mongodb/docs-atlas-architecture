@@ -1,18 +1,19 @@
-:orphan:
 
 ==========================================
 Credit Card Application with Generative AI 
 ==========================================
 
-.. default-domain:: mongodb
+.. meta:: 
+   :keywords: AI, Credit, Atlas, Spark, Vector Search
+   :description: Learn how the convergence of alternative data, artificial intelligence, and generative AI
+      is reshaping the foundations of credit scoring.
 
-.. Just pasted, edit later
 
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 2
-   :class: onecol
+   :depth: 1
+   :class: singlecol
 
 Learn how the convergence of alternative data, artificial intelligence, and generative AI
 is reshaping the foundations of credit scoring.
@@ -142,10 +143,11 @@ complex credit application information. As a scalable solution, MongoDB accommod
 growing volumes of credit data while maintaining performance. Its seamless integration
 with `JavaScript and other popular programming languages
 <https://www.mongodb.com/resources/products/compatibilities/compatibility>`_, `tools
-<https://www.mongodb.com/try/download/tools>`_, and technologies (e.g., :ref: `Spark
-</multi-cloud-distribution/>`, :ref: `Kafka </kafka-connector/current/>`) enhances
-development workflows, while features such as document validation and support for open
-banking standards further contribute to data integrity and standardized information
+<https://www.mongodb.com/try/download/tools>`_, and technologies (e.g., `Spark
+<https://www.mongodb.com/docs/spark-connector/current/>`_, `Kafka
+<https://www.mongodb.com/docs/kafka-connector/current/>`_) enhances development workflows,
+while features such as document validation and support for open banking standards further
+contribute to data integrity and standardized information
 exchange. 
 
 In essence, MongoDB provides a versatile and efficient platform for storing and processing
@@ -385,11 +387,11 @@ The proposed solution's functional and nonfunctional features include:
   alternative data points such as utility bills, mobile phone bills,
   education/certification history, etc.
 
-- **Addressing hallucination**: Mitigating hallucination risk by leveraging :atlas:
-  `retrieval-augmented generation (RAG)
-  </atlas-vector-search/ai-integrations/langchain/>`_ by grounding the model’s responses
-  in factual information from up-to-date sources, ensuring the model’s responses reflect
-  the most current and accurate information available.
+- **Addressing hallucination**: Mitigating hallucination risk by leveraging
+  :atlas:`retrieval-augmented generation (RAG)
+  </atlas-vector-search/ai-integrations/langchain/>` by grounding the model’s responses in
+  factual information from up-to-date sources, ensuring the model’s responses reflect the
+  most current and accurate information available.
 
 Authors
 -------

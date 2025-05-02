@@ -28,7 +28,15 @@ kick-start their projects.
 
             Use native stream processing and vector search in MongoDB Atlas to
             continuously update, store, and search embeddings through a unified
-            interface. 
+            interface.
+
+         .. card::
+            :headline: Credit Card Application with Generative AI
+            :url: /solutions-library/financial-services/credit-card-application-with-generative-ai/
+            :icon: industry_credit_card
+            :icon-alt: Atlas industry_ai icon
+
+            Learn how the convergence of alternative data, artificial intelligence, and generative AI is reshaping the foundations of credit scoring.
 
       .. Fraud Prevention
       .. ----------------

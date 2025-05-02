@@ -3,3 +3,4 @@
    :hidden:
 
    RAG Applications <solutions-library/rag-applications>
+   Credit Card Application <solutions-library/credit-card-application-with-generative-ai> 
