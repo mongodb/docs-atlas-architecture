@@ -52,9 +52,9 @@ This process cannot be disabled.
 
 By default, Encryption at Rest is volume-level encryption.
 
-Additionally, you can enable database-level encryption by bringing your own
-customer-managed key (CMK) with a key management service (KMS) 
-such as AWS KMS, Google Cloud KMS, or Azure Key Vault. This feature 
+Additionally, you can enable database-level encryption by bringing your own key (BYOK).
+This is the customer-managed key (CMK) that you add with a key management service (KMS),
+such as AWS KMS, Google Cloud KMS, or Azure Key Vault. The BYOK feature 
 provides file-level encryption and is equivalent to Transparent Data Encryption (TDE), 
 meeting enterprise TDE requirements. Encryption with customer key management 
 adds another layer of security for additional confidentiality and data segmentation.
@@ -144,14 +144,44 @@ Recommendations for {+service+} Data Encryption
    :sub_heading: Recommendations that apply only to deployments in a single region
    :expanded: true
 
-   Recommendations here
+   Singe-region deployments have no unique considerations for data encryption.
+   See the next section for "All Deployment Paradigm Recommendations".
 
 .. collapsible::
    :heading: Multi-Region and Multi-Cloud Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
    :expanded: true
 
-   Recommendations here
+   In multi-region and multi-cloud deployments, you can enable database-level
+   encryption by bringing your own customer-managed key (BYOK).
+   
+   Some KMS providers support multi-region capabilities.
+   For example, GCP KMS supports multi-region deployment and automatic key
+   replication. However, in the event of a regional outage affecting the
+   configured KMS endpoint, the |service| integration with a KMS provider
+   **doesn't provide automatic failover** of the connection or access
+   mechanism to the KMS across regions.
+
+   If the configured KMS provider becomes unavailable, |service| performs
+   periodic validation of your KMS configuration. If your KMS provider
+   credentials become invalid or the encryption key is deleted or disabled,
+   |service| shuts down the ``mongod`` and ``mongos`` processes on the
+   next scheduled validation check and notifies you via email, reflecting
+   the status in the {+atlas-ui+}.
+   
+   However, if |service| cannot connect to your key management provider,
+   it does not shut down your processes. Therefore, if access to the KMS
+   is disrupted due to a regional issue, the cluster might continue running
+   until you manually restart it or until validation fails more critically.
+
+   Because of this, if the KMS goes down, you can change the configuration.
+   To recover access to the encryption key in a multi-region outage scenario,
+   you must manually change the configuration in |service| to point to a
+   different, accessible KMS instance or configuration.
+   
+   In summary, |service| integration with the BYOK providers for Encryption at Rest
+   does not support multi-region failover automatically and you must manually
+   change the configuration.
 
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

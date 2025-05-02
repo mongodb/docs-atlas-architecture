@@ -100,14 +100,16 @@ Recommendations for {+service+} Auditing and Logging
    :sub_heading: Recommendations that apply only to deployments in a single region
    :expanded: true
 
-   Recommendations here
+   Singe-region deployments have no unique considerations for auditing and logging.
+   See the next section for "All Deployment Paradigm Recommendations".
 
 .. collapsible::
    :heading: Multi-Region and Multi-Cloud Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
    :expanded: true
 
-   Recommendations here
+   Multi-region and multi-cloud deployments have no unique considerations
+   for auditing and logging. See the next section for "All Deployment Paradigm Recommendations".
 
 All Deployment Paradigm Recommendations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
