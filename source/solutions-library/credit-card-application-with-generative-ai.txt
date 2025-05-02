@@ -33,7 +33,6 @@ personal loans, mortgages, corporate loans, and trade finance credit lines — a
 applications without necessarily confining them to a credit card product only.
 
 .. video:: https://www.youtube.com/watch?v=tUgSCnGjTI0
-   :alt: Credit application demo.
 
 
 Challenges with Traditional Credit Scoring
