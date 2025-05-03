@@ -231,11 +231,11 @@ Key Learnings
   AI’s available vision models, retailers are able to automate real-time
   product description generation that aligns with their business needs. 
 
-- **Modern architectures speed up time to market:** Streamlining the product
-  onboarding process with AI and automation reduces manual effort and
-  speeds up approvals. Using a generative AI for product descriptions
-  maintains consistent UX and tone, enabling quick scalability for
-  expanding product catalogs with little extra effort.
+- **Modern architectures speed up time to market:** Streamlining the 
+  product onboarding process with AI and automation reduces manual
+  effort and speeds up approvals. Using a generative AI for product
+  descriptions maintains consistent UX and tone, enabling quick
+  scalability for expanding product catalogs with little extra effort.
 
 Together, these capabilities form a robust generative AI system that
 scales with your business needs while ensuring efficiency and
