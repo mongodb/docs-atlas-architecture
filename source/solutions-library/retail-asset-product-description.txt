@@ -226,12 +226,12 @@ Key Learnings
   SEO rankings with increased views, and helps customers make more
   informed purchase decisions. 
 
-- **MongoDB and Together AI automate product descriptions:** By
-  combining MongoDB’s flexible and scalable database with Together AI’s
-  available vision models, retailers are able to automate real-time
+- **Leverage MongoDB and Together AI to automate product descriptions:**
+  By combining MongoDB’s flexible and scalable database with Together
+  AI’s available vision models, retailers are able to automate real-time
   product description generation that aligns with their business needs. 
 
-- **Modern architectures speed up production:** Streamlining the product
+- **Modern architectures speed up time to market:** Streamlining the product
   onboarding process with AI and automation reduces manual effort and
   speeds up approvals. Using a generative AI for product descriptions
   maintains consistent UX and tone, enabling quick scalability for
