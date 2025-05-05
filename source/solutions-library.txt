@@ -32,7 +32,7 @@ kick-start their projects.
 
          .. card::
             :headline: Credit Card Application with Generative AI
-            :url: /solutions-library/financial-services/credit-card-application-with-generative-ai/
+            :url: /solutions-library/credit-card-application-with-generative-ai.txt
             :icon: industry_credit_card
             :icon-alt: Atlas industry_ai icon
 
