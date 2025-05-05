@@ -112,12 +112,12 @@ management.
 Features & Integration
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- `MongoDB Atlas <https://www.mongodb.com/atlas>`__: Leafsteroids fully harnesses
- the capability of Atlas Global Clusters. This ensures that player profiles are 
- efficiently managed on a massive scale, ensuring an uninterrupted gaming journey
-  regardless of the player's geographical location. For data precision,
-  player information is stored employing ISO country codes and shard/zone
-  assignments.
+- `MongoDB Atlas <https://www.mongodb.com/atlas>`__: Leafsteroids fully
+  harnesses the capability of Atlas Global Clusters. This ensures that
+  player profiles are efficiently managed on a massive scale, ensuring an
+  uninterrupted gaming journey regardless of the player's geographical
+  location. For data precision, player information is stored employing ISO
+  country codes and shard/zone assignments.
 - At the foundation of data processing lies the flexible document model.
   Not only does it support in-depth game recordings, but it also embodies
   the ethos "data that works together lives together." Adhering to the
@@ -128,8 +128,9 @@ Features & Integration
   impact performance. Leafsteroids uses a data tiering strategy through
   `Atlas Online Archive <https://www.mongodb.com/atlas/online-archive>`__ to automatically
   offload game data older than 90 days to optimized storage.
-  `Atlas Data Federation <https://www.mongodb.com/atlas/data-federation>`__ then
-   allows seamless access to both recent and historic data.
+  `Atlas Data Federation
+  <https://www.mongodb.com/atlas/data-federation>`__ then allows
+  seamless access to both recent and historic data.
 
 User Experience Highlights
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
