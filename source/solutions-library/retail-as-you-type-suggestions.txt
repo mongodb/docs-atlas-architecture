@@ -211,6 +211,8 @@ facilitate partial matching and ranking at query time.
 .. figure:: /includes/images/retail-as-you-type-indexing.png
    :figwidth: 1200px
    :alt: Multiple indexing strategies
+   
+   Figure 2. Multiple indexing strategies
 
 Atlas Search index configuration enables a single document field to be
 indexed in a multitude ("multi") of ways (the feature is called
@@ -243,7 +245,7 @@ optional entity ``weight`` field.
    :figwidth: 1200px
    :alt: Example query and relevancy scoring computation
 
-   Figure 2. Example query and relevancy scoring computation
+   Figure 3. Example query and relevancy scoring computation
 
 Generally, the behavior of a user selecting a suggestion is to then
 perform a targeted traditional search for the selected item, which would
