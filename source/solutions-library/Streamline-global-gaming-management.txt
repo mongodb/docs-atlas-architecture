@@ -91,7 +91,7 @@ Data Model Approach
 A recording signifies a player's gameplay from an event, including
 scores, moves, and statistics. Using .net (C#), a subset of the player
 and event is stored in the recording through the 
-`extended reference pattern<https://www.mongodb.com/blog/post/building-with-patterns-the-extended-reference-pattern>`__,
+`extended reference pattern <https://www.mongodb.com/blog/post/building-with-patterns-the-extended-reference-pattern>`__,
 employing subclassing and custom serialization. This design
 enhances query performance by allowing selective field embedding and
 offers future flexibility. In massive online games like "PUBG," with
@@ -126,8 +126,8 @@ Features & Integration
 - Over time, as games become wildly successful with millions of players
   and game runs, the amount of data generated can increase costs and
   impact performance. Leafsteroids uses a data tiering strategy through
-  `Atlas Online Archive <https://www.mongodb.com/atlas/online-archive>`__
-   to automatically offload game data older than 90 days to optimized storage.
+  `Atlas Online Archive <https://www.mongodb.com/atlas/online-archive>`__ to automatically
+  offload game data older than 90 days to optimized storage.
   `Atlas Data Federation <https://www.mongodb.com/atlas/data-federation>`__ then
    allows seamless access to both recent and historic data.
 
