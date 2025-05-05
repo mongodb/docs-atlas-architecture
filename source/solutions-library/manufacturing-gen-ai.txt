@@ -1,4 +1,6 @@
 .. toctree::
    :titlesonly:
 
+   Automotive Diagnostics </solutions-library/manufacturing-asset-automotive-diagnostics>
    Rapid AI Agent Deployment </solutions-library/manufacturing-agentic-ai-framework>
+
