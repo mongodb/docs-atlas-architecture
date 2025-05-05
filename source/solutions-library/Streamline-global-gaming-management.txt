@@ -82,7 +82,7 @@ global scale.
 Data Model Approach
 -------------------
 
-.. figure:: /includes/images/industry-solutions/GamingFigure3.png
+.. figure:: /includes/images/industry-solutions/Figure 4 Gaming.svg
    :figwidth: 1200px
    :alt: Data model approach illustration
 
