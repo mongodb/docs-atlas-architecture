@@ -130,10 +130,7 @@ kick-start their projects.
             user experiences by using Atlas Database, 
             Atlas Vector Search, and Pymongo. 
 
-         App-Driven Analytics
-         --------------------
-
-        .. card-group::
+         .. card-group::
          :columns: 2
          :style: extra-compact
 
@@ -144,7 +141,11 @@ kick-start their projects.
             :icon-alt: Atlas mdb_custom_aggregation icon
 
             Leverage Machine Learning with real-time data processing and
-            automate digital underwriting. 
+            automate digital underwriting.
+
+      .. App-Driven Analytics
+      .. --------------------
+      
 
 .. .. tab:: Retail
    .. :tabid: retail
