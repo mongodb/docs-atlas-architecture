@@ -21,7 +21,7 @@ Migration
    :class: onecol
 
 You can migrate data from your on-premises MongoDB deployments to |service| using one of 
-a variety of methods. We recommend using :atlas:`|service| live migration </atlas/import/#migrate-or-import-data>` 
+a variety of methods. We recommend using |service| :atlas:`live migration </atlas/import/#migrate-or-import-data>` 
 when possible because it automates many of the tasks with the least amount of downtime, but you 
 can use other tools that accommodate the variety and complexity inherent to database migration. 
 
@@ -32,23 +32,23 @@ Live Migration Overview
 You can pull data from an on-premises MongoDB database or push data using |com|, 
 but with either method, |service| live migration includes the following features:
 
-- The migration host always encrypts traffic to the |service| {+cluster+}. To encrypt 
-  data end-to-end, :manual:`enable TLS on your source {+cluster+} </tutorial/upgrade-cluster-to-ssl/>`. Only users with specific 
+- The migration host always encrypts traffic to the |service| cluster. To encrypt 
+  data end-to-end, :manual:`enable TLS on your source cluster </tutorial/upgrade-cluster-to-ssl/>`. Only users with specific 
   Role-Based Access Control (RBAC) :ref:`roles <authorization>` 
   (such as :authrole:`backup`, :authrole:`readAnyDatabase`, or :authrole:`clusterMonitor`) 
-  can initiate live migration. Users authenticate to {+clusters+} using 
+  can initiate live migration. Users authenticate to clusters using 
   :manual:`SCRAM-SHA-1 or SCRAM-SHA-256 </core/security-scram/>`.
 
 - Live migration automates most tasks. For the fully-managed "pull" and "push" methods, live migration 
   monitors key metrics, provisions the host servers and the strict sequencing of the migration commands. 
   You specify the resource requirements and scalable options to prevent over-provisioning.
 
-- Detailed instructions help you provision migration hosts and scale destination {+clusters+} 
-  to control costs. Recommendations include appropriate {+cluster+} sizing 
+- Detailed instructions help you provision migration hosts and scale destination clusters 
+  to control costs. Recommendations include appropriate cluster sizing 
   and temporary scaling, followed by resizing to optimal levels post-migration.
 
 - Live migration uses |mongosync| to facilitate fast cutover through parallel data copying.
-  Processes manage temporary network interruptions and {+cluster+} elections, using continuous 
+  Processes manage temporary network interruptions and cluster elections, using continuous 
   data synchronization and a final cutover phase to achieve minimal downtime. Retry 
   mechanisms and pre-migration validations enhance resilience against interruptions.
 
@@ -66,24 +66,25 @@ dedicated migration host.
 
 All live migration methods require that the source and destination databases run 
 MongoDB 6.0.13+ or MongoDB 7.0.8+. To migrate data from databases using prior 
-versions of MongoDB, see `Legacy Migration <https://www.mongodb.com/docs/atlas/legacy-migration/>`__ or :ref:`arch-center-manual-migration`. 
+versions of MongoDB, see :atlas:`Legacy Migration </atlas/legacy-migration/>` or 
+:ref:`arch-center-manual-migration`. 
 
 * **Pull data into Atlas.** |service| pulls data from the source MongoDB deployment 
   and requires access to the source deployment through the deployment's firewall. When the 
-  {+clusters+} are nearly synced, you must stop write operations on the source, 
-  redirect applications to the |service| {+cluster+} and restart them. The following
+  clusters are nearly synced, you must stop write operations on the source, 
+  redirect applications to the |service| cluster, and restart them. The following
   considerations apply:
 
   - Best for deployments not monitored by |com|. 
   - The source database must be publicly accessible to allow inbound access from the live migration server.
   - Doesn't support :ref:`VPC peering <vpc-peering>` or :ref:`private endpoints <private-endpoint>`
-    for either the source or destination {+cluster+}.
-  - Source and destination {+cluster+} topologies must match. For example, both 
+    for either the source or destination cluster.
+  - Source and destination cluster topologies must match. For example, both 
     must be replica sets or sharded clusters with the same number of shards.
   - Plan for minimal downtime to stop writes and restart applications with a new connection string. 
     The migration process is CPU-intensive and requires significant network bandwidth. MongoDB 
-    recommends that the migration host(s) are run on their own dedicated server with a high 
-    network bandwidth. Provision the migration host(s) with the following minimum configuration:
+    recommends that migration hosts are run on their own dedicated server with a high 
+    network bandwidth. Provision the migration host with the following minimum configuration:
 
     .. list-table::
        :header-rows: 1
@@ -115,18 +116,18 @@ versions of MongoDB, see `Legacy Migration <https://www.mongodb.com/docs/atlas/l
 
   For full migration recommendations and instructions, see :ref:`c2c-pull-live-migration`.
 
-* **Push data into Atlas.** |com| push data to |service| using a secure :term:`link-token` 
-  without requiring access to the source {+cluster+} through the {+cluster+}'s firewall.
+* **Push data into Atlas.** |com| pushes data to |service| using a secure :term:`link-token` 
+  without requiring access to the source cluster through the cluster's firewall.
   During migration, |service| continuously syncs real-time data between the source 
-  and destination {+clusters+} until cutover. The following
+  and destination clusters until cutover. The following
   considerations apply:
   
   - Data is synchronized in one direction only: changes made to the destination won't 
     reflect back on the source.
   - Supports :ref:`VPC peering <vpc-peering>` and :ref:`private endpoints <private-endpoint>`.
-  - Source and destination {+cluster+} topologies must match. For example, both 
+  - Source and destination cluster topologies must match. For example, both 
     must be replica sets or sharded clusters with the same number of shards.
-  - Ensure that you connect to your |service| {+cluster+} from all client hardware where your 
+  - Ensure that you connect to your |service| cluster from all client hardware where your 
     applications run. Testing your connection string helps ensure that your data migration 
     process completes with minimal downtime.
   
@@ -150,17 +151,18 @@ into |service| using one of the following tools that you run outside of |service
 
 .. include:: /includes/cloud-docs/shared-migration-tools-table.rst
 
-If you are required to use either |service| VNet peering or Private Link configurations, and/or 
+If you are required to use either |service| VNet peering or Private Link configurations, you 
 don't want to allow direct connection from a third party to its source cluster, or if you 
 don't already have or don't want to import the source cluster in |onprem| or |mms|, then MongoDB 
 recommends the mongosync approach.
 
 If you have relatively small datasets (<300 GB) to migrate, and can afford application downtime 
-for an extended time period, then MongoDB recommends the mongodump and mongorestore approach.
+for an extended time period, then MongoDB recommends the :tools:`mongodump </database-tools/mongodump/#mongodump>` 
+and :tools:`mongorestore </database-tools/mongodump/#mongodump` approach.
 
 If you have relatively small datasets (<300 GB) to migrate, no index concerns, and can afford 
-application downtime for an extended time period, then MongoDB recommends the mongoexport and 
-mongoimport approach.
+application downtime for an extended time period, then MongoDB recommends the :tools:`mongoexport </database-tools/mongoexport/>` 
+and :tools:`mongoimport </database-tools/mongoimport/>` approach.
 
 Cutover
 -------
