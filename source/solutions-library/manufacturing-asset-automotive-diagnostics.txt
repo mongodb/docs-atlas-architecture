@@ -267,7 +267,7 @@ Partner Technologies
   <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__ 
 - `NextJS
   <https://nextjs.org/>`__
--  Audio embedding with `panns-inference
+- Audio embedding with `panns-inference
   <https://github.com/qiuqiangkong/panns_inference>`__
 
 Authors
