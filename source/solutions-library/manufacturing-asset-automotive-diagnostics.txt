@@ -103,90 +103,39 @@ to capture, store, analyze, and report data.
      Raspberry Pi, triggering the relay to start both the physical engine
      and the digital twin.
 
+3. **Audio diagnostics**
 
-.. figure:: /includes/images/industry-solutions/framework-rapid-reference-architecture.svg
+   - **Audio recording:** Every second, the engine’s audio is recorded.
+   - **Vector conversion:** The audio clips are converted into vectors
+     through an embedder and stored in MongoDB.
+   - **Vector search:** Using `Atlas Vector Search
+     <https://www.mongodb.com/products/platform/atlas-vector-search>`__,
+     the system predicts the engine's status (off, running normally,
+     detecting a metallic or soft hit). This information is displayed on
+     the apps, providing real-time diagnostics.
+
+4. **AWS Bedrock integration**
+
+   - **Automated reporting:** When an anomaly is detected (e.g.,
+     abnormal audio), Atlas triggers a function to send telemetry data and
+     sound analysis results to AWS Bedrock.
+   - **Report generation:** AWS Bedrock generates a detailed report
+     based on the findings, which is then sent back to the dashboard for
+     review.
+
+This architecture creates a feedback loop where edge devices generate
+data for real-time control and monitoring, now enhanced with audio
+diagnostics through vectors. The integration showcases the power of
+utilizing `Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__ for
+root-cause diagnostics, significantly improving efficiency, reliability,
+and innovation in manufacturing operations.
+
+.. figure:: /includes/images/industry-solutions/automotive-diagnostics-architecture.svg
    :figwidth: 1200px
-   :alt: Real-time wind turbine diagnosis
+   :alt: demo architecture for automotive diagnostics
 
-   Figure 2. Agentic AI reference architecture.
-
-Why MongoDB
------------
-
-MongoDB plays a pivotal role in enabling agentic AI. MongoDB's unique
-combination of flexibility, performance, and scalability makes it an
-ideal choice for enabling artificial intelligence. The MongoDB document
-model enables native storage and retrieval of structured,
-semi-structured, and unstructured data, and it seamlessly handles
-diverse and complex datasets. MongoDB empowers AI agents to react
-dynamically to new information, maintain internal states in real-time,
-and continuously learn and evolve.
-
-**Flexible data model:** MongoDB's architecture provides a powerful
-foundation for agentic AI systems by offering unparalleled flexibility
-in data storage. The document model allows you to store varied data such
-as time series logs, agent profiles, and recommendation outputs in a
-single, unified format. This flexibility means you don’t have to
-redesign your database schema every time your data requirements evolve.
-MongoDB's flexible schema enables AI agents to store complex,
-hierarchical agent states with nested documents that can dynamically
-adapt to changing agent characteristics and interaction contexts.
-MongoDB is an ideal choice for maintaining complex agent states across
-multiple interactions. It supports versioning and tracking agent
-evolution, with the ability to pause and resume agent contexts
-seamlessly.
-
-**Vector search:** MongoDB Atlas supports native vector search, enabling
-fast and efficient similarity searches on vector embeddings. This is
-critical for matching current queries with historical data, thereby
-enhancing diagnostic accuracy and providing more relevant
-recommendations. Vector search can support pattern recognition and
-contextual retrieval that significantly enhance quality and decision
-making of AI agents. Vector search enables sophisticated information
-retrieval that uses a similarity algorithm to provide results that are
-more precise, reducing LLM hallucination. MongoDB can efficiently handle
-semantic matching, contextual searches, and multi-dimensional data
-analysis, all crucial for AI agents' decision making workflows.
-
-**Scalability, performance and high availability:** MongoDB is designed
-to scale horizontally, making it capable of handling large volumes of
-real-time data. MongoDB’s seamless horizontal scalability supports
-large-scale, distributed AI applications with growing data requirements
-for AI workloads through distributed and sharding architecture. With
-MongoDB, AI agents can scale horizontally, distribute storage and
-computational load, and maintain high availability, ensuring consistent
-performance even when volume of data grows exponentially. MongoDB
-replica sets provide robust high availability out of the box that
-underpins the reliability and resilience of AI agents.
-
-`Coinbase
-<https://www.mongodb.com/solutions/customer-case-studies/coinbase>`__,
-one of the largest cryptocurrency exchanges in the U.S., has effectively
-leveraged MongoDB to significantly enhance its platform scalability
-across 700 MongoDB clusters and overcome high volumes of unpredictable
-market traffic spikes.
-
-**Time series collections:** MongoDB time series collections are
-designed to efficiently ingest large volumes of data with high
-performance and scalability. These specialized collections enable AI
-agents to track and analyze sequential interactions, learning patterns,
-and state changes over time, which is essential for maintaining context,
-understanding behavioral patterns, and implementing adaptive
-decision-making processes. By offering native time series optimizations
-such as automatic data compression, improved storage efficiency, and
-fast time-based query responses, MongoDB allows AI agents to maintain
-extensive current and historical records of their interactions, learning
-iterations, and performance metrics without compromising computational
-performance or data integrity.
-
-**Seamless integration:** The seamless integration of MongoDB with
-agentic frameworks like LangGraph expedites the development of complex,
-stateful AI agentic systems. Through native support for JSON-like
-documents, dynamic schema, and powerful indexing capabilities, MongoDB
-enables LangGraph-powered AI Agents to maintain sophisticated data and
-memory structures, track multi-step reasoning processes, and implement
-advanced state management that can persist across sessions and provide
-comprehensive auditability of AI decision-making processes.
+   Figure 1. Demo architecture.
 
 Building the Solution
 ---------------------
