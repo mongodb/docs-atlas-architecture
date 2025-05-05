@@ -39,72 +39,45 @@ Vector Search
 Solution Overview
 -----------------
 
-In 2025, agentic AI applications are no longer just a hobby project.
-Companies around the world are investing in software to incorporate
-AI agents into their business workflows. The most common use of an AI agent
-is to assist with research analysis or writing code.
-LangChain’s `recent survey <https://www.langchain.com/stateofaiagents>`__
-of over 1,000 professionals across multiple industries showed
-that over 51% have already deployed agents in production—with 60%
-using the agents for research and summarization tasks.
+The manufacturing industry is supported by a complex value chain that
+spans from inventory management to connected equipment and products. The
+key to solving problems, improving processes, and boosting the overall
+efficiency and quality of this value chain is root-cause diagnostics.
+Unlike predictive maintenance, which focuses on symptom management,
+root-cause diagnostics digs deeper to identify the underlying sources of
+issues, ensuring they are fixed permanently and do not recur.
 
-However, using an AI agent for more complex tasks than research and summarization,
-specially when implemented on a large scale, presents certain challenges.
+Root-cause diagnostics offers several benefits:
 
-- **Complex data integration and handling:** AI agents often rely on
-  disparate data sources and formats (structured logs, unstructured text,
-  and sensor streams) making it difficult to unify data for real‐time
-  decision‐making. Having all relevant data stored in one database for the
-  agent to consume helps speed up the development process.
+- **Eliminates recurring problems:** By addressing the true root cause,
+  we avoid temporary fixes and prevent the same issue from recurring,
+  saving time, money, and resources.
 
-- **High concurrency and low latency:** Agents in production must handle
-  a large volume of requests and respond quickly, which can overwhelm
-  databases that aren’t built for high throughput and performance. While
-  LLM inference can add latency, database performance is still important,
-  especially as agents scale. Production agents will run in parallel, make
-  multiple tool calls, and rely on up-to-date information to make
-  decisions. A slow database becomes a bottleneck that increases total
-  response time, reducing the agent’s ability to act in real time.
+- **Enhance process efficiency:** Identifying bottlenecks and
+  inefficiencies at their source leads to increased output and lower
+  production costs.
 
-- **Data governance and security:** Sensitive data like user logs,
-  sensor readings, and PII must be stored and accessed securely all while
-  maintaining compliance (e.g. GDPR, SOC 2). Secure databases like MongoDB
-  Atlas provide built-in, advanced security controls such as client side
-  field-level encryption, queryable encryption, and extensive auditing
-  capabilities. These features help ensure that agents only access the
-  data they are authorized to see and traceability is maintained.
+- **Promotes safety and environmental practices:**  Proactive
+  interventions and risk mitigation foster safer and more environmentally
+  friendly operations.
 
-Figure 1 shows the major components of an AI agent. The agent will first
-receive a task from a human or via an automated trigger and will then
-use an LLM to generate a chain of thought or follow a predetermined
-workflow. The agent will use various tools and models during its run and
-store and retrieve data from a memory provider like MongoDB Atlas.
+- **Drives continuous improvement:** The systematic approach of
+  root-cause diagnostics encourages ongoing process improvement and
+  innovation.
 
-The primary goal of this solution—the agentic framework—is to accelerate
-the development of AI-driven workflows by providing a flexible and
-extensible foundation. Rather than offering a fixed set of tools or
-functionalities, the framework is designed to serve as a starting point
-for building intelligent agents tailored to specific use cases across
-various industries.
+However, implementing root-cause diagnostics in manufacturing can be
+challenging. The vast amounts of complex and noisy data from sensors and
+machines, along with the need to integrate diverse data types, make it a
+formidable task. Traditional methods rely heavily on human expertise,
+knowledge, and experience.
 
-You can follow along this solution and easily set up a toolkit powered
-by MongoDB Atlas and LangGraph, and then use it to create many agents
-with linear workflows. The simplicity of the solution allows users to
-quickly understand how to build a basic agent just by manipulating the
-config files. For more complex use cases or advanced agents, you may
-extend the framework by adding new tools, nodes, conditions, or
-workflows as needed.
-
-By prioritizing adaptability and modularity, the agentic framework
-empowers developers to create AI agents that are not only efficient but
-also highly customizable to meet the unique demands of their industries
-or projects.
-
-.. figure:: /includes/images/industry-solutions/framework-rapid-ai-agent.svg
-   :figwidth: 1200px
-   :alt: Real-time wind turbine diagnosis
-
-   Figure 1. Basic components of an AI agent.
+Our solution explores the application of `AI
+<https://www.mongodb.com/resources/basics/what-is-artificial-intelligence>`__
+and `MongoDB Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__ for
+advanced root-cause diagnostics using sound input and the integration of
+AWS Bedrock for real-time report generation on detected anomalies,
+enhancing real-time monitoring and maintenance.
 
 Reference Architectures
 -----------------------
