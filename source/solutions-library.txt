@@ -135,11 +135,23 @@ kick-start their projects.
       .. App-Driven Analytics
       .. --------------------
 
-.. .. tab:: Retail
+   .. tab:: Retail
    .. :tabid: retail
 
-   .. Catalog
-   .. -------
+      Catalog
+      -------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Relevant as-you-type suggestions
+            :url: https://deploy-preview-194--docs-atlas-architecture.netlify.app/solutions-library/retail-as-you-type-suggestions/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Add fast and relevant as-you-type suggestions to your application, incorporating user context and domain-specific ranking factors.
 
    .. Gen AI
    .. ------
