@@ -112,6 +112,7 @@ several ways. The power of this solution comes from the synergy of
 multiple indexing and querying strategies.
 
 .. code-block:: sh  
+
    {
       "_id":"title-The Matrix",
       "name":"The Matrix",
@@ -146,6 +147,7 @@ short and sweet `aggregation pipeline <https://www.mongodb.com/basics/aggregatio
 in the unique titles across all movies:
 
 .. code-block:: sh  
+
    [
       {
          $group: {
@@ -176,11 +178,12 @@ existing ones untouched.
 The resulting title-typed document for “The Matrix” comes out simply as:
 
 .. code-block:: sh
+
    {
       "_id":"title-The Matrix",
       "name":"The Matrix",
       "type":"title"
-}
+   }
 
 Each entity type potentially needs its own technique for merging into
 the “entities” collection, as in the case of the "genre" and "cast"
@@ -190,6 +193,7 @@ entities, which need to be unwound from their nested arrays using
 This cast-specific entities import brings in “Keanu Reeves” as:
 
 .. code-block:: sh
+
    {
       "_id":"cast-Keanu Reeves", 
       "name":"Keanu Reeves", 
@@ -242,6 +246,7 @@ perform a targeted traditional search for the selected item, which would
 in turn surface all matching items.
 
 .. code-block:: sh
+
    [
       {
          $group: {
