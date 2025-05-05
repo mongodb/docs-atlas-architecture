@@ -93,8 +93,7 @@ It’s a simple model with the following basic schema:
 
 - ``_id:`` unique id for this collection in the form ``<type>-<natural id>``. 
 - ``type:`` entity/object type, e.g. movie, brand, person product, and category.
-- ``name:`` the name or title of the entity, which would generally be unique
-per type.
+- ``name:`` the name or title of the entity, which would generally be unique per type.
 
 It’s important that entity documents have stable, unique identifiers, as
 the entities will be regularly refreshed from the main collection.
@@ -132,13 +131,9 @@ names, and perhaps genres and director names too.
 The basis of this as-you-type suggestion system can be achieved in a few
 steps:
 
-1. Create an “entities” collection and populate it using the schema modeled
-above. As often as warranted, refresh the “entities” collection. 
-2. Create
-an Atlas Search “entities_index” using an index configuration as
-described below. 
-3. Craft a robust set of query clauses, along with any
-pertinent boosting factors, within a $search-using aggregation pipeline.
+1. Create an “entities” collection and populate it using the schema modeled above. As often as warranted, refresh the “entities” collection. 
+2. Create an Atlas Search “entities_index” using an index configuration as described below. 
+3. Craft a robust set of query clauses, along with any pertinent boosting factors, within a $search-using aggregation pipeline.
 
 Importing entities 
 ~~~~~~~~~~~~~~~~~~
