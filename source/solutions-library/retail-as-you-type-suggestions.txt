@@ -1,4 +1,4 @@
-.. _arch-center-is-retail-test:
+.. _arch-center-is-retail-as-you-type:
 
 =====================================================
 Relevant As-You-Type Suggestions
@@ -70,6 +70,8 @@ relevant results. The heart of the architecture is a specialized
 .. figure:: /includes/images/retail-as-you-type-architecture.png
    :figwidth: 1200px
    :alt: As-you-type solution architecture
+
+   Figure 1. As-you-type solution architecture
 
 Data Model Approach
 -------------------
@@ -241,6 +243,8 @@ optional entity ``weight`` field.
    :figwidth: 1200px
    :alt: Example query and relevancy scoring computation
 
+   Figure 2. Example query and relevancy scoring computation
+
 Generally, the behavior of a user selecting a suggestion is to then
 perform a targeted traditional search for the selected item, which would
 in turn surface all matching items.
@@ -262,6 +266,8 @@ in turn surface all matching items.
       },
       { $merge: { into: "entities" } }
    ]
+
+Visit the `GitHub repo <https://github.com/mongodb-developer/atlas-search-as-you-type-suggest>`__ to this solution. 
 
 Key Considerations
 ------------------
