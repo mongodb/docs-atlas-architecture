@@ -82,7 +82,7 @@ simplistic, gen AI can offer a detailed analysis.
 .. figure:: /includes/images/industry-solutions/chatGPT-loan-risk-assessment.png
    :figwidth: 750px
    :alt: Example of how ChatGPT-4o could respond when asked to assess the risk of a business loan.
-   Figure 1: Example of how ChatGPT-4o could respond when asked to assess the risk of a business loan
+   .. caption:: Figure 1: Example of how ChatGPT-4o could respond when asked to assess the risk of a business loan
 
 Hallucinations or Ignorance?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
