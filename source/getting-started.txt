@@ -36,6 +36,12 @@ Use the following resources to get started with |service| and the
       :icon-alt: Atlas global cluster icon
 
       Set up the foundational {+service+} components.
+   
+   .. card::
+      :headline: Migration
+      :url: https://mongodb.com/docs/atlas/architecture/migration/
+
+      Make a plan to move your existing data into {+service+}.
 
    .. card::
       :headline: Migration
@@ -58,6 +64,7 @@ Use the following resources to get started with |service| and the
 
    Landing Zone Design </landing-zone>
    Deployment Paradigms </deployment-paradigms>
+   Migration </migration>
    Orgs, Projects, and Clusters </hierarchy>
    Migration </migration>
    Operational Readiness Checklist </operational-readiness-checklist>
