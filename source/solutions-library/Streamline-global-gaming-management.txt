@@ -23,9 +23,10 @@ profiles, records and real-time dashboards.
 **Industries:** Media
 
 **Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Global Clusters
-<https://www.mongodb.com/docs/atlas/global-clusters/>`__,`Atlas Search
- <https://www.mongodb.com/atlas/search>`__,
-`Atlas Charts <https://www.mongodb.com/products/charts>`__,`Aggregation Framework <https://www.mongodb.com/docs/manual/aggregation/>`__,
+<https://www.mongodb.com/docs/atlas/global-clusters/>`__,
+`Atlas Search <https://www.mongodb.com/atlas/search>`__,
+`Atlas Charts <https://www.mongodb.com/products/charts>`__,
+`Aggregation Framework <https://www.mongodb.com/docs/manual/aggregation/>`__,
 `Atlas Data Federation <https://www.mongodb.com/atlas/data-federation>`__
 
 **Partners:** `Unity Game Engine <https://www.mongodb.com/developer/technologies/unity/>`__,
