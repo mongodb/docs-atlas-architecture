@@ -131,8 +131,9 @@ Features & Integration
   impact performance. Leafsteroids uses a data tiering strategy through
   `Atlas Online Archive <https://www.mongodb.com/atlas/online-archive>`__ to automatically
   offload game data older than 90 days to optimized storage.
-  `Atlas Data Federation <https://www.mongodb.com/atlas/data-federation>`__ then
-   allows seamless access to both recent and historic data.
+  `Atlas Data Federation
+  <https://www.mongodb.com/atlas/data-federation>`__ then allows
+  seamless access to both recent and historic data.
 
 User Experience Highlights
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
