@@ -79,6 +79,8 @@ advanced root-cause diagnostics using sound input and the integration of
 AWS Bedrock for real-time report generation on detected anomalies,
 enhancing real-time monitoring and maintenance.
 
+.. video:: https://www.youtube.com/watch?v=aQNFAjJVDpY
+
 Reference Architectures
 -----------------------
 
