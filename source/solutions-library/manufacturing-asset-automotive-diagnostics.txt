@@ -84,19 +84,25 @@ Reference Architectures
 
 **With MongoDB**:
 
-The agentic framework is a versatile AI-driven recommendation assistant
-designed to understand your data, execute a multi-step diagnostic
-workflow using LangGraph, and generate actionable insights. It
-seamlessly integrates multiple technologies, reading time-series data
-from a CSV file or MongoDB (simulating diverse data sources), generating
-text embeddings, and performing vector searches to identify similar past
-queries. The framework also persists session and run data, ultimately
-producing a diagnostic recommendation.
+The demo architecture comprises several key components working together
+to capture, store, analyze, and report data.
 
-MongoDB serves as the backbone for storing agent profiles, historical
-recommendations, time-series data, and session logs, ensuring full
-traceability of the diagnostic process while enabling efficient querying
-and reusability of past insights.
+
+1. **Engine and Raspberry Pi**
+
+   - **Engine control:**  A Raspberry Pi is connected to the engine,
+     controlling it via a relay.
+   - **Telemetry sensors:** The Raspberry Pi is equipped with sensors to
+     measure telemetry data such as temperature and humidity.
+
+2. **Car digital twin and mobile app**
+
+   - **Virtual and physical integration:** A car digital twin in
+     JavaScript  and an iPhone app are connected to the setup. Commands
+     from the apps are sent to MongoDB, which streams them to the
+     Raspberry Pi, triggering the relay to start both the physical engine
+     and the digital twin.
+
 
 .. figure:: /includes/images/industry-solutions/framework-rapid-reference-architecture.svg
    :figwidth: 1200px
