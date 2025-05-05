@@ -132,8 +132,6 @@ of the data model, while interoperability across various platforms ensures seaml
 exchange. The flexibility of |json| aligns perfectly with the dynamic nature of credit
 application requirements, enabling straightforward modifications and additions.
 
-.. Review the internal links in the following paragraph:
-
 |service| stands out as an optimal choice for processing |json| documents in credit
 applications due to its native support for `JSON-like BSON format
 <https://www.mongodb.com/resources/basics/json-and-bson>`_. The database's flexibility
