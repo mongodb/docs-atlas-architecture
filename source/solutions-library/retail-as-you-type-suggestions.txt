@@ -111,7 +111,7 @@ and dices the values in a multitude of ways suitable for querying in
 several ways. The power of this solution comes from the synergy of
 multiple indexing and querying strategies.
 
-.. code-block:: sh  
+.. code-block:: javascript  
 
    {
       "_id":"title-The Matrix",
@@ -146,7 +146,7 @@ While there are multiple ways to populate the
 short and sweet `aggregation pipeline <https://www.mongodb.com/basics/aggregation-pipeline>`__ run on the main collection to bring
 in the unique titles across all movies:
 
-.. code-block:: sh  
+.. code-block:: javascript  
 
    [
       {
@@ -177,7 +177,7 @@ existing ones untouched.
 
 The resulting title-typed document for “The Matrix” comes out simply as:
 
-.. code-block:: sh
+.. code-block:: javascript
 
    {
       "_id":"title-The Matrix",
@@ -192,7 +192,7 @@ entities, which need to be unwound from their nested arrays using
 
 This cast-specific entities import brings in “Keanu Reeves” as:
 
-.. code-block:: sh
+.. code-block:: javascript
 
    {
       "_id":"cast-Keanu Reeves", 
@@ -245,7 +245,7 @@ Generally, the behavior of a user selecting a suggestion is to then
 perform a targeted traditional search for the selected item, which would
 in turn surface all matching items.
 
-.. code-block:: sh
+.. code-block:: javascript
 
    [
       {
