@@ -18,32 +18,22 @@ Automotive Diagnostics Using Atlas Vector Search
    :depth: 1
    :class: singlecol
 
-MongoDB Atlas enables rapid development of AI agents across industries.
+Leverage MongoDB Atlas Vector Search and AWS Bedrock for advanced root
+cause diagnostics, integrating diverse data types for real-time analysis
+and proactive maintenance.
 
-**Use cases:** `App Driven-Analytics
-<https://www.mongodb.com/resources/solutions/use-cases/application-driven-intelligence>`__,
-`Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__
+**Use cases:** `Gen AI
+<https://www.mongodb.com/use-cases/artificial-intelligence>`__
 
 **Industries:** `Manufacturing and Mobility
 <https://www.mongodb.com/solutions/industries/manufacturing>`__,
-`Financial Services
-<https://www.mongodb.com/solutions/industries/financial-services>`__,
-`Insurance <https://www.mongodb.com/solutions/industries/insurance>`__,
-`Retail <https://www.mongodb.com/solutions/industries/retail>`__,
-`Healthcare
-<https://www.mongodb.com/solutions/industries/healthcare>`__,
-`Telecommunications
-<https://www.mongodb.com/solutions/industries/telecommunications>`__
+Aerospace and Defense
 
 **Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Atlas
 Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__,
-`Atlas Database
-<https://www.mongodb.com/products/platform/atlas-database>`__
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** `LangChain
-<https://cloud.mongodb.com/ecosystem/langchain>`__, `Cohere
-<https://cloud.mongodb.com/ecosystem/cohere>`__, `AWS Bedrock
+**Partners:** `Amazon Bedrock
 <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
 
 Solution Overview
