@@ -1,4 +1,4 @@
-.. _arch-center-is-framework-rapid-agent-deployment:
+.. _arch-center-is-automotive-diagnostics:
 
 ================================================
 Automotive Diagnostics Using Atlas Vector Search
