@@ -1,4 +1,4 @@
-.. _arch-center-is-audio-based-ai-diagnostics:
+.. _arch-center-is-streamline-global-gaming-management:
 
 ===================================
 Streamline global gaming management
@@ -50,11 +50,11 @@ Reference Architectures
 
 **Without Atlas**:
 
-.. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Ref Arch Before state.svg
+.. figure:: /includes/images/industry-solutions/Gaming-Player-Profiles-Ref-Arch-WithoutMongodb.svg
    :figwidth: 1200px
-   :alt: Reference Architecture Without MongoDB
+   :alt: Reference Architecture Without Atlas
 
-   Figure 1: Reference Architecture Without MongoDB
+   Figure 1: Reference Architecture Without Atlas
 
 Traditional approach to managing gaming data and profiles at a global
 scale involves building a global query router, replication services
@@ -64,13 +64,13 @@ engine and visualization tool, with a serverless query service to
 federate our data into the visualization tool.
 
 
-**With MongoDB**:
+**With Atlas**:
 
-.. figure:: /includes/images/industry-solutions/azure-smarthub-refarch-afterstate.svg
+.. figure:: /includes/images/industry-solutions/Gaming-Player-Profiles-Ref-Arch-With-Mongodb.svg
    :figwidth: 1200px
-   :alt: Reference Architecture With MongoDB
+   :alt: Reference Architecture With Atlas
 
-   Figure 2: Reference Architecture With MongoDB
+   Figure 2: Reference Architecture With Atlas
 
 With Atlas, a single connection to the MongoDB Atlas modern, multi-cloud
 database platform suffices. By leveraging global clusters, Online
@@ -81,11 +81,11 @@ global scale.
 Data Model Approach
 -------------------
 
-.. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Solution Overview 2.svg
+.. figure:: /includes/images/industry-solutions/GamingFigure3.png
    :figwidth: 1200px
-   :alt: Solution Overview
+   :alt: Data model approach illustration
 
-   Figure 3: Solution Overview
+   Figure 3: Data model approach illustration
 
 A recording signifies a player's gameplay from an event, including
 scores, moves, and statistics. Using .net (C#), a subset of the player
