@@ -116,8 +116,8 @@ kick-start their projects.
             user experiences by using Atlas Database, 
             Atlas Vector Search, and Pymongo. 
 
-      .. App-Driven Analytics
-      .. --------------------
+         App-Driven Analytics
+         --------------------
 
         .. card-group::
          :columns: 2
