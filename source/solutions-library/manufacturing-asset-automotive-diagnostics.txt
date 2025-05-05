@@ -143,209 +143,136 @@ Building the Solution
 .. procedure::
    :style: normal
 
-   .. step:: **Include meaningful CSV data for your use case**
+   .. step:: **Get your hardware ready**
 
-      The data should be relevant to your use case and respect the
-      following guidelines:
+      To replicate this demo, you will need:
 
-      - The CSV file should contain a header row with column names.
-      - The first column must be named “timestamp” and contain
-        timestamps in the format YYYY-MM-DDTHH:MM:SSZ, e.g.
-        2025-02-19T13:00:00Z.
-      - The remaining columns should contain relevant data for your use
-        case. 
-      - There is no column nor row limit, but for framework
-        testing purposes the suggestion is to keep the data size as
-        small as possible.
+      - An engine to simulate the real use case of a machine—we are
+        using the four-cylinder Teching DM13 engine replica, but you can
+        run this demo with any piece of hardware (even a real machine)
+        that can run and make noise. 
+      - A Raspberry Pi 5, which will be the bridge to host the software
+        that communicates with the cloud.
 
-      Sample data:
+      To find the detailed information about our hardware and how to set
+      it up, visit this `GitHub page
+      <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics/tree/main/engine-controller>`__.
 
-      .. code-block:: none
+      `Simulate this solution without the physical engine here
+      <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics>`__.
 
-         timestamp,gdp,interest_rate,unemployment_rate,vix
-         2025-02-19T13:00:00Z,2.5,1.75,3.8,15
-         2025-02-19T13:05:00Z,2.7,1.80,3.7,18
-         2025-02-19T13:10:00Z,2.6,1.85,3.9,22
-         2025-02-19T13:15:00Z,2.4,1.70,4.0,10
-         2025-02-19T13:20:00Z,2.3,1.65,4.1,20
+   .. step:: **Set up MongoDB Atlas**
 
-      Within the same folder you need to add a queries file. This file
-      will contain the queries that will be used to showcase vector
-      search capabilities as part of the agentic workflow. The file
-      should respect the following guidelines:
+      In order to make the demo work from end to end, you will need to
+      set up the backend.
 
-      - The CSV file should contain a header row with column names. 
-      - The first column must be named “query” and contain the queries. 
-      - The second column must be named “recommendation” and contain the
-        expected recommendations. 
-      - There is no column or row limit, but for framework testing
-        purposes the suggestion is to keep the data size as small as
-        possible.
+      The first step is to create a MongoDB cluster. If you don’t have
+      an Atlas account, `create an account following these steps
+      <https://www.mongodb.com/docs/guides/atlas/account/>`__. Once
+      that’s complete, under the Data Services tab, click "Database" in
+      the sidebar, then "+ Create" to `create a new MongoDB cluster
+      <https://www.mongodb.com/docs/atlas/tutorial/create-new-cluster/>`__
+      in your preferred region. 
 
-      Sample data:
+      After your cluster is ready, you’ll need to replicate the
+      application database. This database includes sample vehicle and
+      sensor data, which are necessary to start using the app. To load
+      this data, a dump file is available in the `GitHub repository
+      <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics/tree/main?tab=readme-ov-file#step-2---set-up-mongodb-atlas>`__,
+      which you can use with the *mongorestore* command to import the
+      data into your cluster.
 
-      .. code-block:: none
+   .. step:: **Anomaly detection through sound input**
 
-         query,recommendation
-         GDP growth slowing,Consider increasing bond assets to mitigate risks from potential economic slowdown.
-         GDP showing strong growth,Increase equity assets to capitalize on favorable investment conditions.
-         Interest rates rising,Shift focus to bond assets as higher rates may impact borrowing-sensitive sectors.
-         Interest rates falling,Increase real estate assets to take advantage of lower borrowing costs.
-         Unemployment rate increasing,Reduce equity assets to account for potential economic weakness and reduced consumer spending.
-         Unemployment rate decreasing,Increase equity assets to benefit from improved economic conditions and corporate profits.
-         VIX above 20,Reduce equity assets to manage risks associated with high market volatility.
-         VIX below 12,Increase equity assets to capitalize on low market volatility and investor confidence.
-         VIX within normal range (12-20),Maintain current asset allocation as market conditions are stable.
-         Combination of rising interest rates and high VIX,Focus on bond assets to hedge against market volatility and borrowing cost impacts.
+      Complete instructions can be found on `this GitHub page
+      <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics/tree/main/acoustic-diagnostics-api>`__,
+      including how to set up the analytics dashboard, link it to the
+      correct data source, and create a vector search index.
 
-   .. step:: **Set up MongoDB database and collections**
+   .. step:: **Integrate AWS Bedrock for AI-enhanced analytics**
 
-      Log in to MongoDB Atlas and create a database named
-      “agentic_<YOUR_USE_CASE>,” e.g. “agentic_macro_indicators”. Ensure
-      the name is reflected in the environment variables. 
-      
-      Create the following collections:
+      We have followed a simple approach to integrate with AWS Bedrock,
+      which can serve as a baseline for more complex approaches
+      implementing more real-time data from sensors and implementing a
+      `retrieval-augmented generation (RAG) architecture
+      <https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__.
 
-      - Agent_profiles (for storing agent profiles): You can import some
-        sample data to this collection using this file.
-      - Queries (for storing queries): You must import the queries from
-        the queries.csv file created in Step 1.
+      To learn how to integrate AWS Bedrock with Atlas Triggers, `see
+      our GitHub page
+      <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics/tree/main?tab=readme-ov-file#step-4---integrate-aws-bedrock-for-ai-enhanced-analytics>`__. 
 
-   .. step:: **Configure your agentic worklfow through a JSON config file**
+   .. step:: **Run the web portal UI**
 
-      Go to the config folder and create or update the JSON config.json
-      file. The file should contain the following structure:
+      The web portal, built with Next.js, includes the vehicle's digital
+      twin, an acoustic diagnostics interface for audio streaming and
+      training, and the analytics dashboard. To set it up, update the
+      environment variables with your MongoDB cluster connection string
+      and the URL of your `Atlas Charts
+      <https://www.mongodb.com/products/platform/atlas-charts>`__
+      dashboard. Once updated, simply run the Next.js application. Refer
+      to the `GitHub repository
+      <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics/tree/main/web-app>`__
+      for specific commands and additional setup details.
 
-      .. code-block:: json
+   .. step:: **Bonus! Control your vehicle from a mobile device**
 
-         {  
-            "CSV_DATA": "data/csv/<YOUR_FILE_NAME>.csv",  
-            "MDB_DATABASE_NAME": "<YOUR_MONGODB_DATABASE_NAME>",  
-            "MDB_TIMESERIES_COLLECTION": "<YOUR_MONGODB_TIMESERIES_COLLECTION_NAME>",  
-            "DEFAULT_TIMESERIES_DATA": [  
-               {  
-                  "timestamp": "<DEFAULT_TIMESTAMP_IN_YYYY-MM-DDTHH:MM:SSZ>"  
-                  // Your default data here, check config_example.json for better understanding  
-               }  
-            ],  
-            "CRITICAL_CONDITIONS": {  
-               // Below is an example of a critical condition for GDP growth  
-               "gdp": {"threshold": 2.5, "condition": "<", "message": "GDP growth slowing: {value}%"}  
-               // Other critical conditions for your use case here, check config_example.json for better understanding  
-            },  
-            "MDB_TIMESERIES_TIMEFIELD": "<YOUR_TIMESTAMP_FIELD_NAME>",  
-            "MDB_TIMESERIES_GRANULARITY": "<YOUR_TIMESERIES_GRANULARITY>",  
-            "MDB_EMBEDDINGS_COLLECTION": "queries", // Using "queries" collection name for storing queries  
-            "MDB_EMBEDDINGS_COLLECTION_VS_FIELD": "query_embedding", // Using "query_embedding" field for storing embeddings  
-            "MDB_VS_INDEX": "<YOUR_MONGODB_DATABASE_NAME>_queries_vs_idx", // Replace <YOUR_MONGODB_DATABASE_NAME> with your MongoDB database name  
-            "MDB_HISTORICAL_RECOMMENDATIONS_COLLECTION": "historical_recommendations", // Using "historical_recommendations" collection name for storing recommendations  
-            "SIMILAR_QUERIES": [  
-               // Below is an example of default similar queries for GDP growth  
-               {  
-                  "query": "GDP growth slowing",  
-                  "recommendation": "Consider increasing bond assets to mitigate risks from potential economic slowdown."  
-               }  
-               // Other similar queries for your use case here, check config_example.json for better understanding  
-               // This ones are going to be used for the vector search tool in case something is not found in the queries collection  
-            ],  
-            "MDB_CHAT_HISTORY_COLLECTION": "chat_history", // Using "chat_history" collection name for storing chat history  
-            "MDB_CHECKPOINTER_COLLECTION": "checkpoints", // Using "checkpoints" collection name for storing checkpoints  
-            "MDB_LOGS_COLLECTION": "logs", // Using "logs" collection name for storing logs  
-            "MDB_AGENT_PROFILES_COLLECTION": "agent_profiles", // Using "agent_profiles" collection name for storing agent profiles  
-            "MDB_AGENT_SESSIONS_COLLECTION": "agent_sessions", // Using "agent_sessions" collection name for storing agent sessions  
-            "AGENT_PROFILE_CHOSEN_ID": "<YOUR_AGENT_PROFILE_ID>", // Replace <YOUR_AGENT_PROFILE_ID> with the agent profile ID you want to use, check config_example.json for better understanding  
-            // Below is an example default agent profile for Portfolio Advisor  
-            "DEFAULT_AGENT_PROFILE": {  
-               "agent_id": "DEFAULT",  
-               "profile": "Default Agent Profile",  
-               "role": "Expert Advisor",  
-               "kind_of_data": "Specific Data",  
-               "motive": "diagnose the query and provide recommendations",  
-               "instructions": "Follow procedures meticulously.",  
-               "rules": "Document all steps.",  
-               "goals": "Provide actionable recommendations."  
-            },  
-            "EMBEDDINGS_MODEL_NAME": "Cohere Embed English V3 Model (within AWS Bedrock)", // Describing the embeddings model used for creating the chain of thought  
-            "EMBEDDINGS_MODEL_ID": "cohere.embed-english-v3", // Model ID for the embeddings model  
-            "CHATCOMPLETIONS_MODEL_NAME": "Anthropic Claude 3 Haiku (within AWS Bedrock)", // Describing the chat completions model used for generating responses  
-            "CHATCOMPLETIONS_MODEL_ID": "anthropic.claude-3-haiku-20240307-v1:0", // Model ID for the chat completions model  
-            // Below is a sample agent workflow graph that uses the tools defined in the agent_tools.py file  
-            // PLEASE BE CAREFUL WHEN MODIFYING THIS GRAPH, CONSIDER THAT THE TOOLS DEFINED IN THE AGENT TOOLS FILE ARE USED HERE AS WELL AS THE IMPORTS  
-            "AGENT_WORKFLOW_GRAPH": {  
-               "nodes": [  
-                  {"id": "reasoning_node", "tool": "agent_tools.generate_chain_of_thought_tool"},  
-                  {"id": "data_from_csv", "tool": "agent_tools.get_data_from_csv_tool"},  
-                  {"id": "process_data", "tool": "agent_tools.process_data_tool"},  
-                  {"id": "embedding_node", "tool": "agent_tools.get_query_embedding_tool"},  
-                  {"id": "vector_search", "tool": "agent_tools.vector_search_tool"},  
-                  {"id": "process_vector_search", "tool": "agent_tools.process_vector_search_tool"},  
-                  {"id": "persistence_node", "tool": "agent_tools.persist_data_tool"},  
-                  {"id": "recommendation_node", "tool": "agent_tools.get_llm_recommendation_tool"}  
-               ],  
-               "edges": [  
-                  {"from": "reasoning_node", "to": "data_from_csv"},  
-                  {"from": "data_from_csv", "to": "process_data"},  
-                  {"from": "process_data", "to": "embedding_node"},  
-                  {"from": "embedding_node", "to": "vector_search"},  
-                  {"from": "vector_search", "to": "process_vector_search"},  
-                  {"from": "process_vector_search", "to": "persistence_node"},  
-                  {"from": "persistence_node", "to": "recommendation_node"},  
-                  {"from": "recommendation_node", "to": "END"}  
-               ],  
-               "entry_point": "reasoning_node"  
-            }  
-         }  
-
-      Once the config file is updated, environment variables need to be
-      configured and vector embeddings created. Finally the vector
-      search index must be created.
-
-      Check out the `readme
-      <https://github.com/mongodb-industry-solutions/agentic-framework/tree/a14ed55e9b4a5628da1798b5e4bbc59d695d43a7?tab=readme-ov-file#step-4-configure-your-agentic-workflow-through-a-json-config-file>`__
-      for detailed explanations of all the steps.
-
-      .. figure:: /includes/images/industry-solutions/framework-rapid-logical-architecture.svg
-         :figwidth: 1200px
-         :alt: Real-time wind turbine diagnosis
-
-         Figure 3. Logical architecture.
+      For a more realistic connected vehicle experience, you can control
+      the engine replica and digital twin from a mobile app. Open the
+      Swift project in Xcode, update the environment variables, and run
+      the app on an emulator or your own iOS phone or tablet.
 
 Key Learnings
 -------------
 
-Agentic AI ushers in an entirely new type of software—one with the
-ability to dramatically alter the way we process data to drive richer
-and more efficient business data processing outcomes. In order to
-leverage agents within business applications, software delivery teams
-will need to learn:
+- **Enhanced diagnostics:** Integrating Atlas Vector Search with audio
+  diagnostics enables precise identification of engine statuses and
+  anomalies, providing deeper insights into root causes.
 
-- How agents get instructions for reacting within predetermined workflows.
-- How agents access and interact with tooling like APIs and databases.
-- How agents persist and manage state.
+- **Real-time monitoring:** Using MongoDB and Atlas Vector Search allows for
+  real-time data processing and immediate response to anomalies, crucial
+  for proactive maintenance.
 
-Many of these items can be considered baseline activities and setup for
-software delivery teams, regardless of the actual use case, workflow, or
-industry context for which an agent, or agentic workflow, will be
-deployed.
+- **Data integration:** MongoDB’s document model efficiently handles diverse
+  data types, simplifying the integration of structured telemetry data and
+  unstructured audio data.
 
-For high performing software delivery teams, the use of a framework to
-abstract common tasks and components has often been employed to speed up
-the development and deployment of business software solutions, as well
-as decrease the subsequent complexity of maintaining them. This agentic
-framework makes it easier for software delivery teams to get started
-with building agentic solutions, as well as maintain them, via common,
-configurable components and assets.
+- **Scalability:** The architecture supports scalable data management,
+  accommodating the vast volume of IoT signals generated in a
+  manufacturing environment.
 
-Working in this framework can not only teach you and your software teams
-how to get started with building agentic solutions, it can also help
-them build repeatable patterns and components that make it easier to
-scale and maintain your business solutions for the long term.
+- **Automation:** AWS Bedrock automates the generation of detailed reports
+  based on detected anomalies, streamlining the reporting process.
+
+Technologies and Products Used
+------------------------------
+
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- `MongoDB Atlas Vector Search
+  <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+- `MongoDB Change Streams
+  <https://www.mongodb.com/docs/manual/changeStreams/>`__ 
+- `Atlas Database
+  <https://www.mongodb.com/products/platform/atlas-database>`__
+- `Atlas Triggers
+  <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
+- `Atlas Charts
+  <https://www.mongodb.com/products/platform/atlas-charts>`__
+
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
+
+- `Amazon Bedrock
+  <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__ 
+- `NextJS
+  <https://nextjs.org/>`__
+-  Audio embedding with `panns-inference
+  <https://github.com/qiuqiangkong/panns_inference>`__
 
 Authors
 -------
 
-- Julian Boronat, MongoDB
-- Peyman Parsi, MongoDB
-- Jeff Needham, MongoDB
-- Luca Napoli, MongoDB
 - Humza Akthar, MongoDB
+- Rami Pinto, MongoDB
+- Ainhoa Mugica, MongoDB
