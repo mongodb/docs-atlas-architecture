@@ -157,12 +157,12 @@ don't already have or don't want to import the source cluster in |onprem| or |mm
 recommends the mongosync approach.
 
 If you have relatively small datasets (<300 GB) to migrate, and can afford application downtime 
-for an extended time period, then MongoDB recommends the :tools:`mongodump </database-tools/mongodump/#mongodump>` 
-and :tools:`mongorestore </database-tools/mongodump/#mongodump` approach.
+for an extended time period, then MongoDB recommends the :dbtools:`mongodump </database-tools/mongodump/#mongodump>` 
+and :dbtools:`mongorestore </database-tools/mongodump/#mongodump` approach.
 
 If you have relatively small datasets (<300 GB) to migrate, no index concerns, and can afford 
-application downtime for an extended time period, then MongoDB recommends the :tools:`mongoexport </database-tools/mongoexport/>` 
-and :tools:`mongoimport </database-tools/mongoimport/>` approach.
+application downtime for an extended time period, then MongoDB recommends the :dbtools:`mongoexport </database-tools/mongoexport/>` 
+and :dbtools:`mongoimport </database-tools/mongoimport/>` approach.
 
 Cutover
 -------
