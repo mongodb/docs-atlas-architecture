@@ -202,7 +202,8 @@ Building the Solution
 .. procedure::
    :style: normal
 
-   .. step:: Set up MongoDB Atlas environment
+   .. step:: `Set up MongoDB Atlas environment
+      <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-1-create-a-mongodb-atlas-instance>`__
 
       - Configure cluster, database and collections for machine
         failures, sensor data (raw and transformed), ML models,
