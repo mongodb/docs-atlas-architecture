@@ -34,7 +34,7 @@ Two factors determine which authentication types to use:
 
 - The identity type (human or machine)
 - The resource that the identity needs access to. The resource can be one
-  of the following: |service| UI, |service| Database, or |service| APIs).
+  of the following: |service| UI, |service| Database, or |service| APIs.
 
 Recommendations for {+service+} Authentication: Single-Region and Multi-Region
 -------------------------------------------------------------------------------
@@ -42,7 +42,7 @@ Recommendations for {+service+} Authentication: Single-Region and Multi-Region
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments in a single region
-   :expanded: false
+   :expanded: true
 
    Singe-region deployments have no unique considerations for authentication.
    See the next section for "All Deployment Paradigm Recommendations".
@@ -50,7 +50,7 @@ Recommendations for {+service+} Authentication: Single-Region and Multi-Region
 .. collapsible::
    :heading: Multi-Region and Multi-Cloud Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
-   :expanded: false
+   :expanded: true
 
    For authentication through the :ref:`Workforce Identity Federation <arch-center-workforce_if>`,
    use a globally-distributed identity provider.

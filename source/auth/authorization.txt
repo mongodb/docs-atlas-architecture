@@ -38,7 +38,7 @@ Recommendations for Authorization: Single-Region and Multi-Region
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments in a single region
-   :expanded: false
+   :expanded: true
 
    Singe-region deployments have no unique considerations for authorization.
    See the next section for "All Deployment Paradigm Recommendations".
@@ -46,7 +46,7 @@ Recommendations for Authorization: Single-Region and Multi-Region
 .. collapsible::
    :heading: Multi-Region and Multi-Cloud Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
-   :expanded: false
+   :expanded: true
 
    Multi-region and multi-cloud deployments have no unique considerations
    for authorization. See the next section for "All Deployment Paradigm Recommendations".
