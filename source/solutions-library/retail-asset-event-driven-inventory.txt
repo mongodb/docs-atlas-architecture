@@ -43,7 +43,8 @@ inventory operations for retail and manufacturing with MongoDB Atlas.
 Solution Overview
 -----------------
 
-**Executive summary**
+Executive summary
+~~~~~~~~~~~~~~~~~
 
 In the competitive business landscape of retail and manufacturing,
 having the right inventory of goods in the right place at the right time
@@ -57,7 +58,8 @@ next level. This demo will guide you through the process of building an
 inventory management system with all the capabilities mentioned above,
 tailored for diverse industries such as retail and manufacturing.
 
-**Overview**
+Overview
+~~~~~~~~
 
 Effective inventory management is critical to ensure operational success
 and customer service excellence. With the increasing complexity of
@@ -75,7 +77,8 @@ components of these strategies. They provide the capabilities needed to
 enhance operational agility, streamline supply chain processes, and
 ensure timely delivery of products.
 
-**Inventory management in the retail industry**
+Inventory Management in the Retail Industry
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In today’s fast-paced retail landscape, ensuring your inventory is in
 the right place at the right time is essential. However, the retail
@@ -107,7 +110,8 @@ across various platforms and devices.
    
    Figure 1. Inventory management overview.
 
-**Closing the loop for a future-proof inventory management strategy**
+Closing the Loop for a Future-proof Inventory Management Strategy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 MongoDB provides a leading component for modern inventory solutions. We
 help businesses enhance service quality, workforce efficiency, and
