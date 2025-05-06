@@ -1,4 +1,4 @@
 .. toctree::
    :titlesonly:
 
-   Automating Product Descriptions <solutions-library/retail-asset-product-description.txt>
+   AI Product Search <solutions-library/retail-ai-product-search>
