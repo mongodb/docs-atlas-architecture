@@ -261,14 +261,19 @@ reliability.
 Technologies and Products Used
 ------------------------------
 
-**MongoDB developer data platform:**
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Atlas Database <https://www.mongodb.com/atlas/database>`__
+- `MongoDB Atlas <https://www.mongodb.com/atlas>`__
+- `Atlas Charts <https://www.mongodb.com/products/platform/atlas-charts>`__
+- `Atlas Stream Processing <https://www.mongodb.com/products/platform/atlas-stream-processing>`__ 
+- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partner technologies:**
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
 
--  `Together AI <https://www.together.ai/>`__.
--  `Next.js <https://nextjs.org/>`__.
+- `Google Cloud <https://cloud.google.com/>`__.
+- `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__.
 
 Authors
 -------
