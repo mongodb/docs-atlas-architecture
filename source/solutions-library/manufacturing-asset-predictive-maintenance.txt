@@ -52,25 +52,32 @@ helps manufacturers prevent equipment failures and optimize maintenance
 operations through four strategic stages:
 
 1. Machine prioritization and criticality analysis
+
    - Addresses the question: "Which machine should I prioritize for
      predictive maintenance and why?" 
    - Uses machine learning and RAG-based analysis to prioritize critical
      equipment.
    - Leverages historical data and expert knowledge to make informed
      decisions.
+
 #. Failure prediction
+
    - Answers the critical question: "What is the root cause of imminent
      failure?"
    - Processes real-time sensor data through `Atlas Stream Processing
      <https://www.mongodb.com/products/platform/atlas-stream-processing>`__.
    - Enables early detection of potential failures before they occur.
+
 #. Maintenance plan generation
+
    - Focuses on: "How should I schedule the repair procedure?" 
    - Automatically generates detailed repair plans using large language
      models. 
    - Combines maintenance manuals, inventory data, and resource
      information.
+
 #. Maintenance guidance generation
+
    - Addresses: "How do I get better guidance on fixing machines?" 
    - Provides enhanced maintenance guidance by integrating service notes
      and repair instructions. 
@@ -103,7 +110,7 @@ determine which machines require predictive maintenance. The system
 processes two types of input data: 
 
 - Structured data: Production parameters and machine breakdown frequency. 
-- Unstructured data:Institutional knowledge in documents. 
+- Unstructured data: Institutional knowledge in documents. 
 
 The workflow aggregates and operationalizes both data types as vector
 embeddings in MongoDB Atlas.Using Vector Search, it performs semantic
@@ -151,7 +158,9 @@ This architecture automates maintenance work order creation through:
 
 1. Document processing: Machine manuals and old work orders are chunked
 and converted to vectors using AWS/Cohere embedding models. 
+
 #. Vector storage: Embeddings stored in MongoDB Atlas. 
+
 #. Work order generation: A specialized app that: 
    - Uses LLMs to generate appropriate work order templates. 
    - Pulls inventory and resource information through aggregation. 
