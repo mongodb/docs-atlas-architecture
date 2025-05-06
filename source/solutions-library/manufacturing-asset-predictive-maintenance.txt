@@ -240,18 +240,11 @@ Building the Solution
            embeddings and completions (Examples of available models:
            cohere.embed-english-v3 for embeddings, cohere.command-r-10 for
            completions).
-           
+
          - Option 2 - OpenAI: Set up API access and select appropriate
            model.
 
       - Set up Google Cloud Translation API for multilingual support.
-
-   .. step:: Create your Together AI account
-
-      Sign in to `Together AI <https://www.together.ai/>`__. Navigate to
-      your account and retrieve your user key, which can be found inside
-      your *Profile*, then go to *Settings* and select *API Keys*. Save this
-      key, as you will need it in your .env file.
 
    .. step:: `Application setup
       <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-3-add-some-documents-in-mongodb>`__
