@@ -90,7 +90,7 @@ This example builds out three MongoDB collections, as well two
 materialized views. The full Hackloade data model which defines all the
 MongoDB objects within this example can be found on GitHub.
 
-.. figure:: /includes/images/industry-solutions/Writing Fig2.avif
+.. figure:: /includes/images/industry-solutions/deployment-hierarchy.svg
    :figwidth: 1200px
    :alt: An illustration shows the MongoDB Data model approach
 
@@ -138,7 +138,7 @@ data with MongoDB Charts.
       -Step 2 `Setup a daily cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DailyCronJob.md>`__
       -Step 3 `Setup a monthly cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/MonthlyCronJob.md>`_
 
-      .. figure:: /includes/images/industry-solutions/Writing Fig3.avif
+      .. figure:: /includes/images/industry-solutions/deployment-hierarchy.svg
          :figwidth: 1200px
          :alt: An illustration shows on how to create a data processing pipeline
 
@@ -163,7 +163,7 @@ data with MongoDB Charts.
       -Step 5 `Setup the Databricks connection <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DatabricksConfiguration.md>`__
       -Step 6 `Write the machine learning model prediction to MongoDB <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Prediction.md>`_
 
-      .. figure:: /includes/images/industry-solutions/Writing Fig4.avif
+      .. figure:: /includes/images/industry-solutions/deployment-hierarchy.svg
          :figwidth: 1200px
          :alt: Automating Calculations with Machine Learning Model
 
