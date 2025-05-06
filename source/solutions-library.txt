@@ -60,7 +60,7 @@ kick-start their projects.
 
          .. card::
             :headline: Predictive Maintenance Excellence with MongoDB Atlas
-            :url: https://deploy-preview-187--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-agentic-ai-framework/
+            :url: https://deploy-preview-210--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-predictive-maintenance/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
