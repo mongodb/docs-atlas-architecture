@@ -151,48 +151,48 @@ types within the same collection.
    :copyable: true 
 
    {
-   "_id": {
-       "$oid": "64934d5a4fb07ede3b0dc0d3"
-   },
-   "colour1": "NA",
-   "ageGroup": "Adults-Women",
-   "link": "http://assets.myntassets.com/v1/images/style/properties/41b9db06cab6a17fef365787e7b885ba_images.jpg",
-   "brandName": "Baggit",
-   "fashionType": "Fashion",
-   "price": {
-       "$numberDouble": "375.0"
-   },
-   "atp": {
-       "$numberInt": "1"
-   },
-   "title": "Baggit Women Chotu Taj White Belt",
-   "gender": "Women",
-   "mfg_brand_name": "Baggit",
-   "subCategory": "Belts",
-   "masterCategory": "Accessories",
-   "score": {
-       "$numberDouble": "0.0"
-   },
-   "season": "Summer",
-   "articleType": "Belts",
-   "baseColour": "White",
-   "id": "33464",
-   "discountedPrice": {
-       "$numberDouble": "324.0"
-   },
-   "productDisplayName": "Baggit Women Chotu Taj White Belt",
-   "count": {
-       "$numberInt": "10"
-   },
-   "pred_price": {
-       "$numberDouble": "0.8616750344336797"
-   },
-   "price_elasticity": {
-       "$numberDouble": "0.0"
-   },
-   "discount": {
-       "$numberDouble": "14.0"
-   }
+      "_id": {
+         "$oid": "64934d5a4fb07ede3b0dc0d3"
+      },
+      "colour1": "NA",
+      "ageGroup": "Adults-Women",
+      "link": "http://assets.myntassets.com/v1/images/style/properties/41b9db06cab6a17fef365787e7b885ba_images.jpg",
+      "brandName": "Baggit",
+      "fashionType": "Fashion",
+      "price": {
+         "$numberDouble": "375.0"
+      },
+      "atp": {
+         "$numberInt": "1"
+      },
+      "title": "Baggit Women Chotu Taj White Belt",
+      "gender": "Women",
+      "mfg_brand_name": "Baggit",
+      "subCategory": "Belts",
+      "masterCategory": "Accessories",
+      "score": {
+         "$numberDouble": "0.0"
+      },
+      "season": "Summer",
+      "articleType": "Belts",
+      "baseColour": "White",
+      "id": "33464",
+      "discountedPrice": {
+         "$numberDouble": "324.0"
+      },
+      "productDisplayName": "Baggit Women Chotu Taj White Belt",
+      "count": {
+         "$numberInt": "10"
+      },
+      "pred_price": {
+         "$numberDouble": "0.8616750344336797"
+      },
+      "price_elasticity": {
+         "$numberDouble": "0.0"
+      },
+      "discount": {
+         "$numberDouble": "14.0"
+      }
    }
 
 
