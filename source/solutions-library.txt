@@ -42,22 +42,6 @@ kick-start their projects.
    .. tab:: Manufacturing & Motion
       :tabid: manufacturing
 
-      IoT 
-      ---
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Real-time Audio-Based AI Diagnostics
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Find out how AI is being used in renewable energy by leveraging MongoDB 
-            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
-
       Gen AI 
       ------
 
@@ -74,7 +58,31 @@ kick-start their projects.
             Find out how AI is being used in renewable energy by leveraging MongoDB 
             Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
 
+         .. card::
+            :headline: Predictive Maintenance Excellence with MongoDB Atlas
+            :url: https://deploy-preview-187--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-agentic-ai-framework/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
 
+            Optimize your maintenance strategy with AI. Predict
+            failures, generate repair plans, and guide technicians.
+
+      IoT 
+      ---
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Real-time Audio-Based AI Diagnostics
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Find out how AI is being used in renewable energy by leveraging MongoDB 
+            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
+      
       .. App-Driven Analytics
       .. --------------------
 

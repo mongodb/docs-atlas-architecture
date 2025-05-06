@@ -2,3 +2,4 @@
    :titlesonly:
 
    Rapid AI Agent Deployment </solutions-library/manufacturing-agentic-ai-framework>
+   AI-Powered Predictive Maintenance  </solutions-library/manufacturing-asset-predictive-maintenance>
