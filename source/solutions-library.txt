@@ -34,9 +34,20 @@ kick-start their projects.
             :headline: Credit Card Application with Generative AI
             :url: /solutions-library/credit-card-application-with-generative-ai/
             :icon: industry_credit_card
-            :icon-alt: Atlas industry_ai icon
+            :icon-alt: Atlas industry_credit_card icon
 
-            Learn how the convergence of alternative data, artificial intelligence, and generative AI is reshaping the foundations of credit scoring.
+            Learn how the convergence of alternative data, artificial intelligence, and
+            generative AI is reshaping the foundations of credit scoring.
+
+         .. card::
+            :headline: Assessing Business Loan Risks with Generative AI
+            :url: /solutions-library/assessing-business-loan-risks-with-generative-ai/
+            :icon: industry_finance
+            :icon-alt: Atlas industry_finance icon
+
+            Learn how generative AI can generate detailed risk assessments and how 
+            MongoDB’s multimodal features enable comprehensive and multidimensional loan risk
+            analysis.
 
       .. Fraud Prevention
       .. ----------------
