@@ -9,9 +9,9 @@ Automating Product Descriptions Using Generative AI
    :values: tutorial
 
 .. meta:: 
-   :keywords: document model, retail, together AI, gen AI :description:
-   Discover how to build a generative AI system with MongoDB and
-   Together AI to automate writing product descriptions.
+   :keywords: document model, retail, together AI, gen AI 
+   :description: Discover how to build a generative AI system with
+   MongoDB and Together AI to automate writing product descriptions.
    
 .. contents:: On this page
    :local:
