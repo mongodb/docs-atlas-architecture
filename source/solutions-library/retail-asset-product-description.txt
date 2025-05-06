@@ -132,7 +132,7 @@ At the core of this architecture we have three key components:
    :figwidth: 1200px
    :alt: Product description architecture diagram
    
-   Figure 1. Product description generative AI architecture.
+   Figure 1. Product description generative AI architecture
 
 The journey starts on the left side of the diagram with the *User/Event*
 label. A laptop icon represents the “Product Description Generator”
@@ -166,7 +166,7 @@ touchpoints.
    :figwidth: 1200px
    :alt: Product description architecture diagram with real-time integration
    
-   Figure 2. Product description generative AI architecture with real-time applications.
+   Figure 2. Product description generative AI architecture with real-time applications
 
 Building the Solution
 ---------------------
@@ -251,8 +251,8 @@ MongoDB Developer Data Platform
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
--  `Together AI <https://www.together.ai/>`__.
 -  `Next.js <https://nextjs.org/>`__.
+-  `Together AI <https://www.together.ai/>`__.
 
 Authors
 -------
