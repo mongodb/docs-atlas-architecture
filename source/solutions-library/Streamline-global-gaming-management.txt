@@ -108,7 +108,7 @@ At the core of the engaging Leafsteroids gaming platform lies the
 robustness of MongoDB Atlas. Designed as a demonstration, the game is a
 harmonious blend of interactive user experiences and meticulous data
 management.
-In the `Github Repository
+In the `Github Repository,
 <https://github.com/mongodb-developer/leafsteroids>`__ you will find
 detailed instructions on how to build this solution.
 
