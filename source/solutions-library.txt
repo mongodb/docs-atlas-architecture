@@ -138,11 +138,11 @@ kick-start their projects.
             Learn about how to build a real-time, event-driven inventory
             management system using MongoDB Atlas.
 
-     .. Gen AI
-     .. ------
+   .. Gen AI
+   .. ------
 
-     .. Personalization
-     .. ---------------
+   .. Personalization
+   .. ---------------
 
 .. .. tab:: Telco
    .. :tabid: Telco
