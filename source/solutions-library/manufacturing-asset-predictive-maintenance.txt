@@ -9,8 +9,10 @@ Predictive Maintenance Excellence with MongoDB Atlas
    :values: tutorial
 
 .. meta::
-   :keywords: document model, retail, together AI, gen AI 
-   :description: Discover how to build a generative AI system with MongoDB and Together AI to automate writing product descriptions.
+   :keywords: predictive maintenance, manufacturing, gen AI 
+   :description: Read how MongoDB Atlas powers predictive maintenance
+   with AI/ML, real-time equipment monitoring, failure prediction, and
+   automated repair plan generation.
    
 .. contents:: On this page
    :local:
@@ -18,23 +20,29 @@ Predictive Maintenance Excellence with MongoDB Atlas
    :depth: 1
    :class: singlecol
 
-MongoDB and Together AI deliver generative AI-powered solutions for
-writing multilingual product descriptions, enabling faster product
-onboarding.
+Transform equipment maintenance with AI-powered analytics that help
+predict failures, generate repair plans, and reduce downtime.
 
-**Use cases:** `Gen AI
-<https://www.mongodb.com/use-cases/artificial-intelligence>`__, `Catalog
-<https://www.mongodb.com/solutions/use-cases/catalog>`__ 
+**Use cases:** `App-Driven Analytics
+<https://www.mongodb.com/resources/solutions/use-cases/application-driven-intelligence>`__,
+`Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__,
+`IoT <https://www.mongodb.com/solutions/use-cases/internet-of-things>`__,
+`Single View <https://www.mongodb.com/solutions/use-cases/single-view>`__
 
-**Industries:** `Retail
-<https://www.mongodb.com/solutions/industries/retail>`__
+**Industries:** `Manufacturing & Mobility
+<https://www.mongodb.com/solutions/industries/manufacturing>`__,
+Aerospace & Defense, Energy & Environmental
 
-**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Document
-Model <https://www.mongodb.com/docs/manual/core/document/>`__, `MongoDB
-Node.js Driver <https://www.mongodb.com/docs/drivers/node/v3.6/>`__
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Atlas
+Charts <https://www.mongodb.com/products/platform/atlas-charts>`__,
+`Atlas Stream Processing
+<https://www.mongodb.com/products/platform/atlas-stream-processing>`__,
+`Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>__`
 
-**Partners:** `Together AI
-<https://cloud.mongodb.com/ecosystem/together-ai>`__
+**Partners:** `LangChain
+<https://cloud.mongodb.com/ecosystem/langchain>`__, `Cohere
+<https://cloud.mongodb.com/ecosystem/cohere>`__
 
 Solution Overview
 -----------------
