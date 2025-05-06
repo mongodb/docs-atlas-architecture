@@ -40,9 +40,9 @@ Charts <https://www.mongodb.com/products/platform/atlas-charts>`__,
 `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** `LangChain
-<https://cloud.mongodb.com/ecosystem/langchain>`__, `Cohere
-<https://cloud.mongodb.com/ecosystem/cohere>`__
+**Partners:** `Cohere
+<https://cloud.mongodb.com/ecosystem/cohere>`__, `LangChain
+<https://cloud.mongodb.com/ecosystem/langchain>`__, 
 
 Solution Overview
 -----------------
@@ -113,8 +113,8 @@ processes two types of input data:
 - Unstructured data: Institutional knowledge in documents. 
 
 The workflow aggregates and operationalizes both data types as vector
-embeddings in MongoDB Atlas.Using Vector Search, it performs semantic
-search to provide relevant context to an LLM (via AWS Bedrock or Cohere
+embeddings in MongoDB Atlas. Using Vector Search, it performs semantic
+search to provide relevant context to an LLM (via Amazon Bedrock or Cohere
 in this case), which generates contextual responses to prioritization
 queries. This helps maintenance teams make data-driven decisions about
 which machines need attention first.
