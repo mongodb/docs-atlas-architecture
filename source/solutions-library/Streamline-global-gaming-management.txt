@@ -112,7 +112,6 @@ In the `Github Repository,
 <https://github.com/mongodb-developer/leafsteroids>`__ you will find
 detailed instructions on how to build this solution.
 
-
 Features & Integration
 ~~~~~~~~~~~~~~~~~~~~~~
 
