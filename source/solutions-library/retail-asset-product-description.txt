@@ -243,11 +243,13 @@ reliability.
 Technologies and Products Used
 ------------------------------
 
-**MongoDB developer data platform:**
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas Database <https://www.mongodb.com/atlas/database>`__
 
-**Partner technologies:**
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
 
 -  `Together AI <https://www.together.ai/>`__.
 -  `Next.js <https://nextjs.org/>`__.
