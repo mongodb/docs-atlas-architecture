@@ -109,8 +109,7 @@ This architecture leverages RAG (retrieval-augmented generation) to
 determine which machines require predictive maintenance. The system
 processes two types of input data: 
 
--Structured data: Production parameters and machine breakdown frequency 
-
+-Structured data: Production parameters and machine breakdown frequency. 
 -Unstructured data:Institutional knowledge in documents. 
 
 The workflow aggregates and operationalizes both data types as vector
@@ -126,39 +125,31 @@ which machines need attention first.
    
    Figure 2. AI system diagram for machine prioritization recommendations
 
-The journey starts on the left side of the diagram with the *User/Event*
-label. A laptop icon represents the “Product Description Generator”
-system. First, a new product is received, this can be added manually by
-a user or in bulk through an automated event. 
+Sensor data processing architecture
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Then, retailers generate the descriptions by sending a *query* to Together
-AI’s endpoint, utilizing their vision models, combining computer vision
-and natural language processing (NLP) to process and understand images
-alongside text. The request includes the image URL, the desired
-description length, the vision model utilized, and the languages for the
-description. 
+This real-time architecture processes machine sensor data through six
+key stages: 
 
-Then, Together AI takes this data and uses one of its Llama3 vision
-models to scan the image and generate a description that matches the
-specified requirements, and returns the *product description* to the
-application.
+- Data collection: A prioritized milling machine with DAQ
+  (data acquisition) captures critical metrics (product type, temperature,
+  speed, torque, tool wear). 
+- Stream processing: Real-time transformation of
+  raw sensor data. 
+- Data storage: Centralized storage in MongoDB Atlas with
+  single view capability. 
+- Change detection: Monitoring for significant data
+  changes. 
+- ML inference: Running trained models to predict potential
+  failures. 
+- Dual output: Visualization through Atlas Charts and mobile
+  notifications via Change Streams.
 
-Finally, the product along with its description will be upserted inside
-the catalog on MongoDB, ensuring real-time availability across all
-connected systems.
-
-To illustrate the scalability of this architecture, consider the diagram
-below. By integrating `MongoDB Change Streams
-<https://www.mongodb.com/docs/manual/changeStreams/>`__, it allows
-real-time updates on any application listening to the catalog. For
-example, the e-commerce portal, a social media platform, and any other
-touchpoints.
-
-.. figure:: /includes/images/industry-solutions/product-description-architecture-extended.svg
+.. figure:: /includes/images/industry-solutions/predictive-maintenance-real-time-sensor.svg
    :figwidth: 1200px
-   :alt: Product description architecture diagram with real-time integration
+   :alt: Real-time sensor monitoring diagram
    
-   Figure 2. Product description generative AI architecture with real-time applications.
+   Figure 3. Real-time sensor monitoring with MongoDB Atlas
 
 Building the Solution
 ---------------------
