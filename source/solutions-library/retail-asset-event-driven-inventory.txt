@@ -108,7 +108,7 @@ across various platforms and devices.
    :figwidth: 1200px
    :alt: Real-time wind turbine diagnosis
    
-   Figure 1. Inventory management overview.
+   Figure 1. Inventory management overview
 
 Closing the Loop for a Future-proof Inventory Management Strategy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -199,7 +199,7 @@ Inventory Management System
    :alt: Inventory management workflow with Triggers and Change Streams.
 
    Figure 2. Event-driven workflow overview: Triggers allow automatic
-   replenishment and Change Streams enable real-time low stock alerts.
+   replenishment and Change Streams enable real-time low stock alerts
 
 Architecture with MongoDB
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -209,7 +209,7 @@ Architecture with MongoDB
    :alt: Inventory management system with MongoDB.
 
    Figure 3. Inventory management system architecture using MongoDB
-   Atlas and Next.js.
+   Atlas and Next.js
 
 Data Model Approach
 -------------------
@@ -250,7 +250,7 @@ Equivalent Relational Model for Products
    :figwidth: 1200px
    :alt: Equivalent relational model for product.
 
-   Figure 4. Product collection equivalent in a tabular setup.
+   Figure 4. Product collection equivalent in a tabular setup
 
 Document Model
 ~~~~~~~~~~~~~~
@@ -260,7 +260,7 @@ Document Model
    :alt: Database model with MongoDB.
 
    Figure 5. Take note of how complex objects and arrays are embedded
-   directly within the document.
+   directly within the document
 
 .. code-block:: javascript
    :copyable: true
