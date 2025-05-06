@@ -57,7 +57,7 @@ operations through four strategic stages:
    - Uses machine learning and RAG-based analysis to prioritize critical
      equipment.
    - Leverages historical data and expert knowledge to make informed
-   decisions.
+     decisions.
 
 2. Failure prediction
    - Answers the critical question: "What is the root cause of imminent
