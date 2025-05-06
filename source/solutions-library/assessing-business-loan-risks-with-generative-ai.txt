@@ -25,19 +25,17 @@ Assessing Business Loan Risks with Generative AI
 Solution Overview
 -----------------
 
-Business loans are a cornerstone of banking operations, providing significant 
-benefits to both financial institutions and broader economies. For example, in 
-2023 the value of commercial and industrial loans in the United States reached 
-nearly `$2.8 trillion <https://www.statista.com/statistics/214166/commercial-and-industrial-loans-at-commercial-banks-in-the-us/>`__. 
-However, these loans can present unique challenges and risks that banks must 
-navigate. Besides credit risk, where the borrower may default, banks also face 
-business risk, in which economic downturns or sector-specific declines can 
-impact borrowers' ability to repay loans.
-
-This solution dives into the potential of `enerative AI 
-<https://www.mongodb.com/basics/generative-ai>`__ to facilitate 
-detailed risk assessments for business loans, and how |service|'s multimodal 
-features can be leveraged for comprehensive and multidimensional risk analyses.
+Business loans are a cornerstone of banking operations, providing significant benefits to
+both financial institutions and broader economies. For example, in 2023 the value of
+commercial and industrial loans in the United States reached nearly `$2.8 trillion
+<https://www.statista.com/statistics/214166/commercial-and-industrial-loans-at-commercial-banks-in-the-us/>`__.
+However, these loans can present unique challenges and risks that banks must navigate.
+Besides credit risk, where the borrower may default, banks also face business risk, in
+which economic downturns or sector-specific declines can impact borrowers' ability to
+repay loans. This solution dives into the potential of `generative AI
+<https://www.mongodb.com/basics/generative-ai>`__ (gen AI) to facilitate detailed risk assessments
+for business loans, and how |service|'s multimodal features can be leveraged for
+comprehensive and multidimensional risk analyses.
 
 The code to demonstrate all the features of |service| for building this solution 
 is available in the following `GitHub repo 
@@ -64,11 +62,11 @@ industry-specific jargon can also be challenging and require specialized knowled
 Identifying critical risk factors and mitigation strategies only adds further complexity
 along with ensuring accuracy and consistency among loan officers and approval committees.
 
-To overcome these challenges, |rag| can assist loan officers by efficiently analyzing
+To overcome these challenges, gen AI can assist loan officers by efficiently analyzing
 business plans, extracting essential information, identifying key risks, and providing
 consistent interpretations, thereby facilitating informed decision-making.
 
-Assessing Loans With |rag|
+Assessing Loans with Generative AI
 --------------------------
 
 Interactive Risk Analysis With Generative AI-Powered Chatbots
@@ -83,7 +81,7 @@ simplistic, Generative AI can offer a detailed analysis.
    :figwidth: 750px
    :alt: Example of how ChatGPT-4o could respond when asked to assess the risk of a business loan
 
-Hallucinations Or Ignorance?
+Hallucinations or Ignorance?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By applying Generative AI to risk assessments, lenders can explore additional risk factors 
@@ -96,8 +94,8 @@ previous question to see what the ChatGPT-4o comes back with.
    :alt: Figure 2: Example of how ChatGPT-4o responded to flood risk as a factor
 
 Based on the response, there is a low risk of flooding. To validate this, we asked 
-ChatGPT-4o the question differently, focusing on its knowledge of flood data. (See Figure 
-3.) It suggested reviewing FEMA flood maps and local flood history, indicating it might 
+ChatGPT-4o the question differently, focusing on its knowledge of flood data. (See **Figure 
+3**.) It suggested reviewing FEMA flood maps and local flood history, indicating it might 
 not have the latest information.
 
 .. figure:: /includes/images/industry-solutions/chatGPT-flood-risk-assessment.png
@@ -114,21 +112,21 @@ a low flood risk due to a lack of information. However, when specifically asked 
 risk in the second query, it suggested reviewing external sources like FEMA flood maps, 
 recognizing its limitations and need for external validation.
 
-Generative AI-powered chatbots can recognize and intelligently seek additional data 
+Gen AI-powered chatbots can recognize and intelligently seek additional data 
 sources to fill their knowledge gaps. However, a causal web search won’t provide the level 
 of detail required.
 
 Retrieval-Augmented Generation (|rag|) Risk Analysis
 ----------------------------------------------------
 
-The promising example above demonstrates the experience of how |rag| can augment the
-expertise of loan officers for analyzing business loans. However, interacting with a |rag|
+The promising example above demonstrates the experience of how gen AI can augment the
+expertise of loan officers for analyzing business loans. However, interacting with a gen AI
 chatbot relies on loan officers repeatedly prompting and augmenting the context with
 relevant information. This can be time-consuming and impractical due to the lack of prompt
 engineering skills or the lack of data needed.
 
-Below is a simplified solution of how Generative AI can be used to augment the risk 
-analysis process and fill the knowledge gap of the LLM. This demo uses |service| as an 
+Below is a simplified solution of how gen AI can be used to augment the risk 
+analysis process and fill the knowledge gap of the |llm|. This demo uses MongoDB as an 
 `operational data store <https://www.mongodb.com/resources/basics/implementing-an-operational-data-layer>`_ 
 leveraging Geospatial Queries to discover floods within five kilometers of the proposed 
 business location. The prompting for this risk analysis highlights the analysis of the 
@@ -168,7 +166,7 @@ flood data sources.
 
 .. figure:: /includes/images/industry-solutions/risk-assessment.png
    :figwidth: 750px
-   :alt: Figure 6: Loan risk response using |rag| 
+   :alt: Figure 6: Loan risk response using RAG 
 
 In the Flood Risk Assessment section, gen AI-powered geospatial analytics enable loan 
 officers to quickly discover historical flood occurrences and identify the data sources.
@@ -178,7 +176,7 @@ location selected by clicking on the “Pin” icon. The geolocation pins includ
 location and the blue circle indicates the five-kilometer radius in which flood data is 
 queried.
 
-.. figure:: /includes/images/industry-solutions/risk-response-with-RAG.png
+.. figure:: /includes/images/industry-solutions/flood-locations-in-map.png
    :figwidth: 750px
    :alt: Figure 7: Flood locations displayed with pins 
 
