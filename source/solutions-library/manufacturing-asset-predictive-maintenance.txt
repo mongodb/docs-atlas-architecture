@@ -47,69 +47,53 @@ Charts <https://www.mongodb.com/products/platform/atlas-charts>`__,
 Solution Overview
 -----------------
 
-In this solution, you will learn how to build a generative AI-powered
-architecture that processes images using advanced vision models,
-generating accurate and compelling descriptions of an image. MongoDB
-Atlas serves as the operational data layer, leveraging its flexible data
-model to scale seamlessly as new descriptions are added and ensuring
-efficient data management and effortless scalability.
+MongoDB Atlas powers an end-to-end predictive maintenance solution that
+helps manufacturers prevent equipment failures and optimize maintenance
+operations through four strategic stages:
 
-This solution proves particularly valuable in the retail industry. The
-process of onboarding a new product to a retailer’s catalog can be
-time-consuming, especially when it comes to crafting product
-descriptions—in multiple languages and in different geographies. This
-solution helps streamline that workflow by automating the initial
-content creation through `generative AI
-<https://www.mongodb.com/resources/basics/artificial-intelligence/generative-ai>`__,
-providing retailers with a solid foundation for each product
-description, ultimately speeding up the time to market and improving
-consistency across their catalog UX writing.
+1. Machine prioritization and criticality analysis
+   - Addresses the question: "Which machine should I prioritize for
+     predictive maintenance and why?" 
+   - Uses machine learning and RAG-based analysis to prioritize critical
+     equipment.
+   - Leverages historical data and expert knowledge to make informed
+   decisions.
 
-.. video:: https://www.youtube.com/watch?v=7fKXd-KafLw
+2. Failure prediction
+   - Answers the critical question: "What is the root cause of imminent
+     failure?"
+   - Processes real-time sensor data through `Atlas Stream Processing
+     <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
+   - Enables early detection of potential failures before they occur.
 
-The importance of a good description
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3. Maintenance plan generation
+   - Focuses on: "How should I schedule the repair procedure?" 
+   - Automatically generates detailed repair plans using large language
+     models. 
+   - Combines maintenance manuals, inventory data, and resource
+     information.
 
-Did you know that around `70% of people leave a product page when the
-product description is poor or incomplete?
-<https://www.businessdasher.com/importance-of-product-description/?utm_source=chatgpt.com>`__ 
+4. Maintenance guidance generation
+   - Addresses: "How do I get better guidance on fixing machines?" 
+   - Provides enhanced maintenance guidance by integrating service notes
+     and repair instructions. 
+   - Delivers instructions directly to technicians' mobile devices
+     through `Change Streams
+     <https://www.mongodb.com/docs/manual/changeStreams/>`__.
 
-Product descriptions play a crucial role in the customer's journey.
-Shoppers rely on them to make buying decisions. When descriptions are
-weak or missing, businesses risk losing potential revenue and leaving
-customers frustrated.
+.. figure:: /includes/images/industry-solutions/predictive-maintenance-demo.svg
+   :figwidth: 1200px
+   :alt: Predictive maintenance workflow stages
+   
+   Figure 1: Four stages of predictive maintenance workflow
 
-Having a great description can enhance user engagement and satisfaction
-as `87% of online shoppers consider product descriptions to be crucial
-when making a buying decision.
-<https://www.businessdasher.com/importance-of-product-description/?utm_source=chatgpt.com>`__
-On the other hand, having inaccurate descriptions can result in revenue
-loss and trust decline with your customer base as `40% of consumers have
-returned online purchases due to poor product content.
-<https://www.ax-semantics.com/en/blog/product-descriptions>`__
+.. video:: https://www.youtube.com/watch?v=YwTWpUl3QS8
 
-Challenges with the traditional product description writing process
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The journey of writing high-quality descriptions involves numerous
-details and careful considerations. Some of the challenges that present
-include:
-
-- **Crafting compelling descriptions:** A product description that is
-  well-written will address their target’s needs and desires while
-  maintaining a consistent tone that aligns with the business’s UX writing
-  strategy and brand identity.
-
-- **SEO optimization:** Creating SEO-optimized product descriptions to
-  drive organic traffic and improve search engine rankings.
-
-- **Multilingual complexity:** For retailers with multilingual portals
-  and with multiple operating geographies this process increases in
-  complexity.
-  
-- **Content approval delays:** Even after a description is written, too
-  often there is still a writing approval process that needs to happen,
-  delaying the time to market.
+By leveraging MongoDB's unified data platform capabilities like vector
+search and real-time analytics, organizations can achieve significant
+operational improvements: `reducing downtime by 15-20%, increasing labor
+productivity by 5-20%, and cutting maintenance costs by 30-60%
+<https://www2.deloitte.com/content/dam/Deloitte/us/Documents/process-and-operations/us-predictive-maintenance.pdf>`__.
 
 Reference Architectures
 -----------------------
