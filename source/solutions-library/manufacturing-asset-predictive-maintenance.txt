@@ -190,6 +190,10 @@ This architecture enhances operator instructions through a RAG approach:
    
    Figure 5. RAG workflow enhances technician repair instructions
 
+Each architecture integrates with MongoDB Atlas core capabilities while
+leveraging external services (AWS Bedrock, OpenAI, Cohere) for AI/ML
+functionality, creating a comprehensive predictive maintenance solution.
+
 Building the Solution
 ---------------------
 
