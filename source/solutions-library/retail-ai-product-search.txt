@@ -207,10 +207,8 @@ and create your first index in minutes.
 
 **Step 2: Set up vector search.** 
 Follow the steps listed in this tutorial to `model your documents for
-vector search
-<https://www.mongodb.com/developer/products/mongodb/doc-modeling-vector-search/>`__,
-learn
-`<https://www.mongodb.com/docs/atlas/atlas-search/field-types/knn-vector/>`__
+vector search <https://www.mongodb.com/developer/products/mongodb/doc-modeling-vector-search/>`__,
+learn `how to index vector embeddings for vector search <https://www.mongodb.com/docs/atlas/atlas-search/field-types/knn-vector/>`__
 and `run vector search queries
 <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__
 
@@ -230,7 +228,7 @@ workflows with JSON
 `Catalog indexing, product score, and pricing
 <https://github.com/mongodb-industry-solutions/retail-pricing-search-personaliztion/tree/main/notebooks>`__.
 
-Key Consideratu=ions
+Key Considerations
 --------------------
 
 Data transformation: Recognizing the importance of transforming raw data
