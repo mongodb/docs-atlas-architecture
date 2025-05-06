@@ -32,9 +32,35 @@ simplifies management.
 The following recommendations apply to both workforce (human) and workload 
 (application) users in all :ref:`deployment paradigms <arch-center-paradigms>`.
 
+Recommendations for Autorization: Single-Region and Multi-Region
+------------------------------------------------------------------
+
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Singe-region deployments have no unique considerations for authorization.
+   See the next section for "All Deployment Paradigm Recommendations".
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Multi-region and multi-cloud deployments have no unique considerations
+   for authorization. See the next section for "All Deployment Paradigm Recommendations".
+
+All Deployment Paradigm Recommendations
+---------------------------------------
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 .. _arch-center-rbac:
+
 RBAC and Predefined Roles
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |service| uses Role-Based Access Control (RBAC) to simplify management of user 
 authorization. |service| includes predefined 
@@ -55,7 +81,7 @@ There are two levels of roles that you can assign: organization-level and
 project-level.
 
 Organization-Level Roles
-~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````````
 
 Organization-level roles are used by service accounts to automate tasks 
 such as creating new projects, managing IAM, and billing. They may also be 
@@ -86,7 +112,7 @@ used for platform team members.
   access to all linked organizations for which it is responsible for reporting usage. 
 
 Project-Level Roles
-~~~~~~~~~~~~~~~~~~~
+`````````````````````
 
 Project-level roles are for the development, test, and product teams that are 
 responsible for application development and maintenance. As with 
@@ -104,7 +130,7 @@ To learn more about project-level roles, refer to:
 .. _arch-center-fip:
 
 Federated Identity Providers
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By integrating |service| with a federated identity provider, 
 you can use just-in-time provisioning by mapping identity provider groups to 
@@ -124,27 +150,12 @@ To learn more about mapping roles to Federated Identity provider groups, refer
 to :atlas:`Role Mapping Process </security/manage-role-mapping/#role-mapping-process>`. 
 
 .. _arch-center-just-in-time:
+
 Just-in-Time Access 
-------------------
+~~~~~~~~~~~~~~~~~~~~
 
 |service| also supports creating temporary database users
 that automatically expire after the predefined times. A user can be
 created for 6 hours, 1 day, or 1 week.
 
 To learn more, see :ref:`mongodb-users`. 
-
-
-
-.. collapsible::
-   :heading: Single-Region Deployment Recommendations
-   :sub_heading: Recommendations that apply only to deployments in a single region
-   :expanded: true
-
-   <<Recommendations that apply only to deployments in a single region here>>
-
-.. collapsible::
-   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
-   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
-   :expanded: true
-
-   <<Recommendations that apply only to deployments across multiple regions or multiple cloud providers here>>
