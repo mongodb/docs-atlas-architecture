@@ -137,7 +137,7 @@ and innovation in manufacturing operations.
    :figwidth: 1200px
    :alt: demo architecture for automotive diagnostics
 
-   Figure 1. Demo architecture.
+   Figure 1. Demo architecture
 
 Building the Solution
 ---------------------
