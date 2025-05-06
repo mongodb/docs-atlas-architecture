@@ -38,7 +38,7 @@ Charts <https://www.mongodb.com/products/platform/atlas-charts>`__,
 `Atlas Stream Processing
 <https://www.mongodb.com/products/platform/atlas-stream-processing>`__,
 `Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>__`
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 **Partners:** `LangChain
 <https://cloud.mongodb.com/ecosystem/langchain>`__, `Cohere
