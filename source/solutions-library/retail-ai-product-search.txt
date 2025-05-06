@@ -20,12 +20,12 @@ AI-powered retail: Personalization and Accuracy
 
 Enhance e-commerce with AI-powered search: Deliver personalized, accurate search experiences using machine learning and vector search
 
-**Use cases:** `E-commerce <https://www.mongodb.com/solutions/industries/retail>`__, 
-`Generative AI <https://www.mongodb.com/library/use-cases/artificial-intelligence>`__
+**Use cases:** `Generative AI <https://www.mongodb.com/library/use-cases/artificial-intelligence>`__
 
-**Industries:** `Retail <https://www.mongodb.com/solutions/industries/retail>`__, E-commerce
+**Industries:** `Retail <https://www.mongodb.com/solutions/industries/retail>`__
 
-**Products:** `Atlas Search <https://www.mongodb.com/atlas/search>`__, `Atlas Vector Search
+**Products:** `Atlas <https://www.mongodb.com/products/platform/atlas-database>`__, 
+`Atlas Search <https://www.mongodb.com/atlas/search>`__, `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__, 
 `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__,
 `MonogDB Connector for Spark <https://www.mongodb.com/docs/spark-connector/current/>`__
@@ -40,29 +40,39 @@ power of technology. This solution uniquely combines MongoDB's flexible
 data handling with Databricks' advanced analytics to transform how
 online retail operates. By integrating these technologies, retailers can
 leverage AI-augmented search capabilities, offering a more intuitive and
-efficient shopping experience. The heart of this solution lies in its
+efficient shopping experience.
+
+The heart of this solution lies in its
 ability to personalize the shopping experience. Using AI, machine
 learning, and vector search, it can understand and anticipate customers'
 needs, suggesting products that align with their preferences and search
 history, and respond accurately to semantic context. This not only
 enhances customer satisfaction but also drives sales by presenting the
-most relevant products. This solution leverages the advanced
+most relevant products. 
+
+This solution leverages the advanced
 capabilities of MongoDB Atlas Vector Search, integrated seamlessly with
-Atlas and Databricks, to redefine the online shopping experience. Atlas
-Vector Search marks a significant evolution from traditional
+Atlas and Databricks, to redefine the online shopping experience. 
+
+Atlas Vector Search marks a significant evolution from traditional
 keyword-based search methods. It utilizes sophisticated algorithms to
 understand and process complex search queries, enabling a more nuanced
 and relevant product discovery process. This approach ensures that
 customers find exactly what they're looking for, even with vague or
-partial search terms. MongoDB Atlas plays a pivotal role in this
+partial search terms. 
+
+MongoDB Atlas plays a pivotal role in this
 solution by providing a robust and scalable database environment. It
 efficiently manages the diverse and voluminous data inherent in
 e-commerce platforms, from product catalogs to customer behavior
 analytics. This seamless integration makes the foundation of the search
-process both sturdy and flexible. Databricks complements this setup by
+process both sturdy and flexible. 
+
+Databricks complements this setup by
 offering powerful analytics and machine learning capabilities. It
 processes vast amounts of data in real-time, deriving insights that
 continually enhance the search algorithm's effectiveness and accuracy.
+
 By combining these technologies, the solution offers an unparalleled
 search experience in the e-commerce domain. It not only meets the
 current demands of online shoppers for quick and precise search results
