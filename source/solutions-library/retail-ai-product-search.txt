@@ -193,7 +193,7 @@ types within the same collection.
    "discount": {
        "$numberDouble": "14.0"
    }
-}
+   }
 
 
 Building the Solution
