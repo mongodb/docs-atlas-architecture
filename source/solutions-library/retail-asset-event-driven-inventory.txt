@@ -9,10 +9,8 @@ Building an Event-Driven Inventory Management System
    :values: tutorial
 
 .. meta:: 
-   :keywords: Event-driven, Inventory, Atlas, Real-time analytics,
-   Retail :description: Learn to build an event-driven inventory
-   management system with real-time analytics and automation features
-   for workforce efficiency with MongoDB Atlas.
+   :keywords: Event-driven, Inventory, Atlas, Real-time analytics, Retail 
+   :description: Learn to build an event-driven inventory management system with real-time analytics and automation features for workforce efficiency with MongoDB Atlas.
 
 .. contents:: On this page
    :local:
@@ -189,7 +187,7 @@ integration, the solution effectively balances performance, automation,
 and scalability, making it well-suited for modern inventory management
 challenges.
 
-Inventory management system
+Inventory Management System
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /includes/images/industry-solutions/event-driven-workflow.svg
@@ -241,7 +239,7 @@ transformational power stems from the document model's inherent
 flexibility. It not only empowers a more intuitive design but also
 ensures that related data is stored together, optimizing access.
 
-Equivalent relational model for products
+Equivalent Relational Model for Products
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /includes/images/industry-solutions/event-driven-data-model.svg
@@ -250,7 +248,7 @@ Equivalent relational model for products
 
    Figure 4. Product collection equivalent in a tabular setup.
 
-Document model
+Document Model
 ~~~~~~~~~~~~~~
 
 .. figure:: /includes/images/industry-solutions/event-driven-document-model.svg
