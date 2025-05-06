@@ -2,4 +2,3 @@
    :titlesonly:
 
    Audio-Based AI Diagnostics <solutions-library/audio-based-AI-diagnostics>
-   Streamline global gaming management <solutions-library/Streamline-global-gaming-management>
