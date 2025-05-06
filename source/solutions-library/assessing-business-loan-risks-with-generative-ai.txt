@@ -18,7 +18,7 @@ Assessing Business Loan Risks with Generative AI
   <https://www.mongodb.com/solutions/industries/financial-services/lending-leasing>`_
 - **Industries**: `Financial Services 
   <https://www.mongodb.com/industries/financial-services>`_
-- **Products and tools**: `|service| <https://www.mongodb.com/atlas/database>`_, 
+- **Products and tools**: `Atlas <https://www.mongodb.com/atlas/database>`_, 
   `Geospatial data <https://www.mongodb.com/docs/manual/geospatial-queries/>`_
 - **Partners**: Google Maps APIs, `Fireworks.ai <https://fireworks.ai/>`_
 
@@ -160,7 +160,7 @@ type the description template from scratch.
    :figwidth: 750px
    :alt: Figure 5: Choosing a location on the map and writing a brief plan description 
 
-Upon submission, it will provide an analysis using `|rag| 
+Upon submission, it will provide an analysis using `RAG 
 <https://www.mongodb.com/resources/basics/retrieval-augmented-generation>`_ with the 
 appropriate prompt engineering to provide a simplified analysis of the business with the 
 consideration of the location and also the flood risk earlier downloaded from external 
