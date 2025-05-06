@@ -94,6 +94,8 @@ continuous operation and seamless updates.
 Building the Solution
 ---------------------
 
+In the `GitHub repository <https://github.com/mongodb-industry-solutions/retail-store/blob/main/microservices/dynamicPricing/gettingStarted.md>`__, you will find detailed instructions on how to build this solution.
+
 .. procedure::
    :style: normal
 
