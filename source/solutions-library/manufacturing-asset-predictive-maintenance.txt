@@ -215,28 +215,36 @@ Building the Solution
          .. code-block:: javascript
             :copyable: true
 
-            {
-               "title": "Hurricane",
-               "genre": "rock",
-               "artist": "Bob Dylan",
-               "year": 1976,
-               "views": 307418,
-               "lyrics": "...",
-               "language": "en",
-               "duration": 61,
-               "lyrics_embeddings_en": [...],
-               "tags": ["man", "story", "night"]
-            }
+            {  
+               "fields": [  
+                  {  
+                     "numDimensions": 1024,  
+                     "path": "embeddings",  
+                     "similarity": "euclidean",  
+                     "type": "vector"  
+                  }  
+               ]  
+            }  
 
       - Configure Stream Processing for real-time data transformation. 
       
       - Create Atlas Charts dashboards for monitoring and visualization.
 
 
-   .. step:: Retrieve MongoDB Atlas connection string
+   .. step:: `Configure AI services integration
+      <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-2-configure-environment-variables>`__
 
-      Navigate to your cluster and click on *Connect*. Copy the
-      connection string provided and save it for your .env file.
+      - Select one LLM provider for your implementation:
+
+         - Option 1 - AWS Bedrock: Configure access to Cohere models for
+           embeddings and completions (Examples of available models:
+           cohere.embed-english-v3 for embeddings, cohere.command-r-10 for
+           completions).
+           
+         - Option 2 - OpenAI: Set up API access and select appropriate
+           model.
+
+      - Set up Google Cloud Translation API for multilingual support.
 
    .. step:: Create your Together AI account
 
@@ -245,24 +253,28 @@ Building the Solution
       your *Profile*, then go to *Settings* and select *API Keys*. Save this
       key, as you will need it in your .env file.
 
-   .. step:: Create your object storage
+   .. step:: `Application setup
+      <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-3-add-some-documents-in-mongodb>`__
 
-      Create a new bucket in your AWS account and generate an IAM user
-      with programmatic access. Save the access key and secret key for
-      your .env file.
+      - Configure environment variables including MongoDB connection
+        strings, database settings, and required API credentials.
+      
+      - Deploy inference script for continuous system monitoring.
 
-   .. step:: Configure your application’s frontend
+      - Install and configure alerts application.
 
-      Obtain the demo code by cloning the GitHub repository to your
-      local machine, configure the environment variables and install the
-      dependencies. Finally, run the app locally at
-      http://localhost:3003
+      - Launch main demo application.
+
+      - Perform system testing and validation to ensure proper data flow
+        and functionality.
 
 For complete implementation details, including code samples,
 configuration files, and tutorial videos, visit the `GitHub repository
-<https://github.com/mongodb-industry-solutions/description-generator>`__.
+<https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance>`__.
+This repository provides a production-ready template for implementing
+predictive maintenance using MongoDB Atlas' comprehensive feature set.
 
-Key Learnings
+Key Learnings 
 -------------
 
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__ provides a unified
