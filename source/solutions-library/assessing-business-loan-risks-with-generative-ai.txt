@@ -141,7 +141,7 @@ that “this data is **fictional and for demonstration purposes** only. In reali
 need to access reliable sources such as FEMA's flood data or other government agencies' 
 reports to obtain accurate information.”
 
-.. figure:: /includes/images/industry-solutions/chatGPT-flood-risk-assessment.png  
+.. figure:: /includes/images/industry-solutions/GPT-false-locations-response.png  
    :figwidth: 750px
    :alt: Figure 4: LLM’s response with fictional flood locations 
 
