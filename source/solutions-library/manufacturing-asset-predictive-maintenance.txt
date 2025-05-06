@@ -52,6 +52,7 @@ helps manufacturers prevent equipment failures and optimize maintenance
 operations through four strategic stages:
 
 1. Machine prioritization and criticality analysis
+
    - Addresses the question: "Which machine should I prioritize for
      predictive maintenance and why?" 
    - Uses machine learning and RAG-based analysis to prioritize critical
@@ -60,6 +61,7 @@ operations through four strategic stages:
      decisions.
 
 2. Failure prediction
+
    - Answers the critical question: "What is the root cause of imminent
      failure?"
    - Processes real-time sensor data through `Atlas Stream Processing
@@ -67,6 +69,7 @@ operations through four strategic stages:
    - Enables early detection of potential failures before they occur.
 
 3. Maintenance plan generation
+
    - Focuses on: "How should I schedule the repair procedure?" 
    - Automatically generates detailed repair plans using large language
      models. 
@@ -74,6 +77,7 @@ operations through four strategic stages:
      information.
 
 4. Maintenance guidance generation
+
    - Addresses: "How do I get better guidance on fixing machines?" 
    - Provides enhanced maintenance guidance by integrating service notes
      and repair instructions. 
