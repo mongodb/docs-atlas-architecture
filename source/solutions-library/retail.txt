@@ -2,6 +2,6 @@
    :titlesonly:
 
    Gen AI <solutions-library/retail-gen-ai>
-   
+
 .. Catalog <solutions-library/retail-catalog>
 .. Personalization <solutions-library/retail-personalization>
