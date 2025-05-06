@@ -32,13 +32,13 @@ simplifies management.
 The following recommendations apply to both workforce (human) and workload 
 (application) users in all :ref:`deployment paradigms <arch-center-paradigms>`.
 
-Recommendations for Autorization: Single-Region and Multi-Region
+Recommendations for Authorization: Single-Region and Multi-Region
 ------------------------------------------------------------------
 
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments in a single region
-   :expanded: true
+   :expanded: false
 
    Singe-region deployments have no unique considerations for authorization.
    See the next section for "All Deployment Paradigm Recommendations".
@@ -46,7 +46,7 @@ Recommendations for Autorization: Single-Region and Multi-Region
 .. collapsible::
    :heading: Multi-Region and Multi-Cloud Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
-   :expanded: true
+   :expanded: false
 
    Multi-region and multi-cloud deployments have no unique considerations
    for authorization. See the next section for "All Deployment Paradigm Recommendations".
@@ -122,7 +122,7 @@ governance enforced by the operations and provisioning team. Because a Project
 Owner can create and delete {+clusters+}, you should assign this role to a 
 programmatic service account unless you are working in a sandbox environment.
 
-To learn more about project-level roles, refer to:
+To learn more about project-level roles, see:
 
 - :atlas:`Atlas User Roles </reference/user-roles/>`
 - :atlas:`<mongodb-users-roles-and-privileges>`.
@@ -146,8 +146,8 @@ groups to |service| roles. You should restrict access to your company's domain,
 which prevents users from logging into |service| when they are not authorized 
 for access.
 
-To learn more about mapping roles to Federated Identity provider groups, refer 
-to :atlas:`Role Mapping Process </security/manage-role-mapping/#role-mapping-process>`. 
+To learn more about mapping roles to Federated Identity provider groups, see
+:atlas:`Role Mapping Process </security/manage-role-mapping/#role-mapping-process>`. 
 
 .. _arch-center-just-in-time:
 

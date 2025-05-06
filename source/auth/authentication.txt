@@ -17,7 +17,7 @@ Guidance for {+service+} Authentication
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: onecol
 
 
@@ -28,8 +28,7 @@ access the {+atlas-ui+}, |service| databases, and  the {+atlas-admin-api+}.
 .. note:: 
 
    In this context, a "user" can be a human or an application. We refer to 
-   human users as "Workforce Identity" and applications as 
-   "Workload Identity".
+   human users as "Workforce Identity" and applications as "Workload Identity".
 
 Two factors determine which authentication types to use: 
 
@@ -43,7 +42,7 @@ Recommendations for {+service+} Authentication: Single-Region and Multi-Region
 .. collapsible::
    :heading: Single-Region Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments in a single region
-   :expanded: true
+   :expanded: false
 
    Singe-region deployments have no unique considerations for authentication.
    See the next section for "All Deployment Paradigm Recommendations".
@@ -51,7 +50,7 @@ Recommendations for {+service+} Authentication: Single-Region and Multi-Region
 .. collapsible::
    :heading: Multi-Region and Multi-Cloud Deployment Recommendations
    :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
-   :expanded: true
+   :expanded: false
 
    For authentication through the :ref:`Workforce Identity Federation <arch-center-workforce_if>`,
    use a globally-distributed identity provider.
@@ -65,44 +64,40 @@ The following recommendations apply to all :ref:`deployment paradigms
 |service| UI Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Workforce Users
-`````````````````
+- Workforce Users
 
-Use IP access restrictions, and then either:
+  Use IP access restrictions, and then either:
 
-- Use :ref:`Federated Authentication <arch-center-federated_auth>` with an SAML 2.0 
-  identity provider, such as Okta, Microsoft Entra ID, or Ping Identity, or 
-- Use Atlas credentials with 
-  :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
+  - Use :ref:`Federated Authentication <arch-center-federated_auth>` with an SAML 2.0 
+    identity provider, such as Okta, Microsoft Entra ID, or Ping Identity, or 
+  - Use Atlas credentials with 
+    :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
 
-Workload Users
-```````````````
-
-This only applies to Workforce users.
+- Workload Users
+  
+  This only applies to Workforce users.
 
 |service| Database Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Workforce Users
-`````````````````
+- Workforce Users
 
-Use :ref:`Workforce Identity Federation <arch-center-workforce_if>`.
+  Use :ref:`Workforce Identity Federation <arch-center-workforce_if>`.
 
-For development and test environments, you can also use 
-:ref:`SCRAM <arch-center-scram>`. Consider :ref:`creating temporary database 
-users <arch-center-just-in-time>` with just-in-time database access.
+  For development and test environments, you can also use 
+  :ref:`SCRAM <arch-center-scram>`. Consider :ref:`creating temporary database 
+  users <arch-center-just-in-time>` with just-in-time database access.
 
-Workload Users
-```````````````
+- Workload Users
 
-Use one of the following:
+  Use one of the following:
 
-- :ref:`Workload Identity Federation <arch-center-workload_if>`
-- :ref:`AWS-IAM authentication <arch-center-iam>`
-- :ref:`X.509 <arch-center-x509>` certificates
+  - :ref:`Workload Identity Federation <arch-center-workload_if>`
+  - :ref:`AWS-IAM authentication <arch-center-iam>`
+  - :ref:`X.509 <arch-center-x509>` certificates
 
-For development and test environments, you can also use 
-:ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`.
+  For development and test environments, you can also use 
+  :ref:`X.509 <arch-center-x509>` certificates or :ref:`SCRAM <arch-center-scram>`.
 
 |service| API Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,9 +161,9 @@ AWS IAM Role Authentication
 ````````````````````````````
 
 You can also authenticate through |aws| |iam| roles. To learn more, 
-refer to :ref:`set-up-pwdless-auth`.
+see :ref:`set-up-pwdless-auth`.
 
-To learn more, refer to :ref:`oidc-authentication-workload` and 
+To learn more, see :ref:`oidc-authentication-workload` and 
 :ref:`atlas-federated-authentication`.
 
 .. _arch-center-mfa:
@@ -213,7 +208,7 @@ the security of these certificates on the application side, while
 Workload Identity Federation allows for password-less access and easier
 application security.
 
-To learn more, refer to :manual:`X.509 </core/security-x.509/>`.
+To learn more, see :manual:`X.509 </core/security-x.509/>`.
 
 .. _arch-center-scram:
 
@@ -228,7 +223,7 @@ a third-party secrets manager like
 `HashiCorp Vault <https://developer.hashicorp.com/vault/docs/secrets/databases/mongodbatlas>`__
 or |aws| Secrets Manager to generate and store complex database credentials. 
 
-To learn more, refer to :manual:`SCRAM </core/security-scram/>`.
+To learn more, see :manual:`SCRAM </core/security-scram/>`.
 
 .. _arch-center-admin-service-accounts:
 
