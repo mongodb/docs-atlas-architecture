@@ -65,7 +65,7 @@ operations through four strategic stages:
    - Answers the critical question: "What is the root cause of imminent
      failure?"
    - Processes real-time sensor data through `Atlas Stream Processing
-     <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
+     <https://www.mongodb.com/products/platform/atlas-stream-processing>`__.
    - Enables early detection of potential failures before they occur.
 
 3. Maintenance plan generation
@@ -109,8 +109,8 @@ This architecture leverages RAG (retrieval-augmented generation) to
 determine which machines require predictive maintenance. The system
 processes two types of input data: 
 
--Structured data: Production parameters and machine breakdown frequency. 
--Unstructured data:Institutional knowledge in documents. 
+- Structured data: Production parameters and machine breakdown frequency. 
+- Unstructured data:Institutional knowledge in documents. 
 
 The workflow aggregates and operationalizes both data types as vector
 embeddings in MongoDB Atlas.Using Vector Search, it performs semantic
@@ -125,31 +125,70 @@ which machines need attention first.
    
    Figure 2. AI system diagram for machine prioritization recommendations
 
-Sensor data processing architecture
+Sensor Data Processing Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This real-time architecture processes machine sensor data through six
 key stages: 
 
-- Data collection: A prioritized milling machine with DAQ
-  (data acquisition) captures critical metrics (product type, temperature,
-  speed, torque, tool wear). 
-- Stream processing: Real-time transformation of
-  raw sensor data. 
-- Data storage: Centralized storage in MongoDB Atlas with
-  single view capability. 
-- Change detection: Monitoring for significant data
-  changes. 
-- ML inference: Running trained models to predict potential
-  failures. 
-- Dual output: Visualization through Atlas Charts and mobile
-  notifications via Change Streams.
+1. Data collection: A prioritized milling machine with DAQ
+   (data acquisition) captures critical metrics (product type, temperature,
+   speed, torque, tool wear). 
+#. Stream processing: Real-time transformation of
+   raw sensor data. 
+#. Data storage: Centralized storage in MongoDB Atlas with
+   single view capability. 
+#. Change detection: Monitoring for significant data
+   changes. 
+#. ML inference: Running trained models to predict potential
+   failures. 
+#. Dual output: Visualization through Atlas Charts and mobile
+   notifications via Change Streams.
 
 .. figure:: /includes/images/industry-solutions/predictive-maintenance-real-time-sensor.svg
    :figwidth: 1200px
    :alt: Real-time sensor monitoring diagram
    
    Figure 3. Real-time sensor monitoring with MongoDB Atlas
+
+Work Order Generation Architecture
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This architecture automates maintenance work order creation through:
+
+1. Document processing: Machine manuals and old work orders are chunked
+and converted to vectors using AWS/Cohere embedding models. 
+#. Vector storage: Embeddings stored in MongoDB Atlas. 
+
+#. Work order generation: A specialized app that: 
+   - Uses LLMs to generate appropriate work order templates. 
+   - Pulls inventory and resource information through aggregation. 
+   - Creates detailed repair plans based on machine documentation.
+
+.. figure:: /includes/images/industry-solutions/predictive-maintenance-work-order.svg
+   :figwidth: 1200px
+   :alt: Work order generator diagram with artificial intelligence
+   
+   Figure 4. AI-powered work order generation system diagram
+
+Maintenance Guidance Architecture
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This architecture enhances operator instructions through a RAG approach:
+
+1. Service note processing: Converts multilingual PDF service notes to text.
+#. Translation: Processes non-English content (Spanish in this case)
+   through translation models. 
+#. Instruction generation: Combines translated service notes with
+   original repair plans using LLM.
+#. Delivery: Provides updated maintenance instructions to technicians
+   through a mobile app.
+
+.. figure:: /includes/images/industry-solutions/predictive-maintenance-rag.svg
+   :figwidth: 1200px
+   :alt: RAG workflow diagram
+   
+   Figure 5. RAG workflow enhances technician repair instructions
 
 Building the Solution
 ---------------------
