@@ -58,8 +58,22 @@ kick-start their projects.
             Build an application using MongoDB Atlas Vector Search and large language
             models to improve the interactivity of banking applications.
 
-      .. Fraud Prevention
-      .. ----------------
+       Fraud Prevention
+       ----------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Fraud Detection Accelerator Using AWS SageMaker
+            :url: /solutions-library/fraud-detection-accelerator/
+            :icon: industry_finance
+            :icon-alt: Atlas industry_finance icon
+
+            Revolutionize fraud detection in finance with MongoDB Atlas and Amazon
+            SageMaker Canvas. Leverage real-time data and AI for stronger defenses against
+            cybercrime.
 
       .. App-Driven Analytics
       .. --------------------

@@ -1,3 +1,6 @@
+.. _arch-center-is-fraud-detection-accelerator:
+
+===============================================
 Fraud Detection Accelerator Using AWS SageMaker
 ===============================================
 

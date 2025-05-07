@@ -1,2 +1,4 @@
 .. toctree::
    :titlesonly:
+
+   Fraud Detection Accelerator <solutions-library/fraud-detection-accelerator>

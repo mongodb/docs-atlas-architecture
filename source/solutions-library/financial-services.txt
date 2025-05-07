@@ -4,6 +4,6 @@
 
    Gen AI <solutions-library/fin-services-gen-ai.txt>
 
-.. Fraud Prevention <solutions-library/fin-services-fraud-prevention.txt>
+   Fraud Prevention <solutions-library/fin-services-fraud-prevention.txt>
 .. App-Driven Analytics <solutions-library/fin-services-app-driven-analytics.txt>
 .. Modernization <solutions-library/fin-services-modernization.txt>
