@@ -1,7 +1,7 @@
 .. _arch-center-is-fraud-detection-accelerator:
 
 ===============================================
-Fraud Detection Accelerator Using AWS SageMaker
+Fraud Detection Accelerator Using {+aws+} SageMaker
 ===============================================
 
 .. meta:: 
@@ -39,15 +39,15 @@ That's where the power of operational data comes into play.
 
 By harnessing `real-time data
 <https://www.mongodb.com/basics/real-time-analytics-examples>`__, fraud detection models
-can be trained on the most accurate and relevant clues available. MongoDB Atlas, a highly
-scalable and flexible developer data platform, coupled with Amazon SageMaker Canvas, an
+can be trained on the most accurate and relevant clues available. {+service-fullname+}, a highly
+scalable and flexible developer data platform, coupled with {+aws+} SageMaker Canvas, an
 advanced `machine learning <https://www.mongodb.com/basics/machine-learning>`__ tool,
 presents a groundbreaking opportunity to revolutionize fraud detection. By harnessing
 operational data and leveraging the power of real-time insights, financial institutions
 can fortify their defenses against cybercriminals who seek to exploit vulnerabilities for
-illicit gains. MongoDB Atlas proves its strength as an operational data store,
+illicit gains. {+service-fullname+} proves its strength as an operational data store,
 accommodating high-volume transactional data with exceptional performance and flexibility.
-Meanwhile, Amazon SageMaker Canvas empowers business analysts to leverage AI/ML solutions
+Meanwhile, {+aws+} SageMaker Canvas empowers business analysts to leverage AI/ML solutions
 effortlessly, providing a no-code platform that brings the power of advanced analytics to
 their fingertips.
 
@@ -83,9 +83,9 @@ and mobile banking fraud detection to name a few.
 The architecture diagram illustrates model training and near real-time inference. The
 operational data stored in `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__ is
 written to the `Amazon S3 <https://aws.amazon.com/s3/>`__ bucket using the Triggers
-feature in Atlas Application Services. Thus stored, data is used to create and train the
+feature in {+atlas-app-services+}. Thus stored, data is used to create and train the
 model in `Amazon SageMaker Canvas <https://aws.amazon.com/pm/sagemaker/>`__. The SageMaker
-Canvas stores the metadata for the model in the S3 bucket and exposes the model endpoint
+Canvas stores the metadata for the model in the |s3| bucket and exposes the model endpoint
 for inference.
 
 .. figure:: /includes/images/industry-solutions/fraud-prevention-architecture.png
@@ -146,12 +146,12 @@ Below you will find an overview of those steps taken:
 
 1. Set up the `S3 bucket
    <https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html>`__
-   to which the MongoDB Atlas data needs to be exported.
+   to which the |service-fullname| data needs to be exported.
 2. `Set up
    <https://www.mongodb.com/basics/clusters/mongodb-cluster-setup#:~:text=about%20storage%20capacity.-,Creating,-a%20MongoDB%20Cluster>`__
-   a MongoDB Atlas Cluster.
-3. Set up Atlas Application Services.
-4. Set up the `AWS SageMaker
+   a |service-| Cluster.
+3. Set up {+atlas-app-services+}.
+4. Set up the `{+aws+} SageMaker
    <https://docs.aws.amazon.com/sagemaker/latest/dg/onboard-quick-start.html>`__ domain.
 
 MongoDB Atlas as the operational data store
