@@ -82,7 +82,7 @@ processes.
 
 .. video:: https://www.youtube.com/watch?v=N4Fp1_HYr1Q
 
-    This video showcases how MongoDB turbocharges the process of building semantic search and AI-powered applications
+   This video showcases how MongoDB turbocharges the process of building semantic search and AI-powered applications
 
 Reference architectures
 -----------------------
@@ -166,11 +166,17 @@ In order to build our image search pipeline we need to follow two simple steps:
    .. step:: Configure the Atlas Search index
 
       Open the python notebook in the  Github repo and follow the instructions, the code will guide you through the following steps:
+      
       - Definition of the image embedding class
+      
       - Dataset download
+      
       - Definition of data visualization functions
+      
       - Connection to MongoDB
+      
       - Vectorization of the dataset
+      
       - Querying the dataset with a photo picked by the user
 
       .. code-block:: json
@@ -188,7 +194,7 @@ In order to build our image search pipeline we need to follow two simple steps:
             }
          ])
 
-        The above code shows how we perform the similarity query in MQL.
+      The above code shows how we perform the similarity query in MQL.
 
       .. figure:: /includes/images/industry-solutions/insurance-image-search-IndexConfig.svg
       :figwidth: 1200px
