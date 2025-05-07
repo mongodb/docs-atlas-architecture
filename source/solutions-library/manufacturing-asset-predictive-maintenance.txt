@@ -182,7 +182,7 @@ This architecture enhances operator instructions through a RAG approach:
 #. Translation: Processes non-English content (Spanish in this case)
    through translation models. 
 #. Instruction generation: Combines translated service notes with
-   original repair plans using LLM.
+   original repair plans using LLMs.
 #. Delivery: Provides updated maintenance instructions to technicians
    through a mobile app.
 
@@ -309,8 +309,8 @@ MongoDB Developer Data Platform
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
-- `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__.
-- `Google Cloud <https://cloud.google.com/>`__.
+- `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
+- `Google Cloud <https://cloud.google.com/>`__
 
 Authors
 -------
