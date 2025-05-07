@@ -122,9 +122,6 @@ kick-start their projects.
    .. tab:: Retail
       :tabid: retail
 
-   .. Catalog
-   .. -------
-
    .. Gen AI
    .. ------
 
@@ -142,6 +139,9 @@ kick-start their projects.
             :icon-alt: Atlas general_content_play icon
 
             Leverage real-time data insights to optimize prices and gain a competitive edge.
+
+   .. Catalog
+   .. -------
 
 .. .. tab:: Telco
    .. :tabid: Telco
