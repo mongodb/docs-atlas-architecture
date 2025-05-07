@@ -67,7 +67,7 @@ This as-you-type suggestion solution is architecturally straightforward
 relevant results. The heart of the architecture is a specialized
 ``entities`` collection and the corresponding queries.
 
-.. figure:: /includes/images/retail-as-you-type-architecture.png
+.. figure:: /includes/images/industry-solutions/retail-as-you-type-architecture.png
    :figwidth: 1200px
    :alt: As-you-type solution architecture
 
@@ -203,7 +203,7 @@ Indexing entities
 The ``name`` field is indexed in a multitude of ways, which will
 facilitate partial matching and ranking at query time.
 
-.. figure:: /includes/images/retail-as-you-type-indexing.png
+.. figure:: /includes/images/industry-solutions/retail-as-you-type-indexing.png
    :figwidth: 1200px
    :alt: Multiple indexing strategies
    
@@ -236,7 +236,7 @@ These scores could be further boosted by other factors such as an
 optional entity ``weight`` field. 
 
 
-.. figure:: /includes/images/retail-as-you-type-querying.png
+.. figure:: /includes/images/industry-solutions/retail-as-you-type-querying.png
    :figwidth: 1200px
    :alt: Example query and relevancy scoring computation
 
