@@ -79,9 +79,9 @@ MongoDB’s modern, multi-cloud database platform, unifying real-time, operation
 unstructured, and AI-driven data. With this foundation, businesses can efficiently adapt,
 extend, and iterate their applications to seize emerging technological opportunities.
 
-..figure:: /includes/images/industry-solutions/sol_lib_doc.svg
-  :figwidth: 750px
-  :alt: View of chunk and embedding structure in MongoDB
+.. figure:: /includes/images/industry-solutions/sol_lib_doc.svg
+   :figwidth: 1200px
+   :alt: View of chunk and embedding structure in MongoDB
 
 Building the Solution
 ---------------------
