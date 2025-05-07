@@ -55,22 +55,22 @@ Challenges with legacy fraud systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Incomplete data visibility from legacy systems:** Lack of access to relevant data
-sources hampers fraud pattern detection. 
+  sources hampers fraud pattern detection. 
 
 - **Latency issues in fraud prevention systems:** Legacy systems lack real-time
-processing, causing delays in fraud detection.
+  processing, causing delays in fraud detection.
 
-- **Difficulty in adapting legacy systems:** Inflexibility hinders the adoption of advanced
-fraud prevention technologies. 
+- **Difficulty in adapting legacy systems:** Inflexibility hinders the adoption of
+  advanced fraud prevention technologies. 
 
-- **Weak security protocols in legacy systems:** Outdated
-security exposes vulnerabilities to cyber attacks. 
+- **Weak security protocols in legacy systems:** Outdated security exposes vulnerabilities
+  to cyber attacks. 
 
 - **Operational challenges due to technical sprawl:** Diverse technologies complicate
-maintenance and updates. 
+  maintenance and updates. 
 
-- **Lack of collaboration between teams:** Siloed approach leads
-to delayed solutions and higher overhead.
+- **Lack of collaboration between teams:** Siloed approach leads to delayed solutions and
+  higher overhead.
 
 Reference Architectures
 -----------------------
