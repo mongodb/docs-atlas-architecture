@@ -44,14 +44,6 @@ Use the following resources to get started with |service| and the
       Make a plan to move your existing data into {+service+}.
 
    .. card::
-      :headline: Migration
-      :url: https://mongodb.com/docs/atlas/architecture/migration/
-      :icon: mdb_live_migration
-      :icon-alt:  icon 
-
-      Select a method for migrating to |service|.
-
-   .. card::
       :headline: Operational Readiness Checklist
       :url: https://mongodb.com/docs/atlas/architecture/operational-readiness-checklist/
       :icon: general_action_audit
@@ -64,7 +56,6 @@ Use the following resources to get started with |service| and the
 
    Landing Zone Design </landing-zone>
    Deployment Paradigms </deployment-paradigms>
-   Migration </migration>
    Orgs, Projects, and Clusters </hierarchy>
    Migration </migration>
    Operational Readiness Checklist </operational-readiness-checklist>

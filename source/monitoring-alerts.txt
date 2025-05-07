@@ -647,7 +647,7 @@ The following examples demonstrate how to enable monitoring using |service|
               set limit.
             - QUERY TARGETING - Ensure that number of keys and documents
               scanned to the number of documents returned, averaged by second,
-              are't too high.
+              aren't too high.
             - SYSTEM CPU - Ensure that the CPU usage is steady.
 
             .. include:: /includes/examples/cli/staging-prod/cli-example-metrics-processes-stagingprod.rst
@@ -718,10 +718,10 @@ The following examples demonstrate how to enable monitoring using |service|
               set limit.
             - QUERY TARGETING - Ensure that number of keys and documents
               scanned to the number of documents returned, averaged by second,
-              are't too high.
+              aren't too high.
             - SYSTEM CPU - Ensure that the CPU usage is steady.
 
-            ..literalinclude:: /includes/examples/generated-examples/main.snippet.get-metrics-prod.go
+            .. literalinclude:: /includes/examples/generated-examples/main.snippet.get-metrics-prod.go
                 :language: go
                 :caption: get-disk-metrics/main.go
 
