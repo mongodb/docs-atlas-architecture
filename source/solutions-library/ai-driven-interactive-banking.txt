@@ -1,5 +1,7 @@
+.. _arch-center-is-interactive-banking:
+
 ==========================================
-Solution Title
+AI-Driven Interactive Banking
 ==========================================
 
 .. meta:: 
@@ -138,7 +140,9 @@ combining semantic search with powerful language model generation.
 
 .. Video not renderng correctly. Come back to this later
 
-.. video:: /includes/images/industry-solutions/chatbot.mp4
+.. figure:: /includes/images/industry-solutions/chatbot.gif
+   :figwidth: 1200px
+   :alt: Leafy Bank mock-up chatbot in action
 
 Key Learnings
 -------------
