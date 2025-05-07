@@ -80,7 +80,7 @@ healthcare to legal services — can benefit from this approach, leading
 to enhanced operational efficiencies and improved decision-making
 processes.
 
-.. video:: https://youtu.be/-FCyBZlA2_8
+.. video:: https://www.youtube.com/watch?v=N4Fp1_HYr1Q
 
 This video showcases how MongoDB turbocharges the process of building semantic search and AI-powered applications
 
