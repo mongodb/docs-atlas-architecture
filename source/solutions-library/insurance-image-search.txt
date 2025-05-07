@@ -125,7 +125,6 @@ Once the photos are vectorized, their embedding is added to the document
 as an array alongside existing fields:
 
 .. code-block:: json
-   :copyable: true
 
    {
       _id: ObjectId('64d39175e65'),
@@ -154,16 +153,15 @@ In order to build our image search pipeline we need to follow two simple steps:
       using the following configuration as shown in the image:
 
       .. code-block:: json
-         :copyable: true
       
-      {
-        _id: ObjectId('64d39175e65'),
-        notes: "The crash happened...",
-        loss amount: 1250,
-        filename: "image_65.jpg",
-        url: "https://my-bucket...",
-        embedding: [0.3, 0.6, ..., 11.2]
-      }
+         {
+         _id: ObjectId('64d39175e65'),
+         notes: "The crash happened...",
+         loss amount: 1250,
+         filename: "image_65.jpg",
+         url: "https://my-bucket...",
+         embedding: [0.3, 0.6, ..., 11.2]
+         }
 
    .. step:: Configure the Atlas Search index
 
@@ -176,20 +174,19 @@ In order to build our image search pipeline we need to follow two simple steps:
       - Querying the dataset with a photo picked by the user
 
       .. code-block:: json
-         :copyable: true
       
-      documents = coll.aggregate([
-        {
-            "$search": {
-            "index": "default",
-            "knnBeta": {
-            "vector": query_embedding,
-            "path": "embedding",
-            "k": 5
-                }
+         documents = coll.aggregate([
+            {
+               "$search": {
+               "index": "default",
+               "knnBeta": {
+               "vector": query_embedding,
+               "path": "embedding",
+               "k": 5
+                  }
+               }
             }
-        }
-        ])
+         ])
 
         The above code shows how we perform the similarity query in MQL.
 
