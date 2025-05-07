@@ -42,7 +42,7 @@ Charts <https://www.mongodb.com/products/platform/atlas-charts>`__,
 
 **Partners:** `Cohere
 <https://cloud.mongodb.com/ecosystem/cohere>`__, `LangChain
-<https://cloud.mongodb.com/ecosystem/langchain>`__, 
+<https://cloud.mongodb.com/ecosystem/langchain>`__ 
 
 Solution Overview
 -----------------
@@ -193,7 +193,7 @@ This architecture enhances operator instructions through a RAG approach:
    Figure 5. RAG workflow enhances technician repair instructions
 
 Each architecture integrates with MongoDB Atlas core capabilities while
-leveraging external services (AWS Bedrock, OpenAI, Cohere) for AI/ML
+leveraging external services (Amazon Bedrock, OpenAI, Cohere) for AI/ML
 functionality, creating a comprehensive predictive maintenance solution.
 
 Building the Solution
@@ -236,10 +236,10 @@ Building the Solution
 
       - Select one LLM provider for your implementation:
 
-         - Option 1 - AWS Bedrock: Configure access to Cohere models for
-           embeddings and completions (Examples of available models:
-           cohere.embed-english-v3 for embeddings, cohere.command-r-10 for
-           completions).
+         - Option 1 - Amazon Bedrock: Configure access to Cohere models
+           for embeddings and completions (Examples of available models:
+           cohere.embed-english-v3 for embeddings, cohere.command-r-10
+           for completions).
 
          - Option 2 - OpenAI: Set up API access and select appropriate
            model.
@@ -309,8 +309,8 @@ MongoDB Developer Data Platform
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
-- `Google Cloud <https://cloud.google.com/>`__.
 - `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__.
+- `Google Cloud <https://cloud.google.com/>`__.
 
 Authors
 -------
