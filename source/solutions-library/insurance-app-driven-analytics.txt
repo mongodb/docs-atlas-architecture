@@ -1,2 +1,4 @@
 .. toctree::
    :titlesonly:
+
+   Digital Underwriting </solutions-library/digital-underwriting>

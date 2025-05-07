@@ -83,7 +83,7 @@ maintenance needs, minimize disruptions, and improve fleet management.
 equipment to identify potential issues early, ensuring patient safety, and
 optimizing healthcare operations.
 
-.. video:: https://youtu.be/-FCyBZlA2_8
+.. video:: https://youtu.be/91WlXYEUEkk
 
 A fun and quick demo of MongoDB's Vector Search capabilities for anomaly
 detection through sound input, using a basic handheld fan as our makeshift wind

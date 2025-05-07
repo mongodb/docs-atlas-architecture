@@ -3,3 +3,4 @@
 
    PDF Search </solutions-library/pdf-search>
    Claim Management <solutions-library/claim-management>
+   Digital Underwriting </solutions-library/digital-underwriting>
