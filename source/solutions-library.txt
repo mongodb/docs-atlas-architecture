@@ -119,14 +119,17 @@ kick-start their projects.
       .. App-Driven Analytics
       .. --------------------
 
-.. .. tab:: Retail
+   .. tab:: Retail
    .. :tabid: retail
 
    .. Catalog
    .. -------
 
-      Gen AI
-      ------
+   .. Gen AI
+   .. ------
+
+      Personalization
+      ---------------
 
       .. card-group::
          :columns: 2
@@ -139,11 +142,6 @@ kick-start their projects.
             :icon-alt: Atlas general_content_play icon
 
             Leverage real-time data insights to optimize prices and gain a competitive edge.
-
-     
-
-      Personalization
-      ---------------
 
 .. .. tab:: Telco
    .. :tabid: Telco
