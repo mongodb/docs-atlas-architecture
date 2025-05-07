@@ -154,7 +154,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building Modern Omnichannel Ordering on MongoDB
-            :url: https://deploy-preview-216--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-omnichannel-ordering/
+            :url: https://deploy-preview-216--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-omnichannel-ordering/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
