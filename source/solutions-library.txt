@@ -39,6 +39,45 @@ kick-start their projects.
       .. Modernization
       .. -------------
 
+   .. tab:: Manufacturing & Motion
+      :tabid: manufacturing
+
+      IoT 
+      ---
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Real-time Audio-Based AI Diagnostics
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Find out how AI is being used in renewable energy by leveraging MongoDB 
+            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
+
+      Gen AI 
+      ------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Framework for Rapid AI Agent Deployment
+            :url: https://deploy-preview-187--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-agentic-ai-framework/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Find out how AI is being used in renewable energy by leveraging MongoDB 
+            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
+
+
+      .. App-Driven Analytics
+      .. --------------------
+
    .. tab:: Insurance
       :tabid: insurance
 
@@ -71,31 +110,6 @@ kick-start their projects.
       .. App-Driven Analytics
       .. --------------------
 
-   .. tab:: Manufacturing & Motion
-      :tabid: manufacturing
-
-      IoT 
-      ---
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Real-time Audio-Based AI Diagnostics
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Find out how AI is being used in renewable energy by leveraging MongoDB 
-            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
-
-      .. Gen AI 
-      .. ------
-
-      .. App-Driven Analytics
-      .. --------------------   
-
    .. tab:: Media
       :tabid: media
 
@@ -115,6 +129,8 @@ kick-start their projects.
             Learn about how to leverage data to create personalized 
             user experiences by using Atlas Database, 
             Atlas Vector Search, and Pymongo. 
+
+
 
       .. App-Driven Analytics
       .. --------------------
@@ -161,8 +177,8 @@ kick-start their projects.
    :titlesonly:
 
    Financial Services </solutions-library/financial-services>
-   Insurance </solutions-library/insurance>
    Manufacturing & Motion </solutions-library/manufacturing>
+   Insurance </solutions-library/insurance>
    Media </solutions-library/media>
    Retail </solutions-library/retail>
 
