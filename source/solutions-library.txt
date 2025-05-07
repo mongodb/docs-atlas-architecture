@@ -58,8 +58,22 @@ kick-start their projects.
             Find out how AI is being used in renewable energy by leveraging MongoDB 
             Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
 
-      .. Gen AI 
-      .. ------
+      Gen AI 
+      ------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Framework for Rapid AI Agent Deployment
+            :url: https://deploy-preview-187--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-agentic-ai-framework/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Find out how AI is being used in renewable energy by leveraging MongoDB 
+            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
+
 
       .. App-Driven Analytics
       .. --------------------
@@ -116,19 +130,10 @@ kick-start their projects.
             user experiences by using Atlas Database, 
             Atlas Vector Search, and Pymongo. 
 
-         .. card::
-            :headline: Gen AI-powered video summarization
-            :url: https://deploy-preview-200--docs-atlas-architecture.netlify.app/solutions-library/AI-video-summarization/
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
-
-            Build a YouTube transcription and summarization service that
-            leverages a large language model (LLM) and semantic search.    
-
       .. App-Driven Analytics
       .. --------------------
 
-.. .. tab:: Retail
+   .. tab:: Retail
    .. :tabid: retail
 
    .. Catalog
@@ -137,8 +142,20 @@ kick-start their projects.
    .. Gen AI
    .. ------
 
-   .. Personalization
-   .. ---------------
+      Personalization
+      ---------------
+      
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: AI-driven real-time pricing with MongoDB and Vertex AI
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/media-personalization/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Leverage real-time data insights to optimize prices and gain a competitive edge.
 
 .. .. tab:: Telco
    .. :tabid: Telco
