@@ -130,8 +130,6 @@ kick-start their projects.
             user experiences by using Atlas Database, 
             Atlas Vector Search, and Pymongo. 
 
-
-
       .. App-Driven Analytics
       .. --------------------
 
