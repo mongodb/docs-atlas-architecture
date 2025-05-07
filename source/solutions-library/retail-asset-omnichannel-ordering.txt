@@ -43,7 +43,7 @@ updates using Atlas Change Streams and TriggersAtlas. Leverage.
 Solution Overview
 -----------------
 
-Executive summary
+Executive Summary
 ~~~~~~~~~~~~~~~~~
 
 In the competitive business landscape of retail and manufacturing,

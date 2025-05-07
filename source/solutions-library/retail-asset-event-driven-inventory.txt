@@ -43,7 +43,7 @@ inventory operations for retail and manufacturing with MongoDB Atlas.
 Solution Overview
 -----------------
 
-Executive summary
+Executive Summary
 ~~~~~~~~~~~~~~~~~
 
 In the competitive business landscape of retail and manufacturing,
