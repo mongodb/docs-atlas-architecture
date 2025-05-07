@@ -202,7 +202,7 @@ Building the Solution
 .. procedure::
    :style: normal
 
-   .. step:: `Set up MongoDB Atlas environment <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-1-create-a-mongodb-atlas-instance>`__
+   .. step:: `Set Up MongoDB Atlas Environment <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-1-create-a-mongodb-atlas-instance>`__
 
       - Configure cluster, database and collections for machine
         failures, sensor data (raw and transformed), ML models,
@@ -230,7 +230,7 @@ Building the Solution
       - Create Atlas Charts dashboards for monitoring and visualization.
 
 
-   .. step:: `Configure AI services integration <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-2-configure-environment-variables>`__
+   .. step:: `Configure AI Services Integration <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-2-configure-environment-variables>`__
 
       - Select one LLM provider for your implementation:
 
@@ -244,7 +244,7 @@ Building the Solution
 
       - Set up Google Cloud Translation API for multilingual support.
 
-   .. step:: `Application setup <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-3-add-some-documents-in-mongodb>`__
+   .. step:: `Application Setup <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-3-add-some-documents-in-mongodb>`__
 
       - Configure environment variables including MongoDB connection
         strings, database settings, and required API credentials.
