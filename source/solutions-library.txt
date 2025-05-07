@@ -177,6 +177,7 @@ kick-start their projects.
    Manufacturing & Motion </solutions-library/manufacturing>
    Insurance </solutions-library/insurance>
    Media </solutions-library/media>
+   Retail </solutions-library/retail>
 
 .. Healthcare  <solutions-library/healthcare>
 .. Telco </solutions-library/telco>
