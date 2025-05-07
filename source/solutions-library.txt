@@ -144,7 +144,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Building an event-driven inventory management system
+            :headline: Building an Event-Driven Inventory Management System
             :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
@@ -160,7 +160,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Automating product descriptions using generative AI
+            :headline: Automating Product Descriptions Using Generative AI
             :url: https://deploy-preview-197--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-product-description/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
