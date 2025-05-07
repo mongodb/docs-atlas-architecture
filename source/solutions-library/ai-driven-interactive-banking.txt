@@ -136,7 +136,13 @@ generate a more comprehensive and accurate response. This framework is known as
 (|rag|) architecture. |rag| enhances the chatbot’s ability to provide accurate answers by
 combining semantic search with powerful language model generation.
 
-..video:: /includes/images/industry-solutions/chatbot.mp4
+.. video:: /includes/images/industry-solutions/chatbot.mp4
+   :width: 800
+   :height: 450
+   :align: center
+   :autoplay: true
+   :loop: true
+   :controls: trueeo:: /includes/images/industry-solutions/chatbot.mp4
 
 Key Learnings
 -------------
