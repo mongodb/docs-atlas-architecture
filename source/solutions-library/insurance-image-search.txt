@@ -80,7 +80,7 @@ healthcare to legal services — can benefit from this approach, leading
 to enhanced operational efficiencies and improved decision-making
 processes.
 
-.. video:: https://www.google.com/url?q=https://www.youtube.com/watch?v%3DN4Fp1_HYr1Q&sa=D&source=docs&ust=1706804473300122&usg=AOvVaw3X-Z55LwJ6wImrLwR9LppX
+.. video:: https://www.youtube.com/watch?v=N4Fp1_HYr1Q
 
     This video showcases how MongoDB turbocharges the process of building semantic search and AI-powered applications
 
@@ -155,12 +155,12 @@ In order to build our image search pipeline we need to follow two simple steps:
       .. code-block:: json
       
          {
-         _id: ObjectId('64d39175e65'),
-         notes: "The crash happened...",
-         loss amount: 1250,
-         filename: "image_65.jpg",
-         url: "https://my-bucket...",
-         embedding: [0.3, 0.6, ..., 11.2]
+            _id: ObjectId('64d39175e65'),
+            notes: "The crash happened...",
+            loss amount: 1250,
+            filename: "image_65.jpg",
+            url: "https://my-bucket...",
+            embedding: [0.3, 0.6, ..., 11.2]
          }
 
    .. step:: Configure the Atlas Search index
