@@ -59,7 +59,7 @@ consistency across their catalog UX writing.
 
 .. video:: https://www.youtube.com/watch?v=7fKXd-KafLw
 
-The importance of a good description
+The Importance of a Good Description
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Did you know that around `70% of people leave a product page when the
@@ -80,7 +80,7 @@ loss and trust decline with your customer base as `40% of consumers have
 returned online purchases due to poor product content.
 <https://www.ax-semantics.com/en/blog/product-descriptions>`__
 
-Challenges with the traditional product description writing process
+Challenges with the Traditional Product Description Writing Process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The journey of writing high-quality descriptions involves numerous
@@ -176,7 +176,7 @@ Building this solution can be broken down in five major steps:
 .. procedure::
    :style: normal
 
-   .. step:: Replicate the demo database
+   .. step:: Replicate the Demo Database
 
       Provision a cluster within your `Atlas account
       <https://www.mongodb.com/cloud/atlas/register>`__ and populate
@@ -188,25 +188,25 @@ Building this solution can be broken down in five major steps:
       <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
       command.
 
-   .. step:: Retrieve MongoDB Atlas connection string
+   .. step:: Retrieve MongoDB Atlas Connection String
 
       Navigate to your cluster and click on *Connect*. Copy the
       connection string provided and save it for your .env file.
 
-   .. step:: Create your Together AI account
+   .. step:: Create Your Together AI Account
 
       Sign in to `Together AI <https://www.together.ai/>`__. Navigate to
       your account and retrieve your user key, which can be found inside
       your *Profile*, then go to *Settings* and select *API Keys*. Save this
       key, as you will need it in your .env file.
 
-   .. step:: Create your object storage
+   .. step:: Create Your Object Storage
 
       Create a new bucket in your AWS account and generate an IAM user
       with programmatic access. Save the access key and secret key for
       your .env file.
 
-   .. step:: Configure your application’s frontend
+   .. step:: Configure Your Application’s Frontend
 
       Obtain the demo code by cloning the GitHub repository to your
       local machine, configure the environment variables and install the
