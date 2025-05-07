@@ -29,7 +29,7 @@ Revolutionize claim management using AI and vector image search. Easily compare 
 
 **Partners:** `PyTorch <https://pytorch.org/>`__
 
-Solution overview
+Solution Overview
 -----------------
 
 The insurance industry has the daunting challenge of processing claims
@@ -70,7 +70,7 @@ accidents with similar damage profiles from the claims history database.
 The adjuster is now able to quickly compare the car accident photos with
 the most relevant ones in the insurer's claim history.
 
-Broader applications:
+Broader Applications:
 ~~~~~~~~~~~~~~~~~~~~~
 
 While tailored for the insurance industry, this solution's principles
@@ -84,7 +84,7 @@ processes.
 
 This video showcases how MongoDB turbocharges the process of building semantic search and AI-powered applications
 
-Reference architectures
+Reference Architectures
 -----------------------
 
 MongoDB Atlas combines transactional and search capabilities in the same 
@@ -113,7 +113,7 @@ can fully focus on building their apps.
 
    Figure 3. An image similarity query is performed, and the 5 top similar images are returned.
 
-Data model approach
+Data Model Approach
 -------------------
 
 The data model for the vectorized images collection is extremely basic,
@@ -137,7 +137,7 @@ as an array alongside existing fields:
 
 Sample document after the image embedding is added.
 
-Building the solution
+Building the Solution
 ---------------------
 
 In order to build our image search pipeline we need to follow two simple steps:
@@ -204,7 +204,7 @@ In order to build our image search pipeline we need to follow two simple steps:
 
 Visit the `GitHub repo: Insurance-image-search <https://github.com/mongodb-industry-solutions/Insurance-image-search?tab=readme-ov-file>`__ and create this demo for yourself by following the instructions and associated models in this solution’s repository.
 
-Key learnings
+Key Learnings
 -------------
 
 - Image vectorization: The embedding generation process can be carried out using different models and deployment options. It is always important to be mindful of privacy and data protection requirements. If we need our data to never leave our servers, a locally deployed model is probably a good idea. Otherwise, we can simply call an API and get our vectors back, as explained in `this tutorial <https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/>`__ that tells us how to do it with OpenAI. 
@@ -213,7 +213,7 @@ Key learnings
 
 - Performing a Vector Search query: Notably `Vector Search queries <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__ have a dedicated operator within MongoDB’s `aggregation pipeline <https://www.mongodb.com/docs/manual/aggregation/>`__. This means that they can be concatenated with other operations, making it extremely convenient for developers because they don’t need to learn a different language or change context.
 
-Technologies and products used
+Technologies and Products Used
 ------------------------------
 
 MongoDB Developer Data Platform
@@ -222,7 +222,7 @@ MongoDB Developer Data Platform
 - `Atlas <http://mongodb.com/atlas>`__, 
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-Partner technologies
+Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
 - `Image embedding generation with PyTorch <https://pytorch.org/>`__
