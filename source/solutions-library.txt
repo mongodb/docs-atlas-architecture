@@ -129,8 +129,8 @@ kick-start their projects.
             Leverage Machine Learning with real-time data processing and
             automate digital underwriting.
 
-      .. App-Driven Analytics
-      .. --------------------
+         App-Driven Analytics
+         --------------------
 
         .. card::
             :headline: Automating digital underwriting with Machine Learning
