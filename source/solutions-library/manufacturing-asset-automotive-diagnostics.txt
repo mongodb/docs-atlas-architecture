@@ -184,7 +184,7 @@ Building the Solution
       which you can use with the *mongorestore* command to import the
       data into your cluster.
 
-   .. step:: **Anomaly Detection Through Sound Input**
+   .. step:: **Anomaly Detection through Sound Input**
 
       Complete instructions can be found on `this GitHub page
       <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics/tree/main/acoustic-diagnostics-api>`__,
