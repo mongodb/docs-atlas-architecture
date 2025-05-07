@@ -142,8 +142,8 @@ kick-start their projects.
 
      
 
-   .. Personalization
-   .. ---------------
+      Personalization
+      ---------------
 
 .. .. tab:: Telco
    .. :tabid: Telco
