@@ -80,8 +80,8 @@ unstructured, and AI-driven data. With this foundation, businesses can efficient
 extend, and iterate their applications to seize emerging technological opportunities.
 
 ..figure:: /includes/images/industry-solutions/sol_lib_doc.svg
-   :figwidth: 750px
-   :alt: View of chunk and embedding structure in MongoDB
+  :figwidth: 750px
+  :alt: View of chunk and embedding structure in MongoDB
 
 Building the Solution
 ---------------------
@@ -135,6 +135,8 @@ generate a more comprehensive and accurate response. This framework is known as
 <https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`_
 (|rag|) architecture. |rag| enhances the chatbot’s ability to provide accurate answers by
 combining semantic search with powerful language model generation.
+
+.. Video not renderng correctly. Come back to this later
 
 .. video:: /includes/images/industry-solutions/chatbot.mp4
 
