@@ -3,4 +3,4 @@
 
    PDF Search </solutions-library/pdf-search>
    Claim Management <solutions-library/claim-management>
-   Image Search <solutions-library/insurance-image-search>
+   Image Search <solutions-library/insurance-gen-ai>
