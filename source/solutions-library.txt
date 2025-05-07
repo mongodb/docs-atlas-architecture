@@ -68,8 +68,8 @@ kick-start their projects.
          .. card::
             :headline: Fraud Detection Accelerator Using AWS SageMaker
             :url: /solutions-library/fraud-detection-accelerator/
-            :icon: industry_finance
-            :icon-alt: Atlas industry_finance icon
+            :icon: general_security
+            :icon-alt: Atlas general_security icon
 
             Revolutionize fraud detection in finance with MongoDB Atlas and Amazon
             SageMaker Canvas. Leverage real-time data and AI for stronger defenses against

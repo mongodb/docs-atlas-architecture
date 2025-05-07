@@ -56,14 +56,19 @@ Challenges with legacy fraud systems
 
 - **Incomplete data visibility from legacy systems:** Lack of access to relevant data
 sources hampers fraud pattern detection. 
+
 - **Latency issues in fraud prevention systems:** Legacy systems lack real-time
 processing, causing delays in fraud detection.
+
 - **Difficulty in adapting legacy systems:** Inflexibility hinders the adoption of advanced
 fraud prevention technologies. 
+
 - **Weak security protocols in legacy systems:** Outdated
 security exposes vulnerabilities to cyber attacks. 
+
 - **Operational challenges due to technical sprawl:** Diverse technologies complicate
 maintenance and updates. 
+
 - **Lack of collaboration between teams:** Siloed approach leads
 to delayed solutions and higher overhead.
 
@@ -83,7 +88,7 @@ model in `Amazon SageMaker Canvas <https://aws.amazon.com/pm/sagemaker/>`__. The
 Canvas stores the metadata for the model in the S3 bucket and exposes the model endpoint
 for inference.
 
-..figure:: fraud-detection-architecture.png
+.. figure:: /includes/images/industry-solutions/fraud-prevention-architecture.png
    :figwidth: 750px
    :alt: Fraud Detection Architecture
 
@@ -98,40 +103,40 @@ target column as Fraud.
 
 *Data courtesy of* `Kaggle <https://www.kaggle.com/c/ieee-fraud-detection/data>`__.
 
-Source Table1: Transaction
-::
-    TransactionID,
-    TransactionDT,
-    Card_no,
-    Card_type,
-    Email_domain,
-    ProductCD,
-    TransactionAmt,
-    Transaction_ID
+.. code-block:: 
 
-Source Table2: Identity
-::
-    TransactionID,
-    IpAddress,
-    PhoneNo,
-    DeviceID,
-    Location,
-    Name,
-    Address
+   Source Table1: Transaction
 
-Test Data:
-::
-    TransactionID,
-    Card_no,
-    card_type,
-    Email_domain,
-    IpAddress,
-    PhoneNo,
-    DeviceID,
-    ProductCD,
-    TransactionAmt,
-    isFraud
+   TransactionID,
+   TransactionDT,
+   Card_no,
+   Card_type,
+   Email_domain,
+   ProductCD,
+   TransactionAmt,
+   Transaction_ID
 
+   Source Table2: Identity
+
+   TransactionID,
+   IpAddress,
+   PhoneNo,
+   DeviceID,
+   Location,
+   Name,
+   Address
+
+   Test Data:
+   TransactionID,
+   Card_no,
+   card_type,
+   Email_domain,
+   IpAddress,
+   PhoneNo,
+   DeviceID,
+   ProductCD,
+   TransactionAmt,
+   isFraud
 
 Building the Solution
 ---------------------
