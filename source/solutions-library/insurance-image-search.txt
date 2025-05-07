@@ -197,36 +197,21 @@ In order to build our image search pipeline we need to follow two simple steps:
       The above code shows how we perform the similarity query in MQL.
 
       .. figure:: /includes/images/industry-solutions/insurance-image-search-IndexConfig.svg
-      :figwidth: 1200px
-      :alt: Index configuration
+         :figwidth: 1200px
+         :alt: Index configuration
       
-      Figure 4. How to configure the Search Index in the Atlas UI.
+         Figure 4. How to configure the Search Index in the Atlas UI.
 
 Visit the `GitHub repo: Insurance-image-search <https://github.com/mongodb-industry-solutions/Insurance-image-search?tab=readme-ov-file>`__ and create this demo for yourself by following the instructions and associated models in this solution’s repository.
 
 Key learnings
 -------------
 
-- Image vectorization — The embedding generation process can be carried
-out using different models and deployment options. It is always
-important to be mindful of privacy and data protection requirements. If
-we need our data to never leave our servers, a locally deployed model is
-probably a good idea. Otherwise, we can simply call an API and get our
-vectors back, as explained in `this tutorial
-<https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/>`__
-that tells us how to do it with OpenAI. 
+- Image vectorization: The embedding generation process can be carried out using different models and deployment options. It is always important to be mindful of privacy and data protection requirements. If we need our data to never leave our servers, a locally deployed model is probably a good idea. Otherwise, we can simply call an API and get our vectors back, as explained in `this tutorial <https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/>`__ that tells us how to do it with OpenAI. 
 
-- Creation of a Vector Search index in Atlas — It is now possible to
-create indexes for `local deployments
-<https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-local/#std-label-atlas-cli-deploy-local-avs>`__. 
+- Creation of a Vector Search index in Atlas: It is now possible to create indexes for `local deployments <https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-local/#std-label-atlas-cli-deploy-local-avs>`__. 
 
-- Performing a Vector Search query — Notably `Vector Search queries
-<https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__
-have a dedicated operator within MongoDB’s `aggregation pipeline
-<https://www.mongodb.com/docs/manual/aggregation/>`__. This means that
-they can be concatenated with other operations, making it extremely
-convenient for developers because they don’t need to learn a different
-language or change context.
+- Performing a Vector Search query: Notably `Vector Search queries <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__ have a dedicated operator within MongoDB’s `aggregation pipeline <https://www.mongodb.com/docs/manual/aggregation/>`__. This means that they can be concatenated with other operations, making it extremely convenient for developers because they don’t need to learn a different language or change context.
 
 Technologies and products used
 ------------------------------
