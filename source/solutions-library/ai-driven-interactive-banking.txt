@@ -136,9 +136,7 @@ generate a more comprehensive and accurate response. This framework is known as
 (|rag|) architecture. |rag| enhances the chatbot’s ability to provide accurate answers by
 combining semantic search with powerful language model generation.
 
-..figure:: /includes/images/industry-solutions/chatbot.mp4
-   :figwidth: 750px
-   :alt: Leafy Bank mock-up chatbot in action
+..video:: /includes/images/industry-solutions/chatbot.mp4
 
 Key Learnings
 -------------
@@ -150,7 +148,7 @@ Key Learnings
   <https://www.mongodb.com/lp/cloud/atlas/try4?webxp579=true&utm_source=google&utm_campaign=search_gs_pl_evergreen_vector-search_product_prosp-brand_gic-null_ww-multi_ps-all_desktop_eng_lead&utm_term=atlas%20vector%20search&utm_medium=cpc_paid_search&utm_ad=p&utm_ad_campaign_id=21100816499&adgroup=162920454394&cq_cmp=21100816499&gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0csk-_Qoo_ueUqYt9NWSXxtFux2OIoLzNPCk8Kuty16s0vQA6R3ykwQEaAqEIEALw_wcB>`_
   and document chunking, MongoDB enables efficient querying of dense legal documents,
   ensuring customers receive accurate, context-rich answers.
-- MongoDB's integration with vector search, |llm|s, and dedicated search infrastructure
+- MongoDB's integration with vector search, |llm| s, and dedicated search infrastructure
   allows financial institutions to scale AI solutions, improving performance and
   responsiveness as customer demands grow.
 
