@@ -188,8 +188,8 @@ kick-start their projects.
    :titlesonly:
 
    Financial Services </solutions-library/financial-services>
-   Insurance </solutions-library/insurance>
    Manufacturing & Motion </solutions-library/manufacturing>
+   Insurance </solutions-library/insurance>
    Media </solutions-library/media>
    Retail </solutions-library/retail>
 
