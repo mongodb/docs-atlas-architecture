@@ -1,0 +1,137 @@
+.. _arch-center-is-real-time-flight-management-solution:  
+  
+=================================================  
+Real-Time Flight Management Solution  
+=================================================  
+  
+.. facet::  
+   :name: genre  
+   :values: tutorial  
+  
+.. contents:: On this page  
+   :local:  
+   :backlinks: none  
+   :depth: 1  
+   :class: singlecol  
+  
+Use MongoDB's real-time capabilities to manage flight operations and minimize the impact of flight delays through proactive management and predictive insights.  
+  
+**Use cases:** `Analytics <https://www.mongodb.com/use-cases/analytics>`__,   
+`IoT <https://www.mongodb.com/use-cases/internet-of-things>`__,   
+`Modernization <https://www.mongodb.com/use-cases/modernization>`__,   
+`Single View <https://www.mongodb.com/use-cases/single-view>`__  
+  
+**Industries:** `Manufacturing & Mobility <https://www.mongodb.com/industries/manufacturing>`__  
+  
+**Products and tools:**    `MongoDB Atlas <https://www.mongodb.com/atlas>`__, `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__,  
+`Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__, `Time Series Collections <https://www.mongodb.com/docs/manual/core/timeseries/>`__  
+  
+**Partners:** `Google Cloud <https://cloud.google.com/mongodb>`__, `Vercel <https://vercel.com/>`__  
+  
+Solution Overview  
+-----------------  
+MongoDB's Real-Time Flight Management solution enables airlines to proactively manage and mitigate costly flight delays through real-time monitoring, predictive insights, and optimized resource allocation. Built on MongoDB's flexible document model and time series collections, and utilizing an event-driven architecture with FastAPI, Google Cloud PubSub, Vertex AI, and Google Cloud Functions, the solution minimizes operational disruptions.  
+  
+**Key Benefits:**  
+- Reduced delay propagation  
+- Optimized resource allocation  
+- Enhanced customer experience  
+- Scalable operations  
+- Real-time decision making  
+  
+Reference Architectures  
+-----------------------  
+  
+MongoDB's Real-Time Flight Management solution implements an event-driven architecture with several key components:  
+  
+**Data Generation and Processing:**  
+- FastAPI microservice  
+- PubSub topics  
+- Cloud Functions  
+  
+**Analytics and Cost Management:**  
+- Vertex AI Cost Calculator  
+- Analytical data creator Cloud Function  
+  
+**Database Structure:**  
+- MongoDB database as a central data store  
+- Specialized collections for tracking costs, simulations, real-time data, and general flight information  
+  
+**Integration Components:**  
+- Change Streams  
+- Google Maps API  
+- Next.js  
+  
+Building the Solution  
+---------------------  
+  
+.. procedure::  
+   :style: normal  
+  
+   .. step:: Prerequisites  
+        
+      - Node.js (v14 or later)  
+      - MongoDB (local or cloud)  
+      - Next.js (v12 or later)  
+      - Google Cloud SDK  
+  
+   .. step:: Set up MongoDB  
+        
+      - Store flight data with a flexible schema  
+      - Implement real-time updates  
+        
+   .. step:: Configure GCP Services  
+        
+      - Deploy application with Google Cloud’s Cloud Run  
+      - Use Pub/Sub and Cloud Functions for real-time data distribution  
+      - Implement Vertex AI for analytics  
+  
+   .. step:: Install Demo Application  
+        
+      - Clone repository and install dependencies   
+      - Configure environment variables  
+      - Set up MongoDB connection  
+      - Run development server  
+  
+   .. step:: (Optional) Deploy the Solution  
+        
+      - Containerize application with Docker  
+      - Set up continuous deployment with Cloud Build  
+  
+Technologies and Products Used  
+------------------------------  
+  
+MongoDB modern, multi-cloud database platform:  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+  
+- `MongoDB Atlas <https://www.mongodb.com/atlas>`__  
+- `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__  
+- `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__  
+- `Time Series Collections <https://www.mongodb.com/docs/manual/core/timeseries/>`__  
+  
+Partner technologies:  
+~~~~~~~~~~~~~~~~~~~~~  
+  
+- `Google Cloud Platform <https://cloud.google.com/mongodb>`__  
+- `Vertex AI <https://cloud.google.com/vertex-ai>`__  
+- `PubSub <https://cloud.google.com/pubsub/>`__  
+- `Cloud Functions <https://cloud.google.com/functions/>`__  
+- `TensorFlow <https://www.tensorflow.org/>`__  
+- `Scikit-learn <https://scikit-learn.org/>`__  
+- `NextJS <https://nextjs.org/>`__  
+- `FastAPI <https://fastapi.tiangolo.com/>`__  
+  
+Authors  
+-------  
+  
+- Dr. Humza Akhtar, MongoDB  
+- Rami Pinto, MongoDB  
+- Sebastian Rojas Arbulu, MongoDB  
+  
+Related Resources  
+-----------------  
+  
+- GitHub Repository: `Leafy-Airline <https://github.com/mongodb-partners/leafy-airline>`__  
+- Blog: `Real-Time Data Analytics for Airlines <https://www.mongodb.com/blog/post/real-time-data-analytics-for-airlines>`__  
+- Video: `Demo: Optimizing Flight Management Systems with Real-Time Data Strategies <https://www.mongodb.com/video/demo-optimizing-flight-management>`__  
+  
