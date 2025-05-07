@@ -1,5 +1,5 @@
 .. toctree::
    :titlesonly:
 
-
    As-you-type suggestions <solutions-library/retail-as-you-type-suggestions.txt> 
+   Inventory Management System <solutions-library/retail-asset-event-driven-inventory>
