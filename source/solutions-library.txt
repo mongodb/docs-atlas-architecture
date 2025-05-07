@@ -75,7 +75,6 @@ kick-start their projects.
             Find out how AI is being used in renewable energy by leveraging MongoDB 
             Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
       
-      
       .. card-group::
          :columns: 2
          :style: extra-compact
@@ -88,7 +87,6 @@ kick-start their projects.
 
             Find out how AI is being used in renewable energy by leveraging MongoDB 
             Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
-
 
       .. App-Driven Analytics
       .. --------------------
