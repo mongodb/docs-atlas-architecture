@@ -82,7 +82,7 @@ processes.
 
 .. video:: https://www.youtube.com/watch?v=N4Fp1_HYr1Q
 
-   This video showcases how MongoDB turbocharges the process of building semantic search and AI-powered applications
+This video showcases how MongoDB turbocharges the process of building semantic search and AI-powered applications
 
 Reference architectures
 -----------------------
