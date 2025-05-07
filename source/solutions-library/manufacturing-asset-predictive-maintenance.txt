@@ -9,10 +9,10 @@ Predictive Maintenance Excellence with MongoDB Atlas
    :values: tutorial
 
 .. meta::
-   :keywords: predictive maintenance, manufacturing, gen AI 
+   :keywords: predictive maintenance, manufacturing, gen AI
    :description: Read how MongoDB Atlas powers predictive maintenance
-   with AI/ML, real-time equipment monitoring, failure prediction, and
-   automated repair plan generation.
+                 with AI/ML, real-time equipment monitoring, failure prediction, and
+                 automated repair plan generation.
    
 .. contents:: On this page
    :local:
@@ -202,8 +202,7 @@ Building the Solution
 .. procedure::
    :style: normal
 
-   .. step:: `Set up MongoDB Atlas environment
-      <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-1-create-a-mongodb-atlas-instance>`__
+   .. step:: `Set up MongoDB Atlas environment <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-1-create-a-mongodb-atlas-instance>`__
 
       - Configure cluster, database and collections for machine
         failures, sensor data (raw and transformed), ML models,
@@ -212,42 +211,40 @@ Building the Solution
       - Set up MongoDB Atlas Search and Vector search indexes for repair
         manuals and maintenance history.
       
-         .. code-block:: javascript
-            :copyable: true
-
-            {  
+        .. code-block:: javascript  
+           :copyable: true  
+  
+           {  
                "fields": [  
-                  {  
-                     "numDimensions": 1024,  
-                     "path": "embeddings",  
-                     "similarity": "euclidean",  
-                     "type": "vector"  
-                  }  
+                   {  
+                       "numDimensions": 1024,  
+                       "path": "embeddings",  
+                       "similarity": "euclidean",  
+                       "type": "vector"  
+                   }  
                ]  
-            }  
+           }  
 
       - Configure Stream Processing for real-time data transformation. 
       
       - Create Atlas Charts dashboards for monitoring and visualization.
 
 
-   .. step:: `Configure AI services integration
-      <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-2-configure-environment-variables>`__
+   .. step:: `Configure AI services integration <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-2-configure-environment-variables>`__
 
       - Select one LLM provider for your implementation:
 
-         - Option 1 - Amazon Bedrock: Configure access to Cohere models
-           for embeddings and completions (Examples of available models:
-           cohere.embed-english-v3 for embeddings, cohere.command-r-10
-           for completions).
+        - Option 1 - Amazon Bedrock: Configure access to Cohere models
+          for embeddings and completions (Examples of available models:
+          cohere.embed-english-v3 for embeddings, cohere.command-r-10
+          for completions).
 
-         - Option 2 - OpenAI: Set up API access and select appropriate
-           model.
+        - Option 2 - OpenAI: Set up API access and select appropriate
+          model.
 
       - Set up Google Cloud Translation API for multilingual support.
 
-   .. step:: `Application setup
-      <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-3-add-some-documents-in-mongodb>`__
+   .. step:: `Application setup <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-3-add-some-documents-in-mongodb>`__
 
       - Configure environment variables including MongoDB connection
         strings, database settings, and required API credentials.
