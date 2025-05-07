@@ -211,12 +211,15 @@ Building the Solution
       Follow the steps listed in this tutorial to `model your documents for vector search <https://www.mongodb.com/developer/products/mongodb/doc-modeling-vector-search/>`__, learn `how to index vector embeddings for vector search <https://www.mongodb.com/docs/atlas/atlas-search/field-types/knn-vector/>`__ and `run vector search queries <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__
 
    .. step:: Pre-requisites and how to deploy.
+
       Follow the `step by step instructions <https://github.com/mongodb-industry-solutions/retail-pricing-search-personaliztion/tree/main?tab=readme-ov-file#prerequisites>`__ to deploy the application locally.
 
    .. step:: Databricks jobs and workflows. 
+
       Follow the Databricks instructions `to create Databricks jobs and workflows with JSON <https://github.com/mongodb-industry-solutions/retail-pricing-search-personaliztion/tree/main/jobs>`__.
 
    .. step:: Databricks notebooks.
+   
       `Catalog indexing, product score, and pricing <https://github.com/mongodb-industry-solutions/retail-pricing-search-personaliztion/tree/main/notebooks>`__.
 
 Key Considerations
