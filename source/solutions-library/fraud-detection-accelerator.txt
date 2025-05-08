@@ -51,7 +51,7 @@ Meanwhile, Amazon SageMaker Canvas empowers business analysts to leverage AI/ML 
 effortlessly, providing a no-code platform that brings the power of advanced analytics to
 their fingertips.
 
-Challenges with legacy fraud systems 
+Challenges with Legacy Fraud Systems 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Incomplete data visibility from legacy systems:** Lack of access to relevant data
