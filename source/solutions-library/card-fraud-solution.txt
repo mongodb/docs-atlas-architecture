@@ -29,7 +29,7 @@ Real-Time Card Fraud Solution Accelerator
 
 Solutions Overview
 ------------------
-In this solution, you'll learn how easy it is to build an ML-based fraud solution using
+In this solution, you'll learn how easy it is to build an |ml|-based fraud solution using
 MongoDB and Databricks. The solution's key features include data completeness through
 integration with external sources, real-time processing for timely fraud detection, AI/ML
 modeling to identify potential fraud patterns, real-time monitoring for instant analysis,
@@ -95,7 +95,7 @@ These include:
    - Training data: Historical transaction data needed for model training is sourced from
    cloud object storage - Amazon S3 or Microsoft Azure Blob Storage.
 
-2. **|service-fullname|:** Serves as the Operational Data Store (ODS) for card transactions and
+2. **MongoDB Atlas:** Serves as the Operational Data Store (ODS) for card transactions and
    processes transactions in real-time. The solution leverages the `MongoDB Atlas
    <https://www.mongodb.com/atlas>`__ aggregation framework to perform in-app analytics
    and process transactions based on pre-configured rules. It also communicates with
