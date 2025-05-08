@@ -1,13 +1,6 @@
 .. toctree::
    :titlesonly:
 
-<<<<<<< HEAD
    Catalog <solutions-library/retail-catalog>
-
-.. Gen AI <solutions-library/retail-gen-ai>
-.. Personalization <solutions-library/retail-personalization>
-=======
    Personalization <solutions-library/retail-personalization>
 .. Gen AI <solutions-library/retail-gen-ai>
-.. Catalog <solutions-library/retail-catalog>
->>>>>>> a041ca2 (Added Github)
