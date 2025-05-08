@@ -89,19 +89,19 @@ Building the Solution
 The functional features listed above can be implemented by a few architectural components.
 These include:
 
-1. **Data sourcing** - Producer apps: The producer mobile app simulates the generation of
-   live transactions. - Legacy data source: The SQL external data source is used for
-   customer demographics. - Training data: Historical transaction data needed for model
-   training is sourced from cloud object storage - Amazon S3 or Microsoft Azure Blob
-   Storage.
+1. **Data sourcing** 
+   - Producer apps: The producer mobile app simulates the generation of live transactions. 
+   - Legacy data source: The SQL external data source is used for customer demographics. 
+   - Training data: Historical transaction data needed for model training is sourced from
+   cloud object storage - Amazon S3 or Microsoft Azure Blob Storage.
 
-2. **{+service-fullname+}:** Serves as the Operational Data Store (ODS) for card transactions and
+2. **|service-fullname|:** Serves as the Operational Data Store (ODS) for card transactions and
    processes transactions in real-time. The solution leverages the `MongoDB Atlas
    <https://www.mongodb.com/atlas>`__ aggregation framework to perform in-app analytics
    and process transactions based on pre-configured rules. It also communicates with
    Databricks for advanced AI/ML-based fraud detection via a native Spark connector.
 
-3. **{+Databricks+}:** Hosts the |ml| platform to complement {+service-fullname+} in-app analytics.
+3. **Databricks:** Hosts the |ml| platform to complement |service-fullname| in-app analytics.
    A fraud detection algorithm used in this example is a notebook inspired by {+Databricks+}'s
    fraud framework MLFlow, and it has been used to manage the MLOps for managing this
    model. The trained model is exposed as a REST endpoint.
@@ -130,12 +130,14 @@ transaction information at a predefined rate (transactions/sec, which is configu
 
 MongoDB for Event-Driven, Shift-Left Analytics Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-{+service-fullname+} is a modern, multi-cloud database platform that offers several features that
-make it the perfect choice as the datastore for card fraud transaction classification. It
-supports flexible data models and can handle various types of data, high scalability to meet demand, advanced security features to
-support compliance with regulatory requirements, |real-time| data processing for fast and
-accurate fraud detection, and {+cloud database+} to store data closer to customers and
-comply with local data privacy regulations.
+|service-fullname| is a modern, multi-cloud database platform that offers several features
+that make it the perfect choice as the datastore for card fraud transaction
+classification. It supports flexible data models and can handle various types of data,
+high scalability to meet demand, advanced security features to support compliance with
+regulatory requirements, |real-time| data processing for fast and accurate fraud
+detection, and `cloud-based deployment
+<https://www.mongodb.com/blog/post/introducing-mongodb-spark-connector-version-10-1>`__ to
+store data closer to customers and comply with local data privacy regulations.
 
 The `MongoDB Spark Streaming Connector
 <https://www.mongodb.com/blog/post/introducing-mongodb-spark-connector-version-10-1>`__
@@ -145,12 +147,12 @@ translates MongoDB data into Spark data frames and supports real-time Spark stre
 
 The `App Services features <https://www.mongodb.com/atlas/app-services>`__ offered by
 MongoDB allow for real-time processing of data through change streams and triggers.
-Because {+service-fullname+} is capable of storing and processing various types of data as well
+Because |service-fullname| is capable of storing and processing various types of data as well
 as streaming capabilities and trigger functionality, it is well suited for use in an
 event-driven architecture.
 
-This solution uses the rich connector ecosystem of `MongoDB and App Services
-<https://www.mongodb.com/docs/atlas/app-services/triggers>`__ to process transactions in
+This solution uses the rich connector ecosystem of :atlas:`MongoDB and App Services
+</atlas/app-services/triggers/>`__ to process transactions in
 real-time. The App Service Trigger function is used by invoking a REST service call to an
 AI/ML model hosted through the Databricks MLflow framework.
 
