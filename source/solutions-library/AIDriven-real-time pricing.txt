@@ -180,8 +180,8 @@ complexity in data management.
 
 For more-detailed instructions on how to build your own dynamic
 microservice, please refer to our blog post,`Building a Dynamic Pricing
-Microservice with Vertex AI and MongoDB Atlas.
-<https://www.mongodb.com/developer/products/mongodb/dynamic-pricing-microservice-vertexai/>`__
+Microservice with Vertex AI and MongoDB Atlas
+<https://www.mongodb.com/developer/products/mongodb/dynamic-pricing-microservice-vertexai/>`__.
 
 Key Learnings
 -------------
