@@ -181,5 +181,4 @@ kick-start their projects.
    Media </solutions-library/media>
 
 .. Healthcare  <solutions-library/healthcare>
-.. Retail </solutions-library/retail>
 .. Telco </solutions-library/telco>
