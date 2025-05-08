@@ -56,7 +56,8 @@ kick-start their projects.
             :icon-alt: Atlas general_content_play icon
 
             Find out how AI is being used in renewable energy by leveraging MongoDB 
-            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
+            Atlas Vector Search to drive efficiency through real-time, audio diagnostics.
+  
 
       Gen AI 
       ------
@@ -195,7 +196,5 @@ kick-start their projects.
    Media </solutions-library/media>
    Retail </solutions-library/retail>
 
-
 .. Healthcare  <solutions-library/healthcare>
-.. Retail </solutions-library/retail>
 .. Telco </solutions-library/telco>
