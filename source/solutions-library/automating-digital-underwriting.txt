@@ -73,7 +73,7 @@ in-transit and on-site.
 Reference Architecture
 ----------------------
 
-.. figure:: /includes/images/industry-solutions/demo-model.svg
+.. figure:: /includes/images/industry-solutions/Writing Fig1.svg
    :figwidth: 1200px
    :alt: An illustration shows a reference architecture
 
@@ -90,7 +90,7 @@ This example builds out three MongoDB collections, as well two
 materialized views. The full Hackloade data model which defines all the
 MongoDB objects within this example can be found on GitHub.
 
-.. figure:: /includes/images/industry-solutions/demo-model.svg
+.. figure:: /includes/images/industry-solutions/Writing Fig2.svg
    :figwidth: 1200px
    :alt: An illustration shows the MongoDB Data model approach
 
@@ -137,7 +137,7 @@ of your data with MongoDB Charts.
       - Step 2: `Setup a daily cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DailyCronJob.md>`__  
       - Step 3: `Setup a monthly cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/MonthlyCronJob.md>`__  
   
-      .. figure:: /includes/images/industry-solutions/demo-model.svg  
+      .. figure:: /includes/images/industry-solutions/Writing Fig3.svg  
          :figwidth: 1200px  
          :alt: An illustration shows how to create a data processing pipeline  
   
@@ -161,7 +161,7 @@ of your data with MongoDB Charts.
       - Step 5: `Setup the Databricks connection <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DatabricksConfiguration.md>`__  
       - Step 6: `Write the machine learning model prediction to MongoDB <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Prediction.md>`__  
   
-      .. figure:: /includes/images/industry-solutions/demo-model.svg  
+      .. figure:: /includes/images/industry-solutions/Writing Fig4.svg  
          :figwidth: 1200px  
          :alt: Automating Calculations with Machine Learning Model  
   

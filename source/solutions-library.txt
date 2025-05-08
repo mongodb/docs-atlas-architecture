@@ -110,9 +110,9 @@ kick-start their projects.
        App-Driven Analytics
        --------------------
 
-         .. card-group::
-         :columns: 2
-         :style: extra-compact
+       .. card-group::
+          :columns: 2
+          :style: extra-compact
 
          .. card::
             :headline: Automating digital underwriting with Machine Learning
