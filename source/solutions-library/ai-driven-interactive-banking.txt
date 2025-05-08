@@ -88,7 +88,7 @@ extend, and iterate their applications to seize emerging technological opportuni
 Building the Solution
 ---------------------
 
-1. Document preprocessing and chunking
+1. Document Preprocessing and Chunking
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The initial step involves processing and transforming the text-based unstructured data
@@ -112,14 +112,14 @@ sample scenario, we are using `SuperDuper <https://superduper.io/>`_ (an open-so
 Python framework that integrates AI models and workflows directly with MongoDB) as the
 process orchestrator, enabling more flexible and scalable custom enterprise AI solutions.
 
-2. Vector search and querying
+1. Vector Search and Querying
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After we’ve stored both the chunks and their embeddings in MongoDB, we can begin
 leveraging `MongoDB Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`_ for semantic querying.
 
-3. Building the chatbot UI
+3. Building the Chatbot UI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The next step involves building an application—in our case, an interactive chatbot. This
@@ -161,13 +161,13 @@ Key Learnings
 Technologies and Products Used
 ------------------------------
 
-MongoDB developer data platform:
+MongoDB Developer Data Platform:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas Database <https://www.mongodb.com/products/platform/atlas-database>`_
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_
 
-Partner technologies:
+Partner Technologies:
 ~~~~~~~~~~~~~~~~~~~~~
 
 - `Amazon Bedrock <https://aws.amazon.com/bedrock>`_

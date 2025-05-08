@@ -154,7 +154,7 @@ Below you will find an overview of those steps taken:
 4. Set up the `Amazon SageMaker
    <https://docs.aws.amazon.com/sagemaker/latest/dg/onboard-quick-start.html>`__ domain.
 
-MongoDB Atlas as the operational data store
+MongoDB Atlas as the Operational Data Store
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The MongoDB Atlas developer data platform is an integrated suite of data services centered
 on a `cloud database <https://www.mongodb.com/cloud-database>`__ designed to accelerate
@@ -167,7 +167,7 @@ most current and relevant information available. With MongoDB Atlas, financial
 institutions gain an unrivaled advantage in their fight against fraud, unleashing the full
 potential of operational data to create a robust and proactive defense system.
 
-Amazon SageMaker Canvas as an AI/ML solution
+Amazon SageMaker Canvas as an AI/ML Solution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Amazon SageMaker Canvas revolutionizes the way business analysts leverage AI/ML solutions
 by offering a powerful no-code platform. Traditionally, implementing AI/ML models required
