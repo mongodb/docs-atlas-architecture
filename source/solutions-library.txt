@@ -145,7 +145,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-driven real-time pricing with MongoDB and Vertex AI
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/media-personalization/
+            :url: https://deploy-preview-199--docs-atlas-architecture.netlify.app/solutions-library/AIDriven-real-time%20pricing/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
