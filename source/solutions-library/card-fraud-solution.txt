@@ -56,8 +56,6 @@ Existing Challenges:
   higher overhead.
 
 .. video:: https://www.youtube.com/watch?v=avE8TOWVw0M
-.. figure:: [Path to architecture diagram]
-   :figwidth: 750px
 
 Reference Architecture
 ----------------------
@@ -97,14 +95,14 @@ These include:
    training is sourced from cloud object storage - Amazon S3 or Microsoft Azure Blob
    Storage.
 
-2. **MongoDB Atlas:** Serves as the Operational Data Store (ODS) for card transactions and
+2. **{+service-fullname+}:** Serves as the Operational Data Store (ODS) for card transactions and
    processes transactions in real-time. The solution leverages the `MongoDB Atlas
    <https://www.mongodb.com/atlas>`__ aggregation framework to perform in-app analytics
    and process transactions based on pre-configured rules. It also communicates with
    Databricks for advanced AI/ML-based fraud detection via a native Spark connector.
 
-3. **Databricks:** Hosts the AI/ML platform to complement MongoDB Atlas in-app analytics.
-   A fraud detection algorithm used in this example is a notebook inspired by Databrick's
+3. **{+Databricks+}:** Hosts the |ml| platform to complement {+service-fullname+} in-app analytics.
+   A fraud detection algorithm used in this example is a notebook inspired by {+Databricks+}'s
    fraud framework MLFlow, and it has been used to manage the MLOps for managing this
    model. The trained model is exposed as a REST endpoint.
 
@@ -121,24 +119,22 @@ sources, ensuring data completeness.
 Additionally, the proposed event-driven architecture provides the following benefits:
 
 - Real-time transaction data unification, which allows for the collection of card
-transaction event data such as transaction amount, location, time of the transaction,
-payment gateway information, and payment device information in real time. 
+  transaction event data such as transaction amount, location, time of the transaction,
+  payment gateway information, and payment device information in real time. 
 
 - Helps re-train monitoring models based on live event activity to combat fraud as it
-  happens. The producer
-application for the demonstration is a Python script that generates live transaction
-information at a predefined rate (transactions/sec, which is configurable).
+  happens. 
+  
+The producer application for the demonstration is a Python script that generates live
+transaction information at a predefined rate (transactions/sec, which is configurable).
 
 MongoDB for Event-Driven, Shift-Left Analytics Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-MongoDB Atlas is a modern, multi-cloud database platform that offers several features that
+{+service-fullname+} is a modern, multi-cloud database platform that offers several features that
 make it the perfect choice as the datastore for card fraud transaction classification. It
-supports `flexible data models
-<https://www.mongodb.com/resources/basics/databases/data-modeling>`__ and can handle
-various types of data, high scalability to meet demand, advanced security features to
-support compliance with regulatory requirements, real-time data processing for fast and
-accurate fraud detection, and `cloud-based deployment
-<https://www.mongodb.com/products/platform/cloud>`__ to store data closer to customers and
+supports flexible data models and can handle various types of data, high scalability to meet demand, advanced security features to
+support compliance with regulatory requirements, |real-time| data processing for fast and
+accurate fraud detection, and {+cloud database+} to store data closer to customers and
 comply with local data privacy regulations.
 
 The `MongoDB Spark Streaming Connector
@@ -149,7 +145,7 @@ translates MongoDB data into Spark data frames and supports real-time Spark stre
 
 The `App Services features <https://www.mongodb.com/atlas/app-services>`__ offered by
 MongoDB allow for real-time processing of data through change streams and triggers.
-Because MongoDB Atlas is capable of storing and processing various types of data as well
+Because {+service-fullname+} is capable of storing and processing various types of data as well
 as streaming capabilities and trigger functionality, it is well suited for use in an
 event-driven architecture.
 
