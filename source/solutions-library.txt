@@ -198,4 +198,5 @@ kick-start their projects.
 
 
 .. Healthcare  <solutions-library/healthcare>
+.. Retail </solutions-library/retail>
 .. Telco </solutions-library/telco>
