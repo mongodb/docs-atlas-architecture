@@ -1,7 +1,7 @@
 .. _arch-center-is-digital-underwriting-machinelearning-solution:
   
 =====================================================  
-Automating digital underwriting with Machine Learning  
+Automating Digital Underwriting with Machine Learning  
 =====================================================
   
 .. facet::  

@@ -107,8 +107,8 @@ kick-start their projects.
             capabilities by integrating MongoDB Atlas Vector Search,
             Superduper.io, and LLMs. 
 
-      .. App-Driven Analytics
-         --------------------
+       App-Driven Analytics
+       --------------------
 
          .. card-group::
          :columns: 2
@@ -122,7 +122,6 @@ kick-start their projects.
 
             Leverage Machine Learning with real-time data processing and
             automate digital underwriting 
-
 
    .. tab:: Media
       :tabid: media
