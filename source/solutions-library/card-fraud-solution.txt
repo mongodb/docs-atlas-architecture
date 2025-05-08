@@ -6,7 +6,7 @@ Real-Time Card Fraud Solution Accelerator
 
 .. meta:: 
    :keywords: [Keywords related to the solution]
-   :description: Real-time AI/ML fraud detection for Financial Services using MongoDB and 
+   :description: Real-time AI/|ml| fraud detection for Financial Services using MongoDB and 
    Databricks. Ensure data completeness and instant fraud analysis.
 
 .. contents:: On this page
@@ -31,7 +31,7 @@ Solutions Overview
 ------------------
 In this solution, you'll learn how easy it is to build an |ml|-based fraud solution using
 MongoDB and Databricks. The solution's key features include data completeness through
-integration with external sources, real-time processing for timely fraud detection, AI/ML
+integration with external sources, real-time processing for timely fraud detection, AI/|ml|
 modeling to identify potential fraud patterns, real-time monitoring for instant analysis,
 model observability for full visibility into fraud behaviors, flexibility, scalability,
 and robust security measures. The system aims to facilitate ease of operation and foster
@@ -59,7 +59,7 @@ Existing Challenges:
 
 Reference Architecture
 ----------------------
-The ML-based fraud solution is suitable for industries where real-time processing, AI/ML
+The |ml|-based fraud solution is suitable for industries where real-time processing, AI/|ml|
 modeling, model observability, flexibility, and collaboration between teams are absolutely
 essential. The system ensures up-to-date and secure operations through end-to-end CI/CD
 pipelines. Relevant Industries include:
@@ -99,7 +99,7 @@ These include:
    processes transactions in real-time. The solution leverages the `MongoDB Atlas
    <https://www.mongodb.com/atlas>`__ aggregation framework to perform in-app analytics
    and process transactions based on pre-configured rules. It also communicates with
-   Databricks for advanced AI/ML-based fraud detection via a native Spark connector.
+   Databricks for advanced AI/|ml|-based fraud detection via a native Spark connector.
 
 3. **Databricks:** Hosts the |ml| platform to complement |service-fullname| in-app analytics.
    A fraud detection algorithm used in this example is a notebook inspired by {+Databricks+}'s
@@ -154,17 +154,17 @@ event-driven architecture.
 This solution uses the rich connector ecosystem of :atlas:`MongoDB and App Services
 </atlas/app-services/triggers/>`__ to process transactions in
 real-time. The App Service Trigger function is used by invoking a REST service call to an
-AI/ML model hosted through the Databricks MLflow framework.
+AI/|ml| model hosted through the Databricks MLflow framework.
 
 The example solution manages rules-based fraud prevention by storing user-defined payment
 limits and information in a user settings collection, as shown. This includes maximum
 dollar limits per transaction, the number of transactions allowed per day, and other
 user-related details. By filtering transactions based on these rules before invoking
-expensive AI/ML models, the overall cost of fraud prevention is reduced.
+expensive AI/|ml| models, the overall cost of fraud prevention is reduced.
 
-Databricks as an AI/ML Ops Platform
+Databricks as an AI/|ml| Ops Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Databricks is a powerful AI/ML platform to develop models for identifying fraudulent
+Databricks is a powerful AI/|ml| platform to develop models for identifying fraudulent
 transactions. One of the key features of Databricks is the support of real-time analytics.
 As discussed above, real-time analytics is a key feature of modern fraud detection
 systems.
@@ -175,7 +175,7 @@ at scale, making it easier to manage complex machine learning workflows. MLFlow 
 model observability, which allows for easy tracking of model performance and debugging.
 This includes access to model metrics, logs, and other relevant data, which can be used to
 identify issues and improve the accuracy of the model over time. Additionally, these
-features can help in the design of modern fraud detection systems using AI/ML.
+features can help in the design of modern fraud detection systems using AI/|ml|.
 
 Technologies and Products Used
 ------------------------------
