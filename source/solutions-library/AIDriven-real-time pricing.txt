@@ -179,7 +179,7 @@ complexity in data management.
    Figure 2: Data structure within the events collection representing a simulated user view of MongoDB white socks, including price information.
 
 For more-detailed instructions on how to build your own dynamic
-microservice, please refer to our blog post,`Building a Dynamic Pricing
+microservice, please refer to our blog post, `Building a Dynamic Pricing
 Microservice with Vertex AI and MongoDB Atlas
 <https://www.mongodb.com/developer/products/mongodb/dynamic-pricing-microservice-vertexai/>`__.
 
