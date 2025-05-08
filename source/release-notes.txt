@@ -20,8 +20,8 @@ v20250411
 
 **Released 11 July, 2025**
 
-- :ref:`arch-center-landing-zone` page: Minor update to add that the primary is 
-  mapped *randomly* to a zone, and link to new guidance pages. 
+- :ref:`arch-center-landing-zone` page: Minor content reorganization for clarity, and updates to add that the primary is 
+  mapped *randomly* to a zone, and link to new guidance pages.
 - :ref:`arch-center-hierarchy` page: Adds organization creation example for Terraform. 
 - :ref:`arch-center-network-security` page: Minor update to mention limitation for changing the number of service attachments 
   and recommendation to use the DNS seedlist connection string. 
@@ -33,7 +33,7 @@ v20250411
 - Adds the following new pages:
  
   - :ref:`arch-center-migration`: Describes how to migrate data from your on-premises MongoDB deployments to |service|.
-  - :atlas:`Operational Readiness Checklist </architecture/operational-readiness-checklist/>`: Checklist to help you prepare a {+cluster+} for deployment.
+  - :ref:`arch-center-checklist`: Checklist to help you prepare a {+cluster+} for deployment.
   - :ref:`arch-center-paradigms`: Introduces and compares different |service| deployment paradigms, which are described with use-cases in the following new pages:
 
     - :ref:`arch-center-paradigms-single` 
