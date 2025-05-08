@@ -84,6 +84,18 @@ kick-start their projects.
             Real-time AI/ML fraud detection for Financial Services using MongoDB and 
             Databricks. Ensure data completeness and instant fraud analysis.
 
+         .. card::
+            :headline: Vector Search Fraud Prevention Accelerator
+            :url: /solutions-library/fin-services-fraud-prevention/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Combine real-time analytics with semantic search by integrating MongoDB Atlas
+            Vector Search with OpenAI-generated embeddings to detect fraud that
+            traditional methods miss.
+
+         
+
       
 
       .. App-Driven Analytics

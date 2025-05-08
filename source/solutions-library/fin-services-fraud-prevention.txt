@@ -3,3 +3,5 @@
 
    Fraud Detection Accelerator <solutions-library/fraud-detection-accelerator>
    Card Fraud Solution <solutions-library/card-fraud-solution>
+   Fraud Prevention with Vector Search <solutions-library/fin-services-fraud-prevention>
+   
