@@ -152,7 +152,7 @@ as streaming capabilities and trigger functionality, it is well suited for use i
 event-driven architecture.
 
 This solution uses the rich connector ecosystem of :atlas:`MongoDB and App Services
-</atlas/app-services/triggers/>` to process transactions in
+</app-services/triggers/>` to process transactions in
 real-time. The App Service Trigger function is used by invoking a REST service call to an
 AI/|ml| model hosted through the Databricks MLflow framework.
 
