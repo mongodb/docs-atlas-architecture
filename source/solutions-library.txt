@@ -75,6 +75,17 @@ kick-start their projects.
             SageMaker Canvas. Leverage real-time data and AI for stronger defenses against
             cybercrime.
 
+         .. card::
+            :headline: Card Fraud Solution Accelerator
+            :url: /solutions-library/card-fraud-solution/
+            :icon: industry_credit_card
+            :icon-alt: Atlas industry_credit_card icon
+
+            Real-time AI/ML fraud detection for Financial Services using MongoDB and 
+            Databricks. Ensure data completeness and instant fraud analysis.
+
+      
+
       .. App-Driven Analytics
       .. --------------------
 

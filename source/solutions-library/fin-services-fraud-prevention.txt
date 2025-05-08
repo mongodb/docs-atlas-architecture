@@ -2,3 +2,4 @@
    :titlesonly:
 
    Fraud Detection Accelerator <solutions-library/fraud-detection-accelerator>
+   Card Fraud Solution <solutions-library/card-fraud-solution>
