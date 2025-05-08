@@ -146,18 +146,33 @@ kick-start their projects.
             user experiences by using Atlas Database, 
             Atlas Vector Search, and Pymongo. 
 
-     
-.. .. tab:: Retail
-   .. :tabid: retail
+      .. App-Driven Analytics
+      .. --------------------
 
-   .. Catalog
-   .. -------
+   .. tab:: Retail
+      :tabid: retail
 
-   .. Gen AI
-   .. ------
+      Catalog
+      -------
 
-   .. Personalization
-   .. ---------------
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Building an event-driven inventory management system
+            :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Learn about how to build a real-time, event-driven inventory
+            management system using MongoDB Atlas.
+
+      .. Gen AI
+      .. ------
+
+      .. Personalization
+      .. ---------------
 
 .. .. tab:: Telco
    .. :tabid: Telco
@@ -179,6 +194,8 @@ kick-start their projects.
    Manufacturing & Motion </solutions-library/manufacturing>
    Insurance </solutions-library/insurance>
    Media </solutions-library/media>
+   Retail </solutions-library/retail>
+
 
 .. Healthcare  <solutions-library/healthcare>
 .. Telco </solutions-library/telco>
