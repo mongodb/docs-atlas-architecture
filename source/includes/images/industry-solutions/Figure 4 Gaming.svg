@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<svg width="1920" height="960" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0.0 0.0 1920.0 960.0" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10">
-=======
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0.0 0.0 1920.0 960.0" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10">
->>>>>>> d336cf9 (Streamline global gaming management first draft with IOT)
   <clipPath id="g277603e9e84_0_219.0">
     <path d="m0 0l1920.0 0l0 960.0l-1920.0 0l0 -960.0z" clip-rule="nonzero"/>
   </clipPath>
