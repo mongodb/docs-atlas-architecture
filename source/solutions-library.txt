@@ -128,7 +128,6 @@ kick-start their projects.
             Seamless game data management with MongoDB Atlas including
             global profiles, records and real-time dashboards.  
       
-      
       Gen AI
       ------
 
