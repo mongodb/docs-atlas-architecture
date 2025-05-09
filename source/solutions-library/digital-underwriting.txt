@@ -22,8 +22,8 @@ digital underwriting.
 `Analytics <https://www.mongodb.com/use-cases/analytics>`__
 
 **Industries:** `Insurance
-<https://www.mongodb.com/industries/manufacturing>`__,`Financial
-Services <https://www.mongodb.com/industries/financial-services>`__,
+<https://www.mongodb.com/industries/manufacturing>`__,
+`Financial Services <https://www.mongodb.com/industries/financial-services>`__,
 `Healthcare <https://www.mongodb.com/industries/healthcare>`__
 
 **Products and tools:** `Time Series <https://www.mongodb.com/time-series>`__,
@@ -96,7 +96,7 @@ materialized views. The full Hackloade data model which defines all the
 MongoDB objects within this example can be found on `GitHub
 <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Collections/usageBasedInsurance_HackoladeModel.json>`__,.
 
-.. figure:: /includes/images/industry-solutions/Writing Fig5.png
+.. figure:: /includes/images/industry-solutions/Writing fig5.png
    :figwidth: 1200px
    :alt: An illustration shows the MongoDB Data model approach
 
@@ -220,7 +220,7 @@ Key Considerations
 - Leveraging aggregation pipelines for `cron expressions
   <https://www.mongodb.com/docs/atlas/triggers/cron-expressions/>`__ :
   refer to steps 2 or 3 in the
-  `https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance>`__.
+  `GitHub repo <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance>`__.
 - Serving machine learning models with MongoDB Atlas data: refer to step 4
   in the `GitHub repo
   <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance>`__.
