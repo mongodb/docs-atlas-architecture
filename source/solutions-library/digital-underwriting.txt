@@ -132,43 +132,6 @@ data with MongoDB Charts.
       a monthly basis and places it in a materialized view collection named
       ‘customerTripMonthly’ (3).
 
-      See the following Github repos to create the data processing pipeline:
-
-      -Step 1 `Load the sample data <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/LoadingtheSampleData.md>`__
-      -Step 2 `Setup a daily cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DailyCronJob.md>`__
-      -Step 3 `Setup a monthly cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/MonthlyCronJob.md>`__
-
-      .. figure:: /includes/images/industry-solutions/Writing Fig3.svg
-         :figwidth: 1200px
-         :alt: An illustration shows on how to create a data processing pipeline
-
-        Figure 3: Creating a data processing pipeline
-
-   .. step::  Automating insurance premium calculations with a machine learning model
-
-      The decision-processing component of this example consists of a
-      scheduled trigger that collects the necessary data and posts the
-      payload to a Databricks ML Flow API endpoint. (The model was
-      previously trained using the MongoDB Spark Connector on
-      Databricks.) It then waits for the model to respond with a
-      calculated premium based on the miles driven by a given customer
-      in a month. Then the scheduled trigger updates the
-      ‘customerPolicy’ collection to append a new monthly premium
-      calculation as a new subdocument within the ‘monthlyPremium’
-      array.
-
-      See the following Github repos to create the data processing pipeline:
-
-      -Step 4 `Setup a calculate premium trigger <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/CalculatePremiumTrigger.md>`__
-      -Step 5 `Setup the Databricks connection <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DatabricksConfiguration.md>`__
-      -Step 6 `Write the machine learning model prediction to MongoDB <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Prediction.md>`__
-
-      .. figure:: /includes/images/industry-solutions/Writing Fig4.svg
-         :figwidth: 1200px
-         :alt: Automating Calculations with Machine Learning Model
-
-        Figure 4: Automating Calculations with Machine Learning Model
-
    .. step:: Near-real-time insights of insurance premium changes over time
 
       Once the monthly premium calculations have been appended, it’s
@@ -192,7 +155,6 @@ MongoDB modern, multi-cloud database platform:
   -`Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
   -`Functions <https://www.mongodb.com/docs/atlas/app-services/functions/>`__
 
-
 Partner technologies:
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -211,7 +173,6 @@ Key Considerations
   refer to step in the GitHub repo.
 - Visualizing near-real-time insights of continuously changing model
   results: refer to the Bonus step in the GitHub repo.
-
 
 Author
 ------
