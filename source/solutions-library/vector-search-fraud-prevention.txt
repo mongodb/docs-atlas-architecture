@@ -1,6 +1,8 @@
-===============================================
-Vector Search Fraud Prevention Accelerator
-===============================================
+=======================================================
+Fraud prevention and AML using Vector Search and OpenAI
+=======================================================
+
+.. Pending: add use cases, fix broken image, add Snooty stuff. See ya tomorrow!
 
 .. meta:: 
    :keywords: [Keywords related to the solution]
@@ -13,10 +15,16 @@ Vector Search Fraud Prevention Accelerator
    :depth: 1
    :class: singlecol
 
-- **Use cases:** 
-- **Industries:** 
-- **Products and tools:** 
-- **Partners:** 
+- **Use cases:** `Fraud Prevention
+  <https://www.mongodb.com/solutions/industries/financial-services/fraud-prevention>`__,
+  `Gen AI <https://www.mongodb.com/basics/generative-ai>`__
+- **Industries:** `Insurance <https://www.mongodb.com/industries/insurance>`__, `Financial
+  Services <https://www.mongodb.com/industries/financial-services>`__, `Retail
+  <https://www.mongodb.com/industries/retail>`__
+- **Products and tools:** `Atlas <https://www.mongodb.com/atlas/database>`__, `Atlas
+  Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__,
+  `Change Streams
+  <https://www.mongodb.com/resources/products/capabilities/change-streams>`__
 
 Solution Overview
 ------------------
@@ -168,7 +176,7 @@ Given the broad and evolving nature of fraud and AML, these areas typically requ
 multiple methods and a multi-modal approach. As such, a unified risk data platform offers
 several advantages for organizations aiming to build effective solutions.
 
-.. figure:: source/includes/images/industry-solutions/aml-fraud-detection-achitecture.png
+.. figure:: /includes/images/industry-solutions/aml-fraud-detection-achitecture.png
     :alt: Figure 2: High level architecture of a fraud detection/AML system
 
 This `GitHub repository
