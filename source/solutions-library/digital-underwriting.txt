@@ -148,9 +148,9 @@ data with MongoDB Charts.
   
       - Step 3 `Setup a monthly cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/MonthlyCronJob.md>`__  
   
-       .. figure:: /includes/images/industry-solutions/Writing Fig3.svg  
-          :figwidth: 1200px  
-          :alt: An illustration shows on how to create a data processing pipeline  
+      .. figure:: /includes/images/industry-solutions/Writing Fig3.svg  
+         :figwidth: 1200px  
+         :alt: An illustration shows on how to create a data processing pipeline  
   
           Figure 3: Creating a data processing pipeline  
   
@@ -175,9 +175,9 @@ data with MongoDB Charts.
   
       - Step 6 `Write the machine learning model prediction to MongoDB <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Prediction.md>`__  
   
-       .. figure:: /includes/images/industry-solutions/Writing Fig4.svg  
-          :figwidth: 1200px  
-          :alt: Automating Calculations with Machine Learning Model  
+      .. figure:: /includes/images/industry-solutions/Writing Fig4.svg  
+         :figwidth: 1200px  
+         :alt: Automating Calculations with Machine Learning Model  
   
           Figure 4: Automating Calculations with Machine Learning Model  
 
