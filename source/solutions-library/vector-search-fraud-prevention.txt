@@ -1,5 +1,5 @@
 =======================================================
-Fraud prevention and AML using Vector Search and OpenAI
+Fraud prevention and AML using {+avs+} and OpenAI
 =======================================================
 
 .. Pending: add use cases, fix broken image, add Snooty stuff. See ya tomorrow!
@@ -36,7 +36,7 @@ of tackling these issues, including rule-based systems and machine learning meth
 limited by feature engineering overhead to keep the models relevant. This results in
 obsolete updates and delayed enhancements.
 
-Vector search can potentially improve `fraud detection
+{+avs+} can potentially improve `fraud detection
 <https://www.mongodb.com/solutions/industries/financial-services/fraud-prevention>`__ and
 AML efforts by addressing these limitations, representing the next step in the evolution
 of machine learning for combating fraud. Any organization that is already benefiting from
@@ -64,7 +64,7 @@ their operational data, metadata, and vector embeddings on `MongoDB Atlas
 Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__ to index
 and retrieve data for gen AI applications.
 
-The combination of real-time analytics and vector search offers a powerful synergy that
+The combination of real-time analytics and {+avs+} offers a powerful synergy that
 enables organizations to discover insights that are otherwise elusive with traditional
 methods. MongoDB facilitates this through {+avs+} integrated with
 OpenAI-generated embeddings as illustrated in Figure 1 below.
@@ -105,18 +105,18 @@ type, amount) and unstructured or semi-structured data (transaction description,
 business description of the person or company, relationship with the recipient, etc.) and
 create a written report to provide contextual for the transactions being examined.
 
-An anti-fraud/AML application that leverages vector search can perform a similar action
+An anti-fraud/AML application that leverages {+avs+} can perform a similar action
 easily by consolidating the data (quantitative and qualitative) to construct a textual
 narrative (that can also be supplemented with `LLMs
 <https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`__).
 The constructed narrative can then be used for the vector embedding and subsequently
-perform the semantic search (via vector search) for similar transactions or cases.
+perform the semantic search (via {+avs+}) for similar transactions or cases.
 
 Fraud Detection and AML Workflow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As shown in Figure 1, incoming transaction fraud and AML aggregated text are used to
-generate embeddings using an embedding model (OpenAI) first and then analyzed using Atlas
-Vector Search based on the percentage of previous transactions with similar
+generate embeddings using an embedding model (OpenAI) first and then analyzed using
+{+avs+} based on the percentage of previous transactions with similar
 characteristics that were flagged for suspicious activity.
 
 Outcome of Transaction Processing
@@ -134,7 +134,7 @@ With the use of {+avs+} and the relevant embeddings, organizations can:
 
 1. **Improve fraud detection accuracy:** {+avs+} captures complex,
    high-dimensional patterns that rule-based and ML models often overlook, leading to more
-   precise fraud detection. By analyzing the full context of transactions, vector search
+   precise fraud detection. By analyzing the full context of transactions, {+avs+}
    can also better uncover subtle fraud signals, improving the detection of sophisticated
    schemes that simpler models might miss.
 
@@ -187,7 +187,7 @@ to combat fraud and uphold sanctions and AML laws. The demo includes an API that
 sanctioned customers and also apply an innovative process that constructs a textual
 narrative from quantitative and qualitative data to flag both AML and fraudulent
 transactions. These processes include AI embeddings as well as MongoDB functionalities
-such as full-text and vector search, Atlas App Services, and others.
+such as full-text and {+avs+}, Atlas App Services, and others.
 
 Key Learnings
 -------------
