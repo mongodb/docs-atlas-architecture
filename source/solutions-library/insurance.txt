@@ -2,5 +2,5 @@
    :titlesonly:
 
    Gen AI <solutions-library/insurance-gen-ai>
+   App-Driven Analytics <solutions-library/insurance-app-driven-analytics>
    
-.. App-Driven Analytics <solutions-library/insurance-app-driven-analytics>
