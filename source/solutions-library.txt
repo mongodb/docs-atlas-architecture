@@ -92,14 +92,24 @@ kick-start their projects.
 
             Combine real-time analytics with semantic search by integrating MongoDB Atlas
             Vector Search with OpenAI-generated embeddings to detect fraud that
-            traditional methods miss.
-
-         
-
-      
+            traditional methods miss.      
 
       .. App-Driven Analytics
       .. --------------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: MongoDB as the Open Finance Data Store
+            :url: /solutions-library/open-finance-data-store/
+            :icon: industry_finance
+            :icon-alt: Atlas industry_finance icon
+
+            MongoDB powers open finance with flexible data integration, built-in security,
+            and scalability—enabling seamless, compliant, and personalized financial
+            services.
 
       .. Modernization
       .. -------------
