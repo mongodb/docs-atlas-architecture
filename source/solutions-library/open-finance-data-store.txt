@@ -81,6 +81,7 @@ approach:
   - **Structure**:
   
     .. code-block:: 
+        
         {
         "_id": { "$oid": "unique_id" }, "UserName": "string", "BearerToken": "string",
         "TokenDates": {
@@ -99,6 +100,7 @@ approach:
   - **Structure**:
   
     .. code-block:: 
+        
         {
         "_id": { "$oid": "unique_id" }, "AccountId": "string", "AccountBank": "string",
         "AccountStatus": "string", "AccountType": "string", "AccountBalance": "number",
@@ -121,6 +123,7 @@ approach:
   - **Structure**:
     
     .. code-block:: jso
+        
         {
         "_id": { "$oid": "unique_id" }, "ProductId": "string", "ProductBank": "string",
         "ProductStatus": "string", "ProductType": "string", "ProductAmount": "number",
