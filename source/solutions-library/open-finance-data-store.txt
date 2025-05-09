@@ -35,7 +35,7 @@ By leveraging MongoDB, financial institutions can accelerate innovation, offer
 personalized financial insights, and seamlessly adapt to evolving regulations—all without
 the complexity of traditional relational databases.
 
-.. figure:: source/solutions-library/open-finance-data-store.txt
+.. figure:: /includes/images/industry-solutions/open-finance.gif
 
 Ref Architecture
 ---------------------
@@ -59,7 +59,7 @@ from different banks. From here, Leafy Bank can leverage MongoDB Aggregation Pip
 analyze and enrich the data, giving users a holistic financial view while enabling the
 bank to offer personalized financial insights.
 
-.. figure:: source/includes/images/industry-solutions/open-finance-architecture.svg
+.. figure:: /includes/images/industry-solutions/open-finance-architecture.svg
 
 
 Data Model Approach
@@ -80,8 +80,8 @@ approach:
   
   - **Structure**:
   
-    ..code-block:: json
-            {
+    .. code-block:: 
+        {
         "_id": { "$oid": "unique_id" }, "UserName": "string", "BearerToken": "string",
         "TokenDates": {
             "CreationDate": { "$date": "ISODate" }, "LastUseDate": { "$date": "ISODate" }
@@ -98,16 +98,16 @@ approach:
   
   - **Structure**:
   
-    .. code-block:: json
-    {
-      "_id": { "$oid": "unique_id" }, "AccountId": "string", "AccountBank": "string",
-      "AccountStatus": "string", "AccountType": "string", "AccountBalance": "number",
-      "AccountCurrency": "string", "AccountDate": {
-        "OpeningDate": { "$date": "ISODate" }
-      }, "AccountCustomer": {
-        "UserName": "string", "UserId": { "$oid": "unique_id" }
-      }, "GreenAccountNarrative": "string"
-    }
+    .. code-block:: 
+        {
+        "_id": { "$oid": "unique_id" }, "AccountId": "string", "AccountBank": "string",
+        "AccountStatus": "string", "AccountType": "string", "AccountBalance": "number",
+        "AccountCurrency": "string", "AccountDate": {
+            "OpeningDate": { "$date": "ISODate" }
+        }, "AccountCustomer": {
+            "UserName": "string", "UserId": { "$oid": "unique_id" }
+        }, "GreenAccountNarrative": "string"
+        }
   
   - **Simplification**: Real-world account data would include more detailed information
     such as transaction history, account limits, and additional metadata for compliance
@@ -120,16 +120,17 @@ approach:
 
   - **Structure**:
     
-    .. code-block:: json
-      "_id": { "$oid": "unique_id" }, "ProductId": "string", "ProductBank": "string",
-      "ProductStatus": "string", "ProductType": "string", "ProductAmount": "number",
-      "ProductCurrency": "string", "ProductInterestRate": "number", "ProductDate": {
-        "OpeningDate": { "$date": "ISODate" }
-      }, "ProductCustomer": {
-        "UserName": "string", "UserId": { "$oid": "unique_id" }
-      }, "GreenProductNarrative": "string", "RepaymentPeriod": "number", "LoanCollateral":
-      "string"
-    }
+    .. code-block:: jso
+        {
+        "_id": { "$oid": "unique_id" }, "ProductId": "string", "ProductBank": "string",
+        "ProductStatus": "string", "ProductType": "string", "ProductAmount": "number",
+        "ProductCurrency": "string", "ProductInterestRate": "number", "ProductDate": {
+            "OpeningDate": { "$date": "ISODate" }
+        }, "ProductCustomer": {
+            "UserName": "string", "UserId": { "$oid": "unique_id" }
+        }, "GreenProductNarrative": "string", "RepaymentPeriod": "number", "LoanCollateral":
+        "string"
+        }
 
   - **Simplification**: In a real-world scenario, product data would be more
     comprehensive, including detailed terms and conditions, repayment schedules, and
