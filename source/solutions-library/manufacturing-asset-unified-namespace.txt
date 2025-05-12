@@ -298,30 +298,42 @@ Prerequisites
 Key Learnings 
 -------------
 
-- `MongoDB Atlas <https://www.mongodb.com/atlas>`__ provides a unified
-  platform for predictive maintenance by
-  combining structured sensor data and unstructured maintenance documents,
-  enabling both real-time monitoring and AI-powered analysis through a
-  single-view architecture. 
+Implementing a Unified Namespace as the foundation of manufacturing data
+management brings several strategic benefits, with MongoDB at its core
+facilitating improved operational efficiency and insights.
 
-- The solution leverages a four-stage approach (prioritization,
-  prediction, plan generation, guidance delivery) that integrates multiple
-  MongoDB features including Atlas Stream Processing for real-time data,
-  Vector Search for semantic analysis, and Change Streams for mobile
-  alerts. 
+.. figure:: /includes/images/industry-solutions/unified-namespace-lessons.svg
+   :figwidth: 1200px
+   :alt: Unified namespace simplifies the architecture deployment
+   
+   Figure 2. The automation pyramid versus a Unified Namespace
 
-- Organizations can achieve significant operational improvements
-  through this approach: 15-20% reduction in downtime, 5-20% increase in
-  labor productivity, and 30-60% reduction in maintenance costs. 
-  
-- The implementation combines multiple AI technologies (`RAG
-  <https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__,
-  `LLMs
-  <https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`__,
-  `ML models <https://www.mongodb.com/resources/basics/machine-learning>`__)
-  with MongoDB's developer data platform capabilities to create an
-  automated maintenance workflow—from machine prioritization to mobile
-  repair guidance delivery.
+- **Adaptability to Operational Changes:* The success of a UNS hinges on
+  its ability to effortlessly integrate new data sources and scale with
+  expanding production lines. MongoDB's flexible document-oriented model
+  is particularly adept at accommodating these shifts without requiring
+  exhaustive architectural overhauls, allowing manufacturers to maintain a
+  dynamic data ecosystem.
+
+- **Centralized Data Layer for Advanced Applications:** While the UNS
+  itself doesn't perform applications like predictive maintenance
+  directly, it provides the essential infrastructure for such initiatives.
+  By centralizing both real-time and historical data, manufacturers can
+  easily implement IoT-based solutions, enhance maintenance schedules, and
+  optimize costs. This approach translates to reduced downtime and
+  improved resource utilization.
+
+- **Cross-Functional Insight Generation:** Leveraging MongoDB's powerful
+  analytics capabilities allows manufacturing teams to gain comprehensive
+  insights. By integrating diverse datasets, such as MES metrics and ERP
+  outputs, the UNS facilitates correlations that drive improvements in
+  quality control and operational planning.
+
+- **Ensured Data Availability and Reliability:** With high availability
+  being critical for a centralized data hub, MongoDB employs features like
+  replica sets to ensure the system remains operational without
+  interruption. This prevents potential disruptions in the manufacturing
+  data ecosystem and supports reliable long-term operational strategies.
 
 Technologies and Products Used
 ------------------------------
@@ -331,14 +343,14 @@ MongoDB Developer Data Platform
 
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 - `Atlas Charts <https://www.mongodb.com/products/platform/atlas-charts>`__
-- `Atlas Stream Processing <https://www.mongodb.com/products/platform/atlas-stream-processing>`__ 
-- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+- `Change Streams <https://www.mongodb.com/resources/products/capabilities/change-streams>`__ 
+- `MongoDB Time Series <https://www.mongodb.com/products/capabilities/time-series>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
-- `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
-- `Google Cloud <https://cloud.google.com/>`__
+- `Cedalo MQTT Broker <https://cedalo.com/>`__
+- `Kafka Connector <https://www.mongodb.com/products/integrations/kafka-connector>`__
 
 Authors
 -------
