@@ -39,7 +39,7 @@ Solution Overview
 -----------------
 
 Customers today expect seamless shopping experiences that blend online
-and offline channels. However, retailers struggle to implement these
+and offline channels. Yet, retailers struggle to implement these
 omnichannel solutions that deliver consistent experiences across all
 touchpoints.
 
