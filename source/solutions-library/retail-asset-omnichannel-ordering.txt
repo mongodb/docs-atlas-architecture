@@ -209,7 +209,7 @@ currencies, such as 12 USD.
 Building the Solution
 ---------------------
 
-Building this solution can be broken down in three major steps:
+Building this solution can be broken down in three major steps.
 
 .. procedure::
    :style: normal
