@@ -1,0 +1,4 @@
+.. toctree::
+   :titlesonly:
+
+   Unified Namespace Data Integrity <solutions-library/manufacturing-asset-unified-namespace>

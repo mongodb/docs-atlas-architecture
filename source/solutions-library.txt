@@ -83,6 +83,23 @@ kick-start their projects.
             Find out how AI is being used in renewable energy by leveraging MongoDB 
             Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
       
+      Modernization 
+      -------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Unified Namespace Data Integrity
+            :url: 
+            :icon: industry_enterprise
+            :icon-alt: Atlas industry_enterprise icon
+
+            Find out how MongoDB helps manufacturers unify production
+            data, optimize operations, and enable real-time insights in
+            a Unified Namespace.
+
       .. App-Driven Analytics
       .. --------------------
 
