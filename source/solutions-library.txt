@@ -55,8 +55,8 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            A modular solution for building diagnostic and
-            recommendation agents with MongoDB Atlas. 
+            Learn how to implement a modular solution for building
+            diagnostic and recommendation agents with MongoDB Atlas. 
 
          .. card::
             :headline: Predictive Maintenance Excellence with MongoDB Atlas
