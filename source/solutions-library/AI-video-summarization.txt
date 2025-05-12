@@ -73,16 +73,16 @@ Reference Architectures
 
   -Leveraging OCR and AI for real-time code analysis
     
-    -To this end, the application integrates Optical Character
-     Recognition (OCR) and Artificial Intelligence (AI) to perform
-     real-time code analysis directly from the video frames. This
-     sophisticated feature transcends traditional metadata and
-     transcripts, offering actionable insights into the code displayed in
-     the video. Whether the code is part of a tutorial, a recorded
-     meeting, or any form of technical presentation, this layer offers a
-     text-based, searchable version along with an AI-powered explanation,
-     making your video resources more comprehensive and insightful than
-     ever.
+    - To this end, the application integrates Optical Character
+      Recognition (OCR) and Artificial Intelligence (AI) to perform
+      real-time code analysis directly from the video frames. This
+      sophisticated feature transcends traditional metadata and
+      transcripts, offering actionable insights into the code displayed in
+      the video. Whether the code is part of a tutorial, a recorded
+      meeting, or any form of technical presentation, this layer offers a
+      text-based, searchable version along with an AI-powered explanation,
+      making your video resources more comprehensive and insightful than
+      ever.
 
 - **Processing Layer**: Python script utilizing the OpenAI API and other
   libraries to fetch and summarize the transcript.
