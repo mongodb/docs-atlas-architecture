@@ -169,8 +169,8 @@ kick-start their projects.
             Enable real-time order tracking and management across all
             retail channels using MongoDB Atlas.
 
-      .. Gen AI
-      .. ------
+      Gen AI
+      ------
 
       .. card-group::
          :columns: 2
