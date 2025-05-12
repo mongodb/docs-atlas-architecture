@@ -132,7 +132,7 @@ kick-start their projects.
 
          .. card::
             :headline: Gen AI-powered video summarization
-            :url: https://deploy-preview-200--docs-atlas-architecture.netlify.app/solutions-library/AI-video-summarization/
+            :url: https://deploy-preview-217--docs-atlas-architecture.netlify.app/solutions-library/AI-video-summarization/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -153,7 +153,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Building an Event-Driven Inventory Management System
+            :headline: Building an event-driven inventory management system
             :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
@@ -161,22 +161,9 @@ kick-start their projects.
             Learn about how to build a real-time, event-driven inventory
             management system using MongoDB Atlas.
 
-      Gen AI
-      ------
+      .. Gen AI
+      .. ------
 
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Automating Product Descriptions Using Generative AI
-            :url: https://deploy-preview-197--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-product-description/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Write engaging and multilingual product descriptions in
-            practically no time with MongoDB and Together AI. 
-            
       .. Personalization
       .. ---------------
 
