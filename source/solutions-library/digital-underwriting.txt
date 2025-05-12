@@ -201,8 +201,8 @@ MongoDB modern, multi-cloud database platform:
 - `MongoDB Spark Connector <https://www.mongodb.com/products/spark-connector>`__
 - `Atlas Charts <https://www.mongodb.com/products/charts>`__
 - `Atlas App Services <https://www.mongodb.com/atlas/app-services>`__
-  -`Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
-  -`Functions <https://www.mongodb.com/docs/atlas/app-services/functions/>`__
+  - `Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
+  - `Functions <https://www.mongodb.com/docs/atlas/app-services/functions/>`__
 
 Partner technologies:
 ~~~~~~~~~~~~~~~~~~~~~
