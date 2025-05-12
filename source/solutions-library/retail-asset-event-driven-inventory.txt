@@ -346,13 +346,13 @@ you will find detailed instructions on how to build this solution.
       threshold. For demo purposes, set up a second trigger to simulate
       an order’s progress from placement to fulfillment.
 
-   .. step:: Enable full-text search and filter facets
+   .. step:: Enable Full-text Search and Filter Facets
 
       Configure search indexes for `full-text search
       <https://www.mongodb.com/resources/basics/full-text-search>`__ and
       filter facets in the products and transactions collections.
 
-   .. step::  Set up real-time analytics with Atlas Charts
+   .. step::  Set Up Real-time Analytics with Atlas Charts
 
       Enhance your application's visualization and analytics
       capabilities with `Atlas Charts
@@ -360,7 +360,7 @@ you will find detailed instructions on how to build this solution.
       Unlock real-time analytics and create custom charts based on your
       preferences.
 
-   .. step:: Configure your app frontend
+   .. step:: Configure Your App Frontend
 
       Clone the GitHub repository to your local machine, update the
       environment variables with your own values, install the
