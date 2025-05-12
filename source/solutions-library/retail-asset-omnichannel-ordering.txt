@@ -43,8 +43,8 @@ and offline channels. Yet, retailers struggle to implement these
 omnichannel solutions that deliver consistent experiences across all
 touchpoints.
 
-While offering convenient options like “Buy Online, Pick Up In Store”
-(BOPIS) and “Buy Online, Get Delivery at Home” are essential for
+While offering convenient options like *Buy Online, Pick Up In Store*
+(BOPIS) and *Buy Online, Get Delivery at Home* are essential for
 remaining competitive, implementing an omnichannel strategy presents
 additional technical challenges. Retailers need a flexible system that
 can provide real-time visibility, handle dynamic traffic patterns, and
