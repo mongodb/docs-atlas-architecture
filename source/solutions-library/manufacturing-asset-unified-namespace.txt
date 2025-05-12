@@ -308,7 +308,7 @@ facilitating improved operational efficiency and insights.
    
    Figure 2. The automation pyramid versus a Unified Namespace
 
-- **Adaptability to Operational Changes:* The success of a UNS hinges on
+- **Adaptability to Operational Changes:** The success of a UNS hinges on
   its ability to effortlessly integrate new data sources and scale with
   expanding production lines. MongoDB's flexible document-oriented model
   is particularly adept at accommodating these shifts without requiring
