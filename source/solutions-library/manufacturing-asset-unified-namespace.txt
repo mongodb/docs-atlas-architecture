@@ -142,70 +142,158 @@ manufacturing.
 Building the Solution
 ---------------------
 
+This manufacturing data management solution is built using a combination
+of core technologies that work in unison to create a sophisticated
+framework, allowing seamless data processing and integration across
+diverse manufacturing systems. For complete implementation details,
+including code samples, configuration files, and tutorial videos, visit
+the `GitHub repository
+<https://github.com/mongodb-industry-solutions/leafy_factory>`__. 
+
+**Prerequisites**
+
+- Python (3.12 or higher)
+- Node.js (14 or higher)
+- MongoDB Atlas Cluster (8.0.4 or higher)
+- Apache Kafka (Minimum version 3.9.0)
+- Java JDK (Minimum version 23)
+- PostgreSQL (15.10 or higher)
+
 .. procedure::
    :style: normal
 
-   .. step:: `Set Up MongoDB Atlas Environment <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-1-create-a-mongodb-atlas-instance>`__
+   .. step:: Data Ingestion with MQTT Broker
 
-      - Configure cluster, database and collections for machine
-        failures, sensor data (raw and transformed), ML models,
-        maintenance history, and repair documentation.
-      
-      - Set up MongoDB Atlas Search and Vector search indexes for repair
-        manuals and maintenance history.
-      
-        .. code-block:: javascript  
-           :copyable: true  
-  
-           {  
-               "fields": [  
-                   {  
-                       "numDimensions": 1024,  
-                       "path": "embeddings",  
-                       "similarity": "euclidean",  
-                       "type": "vector"  
-                   }  
-               ]  
-           }  
+      The solution begins by employing Cedalo's Mosquitto MQTT Broker to
+      handle real-time data streams from shop floor machines. This
+      broker efficiently gathers data, such as machine status and sensor
+      readings (including temperature and vibration), ensuring seamless
+      and immediate data transfer. The architecture remains
+      broker-agnostic, capable of integrating with various other MQTT
+      providers as needed.
 
-      - Configure Stream Processing for real-time data transformation. 
-      
-      - Create Atlas Charts dashboards for monitoring and visualization.
+   .. step:: SQL Data Integration via Kafka Connector
+
+      Concurrent with MQTT data reception, SQL data from ERP and MES systems
+      is ingested using Kafka. The Debezium connector captures SQL-based
+      data—such as work orders, material tracking, and cost breakdowns—and
+      streams it into Kafka topics. MongoDB's Kafka Connector then processes
+      this data, transforming and inserting it into MongoDB Atlas, which
+      facilitates efficient synchronization between SQL systems and MongoDB.
+      This integration ensures that ERP data remains continuously updated,
+      serving as a reliable source of live business-critical information.
+
+   .. step:: Database Management with MongoDB Atlas
+
+      MongoDB Atlas acts as the central repository, leveraging its flexible
+      schema capabilities to accommodate diverse data structures, from raw
+      machine sensor data to structured ERP records. By storing data in a
+      document-oriented format, manufacturers can effortlessly adapt to
+      changes, such as incorporating new sensors or modifying machine
+      attributes. Atlas not only simplifies data management but also supports
+      real-time ingestion across multiple sources.
+
+      .. code-block:: json
+
+         {
+         "result": {
+            "factory": {
+               "location": "qro_fact_1",
+               "timestamp": "2025-04-12 02:59:41.569745",
+               "production_lines": [
+               {
+                  "production_line_id": 2,
+                  "machines": [
+                     {
+                     "_id": 3,
+                     "machine_id": 3,
+                     "details": {
+                        "machine_status": "Available",
+                        "last_maintenance": "2024-10-31 14:25:00",
+                        "operator": "Grace Conway",
+                        "avg_temperature": 70.48,
+                        "avg_vibration": 0.59,
+                        "temp_values": 70,
+                        "vib_values": 0.01
+                     },
+                     "work_orders": [
+                        {
+                           "id_work": 111,
+                           "jobs": [
+                           {
+                              "id_job": 62
+                           }
+                           ]
+                        },
+                        {
+                           "id_work": 105,
+                           "jobs": [
+                           {
+                              "id_job": 58
+                           }
+                           ]
+                        },
+                        {
+                           "id_work": 104,
+                           "jobs": [
+                           {
+                              "id_job": 57
+                           }
+                           ]
+                        },
+                        {
+                           "id_work": 100,
+                           "jobs": [
+                           {
+                              "id_job": 55
+                           }
+                           ]
+                        },
+                        {
+                           "id_work": 99,
+                           "jobs": [
+                           {
+                              "id_job": 52
+                           }
+                           ]
+                        }
+                     ]
+                     }
+                  ]
+               }
+               ]
+            }
+         }
+         }
 
 
-   .. step:: `Configure AI Services Integration <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-2-configure-environment-variables>`__
+   .. step:: Real-Time Analysis with Time Series Collections
 
-      - Select one LLM provider for your implementation:
+      MongoDB Atlas utilizes Time Series collections to manage and analyze
+      streaming data efficiently. This capability allows manufacturers to
+      store time-stamped data, perform complex queries, and gain insights into
+      manufacturing processes over time. Time Series collections enable
+      businesses to monitor operations continuously, spot patterns, and react
+      promptly to any changes, fostering proactive decision-making and
+      optimizing resource utilization.
 
-        - Option 1 - Amazon Bedrock: Configure access to Cohere models
-          for embeddings and completions (Examples of available models:
-          cohere.embed-english-v3 for embeddings, cohere.command-r-10
-          for completions).
+   .. step:: Visualization and Analytics with Atlas Charts
 
-        - Option 2 - OpenAI: Set up API access and select appropriate
-          model.
+      Atlas Charts plays a crucial role in visualizing the integrated
+      data, providing intuitive graphical representations of production
+      metrics, quality analysis, and machine statuses. Manufacturers can
+      leverage these dynamic charts to gain comprehensive insights at a
+      glance, facilitating informed decision-making across teams and
+      departments. Atlas Charts transform data into actionable insights,
+      enabling stakeholders to track performance and identify
+      opportunities for optimization effectively.
 
-      - Set up Google Cloud Translation API for multilingual support.
+   .. step:: Unified Namespace Architecture Deployment
 
-   .. step:: `Application Setup <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-3-add-some-documents-in-mongodb>`__
-
-      - Configure environment variables including MongoDB connection
-        strings, database settings, and required API credentials.
-      
-      - Deploy inference script for continuous system monitoring.
-
-      - Install and configure alerts application.
-
-      - Launch main demo application.
-
-      - Perform system testing and validation to ensure proper data flow
-        and functionality.
-
-For complete implementation details, including code samples,
-configuration files, and tutorial videos, visit the `GitHub repository
-<https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance>`__.
-This repository provides a production-ready template for implementing
-predictive maintenance using MongoDB Atlas' comprehensive feature set.
+      As data flows into MongoDB, it undergoes contextualization and
+      enrichment based on the ISA95 structure. MongoDB's architecture
+      allows the integration of metadata such as machine ID, operator
+      name, location, and more. Thus, enabling fine-grained analysis. 
 
 Key Learnings 
 -------------
