@@ -2,8 +2,10 @@
 MongoDB as the Open Finance Data Store
 ======================================
 
+.. missing: snooty, doctree, landing page
+
 .. meta:: 
-   :keywords: [Keywords related to the solution]
+   :keywords: Open Finance, Financial Services, |service-fullname|, Data Integration, Real-Time Analytics, Aggregation Pipeline, Secure Data Management, PSD2 Compliance, Personalized Financial Insights
    :description: MongoDB powers open finance with flexible data integration, built-in 
    security, and scalability—enabling seamless, compliant, and personalized financial services.
 
@@ -13,10 +15,9 @@ MongoDB as the Open Finance Data Store
    :depth: 1
    :class: singlecol
 
-- **Use cases:** 
-- **Industries:** 
-- **Products and tools:** 
-- **Partners:** 
+- **Use cases:** `App Driven-Analytics <https://www.mongodb.com/collateral/application-driven-analytics>`__
+- **Industries:** `Financial Services <https://www.mongodb.com/industries/financial-services>`__
+- **Products and tools:** Aggregation pipeline, `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__
 
 Solution Overview
 ------------------
@@ -45,15 +46,15 @@ users to connect external bank accounts securely.
 
 First, the user initiates a request to connect their external bank accounts. This requires
 explicit user consent, ensuring security and compliance with regulations like PSD2. To
-authenticate, Leafy Bank emulates OAuth 2.0, generating Bearer tokens for secure
+authenticate, Leafy Bank emulates {+oauth2+}, generating Bearer tokens for secure
 communication between institutions.
 
 Once authorized, Leafy Bank communicates with external banks—like Green Bank or MongoDB
 Bank—via APIs. These banks expose financial data such as accounts, transactions, and
-balances through their microservices. The response is returned in JSON format, ensuring
+balances through their microservices. The response is returned in |json| format, ensuring
 compatibility and seamless data exchange.
 
-The retrieved financial data is then pushed into MongoDB Atlas, where it is centrally
+The retrieved financial data is then pushed into |service-fullname|, where it is centrally
 stored. MongoDB’s flexible document model makes it easy to handle diverse data structures
 from different banks. From here, Leafy Bank can leverage MongoDB Aggregation Pipelines to
 analyze and enrich the data, giving users a holistic financial view while enabling the
@@ -178,7 +179,7 @@ How to build the solution step-by-step:
 
 **Step 1: Set up MongoDB database and collections** 
 
-Create a new database in MongoDB Atlas named **open_finance**, then add three collections:
+Create a new database in |service-fullname| named **open_finance**, then add three collections:
 **tokens**, **external_accounts**, and **external_products**. Import the provided sample
 data.
 

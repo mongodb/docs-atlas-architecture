@@ -94,8 +94,8 @@ kick-start their projects.
             Vector Search with OpenAI-generated embeddings to detect fraud that
             traditional methods miss.      
 
-      .. App-Driven Analytics
-      .. --------------------
+      App-Driven Analytics
+      --------------------
 
       .. card-group::
          :columns: 2

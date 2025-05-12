@@ -2,8 +2,6 @@
 Fraud prevention and AML using {+avs+} and OpenAI
 =======================================================
 
-.. Pending: add use cases, fix broken image, add Snooty stuff. See ya tomorrow!
-
 .. meta:: 
    :keywords: Fraud Prevention, AML, Vector Search, OpenAI, MongoDB Atlas, Real-Time Analytics, Semantic Search, AI, Machine Learning
    :description: Combine real-time analytics with semantic search by integrating MongoDB Atlas
