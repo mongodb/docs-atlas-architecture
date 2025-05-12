@@ -2,4 +2,4 @@
    :titlesonly:
 
    Building Inventory Management System <solutions-library/retail-asset-event-driven-inventory>
-   Modern Omnichannel Ordering Solution <solutions-library/retail-asset-omnichannel-ordering>
+   Building Omnichannel Ordering Solution <solutions-library/retail-asset-omnichannel-ordering>
