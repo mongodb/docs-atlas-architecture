@@ -42,6 +42,31 @@ kick-start their projects.
    .. tab:: Manufacturing & Motion
       :tabid: manufacturing
 
+      Gen AI 
+      ------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Framework for Rapid AI Agent Deployment
+            :url: https://deploy-preview-187--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-agentic-ai-framework/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            A modular solution for building diagnostic and
+            recommendation agents with MongoDB Atlas. 
+
+         .. card::
+            :headline: Predictive Maintenance Excellence with MongoDB Atlas
+            :url: https://deploy-preview-210--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-predictive-maintenance/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Optimize your maintenance strategy with AI. Predict
+            failures, generate repair plans, and guide technicians.
+
       IoT 
       ---
 
@@ -57,24 +82,7 @@ kick-start their projects.
 
             Find out how AI is being used in renewable energy by leveraging MongoDB 
             Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
-
-      Gen AI 
-      ------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Framework for Rapid AI Agent Deployment
-            :url: https://deploy-preview-187--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-agentic-ai-framework/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Find out how AI is being used in renewable energy by leveraging MongoDB 
-            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
-
-
+      
       .. App-Driven Analytics
       .. --------------------
 
