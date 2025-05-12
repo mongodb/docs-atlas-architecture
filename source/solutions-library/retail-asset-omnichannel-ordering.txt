@@ -23,193 +23,116 @@ updates using Atlas Change Streams and TriggersAtlas. Leverage.
 
 **Use cases:** `Catalog
 <https://www.mongodb.com/solutions/use-cases/catalog>`__,
-`Application-Driven Analytics
-<https://www.mongodb.com/solutions/use-cases/analytics>`__
+`Omnichannel Ordering
+<https://www.mongodb.com/blog/post/improving-omnichannel-ordering-bopis-delivery-with-mongodb>`__
 
 **Industries:** `Retail
 <https://www.mongodb.com/industries/retail>`__,
 `Manufacturing <https://www.mongodb.com/industries/manufacturing>`__
 
-**Products:** `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__, 
-`MongoDB Atlas Charts
-<https://www.mongodb.com/products/platform/atlas-charts>`__, 
-`MongoDB Atlas Search
-<https://www.mongodb.com/products/platform/atlas-search>`__,
+**Products:** `MongoDB Atlas
+<https://www.mongodb.com/products/platform/atlas-database>`__, `Change
+Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__,
 `MongoDB Atlas Triggers
 <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
-
-**Partners:** `Next.js <https://nextjs.org/>`__
 
 Solution Overview
 -----------------
 
-Executive Summary
-~~~~~~~~~~~~~~~~~
+While customers today expect seamless shopping experiences that
+effortlessly blend online and offline channels, retailers struggle to
+implement modern omnichannel solutions to meet customers where they shop
+with a consistent experience across all touchpoints.
 
-In the competitive business landscape of retail and manufacturing,
-having the right inventory of goods in the right place at the right time
-is crucial. Insufficient inventory can lead to operational disruptions
-and missed opportunities, while excess inventory can increase costs and
-risks associated with storage. Companies of all sizes struggle with
-inventory management. Solutions such as a single view of inventory,
-real-time analytics, and event-driven architectures can help businesses
-overcome these challenges and elevate their inventory management to the
-next level. This demo will guide you through the process of building an
-inventory management system with all the capabilities mentioned above,
-tailored for diverse industries such as retail and manufacturing.
+While offering convenient options like “Buy Online, Pick Up In Store”
+(BOPIS) and “Buy Online, Get Delivery at Home” is essential for
+remaining competitive, implementing an omnichannel strategy presents
+significant technical challenges. Retailers need a flexible system that
+can provide real-time visibility, handle dynamic traffic patterns, and
+enable modern integrations across all customer touchpoints.
 
-Overview
-~~~~~~~~
+This solution demonstrates how to build an omnichannel e-commerce
+website using MongoDB Atlas. The demo showcases a customer journey where
+users can choose their preferred shipping method (BOPIS or home
+delivery) and track their order progress in real time until delivery. By
+leveraging key MongoDB features including `Change Streams
+<https://www.mongodb.com/docs/manual/changeStreams/>`__, `Atlas Triggers
+<https://www.mongodb.com/docs/atlas/atlas-ui/triggers/#std-label-atlas-triggers>`__,
+and the flexible `document model
+<https://www.mongodb.com/docs/manual/core/document/>`__, you'll learn
+how to create a robust, scalable omnichannel ordering system.
 
-Effective inventory management is critical to ensure operational success
-and customer service excellence. With the increasing complexity of
-supply chains and rising customer expectations, businesses need robust
-systems to track inventory levels, automate processes, and analyze
-trends in real time. As industries continue to evolve, the importance of
-integrated and event-driven inventory solutions becomes more pronounced
-as they allow businesses to respond swiftly to market demands, minimize
-costs, and maintain competitiveness.
-
-Businesses must adopt strategies that allow for dynamic adjustments to
-inventory levels, optimizing stock management, and reducing
-inefficiencies. Automation and real-time data integration are key
-components of these strategies. They provide the capabilities needed to
-enhance operational agility, streamline supply chain processes, and
-ensure timely delivery of products.
-
-Inventory Management in the Retail Industry
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In today’s fast-paced retail landscape, ensuring your inventory is in
-the right place at the right time is essential. However, the retail
-industry faces significant challenges in achieving this goal. In 2022,
-unsold stock in the U.S. surged by a staggering `$78 billion, reaching
-approximately $740 billion — a shocking 12 percent increase
-<https://www.mckinsey.com/industries/retail/our-insights/thinking-beyond-markdowns-to-tackle-retails-inventory-glut>`__.
-
-Retailers today need a unified view of their inventory to meet customer
-expectations for immediate availability and seamless purchasing
-experiences. The disparity between online and in-store stock can lead to
-missed sales opportunities and customer dissatisfaction.
-
-Effective stock management enables retailers to leverage distributed
-supply chains, moving inventory fluidly between channels to meet demand
-where it arises. This reduces the risk of dead stock in physical stores
-and stockouts in online channels, enhancing overall inventory
-efficiency. Real-time analytics empower retailers to make data-driven
-decisions, adapting quickly to changing market conditions and consumer
-behavior. Furthermore, automated processes reduce manual errors and free
-up staff to focus on value-added activities, such as enhancing service
-quality. Event-driven architectures facilitate these improvements,
-allowing for seamless inventory data integration and synchronization
-across various platforms and devices.
-
-.. figure:: /includes/images/industry-solutions/event-driven-overview.svg
-   :figwidth: 1200px
-   :alt: Real-time wind turbine diagnosis
-   
-   Figure 1. Inventory management overview
-
-Closing the Loop for a Future-proof Inventory Management Strategy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-MongoDB provides a leading component for modern inventory solutions. We
-help businesses enhance service quality, workforce efficiency, and
-optimize stock management by enabling a single view of inventory,
-event-driven architectures, and real-time analytics. This solution lays
-the groundwork for advanced scenarios such as integrating IoT and RFID
-tags, delving into AI/ML forecasting for precise demand prediction, and
-distributed logistics. The versatility of this solution allows its
-application not only from warehouse to point of sale but also across the
-entire supply chain, including manufacturing, transportation, retail,
-and reverse logistics, making it a valuable asset for diverse business
-domains.
-
-.. video:: https://www.youtube.com/watch?v=sV2KfMk1CdM&t=371s
+.. video:: https://www.youtube.com/watch?v=iFdrlttUozk
    
 Reference Architectures
 -----------------------
 
-With MongoDB
-~~~~~~~~~~~~
+At its core, this solution leverages MongoDB's `Change Streams
+<https://www.mongodb.com/docs/manual/changeStreams/>`__ and `Atlas
+Triggers
+<https://www.mongodb.com/docs/atlas/atlas-ui/triggers/#std-label-atlas-triggers>`__
+to enable real-time data operations across multiple applications. The
+architecture consists of two main components: Real-Time Apps and MongoDB
+Atlas.
 
-The inventory management solution leverages a `Next.js
-<https://nextjs.org/>`__ application seamlessly integrated with `MongoDB
-Atlas <https://www.mongodb.com/atlas>`__, providing a flexible and
-scalable backend. At the core of this architecture is a `MongoDB Atlas
-Database <https://www.mongodb.com/products/platform/atlas-database>`__
-that houses four key collections: products, transactions, users, and
-locations. These collections are central to managing inventory,
-processing transactions, and tracking user and location data.
+The Real-Time Apps side includes any application that responds to the
+database changes, such as e-commerce, distribution center, warehouse,
+and inventory apps.
 
-MongoDB ensures data consistency and integrity through `ACID-compliant
-operations
-<https://www.mongodb.com/products/capabilities/transactions>`__. For
-instance, when a stock level changes due to a
-transaction, updates are made to both the products and transactions
-collections in a way that guarantees reliability and consistency across
-the system.
+Within MongoDB Atlas, the workflow is as follows:
 
-Data access between the Next.js application and MongoDB is facilitated
-by the `MongoDB Node.js driver
-<https://www.mongodb.com/docs/drivers/node/current/>`__, enabling
-efficient retrieval and manipulation of information. To enhance the
-application’s search capabilities, `Atlas Search
-<https://www.mongodb.com/products/platform/atlas-search>`__ is utilized,
-offering advanced full-text search features. This allows users to
-perform complex queries, such as searching by product category or
-applying filters through `facets
-<https://www.mongodb.com/docs/atlas/atlas-search/tutorial/facet-tutorial/>`__,
-improving the overall user experience with quick, intuitive searches.
+1. An action produces a data modification (like an order status update).
 
-The system's responsiveness is further enriched by `MongoDB Atlas
-Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__ and
-`Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__.
-Triggers automate backend logic by executing functions in response to
-database changes. For example, when a product’s stock falls below a
-certain threshold, a Trigger can automatically reorder inventory.
-Meanwhile, Change Streams act as real-time listeners, detecting data
-changes and pushing updates to the application instantly. This ensures
-that critical alerts, such as low stock notifications, are promptly
-delivered to inventory managers.
+#. The event is registered in the Orders collection.
 
-For real-time analytics, `Atlas Charts
-<https://www.mongodb.com/products/platform/atlas-charts>`__ provides a
-powerful tool to visualize data directly from MongoDB without the need
-for ETL pipelines. This allows decision-makers to track key metrics,
-like inventory levels or sales trends, in real time. With `workload
-isolation
-<https://www.mongodb.com/docs/manual/core/workload-isolation/>`__
-enabled, analytics queries run on a dedicated node, ensuring that
-operational performance remains unaffected. 
+#. These changes are recorded in the Operations Log (oplog.rs).
 
-This cohesive architecture not only supports real-time data interactions
-but also streamlines processes by automating key tasks. It allows the
-Next.js application to provide a responsive and dynamic user experience,
-underpinned by MongoDB’s robust data management features. Through this
-integration, the solution effectively balances performance, automation,
-and scalability, making it well-suited for modern inventory management
-challenges.
+#. The Change Streams API monitors these changes.
 
-Inventory Management System
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. Based on your architecture needs, you can choose to:
 
-.. figure:: /includes/images/industry-solutions/event-driven-workflow.svg
+   - Perform the update on the application side.
+
+   - Trigger an automated task through Atlas Functions. 
+
+Beyond our current implementation, this architecture provides a
+foundation for various real-time scenarios, such as:
+
+- **Real-time notifications:** Automatic customer alerts for order
+  pickup readiness.
+
+- **Reactive systems:** Smart inventory management with automatic
+  restocking.
+
+- **Event-driven architecture:** Real-time microservices synchronization
+  with optional Kafka integration.
+
+- **8Change data capture:** Immediate system-wide product price updates.
+
+- **Real-time analytics:** Instant fraud risk recalculation using ML
+  models.
+
+.. figure:: /includes/images/industry-solutions/omnichannel-architecture.svg
    :figwidth: 1200px
    :alt: Inventory management workflow with Triggers and Change Streams.
 
-   Figure 2. Event-driven workflow overview: Triggers allow automatic
-   replenishment and Change Streams enable real-time low stock alerts
+   Figure 1. Database modifications are logged in the oplog as events.
+   The Change Streams API monitors changes, detects watched events, and
+   triggers real-time responses in applications or Atlas Triggers.
 
-Architecture with MongoDB
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. figure:: /includes/images/industry-solutions/event-driven-architecture.svg
-   :figwidth: 1200px
-   :alt: Inventory management system with MongoDB.
-
-   Figure 3. Inventory management system architecture using MongoDB
-   Atlas and Next.js
+The simplicity of this process comes from MongoDB’s `replication
+<https://www.mongodb.com/resources/products/capabilities/replication>`__
+feature and the underlying operations log (`oplog
+<https://www.mongodb.com/docs/manual/core/replica-set-oplog/>`__), which
+records all database changes. This mechanism allows Change Streams to
+efficiently push updates to your application without adding extra layers
+or complexity. Replication primarily ensures `high availability
+<https://www.mongodb.com/resources/basics/high-availability>`__ by
+maintaining multiple copies of data across nodes and enables real-time
+updates. Applications can monitor changes at different scopes
+(collection, database, or cluster-wide) and filter specific changes
+using the `Aggregation Framework
+<https://www.mongodb.com/docs/manual/aggregation/>`__.
 
 Data Model Approach
 -------------------
@@ -394,22 +317,13 @@ Technologies and Products Used
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `MongoDB Atlas Search <https://www.mongodb.com/products/platform/atlas-search>`__
-- `MongoDB Aggregation Pipeline <https://www.mongodb.com/docs/manual/aggregation/>`__
+- `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 - `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__
-- `MongoDB Atlas Charts <https://www.mongodb.com/docs/charts/>`__
-- `MongoDB Node.js driver <https://www.mongodb.com/docs/drivers/node/current/>`__
 - `MongoDB Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__
-
-Partner Technologies
-~~~~~~~~~~~~~~~~~~~~
-
-- `Next.js <https://nextjs.org/>`__
-- `React <https://react.dev/>`__
+- `MongoDB Node.js driver <https://www.mongodb.com/docs/drivers/node/current/>`__
 
 Author
 ------
 
-- Dr. Humza Akhtar, MongoDB
-- Ramiro Pinto Prieto, MongoDB 
-- Tamar Alphaidze, MongoDB
+- Angie Guemes, MongoDB
+- Florencia Arin, MongoDB 
