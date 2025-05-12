@@ -196,7 +196,7 @@ Orders Collection
 The value of this model lies in its flexibility. By enabling the data
 structure to evolve with the user workflow, it allows the business to
 easily adapt to both current needs and future challenges that may arise.
-For instance, a product MongoDB document includes a field named “price,”
+For instance, a product MongoDB document includes a field named *price*,
 which holds an array of values allowing for representation in multiple
 currencies, such as 12 USD.
 
