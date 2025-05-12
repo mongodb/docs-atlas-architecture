@@ -1,5 +1,9 @@
 .. toctree::
    :titlesonly:
 
+<<<<<<< HEAD
    Framework for AI Agent Deployment </solutions-library/manufacturing-agentic-ai-framework>
    Predictive Maintenance Excellence </solutions-library/manufacturing-asset-predictive-maintenance>
+=======
+   Rapid AI Agent Deployment </solutions-library/manufacturing-agentic-ai-framework>
+>>>>>>> upstream/solutions-poc
