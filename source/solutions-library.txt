@@ -92,7 +92,7 @@ kick-start their projects.
 
          .. card::
             :headline: Unified Namespace Data Integrity
-            :url: 
+            :url: https://deploy-preview-221--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-unified-namespace/
             :icon: industry_enterprise
             :icon-alt: Atlas industry_enterprise icon
 
