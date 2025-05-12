@@ -196,77 +196,76 @@ Prerequisites
 
       .. code-block:: json
 
-         {
-         "result": {
-            "factory": {
-               "location": "qro_fact_1",
-               "timestamp": "2025-04-12 02:59:41.569745",
-               "production_lines": [
-               {
-                  "production_line_id": 2,
-                  "machines": [
-                     {
-                     "_id": 3,
-                     "machine_id": 3,
-                     "details": {
-                        "machine_status": "Available",
-                        "last_maintenance": "2024-10-31 14:25:00",
-                        "operator": "Grace Conway",
-                        "avg_temperature": 70.48,
-                        "avg_vibration": 0.59,
-                        "temp_values": 70,
-                        "vib_values": 0.01
-                     },
-                     "work_orders": [
-                        {
-                           "id_work": 111,
-                           "jobs": [
-                           {
-                              "id_job": 62
-                           }
-                           ]
-                        },
-                        {
-                           "id_work": 105,
-                           "jobs": [
-                           {
-                              "id_job": 58
-                           }
-                           ]
-                        },
-                        {
-                           "id_work": 104,
-                           "jobs": [
-                           {
-                              "id_job": 57
-                           }
-                           ]
-                        },
-                        {
-                           "id_work": 100,
-                           "jobs": [
-                           {
-                              "id_job": 55
-                           }
-                           ]
-                        },
-                        {
-                           "id_work": 99,
-                           "jobs": [
-                           {
-                              "id_job": 52
-                           }
-                           ]
-                        }
-                     ]
-                     }
-                  ]
-               }
-               ]
-            }
-         }
-         }
-
+         {  
+            "result": {  
+               "factory": {  
+                  "location": "qro_fact_1",  
+                  "timestamp": "2025-04-12 02:59:41.569745",  
+                  "production_lines": [  
+                  {  
+                     "production_line_id": 2,  
+                     "machines": [  
+                        {  
+                        "_id": 3,  
+                        "machine_id": 3,  
+                        "details": {  
+                           "machine_status": "Available",  
+                           "last_maintenance": "2024-10-31 14:25:00",  
+                           "operator": "Grace Conway",  
+                           "avg_temperature": 70.48,  
+                           "avg_vibration": 0.59,  
+                           "temp_values": 70,  
+                           "vib_values": 0.01  
+                        },  
+                        "work_orders": [  
+                           {  
+                              "id_work": 111,  
+                              "jobs": [  
+                              {  
+                                 "id_job": 62  
+                              }  
+                              ]  
+                           },  
+                           {  
+                              "id_work": 105,  
+                              "jobs": [  
+                              {  
+                                 "id_job": 58  
+                              }  
+                              ]  
+                           },  
+                           {  
+                              "id_work": 104,  
+                              "jobs": [  
+                              {  
+                                 "id_job": 57  
+                              }  
+                              ]  
+                           },  
+                           {  
+                              "id_work": 100,  
+                              "jobs": [  
+                              {  
+                                 "id_job": 55  
+                              }  
+                              ]  
+                           },  
+                           {  
+                              "id_work": 99,  
+                              "jobs": [  
+                              {  
+                                 "id_job": 52  
+                              }  
+                              ]  
+                           }  
+                        ]  
+                        }  
+                     ]  
+                  }  
+                  ]  
+               }  
+            }  
+         }  
 
    .. step:: Real-Time Analysis with Time Series Collections
 
