@@ -107,7 +107,7 @@ foundation for various real-time scenarios, such as:
 - **Event-driven architecture:** Real-time microservices synchronization
   with optional Kafka integration.
 
-- **8Change data capture:** Immediate system-wide product price updates.
+- **Change data capture:** Immediate system-wide product price updates.
 
 - **Real-time analytics:** Instant fraud risk recalculation using ML
   models.
@@ -141,10 +141,10 @@ When a developer writes an algorithm, complexity doesn’t have to mean
 complication. More lines of code don’t always equate to a better
 solution. The key is simplicity. Simple solutions are easier to
 understand and quicker to implement, allowing you to focus on what truly
-matters: innovation.
+matters—innovation.
 
-Our solution's data model revolves around two primary collections:
-products and orders. Each collection uses a "field": "value" format,
+Our solution's data model revolves around two primary collections, which are
+products and orders. Each collection uses a *field : value* format,
 providing an organized representation of the stored data. Let's examine
 how each collection is structured:
 
