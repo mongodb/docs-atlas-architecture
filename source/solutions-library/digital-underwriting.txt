@@ -27,11 +27,11 @@ digital underwriting.
 `Healthcare <https://www.mongodb.com/industries/healthcare>`__
 
 **Products and tools:** `Time Series <https://www.mongodb.com/time-series>`__,
- `Atlas App Services <https://www.mongodb.com/atlas/app-services>`__,
- `Atlas Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__,
- `Atlas Functions <https://www.mongodb.com/docs/realm/functions/>`__,
- `Atlas Charts <https://www.mongodb.com/products/charts>`__,
- `Spark Connector <https://www.mongodb.com/docs/spark-connector/current/>`__
+`Atlas App Services <https://www.mongodb.com/atlas/app-services>`__,
+`Atlas Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__,
+`Atlas Functions <https://www.mongodb.com/docs/realm/functions/>`__,
+`Atlas Charts <https://www.mongodb.com/products/charts>`__,
+`Spark Connector <https://www.mongodb.com/docs/spark-connector/current/>`__
 
 **Partners:** `Databricks <https://www.mongodb.com/partners/databricks>`__
 
