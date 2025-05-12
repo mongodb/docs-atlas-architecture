@@ -48,57 +48,40 @@ Connector
 Solution Overview
 -----------------
 
-MongoDB Atlas powers an end-to-end predictive maintenance solution that
-helps manufacturers prevent equipment failures and optimize maintenance
-operations through four strategic stages:
+Manufacturing is experiencing a profound transformation through the
+integration of real-time data and centralized data management tools like
+the Unified Namespace (UNS) model. Modern factories generate vast
+amounts of data from various systems like enterprise resource planning
+(ERP), manufacturing execution system (MES), and shop floor machines. As
+manufacturers move towards connected and automated systems, unifying
+these data sources is crucial. `Deloitte reports
+<https://www2.deloitte.com/us/en/insights/industry/manufacturing/manufacturing-industry-outlook.html>`__
+that smart factory initiatives can boost productivity by up to 12% and
+improve equipment effectiveness by up to 20%. Achieving these gains
+requires an effective data management strategy, one that leverages UNS
+models supported by robust solutions like MongoDB.
 
-1. Machine prioritization and criticality analysis
+The unified approach facilitates real-time data visibility and seamless
+integration, helping to optimize processes and enhance operational
+efficiency. By breaking down traditional hierarchical data flows,
+manufacturers can leverage both historical and real-time insights for
+strategic planning and continuous improvements.
 
-   - Addresses the question: "Which machine should I prioritize for
-     predictive maintenance and why?" 
-   - Uses machine learning and RAG-based analysis to prioritize critical
-     equipment.
-   - Leverages historical data and expert knowledge to make informed
-     decisions.
+An effective UNS system proactively integrates and contextualizes data,
+taking steps to achieve organizational objectives without needing
+constant human intervention. Rather than merely reporting isolated data
+points, a UNS using MongoDB can autonomously unify and analyze data from
+diverse manufacturing systems, uncover critical insights, and facilitate
+informed decision-making.
 
-#. Failure prediction
+In this solution, we develop a comprehensive Unified Namespace framework
+using MongoDB’s capabilities for flexible data modeling, real-time
+processing, and scalability.
 
-   - Answers the critical question: "What is the root cause of imminent
-     failure?"
-   - Processes real-time sensor data through `Atlas Stream Processing
-     <https://www.mongodb.com/products/platform/atlas-stream-processing>`__.
-   - Enables early detection of potential failures before they occur.
-
-#. Maintenance plan generation
-
-   - Focuses on: "How should I schedule the repair procedure?" 
-   - Automatically generates detailed repair plans using large language
-     models. 
-   - Combines maintenance manuals, inventory data, and resource
-     information.
-
-#. Maintenance guidance generation
-
-   - Addresses: "How do I get better guidance on fixing machines?" 
-   - Provides enhanced maintenance guidance by integrating service notes
-     and repair instructions. 
-   - Delivers instructions directly to technicians' mobile devices
-     through `Change Streams
-     <https://www.mongodb.com/docs/manual/changeStreams/>`__.
-
-.. figure:: /includes/images/industry-solutions/predictive-maintenance-demo.svg
-   :figwidth: 1200px
-   :alt: Predictive maintenance workflow stages
-   
-   Figure 1: Four stages of predictive maintenance workflow
-
-.. video:: https://www.youtube.com/watch?v=YwTWpUl3QS8
-
-By leveraging MongoDB's unified data platform capabilities like vector
-search and real-time analytics, organizations can achieve significant
-operational improvements: `reducing downtime by 15-20%, increasing labor
-productivity by 5-20%, and cutting maintenance costs by 30-60%
-<https://www2.deloitte.com/content/dam/Deloitte/us/Documents/process-and-operations/us-predictive-maintenance.pdf>`__.
+The setup ingests various operational data types, analyzes streams for
+actionable insights, stores the information in MongoDB, and provides
+strategic recommendations based on comprehensive analytics with data
+from different sources and types.
 
 Reference Architectures
 -----------------------
@@ -313,6 +296,6 @@ Partner Technologies
 Authors
 -------
 
-- Dr. Humza Akhtar, MongoDB
-- Rami Pinto, MongoDB
-- Sebastian Rojas Arbulu, MongoDB
+- Raphael Schor, MongoDB
+- Romina Carranza, MongoDB
+- Giovanni Rodriguez, MongoDB
