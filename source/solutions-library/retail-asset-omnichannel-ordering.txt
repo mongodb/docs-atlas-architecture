@@ -168,7 +168,7 @@ Products Collection
    :figwidth: 1200px
    :alt: Products collection overview.
 
-   Figure 2. MongoDB documents of the Products Collection
+   Figure 2. MongoDB documents of the products collection
 
 Orders Collection
 ~~~~~~~~~~~~~~~~~
