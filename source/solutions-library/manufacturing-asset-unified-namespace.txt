@@ -92,99 +92,52 @@ Reference Architectures
    
    Figure 1. Leafy factory UNS architecture
 
-Machine Prioritization Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In the `Leafy Factory demo
+<https://github.com/mongodb-industry-solutions/leafy_factory>`__, SQL
+data from a simulated MES is efficiently ingested into MongoDB,
+encompassing key production planning, monitoring, and quality metrics.
+This data, captured in MongoDB's flexible, document-based JSON format,
+ensures that MES information remains organized and readily accessible
+for real-time analysis and reporting. Similarly, SQL-based ERP data—such
+as work orders, material tracking, and cost breakdowns—is seamlessly
+integrated using a combination of Kafka change streams and the MongoDB
+Sink connector. The SQL data is ingested into Kafka topics through the
+Debezium connector, with SQL functioning as a Kafka producer. This data
+is then consumed, transformed, and inserted into MongoDB via the
+`MongoDB Sink connector
+<https://www.mongodb.com/docs/kafka-connector/current/sink-connector/>`__,
+establishing a seamless data flow between SQL, Kafka, and MongoDB. This
+process ensures that ERP data remains continuously synchronized in
+MongoDB, highlighting its reliability as a live source of crucial
+business information.
 
-This architecture leverages RAG (retrieval-augmented generation) to
-determine which machines require predictive maintenance. The system
-processes two types of input data: 
+Simultaneously, simulated MQTT data streams deliver real-time shop floor
+data into the database, including machine status, quality outputs, and
+sensor readings like temperature and vibration. MongoDB's robust support
+for real-time ingestion allows this data to be immediately available,
+facilitating up-to-date machine monitoring and quicker response times.
 
-- Structured data: Production parameters and machine breakdown frequency. 
-- Unstructured data: Institutional knowledge in documents. 
+`Change streams
+<https://www.mongodb.com/resources/products/capabilities/change-streams>`__
+are pivotal, enabling real-time data updates across systems. For
+instance, when a work order is updated in the ERP system, this change is
+instantly reflected downstream in MES and shop floor views, showcasing
+MongoDB's capability for bi-directional data flows and live
+synchronization within a unified data model.
 
-The workflow aggregates and operationalizes both data types as vector
-embeddings in MongoDB Atlas. Using Vector Search, it performs semantic
-search to provide relevant context to an LLM (via Amazon Bedrock or Cohere
-in this case), which generates contextual responses to prioritization
-queries. This helps maintenance teams make data-driven decisions about
-which machines need attention first.
+Additionally, the demo highlights the importance of data
+contextualization and enrichment. As data enters the UNS, MongoDB
+enriches it with metadata such as machine ID, operator name, and
+location following the ISA95 structure. This enriched model supports
+fine-grained analysis and filtering, essential for generating
+actionable, cross-functional insights across manufacturing, operations,
+and business teams.
 
-.. figure:: /includes/images/industry-solutions/predictive-maintenance-system-diagram.svg
-   :figwidth: 1200px
-   :alt: AI system diagram to prioritize machine maintenance
-   
-   Figure 2. AI system diagram for machine prioritization recommendations
-
-Sensor Data Processing Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This real-time architecture processes machine sensor data through six
-key stages: 
-
-1. Data collection: A prioritized milling machine with DAQ
-   (data acquisition) captures critical metrics (product type, temperature,
-   speed, torque, tool wear). 
-#. Stream processing: Real-time transformation of
-   raw sensor data. 
-#. Data storage: Centralized storage in MongoDB Atlas with
-   single view capability. 
-#. Change detection: Monitoring for significant data
-   changes. 
-#. ML inference: Running trained models to predict potential
-   failures. 
-#. Dual output: Visualization through Atlas Charts and mobile
-   notifications via Change Streams.
-
-.. figure:: /includes/images/industry-solutions/predictive-maintenance-real-time-sensor.svg
-   :figwidth: 1200px
-   :alt: Real-time sensor monitoring diagram
-   
-   Figure 3. Real-time sensor monitoring with MongoDB Atlas
-
-Work Order Generation Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This architecture automates maintenance work order creation through:
-
-1. Document processing: Machine manuals and old work orders are chunked
-   and converted to vectors using AWS/Cohere embedding models. 
-
-#. Vector storage: Embeddings stored in MongoDB Atlas. 
-
-#. Work order generation: A specialized app that: 
-
-   - Uses LLMs to generate appropriate work order templates. 
-   - Pulls inventory and resource information through aggregation. 
-   - Creates detailed repair plans based on machine documentation.
-
-.. figure:: /includes/images/industry-solutions/predictive-maintenance-work-order.svg
-   :figwidth: 1200px
-   :alt: Work order generator diagram with artificial intelligence
-   
-   Figure 4. AI-powered work order generation system diagram
-
-Maintenance Guidance Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This architecture enhances operator instructions through a RAG approach:
-
-1. Service note processing: Converts multilingual PDF service notes to text.
-#. Translation: Processes non-English content (Spanish in this case)
-   through translation models. 
-#. Instruction generation: Combines translated service notes with
-   original repair plans using LLMs.
-#. Delivery: Provides updated maintenance instructions to technicians
-   through a mobile app.
-
-.. figure:: /includes/images/industry-solutions/predictive-maintenance-rag.svg
-   :figwidth: 1200px
-   :alt: RAG workflow diagram
-   
-   Figure 5. RAG workflow enhances technician repair instructions
-
-Each architecture integrates with MongoDB Atlas core capabilities while
-leveraging external services (Amazon Bedrock, OpenAI, Cohere) for AI/ML
-functionality, creating a comprehensive predictive maintenance solution.
+The Leafy Factory demo validates MongoDB's technical strengths—including
+real-time processing, flexible data modeling, and scalable
+architecture—and demonstrates how these capabilities coalesce to support
+a robust, dynamic, and future-ready Unified Namespace for smart
+manufacturing.
 
 Building the Solution
 ---------------------
