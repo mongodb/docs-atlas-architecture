@@ -150,7 +150,8 @@ including code samples, configuration files, and tutorial videos, visit
 the `GitHub repository
 <https://github.com/mongodb-industry-solutions/leafy_factory>`__. 
 
-**Prerequisites**
+Prerequisites
+~~~~~~~~~~~~~
 
 - Python (3.12 or higher)
 - Node.js (14 or higher)
