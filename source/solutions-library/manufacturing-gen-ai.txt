@@ -2,4 +2,5 @@
    :titlesonly:
 
    Automotive Diagnostics </solutions-library/manufacturing-asset-automotive-diagnostics>
-   Framework AI Agent Deployment </solutions-library/manufacturing-agentic-ai-framework>
+   Framework for AI Agent Deployment </solutions-library/manufacturing-agentic-ai-framework>
+   Predictive Maintenance Excellence </solutions-library/manufacturing-asset-predictive-maintenance>
