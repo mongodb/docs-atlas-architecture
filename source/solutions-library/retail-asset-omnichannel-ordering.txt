@@ -146,9 +146,10 @@ matters—innovation.
 Our solution's data model revolves around two primary collections, which are
 products and orders. Each collection uses a *field : value* format,
 providing an organized representation of the stored data. Let's examine
-how each collection is structured:
+how each collection is structured.
 
-Products collection:
+Products Collection
+~~~~~~~~~~~~~~~~~~~
 
 - Stores comprehensive product information including ID, name, and a
   unique product identifier (such as SKUs).
@@ -169,7 +170,8 @@ Products collection:
 
    Figure 2. MongoDB documents of the Products Collection
 
-Orders collection:
+Orders Collection
+~~~~~~~~~~~~~~~~~
 
 - Tracks order details with unique identifiers for orders and users.
 
