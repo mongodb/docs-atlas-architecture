@@ -27,8 +27,7 @@ updates using Atlas Change Streams and TriggersAtlas. Leverage.
 <https://www.mongodb.com/blog/post/improving-omnichannel-ordering-bopis-delivery-with-mongodb>`__
 
 **Industries:** `Retail
-<https://www.mongodb.com/industries/retail>`__,
-`Manufacturing <https://www.mongodb.com/industries/manufacturing>`__
+<https://www.mongodb.com/industries/retail>`__
 
 **Products:** `MongoDB Atlas
 <https://www.mongodb.com/products/platform/atlas-database>`__, `Change
@@ -81,11 +80,12 @@ and inventory apps.
 
 Within MongoDB Atlas, the workflow is as follows:
 
-1. An action produces a data modification (like an order status update).
+1. An action produces a data modification, for example an order status
+   update.
 
-#. The event is registered in the Orders collection.
+#. The event is registered in the *Orders* collection.
 
-#. These changes are recorded in the Operations Log (oplog.rs).
+#. These changes are recorded in the *Operations Log* (oplog.rs).
 
 #. The Change Streams API monitors these changes.
 
