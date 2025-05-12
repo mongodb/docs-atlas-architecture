@@ -86,6 +86,12 @@ from different sources and types.
 Reference Architectures
 -----------------------
 
+.. figure:: /includes/images/industry-solutions/unified-namespace-architecture.svg
+   :figwidth: 1200px
+   :alt: Architecture diagram for the unified namespace solution
+   
+   Figure 1. Leafy factory UNS architecture
+
 Machine Prioritization Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
