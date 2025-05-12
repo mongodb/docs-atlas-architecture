@@ -137,179 +137,150 @@ using the `Aggregation Framework
 Data Model Approach
 -------------------
 
-The primary collections — products, transactions, users and locations —
-form the foundation of our inventory management system. These
-collections represent your stock, incoming and outgoing movements that
-affect stock levels, your app users, and the different locations that
-the inventory system is serving.
+When a developer writes an algorithm, complexity doesn’t have to mean
+complication. More lines of code don’t always equate to a better
+solution. The key is simplicity. Simple solutions are easier to
+understand and quicker to implement, allowing you to focus on what truly
+matters: innovation.
 
-What sets the document data model apart from traditional tabular models
-is its remarkable flexibility, making it the perfect choice for
-achieving a single view of inventory. With a tabular approach, achieving
-a comprehensive overview of your inventory would typically involve
-complex joins across multiple tables. However, with MongoDB's document
-model, this complexity is eliminated. 
+Our solution's data model revolves around two primary collections:
+products and orders. Each collection uses a "field": "value" format,
+providing an organized representation of the stored data. Let's examine
+how each collection is structured:
 
-For instance, in the transactions collection we take advantage of the
-`Extended Reference pattern
-<https://www.mongodb.com/blog/post/building-with-patterns-the-extended-reference-pattern>`__
-when referencing an item. We not only include the *product.id*, but also
-the *product.name* to be displayed in the UI without the need of a join or
-an extra query to the products collection.
+Products collection:
 
-If we now consider the products collection, we see how it encompasses
-what would have otherwise demanded over 10 tables in a relational
-system. For example, the product variants are contained as an embedded
-array in the same document, and other attributes such as product stock
-or locations would traditionally require additional tables. This
-transformational power stems from the document model's inherent
-flexibility. It not only empowers a more intuitive design but also
-ensures that related data is stored together, optimizing access.
+- Stores comprehensive product information including ID, name, and a
+  unique product identifier (such as SKUs).
 
-Equivalent Relational Model for Products
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Contains categorization fields (masterCategory, subCategory,
+  articleType).
 
-.. figure:: /includes/images/industry-solutions/event-driven-data-model.svg
+- Features nested objects for pricing with amount and currency fields.
+
+- Includes product-specific attributes like autoreplenishment status and
+  base color.
+
+- Maintains inventory-related fields and product metadata.
+
+.. figure:: /includes/images/industry-solutions/omnichannel-code-1.svg
    :figwidth: 1200px
-   :alt: Equivalent relational model for product.
+   :alt: Products collection overview.
 
-   Figure 4. Product collection equivalent in a tabular setup
+   Figure 2. MongoDB documents of the Products Collection
 
-Document Model
-~~~~~~~~~~~~~~
+Orders collection:
 
-.. figure:: /includes/images/industry-solutions/event-driven-document-model.svg
+- Tracks order details with unique identifiers for orders and users.
+
+- Contains an array of products for each order.
+
+- Features a status_history array that captures the progression of order
+  states with timestamps.
+
+- Differentiates between order types (Buy Online, Pick up in Store vs
+  Buy Online, Get Delivery at Home).
+
+- Stores shipping addresses specific to each order.
+
+- Adapts status workflows based on delivery type:
+
+   - BOPIS orders show statuses like In process → Ready for pickup.
+
+   - Home delivery orders progress through states like In process →
+     Ready for delivered → Picked up from warehouse → In Transit →
+     Delivered.
+
+The value of this model lies in its flexibility. By enabling the data
+structure to evolve with the user workflow, it allows the business to
+easily adapt to both current needs and future challenges that may arise.
+For instance, a product MongoDB document includes a field named “price,”
+which holds an array of values allowing for representation in multiple
+currencies, such as 12 USD.
+
+.. figure:: /includes/images/industry-solutions/omnichannel-code-2.svg
    :figwidth: 1200px
-   :alt: Database model with MongoDB.
+   :alt: Orders collection document overview
 
-   Figure 5. Take note of how complex objects and arrays are embedded
-   directly within the document
-
-.. code-block:: javascript
-   :copyable: true
-
-   {  
-      "type": "inbound",  
-      "location": {  
-         "origin": {  
-            "type": "warehouse"  
-         },  
-         "destination": {  
-            "type": "factory",  
-            "id": {  
-               "$oid": "65c63cb61526ffd3415fadbd"  
-            },  
-            "name": "Bogatell Factory"  
-         }  
-      },  
-      "placement_timestamp": {  
-         "$date": "2024-04-08T15:13:58.822Z"  
-      },  
-      "items": [  
-         {  
-            "sku": "CT001-PT-MDB0001",  
-            "name": "Programmable Thermostats",  
-            "unit": "pieces",  
-            "delivery_time": {  
-               "amount": 3,  
-               "unit": "seconds"  
-            },  
-            "status": [  
-               {  
-                  "name": "placed",  
-                  "update_timestamp": {  
-                     "$date": "2024-04-08T15:13:58.822Z"  
-                  }  
-               },  
-               {  
-                  "name": "arrived",  
-                  "update_timestamp": {  
-                     "$date": "2024-04-08T15:14:03.741Z"  
-                  }  
-               }  
-            ],  
-            "amount": 15,  
-            "product": {  
-               "id": {  
-                  "$oid": "65cce1a4ccdfb7402dbb4db4"  
-               },  
-               "name": "Controls and Thermostats",  
-               "image": {  
-                  "url": "/images/products/thermostats.png"  
-               }  
-            }  
-         }  
-      ],  
-      "automatic": true,  
-      "transaction_number": 133  
-   }  
-
+   Figure 3. MongoDB documents of the orders collection
 
 Building the Solution
 ---------------------
 
-Building this solution involves five major steps, encompassing MongoDB
-Atlas setup, your app configuration, and optional personalization steps.
-In the `GitHub repository
-<https://github.com/mongodb-industry-solutions/inventory-management>`__
-you will find detailed instructions on how to build this solution.
+Building this solution can be broken down in three major steps:
 
 .. procedure::
    :style: normal
 
    .. step:: Replicate the Demo Database
 
-      Create a MongoDB Atlas cluster and replicate the collections,
-      views, and indexes from the demo database.
+      Provision a cluster within your Atlas account and populate your
+      database with the data required for the demo. A data dump can be
+      found `inside the repository
+      <https://github.com/mongodb-industry-solutions/retail-store-v2/tree/main/dump/leafy_popup_store>`__
+      to quickly replicate the database with all the necessary data and
+      metadata with one quick `mongorestore
+      <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
+      command.
       
-   .. step:: Add the Auto-Replenishment Trigger
+   .. step:: Add the Order Status Trigger
 
-      Create a database trigger that automatically issues a
-      replenishment order when stock levels fall below a defined
-      threshold. For demo purposes, set up a second trigger to simulate
-      an order’s progress from placement to fulfillment.
+      Create a `database trigger
+      <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/database-triggers/>`__
+      that listens to the orders collection for any insert and update
+      event. This will run a function that you can copy from the `github
+      repository
+      <https://github.com/mongodb-industry-solutions/retail-store-v2/blob/main/microservices/atlas-trigger-omnichannel/updateorderStatus.js>`__.
+      Because the use case of this demo focuses on the experience of the
+      customer ordering from an e-commerce website, this trigger helps
+      us mimic the behind-the-scenes processes needed to update the
+      order status every 10 seconds, progressing the order through each
+      stage until the order is marked as delivered. Some of the backend
+      processes we mimic are workers from the warehouse managing the
+      order, postal services delivering packages, or store employees
+      packing an order. 
 
-   .. step:: Enable full-text search and filter facets
+   .. step:: Configure Your App Frontend
 
-      Configure search indexes for `full-text search
-      <https://www.mongodb.com/resources/basics/full-text-search>`__ and
-      filter facets in the products and transactions collections.
+      Obtain the demo code by cloning the `GitHub repository
+      <https://github.com/mongodb-industry-solutions/retail-store-v2>`__
+      to your local machine, configure the environment variables and
+      install the dependencies. Finally, run the app locally at
+      http://localhost:8080/cart.
 
-   .. step::  Set up real-time analytics with Atlas Charts
-
-      Enhance your application's visualization and analytics
-      capabilities with `Atlas Charts
-      <https://www.mongodb.com/products/platform/atlas-charts>`__.
-      Unlock real-time analytics and create custom charts based on your
-      preferences.
-
-   .. step:: Configure your app frontend
-
-      Clone the GitHub repository to your local machine, update the
-      environment variables with your own values, install the
-      dependencies, and run the app locally on http://localhost:3000.
+For complete implementation details, including code samples,
+configuration files, and tutorial videos, visit the `GitHub repository
+<https://github.com/mongodb-industry-solutions/retail-store-v2>`__.
 
 Key Learnings
 -------------
 
-Throughout this solution, we’ve covered multiple MongoDB topics. Here’s
-a quick recap of the key learnings: 
+This solution demonstrates three core capabilities of MongoDB that make
+it well-suited for omnichannel retail applications:
 
-- **Real-time alerts:** Implement real-time low-stock alerts in your
-  frontend using Change Streams. 
+- **Flexibility and speed:** MongoDB’s flexible document model is not
+  only intuitive for developers but also easy to implement and run. This
+  flexibility allows businesses to adapt quickly to changes, ensuring that
+  your solutions can evolve with ease. As a result, developers can focus
+  on building solutions rather than dealing with complex data structures,
+  leading to faster time to market and a consistent omnichannel
+  experience.
 
-- **Workflow automation:** Leverage database triggers to
-  automate stock replenishment workflows.
+- **Real-time capabilities:** Features like Change Streams and Atlas
+  Triggers enhance customer interactions through dynamic, real-time data
+  processing, essential for tasks like order tracking and inventory
+  updates.
 
-- **Real-time analytics:** Stay on top of your data, analyze trends, and
-  make informed decisions in a timely manner with Atlas Charts.
+- **Smart architecture:** MongoDB’s high availability and scalable
+  architecture provide a strong foundation for delivering interconnected
+  customer experiences, essential in the omnichannel era. Tools like
+  Change Streams and Atlas Triggers can easily integrate into your
+  application without an extra layer, making it simple to implement these
+  changes thanks to MongoDB's underlying architecture.
 
-- **Single view of inventory:** Take advantage of the
-  flexibility of the document model to create a comprehensive single view
-  of inventory. 
-
-Remember that this is just the beginning. Feel free to explore, tweak,
-and enhance your inventory management system to fit your own needs.
+Each of these capabilities contributes to building a robust omnichannel
+ordering system that can scale with your business needs while
+maintaining performance and reliability.
 
 Technologies and Products Used
 ------------------------------
