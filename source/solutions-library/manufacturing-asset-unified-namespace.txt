@@ -26,24 +26,24 @@ processes.
 
 **Use cases:** `App-Driven Analytics
 <https://www.mongodb.com/resources/solutions/use-cases/application-driven-intelligence>`__,
-`Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__,
 `IoT <https://www.mongodb.com/solutions/use-cases/internet-of-things>`__,
 `Single View <https://www.mongodb.com/solutions/use-cases/single-view>`__
 
 **Industries:** `Manufacturing & Mobility
-<https://www.mongodb.com/solutions/industries/manufacturing>`__,
-Aerospace & Defense, Energy & Environmental
+<https://www.mongodb.com/solutions/industries/manufacturing>`__
 
-**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Atlas
+**Products:** `Atlas Database
+<https://www.mongodb.com/products/platform/atlas-database>`__, `Atlas
 Charts <https://www.mongodb.com/products/platform/atlas-charts>`__,
-`Atlas Stream Processing
-<https://www.mongodb.com/products/platform/atlas-stream-processing>`__,
-`Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__
+`Change Streams
+<https://www.mongodb.com/resources/products/capabilities/change-streams>`__,
+`MongoDB Time Series
+<https://www.mongodb.com/products/capabilities/time-series>`__
 
-**Partners:** `Cohere
-<https://cloud.mongodb.com/ecosystem/cohere>`__, `LangChain
-<https://cloud.mongodb.com/ecosystem/langchain>`__ 
+**Partners:** `Cedalo (Mosquitto)
+<https://cedalo.com/blog/mqtt-to-mongodb-integration/>`__, `Kafka
+Connector
+<https://www.mongodb.com/products/integrations/kafka-connector>`__ 
 
 Solution Overview
 -----------------
