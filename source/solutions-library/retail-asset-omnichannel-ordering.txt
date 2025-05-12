@@ -187,11 +187,11 @@ Orders Collection
 
 - Adapts status workflows based on delivery type:
 
-   - BOPIS orders show statuses like In process → Ready for pickup.
+  - BOPIS orders show statuses like In process → Ready for pickup.
 
-   - Home delivery orders progress through states like In process →
-     Ready for delivered → Picked up from warehouse → In Transit →
-     Delivered.
+  - Home delivery orders progress through states like In process →
+    Ready for delivered → Picked up from warehouse → In Transit →
+    Delivered.
 
 The value of this model lies in its flexibility. By enabling the data
 structure to evolve with the user workflow, it allows the business to
