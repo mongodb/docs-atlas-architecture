@@ -19,7 +19,7 @@ Building Modern Omnichannel Ordering on MongoDB
    :class: singlecol
 
 Build fast, reliable omnichannel ordering by leveraging real-time
-updates using Atlas Change Streams and TriggersAtlas. Leverage. 
+updates using Atlas Change Streams and TriggersAtlas. 
 
 **Use cases:** `Catalog
 <https://www.mongodb.com/solutions/use-cases/catalog>`__,
