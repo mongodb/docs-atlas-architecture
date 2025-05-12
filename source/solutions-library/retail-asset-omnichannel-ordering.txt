@@ -38,9 +38,9 @@ Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__,
 Solution Overview
 -----------------
 
-While customers today expect seamless shopping experiences that blend
-online and offline channels, retailers struggle to implement modern
-omnichannel solutions with consistent experiences across all
+Customers today expect seamless shopping experiences that blend online
+and offline channels. However, retailers struggle to implement these
+omnichannel solutions that deliver consistent experiences across all
 touchpoints.
 
 While offering convenient options like “Buy Online, Pick Up In Store”
