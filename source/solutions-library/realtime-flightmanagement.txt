@@ -21,21 +21,19 @@ monitoring.
 **Use cases:** `Analytics
 <https://www.mongodb.com/solutions/use-cases/analytics>`__, `IoT
 <https://www.mongodb.com/solutions/use-cases/internet-of-things>`__,
-`Modernization
-<https://www.mongodb.com/resources/solutions/use-cases/application-modernization>`,
-`Single View <https://www.mongodb.com/solutions/use-cases/single-view>`  
+`Modernization <https://www.mongodb.com/resources/solutions/use-cases/application-modernization>`__ ,
+`Single View <https://www.mongodb.com/solutions/use-cases/single-view>`__   
   
-**Industries:** `Manufacturing & Mobility
- <https://www.mongodb.com/solutions/industries/manufacturing>`__ 
+**Industries:** `Manufacturing & Mobility <https://www.mongodb.com/solutions/industries/manufacturing>`__ __ 
   
 **Products and tools:** `MongoDB Atlas
 <https://www.mongodb.com/atlas/database>`__, `Aggregation Pipeline
 <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__,
 `Time Series Collections
-<https://www.mongodb.com/products/capabilities/time-series>`__, `Change
-Streams <https://www.mongodb.com/docs/manual/changeStreams/>`  
+<https://www.mongodb.com/products/capabilities/time-series>`__, 
+`Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__   
   
-**Partners:** `Google Cloud <https://cloud.google.com/>`, `Vercel <https://vercel.com/>`  
+**Partners:** `Google Cloud <https://cloud.google.com/>`__ , `Vercel <https://vercel.com/>`__   
   
 Solution Overview  
 -----------------  
@@ -60,17 +58,17 @@ Figure 1: Components of an Event-Driven Architecture
 
 The solution delivers:
 
-  - **Reduced delay propagation:** Real-time monitoring and immediate
-      response capabilities help prevent delays from cascading through
-      flight schedules.
+  - **Reduced delay propagation:**  Real-time monitoring and immediate
+    response capabilities help prevent delays from cascading through
+    flight schedules.
   - **Optimized resource allocation:** Intelligent data analysis enables
-      efficient reallocation of resources during disruptions.
+    efficient reallocation of resources during disruptions.
   - **Enhanced customer experience:** Better disruption management leads
-      to improved passenger satisfaction and loyalty.
+    to improved passenger satisfaction and loyalty.
   - **Scalable operations:** Flexible architecture supports growing data
-      volumes and operational demands.
+    volumes and operational demands.
   - **Real-time decision making:** Immediate access to flight data
-      enables quick and informed operational decisions.
+    enables quick and informed operational decisions.
 
   .. video:: https://youtu.be/RgreCE1eMkU
 
@@ -105,7 +103,7 @@ Reference Architectures
                   - **flight_realtimeCF** collection designed for
                       real-time data tracking and historical analysis (`Time
                       Series Collection
-                      <https://www.mongodb.com/docs/manual/core/timeseries-collections/>`)
+                      <https://www.mongodb.com/docs/manual/core/timeseries-collections/>`__ )
                   - **flights** collection for comprehensive general flight information management
 
    .. step:: **Integration components:**
@@ -114,7 +112,7 @@ Reference Architectures
                - Google Maps API for visualizing geographical data
                - Next.js for front-end interface and visualization
 
-This architecture enables three distinct data flows:
+**This architecture enables three distinct data flows:**
 
 - Operational data flow (blue lines): Handles real-time flight operations
 - Analytical data flow (green lines): Manages business intelligence
@@ -132,8 +130,9 @@ capabilities through this integrated event-driven architecture.
   
 Building the Solution  
 ---------------------  
-  
-`Prerequisites <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`
+
+`Prerequisites
+<https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__ 
 
 - Node.js (v14 or later)
 - MongoDB (local or cloud)
@@ -143,7 +142,8 @@ Building the Solution
 .. procedure::  
    :style: normal  
   
-   .. step:: `Set up MongoDB <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>` 
+   .. step:: `Set up MongoDB
+             <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
              - Store flight data in flexible schema
              - Support for real-time updates
              - Handle time series data for analytics 
@@ -152,7 +152,8 @@ Building the Solution
                configuration and integration steps 
              - Example model 
 
-   .. step:: `Configure GCP services <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>` 
+   .. step:: `Configure GCP services
+             <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
              - Deploy application as a containerized service using Google Cloud’s Cloud Run
              - Configure Google Cloud’s Cloud Build for automated deployments
              - Set up Google Cloud’s Cloud Storage for assets
@@ -237,19 +238,21 @@ Building the Solution
                        finally:    
                        client.close()  
 
-   .. step:: `Install your demo application to run locally <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>` 
+   .. step:: `Install your demo application to run locally
+             <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
              - Clone the repository and install dependencies
              - Configure environment variables
              - Set up MongoDB connection
              - Run development server 
 
-   .. step:: ` (Optional) Deploy the solution <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#deployment>` 
+   .. step:: `(Optional) Deploy the solution
+             <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#deployment>`__  
              - Containerize application using Docker
              - Deploy to Google Cloud’s Cloud Run for automatic scaling
              - Configure continuous deployment with Cloud Build
              - Set up environment variables and secrets
    
-In the end your app should look like this:
+**In the end your app should look like this:**
 
 .. figure:: /includes/images/industry-solutions/Airline Fig1.svg
    :figwidth: 1200px  
@@ -267,10 +270,10 @@ This solution provides a scalable, event-driven architecture that
 enables airlines to manage flight operations efficiently while
 minimizing the impact of delays and disruptions.
 
-For a detailed, step-by-step guide on implementing this solution,
-including code samples and specific configuration instructions,`visit
-our GitHub repository
-<https://github.com/mongodb-industry-solutions/leafy-airline>`.
+For a detailed, step-by-step guide on implementing this
+solution,including code samples and specific configuration
+instructions,`visit our GitHub repository
+<https://github.com/mongodb-industry-solutions/leafy-airline>`__ .
 
 Key Learnings
 -------------
@@ -284,7 +287,7 @@ Key Learnings
   Cloud services (Pub/Sub, Cloud Functions) enables immediate response to
   flight disruptions by processing real-time data streams, helping
   airlines minimize delays that can `cost an average of €4,320 per hour
-<https://www.cell.com/heliyon/fulltext/S2405-84402402511-8>`.
+  <https://www.cell.com/heliyon/fulltext/S2405-84402402511-8>`__ .
 
 - MongoDB's aggregation pipelines transform operational flight data into
   actionable insights, allowing airlines to optimize routes and resources
@@ -305,7 +308,7 @@ MongoDB modern, multi-cloud database platform:
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__  
 - `Time Series Collections <https://www.mongodb.com/products/capabilities/time-series>`__  
 - `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__  
-- `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`  
+- `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__   
   
 Partner technologies:  
 ~~~~~~~~~~~~~~~~~~~~~  
@@ -313,11 +316,11 @@ Partner technologies:
 - `Google Cloud Platform <https://cloud.google.com/>`__  
 - `PubSub <https://cloud.google.com/pubsub>`__  
 - `Vertex AI <https://cloud.google.com/vertex-ai>`__  
-- `Next.js <https://nextjs.org/>`  
-- `FastAPI <https://fastapi.tiangolo.com/>`  
+- `Next.js <https://nextjs.org/>`__   
+- `FastAPI <https://fastapi.tiangolo.com/>`__   
 - `Cloud Functions <https://cloud.google.com/functions>`__  
-- `TensorFlow <https://www.tensorflow.org/>`  
-- `Scikit-learn <https://scikit-learn.org/stable/>`  
+- `TensorFlow <https://www.tensorflow.org/>`__   
+- `Scikit-learn <https://scikit-learn.org/stable/>`__   
 
 Authors  
 -------  
