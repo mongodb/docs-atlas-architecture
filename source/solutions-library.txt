@@ -114,8 +114,8 @@ kick-start their projects.
          .. card::
             :headline: MongoDB and Hasura for Modern Fintech Services
             :url: /solutions-library/hasura-fintech-services/
-            :icon: industry_finance
-            :icon-alt: Atlas industry_finance icon
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
 
             Leverage agentic RAG using MongoDB and Dataworkz to enhance customers’
             shopping experiences with a personalized chatbot.
@@ -130,8 +130,8 @@ kick-start their projects.
          .. card::
             :headline: Payments Modernization Solution Accelerator
             :url: /solutions-library/payments-solution/
-            :icon: industry_finance
-            :icon-alt: Atlas industry_finance icon
+            :icon: industry_credit_card
+            :icon-alt: Atlas industry_credit_card icon
 
             Learn how to build an operational data layer (ODL) to unlock siloed payment
             data and power modern applications.
