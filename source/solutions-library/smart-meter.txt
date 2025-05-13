@@ -17,18 +17,18 @@ Power Smart Meter Analysis with MongoDB
 MongoDB provides a scalable platform for smart meter systems, enabling
 real-time data collection, time series analysis, and anomaly detection.
 
-**Use cases:** `IoT <https://www.mongodb.com/use-cases/internet-of-things>`__, 
-`App Driven-Analytics <https://www.mongodb.com/use-cases/analytics>`__, 
-`Single View <https://www.mongodb.com/use-cases/single-view>`__
+**Use cases:** `IoT <https://www.mongodb.com/solutions/use-cases/internet-of-things>`__, 
+`App Driven-Analytics <https://www.mongodb.com/collateral/application-driven-analytics>`__, 
+`Single View <https://www.mongodb.com/solutions/use-cases/single-view>`__
 
-**Industries:** `Manufacturing & Mobility <https://www.mongodb.com/industries/manufacturing>`__, 
-`Energy and Environmental <https://www.mongodb.com/industries/environmental>`__
+**Industries:** `Manufacturing & Mobility <https://www.mongodb.com/solutions/industries/manufacturing>`__, 
+Energy and Environmental
 
-**Products and tools:** `MongoDB Atlas <https://www.mongodb.com/atlas>`__, 
-`Atlas Charts <https://www.mongodb.com/products/charts>`__, 
-`Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__, 
-`Time Series Collections <https://www.mongodb.com/time-series>`__, 
-`MongoDB Query API <https://www.mongodb.com/docs/manual/tutorial/query-documents/>`__
+**Products and tools:** `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__, 
+`Atlas Charts <https://www.mongodb.com/products/platform/atlas-charts>`__, 
+`Change Streams <https://www.mongodb.com/resources/products/capabilities/change-streams>`__, 
+`Time Series Collections <https://www.mongodb.com/products/capabilities/time-series>`__, 
+`MongoDB Query API <https://www.mongodb.com/products/tools/mongodb-query-api>`__
 
 **Partners:** `Cedalo <https://cedalo.com/>`__
 
@@ -100,9 +100,10 @@ Once the smart meter data is stored in MongoDB Atlas, it can be analyzed
 for anomalies and insights. This solution leverages three key MongoDB
 features to create a next generation MDMS: `change streams
 <https://www.mongodb.com/docs/manual/changeStreams/>`__, `time series
-collections <https://www.mongodb.com/time-series>`__, and the powerful
-`MongoDB Query API
-<https://www.mongodb.com/docs/manual/tutorial/query-documents/>`__.
+collections
+<https://www.mongodb.com/docs/drivers/java/sync/v5.2/fundamentals/time-series/>`__,
+and the powerful `MongoDB Query API
+<https://www.mongodb.com/products/tools/mongodb-query-api>`__.
 
 MongoDB change streams enable real-time capturing and processing of
 database changes, such as insert operations, providing immediate
@@ -116,7 +117,7 @@ The analyzed data is stored in time series collections. These
 specialized collections provide high compression, enhance query
 performance of time series data, and enable fast operations.
 
-.. figure:: /includes/images/industry-solutions/end-to-end-smart-meter-management-system-architecture.svg
+.. figure:: /includes/images/industry-solutions/Smart Meter Architecture.svg
    :figwidth: 1200px
    :alt: End-to-end smart meter management system architecture
 
@@ -177,69 +178,72 @@ various MQTT providers.
 Key solution components
 ~~~~~~~~~~~~~~~~~~~~~~
 
-**MQTT broker (data ingestion layer)**
+.. procedure::
+   :style: normal
 
-- Set up your MQTT broker for reliable message handling
-- Configure broker integration with MongoDB
-- Establish secure data streaming pipelines
-- Enable real-time data collection from smart meters
-- Implement broker management and monitoring
+   .. step:: **MQTT broker (data ingestion layer)**
 
-**Environment configuration (configuration layer)**
+             - Set up your MQTT broker for reliable message handling
+             - Configure broker integration with MongoDB
+             - Establish secure data streaming pipelines
+             - Enable real-time data collection from smart meters
+             - Implement broker management and monitoring 
 
-- Configure environment variables for:
-  - MQTT broker connection details
-  - MongoDB connection URI
-  - Database and collection names
-  - Analytics engine configuration
-  - Atlas Charts integration
+    .. step:: **Environment configuration (configuration layer)**
 
-**Database configuration (data processing layer)**
+              - Configure environment variables for:
+                - MQTT broker connection details
+                - MongoDB connection URI
+                - Database and collection names
+                - Analytics engine configuration
+                - Atlas Charts integration
 
-- Create MongoDB database with required collections
-- Set up time series collections for:
-  - Anomalies data
-  - Metrics data
-  - Transformed data
-- Configure data transformation pipelines
-- Enable real-time data processing capabilities
+     .. step:: **Database configuration (data processing layer)**
 
-**Application deployment (analytics and visualization layer)**
+               - Create MongoDB database with required collections
+               - Set up time series collections for:
+                 - Anomalies data
+                 - Metrics data
+                 - Transformed data
+               - Configure data transformation pipelines
+               - Enable real-time data processing capabilities 
 
-- Deploy application components
-- Implement real-time monitoring capabilities
-- Set up anomaly detection algorithms
-- Create customized dashboards
-- Enable interactive data exploration
+    .. step:: **Application deployment (analytics and visualization layer)**
+
+              - Deploy application components
+              - Implement real-time monitoring capabilities
+              - Set up anomaly detection algorithms
+              - Create customized dashboards
+              - Enable interactive data exploration
 
 For a complete, hands-on implementation, check out the detailed repository: 
-`https://github.com/mongodb-industry-solutions/Leafy-Smart-Meters <https://github.com/mongodb-industry-solutions/Leafy-Smart-Meters>`__
+`https://github.com/mongodb-industry-solutions/Leafy-Smart-Meters`__
 
 Key Learnings
 -------------
 
 - **Data management is critical:** Smart meters generate massive volumes
-of time series data, presenting significant challenges in data
-interoperability, privacy, and efficient processing. Effective solutions
-require flexible, scalable databases that can handle high-frequency,
-complex data streams.
+  of time series data, presenting significant challenges in data
+  interoperability, privacy, and efficient processing. Effective solutions
+  require flexible, scalable databases that can handle high-frequency,
+  complex data streams.
 
 - **MQTT enables efficient IoT communication:** The lightweight
-publish-subscribe protocol is crucial for smart meter ecosystems,
-providing efficient, secure, and reliable data transmission between IoT
-devices, aggregators, and management systems.
+  publish-subscribe protocol is crucial for smart meter ecosystems,
+  providing efficient, secure, and reliable data transmission between IoT
+  devices, aggregators, and management systems.
 
 - **MongoDB offers comprehensive IoT data solutions:** With features
-like time series collections, change streams, aggregation frameworks,
-and the flexible document model, MongoDB addresses key challenges in
-smart meter data management, including anomaly detection, real-time
-analytics, and scalable data storage.
+  like time series collections, change streams, aggregation frameworks,
+  and the flexible document model, MongoDB addresses key challenges in
+  smart meter data management, including anomaly detection, real-time
+  analytics, and scalable data storage.
 
 - **Integrated approach is key:** Successful smart meter implementations
-require a holistic solution that combines robust messaging protocols
-(like MQTT), advanced database technologies, and comprehensive analytics
-capabilities to transform raw meter data into actionable insights for
-utility companies.
+  require a holistic solution that combines robust messaging protocols
+  (like MQTT), advanced database technologies, and comprehensive analytics
+  capabilities to transform raw meter data into actionable insights for
+  utility companies.
 
 Technologies and Products Used
 -----------------------------
