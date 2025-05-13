@@ -75,7 +75,7 @@ kick-start their projects.
 
             Discover how MongoDB and Google Cloud are powering
             generative AI-driven, hyper-personalized in-car experiences
-            built for automotive innovation at scale.
+            for automotive innovation.
 
       IoT 
       ---
