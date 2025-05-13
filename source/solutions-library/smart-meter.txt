@@ -189,32 +189,32 @@ Key solution components
                - Enable real-time data collection from smart meters
                - Implement broker management and monitoring 
 
-    .. step:: **Environment configuration (configuration layer)**
+   .. step:: **Environment configuration (configuration layer)**
 
-                - Configure environment variables for:
-                  - MQTT broker connection details
-                  - MongoDB connection URI
-                  - Database and collection names
-                  - Analytics engine configuration
-                  - Atlas Charts integration
+               - Configure environment variables for:
+                 - MQTT broker connection details
+                 - MongoDB connection URI
+                 - Database and collection names
+                 - Analytics engine configuration
+                 - Atlas Charts integration
 
-     .. step:: **Database configuration (data processing layer)**
+   .. step:: **Database configuration (data processing layer)**
 
-                 - Create MongoDB database with required collections
-                 - Set up time series collections for:
-                   - Anomalies data
-                   - Metrics data
-                   - Transformed data
-                 - Configure data transformation pipelines
-                 - Enable real-time data processing capabilities 
+               - Create MongoDB database with required collections
+               - Set up time series collections for:
+                 - Anomalies data
+                 - Metrics data
+                 - Transformed data
+               - Configure data transformation pipelines
+               - Enable real-time data processing capabilities 
 
-    .. step:: **Application deployment (analytics and visualization layer)**
+   .. step:: **Application deployment (analytics and visualization layer)**
 
-                - Deploy application components
-                - Implement real-time monitoring capabilities
-                - Set up anomaly detection algorithms
-                - Create customized dashboards
-                - Enable interactive data exploration
+               - Deploy application components
+               - Implement real-time monitoring capabilities
+               - Set up anomaly detection algorithms
+               - Create customized dashboards
+               - Enable interactive data exploration
 
 For a complete, hands-on implementation, check out the detailed repository: 
 `Link to Repository <https://github.com/mongodb-industry-solutions/Leafy-Smart-Meters>`__

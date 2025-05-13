@@ -85,7 +85,7 @@ kick-start their projects.
 
          .. card::
             :headline: Power Smart Meter Analysis with MongoDB
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
+            :url: https://deploy-preview-214--docs-atlas-architecture.netlify.app/solutions-library/smart-meter/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
