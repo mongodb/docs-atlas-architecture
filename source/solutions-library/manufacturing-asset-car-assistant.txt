@@ -223,11 +223,11 @@ capabilities.
 
   - Vehicle signals—both latest values and full time series telemetry.
 
- Atlas Vector Search is used to match user questions with the most
- relevant manual sections, enabling a Retrieval-Augmented Generation
- (RAG) flow. MongoDB’s native support for structured, semi-structured,
- and vector data in one place simplifies the assistant logic and speeds
- up development.
+Atlas Vector Search is used to match user questions with the most
+relevant manual sections, enabling a Retrieval-Augmented Generation
+(RAG) flow. MongoDB’s native support for structured, semi-structured,
+and vector data in one place simplifies the assistant logic and speeds
+up development.
 
 - **Data Sync:** We use PowerSync for two-way sync between the vehicle
   and cloud: 
