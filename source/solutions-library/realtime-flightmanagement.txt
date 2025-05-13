@@ -24,7 +24,7 @@ monitoring.
 `Modernization <https://www.mongodb.com/resources/solutions/use-cases/application-modernization>`__ ,
 `Single View <https://www.mongodb.com/solutions/use-cases/single-view>`__   
   
-**Industries:** `Manufacturing & Mobility <https://www.mongodb.com/solutions/industries/manufacturing>`__ __ 
+**Industries:** `Manufacturing & Mobility <https://www.mongodb.com/solutions/industries/manufacturing>`__ 
   
 **Products and tools:** `MongoDB Atlas
 <https://www.mongodb.com/atlas/database>`__, `Aggregation Pipeline
@@ -273,7 +273,7 @@ minimizing the impact of delays and disruptions.
 For a detailed, step-by-step guide on implementing this
 solution,including code samples and specific configuration
 instructions,`visit our GitHub repository
-<https://github.com/mongodb-industry-solutions/leafy-airline>`__ .
+<https://github.com/mongodb-industry-solutions/leafy-airline>`__.
 
 Key Learnings
 -------------
@@ -287,7 +287,7 @@ Key Learnings
   Cloud services (Pub/Sub, Cloud Functions) enables immediate response to
   flight disruptions by processing real-time data streams, helping
   airlines minimize delays that can `cost an average of €4,320 per hour
-  <https://www.cell.com/heliyon/fulltext/S2405-84402402511-8>`__ .
+  <https://www.cell.com/heliyon/fulltext/S2405-84402402511-8>`__.
 
 - MongoDB's aggregation pipelines transform operational flight data into
   actionable insights, allowing airlines to optimize routes and resources
