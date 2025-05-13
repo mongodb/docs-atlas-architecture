@@ -1,7 +1,7 @@
-.. _arch-center-is-real-time-flightmanagement:
+.. _arch-center-is-realtime-flight-management:
 
-==================================================  
-Elevate Flight Operations with Real-Time Analytics  
+==================================================
+Elevate Flight Operations with Real-Time Analytics
 ==================================================  
   
 .. facet::  
