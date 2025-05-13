@@ -111,6 +111,15 @@ kick-start their projects.
             and scalability—enabling seamless, compliant, and personalized financial
             services.
 
+         .. card::
+            :headline: MongoDB and Hasura for Modern Fintech Services
+            :url: /solutions-library/hasura-fintech-services/
+            :icon: industry_finance
+            :icon-alt: Atlas industry_finance icon
+
+            Leverage agentic RAG using MongoDB and Dataworkz to enhance customers’
+            shopping experiences with a personalized chatbot.
+
       .. Modernization
       .. -------------
 

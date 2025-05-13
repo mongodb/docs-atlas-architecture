@@ -42,14 +42,14 @@ and challenges for financial services providers:
   product offerings
 - Real-time analytics capabilities for risk assessment and fraud detection
 
-We present a reference architecture using Hasura DDN (Data Delivery Network) with MongoDB
-Atlas to address these challenges. This combination offers a powerful, flexible, and
-scalable solution for modern fintech applications.
+We present a reference architecture using Hasura DDN (Data Delivery Network) with
+|service-fullname| to address these challenges. This combination offers a powerful,
+flexible, and scalable solution for modern fintech applications.
 
 Hasura DDN is a universal data access layer for next-gen apps and AI. It lets teams
 effortlessly build and deploy a fast, secure, and federated API layer on all their data.
 
-MongoDB Atlas is a leading fully managed cloud database service known for its flexible
+|service-fullname| is a leading fully managed cloud database service known for its flexible
 document model, horizontal scalability through sharding, and performance optimizations
 that support the demanding requirements of financial applications. Together, they create a
 foundation that accelerates innovation while maintaining the security and reliability
@@ -75,7 +75,7 @@ Key components of the architecture:
 - API and access layer: Hasura DDN for data access and real-time subscriptions
 - Application layer: Fintech services and applications
 - Security layer: Authentication and authorization services
-- Analytics layer: Data processing and machine learning services
+- Analytics layer: Data processing and |ml| services
 
 Data Model Approach
 -------------------
@@ -86,7 +86,8 @@ schema design allows fintech organizations to adapt quickly to new financial pro
 regulatory requirements without disruptive schema migrations. For optimal performance, the
 model employs strategic decisions around data organization.
 
-.. codeblock::
+.. code-block::
+    
     // Example Customer Document with Embedded Account Information
     {
     "_id": ObjectId("5f8a7b2b9d3b2e5a7c8b4567"),
@@ -206,7 +207,7 @@ MongoDB:
 Partner technologies:
 ~~~~~~~~~~~~~~~~~~~~~
 - `Hasura <https://hasura.io/>`__
-- Apache Kafka for event streaming
+- {+kafka+} for event streaming
 
 Authors
 -------
