@@ -1,4 +1,4 @@
-.. _arch-center-is-Gen AI-powered-video-summarization-solution:
+.. _arch-center-real-time-flight-management:
 
 =================================================
 Elevate Flight Operations with RealTime Analytics
