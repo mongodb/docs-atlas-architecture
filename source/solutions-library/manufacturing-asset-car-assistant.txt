@@ -268,70 +268,64 @@ experiences that truly make a difference on the road.
 Building the Solution
 ---------------------
 
+Building this solution can be broken down into five major steps. You’ll
+use MongoDB Atlas to host your data, Google Cloud for AI services,
+PowerSync to stream vehicle data, and a full-stack app to tie everything
+together. You’ll find all required assets and resources inside the
+`GitHub repository
+<https://github.com/mongodb-industry-solutions/genai-in-car-voice-assistant/tree/main>`__.
+
 .. procedure::
    :style: normal
 
-   .. step:: `Set Up MongoDB Atlas Environment <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-1-create-a-mongodb-atlas-instance>`__
+   .. step:: Replicate the Demo Database. 
 
-      - Configure cluster, database and collections for machine
-        failures, sensor data (raw and transformed), ML models,
-        maintenance history, and repair documentation.
-      
-      - Set up MongoDB Atlas Search and Vector search indexes for repair
-        manuals and maintenance history.
-      
-        .. code-block:: javascript  
-           :copyable: true  
-  
-           {  
-               "fields": [  
-                   {  
-                       "numDimensions": 1024,  
-                       "path": "embeddings",  
-                       "similarity": "euclidean",  
-                       "type": "vector"  
-                   }  
-               ]  
-           }  
+      Provision a cluster within your `Atlas account
+      <https://www.mongodb.com/cloud/atlas/register>`__ and populate
+      your database with the data required for the demo. A data dump can
+      be found inside the repository to quickly replicate the database
+      with all the necessary data and metadata with one quick
+      `mongorestore
+      <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
+      command.
 
-      - Configure Stream Processing for real-time data transformation. 
-      
-      - Create Atlas Charts dashboards for monitoring and visualization.
+   .. step:: Configure Your Google Cloud Environment
 
+      Create a Google Cloud project and enable the required APIs:
+      `Speech-to-Text <https://cloud.google.com/speech-to-text>`__,
+      `Text-to-Speech <https://cloud.google.com/text-to-speech>`__,
+      `Document AI <https://cloud.google.com/document-ai>`__, and
+      `Vertex AI <https://cloud.google.com/vertex-ai>`__. For local
+      development, configure Application Default Credentials so the app
+      can authenticate seamlessly with Google services. Detailed
+      instructions are provided in the `Google Cloud documentation
+      <https://cloud.google.com/docs/authentication/application-default-credentials>`__.
 
-   .. step:: `Configure AI Services Integration <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-2-configure-environment-variables>`__
+   .. step:: (Optional) Create Your Own Document Embeddings
 
-      - Select one LLM provider for your implementation:
+      The demo includes a precomputed set of embeddings for the car
+      manual. However, you can generate your own embeddings by parsing
+      PDF files using Document AI and embedding them with Vertex AI.
+      This gives you flexibility to extend the assistant with custom
+      documents or additional manuals as needed.
 
-        - Option 1 - Amazon Bedrock: Configure access to Cohere models
-          for embeddings and completions (Examples of available models:
-          cohere.embed-english-v3 for embeddings, cohere.command-r-10
-          for completions).
+   .. step:: Configure PowerSync for Real-time Vehicle Data
 
-        - Option 2 - OpenAI: Set up API access and select appropriate
-          model.
+      Create a PowerSync account and link your MongoDB database using your
+      connection string. PowerSync acts as a data bridge, syncing MongoDB data
+      to client applications in real-time. Define sync rules for the
+      *vehicleData* collection. 
 
-      - Set up Google Cloud Translation API for multilingual support.
+   .. step:: Run the Application
 
-   .. step:: `Application Setup <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-3-add-some-documents-in-mongodb>`__
+      Clone the repository locally and create a *.env* file using the template
+      provided. Once your environment is configured, run *npm install* to
+      install dependencies and then start the development server with *npm run
+      dev*. The app will be available at http://localhost:3000.
 
-      - Configure environment variables including MongoDB connection
-        strings, database settings, and required API credentials.
-      
-      - Deploy inference script for continuous system monitoring.
-
-      - Install and configure alerts application.
-
-      - Launch main demo application.
-
-      - Perform system testing and validation to ensure proper data flow
-        and functionality.
-
-For complete implementation details, including code samples,
-configuration files, and tutorial videos, visit the `GitHub repository
-<https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance>`__.
-This repository provides a production-ready template for implementing
-predictive maintenance using MongoDB Atlas' comprehensive feature set.
+For full implementation details—including code samples, data dumps, and
+helper scripts—visit the `GitHub repository
+<https://github.com/mongodb-industry-solutions/genai-in-car-voice-assistant/tree/main>`__.
 
 Key Learnings 
 -------------
