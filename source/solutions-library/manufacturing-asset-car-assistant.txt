@@ -268,6 +268,19 @@ experiences that truly make a difference on the road.
 Data Model Approach
 -------------------
 
+Data is at the heart of any AI-powered experience. The quality,
+structure, and accessibility of your data are what make or break the
+experience. In this solution, MongoDB’s document model plays a central
+role—enabling flexibility, speed, and scale for developers building
+intelligent in-car assistants.
+
+Unlike traditional relational databases that rely on rigid tables and
+complex joins, MongoDB stores data as flexible documents. This makes it
+easier to represent real-world data structures, like vehicle telemetry
+or embedded knowledge chunks, exactly as they are used in code. It also
+means you can iterate faster, adapt your model without downtime, and
+build new capabilities as your application evolves.
+
 Building the Solution
 ---------------------
 
