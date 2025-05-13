@@ -3,5 +3,4 @@
 
    Gen AI <solutions-library/manufacturing-gen-ai>
    IoT <solutions-library/manufacturing-iot>
-
-.. App-Driven Analytics <solutions-library/manufacturing-app-driven-analytics>
+   App-Driven Analytics <solutions-library/manufacturing-app-driven-analytics>

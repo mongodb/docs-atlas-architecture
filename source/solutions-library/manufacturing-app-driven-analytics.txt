@@ -1,2 +1,4 @@
 .. toctree::
    :titlesonly:
+
+   Real-Time Flight Management <solutions-library/realtime-flightmanagement>
