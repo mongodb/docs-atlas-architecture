@@ -67,11 +67,16 @@ experience.
    
    Figure 1. Gen AI in-car assistant in action
 
-Along the way, teams will learn how to: Unify structured and
-unstructured data to augment the context of AI systems Enable real-time
-interactions with a scalable, cloud-native architecture Deliver
-personalized experiences with semantic search powered by Atlas Vector
-Search
+Along the way, teams will learn how to: 
+
+- Unify structured and unstructured data to augment the context of AI
+  systems. 
+
+- Enable real-time interactions with a scalable, cloud-native
+  architecture. 
+
+- Deliver personalized experiences with semantic search powered by Atlas
+  Vector Search.
 
 While this solution focuses on the automotive industry, its potential
 extends far beyond. Industries like transportation, healthcare,
@@ -300,4 +305,3 @@ Authors
 
 - Dr. Humza Akhtar, MongoDB
 - Rami Pinto, MongoDB
-- Sebastian Rojas Arbulu, MongoDB
