@@ -1,4 +1,4 @@
-.. _arch-center-real-time-flight-management:  
+.. _arch-center-real-time-flight-management:
 
 ==================================================  
 Elevate Flight Operations with Real-Time Analytics  
