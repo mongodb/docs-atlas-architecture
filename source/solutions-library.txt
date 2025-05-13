@@ -67,6 +67,16 @@ kick-start their projects.
             Optimize your maintenance strategy with AI. Predict
             failures, generate repair plans, and guide technicians.
 
+         .. card::
+            :headline: Transforming the Driver Experience with MongoDB & Google Cloud
+            :url: 
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Discover how MongoDB and Google Cloud are powering
+            generative AI-driven, hyper-personalized in-car experiences
+            built for automotive innovation at scale.
+
       IoT 
       ---
 
