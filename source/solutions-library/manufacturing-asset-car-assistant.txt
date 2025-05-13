@@ -44,57 +44,46 @@ Atlas Vector Search
 Solution Overview
 -----------------
 
-MongoDB Atlas powers an end-to-end predictive maintenance solution that
-helps manufacturers prevent equipment failures and optimize maintenance
-operations through four strategic stages:
+As automakers race to deliver next-generation driving experiences, they
+face growing pressure to differentiate with intelligent, user-friendly
+digital systems. In-car voice assistants have emerged as a key
+opportunity—yet most still fall short, limited to basic commands like
+setting navigation or controlling music. With the rise of generative AI,
+there’s a clear path to move beyond these limitations and deliver truly
+personalized, dynamic interactions behind the wheel.
 
-1. Machine prioritization and criticality analysis
+This solution demonstrates how automotive teams can build a scalable,
+real-time voice assistant powered by gen AI and backed by MongoDB Atlas.
+The architecture integrates vehicle telemetry, user preferences, and car
+manual embeddings to create an in-car assistant capable of adapting to
+each driver’s needs. By using MongoDB Atlas’s flexible document model
+and built-in vector search, developers can streamline data complexity
+and deliver features faster for a better, more intuitive in-car
+experience.
 
-   - Addresses the question: "Which machine should I prioritize for
-     predictive maintenance and why?" 
-   - Uses machine learning and RAG-based analysis to prioritize critical
-     equipment.
-   - Leverages historical data and expert knowledge to make informed
-     decisions.
-
-#. Failure prediction
-
-   - Answers the critical question: "What is the root cause of imminent
-     failure?"
-   - Processes real-time sensor data through `Atlas Stream Processing
-     <https://www.mongodb.com/products/platform/atlas-stream-processing>`__.
-   - Enables early detection of potential failures before they occur.
-
-#. Maintenance plan generation
-
-   - Focuses on: "How should I schedule the repair procedure?" 
-   - Automatically generates detailed repair plans using large language
-     models. 
-   - Combines maintenance manuals, inventory data, and resource
-     information.
-
-#. Maintenance guidance generation
-
-   - Addresses: "How do I get better guidance on fixing machines?" 
-   - Provides enhanced maintenance guidance by integrating service notes
-     and repair instructions. 
-   - Delivers instructions directly to technicians' mobile devices
-     through `Change Streams
-     <https://www.mongodb.com/docs/manual/changeStreams/>`__.
-
-.. figure:: /includes/images/industry-solutions/predictive-maintenance-demo.svg
+.. figure:: /includes/images/industry-solutions/car-assistant-demo.gif
    :figwidth: 1200px
    :alt: Predictive maintenance workflow stages
    
-   Figure 1: Four stages of predictive maintenance workflow
+   Figure 1. Gen AI in-car assistant in action
 
-.. video:: https://www.youtube.com/watch?v=YwTWpUl3QS8
+Along the way, teams will learn how to: Unify structured and
+unstructured data to augment the context of AI systems Enable real-time
+interactions with a scalable, cloud-native architecture Deliver
+personalized experiences with semantic search powered by Atlas Vector
+Search
 
-By leveraging MongoDB's unified data platform capabilities like vector
-search and real-time analytics, organizations can achieve significant
-operational improvements: `reducing downtime by 15-20%, increasing labor
-productivity by 5-20%, and cutting maintenance costs by 30-60%
-<https://www2.deloitte.com/content/dam/Deloitte/us/Documents/process-and-operations/us-predictive-maintenance.pdf>`__.
+While this solution focuses on the automotive industry, its potential
+extends far beyond. Industries like transportation, healthcare,
+hospitality, and consumer electronics are exploring gen AI voice
+interfaces to enhance customer engagement, reduce friction, and
+streamline support. Whether it’s a smart home assistant, a digital
+concierge, or an AI-enabled medical triage system, this architecture
+provides a foundation to build voice-forward, data-driven experiences
+that feel intuitive and relevant. Companies across industries are
+harnessing `the power of voice with generative AI and MongoDB
+<https://www.mongodb.com/blog/post/building-ai-mongodb-giving-your-apps-voice>`__
+to transform user experiences.
 
 Reference Architectures
 -----------------------
