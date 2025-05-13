@@ -94,7 +94,7 @@ information such as meter ID, timestamp, and measurements (energy,
 current, voltage, etc.).
 
 2. Next generation meter data management system with MongoDB
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the smart meter data is stored in MongoDB Atlas, it can be analyzed
 for anomalies and insights. This solution leverages three key MongoDB
@@ -176,48 +176,48 @@ solution is designed to be broker-agnostic, supporting integration with
 various MQTT providers.
 
 Key solution components
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. procedure::
    :style: normal
 
    .. step:: **MQTT broker (data ingestion layer)**
 
-             - Set up your MQTT broker for reliable message handling
-             - Configure broker integration with MongoDB
-             - Establish secure data streaming pipelines
-             - Enable real-time data collection from smart meters
-             - Implement broker management and monitoring 
+               - Set up your MQTT broker for reliable message handling
+               - Configure broker integration with MongoDB
+               - Establish secure data streaming pipelines
+               - Enable real-time data collection from smart meters
+               - Implement broker management and monitoring 
 
     .. step:: **Environment configuration (configuration layer)**
 
-              - Configure environment variables for:
-                - MQTT broker connection details
-                - MongoDB connection URI
-                - Database and collection names
-                - Analytics engine configuration
-                - Atlas Charts integration
+                - Configure environment variables for:
+                  - MQTT broker connection details
+                  - MongoDB connection URI
+                  - Database and collection names
+                  - Analytics engine configuration
+                  - Atlas Charts integration
 
      .. step:: **Database configuration (data processing layer)**
 
-               - Create MongoDB database with required collections
-               - Set up time series collections for:
-                 - Anomalies data
-                 - Metrics data
-                 - Transformed data
-               - Configure data transformation pipelines
-               - Enable real-time data processing capabilities 
+                 - Create MongoDB database with required collections
+                 - Set up time series collections for:
+                   - Anomalies data
+                   - Metrics data
+                   - Transformed data
+                 - Configure data transformation pipelines
+                 - Enable real-time data processing capabilities 
 
     .. step:: **Application deployment (analytics and visualization layer)**
 
-              - Deploy application components
-              - Implement real-time monitoring capabilities
-              - Set up anomaly detection algorithms
-              - Create customized dashboards
-              - Enable interactive data exploration
+                - Deploy application components
+                - Implement real-time monitoring capabilities
+                - Set up anomaly detection algorithms
+                - Create customized dashboards
+                - Enable interactive data exploration
 
 For a complete, hands-on implementation, check out the detailed repository: 
-`https://github.com/mongodb-industry-solutions/Leafy-Smart-Meters`__
+`Link to Repository <https://github.com/mongodb-industry-solutions/Leafy-Smart-Meters>`__
 
 Key Learnings
 -------------
@@ -246,7 +246,7 @@ Key Learnings
   utility companies.
 
 Technologies and Products Used
------------------------------
+------------------------------
 
 MongoDB developer data platform:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -258,7 +258,7 @@ MongoDB developer data platform:
 - `MongoDB Query API <https://www.mongodb.com/docs/manual/tutorial/query-documents/>`__
 
 Partner technologies:
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 - Cedalo MQTT Platform
 
