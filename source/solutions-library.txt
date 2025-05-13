@@ -120,8 +120,23 @@ kick-start their projects.
             Leverage agentic RAG using MongoDB and Dataworkz to enhance customers’
             shopping experiences with a personalized chatbot.
 
-      .. Modernization
-      .. -------------
+      Modernization
+      -------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Payments Modernization Solution Accelerator
+            :url: /solutions-library/payments-solution/
+            :icon: industry_finance
+            :icon-alt: Atlas industry_finance icon
+
+            Learn how to build an operational data layer (ODL) to unlock siloed payment
+            data and power modern applications.
+
+
 
    .. tab:: Manufacturing & Motion
       :tabid: manufacturing
