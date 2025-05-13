@@ -192,19 +192,19 @@ Key solution components
    .. step:: **Environment configuration (configuration layer)**
 
                - Configure environment variables for:
-                 - MQTT broker connection details
-                 - MongoDB connection URI
-                 - Database and collection names
-                 - Analytics engine configuration
-                 - Atlas Charts integration
+                  - MQTT broker connection details
+                  - MongoDB connection URI
+                  - Database and collection names
+                  - Analytics engine configuration
+                  - Atlas Charts integration
 
    .. step:: **Database configuration (data processing layer)**
 
                - Create MongoDB database with required collections
                - Set up time series collections for:
-                 - Anomalies data
-                 - Metrics data
-                 - Transformed data
+                  - Anomalies data
+                  - Metrics data
+                  - Transformed data
                - Configure data transformation pipelines
                - Enable real-time data processing capabilities 
 
