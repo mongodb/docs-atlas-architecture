@@ -58,26 +58,25 @@ Figure 1: Components of an Event-Driven Architecture
 
 The solution delivers:
 
-  - **Reduced delay propagation:**  Real-time monitoring and immediate
-    response capabilities help prevent delays from cascading through
-    flight schedules.
-  - **Optimized resource allocation:** Intelligent data analysis enables
-    efficient reallocation of resources during disruptions.
-  - **Enhanced customer experience:** Better disruption management leads
-    to improved passenger satisfaction and loyalty.
-  - **Scalable operations:** Flexible architecture supports growing data
-    volumes and operational demands.
-  - **Real-time decision making:** Immediate access to flight data
-    enables quick and informed operational decisions.
+- **Reduced delay propagation:**  Real-time monitoring and immediate
+  response capabilities help prevent delays from cascading through
+  flight schedules.
+- **Optimized resource allocation:** Intelligent data analysis enables
+  efficient reallocation of resources during disruptions.
+- **Enhanced customer experience:** Better disruption management leads
+  to improved passenger satisfaction and loyalty.
+- **Scalable operations:** Flexible architecture supports growing data
+  volumes and operational demands.
+- **Real-time decision making:** Immediate access to flight data
+  enables quick and informed operational decisions.
 
   .. video:: https://youtu.be/RgreCE1eMkU
 
-  
 Reference Architectures  
 -----------------------  
   
-  MongoDB's Real-Time Flight Management solution implements an
-  event-driven architecture that consists of several key components:
+MongoDB's Real-Time Flight Management solution implements an
+event-driven architecture that consists of several key components:
 
 .. procedure::
    :style: normal
@@ -152,8 +151,7 @@ Building the Solution
                  configuration and integration steps 
                - Example model 
 
-   .. step:: Configure `GCP services
-             <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
+   .. step:: Configure `GCP services <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
                - Deploy application as a containerized service using Google Cloud’s Cloud Run
                - Configure Google Cloud’s Cloud Build for automated deployments
                - Set up Google Cloud’s Cloud Storage for assets
@@ -165,7 +163,7 @@ Building the Solution
                  ensuring optimal rerouting to minimize fuel consumption and
                  costs.
 
-            **Python**
+              **Python**
 
             .. code-block:: sh
 
