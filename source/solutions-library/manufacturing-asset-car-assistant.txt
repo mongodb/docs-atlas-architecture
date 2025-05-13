@@ -63,7 +63,7 @@ experience.
 
 .. figure:: /includes/images/industry-solutions/car-assistant-demo.gif
    :figwidth: 1200px
-   :alt: Predictive maintenance workflow stages
+   :alt: Gif demonstrating how the demo works
    
    Figure 1. Gen AI in-car assistant in action
 
@@ -93,99 +93,164 @@ to transform user experiences.
 Reference Architectures
 -----------------------
 
-Machine Prioritization Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To bring a smarter in-car assistant to life, we designed an architecture
+that blends cloud and edge technologies into one seamless experience. At
+the heart of it is MongoDB Atlas, which acts as the data layer, paired
+with Google Cloud’s AI capabilities. This architecture ensures fast,
+personalized, and reliable interactions.
 
-This architecture leverages RAG (retrieval-augmented generation) to
-determine which machines require predictive maintenance. The system
-processes two types of input data: 
-
-- Structured data: Production parameters and machine breakdown frequency. 
-- Unstructured data: Institutional knowledge in documents. 
-
-The workflow aggregates and operationalizes both data types as vector
-embeddings in MongoDB Atlas. Using Vector Search, it performs semantic
-search to provide relevant context to an LLM (via Amazon Bedrock or Cohere
-in this case), which generates contextual responses to prioritization
-queries. This helps maintenance teams make data-driven decisions about
-which machines need attention first.
-
-.. figure:: /includes/images/industry-solutions/predictive-maintenance-system-diagram.svg
+.. figure:: /includes/images/industry-solutions/car-assistant-architecture.svg
    :figwidth: 1200px
-   :alt: AI system diagram to prioritize machine maintenance
+   :alt: Reference architecture for car assistant solution
    
-   Figure 2. AI system diagram for machine prioritization recommendations
+   Figure 2. A reference architecture of a Gen AI In-Car Assistant
 
-Sensor Data Processing Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Let’s break down how it works.
 
-This real-time architecture processes machine sensor data through six
-key stages: 
+On-Board Components
+~~~~~~~~~~~~~~~~~~~
 
-1. Data collection: A prioritized milling machine with DAQ
-   (data acquisition) captures critical metrics (product type, temperature,
-   speed, torque, tool wear). 
-#. Stream processing: Real-time transformation of
-   raw sensor data. 
-#. Data storage: Centralized storage in MongoDB Atlas with
-   single view capability. 
-#. Change detection: Monitoring for significant data
-   changes. 
-#. ML inference: Running trained models to predict potential
-   failures. 
-#. Dual output: Visualization through Atlas Charts and mobile
-   notifications via Change Streams.
+These run in the vehicle, close to the driver, and enable real-time
+voice interaction.
 
-.. figure:: /includes/images/industry-solutions/predictive-maintenance-real-time-sensor.svg
-   :figwidth: 1200px
-   :alt: Real-time sensor monitoring diagram
-   
-   Figure 3. Real-time sensor monitoring with MongoDB Atlas
+- **Car Console:** The in-car interface where users speak to the assistant
+  and get responses. It’s a web app in this demo, but represents the
+  embedded system in a real vehicle.
 
-Work Order Generation Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- **Local Data Storage:** Vehicles store key signals locally using
+  PowerSync SDK, a lightweight edge database built on SQLite. This ensures
+  fast access to diagnostic data and keeps data synced with MongoDB Atlas.
 
-This architecture automates maintenance work order creation through:
+- **Assistant Backend:** This component manages the conversation. It
+  handles voice transcription using Google Cloud Speech-to-Text and reads
+  the driver’s intent. Depending on the query, it may respond directly or
+  call tools to fetch more data or take action. For the demo version, we
+  included four sample tools: 
+  
+  - Consult Manual: Uses Atlas Vector Search to retrieve relevant info
+    from the car manual. 
 
-1. Document processing: Machine manuals and old work orders are chunked
-   and converted to vectors using AWS/Cohere embedding models. 
+  - Run Diagnostics: Fetches current diagnostic codes from local vehicle
+    data. 
+    
+  - Recalculate Route: Adjusts the trip if the driver adds a stop. 
+  
+  - Close Chat: Ends the conversation gracefully.
 
-#. Vector storage: Embeddings stored in MongoDB Atlas. 
+.. code-block:: javascript  
+   :copyable: true  
+  
+   const functionDeclarations = [  
+     {  
+       functionDeclarations: [  
+         {  
+           name: "closeChat",  
+           description:  
+             "Closes the chat window when the conversation is finished. By default it always returns to the navigation view. Ask the user to confirm this action before executing.",  
+           parameters: {  
+             type: FunctionDeclarationSchemaType.OBJECT,  
+             properties: {  
+               view: {  
+                 type: FunctionDeclarationSchemaType.STRING,  
+                 enum: ["navigation"],  
+                 description:  
+                   "The next view to display after closing the chat.",  
+               },  
+             },  
+             required: ["view"],  
+           },  
+         },  
+         {  
+           name: "recalculateRoute",  
+           description:  
+             "Recalculates the route when a new stop is added. By default this function will find the nearest service station. Ask the user to confirm this action before executing.",  
+           parameters: {  
+             type: FunctionDeclarationSchemaType.OBJECT,  
+             properties: {},  
+           },  
+         },  
+         {  
+           name: "consultManual",  
+           description:  
+             "Retrieves relevant information from the car manual.",  
+           parameters: {  
+             type: FunctionDeclarationSchemaType.OBJECT,  
+             properties: {  
+               query: {  
+                 type: FunctionDeclarationSchemaType.STRING,  
+                 description:  
+                   "A question that represents an enriched version of what the user wants to retrieve from the manual. It must be in the form of a question.",  
+               },  
+             },  
+             required: ["query"],  
+           },  
+         },  
+         {  
+           name: "runDiagnostic",  
+           description:  
+             "Fetches active Diagnostic Trouble Codes (DTCs) in the format OBD II (SAE-J2012DA_201812) from the vehicle to assist with troubleshooting.",  
+           parameters: {  
+             type: FunctionDeclarationSchemaType.OBJECT,  
+             properties: {},  
+           },  
+         },  
+       ],  
+     },  
+   ]; 
 
-#. Work order generation: A specialized app that: 
+Cloud Components
+~~~~~~~~~~~~~~~~
 
-   - Uses LLMs to generate appropriate work order templates. 
-   - Pulls inventory and resource information through aggregation. 
-   - Creates detailed repair plans based on machine documentation.
+These provide AI intelligence, scalable storage, and data processing
+capabilities.
 
-.. figure:: /includes/images/industry-solutions/predictive-maintenance-work-order.svg
-   :figwidth: 1200px
-   :alt: Work order generator diagram with artificial intelligence
-   
-   Figure 4. AI-powered work order generation system diagram
+- **Data Ingestion:** Unstructured content like car manuals is uploaded
+  to Google Cloud Storage. This triggers a pipeline using Pub/Sub, Cloud
+  Run, and Document AI to split the PDFs into chunks. Vertex AI generates
+  embeddings for these chunks, which are then stored in MongoDB Atlas for
+  semantic search. 
 
-Maintenance Guidance Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- **Serving Speech APIs:** Google Cloud’s Text-to-Speech and
+  Speech-to-Text handle natural voice interaction. Vertex AI: Provides
+  text embeddings for search queries and powers the LLM (Gemini) used by
+  the assistant.
 
-This architecture enhances operator instructions through a RAG approach:
+- **Data Storage and Retrieval:** MongoDB Atlas stores:
+  
+  - Manual chunk embeddings for retrieval via Atlas Vector Search.
 
-1. Service note processing: Converts multilingual PDF service notes to text.
-#. Translation: Processes non-English content (Spanish in this case)
-   through translation models. 
-#. Instruction generation: Combines translated service notes with
-   original repair plans using LLMs.
-#. Delivery: Provides updated maintenance instructions to technicians
-   through a mobile app.
+  - User preferences and session data.
 
-.. figure:: /includes/images/industry-solutions/predictive-maintenance-rag.svg
-   :figwidth: 1200px
-   :alt: RAG workflow diagram
-   
-   Figure 5. RAG workflow enhances technician repair instructions
+  - Vehicle signals—both latest values and full time series telemetry.
 
-Each architecture integrates with MongoDB Atlas core capabilities while
-leveraging external services (Amazon Bedrock, OpenAI, Cohere) for AI/ML
-functionality, creating a comprehensive predictive maintenance solution.
+ Atlas Vector Search is used to match user questions with the most
+ relevant manual sections, enabling a Retrieval-Augmented Generation
+ (RAG) flow. MongoDB’s native support for structured, semi-structured,
+ and vector data in one place simplifies the assistant logic and speeds
+ up development.
+
+- **Data Sync:** We use PowerSync for two-way sync between the vehicle
+  and cloud: 
+  
+  - Vehicle to Cloud: Vehicle sends telemetry data like diagnostic
+    codes, speed, or acceleration. A Cloud Run function processes
+    and stores this in Atlas. 
+
+  - Cloud to Vehicle: Enables updates or actions sent remotely to the
+    car—like OTA updates or remote locking.
+
+The Role of MongoDB in Conversational AI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+MongoDB Atlas is the developer data platform that powers this solution. Here's how it improves the architecture:
+Unifies operational and vector data: Vehicle signals, vector embeddings, and user sessions are stored together in a single, consistent platform.
+Enables more relevant responses: Atlas Vector Search retrieves the right chunks from large documents instantly, fueling accurate and context-rich responses.
+Built for the enterprise scale: Whether it's one model or a global fleet, MongoDB Atlas offers built-in horizontal scalability, high-availability and enterprise-grade security.
+Simplifies edge and cloud sync: PowerSync and MongoDB work together to bridge in-car and cloud environments without friction.
+
+This architecture is designed to scale, evolve, and adapt—just like the vehicles it supports. With MongoDB at the core, automakers can focus less on data plumbing and more on delivering smart, helpful in-car experiences that truly make a difference on the road.
+
+
 
 Building the Solution
 ---------------------
