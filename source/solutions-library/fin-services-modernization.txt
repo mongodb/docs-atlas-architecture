@@ -1,5 +1,5 @@
 .. toctree::
    :titlesonly:
 
-   Payments Solution Accelerator <source/solutions-library/payments-solution>
+   Payments Solution Accelerator </solutions-library/payments-solution>
    
