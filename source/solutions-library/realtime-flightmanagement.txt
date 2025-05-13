@@ -148,11 +148,11 @@ Building the Solution
                - Support for real-time updates
                - Handle time series data for analytics 
                - Maintain operational flight information, ensuring you
-               obtain the MongoDB connection string for subsequent
-               configuration and integration steps 
+                 obtain the MongoDB connection string for subsequent
+                 configuration and integration steps 
                - Example model 
 
-   .. step:: `Configure GCP services
+   .. step:: Configure `GCP services
              <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
                - Deploy application as a containerized service using Google Cloud’s Cloud Run
                - Configure Google Cloud’s Cloud Build for automated deployments
