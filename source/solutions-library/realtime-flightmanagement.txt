@@ -144,26 +144,26 @@ Building the Solution
   
    .. step:: `Set up MongoDB
              <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
-             - Store flight data in flexible schema
-             - Support for real-time updates
-             - Handle time series data for analytics 
-             - Maintain operational flight information, ensuring you
+               - Store flight data in flexible schema
+               - Support for real-time updates
+               - Handle time series data for analytics 
+               - Maintain operational flight information, ensuring you
                obtain the MongoDB connection string for subsequent
                configuration and integration steps 
-             - Example model 
+               - Example model 
 
    .. step:: `Configure GCP services
              <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
-             - Deploy application as a containerized service using Google Cloud’s Cloud Run
-             - Configure Google Cloud’s Cloud Build for automated deployments
-             - Set up Google Cloud’s Cloud Storage for assets
-             - Use Google Cloud Pub/Sub for real-time data distribution 
-             - Implement Google Cloud’s Cloud Functions for data
-               processing. The following code snippet runs in a cloud
-               function to update the new path obtained from the path
-               finder algorithm once a disruption has been identified,
-               ensuring optimal rerouting to minimize fuel consumption and
-               costs.
+               - Deploy application as a containerized service using Google Cloud’s Cloud Run
+               - Configure Google Cloud’s Cloud Build for automated deployments
+               - Set up Google Cloud’s Cloud Storage for assets
+               - Use Google Cloud Pub/Sub for real-time data distribution 
+               - Implement Google Cloud’s Cloud Functions for data
+                 processing. The following code snippet runs in a cloud
+                 function to update the new path obtained from the path
+                 finder algorithm once a disruption has been identified,
+                 ensuring optimal rerouting to minimize fuel consumption and
+                 costs.
 
             **Python**
 
@@ -240,17 +240,17 @@ Building the Solution
 
    .. step:: `Install your demo application to run locally
              <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
-             - Clone the repository and install dependencies
-             - Configure environment variables
-             - Set up MongoDB connection
-             - Run development server 
+               - Clone the repository and install dependencies
+               - Configure environment variables
+               - Set up MongoDB connection
+               - Run development server 
 
    .. step:: `(Optional) Deploy the solution
              <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#deployment>`__  
-             - Containerize application using Docker
-             - Deploy to Google Cloud’s Cloud Run for automatic scaling
-             - Configure continuous deployment with Cloud Build
-             - Set up environment variables and secrets
+               - Containerize application using Docker
+               - Deploy to Google Cloud’s Cloud Run for automatic scaling
+               - Configure continuous deployment with Cloud Build
+               - Set up environment variables and secrets
    
 **In the end your app should look like this:**
 
@@ -272,7 +272,7 @@ minimizing the impact of delays and disruptions.
 
 For a detailed, step-by-step guide on implementing this
 solution,including code samples and specific configuration
-instructions,`visit our GitHub repository
+instructions,visit our `GitHub repository
 <https://github.com/mongodb-industry-solutions/leafy-airline>`__.
 
 Key Learnings
