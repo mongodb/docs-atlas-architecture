@@ -265,6 +265,9 @@ vehicles it supports. With MongoDB at the core, automakers can focus
 less on data plumbing and more on delivering smart, helpful in-car
 experiences that truly make a difference on the road.
 
+Data Model Approach
+-------------------
+
 Building the Solution
 ---------------------
 
@@ -330,30 +333,31 @@ helper scripts—visit the `GitHub repository
 Key Learnings 
 -------------
 
-- `MongoDB Atlas <https://www.mongodb.com/atlas>`__ provides a unified
-  platform for predictive maintenance by
-  combining structured sensor data and unstructured maintenance documents,
-  enabling both real-time monitoring and AI-powered analysis through a
-  single-view architecture. 
+As automotive experiences evolve to become more intelligent and
+personalized, this solution demonstrates how auto manufacturers can
+leverage generative AI and MongoDB to deliver meaningful in-car
+interactions. Here are the key takeaways:
 
-- The solution leverages a four-stage approach (prioritization,
-  prediction, plan generation, guidance delivery) that integrates multiple
-  MongoDB features including Atlas Stream Processing for real-time data,
-  Vector Search for semantic analysis, and Change Streams for mobile
-  alerts. 
+- **Conversational AI starts with the right data foundation:** Rich,
+  contextual, and accessible data is what powers intelligent voice
+  assistants. MongoDB Atlas unifies structured telemetry, unstructured
+  manuals, and vector embeddings in a single developer-friendly
+  platform—eliminating data silos and making it easier to serve relevant,
+  real-time responses.
 
-- Organizations can achieve significant operational improvements
-  through this approach: 15-20% reduction in downtime, 5-20% increase in
-  labor productivity, and 30-60% reduction in maintenance costs. 
-  
-- The implementation combines multiple AI technologies (`RAG
-  <https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__,
-  `LLMs
-  <https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`__,
-  `ML models <https://www.mongodb.com/resources/basics/machine-learning>`__)
-  with MongoDB's developer data platform capabilities to create an
-  automated maintenance workflow—from machine prioritization to mobile
-  repair guidance delivery.
+- **MongoDB accelerates innovation from the factory to the finish
+  line:** Modern automotive applications demand flexibility and speed,
+  from predictive maintenance and diagnostics to digital cockpit systems.
+  MongoDB’s flexible schema, real-time sync capabilities, and horizontal
+  scalability help teams move faster, collaborate more effectively, and
+  deliver features that set their vehicles apart.
+
+- **Drivers are ready for the next generation of voice assistants:**
+  With electric vehicles, autonomy, and smart safety systems reshaping the
+  industry, the expectations for in-car systems have never been higher.
+  Generative AI enables assistants to go beyond simple commands and
+  deliver nuanced, interactive conversations—and MongoDB gives developers
+  the tools to build these experiences at scale.
 
 Technologies and Products Used
 ------------------------------
@@ -361,16 +365,27 @@ Technologies and Products Used
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `MongoDB Atlas <https://www.mongodb.com/atlas>`__
-- `Atlas Charts <https://www.mongodb.com/products/platform/atlas-charts>`__
-- `Atlas Stream Processing <https://www.mongodb.com/products/platform/atlas-stream-processing>`__ 
-- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+- `MongoDB Atlas Database
+  <https://www.mongodb.com/products/platform/atlas-database>`__ 
+
+- `MongoDB Atlas Vector Search
+  <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+
+- `MongoDB Node Driver
+  <https://www.mongodb.com/docs/drivers/node/current/>`__
+
+- `Aggregation Pipeline
+  <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__
+
+- `Change Streams
+  <https://www.mongodb.com/docs/manual/changeStreams/>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
-- `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
 - `Google Cloud <https://cloud.google.com/>`__
+- `PowerSync <https://cloud.mongodb.com/ecosystem/powersync>`__
+- `Vercel <https://cloud.mongodb.com/ecosystem/vercel>`__
 
 Authors
 -------
