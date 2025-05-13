@@ -242,15 +242,28 @@ capabilities.
 The Role of MongoDB in Conversational AI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-MongoDB Atlas is the developer data platform that powers this solution. Here's how it improves the architecture:
-Unifies operational and vector data: Vehicle signals, vector embeddings, and user sessions are stored together in a single, consistent platform.
-Enables more relevant responses: Atlas Vector Search retrieves the right chunks from large documents instantly, fueling accurate and context-rich responses.
-Built for the enterprise scale: Whether it's one model or a global fleet, MongoDB Atlas offers built-in horizontal scalability, high-availability and enterprise-grade security.
-Simplifies edge and cloud sync: PowerSync and MongoDB work together to bridge in-car and cloud environments without friction.
+MongoDB Atlas is the developer data platform that powers this solution.
+Here's how it improves the architecture:
 
-This architecture is designed to scale, evolve, and adapt—just like the vehicles it supports. With MongoDB at the core, automakers can focus less on data plumbing and more on delivering smart, helpful in-car experiences that truly make a difference on the road.
+- **Unifies operational and vector data:** Vehicle signals, vector
+  embeddings, and user sessions are stored together in a single,
+  consistent platform. 
 
+- **Enables more relevant responses:** Atlas Vector Search retrieves the
+  right chunks from large documents instantly, fueling accurate and
+  context-rich responses. 
 
+- **Built for the enterprise scale:** Whether it's one model or a global
+  fleet, MongoDB Atlas offers built-in horizontal scalability,
+  high-availability and enterprise-grade security. 
+
+- **Simplifies edge and cloud sync:** PowerSync and MongoDB work together to
+  bridge in-car and cloud environments without friction.
+
+This architecture is designed to scale, evolve, and adapt—just like the
+vehicles it supports. With MongoDB at the core, automakers can focus
+less on data plumbing and more on delivering smart, helpful in-car
+experiences that truly make a difference on the road.
 
 Building the Solution
 ---------------------
