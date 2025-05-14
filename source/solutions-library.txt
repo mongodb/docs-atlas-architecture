@@ -197,8 +197,9 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Learn how Agentic RAG delivers a more natural interaction
-            with customers, improving their shopping experiences.
+            Discover how Agentic RAG creates seamless and natural
+            interactions with customers, enhancing their shopping
+            experience.
             
       .. Personalization
       .. ---------------
