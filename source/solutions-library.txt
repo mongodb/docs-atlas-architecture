@@ -108,7 +108,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Claim management using LLMs and vector search for RAG
+            :headline: Claim Management Using LLMs and Vector Search for RAG
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/claim-management/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
@@ -185,11 +185,7 @@ kick-start their projects.
             :icon-alt: Atlas industry_ai icon
 
             Write engaging and multilingual product descriptions in
-            practically no time with MongoDB and Together AI. 
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
+            practically no time with MongoDB and Together AI.
 
          .. card::
             :headline: Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
