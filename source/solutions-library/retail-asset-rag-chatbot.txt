@@ -18,90 +18,132 @@ Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
    :depth: 1
    :class: singlecol
 
-MongoDB and Together AI deliver generative AI-powered solutions for
-writing multilingual product descriptions, enabling faster product
-onboarding.
+Leverage agentic RAG using MongoDB and Dataworkz to enhance customers’
+shopping experiences with a personalized chatbot.
 
 **Use cases:** `Gen AI
-<https://www.mongodb.com/use-cases/artificial-intelligence>`__, `Catalog
-<https://www.mongodb.com/solutions/use-cases/catalog>`__ 
+<https://www.mongodb.com/use-cases/artificial-intelligence>`__,
+`Personalization
+<https://www.mongodb.com/solutions/use-cases/personalization>`__ 
 
 **Industries:** `Retail
 <https://www.mongodb.com/solutions/industries/retail>`__
 
-**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Document
-Model <https://www.mongodb.com/docs/manual/core/document/>`__, `MongoDB
-Node.js Driver <https://www.mongodb.com/docs/drivers/node/v3.6/>`__
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `MongoDB
+Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** `Together AI
-<https://cloud.mongodb.com/ecosystem/together-ai>`__
+**Partners:** `Dataworkz
+<https://cloud.mongodb.com/ecosystem/dataworkz>`__
 
 Solution Overview
 -----------------
 
-In this solution, you will learn how to build a generative AI-powered
-architecture that processes images using advanced vision models,
-generating accurate and compelling descriptions of an image. MongoDB
-Atlas serves as the operational data layer, leveraging its flexible data
-model to scale seamlessly as new descriptions are added and ensuring
-efficient data management and effortless scalability.
+The retail industry is always at the forefront of trends, quickly
+embracing innovation. With the rise of technologies like generative AI
+and agents, retailers have enthusiastically adopted them for various use
+cases. A few examples include offering real-time assistance,
+personalizing customer experiences, and enhancing search results. This
+is transforming the way brands connect with customers in meaningful
+ways.
 
-This solution proves particularly valuable in the retail industry. The
-process of onboarding a new product to a retailer’s catalog can be
-time-consuming, especially when it comes to crafting product
-descriptions—in multiple languages and in different geographies. This
-solution helps streamline that workflow by automating the initial
-content creation through `generative AI
-<https://www.mongodb.com/resources/basics/artificial-intelligence/generative-ai>`__,
-providing retailers with a solid foundation for each product
-description, ultimately speeding up the time to market and improving
-consistency across their catalog UX writing.
+Recent studies reveal that `AI-powered chatbots boost online sales in
+the United States by nearly 4% year-over-year
+<https://www.reuters.com/business/retail-consumer/ai-influenced-shopping-boosts-online-holiday-sales-salesforce-data-shows-2025-01-06/>`__,
+reinforcing the idea that AI is not just a trend but a lasting driver of
+growth in retail. Today, we will explore agentic RAG (retrieval
+augmented generation), a cutting-edge technology that can further
+revolutionize this retail space. We will also take a closer look at how
+a solution that leverages MongoDB and Dataworkz combines operational and
+unstructured data to drive transformative customer experiences.
 
-.. video:: https://www.youtube.com/watch?v=7fKXd-KafLw
+Before we jump in let’s understand a few concepts that help us set the
+context for this solution.  
 
-The Importance of a Good Description
+What Is an Agent?
+~~~~~~~~~~~~~~~~~
+
+An agent is an artificial computational entity with an **awareness of
+its environment and associated data within the context**. These agents
+can be used to interact in the case of ecommerce or perform a portion of
+complex tasks as needed.
+
+Retrieval-Augmented Generation (RAG)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Did you know that around `70% of people leave a product page when the
-product description is poor or incomplete?
-<https://www.businessdasher.com/importance-of-product-description/?utm_source=chatgpt.com>`__ 
+`Retrieval-augmented generation
+<https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__
+is an approach used to augment `large language models
+<https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`__
+(LLMs) with proprietary data so that they can generate more accurate and
+context-aware responses while also reducing hallucinations. 
 
-Product descriptions play a crucial role in the customer's journey.
-Shoppers rely on them to make buying decisions. When descriptions are
-weak or missing, businesses risk losing potential revenue and leaving
-customers frustrated.
+.. figure:: /includes/images/industry-solutions/rag-chatbot-conventional.svg
+   :figwidth: 1200px
+   :alt: Description of a conventional RAG architecture
+   
+   Figure 1. Conventional RAG
 
-Having a great description can enhance user engagement and satisfaction
-as `87% of online shoppers consider product descriptions to be crucial
-when making a buying decision.
-<https://www.businessdasher.com/importance-of-product-description/?utm_source=chatgpt.com>`__
-On the other hand, having inaccurate descriptions can result in revenue
-loss and trust decline with your customer base as `40% of consumers have
-returned online purchases due to poor product content.
-<https://www.ax-semantics.com/en/blog/product-descriptions>`__
+Agentic RAG
+~~~~~~~~~~~
 
-Challenges with the Traditional Product Description Writing Process
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Agentic RAG takes this a step further by introducing an AI agent-based
+implementation of RAG. In this model, different tools and functions can
+be accessed by the agent, enabling it to go beyond information retrieval
+and generation—it allows it to plan. Agents can determine if they need
+to retrieve specific information or not, decide which tool to use for
+the retrieval, and formulate queries. These capabilities are crucial as
+it enables the agent to pull information from multiple data sources,
+handling complex queries that require more than one source to formulate
+the response.
 
-The journey of writing high-quality descriptions involves numerous
-details and careful considerations. Some of the challenges that present
-include:
+You can start to picture the enormous potential it has across industries
+to enhance customer interactions and streamline processes. 
 
-- **Crafting compelling descriptions:** A product description that is
-  well-written will address their target’s needs and desires while
-  maintaining a consistent tone that aligns with the business’s UX writing
-  strategy and brand identity.
+.. figure:: /includes/images/industry-solutions/rag-chatbot-agentic.svg
+   :figwidth: 1200px
+   :alt: Description of an agentic RAG architecture
+   
+   Figure 2. Agentic RAG
 
-- **SEO optimization:** Creating SEO-optimized product descriptions to
-  drive organic traffic and improve search engine rankings.
+For more details see `Dataworkz Agentic RAG
+<https://www.dataworkz.com/agentic-rag/>`__.
 
-- **Multilingual complexity:** For retailers with multilingual portals
-  and with multiple operating geographies this process increases in
-  complexity.
-  
-- **Content approval delays:** Even after a description is written, too
-  often there is still a writing approval process that needs to happen,
-  delaying the time to market.
+.. figure:: /includes/images/industry-solutions/rag-chatbot-table.svg
+   :figwidth: 1200px
+   :alt: Comparison between a conventional and an agentic RAG architecture
+   
+   Figure 3. Conventional vs Agentic RAG comparison
+
+Impact on the Retail Industry
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Generative AI is revolutionizing the retail industry. `In 2024, one
+quarter of consumers used AI in their shopping experience, representing
+a 4% increase over the previous year
+<https://www.capgemini.com/wp-content/uploads/2025/01/Consumer-trends14012025.pdf>`__.
+With such expansion, the potential for innovation remains vast.
+
+Some generative AI  use cases across retail include: 
+
+- **Building customer-support chatbots:** Imagine a real-time, GenAI-powered support
+  chatbot that is able to assist customers at any point in time and is
+  context aware of the business’s policies as well as the user’s history
+  and preferences. 
+
+- **Personalizing product recommendations:** Providing the
+  customer with recommendations based on their specific likes, needs,
+  and past orders will make the shopping experience more targeted to the
+  shopper making it more enjoyable and likely to end with a purchase.
+
+- **Creating dynamic marketing content:** Generating fresh, relevant content
+  for the customer by creating dynamic promotions, emails or messages
+  specific for the customer. This leads to higher engagement, increased
+  sales, and better customer retention.
+
+All of the examples above show how, in everyday life, MongoDB and
+Dataworkz are already supporting retailers to build impactful customer
+experiences.
 
 Reference Architectures
 -----------------------
