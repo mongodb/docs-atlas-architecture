@@ -90,9 +90,9 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-<<<<<<< HEAD
-            Find out how AI is being used in renewable energy by leveraging MongoDB 
-            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
+            Find out how AI is being used in renewable energy by
+            leveraging MongoDB Atlas Vector Search to drive efficiency
+            through real-time, audio diagnostics. 
       
       Modernization 
       -------------
@@ -110,11 +110,6 @@ kick-start their projects.
             Find out how MongoDB helps manufacturers unify production
             data, optimize operations, and enable real-time insights in
             a Unified Namespace.
-=======
-            Learn how MongoDB Atlas Vector Search helps drive efficiency
-            and sustainability by enabling AI-powered, real-time
-            diagnostics in the renewable energy space.
->>>>>>> upstream/solutions-poc
 
       .. App-Driven Analytics
       .. --------------------
