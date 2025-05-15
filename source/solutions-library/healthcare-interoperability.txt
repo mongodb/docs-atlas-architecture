@@ -1,4 +1,4 @@
 .. toctree::
    :titlesonly:
 
-   AI-Powered Healthcare </solutions-library/manufacturing-agentic-ai-framework>
+   AI-Powered Healthcare </solutions-library/ai-powered-healthcare>

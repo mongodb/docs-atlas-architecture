@@ -179,12 +179,6 @@ kick-start their projects.
       .. Personalization
       .. ---------------
 
-.. .. tab:: Telco
-   .. :tabid: Telco
-
-   .. Gen AI
-   .. ------
-
    .. tab:: Healthcare
       :tabid: healthcare
 
@@ -197,13 +191,19 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Powered Healthcare with MongoDB & Microsoft
-            :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
+            :url: https://deploy-preview-225--docs-atlas-architecture.netlify.app/solutions-library/ai-powered-healthcare/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
             MongoDB and Microsoft deliver AI-powered solutions for
             breast cancer care, unifying data and enabling predictive
             modeling, intelligent chatbots, and analytics.
+
+.. .. tab:: Telco
+   .. :tabid: Telco
+
+   .. Gen AI
+   .. ------
 
 
 .. toctree::
