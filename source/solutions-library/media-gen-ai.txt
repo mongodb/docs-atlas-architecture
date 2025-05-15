@@ -2,3 +2,4 @@
    :titlesonly:
 
    AI-driven Media Personalization <solutions-library/media-personalization>
+   Gen-AI Summarization Video <solutions-library/AI-video-summarization>
