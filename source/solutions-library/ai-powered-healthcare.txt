@@ -209,7 +209,7 @@ experiment and model using the de-facto data science standards of
 MLflow.  
   
 Vector search implementation  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
   
 `Vector search <https://www.mongodb.com/resources/basics/vector-search>`__   capabilities form the foundation of the solution's    
 intelligent querying system, implemented in three key stages:  
@@ -238,11 +238,9 @@ intelligent querying system, implemented in three key stages:
 RAG-based chatbot architecture  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
   
-The chatbot implementation leverages    
- `retrieval augmented generation
- <https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__
- (RAG) architecture with three distinct    
-data contexts:  
+The chatbot implementation leverages `retrieval augmented generation
+<https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__(RAG)
+architecture with three distinct data contexts:  
   
 1. **Patient information retrieval:**    
    - Executes queries to fetch current patient details    

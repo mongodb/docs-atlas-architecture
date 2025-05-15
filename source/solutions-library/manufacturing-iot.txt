@@ -2,3 +2,4 @@
    :titlesonly:
 
    Real-time Audio Diagnostics <solutions-library/audio-based-AI-diagnostics>
+   AI-Powered Healthcare </solutions-library/ai-powered-healthcare>

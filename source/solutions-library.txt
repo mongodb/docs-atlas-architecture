@@ -214,7 +214,7 @@ kick-start their projects.
    Insurance </solutions-library/insurance>
    Media </solutions-library/media>
    Retail </solutions-library/retail>
+   Healthcare  <solutions-library/healthcare>
 
 
-.. Healthcare  <solutions-library/healthcare>
 .. Telco </solutions-library/telco>
