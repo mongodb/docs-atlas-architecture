@@ -50,6 +50,16 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: Automotive Diagnostics Using Atlas Vector Search
+            :url: https://deploy-preview-204--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-automotive-diagnostics/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Combine real-time analytics with vector search by using
+            MongoDB Atlas Vector Search integrated with OpenAI-generated
+            embeddings.  
+
+         .. card::
             :headline: Framework for Rapid AI Agent Deployment
             :url: https://deploy-preview-187--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-agentic-ai-framework/
             :icon: industry_ai
@@ -80,9 +90,10 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Find out how AI is being used in renewable energy by leveraging MongoDB 
-            Atlas Vector Search to drive efficiency through real-time, audio diagnostics. 
-      
+            Learn how MongoDB Atlas Vector Search helps drive efficiency
+            and sustainability by enabling AI-powered, real-time
+            diagnostics in the renewable energy space.
+
       .. App-Driven Analytics
       .. --------------------
 
@@ -218,3 +229,4 @@ kick-start their projects.
 
 
 .. Telco </solutions-library/telco>
+
