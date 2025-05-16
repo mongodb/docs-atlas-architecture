@@ -214,7 +214,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Driven Media Personalization
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/media-personalization/
+            :url: https://deploy-preview-227--docs-atlas-architecture.netlify.app/solutions-library/telecom-asset-telco-ops/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
