@@ -1,2 +1,4 @@
 .. toctree::
    :titlesonly:
+
+   Gen AI <solutions-library/telecom-gen-ai>
