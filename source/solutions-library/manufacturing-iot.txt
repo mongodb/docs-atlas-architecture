@@ -1,4 +1,4 @@
 .. toctree::
    :titlesonly:
 
-   Real-time Audio Diagnostics <solutions-library/audio-based-AI-diagnostics>
+   Real-Time Audio Diagnostics <solutions-library/audio-based-AI-diagnostics>
