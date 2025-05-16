@@ -1,2 +1,4 @@
 .. toctree::
    :titlesonly:
+
+   Streamline global gaming management <solutions-library/Streamline-global-gaming-management>
