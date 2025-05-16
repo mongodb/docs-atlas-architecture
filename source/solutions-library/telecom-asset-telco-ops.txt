@@ -76,7 +76,7 @@ Reference Architectures
 
 There are three main components of this solution: 
 
-.. figure:: /includes/images/industry-solutions/.svg
+.. figure:: /includes/images/industry-solutions/telco-ops-architecture.svg
    :figwidth: 1200px
    :alt: network chatbot architecture diagram
    
@@ -165,7 +165,7 @@ telecommunication environments.
 
       - Run the application.
 
-.. figure:: /includes/images/industry-solutions/.svg
+.. figure:: /includes/images/industry-solutions/telco-ops-frontend.svg
    :figwidth: 1200px
    :alt: visualization for the network chatbot
    
