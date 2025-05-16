@@ -53,69 +53,72 @@ Search <https://www.mongodb.com/products/platform/atlas-search>`__,
 Solution Overview 
 -----------------
 
-In this solution, you will learn how to build a generative AI-powered
-architecture that processes images using advanced vision models,
-generating accurate and compelling descriptions of an image. MongoDB
-Atlas serves as the operational data layer, leveraging its flexible data
-model to scale seamlessly as new descriptions are added and ensuring
-efficient data management and effortless scalability.
+Customer satisfaction is critical for insurance companies. Studies have
+shown that companies with superior customer experiences consistently
+outperform their peers. In fact, McKinsey found that life and
+property/casualty insurers with superior customer experiences saw a
+significant `20% and 65% increase
+<https://www.mckinsey.com/industries/financial-services/our-insights/insurance/elevating-customer-experience-a-win-win-for-insurers-and-customers>`__
+in total shareholder return, respectively, over five years. 
 
-This solution proves particularly valuable in the retail industry. The
-process of onboarding a new product to a retailer’s catalog can be
-time-consuming, especially when it comes to crafting product
-descriptions—in multiple languages and in different geographies. This
-solution helps streamline that workflow by automating the initial
-content creation through `generative AI
-<https://www.mongodb.com/resources/basics/artificial-intelligence/generative-ai>`__,
-providing retailers with a solid foundation for each product
-description, ultimately speeding up the time to market and improving
-consistency across their catalog UX writing.
+A satisfied customer is a loyal customer. They are `80%
+<https://www.mckinsey.com/industries/financial-services/our-insights/the-growth-engine-superior-customer-experience-in-insurance>`__
+more likely to renew their policies, directly contributing to
+sustainable growth. However, one major challenge faced by many insurance
+companies is the inefficiency of their call centers. Agents often
+struggle to quickly locate and deliver accurate information to
+customers, leading to frustration and dissatisfaction.
 
-.. video:: https://www.youtube.com/watch?v=7fKXd-KafLw
+This solution illustrates how MongoDB can transform call center
+operations. By converting call recordings into searchable vectors
+(numerical representations of data points in a multi-dimensional space),
+businesses can quickly access relevant information and improve customer
+service. We'll dig into how the integration of Amazon Transcribe,
+Cohere, and MongoDB Atlas Vector Search is achieving this
+transformation.
 
-The Importance of a Good Description
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Customer service interactions are goldmines of valuable insights. By
+analyzing call recordings, we can identify successful resolution
+strategies and uncover frequently asked questions. In turn, by making
+this information—which is often buried in audio files— accessible to
+agents, it can give customers faster and more accurate assistance.
 
-Did you know that around `70% of people leave a product page when the
-product description is poor or incomplete?
-<https://www.businessdasher.com/importance-of-product-description/?utm_source=chatgpt.com>`__ 
+However, the vast volume and unstructured nature of these audio files
+make it challenging to extract actionable information efficiently.
 
-Product descriptions play a crucial role in the customer's journey.
-Shoppers rely on them to make buying decisions. When descriptions are
-weak or missing, businesses risk losing potential revenue and leaving
-customers frustrated.
+To address this challenge, we propose a pipeline that leverages AI and
+analytics to transform raw audio recordings into into vectors as shown
+in Figure 1: 
 
-Having a great description can enhance user engagement and satisfaction
-as `87% of online shoppers consider product descriptions to be crucial
-when making a buying decision.
-<https://www.businessdasher.com/importance-of-product-description/?utm_source=chatgpt.com>`__
-On the other hand, having inaccurate descriptions can result in revenue
-loss and trust decline with your customer base as `40% of consumers have
-returned online purchases due to poor product content.
-<https://www.ax-semantics.com/en/blog/product-descriptions>`__
+- Storage of raw audio files: Past call recordings are stored in their
+  original audio format.
 
-Challenges with the Traditional Product Description Writing Process
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Processing of the audio files with AI and analytics services (such as
+  Amazon Transcribe Call Analytics): speech-to-text conversion,
+  summarization of content, and vectorization.
 
-The journey of writing high-quality descriptions involves numerous
-details and careful considerations. Some of the challenges that present
-include:
+- Storage of vectors and metadata: The generated vectors and associated
+  metadata (e.g., call timestamps, agent information) are stored in an
+  operational data store.
 
-- **Crafting compelling descriptions:** A product description that is
-  well-written will address their target’s needs and desires while
-  maintaining a consistent tone that aligns with the business’s UX writing
-  strategy and brand identity.
+Once the data is stored in vector format within the operational data
+store, it becomes accessible for real-time applications. This data can
+be consumed directly through vector search or integrated into a
+`retrieval-augmented generation
+<https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__
+(RAG) architecture, a technique that combines the capabilities of `large
+language models
+<https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`__
+(LLMs) with external knowledge sources to generate more accurate and
+informative outputs.
 
-- **SEO optimization:** Creating SEO-optimized product descriptions to
-  drive organic traffic and improve search engine rankings.
+.. figure:: /includes/images/industry-solutions/call-centers-pipeline.svg
+   :figwidth: 1200px
+   :alt: Customer service vectorization flow
+   
+   Figure 1. Customer service call insight extraction and vectorization flow
 
-- **Multilingual complexity:** For retailers with multilingual portals
-  and with multiple operating geographies this process increases in
-  complexity.
-  
-- **Content approval delays:** Even after a description is written, too
-  often there is still a writing approval process that needs to happen,
-  delaying the time to market.
+.. video:: https://www.youtube.com/watch?v=T-c2OnVh7Vo
 
 Reference Architectures
 -----------------------
