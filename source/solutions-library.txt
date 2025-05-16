@@ -143,7 +143,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Streamline global gaming management
+            :headline: Streamline Global Gaming Management
             :url: https://deploy-preview-202--docs-atlas-architecture.netlify.app/solutions-library/Streamline-global-gaming-management/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
@@ -191,7 +191,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Building an event-driven inventory management system
+            :headline: Building an Event-Driven Inventory Management System
             :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
