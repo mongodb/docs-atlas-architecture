@@ -148,67 +148,137 @@ experiences.
 Reference Architectures
 -----------------------
 
-**With MongoDB**:
+Introducing Dataworkz
+~~~~~~~~~~~~~~~~~~~~~
 
-At the core of this architecture we have three key components: 
+Dataworkz is an enterprise-grade RAG-as-a-service platform that
+transforms how organizations build and deploy AI applications. At its
+core is an advanced, agent-based architecture combined with
+graph-optimized retrieval, enabling large enterprises to launch
+sophisticated RAG applications in hours, not months.
 
-- `MongoDB Atlas
-  <https://www.mongodb.com/products/platform/atlas-database>`__: A
-  powerful, general-purpose data platform that
-  seamlessly manages our data in the cloud. MongoDB's flexible document
-  model allows products to scale easily by adding more descriptions
-  (i.e. for translations in multiple languages) without introducing
-  complexity. 
+The platform eliminates the need for specialized AI teams through an
+intuitive no-code builder that automatically implements best practices
+in RAG development. Unlike traditional approaches that lock you into
+early architectural decisions, Dataworkz enables rapid
+experimentation—you can test different retrieval strategies, prompt
+variations, and model combinations in a controlled environment before
+committing to production.
 
-- The object storage: An effective system for efficient product image
-  file storage and retrieval. This can be built with Google Cloud
-  storage, Azure Blob Storage or AWS S3. 
+From data ingestion to production deployment, Dataworkz handles the
+entire RAG lifecycle with enterprise-ready features for scaling,
+debugging, and operations.
 
-- `Together AI <https://www.together.ai/>`__: Offers a variety of
-  generative AI services, making it easy to run or fine-tune leading
-  open source models with only a few lines of code. This solution uses
-  their available `vision LLMs <https://www.together.ai/models>`__ to
-  generate the product descriptions.
+Key differentiators:
 
-.. figure:: /includes/images/industry-solutions/product-description-architecture.svg
+- Graph-optimized knowledge retrieval for complex relationships
+- Agent-based architecture for sophisticated reasoning
+- No-code builder with built-in best practices
+- Full lifecycle support from experimentation to production
+- BYO (bring your own) flexibility—LLM, embedding model, vector database
+- Enterprise-grade security and scalability
+
+Trusted by Fortune 500 companies, Dataworkz delivers production-ready
+RAG applications without the traditional overhead of building and
+maintaining complex AI infrastructure.
+
+Leveraging MongoDB with Dataworkz
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+​​By leveraging the strengths of both MongoDB and Dataworkz,
+organizations can create powerful, scalable, and accurate generative AI
+applications while minimizing development complexity and time-to-market.
+
+Dataworkz streamlines the process of creating RAG pipelines by providing
+a point-and-click experience to extract unstructured data in any format,
+configure a chunking strategy, and create vector embeddings. Dataworkz
+RAG builder also allows developers to choose different retrieval
+mechanisms—lexical, semantic, or graph, with different thresholds to
+build the context for answering a user question.
+
+The integration also enables real-time data processing and analytics,
+which is essential for generative AI applications that require
+up-to-date information. This capability ensures that AI models have
+access to the most current data, improving the accuracy and relevance of
+generated responses.
+
+Agentic RAG Architecture
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+To build something transformational, conventional RAG systems, which
+primarily utilize vector search techniques, must be integrated with
+up-to-date information from operational databases. 
+
+`MongoDB Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-search>`__ provides
+built-in support for vector embeddings, which eliminates the need for a
+separate vector database, simplifying the architecture and reducing
+complexity.
+
+That’s where agentic RAG shines. With Dataworkz agents, retailers can
+provide governed access to MongoDB collections, which are configured as
+tools. In many cases, customers have an API layer that abstracts the
+underlying collections—Dataworkz can be integrated with REST API or
+GraphQL. 
+
+Additionally, any RAG pipeline configured in Dataworkz can be made
+available as a tool to an agent. This gives agents the ability to
+understand unstructured data in a SharePoint site, a confluence wiki
+page, or markdown depending on the user’s question.
+
+Existing retailers with applications that leverage MongoDB as their data
+platform will benefit from Dataworkz’s close integration with MongoDB
+and leap-frog their AI adoption to incorporate agentic RAG into their
+solutions. 
+
+Dataworkz agents can access multiple data sources and use reasoning LLMs
+to decide which tool to use to answer a user’s question. An agent can
+dynamically switch between different MongoDB collections or even
+multiple databases to bring in structured data such as shipping status,
+customer profiles and preferences, and order histories. Additionally,
+third party solutions like ERP (Epicor), CRM (Salesforce), and more can
+be integrated through APIs exposed via the providers. Internal services
+exposed as GraphQL is another popular type of integration. Together,
+these tools enable the agent to understand the user’s questions in their
+context and provide very personalized responses relevant to their
+experience and their data. 
+
+The way a Dataworkz Agent works is: 
+
+1. Dataworkz agent framework partitions use cases into scenarios, such
+   as being able to answer questions about store policies, provide
+   recommendations, or search for an order. Scenarios have a curated set of
+   tools relevant to the scenario. When a user interacts with the agent, a
+   classifier selects the appropriate scenario. 
+
+#. The agent then employs a reasoning LLM to come up with a plan to
+   answer the question. Given the user’s question, the conversation
+   context, memory, and the tools (such as access to a MongoDB collection)
+   in the scenario, the LLM comes up with a sequence of steps to retrieve
+   information to answer the question. This process is iterative; after
+   each iteration, it’s a good idea to conclude by determining if enough
+   context has been retrieved via the tools or if more iterations,
+   planning, and execution are required to build more context.
+
+#. Finally, the context constructed in step 2 is used by the agent to
+   generate the necessary response or perform any action, or it might
+   decide that it actually needs to ask the user a clarifying question.
+
+Dataworkz brings the same ease of use to agents as it has to building
+RAG applications. Instead of requiring coding with libraries or
+frameworks, Agents are created by simply describing their intended
+functionality. They can be built declaratively, tested using built-in
+tools, and seamlessly deployed via an API when ready. This approach
+makes agents far more accessible and significantly more cost-effective
+to develop and deploy.
+
+.. figure:: /includes/images/industry-solutions/rag-chatbot-architecture.svg
    :figwidth: 1200px
-   :alt: Product description architecture diagram
+   :alt: Dataworkz and MongoDB Agentic RAG architecture
    
-   Figure 1. Product description generative AI architecture
+   Figure 4. Dataworkz & MongoDB Agentic RAG architecture
 
-The journey starts on the left side of the diagram with the *User/Event*
-label. A laptop icon represents the “Product Description Generator”
-system. First, a new product is received, this can be added manually by
-a user or in bulk through an automated event. 
-
-Then, retailers generate the descriptions by sending a *query* to Together
-AI’s endpoint, utilizing their vision models, combining computer vision
-and natural language processing (NLP) to process and understand images
-alongside text. The request includes the image URL, the desired
-description length, the vision model utilized, and the languages for the
-description. 
-
-Then, Together AI takes this data and uses one of its Llama3 vision
-models to scan the image and generate a description that matches the
-specified requirements, and returns the *product description* to the
-application.
-
-Finally, the product along with its description will be upserted inside
-the catalog on MongoDB, ensuring real-time availability across all
-connected systems.
-
-To illustrate the scalability of this architecture, consider the diagram
-below. By integrating `MongoDB Change Streams
-<https://www.mongodb.com/docs/manual/changeStreams/>`__, it allows
-real-time updates on any application listening to the catalog. For
-example, the e-commerce portal, a social media platform, and any other
-touchpoints.
-
-.. figure:: /includes/images/industry-solutions/product-description-architecture-extended.svg
-   :figwidth: 1200px
-   :alt: Product description architecture diagram with real-time integration
-   
-   Figure 2. Product description generative AI architecture with real-time applications
+.. video:: https://www.youtube.com/watch?v=hPSEG6QYHkA
 
 Building the Solution
 ---------------------
@@ -262,25 +332,31 @@ configuration files, and tutorial videos, visit the `GitHub repository
 Key Learnings
 -------------
 
-- **High-quality product descriptions drive business success:** A
-  well-crafted product description enhances user engagement, improves
-  SEO rankings with increased views, and helps customers make more
-  informed purchase decisions. 
+- **Understanding agentic RAG:** Incorporating agents will broaden the
+  possibilities of what can be done with the conventional RAG
+  architecture. Adding a layer of decision-making enables agents to plan,
+  take action and utilize their tools to ensure a higher degree of
+  contextual understanding and operational efficiency.
 
-- **Leverage MongoDB and Together AI to automate product descriptions:**
-  By combining MongoDB’s flexible and scalable database with Together
-  AI’s available vision models, retailers are able to automate real-time
-  product description generation that aligns with their business needs. 
+- **Technical integration:** By combining the strengths of MongoDB and
+  Dataworkz, retailers gain the power to build stronger features—whether
+  it’s offering a more personalized experience or providing their
+  customers with real-time smart assistance. Their seamless integration
+  will speed up the development process and allow teams to focus on
+  creating more differentiated features that will boost your position as
+  leaders in the market.
 
-- **Modern architectures speed up time to market:** Streamlining the 
-  product onboarding process with AI and automation reduces manual
-  effort and speeds up approvals. Using a generative AI for product
-  descriptions maintains consistent UX and tone, enabling quick
-  scalability for expanding product catalogs with little extra effort.
+- **Future of retail with AI:** Applying RAG architecture into retail use
+  cases will enhance the customer’s shopping journey by delivering more
+  context-aware support and personalized content. 
 
-Together, these capabilities form a robust generative AI system that
-scales with your business needs while ensuring efficiency and
-reliability.
+- **Rapid prototyping and iteration:** Agentic RAG is an iterative process
+  of testing and validation, and it requires quick turnaround times in
+  order to be able to move rapidly through prototyping and production. The
+  ability to configure multiple versions of the different components of
+  the agentic RAG pipeline, understand and measure their impact, and
+  promote to production in a governed fashion is a key consideration in
+  choosing a platform.
 
 Technologies and Products Used
 ------------------------------
@@ -288,16 +364,17 @@ Technologies and Products Used
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Atlas Database <https://www.mongodb.com/atlas/database>`__
+- `MongoDB Atlas <https://www.mongodb.com/atlas>`__
+- `MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
--  `Next.js <https://nextjs.org/>`__.
--  `Together AI <https://www.together.ai/>`__.
+-  `Dataworkz <https://cloud.mongodb.com/ecosystem/dataworkz>`__.
+-  `NextJS <https://nextjs.org/>`__.
 
 Authors
 -------
 
 - Angie Guemes, MongoDB
-- Prashant Juttukonda, MongoDB
+- Sachin Hejip, Engineering at Dataworkz
