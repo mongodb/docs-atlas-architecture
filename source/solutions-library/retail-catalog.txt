@@ -1,4 +1,4 @@
 .. toctree::
    :titlesonly:
 
-   Building an Inventory Management System <solutions-library/retail-asset-event-driven-inventory>
+   Inventory Management System <solutions-library/retail-asset-event-driven-inventory>
