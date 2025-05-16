@@ -199,10 +199,9 @@ kick-start their projects.
             Learn about how to build a real-time, event-driven inventory
             management system using MongoDB Atlas.
 
-      .. Gen AI
-      .. ------
+      Gen AI
+      ------
 
-<<<<<<< HEAD
       .. card-group::
          :columns: 2
          :style: extra-compact
@@ -226,8 +225,6 @@ kick-start their projects.
             interactions with customers, enhancing their shopping
             experience.
             
-=======
->>>>>>> upstream/solutions-poc
       .. Personalization
       .. ---------------
 
