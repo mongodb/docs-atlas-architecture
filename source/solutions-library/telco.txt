@@ -1,4 +1,4 @@
 .. toctree::
    :titlesonly:
 
-   Gen AI <solutions-library/telecom-gen-ai>
+   Gen AI <solutions-library/telcom-gen-ai>
