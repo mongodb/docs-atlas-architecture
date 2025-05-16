@@ -29,8 +29,8 @@ shopping experiences with a personalized chatbot.
 **Industries:** `Retail
 <https://www.mongodb.com/solutions/industries/retail>`__
 
-**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `MongoDB
-Atlas Vector Search
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, ` Atlas
+Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 **Partners:** `Dataworkz
@@ -365,7 +365,7 @@ MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
-- `MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
