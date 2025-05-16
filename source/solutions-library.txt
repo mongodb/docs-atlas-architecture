@@ -226,7 +226,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: AI-Driven Media Personalization
+            :headline: AI-Powered Chatbot for Network Management
             :url: https://deploy-preview-227--docs-atlas-architecture.netlify.app/solutions-library/telecom-asset-telco-ops/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
