@@ -65,9 +65,6 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Find out how AI is being used in renewable energy by leveraging MongoDB 
-            Atlas Vector Search to drive efficiency through real-time, audio diagnostics.
-  
             A modular solution for building diagnostic and
             recommendation agents with MongoDB Atlas. 
 
