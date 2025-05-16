@@ -27,8 +27,8 @@ effort while gaining valuable insights.
 **Industries:** `Telecommunications
 <https://www.mongodb.com/solutions/industries/telecommunications>`__
 
-**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Aggregation
-Pipeline
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `MongoDB
+Aggregation Pipeline
 <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__,
 `MongoDB Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__,
