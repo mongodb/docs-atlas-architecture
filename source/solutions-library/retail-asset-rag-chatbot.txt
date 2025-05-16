@@ -171,12 +171,12 @@ debugging, and operations.
 
 Key differentiators:
 
-- Graph-optimized knowledge retrieval for complex relationships
-- Agent-based architecture for sophisticated reasoning
-- No-code builder with built-in best practices
-- Full lifecycle support from experimentation to production
-- BYO (bring your own) flexibility—LLM, embedding model, vector database
-- Enterprise-grade security and scalability
+- Graph-optimized knowledge retrieval for complex relationships.
+- Agent-based architecture for sophisticated reasoning.
+- No-code builder with built-in best practices.
+- Full lifecycle support from experimentation to production.
+- BYO (bring your own) flexibility—LLM, embedding model, vector database.
+- Enterprise-grade security and scalability.
 
 Trusted by Fortune 500 companies, Dataworkz delivers production-ready
 RAG applications without the traditional overhead of building and
