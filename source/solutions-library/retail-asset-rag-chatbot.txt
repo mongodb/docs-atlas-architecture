@@ -318,12 +318,6 @@ Building this solution can be broken down in four major steps:
       access MongoDB. After that, create a MongoDB tool and a Dataworkz
       agent and test the agent.
 
-   .. step:: Create Your Object Storage
-
-      Create a new bucket in your AWS account and generate an IAM user
-      with programmatic access. Save the access key and secret key for
-      your .env file.
-
    .. step:: Configure Your Application’s Frontend
 
       Obtain the demo code by cloning the `GitHub repository
