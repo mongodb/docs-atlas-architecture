@@ -283,34 +283,40 @@ to develop and deploy.
 Building the Solution
 ---------------------
 
-Building this solution can be broken down in five major steps:
+Building this solution can be broken down in four major steps:
 
 .. procedure::
    :style: normal
 
    .. step:: Replicate the Demo Database
 
-      Provision a cluster within your `Atlas account
-      <https://www.mongodb.com/cloud/atlas/register>`__ and populate
-      your database with the data required for the demo. You can quickly
-      replicate the database using a data dump found in the `github
+      You can either use a publicly hosted, pre-populated cluster or
+      provision your own cluster within your Atlas account and populate
+      your database with the required data for the demo. If you choose
+      to bring your own MongoDB, a data dump can be found `inside the
       repository
-      <https://github.com/mongodb-industry-solutions/description-generator/tree/main/resources/dump/TogetherMDB>`__
-      with a single `mongorestore
+      <https://github.com/mongodb-industry-solutions/retail-store-v2/tree/main/dump/leafy_popup_store>`__
+      to quickly replicate the database with all the necessary data and
+      metadata with one quick `mongorestore
       <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
       command.
 
-   .. step:: Retrieve MongoDB Atlas Connection String
+   .. step:: Create Dataworkz RAG Application
 
-      Navigate to your cluster and click on *Connect*. Copy the
-      connection string provided and save it for your .env file.
+      Sign up to Dataworkz and create a RAG app for the e-commerce
+      policies. You can use the PDF `inside the repository
+      <https://github.com/mongodb-industry-solutions/retail-store-v2/blob/main/resources/LeafyCorpPolicy.pdf>`__
+      to use as the e-commerce policy document. This is the unstructured
+      data that can be made available as a tool to a Dataworkz Agent.
 
-   .. step:: Create Your Together AI Account
+   .. step:: Create the Dataworkz Agent
 
-      Sign in to `Together AI <https://www.together.ai/>`__. Navigate to
-      your account and retrieve your user key, which can be found inside
-      your *Profile*, then go to *Settings* and select *API Keys*. Save this
-      key, as you will need it in your .env file.
+      Connect to your MongoDB cluster provisioned at the previous step.
+      Follow `this guide
+      <https://github.com/mongodb-industry-solutions/retail-store-v2/blob/main/resources/chatbot/README.md>`__
+      to learn the configuration required by the Dataworkz connector to
+      access MongoDB. After that, create a MongoDB tool and a Dataworkz
+      agent and test the agent.
 
    .. step:: Create Your Object Storage
 
@@ -320,14 +326,15 @@ Building this solution can be broken down in five major steps:
 
    .. step:: Configure Your Application’s Frontend
 
-      Obtain the demo code by cloning the GitHub repository to your
-      local machine, configure the environment variables and install the
-      dependencies. Finally, run the app locally at
-      http://localhost:3003.
+      Obtain the demo code by cloning the `GitHub repository
+      <https://github.com/mongodb-industry-solutions/retail-store-v2>`__
+      to your local machine, configure the environment variables and
+      install the dependencies. Finally, run the app locally at
+      http://localhost:8080.
 
 For complete implementation details, including code samples,
 configuration files, and tutorial videos, visit the `GitHub repository
-<https://github.com/mongodb-industry-solutions/description-generator>`__.
+<https://github.com/mongodb-industry-solutions/retail-store-v2>`__. 
 
 Key Learnings
 -------------
