@@ -100,6 +100,23 @@ kick-start their projects.
    .. tab:: Insurance
       :tabid: insurance
 
+      App-Driven Analytics
+      --------------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: AI-Powered Call Center Intelligence with MongoDB
+            :url: https://deploy-preview-228--docs-atlas-architecture.netlify.app/solutions-library/call-centers/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Discover how MongoDB Atlas Vector Search and AI convert
+            insurance call recordings into searchable insights, enabling
+            faster, more efficient customer service.
+
       Gen AI
       ------
 
@@ -125,9 +142,6 @@ kick-start their projects.
             Streamline operations and claims processing with powerful PDF search
             capabilities by integrating MongoDB Atlas Vector Search,
             Superduper.io, and LLMs. 
-
-      .. App-Driven Analytics
-      .. --------------------
 
    .. tab:: Media
       :tabid: media

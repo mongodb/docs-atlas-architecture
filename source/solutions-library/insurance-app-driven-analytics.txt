@@ -1,2 +1,4 @@
 .. toctree::
    :titlesonly:
+
+   AI-Powered Call Centers <solutions-library/insurance-asset-call-centers>
