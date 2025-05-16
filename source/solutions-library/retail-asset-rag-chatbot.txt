@@ -371,8 +371,8 @@ MongoDB Developer Data Platform
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
--  `Dataworkz <https://cloud.mongodb.com/ecosystem/dataworkz>`__.
--  `NextJS <https://nextjs.org/>`__.
+-  `Dataworkz <https://cloud.mongodb.com/ecosystem/dataworkz>`__
+-  `NextJS <https://nextjs.org/>`__
 
 Authors
 -------
