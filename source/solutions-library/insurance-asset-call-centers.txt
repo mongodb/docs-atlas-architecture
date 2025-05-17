@@ -61,13 +61,13 @@ significant `20% and 65% increase
 <https://www.mckinsey.com/industries/financial-services/our-insights/insurance/elevating-customer-experience-a-win-win-for-insurers-and-customers>`__
 in total shareholder return, respectively, over five years. 
 
-A satisfied customer is a loyal customer. They are `80%
+A satisfied customer is a loyal customer. They are `80% more likely
 <https://www.mckinsey.com/industries/financial-services/our-insights/the-growth-engine-superior-customer-experience-in-insurance>`__
-more likely to renew their policies, directly contributing to
-sustainable growth. However, one major challenge faced by many insurance
-companies is the inefficiency of their call centers. Agents often
-struggle to quickly locate and deliver accurate information to
-customers, leading to frustration and dissatisfaction.
+to renew their policies, directly contributing to sustainable growth.
+However, one major challenge faced by many insurance companies is the
+inefficiency of their call centers. Agents often struggle to quickly
+locate and deliver accurate information to customers, leading to
+frustration and dissatisfaction.
 
 This solution illustrates how MongoDB can transform call center
 operations. By converting call recordings into searchable vectors
@@ -94,8 +94,10 @@ in Figure 1:
   original audio format.
 
 - Processing of the audio files with AI and analytics services (such as
-  Amazon Transcribe Call Analytics): speech-to-text conversion,
-  summarization of content, and vectorization.
+  `Amazon Transcribe Call Analytics
+  <https://aws.amazon.com/transcribe/call-analytics/>`__):
+  speech-to-text conversion, summarization of content, and
+  vectorization.
 
 - Storage of vectors and metadata: The generated vectors and associated
   metadata (e.g., call timestamps, agent information) are stored in an
