@@ -1,5 +1,5 @@
 .. toctree::
    :titlesonly:
 
-   PDF Search </solutions-library/pdf-search>
-   Claim Management <solutions-library/claim-management>
+   Build a PDF Search Application </solutions-library/pdf-search>
+   Claim Management for RAG <solutions-library/claim-management>
