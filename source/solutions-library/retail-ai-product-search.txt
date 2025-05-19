@@ -9,7 +9,7 @@ AI-powered retail: Personalization and Accuracy
    :values: tutorial
 
 .. meta:: 
-   :keywords: 
+   :keywords: Atlas, code example
    :description: Discover how MongoDB and Databricks revolutionize e-commerce search with AI, offering personalized, efficient shopping experiences. 
    
 .. contents:: On this page
@@ -94,7 +94,6 @@ and the other one is highlighting the Vector Search part of the
 solution. Each part complements the other. 
 
 .. figure:: /includes/images/industry-solutions/retail-ai-product-search-arch1.svg
-   :figwidth: 1200px
    :alt: RAG Querying Flow
 
    Figure 1. Architecture of and AI-enhanced search engine explaining
@@ -103,7 +102,6 @@ solution. Each part complements the other.
    dynamic pricing, and vector search
 
 .. figure:: /includes/images/industry-solutions/retail-ai-product-search-arch2.svg
-   :figwidth: 1200px
    :alt: RAG Querying Flow
 
    Figure 2. Architecture of a vector search solution showcasing how the
