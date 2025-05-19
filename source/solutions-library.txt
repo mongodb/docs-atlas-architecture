@@ -221,19 +221,6 @@ kick-start their projects.
             Write engaging and multilingual product descriptions in
             practically no time with MongoDB and Together AI.
 
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Automating Product Descriptions Using Generative AI
-            :url: https://deploy-preview-197--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-product-description/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Write engaging and multilingual product descriptions in
-            practically no time with MongoDB and Together AI.
-
          .. card::
             :headline: Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
             :url: https://deploy-preview-224--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-rag-chatbot/
