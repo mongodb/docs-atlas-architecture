@@ -43,11 +43,11 @@ data. Automotive demand will grow by `3% annually
 in the next 20  
 years with increased preference towards connected and electric  
 vehicles. Automotive players are embracing `artificial intelligence
- <https://www.mongodb.com/resources/basics/what-is-artificial-intelligence>`__(AI),  
+<https://www.mongodb.com/resources/basics/what-is-artificial-intelligence>`__(AI),  
 battery electrical vehicles (BEVs) and software-defined vehicles (SDVs)  
 to maintain their competitive advantage. The global connected  
 vehicles market size is expected to be worth around `USD 446.6 billion
- <https://market.us/report/connected-vehicles-market/>`__  
+<https://market.us/report/connected-vehicles-market/>`__  
 by 2033, growing at a CAGR of 19.5% between 2024 to 2033. Managing  
 fleets of connected vehicles is a challenge. As cars get more  
 sophisticated and integrated with internal and external systems, the  
@@ -349,8 +349,8 @@ Backend Setup
   
          npm run dev  
   
-The frontend should now be accessible at http://localhost:3000.  
-  
+            The frontend should now be accessible at http://localhost:3000.  
+
    .. step:: Feel free to adjust the prompt in main.py or update the telemetry data in the telemetry_data.csv file. 
   
 Running the solution:
@@ -361,7 +361,6 @@ Running the solution:
      shown).  
   
    - Example prompts  
-  
       - I am hearing knocking sound while turning at low speeds.  
       - My car is making a persistent rattling noise when I accelerate at low speeds.  
       - I noticed a sudden drop in oil pressure along with a slight rise in engine temperature.  
@@ -385,9 +384,9 @@ Running the solution:
       - checkpoints: (From the checkpointing database) Shows the last saved state for potential recovery.  
   
 - Resume functionality:  
-  - Optionally, we can demonstrate the "Resume Diagnosis" feature by
-    entering a thread ID and showing how the system retrieves the
-    corresponding session.  
+   - Optionally, we can demonstrate the "Resume Diagnosis" feature by
+     entering a thread ID and showing how the system retrieves the
+     corresponding session.  
   
 .. figure:: /includes/images/industry-solutions/fleet3.svg
    :figwidth: 1200px
