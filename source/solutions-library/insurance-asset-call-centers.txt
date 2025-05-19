@@ -95,7 +95,7 @@ in Figure 1:
 - Processing of the audio files with AI and analytics services (such as
   `Amazon Transcribe Call Analytics
   <https://aws.amazon.com/transcribe/call-analytics/>`__):
-  speech-to-text conversion, summarization of content, and
+  Speech-to-text conversion, summarization of content, and
   vectorization.
 
 - Storage of vectors and metadata: The generated vectors and associated
