@@ -1,6 +1,6 @@
-===========================================
-Manufacturing & Motion App-Driven Analytics
-===========================================
+==========================
+Media App-Driven Analytics
+==========================
 
 .. toctree::
    :titlesonly:
