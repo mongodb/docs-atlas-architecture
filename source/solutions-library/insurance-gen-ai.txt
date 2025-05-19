@@ -1,6 +1,6 @@
 .. toctree::
    :titlesonly:
 
-   PDF Search </solutions-library/pdf-search>
+   AI-Enhanced Claim Adjustment <solutions-library/insurance-image-search>
    Claim Management <solutions-library/claim-management>
-   Image Search <solutions-library/insurance-image-search>
+   PDF Search </solutions-library/pdf-search>
