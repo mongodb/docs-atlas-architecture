@@ -257,14 +257,6 @@ kick-start their projects.
    Insurance </solutions-library/insurance>
    Media </solutions-library/media>
    Retail </solutions-library/retail>
-<<<<<<< HEAD
-   
-=======
 
-<<<<<<< HEAD
-
->>>>>>> upstream/solutions-poc
-=======
->>>>>>> 76d0a7deffb160f8c87e81b3fd4d822886de1724
 .. Healthcare  <solutions-library/healthcare>
 .. Telco </solutions-library/telco>
