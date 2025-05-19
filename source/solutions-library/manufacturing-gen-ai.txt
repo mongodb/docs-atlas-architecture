@@ -3,3 +3,4 @@
 
    Framework for AI Agent Deployment </solutions-library/manufacturing-agentic-ai-framework>
    Predictive Maintenance Excellence </solutions-library/manufacturing-asset-predictive-maintenance>
+   Connected Fleet Agent </solutions-library/agenticai-connected-fleet>
