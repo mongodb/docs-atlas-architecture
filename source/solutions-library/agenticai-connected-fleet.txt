@@ -42,12 +42,10 @@ data. Automotive demand will grow by `3% annually
 <https://content.rolandberger.com/hubfs/Roland%20Berger_Automotive%20Outlook%202040.pdf?utm_medium=email&_hsenc=p2ANqtz--pRUUzx6hoOYwFuxLmOUM1jGvJGL-lfOVP8JqFSVWJKJ-RIIN3Fl1uszX9BrGiroCoNOvvnC02HmKUEZrwsfUP0wvkyWPMoIwbA5CvzF0WIlYnS24&_hsmi=327069747&utm_content=327069747&utm_source=hs_automation>`__
 in the next 20  
 years with increased preference towards connected and electric  
-vehicles. Automotive players are embracing `artificial intelligence
-<https://www.mongodb.com/resources/basics/what-is-artificial-intelligence>`__(AI),  
+vehicles. Automotive players are embracing `artificial intelligence <https://www.mongodb.com/resources/basics/what-is-artificial-intelligence>`__(AI),  
 battery electrical vehicles (BEVs) and software-defined vehicles (SDVs)  
 to maintain their competitive advantage. The global connected  
-vehicles market size is expected to be worth around `USD 446.6 billion
-<https://market.us/report/connected-vehicles-market/>`__  
+vehicles market size is expected to be worth around `USD 446.6 billion <https://market.us/report/connected-vehicles-market/>`__  
 by 2033, growing at a CAGR of 19.5% between 2024 to 2033. Managing  
 fleets of connected vehicles is a challenge. As cars get more  
 sophisticated and integrated with internal and external systems, the  
