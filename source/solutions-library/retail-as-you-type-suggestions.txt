@@ -5,11 +5,11 @@ Relevant As-You-Type Suggestions
 =====================================================
 
 .. facet::
-   :name: 
-   :values: 
+   :name: genre
+   :values: tutorial
 
 .. meta:: 
-   :keywords: 
+   :keywords: code example,
    :description: Use this solution to implement an as-you-type solution that leverages Atlas Search with the MongoDB developer data platform.
    
 .. contents:: On this page
@@ -38,7 +38,7 @@ and make those critical decisions. Picture getting to “The Matrix” by
 only typing “matr,” or finding replacement air filters for the ones you
 bought a few months ago by typing only “fi” in the search box, and your
 previous order is the top suggestion. These are examples of as-you-type
-suggestions. , Vector Search and full-text search are great at matching
+suggestions. Vector Search and full-text search are great at matching
 content semantically and fuzzily, when there is a complete query or very
 close word matches. But as-you-type functionality can return relevant
 results with even fewer characters and where there's even more distance
