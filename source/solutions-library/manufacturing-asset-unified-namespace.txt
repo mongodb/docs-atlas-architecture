@@ -194,7 +194,8 @@ Prerequisites
       attributes. Atlas not only simplifies data management but also supports
       real-time ingestion across multiple sources.
 
-      .. code-block:: json
+      .. code-block:: javascript
+         :copyable: false
 
          {  
             "result": {  
