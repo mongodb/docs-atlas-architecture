@@ -188,16 +188,12 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Relevant as-you-type suggestions
+            :headline: As-You-Type Suggestions
             :url: https://deploy-preview-194--docs-atlas-architecture.netlify.app/solutions-library/retail-as-you-type-suggestions/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
             Add fast and relevant as-you-type suggestions to your application, incorporating user context and domain-specific ranking factors.
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
 
          .. card::
             :headline: Building an Event-Driven Inventory Management System
@@ -216,6 +212,7 @@ kick-start their projects.
 
             Enable real-time order tracking and management across all
             retail channels using MongoDB Atlas.
+
 
       Gen AI
       ------
