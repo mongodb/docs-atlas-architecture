@@ -23,8 +23,7 @@ Add fast and relevant as-you-type suggestions to your application, incorporating
 **Use cases:** `Content Management <https://www.mongodb.com/solutions/use-cases/content-management>`__,
 `Catalog <https://www.mongodb.com/solutions/use-cases/catalog>`__
 
-**Industries:** `Computer Software`__,
-`Retail <https://www.mongodb.com/industries/retail>`__
+**Industries:** `Retail <https://www.mongodb.com/industries/retail>`__
 
 **Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
