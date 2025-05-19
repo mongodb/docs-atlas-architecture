@@ -1,7 +1,7 @@
 .. _arch-center-is-image-search:
 
 ===============================================
-AI-enhanced claim adjustment for auto insurance 
+AI-Enhanced Claim Adjustment for Auto Insurance 
 ===============================================
 
 .. facet::
@@ -217,7 +217,7 @@ Technologies and Products Used
 ------------------------------
 
 MongoDB Developer Data Platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas <http://mongodb.com/atlas>`__, 
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
