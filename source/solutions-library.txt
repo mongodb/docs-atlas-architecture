@@ -128,7 +128,7 @@ kick-start their projects.
             Superduper.io, and LLMs. 
 
          .. card::
-            :headline: Claim management using LLMs and vector search for RAG
+            :headline: Claim Management Using LLMs and Vector Search for RAG
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/claim-management/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
