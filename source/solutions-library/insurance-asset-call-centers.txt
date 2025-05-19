@@ -46,8 +46,7 @@ Search <https://www.mongodb.com/products/platform/atlas-search>`__,
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 **Partners:** `AWS <https://aws.amazon.com/>`__, `Cohere
-<https://cloud.mongodb.com/ecosystem/cohere>`__, `Dataworkz
-<https://cloud.mongodb.com/ecosystem/dataworkz>`__, `LangChain
+<https://cloud.mongodb.com/ecosystem/cohere>`__, `LangChain
 <https://cloud.mongodb.com/ecosystem/langchain>`__ 
 
 Solution Overview 
