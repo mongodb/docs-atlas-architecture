@@ -1,2 +1,4 @@
 .. toctree::
    :titlesonly:
+
+   Inventory Management System <solutions-library/retail-asset-event-driven-inventory>
