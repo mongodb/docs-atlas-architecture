@@ -33,7 +33,7 @@ updates using Atlas Change Streams and TriggersAtlas.
 <https://www.mongodb.com/products/platform/atlas-database>`__, `Change
 Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__,
 `MongoDB Atlas Triggers
-<https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
+<https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__
 
 Solution Overview
 -----------------
