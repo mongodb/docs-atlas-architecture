@@ -213,6 +213,14 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: AI Product Search
+            :url: https://deploy-preview-209--docs-atlas-architecture.netlify.app/solutions-library/retail-ai-product-search/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Personalize and optimize e-commerce with AI-powered search using MongoDB Atlas Vector Search and Databricks.
+
+         .. card::
             :headline: Automating Product Descriptions Using Generative AI
             :url: https://deploy-preview-197--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-product-description/
             :icon: industry_ai
@@ -221,13 +229,6 @@ kick-start their projects.
             Write engaging and multilingual product descriptions in
             practically no time with MongoDB and Together AI.
 
-         .. card::
-            :headline: AI Product Search
-            :url: https://deploy-preview-209--docs-atlas-architecture.netlify.app/solutions-library/retail-ai-product-search/
-            :icon: mdb_vector_search
-            :icon-alt: Atlas mdb_vector_search icon
-
-            Personalize and optimize e-commerce with AI-powered search using MongoDB Atlas Vector Search and Databricks.
 
       .. Personalization
       .. ---------------
