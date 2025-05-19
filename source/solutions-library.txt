@@ -65,8 +65,13 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
+<<<<<<< HEAD
             A modular solution for building diagnostic and
             recommendation agents with MongoDB Atlas. 
+=======
+            Learn how to implement a modular solution for building
+            diagnostic and recommendation agents with MongoDB Atlas. 
+>>>>>>> upstream/solutions-poc
 
          .. card::
             :headline: Predictive Maintenance Excellence with MongoDB Atlas
@@ -170,7 +175,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: AI-Driven Media Personalization: MongoDB and Vector Search
+            :headline: AI-Driven Media Personalization
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/media-personalization/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
@@ -210,6 +215,18 @@ kick-start their projects.
             Learn about how to build a real-time, event-driven inventory
             management system using MongoDB Atlas.
 
+<<<<<<< HEAD
+=======
+         .. card::
+            :headline: Building Modern Omnichannel Ordering on MongoDB
+            :url: https://deploy-preview-216--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-omnichannel-ordering/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Enable real-time order tracking and management across all
+            retail channels using MongoDB Atlas.
+
+>>>>>>> upstream/solutions-poc
       Gen AI
       ------
 

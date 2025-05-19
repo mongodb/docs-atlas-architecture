@@ -1,4 +1,5 @@
 .. toctree::
    :titlesonly:
 
-   Inventory Management System <solutions-library/retail-asset-event-driven-inventory>
+   Building Inventory Management System <solutions-library/retail-asset-event-driven-inventory>
+   Building Omnichannel Ordering Solution <solutions-library/retail-asset-omnichannel-ordering>
