@@ -127,137 +127,64 @@ Reference Architectures
 
 **With MongoDB**:
 
-At the core of this architecture we have three key components: 
+Now that we’ve looked at the components of the pre-processing pipeline,
+let’s explore the proposed real-time system architecture in detail. It
+comprises the following modules and functions (see Figure 2):
 
-- `MongoDB Atlas
-  <https://www.mongodb.com/products/platform/atlas-database>`__: A
-  powerful, general-purpose data platform that
-  seamlessly manages our data in the cloud. MongoDB's flexible document
-  model allows products to scale easily by adding more descriptions
-  (i.e. for translations in multiple languages) without introducing
-  complexity. 
 
-- The object storage: An effective system for efficient product image
-  file storage and retrieval. This can be built with Google Cloud
-  storage, Azure Blob Storage or AWS S3. 
+- `Amazon Transcribe <https://aws.amazon.com/transcribe/>`__, which
+  receives the audio coming from the customer’s
+  phone and converts it into text.
 
-- `Together AI <https://www.together.ai/>`__: Offers a variety of
-  generative AI services, making it easy to run or fine-tune leading
-  open source models with only a few lines of code. This solution uses
-  their available `vision LLMs <https://www.together.ai/models>`__ to
-  generate the product descriptions.
+- `Cohere’s <https://cohere.com/>`__ embedding model, served through
+  `Amazon Bedrock <https://aws.amazon.com/bedrock/>`__, vectorizes the
+  text coming from Transcribe.
 
-.. figure:: /includes/images/industry-solutions/product-description-architecture.svg
+- `MongoDB Atlas Vector Search
+  <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+  receives the query vector and returns a document that contains the
+  most semantically similar FAQ in the database.
+
+.. figure:: /includes/images/industry-solutions/call-centers-architecture.svg
    :figwidth: 1200px
-   :alt: Product description architecture diagram
+   :alt: System architecture and modules
    
-   Figure 1. Product description generative AI architecture
+   Figure 2. System architecture and modules
 
-The journey starts on the left side of the diagram with the *User/Event*
-label. A laptop icon represents the “Product Description Generator”
-system. First, a new product is received, this can be added manually by
-a user or in bulk through an automated event. 
-
-Then, retailers generate the descriptions by sending a *query* to Together
-AI’s endpoint, utilizing their vision models, combining computer vision
-and natural language processing (NLP) to process and understand images
-alongside text. The request includes the image URL, the desired
-description length, the vision model utilized, and the languages for the
-description. 
-
-Then, Together AI takes this data and uses one of its Llama3 vision
-models to scan the image and generate a description that matches the
-specified requirements, and returns the *product description* to the
-application.
-
-Finally, the product along with its description will be upserted inside
-the catalog on MongoDB, ensuring real-time availability across all
-connected systems.
-
-To illustrate the scalability of this architecture, consider the diagram
-below. By integrating `MongoDB Change Streams
-<https://www.mongodb.com/docs/manual/changeStreams/>`__, it allows
-real-time updates on any application listening to the catalog. For
-example, the e-commerce portal, a social media platform, and any other
-touchpoints.
-
-.. figure:: /includes/images/industry-solutions/product-description-architecture-extended.svg
-   :figwidth: 1200px
-   :alt: Product description architecture diagram with real-time integration
-   
-   Figure 2. Product description generative AI architecture with real-time applications
-
-Building the Solution
----------------------
-
-Building this solution can be broken down in five major steps:
-
-.. procedure::
-   :style: normal
-
-   .. step:: Replicate the Demo Database
-
-      Provision a cluster within your `Atlas account
-      <https://www.mongodb.com/cloud/atlas/register>`__ and populate
-      your database with the data required for the demo. You can quickly
-      replicate the database using a data dump found in the `github
-      repository
-      <https://github.com/mongodb-industry-solutions/description-generator/tree/main/resources/dump/TogetherMDB>`__
-      with a single `mongorestore
-      <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
-      command.
-
-   .. step:: Retrieve MongoDB Atlas Connection String
-
-      Navigate to your cluster and click on *Connect*. Copy the
-      connection string provided and save it for your .env file.
-
-   .. step:: Create Your Together AI Account
-
-      Sign in to `Together AI <https://www.together.ai/>`__. Navigate to
-      your account and retrieve your user key, which can be found inside
-      your *Profile*, then go to *Settings* and select *API Keys*. Save this
-      key, as you will need it in your .env file.
-
-   .. step:: Create Your Object Storage
-
-      Create a new bucket in your AWS account and generate an IAM user
-      with programmatic access. Save the access key and secret key for
-      your .env file.
-
-   .. step:: Configure Your Application’s Frontend
-
-      Obtain the demo code by cloning the GitHub repository to your
-      local machine, configure the environment variables and install the
-      dependencies. Finally, run the app locally at
-      http://localhost:3003.
-
-For complete implementation details, including code samples,
-configuration files, and tutorial videos, visit the `GitHub repository
-<https://github.com/mongodb-industry-solutions/description-generator>`__.
+For complete implementation details, visit the `GitHub repository
+<https://github.com/mongodb-industry-solutions/Insurance-customer-service>`__.
 
 Key Learnings
 -------------
 
-- **High-quality product descriptions drive business success:** A
-  well-crafted product description enhances user engagement, improves
-  SEO rankings with increased views, and helps customers make more
-  informed purchase decisions. 
+- Integrating AI services (speech-to-text, vector embeddings, vector
+  search) with MongoDB Atlas can transform traditional call centers by
+  making historical voice data instantly searchable and actionable.
 
-- **Leverage MongoDB and Together AI to automate product descriptions:**
-  By combining MongoDB’s flexible and scalable database with Together
-  AI’s available vision models, retailers are able to automate real-time
-  product description generation that aligns with their business needs. 
+- A RAG-based architecture combined with vector search provides a
+  foundation for both immediate wins (faster agent responses) and future
+  opportunities (chatbots, automated workflows), making it a strategic
+  investment for customer service operations.
 
-- **Modern architectures speed up time to market:** Streamlining the 
-  product onboarding process with AI and automation reduces manual
-  effort and speeds up approvals. Using a generative AI for product
-  descriptions maintains consistent UX and tone, enabling quick
-  scalability for expanding product catalogs with little extra effort.
+- Implementing real-time agent assistance can directly impact key
+  business metrics—from improved customer satisfaction and loyalty (`80%
+  higher renewal rates
+  <https://www.mckinsey.com/industries/financial-services/our-insights/the-growth-engine-superior-customer-experience-in-insurance>`__)
+  to significant financial returns (`20-65% increase in total
+  shareholder return for insurers
+  <https://www.mckinsey.com/industries/financial-services/our-insights/insurance/elevating-customer-experience-a-win-win-for-insurers-and-customers>`__).
 
-Together, these capabilities form a robust generative AI system that
-scales with your business needs while ensuring efficiency and
-reliability.
+The proposed architecture is simple but very powerful, easy to
+implement, and effective. Moreover, it can serve as a foundation for
+more advanced use cases that require complex interactions, such as
+agentic workflows, and iterative and multi-step processes that combine
+LLMs and `hybrid search
+<https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/reciprocal-rank-fusion/>`__
+to complete sophisticated tasks.
+
+This solution not only impacts human operator workflows but can also
+underpin chatbots and voicebots, enabling them to provide more relevant
+and contextual customer responses.
 
 Technologies and Products Used
 ------------------------------
@@ -265,16 +192,23 @@ Technologies and Products Used
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Atlas Database <https://www.mongodb.com/atlas/database>`__
+- `Atlas Vector Search <https://www.mongodb.com/atlas/database>`__
+
+- `Search Nodes <https://www.mongodb.com/blog/post/search-nodes-now-public-preview-performance-scale-dedicated-infrastructure>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
--  `Next.js <https://nextjs.org/>`__.
--  `Together AI <https://www.together.ai/>`__.
+-  `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
+
+-  `Amazon Transcribe <https://aws.amazon.com/transcribe/>`__
+
+-  `Cohere <https://cloud.mongodb.com/ecosystem/cohere>`__
+
+-  `LangChain <https://cloud.mongodb.com/ecosystem/langchain>`__
 
 Authors
 -------
 
-- Angie Guemes, MongoDB
-- Prashant Juttukonda, MongoDB
+- Luca Napoli, MongoDB
+- Sebastian Rojas Arbulu, MongoDB
