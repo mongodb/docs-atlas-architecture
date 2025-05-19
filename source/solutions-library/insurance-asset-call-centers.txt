@@ -22,32 +22,24 @@ Transform customer service with MongoDB Atlas Vector Search and RAG.
 Convert call recordings into searchable insights for faster, more
 accurate responses.
 
-**Use cases:** `Analytics
-<https://www.mongodb.com/solutions/use-cases/analytics>`__, `Gen AI
-<https://www.mongodb.com/use-cases/artificial-intelligence>`__,
-`Modernization
-<https://www.mongodb.com/resources/solutions/use-cases/application-modernization>`__,
-`Personalization
-<https://www.mongodb.com/solutions/use-cases/personalization>`__ 
+**Use cases:** `Analytics <https://www.mongodb.com/solutions/use-cases/analytics>`__, 
+`Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__,
+`Modernization <https://www.mongodb.com/resources/solutions/use-cases/application-modernization>`__,
+`Personalization <https://www.mongodb.com/solutions/use-cases/personalization>`__ 
 
-**Industries:** `Insurance
-<https://www.mongodb.com/solutions/industries/insurance>`__, `Financial
-Services
-<https://www.mongodb.com/solutions/industries/financial-services>`__,
-`Healthcare
-<https://www.mongodb.com/solutions/industries/healthcare>`__, `Retail
-<https://www.mongodb.com/solutions/industries/retail>`__,
-`Telecommunications
-<https://www.mongodb.com/solutions/industries/telecommunications>`__
+**Industries:** `Insurance <https://www.mongodb.com/solutions/industries/insurance>`__, 
+`Financial Services <https://www.mongodb.com/solutions/industries/financial-services>`__,
+`Healthcare <https://www.mongodb.com/solutions/industries/healthcare>`__, 
+`Retail <https://www.mongodb.com/solutions/industries/retail>`__,
+`Telecommunications <https://www.mongodb.com/solutions/industries/telecommunications>`__
 
-**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `Atlas
-Search <https://www.mongodb.com/products/platform/atlas-search>`__,
-`Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, 
+`Atlas Search <https://www.mongodb.com/products/platform/atlas-search>`__,
+`Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** `AWS <https://aws.amazon.com/>`__, `Cohere
-<https://cloud.mongodb.com/ecosystem/cohere>`__, `LangChain
-<https://cloud.mongodb.com/ecosystem/langchain>`__ 
+**Partners:** `AWS <https://aws.amazon.com/>`__, 
+`Cohere <https://cloud.mongodb.com/ecosystem/cohere>`__, 
+`LangChain <https://cloud.mongodb.com/ecosystem/langchain>`__ 
 
 Solution Overview 
 -----------------
