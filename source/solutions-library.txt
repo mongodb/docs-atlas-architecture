@@ -65,11 +65,8 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Find out how AI is being used in renewable energy by leveraging MongoDB 
-            Atlas Vector Search to drive efficiency through real-time, audio diagnostics.
-  
-            A modular solution for building diagnostic and
-            recommendation agents with MongoDB Atlas. 
+            Learn how to implement a modular solution for building
+            diagnostic and recommendation agents with MongoDB Atlas. 
 
          .. card::
             :headline: Predictive Maintenance Excellence with MongoDB Atlas
@@ -88,7 +85,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Real-time Audio-Based AI Diagnostics
+            :headline: Real-Time Audio-Based AI Diagnostics
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
@@ -111,7 +108,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Claim management using LLMs and vector search for RAG
+            :headline: Claim Management Using LLMs and Vector Search for RAG
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/claim-management/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
@@ -143,7 +140,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Streamline global gaming management
+            :headline: Streamline Global Gaming Management
             :url: https://deploy-preview-202--docs-atlas-architecture.netlify.app/solutions-library/Streamline-global-gaming-management/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
@@ -159,7 +156,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: AI-Driven Media Personalization: MongoDB and Vector Search
+            :headline: AI-Driven Media Personalization
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/media-personalization/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
@@ -169,7 +166,7 @@ kick-start their projects.
             Atlas Vector Search, and Pymongo.
 
          .. card::
-            :headline: Gen AI-powered video summarization
+            :headline: Gen AI-Powered Video Summarization
             :url: https://deploy-preview-217--docs-atlas-architecture.netlify.app/solutions-library/AI-video-summarization/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
@@ -191,7 +188,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Building an event-driven inventory management system
+            :headline: Building an Event-Driven Inventory Management System
             :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
@@ -199,8 +196,30 @@ kick-start their projects.
             Learn about how to build a real-time, event-driven inventory
             management system using MongoDB Atlas.
 
-      .. Gen AI
-      .. ------
+         .. card::
+            :headline: Building Modern Omnichannel Ordering on MongoDB
+            :url: https://deploy-preview-216--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-omnichannel-ordering/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Enable real-time order tracking and management across all
+            retail channels using MongoDB Atlas.
+
+      Gen AI
+      ------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Automating Product Descriptions Using Generative AI
+            :url: https://deploy-preview-197--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-product-description/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Write engaging and multilingual product descriptions in
+            practically no time with MongoDB and Together AI.
 
       .. Personalization
       .. ---------------
