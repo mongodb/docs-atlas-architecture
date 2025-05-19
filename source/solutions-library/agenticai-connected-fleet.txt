@@ -28,8 +28,8 @@ Driven-Analytics
 <https://www.mongodb.com/solutions/industries/manufacturing>`__
 
 **Products and tools:** `Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__,`Atlas
-Database <https://www.mongodb.com/atlas/database>`__   
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__,
+`Atlas Database <https://www.mongodb.com/atlas/database>`__   
   
 Solution Overview  
 -----------------  
@@ -43,11 +43,11 @@ data. Automotive demand will grow by `3% annually
 in the next 20  
 years with increased preference towards connected and electric  
 vehicles. Automotive players are embracing `artificial intelligence
-<https://www.mongodb.com/resources/basics/what-is-artificial-intelligence>`__(AI),  
+ <https://www.mongodb.com/resources/basics/what-is-artificial-intelligence>`__(AI),  
 battery electrical vehicles (BEVs) and software-defined vehicles (SDVs)  
 to maintain their competitive advantage. The global connected  
 vehicles market size is expected to be worth around `USD 446.6 billion
-<https://market.us/report/connected-vehicles-market/>`__  
+ <https://market.us/report/connected-vehicles-market/>`__  
 by 2033, growing at a CAGR of 19.5% between 2024 to 2033. Managing  
 fleets of connected vehicles is a challenge. As cars get more  
 sophisticated and integrated with internal and external systems, the  
@@ -185,8 +185,9 @@ Collections**
      "avg_fuel_consumption": "8.5",  
      "thread_id": "thread_20250307_125027"  
    } 
+
 Long-Term Memory  
-  
+~~~~~~~~~~~~~~~~  
 This is where the agent stores accumulated knowledge over time. This  
 may include patterns, trends, logs, historical recommendations, and  
 decisions.  
@@ -355,11 +356,11 @@ The frontend should now be accessible at http://localhost:3000.
 Running the solution:
 ~~~~~~~~~~~~~~~~~~~~~  
 - Starting a new diagnosis:  
-  - Open the frontend and choose “New Diagnosis.”  
-  - Enter an issue report in the text box (e.g., the sample complaint already  
-    shown).  
+   - Open the frontend and choose “New Diagnosis.”  
+   - Enter an issue report in the text box (e.g., the sample complaint already  
+     shown).  
   
-  - Example prompts  
+   - Example prompts  
   
       - I am hearing knocking sound while turning at low speeds.  
       - My car is making a persistent rattling noise when I accelerate at low speeds.  
@@ -374,14 +375,14 @@ Running the solution:
    - The workflow is being generated in real time, giving transparency into the agent's decision-making process.  
   
 - Reviewing MongoDB documents:  
-  - In the right column, the documents shown are the records inserted during the current agent run.  
-   - agent_sessions: Contains session metadata and the thread ID.  
-   - historical_recommendations: Stores the final recommendations and related diagnostics.  
-   - telemetry_data: Holds the telemetry sensor readings.  
-   - logs: Contains log entries for the diagnostic process.  
-   - agent_profiles: Shows the agent's profile that was used during diagnosis.  
-   - past_issues: (If available) Displays a sample of historical issues.  
-   - checkpoints: (From the checkpointing database) Shows the last saved state for potential recovery.  
+   - In the right column, the documents shown are the records inserted during the current agent run.  
+      - agent_sessions: Contains session metadata and the thread ID.  
+      - historical_recommendations: Stores the final recommendations and related diagnostics.  
+      - telemetry_data: Holds the telemetry sensor readings.  
+      - logs: Contains log entries for the diagnostic process.  
+      - agent_profiles: Shows the agent's profile that was used during diagnosis.  
+      - past_issues: (If available) Displays a sample of historical issues.  
+      - checkpoints: (From the checkpointing database) Shows the last saved state for potential recovery.  
   
 - Resume functionality:  
   - Optionally, we can demonstrate the "Resume Diagnosis" feature by
