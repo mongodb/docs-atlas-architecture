@@ -117,7 +117,7 @@ With MongoDB
    :figwidth: 1200px
    :alt: reference architecture with MongoDB
 
-   Figure 1. Reference architecture with MongoDB
+   Figure 2. Reference architecture with MongoDB
 
 Building the Solution
 ---------------------
