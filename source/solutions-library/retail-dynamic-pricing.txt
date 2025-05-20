@@ -74,14 +74,10 @@ ride-sharing services, can use real-time pricing to adjust fares based
 on factors like demand, supply, and external events. This enables them
 to optimize revenue and manage passenger demand during peak hours or
 special occasions.
-
-
 - **Telecommunications**: Telecom companies can use real-time pricing for
 data plans, international calling, and roaming charges. They can adjust
 prices based on network capacity and demand to manage traffic and ensure
 optimal service levels.
-
-
 - **Insurance**: Insurance companies can implement real-time pricing for
 usage-based insurance products, such as pay-as-you-drive or
 pay-as-you-live. Premiums can be adjusted based on actual customer
@@ -232,13 +228,11 @@ Key Learnings
 raw data into a more usable format or structure. In this project,
 triggers and functions are used to compute a historic purchase log and
 send data to external systems like Databricks. 
-
 - **Serverless
 architecture**: Gaining insights into the benefits and workings of
 serverless functions and triggers, which can automatically respond to
 changes in data and execute predefined actions without the need for a
 dedicated server. 
-
 - **Real-time data processing**: Understanding the
 importance and mechanisms of processing data in real-time, especially in
 the context of the retail industry where timely insights can drive
