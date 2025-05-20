@@ -43,105 +43,81 @@ Monitoring a rocket launch using MongoDB Atlas and real-time IoT data.
 Solution Overview
 -----------------
 
-The manufacturing industry is supported by a complex value chain that
-spans from inventory management to connected equipment and products. The
-key to solving problems, improving processes, and boosting the overall
-efficiency and quality of this value chain is root-cause diagnostics.
-Unlike predictive maintenance, which focuses on symptom management,
-root-cause diagnostics digs deeper to identify the underlying sources of
-issues, ensuring they are fixed permanently and do not recur.
+From manufacturing and transportation to logistics and supply chain, the
+ability to perform real-time analysis on live IoT data during operation,
+and combine it with other data sources post-operation, is valuable
+across many industries. This demo shows how to leverage the MongoDB
+modern, multi-cloud database platform to go from zero to lift-off in a
+rocket launch example.
 
-Root-cause diagnostics offers several benefits:
+A typical rocket launch spans an eight-hour period from the time the
+initial countdown begins until the rocket payload is in orbit. During
+this window, approximately one million metrics are generated per second
+by sensors capturing the rocket’s performance. While the metrics make up
+the bulk of the data in this scenario, there are two other sources of
+data: notes and weather data.
 
-- **Eliminates recurring problems:** By addressing the true root cause,
-  we avoid temporary fixes and prevent the same issue from recurring,
-  saving time, money, and resources.
+- Notes are created by both rocket engineers and an automated system. The
+  rocket engineers create notes when they want to mark a time period or
+  situation that they want to remember to revisit after the launch. An
+  automated system is continuously watching the metrics as they stream in,
+  creating notes whenever parameters reach thresholds that are out of
+  bounds.
 
-- **Enhance process efficiency:** Identifying bottlenecks and
-  inefficiencies at their source leads to increased output and lower
-  production costs.
+- Weather data is retrieved from a third party, and stored in an Amazon S3
+  bucket, and analyzed in combination with the launch data post-launch.
 
-- **Promotes safety and environmental practices:**  Proactive
-  interventions and risk mitigation foster safer and more environmentally
-  friendly operations.
+This solution shows how the various components of MongoDB's modern,
+multi-cloud database platform can be used together to support
+application-driven analytics on IoT data by highlighting a rocket
+launch, with analysis happening during the launch and after. It uses an
+open source data set from a Blue Origin rocket launch along with
+fictional data.
 
-- **Drives continuous improvement:** The systematic approach of
-  root-cause diagnostics encourages ongoing process improvement and
-  innovation.
+Other Applicable Industries and Use Cases
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-However, implementing root-cause diagnostics in manufacturing can be
-challenging. The vast amounts of complex and noisy data from sensors and
-machines, along with the need to integrate diverse data types, make it a
-formidable task. Traditional methods rely heavily on human expertise,
-knowledge, and experience.
+Other industries that leverage IoT sensor data for both real-time and
+post-event analytics include:
 
-Our solution explores the application of `AI
-<https://www.mongodb.com/resources/basics/what-is-artificial-intelligence>`__
-and `MongoDB Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__ for
-advanced root-cause diagnostics using sound input and the integration of
-AWS Bedrock for real-time report generation on detected anomalies,
-enhancing real-time monitoring and maintenance.
+- Manufacturing: Oftentimes manufacturing machinery is loaded with IoT
+  sensors that operate for hours at a time, similar to a rocket launch.
+  It’s important that analysis can be done while the machinery is
+  operating and post-operation.
 
-.. video:: https://www.youtube.com/watch?v=aQNFAjJVDpY
+- Logistics: From the modes of transportation to the packages themselves,
+  IoT sensors enable supply chain optimization both while in-transit and
+  post-transit.
+
+- eCommerce: In addition to warehouses and shipping logistics, retailers
+  use real-time insights to drive personalization or improve business
+  processes.
 
 Reference Architectures
 -----------------------
 
-**With MongoDB**:
+Without MongoDB
+~~~~~~~~~~~~~~~
 
-The demo architecture comprises several key components working together
-to capture, store, analyze, and report data.
+Without MongoDB, this solution often requires a variety of bolt-on or
+disparate databases to support the variety of data types being
+generated, and data needs to be moved and transformed to reach the
+systems that are used to action this data (like a BI tool).
 
-
-1. **Engine and Raspberry Pi**
-
-   - **Engine control:**  A Raspberry Pi is connected to the engine,
-     controlling it via a relay.
-   - **Telemetry sensors:** The Raspberry Pi is equipped with sensors to
-     measure telemetry data such as temperature and humidity.
-
-2. **Car digital twin and mobile app**
-
-   - **Virtual and physical integration:** A car digital twin in
-     JavaScript  and an iPhone app are connected to the setup. Commands
-     from the apps are sent to MongoDB, which streams them to the
-     Raspberry Pi, triggering the relay to start both the physical engine
-     and the digital twin.
-
-3. **Audio diagnostics**
-
-   - **Audio recording:** Every second, the engine’s audio is recorded.
-   - **Vector conversion:** The audio clips are converted into vectors
-     through an embedder and stored in MongoDB.
-   - **Vector search:** Using `Atlas Vector Search
-     <https://www.mongodb.com/products/platform/atlas-vector-search>`__,
-     the system predicts the engine's status (off, running normally,
-     detecting a metallic or soft hit). This information is displayed on
-     the apps, providing real-time diagnostics.
-
-4. **AWS Bedrock integration**
-
-   - **Automated reporting:** When an anomaly is detected (e.g.,
-     abnormal audio), Atlas triggers a function to send telemetry data and
-     sound analysis results to AWS Bedrock.
-   - **Report generation:** AWS Bedrock generates a detailed report
-     based on the findings, which is then sent back to the dashboard for
-     review.
-
-This architecture creates a feedback loop where edge devices generate
-data for real-time control and monitoring, now enhanced with audio
-diagnostics through vectors. The integration showcases the power of
-utilizing `Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__ for
-root-cause diagnostics, significantly improving efficiency, reliability,
-and innovation in manufacturing operations.
-
-.. figure:: /includes/images/industry-solutions/automotive-diagnostics-architecture.svg
+.. figure:: /includes/images/industry-solutions/rocket-launch-without-MongoDB.svg
    :figwidth: 1200px
-   :alt: demo architecture for automotive diagnostics
+   :alt: reference architecture without MongoDB
 
-   Figure 1. Demo architecture
+   Figure 1. Reference architecture without MongoDB
+
+With MongoDB
+~~~~~~~~~~~~
+
+.. figure:: /includes/images/industry-solutions/rocket-launch-with-MongoDB.svg
+   :figwidth: 1200px
+   :alt: reference architecture with MongoDB
+
+   Figure 1. Reference architecture with MongoDB
 
 Building the Solution
 ---------------------
