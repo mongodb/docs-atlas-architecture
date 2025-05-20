@@ -381,14 +381,19 @@ Running the solution:
 
 - Reviewing MongoDB documents: 
 
-   - In the right column, the documents shown are the records inserted during the current agent run.  
-      - agent_sessions: Contains session metadata and the thread ID.  
-      - historical_recommendations: Stores the final recommendations and related diagnostics.  
-      - telemetry_data: Holds the telemetry sensor readings.  
-      - logs: Contains log entries for the diagnostic process.  
-      - agent_profiles: Shows the agent's profile that was used during diagnosis.  
-      - past_issues: (If available) Displays a sample of historical issues.  
-      - checkpoints: (From the checkpointing database) Shows the last saved state for potential recovery.  
+   - In the right column, the documents shown are the records inserted
+     during the current agent run.  
+      - **agent_sessions:** Contains session metadata and the thread ID.  
+      - **historical_recommendations:** Stores the final recommendations
+        and related diagnostics.  
+      - **telemetry_data:** Holds the telemetry sensor readings.  
+      - **logs:** Contains log entries for the diagnostic process.  
+      - **agent_profiles:** Shows the agent's profile that was used
+        during diagnosis.  
+      - **past_issues:** (If available) Displays a sample of historical
+        issues.  
+      - **checkpoints:** (From the checkpointing database) Shows the
+        last saved state for potential recovery.  
 
 - Resume functionality:  
    - Optionally, we can demonstrate the "Resume Diagnosis" feature by
