@@ -77,6 +77,16 @@ kick-start their projects.
             Optimize your maintenance strategy with AI. Predict
             failures, generate repair plans, and guide technicians.
 
+         .. card::
+            :headline: Transforming the Driver Experience with MongoDB & Google Cloud
+            :url: https://deploy-preview-223--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-car-assistant
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Discover how MongoDB and Google Cloud are powering
+            generative AI-driven, hyper-personalized in-car experiences
+            for automotive innovation.
+
       IoT 
       ---
 
@@ -140,6 +150,14 @@ kick-start their projects.
       .. card-group::
          :columns: 2
          :style: extra-compact
+            :headline: AI-Enhanced Claims Adjustment
+            :url: https://deploy-preview-213--docs-atlas-architecture.netlify.app/solutions-library/insurance-image-search/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Revolutionize claim management using AI and vector image
+            search. Easily compare accident photos for precise
+            estimates.
 
          .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
@@ -189,8 +207,8 @@ kick-start their projects.
          .. card::
             :headline: AI-Driven Media Personalization
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/media-personalization/
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
 
             Learn about how to leverage data to create personalized 
             user experiences by using Atlas Database, 
@@ -199,8 +217,8 @@ kick-start their projects.
          .. card::
             :headline: Gen AI-Powered Video Summarization
             :url: https://deploy-preview-217--docs-atlas-architecture.netlify.app/solutions-library/AI-video-summarization/
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
 
             Build a YouTube transcription and summarization service that
             leverages a large language model (LLM) and semantic search.           
@@ -253,6 +271,14 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: AI Product Search
+            :url: https://deploy-preview-209--docs-atlas-architecture.netlify.app/solutions-library/retail-ai-product-search/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Personalize and optimize e-commerce with AI-powered search using MongoDB Atlas Vector Search and Databricks.
+
+         .. card::
             :headline: Automating Product Descriptions Using Generative AI
             :url: https://deploy-preview-197--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-product-description/
             :icon: industry_ai
@@ -261,14 +287,28 @@ kick-start their projects.
             Write engaging and multilingual product descriptions in
             practically no time with MongoDB and Together AI.
 
+
       .. Personalization
       .. ---------------
 
-.. .. tab:: Telco
-   .. :tabid: Telco
+   .. tab:: Telecommunications
+      :tabid: Telco
 
-   .. Gen AI
-   .. ------
+      Gen AI
+      ------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: AI-Powered Chatbot for Network Management
+            :url: https://deploy-preview-227--docs-atlas-architecture.netlify.app/solutions-library/telecom-asset-telco-ops/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Build a generative AI ops architecture with MongoDB and enable
+            network introspection.
 
 .. .. tab:: Healthcare
    .. :tabid: healthcare
@@ -285,6 +325,6 @@ kick-start their projects.
    Insurance </solutions-library/insurance>
    Media </solutions-library/media>
    Retail </solutions-library/retail>
+   Telecommunications </solutions-library/telco>
 
 .. Healthcare  <solutions-library/healthcare>
-.. Telco </solutions-library/telco>
