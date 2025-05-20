@@ -258,7 +258,7 @@ MongoDB Developer Data Platform
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
-- `Amazon S3 <https://www.mongodb.com/products/platform/atlas-cloud-providers/aws`__ 
+- `Amazon S3 <https://www.mongodb.com/products/platform/atlas-cloud-providers/aws>`__ 
 - `Tableau <https://www.mongodb.com/try/download/tableau-connector>`__
 
 Authors
