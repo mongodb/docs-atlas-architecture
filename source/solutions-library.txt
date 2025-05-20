@@ -77,6 +77,16 @@ kick-start their projects.
             Optimize your maintenance strategy with AI. Predict
             failures, generate repair plans, and guide technicians.
 
+         .. card::
+            :headline: Transforming the Driver Experience with MongoDB & Google Cloud
+            :url: https://deploy-preview-223--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-car-assistant
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Discover how MongoDB and Google Cloud are powering
+            generative AI-driven, hyper-personalized in-car experiences
+            for automotive innovation.
+
       IoT 
       ---
 
@@ -90,9 +100,26 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Learn how MongoDB Atlas Vector Search helps drive efficiency
-            and sustainability by enabling AI-powered, real-time
-            diagnostics in the renewable energy space.
+            Find out how AI is being used in renewable energy by
+            leveraging MongoDB Atlas Vector Search to drive efficiency
+            through real-time, audio diagnostics. 
+      
+      Modernization 
+      -------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Unified Namespace Data Integrity
+            :url: https://deploy-preview-221--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-unified-namespace/
+            :icon: industry_enterprise
+            :icon-alt: Atlas industry_enterprise icon
+
+            Find out how MongoDB helps manufacturers unify production
+            data, optimize operations, and enable real-time insights in
+            a Unified Namespace.
 
       .. App-Driven Analytics
       .. --------------------
@@ -108,13 +135,14 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Claim Management Using LLMs and Vector Search for RAG
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/claim-management/
+            :headline: AI-Enhanced Claims Adjustment
+            :url: https://deploy-preview-213--docs-atlas-architecture.netlify.app/solutions-library/insurance-image-search/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
-            Discover how to combine Atlas Vector Search and large language
-            models (LLMs) to streamline the claim adjustment process. 
+            Revolutionize claim management using AI and vector image
+            search. Easily compare accident photos for precise
+            estimates.
 
          .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
@@ -125,6 +153,16 @@ kick-start their projects.
             Streamline operations and claims processing with powerful PDF search
             capabilities by integrating MongoDB Atlas Vector Search,
             Superduper.io, and LLMs. 
+
+         .. card::
+            :headline: Claim Management Using LLMs and Vector Search for RAG
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/claim-management/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Discover how to combine Atlas Vector Search and large language
+            models (LLMs) to streamline the claim adjustment process. 
+
 
       .. App-Driven Analytics
       .. --------------------
@@ -188,6 +226,14 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: As-You-Type Suggestions
+            :url: https://deploy-preview-194--docs-atlas-architecture.netlify.app/solutions-library/retail-as-you-type-suggestions/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Add fast and relevant as-you-type suggestions to your application, incorporating user context and domain-specific ranking factors.
+
+         .. card::
             :headline: Building an Event-Driven Inventory Management System
             :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
             :icon: mdb_custom_aggregation
@@ -205,12 +251,21 @@ kick-start their projects.
             Enable real-time order tracking and management across all
             retail channels using MongoDB Atlas.
 
+
       Gen AI
       ------
 
       .. card-group::
          :columns: 2
          :style: extra-compact
+
+         .. card::
+            :headline: AI Product Search
+            :url: https://deploy-preview-209--docs-atlas-architecture.netlify.app/solutions-library/retail-ai-product-search/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Personalize and optimize e-commerce with AI-powered search using MongoDB Atlas Vector Search and Databricks.
 
          .. card::
             :headline: Automating Product Descriptions Using Generative AI
@@ -221,6 +276,7 @@ kick-start their projects.
             Write engaging and multilingual product descriptions in
             practically no time with MongoDB and Together AI.
 
+<<<<<<< HEAD
          .. card::
             :headline: Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
             :url: https://deploy-preview-224--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-rag-chatbot/
@@ -231,6 +287,9 @@ kick-start their projects.
             interactions with customers, enhancing their shopping
             experience.
             
+=======
+
+>>>>>>> upstream/solutions-poc
       .. Personalization
       .. ---------------
 
