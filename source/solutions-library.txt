@@ -286,7 +286,7 @@ kick-start their projects.
 
          .. card::
             :headline: Dynamic Pricing
-            :url: https://github.com/mongodb/docs-atlas-architecture/pull/232
+            :url: https://deploy-preview-232--docs-atlas-architecture.netlify.app/solutions-library/retail-dynamic-pricing/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
