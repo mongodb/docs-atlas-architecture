@@ -36,7 +36,6 @@ Monitoring a rocket launch using MongoDB Atlas and real-time IoT data.
 `Atlas SQL Interface <https://www.mongodb.com/products/platform/atlas-sql-interface>`__,
 `Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__
 
-
 **Partners:** `Amazon S3 <https://www.mongodb.com/products/platform/atlas-cloud-providers/aws>`__,
 `Tableau <https://www.mongodb.com/try/download/tableau-connector>`__
 
@@ -118,6 +117,59 @@ With MongoDB
    :alt: reference architecture with MongoDB
 
    Figure 2. Reference architecture with MongoDB
+
+Data Model Approach
+-------------------
+
+Review of the Atlas cluster deployed for the demonstration, and overview
+of the document model for two main Atlas collections used to store the
+launch data: launchData and notes. There are two main collections used
+in the demo:
+
+- LaunchData.
+
+- Notes.
+
+In general, the rocket metrics are produced by the rockets in 4-element
+tuples having the structure below:
+
+- device, timestamp, metric, value.
+
+In the real-world scenario that inspired this demonstration, an
+intermediate app server collected these tuples and aggregated them by
+device and timestamp. When all the metrics for a given device and
+timestamp were received, these metrics were written to the launchData
+collection as a single document. This document model groups the metrics
+into documents that match the way the data is read and analyzed by the
+application (by device and time). This follows the MongoDB schema design
+principle that data that is accessed together is stored together. This
+document model also was designed to work with MongoDB time-series
+collections. The time and metrics fields are top-level fields and the
+meta data (device name) is encapsulated in a field called “meta”.
+
+.. code-block:: javascript  
+   :copyable: true  
+
+   {
+    _id: ObjectId("62f2f8b5800b621ee724bb94"),
+    time: ISODate("2020-10-13T13:33:30.219Z"),
+    meta: { device: 'truth' },
+    TIME_NANOSECONDS_TAI: Long("1602596010219040000"),
+    truth_pos_CON_ECEF_ECEF_M2: -5268929.31643981,
+    truth_pos_CON_ECEF_ECEF_M1: -1387897.36558835,
+    truth_pos_CON_ECEF_ECEF_M3: 3306577.65409484,
+    truth_vel_CON_ECEF_ECEF_MpS2: -0.00810950305119273,
+    truth_vel_CON_ECEF_ECEF_MpS3: 0.00414972080992211,
+    truth_quat_CON2ECEF1: -0.458400879273711,
+    truth_quat_CON2ECEF2: -0.176758395646534,
+    truth_quat_CON2ECEF3: 0.511475024782863,
+    truth_vel_CON_ECEF_ECEF_MpS1: 0.00220006484335229,
+    truth_quat_CON2ECEF4: 0.7049953208872
+  }
+
+This data can be found in the file `aerospace.archive.gz
+<https://github.com/mongodb-developer/rocket-analytics/blob/main/data-Atlas/aerospace.archive.gz>`__
+and restored to an Atlas cluster using mongorestore as below.
 
 Building the Solution
 ---------------------
