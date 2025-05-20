@@ -6,3 +6,4 @@ Manufacturing & Motion IoT
    :titlesonly:
 
    Real-Time Audio Diagnostics <solutions-library/audio-based-AI-diagnostics>
+   Real-Time IoT Analytics <solutions-library/manufacturing-asset-rocket-launch>

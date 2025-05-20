@@ -103,6 +103,15 @@ kick-start their projects.
             Find out how AI is being used in renewable energy by
             leveraging MongoDB Atlas Vector Search to drive efficiency
             through real-time, audio diagnostics. 
+
+         .. card::
+            :headline: Real-Time IoT Analytics
+            :url: https://deploy-preview-234--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-rocket-launch/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Learn how to create real-time analysis on IoT data during
+            and post operation in MongoDB Atlas.
       
       Modernization 
       -------------
