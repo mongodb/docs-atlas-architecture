@@ -460,7 +460,7 @@ together. You’ll find all required assets and resources inside the
 .. procedure::
    :style: normal
 
-   .. step:: Replicate the Demo Database. 
+   .. step:: Replicate the Demo Database
 
       Provision a cluster within your `Atlas account
       <https://www.mongodb.com/cloud/atlas/register>`__ and populate
