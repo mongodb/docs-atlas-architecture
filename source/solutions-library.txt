@@ -142,15 +142,6 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Claim Management Using LLMs and Vector Search for RAG
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/claim-management/
-            :icon: mdb_vector_search
-            :icon-alt: Atlas mdb_vector_search icon
-
-            Discover how to combine Atlas Vector Search and large language
-            models (LLMs) to streamline the claim adjustment process. 
-
-         .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/pdf-search/
             :icon: atlas_search
@@ -159,6 +150,15 @@ kick-start their projects.
             Streamline operations and claims processing with powerful PDF search
             capabilities by integrating MongoDB Atlas Vector Search,
             Superduper.io, and LLMs. 
+
+         .. card::
+            :headline: Claim Management Using LLMs and Vector Search for RAG
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/claim-management/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Discover how to combine Atlas Vector Search and large language
+            models (LLMs) to streamline the claim adjustment process. 
 
    .. tab:: Media
       :tabid: media
