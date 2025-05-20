@@ -95,7 +95,7 @@ OpenAI LLM.
    :figwidth: 1200px
    :alt: Basic Components of an AI Agent 
 
-   Figure 1: Basic Components of an AI Agent  
+   Figure 1: Basic components of an AI agent  
   
 Reference Architecture  
 ----------------------  
@@ -129,9 +129,9 @@ The agent processes an issue report by:
 
 .. figure:: /includes/images/industry-solutions/fleet-management-architecture.svg
    :figwidth: 1200px
-   :alt: Reference Architecture of Solution   
+   :alt: Reference architecture of the fleet management solution   
 
-   Figure 2: Reference Architecture of Solution  
+   Figure 2: Reference architecture of the proposed solution
   
 Data Modelling Approach  
 -----------------------  
@@ -146,7 +146,7 @@ type of data required to be stored.
 Agent Profile  
 ~~~~~~~~~~~~~  
 
-This contains the identity of the agent. It includes instructions, goals
+This contains the identity of the agent, including instructions, goals
 and constraints.  
   
 Example of an Agent Profile  
@@ -254,7 +254,7 @@ persistent storage not only logs every step of the diagnostic process for
 traceability but also enables efficient querying and reusability of past  
 data.  
   
-Next.js frontend: Provides a two-column view:  
+The Next.js frontend provides a two-column view:  
 
 - **Left column:** Displays the real-time agent workflow updates such as
   the chain-of-thought reasoning, update messages, and final
@@ -274,7 +274,7 @@ System Architecture
   be wrong with the engine or fuel system?").  
 
 - It first retrieves telemetry data (simulated here via a CSV file) and
-  ogs the update.  
+  logs the update.  
 
 - Next, it generates an embedding for the complaint using Voyage AI
   voyage-3-large embedding API.  
@@ -343,13 +343,13 @@ Backend Setup
   
       For more details on how to set up Vector Search index, go to this `link <https://mongodb-developer.github.io/search-lab/docs/vector-search/create-index>`__  
   
-   .. step:: Run the backend server  
+   .. step:: Run the Backend Server  
   
       .. code-block:: sh  
   
          uvicorn main:app --host 0.0.0.0 --port 8000 --reload  
   
-   .. step:: Frontend Setup
+   .. step:: Setup the Frontend
 
       Navigate to the frontend directory and install dependencies  
   
@@ -433,7 +433,7 @@ Running the solution
    :figwidth: 1200px
    :alt: Sequence Diagram of AI Agent Workflow     
 
-   Figure 3: Sequence Diagram of AI Agent Workflow  
+   Figure 3: Sequence diagram of AI agent workflow  
  
 Key Learnings  
 -------------  
@@ -467,7 +467,7 @@ make it an ideal foundation for these AI-driven architectures.
   where an issue can be matched against past issues encountered  
   before passing the context to LLM. (See how an automotive OEM  
   leverages vector search for `audio based diagnostics <https://www.mongodb.com/blog/post/ai-driven-noise-analysis-for-automotive-diagnostics>`__ with MongoDB  
-  Atlas Vector Search.)  
+  Atlas Vector Search).  
 
 - **Time series collections and real-time data processing:** MongoDB Atlas  
   is designed for real-time applications. It provides time series  
