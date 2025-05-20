@@ -380,8 +380,8 @@ Running the solution:
    - The workflow is being generated in real time, giving transparency into the agent's decision-making process.  
 
 - Reviewing MongoDB documents: 
-   - In the right column, the documents shown are the records inserted
-     during the current agent run.  
+  - In the right column, the documents shown are the records inserted
+    during the current agent run.  
       - **agent_sessions:** Contains session metadata and the thread ID.  
       - **historical_recommendations:** Stores the final recommendations
         and related diagnostics.  
