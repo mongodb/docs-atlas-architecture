@@ -277,8 +277,21 @@ kick-start their projects.
             practically no time with MongoDB and Together AI.
 
 
-      .. Personalization
-      .. ---------------
+      Personalization
+      ---------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Dynamic Pricing
+            :url: https://github.com/mongodb/docs-atlas-architecture/pull/232
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Orchestrate real-time analytics: Atlas App Services and serverless functions for dynamic pricing strategies.
+
 
    .. tab:: Telecommunications
       :tabid: Telco

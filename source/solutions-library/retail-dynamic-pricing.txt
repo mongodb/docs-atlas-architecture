@@ -89,8 +89,8 @@ The event-driven architecture is very simple. It is made up of only four differe
 
 .. list-table::
    :header-rows: 1
-   :stub-columns: 0
-   :widths: 50 50
+   :stub-columns: 1
+   :widths: 35 65
 
    * - event_type
      - description
