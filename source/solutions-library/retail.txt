@@ -1,6 +1,11 @@
+======
+Retail
+======
+
 .. toctree::
    :titlesonly:
 
-.. Gen AI <solutions-library/retail-gen-ai>
-.. Catalog <solutions-library/retail-catalog>
+   Catalog <solutions-library/retail-catalog>
+   Gen AI <solutions-library/retail-gen-ai>
+
 .. Personalization <solutions-library/retail-personalization>
