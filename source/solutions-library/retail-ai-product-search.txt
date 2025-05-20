@@ -139,7 +139,6 @@ for both uniformity and customization in representing different product
 types within the same collection.
 
 .. figure:: /includes/images/industry-solutions/retail-ai-product-search-arch3.svg
-   :figwidth: 1200px
    :alt: RAG Querying Flow
 
    Figure 3. Integrating MongoDB and Databricks To Deliver AI-augmented Search
