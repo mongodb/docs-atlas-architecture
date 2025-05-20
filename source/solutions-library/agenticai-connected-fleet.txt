@@ -361,9 +361,9 @@ Backend Setup
   
 Running the solution:  
 ~~~~~~~~~~~~~~~~~~~~~  
-
+  
 - Starting a new diagnosis:  
-
+  
     - Open the frontend and choose “New Diagnosis.”  
     - Enter an issue report in the text box (e.g., the sample complaint already shown).  
   
@@ -379,33 +379,36 @@ Running the solution:
           system?  
         - A warning light recently appeared on my dashboard, and the car  
           is struggling to accelerate.  
-
-- Click the “Run Agent” button and wait for a a min or two as the agent finishes its run  
-
+  
+- Click the “Run Agent” button and wait for a minute or two as the agent finishes its run.  
+  
 - Viewing workflow:  
-   - The workflow, chain-of-thought output, and the final recommendation is shown in the left column.  
-   - The workflow is being generated in real time, giving transparency into the agent's decision-making process.  
-
+  
+    - The workflow, chain-of-thought output, and the final recommendation is shown in the left column.  
+    - The workflow is generated in real time, giving transparency into the agent's decision-making process.  
+  
 - Reviewing MongoDB documents:  
-
+  
     - In the right column, the documents shown are the records inserted during the current agent run.  
-
+  
         - **agent_sessions:** Contains session metadata and the thread ID.  
-        - **historical_recommendations:** Stores the final
+        - **historical_recommendations:** Stores the final  
           recommendations and related diagnostics.  
         - **telemetry_data:** Holds the telemetry sensor readings.  
         - **logs:** Contains log entries for the diagnostic process.  
-        - **agent_profiles:** Shows the agent's profile that was used
+        - **agent_profiles:** Shows the agent's profile that was used  
           during diagnosis.  
-        - **past_issues:** (If available) Displays a sample of
+        - **past_issues:** (If available) Displays a sample of  
           historical issues.  
-        - **checkpoints:** (From the checkpointing database) Shows the
+        - **checkpoints:** (From the checkpointing database) Shows the  
           last saved state for potential recovery.  
- 
+  
 - Resume functionality:  
-   - Optionally, we can demonstrate the "Resume Diagnosis" feature by
-     entering a thread ID and showing how the system retrieves the
-     corresponding session.  
+  
+    - Optionally, we can demonstrate the "Resume Diagnosis" feature by  
+      entering a thread ID and showing how the system retrieves the  
+      corresponding session.  
+  
 
 .. figure:: /includes/images/industry-solutions/fleet3.svg
    :figwidth: 1200px
