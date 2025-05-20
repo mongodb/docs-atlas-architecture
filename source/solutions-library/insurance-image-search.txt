@@ -9,7 +9,7 @@ AI-Enhanced Claim Adjustment for Auto Insurance
    :values: tutorial
 
 .. meta:: 
-   :keywords: 
+   :keywords: Gen AI, insurance, Atlas
    :description: Learn how to use Atlas Vector Search to create an image search solution featuring our demo as an example.
    
 .. contents:: On this page
@@ -96,19 +96,16 @@ developers who don’t need to learn to use and maintain a separate technology a
 can fully focus on building their apps.
 
 .. figure:: /includes/images/industry-solutions/insurance-image-search-arch1.svg
-   :figwidth: 1200px
    :alt: AI-enhanced claim adjustment
 
    Figure 1. Reference architecture with MongoDB.
 
 .. figure:: /includes/images/industry-solutions/insurance-image-search-store.svg
-   :figwidth: 1200px
    :alt: Store
 
    Figure 2. A dataset of photos of past accidents is vectorized and stored in Atlas.
 
 .. figure:: /includes/images/industry-solutions/insurance-image-search-query.svg
-   :figwidth: 1200px
    :alt: Query
 
    Figure 3. An image similarity query is performed, and the 5 top similar images are returned.
