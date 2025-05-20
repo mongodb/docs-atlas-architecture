@@ -132,9 +132,9 @@ collection.
 
 The polymorphic pattern in this product catalog is applied by designing
 a flexible schema where each product document can have varying fields or
-related sub-fields (like `colour1`, `ageGroup`, `season`, `articleType`)
+related sub-fields (like ``colour1``, ``ageGroup``, ``season``, ``articleType``)
 specific to its category or type, while also maintaining common fields
-(like `_id`, `link`, `brandName`, `price`, `title`) across all products, allowing
+(like ``_id``, ``link``, ``brandName``, ``price``, ``title``) across all products, allowing
 for both uniformity and customization in representing different product
 types within the same collection.
 
