@@ -267,7 +267,7 @@ The Next.js frontend provides a two-column view:
 System Architecture 
 ~~~~~~~~~~~~~~~~~~~
 
-**Backend Workflow:**  
+**Backend Workflow**  
 
 - The agent receives a user’s issue report (e.g., "My vehicle’s fuel
   consumption has increased significantly over the past week. What might
@@ -288,13 +288,13 @@ System Architecture
 - Finally, the agent uses OpenAI’s ChatCompletion API to produce a final
   recommendation.   
   
-**MongoDB Role:**
+**MongoDB Role**
 
 - MongoDB stores everything: the agent profile, session logs, telemetry  
   data, historical recommendations, and even checkpoints. This makes  
   the system highly traceable and scalable.  
   
-**Frontend Interface:** 
+**Frontend Interface** 
 
 - The two-column UI shows both the real-time workflow and the relevant  
   MongoDB documents that validate each step.  
