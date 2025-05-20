@@ -221,8 +221,8 @@ time-stamped IoT sensor data.
 Key Learnings
 -------------
 
-MongoDB's modern, multi-cloud database platform supports
-application-driven analytics on IoT by providing the following
+MongoDB's modern, multi-cloud database platform enables
+application-driven IoT analytics by providing the following
 capabilities:
 
 - Modeling data across multiple data types.
