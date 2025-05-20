@@ -224,24 +224,21 @@ time-stamped IoT sensor data.
 Key Learnings
 -------------
 
-- **Enhanced diagnostics:** Integrating Atlas Vector Search with audio
-  diagnostics enables precise identification of engine statuses and
-  anomalies, providing deeper insights into root causes.
+MongoDB's modern, multi-cloud database platform supports
+application-driven analytics on IoT by providing the following
+capabilities:
 
-- **Real-time monitoring:** Using MongoDB and Atlas Vector Search allows for
-  real-time data processing and immediate response to anomalies, crucial
-  for proactive maintenance.
+- Modeling data across multiple data types.
 
-- **Data integration:** MongoDB’s document model efficiently handles diverse
-  data types, simplifying the integration of structured telemetry data and
-  unstructured audio data.
+- Analyzing time series data with window functions.
 
-- **Scalability:** The architecture supports scalable data management,
-  accommodating the vast volume of IoT signals generated in a
-  manufacturing environment.
+- Leveraging search indexes.
 
-- **Automation:** AWS Bedrock automates the generation of detailed reports
-  based on detected anomalies, streamlining the reporting process.
+- Doing in-place aggregation pipelines for minimizing ETL processes.
+
+- Finding insights from hot data (live application) and cold data (third party in Amazon S3).
+
+- Integrating functions to react to real-time data.
 
 Technologies and Products Used
 ------------------------------
