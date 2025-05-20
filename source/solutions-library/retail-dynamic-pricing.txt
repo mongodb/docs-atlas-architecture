@@ -66,7 +66,7 @@ MongoDB Atlas App Services in addition to Databricks model building and
 deployment capabilities to fuel data-driven strategies with real-time
 events data. 
 
-Other Applicable industries and use cases
+Other Applicable Industries and Use Cases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Transport**: Transportation companies, such as airlines, taxis, and ride-sharing services, can use real-time pricing to adjust fares based on factors like demand, supply, and external events. This enables them to optimize revenue and manage passenger demand during peak hours or special occasions.
