@@ -165,7 +165,7 @@ meta data (device name) is encapsulated in a field called “meta”.
     truth_quat_CON2ECEF3: 0.511475024782863,
     truth_vel_CON_ECEF_ECEF_MpS1: 0.00220006484335229,
     truth_quat_CON2ECEF4: 0.7049953208872
-  }
+   }
 
 This data can be found in the file `aerospace.archive.gz
 <https://github.com/mongodb-developer/rocket-analytics/blob/main/data-Atlas/aerospace.archive.gz>`__
@@ -174,26 +174,22 @@ and restored to an Atlas cluster using mongorestore as below.
 Building the Solution
 ---------------------
 
+This rocket launch solution was recorded over a three-part livestream.
+This `GitHub <https://github.com/jayrunkel/rocketLivestream>`__ provides
+all the code, data, and links to recordings you need to get started
+building out application-driven analytics that revolve around
+time-stamped IoT sensor data.
+
 .. procedure::
    :style: normal
 
-   .. step:: **Get Your Hardware Ready**
+   .. step:: Development Environment Setup
 
-      To replicate this demo, you will need:
-
-      - An engine to simulate the real use case of a machine—we are
-        using the four-cylinder Teching DM13 engine replica, but you can
-        run this demo with any piece of hardware (even a real machine)
-        that can run and make noise. 
-      - A Raspberry Pi 5, which will be the bridge to host the software
-        that communicates with the cloud.
-
-      To find the detailed information about our hardware and how to set
-      it up, visit this `GitHub page
-      <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics/tree/main/engine-controller>`__.
-
-      `Simulate this solution without the physical engine here
-      <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics>`__.
+      Prior to watching any of the livestreams, you’ll want to go
+      through the setup steps listed in  `GitHub readme
+      <https://github.com/jayrunkel/rocketLivestream>`__. This will help
+      you get started with an Atlas free tier account (if you don’t
+      already have one) and download Compass.
 
    .. step:: **Set Up MongoDB Atlas**
 
