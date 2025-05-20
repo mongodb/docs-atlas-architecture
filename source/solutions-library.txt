@@ -90,9 +90,26 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Learn how MongoDB Atlas Vector Search helps drive efficiency
-            and sustainability by enabling AI-powered, real-time
-            diagnostics in the renewable energy space.
+            Find out how AI is being used in renewable energy by
+            leveraging MongoDB Atlas Vector Search to drive efficiency
+            through real-time, audio diagnostics. 
+      
+      Modernization 
+      -------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Unified Namespace Data Integrity
+            :url: https://deploy-preview-221--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-unified-namespace/
+            :icon: industry_enterprise
+            :icon-alt: Atlas industry_enterprise icon
+
+            Find out how MongoDB helps manufacturers unify production
+            data, optimize operations, and enable real-time insights in
+            a Unified Namespace.
 
       .. App-Driven Analytics
       .. --------------------
@@ -199,6 +216,14 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: As-You-Type Suggestions
+            :url: https://deploy-preview-194--docs-atlas-architecture.netlify.app/solutions-library/retail-as-you-type-suggestions/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Add fast and relevant as-you-type suggestions to your application, incorporating user context and domain-specific ranking factors.
+
+         .. card::
             :headline: Building an Event-Driven Inventory Management System
             :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
             :icon: mdb_custom_aggregation
@@ -215,6 +240,7 @@ kick-start their projects.
 
             Enable real-time order tracking and management across all
             retail channels using MongoDB Atlas.
+
 
       Gen AI
       ------
