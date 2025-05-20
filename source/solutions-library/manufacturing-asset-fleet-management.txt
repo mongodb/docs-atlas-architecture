@@ -368,66 +368,66 @@ Backend Setup
 
 Feel free to adjust the prompt in main.py or update the telemetry data in the telemetry_data.csv file. 
   
-Running the solution:  
-~~~~~~~~~~~~~~~~~~~~~  
+Running the solution  
+~~~~~~~~~~~~~~~~~~~~  
   
-- Starting a new diagnosis:  
+**Starting a new diagnosis**  
+  
+- Open the frontend and choose “New Diagnosis”.  
 
-    - Open the frontend and choose “New Diagnosis”.  
+- Enter an issue report in the text box (e.g., the sample complaint already shown).
 
-    - Enter an issue report in the text box (e.g., the sample complaint already shown).
+  - Example prompts:  
 
-    - Example prompts:  
+    - I am hearing knocking sound while turning at low speeds.  
 
-      - I am hearing knocking sound while turning at low speeds.  
+    - My car is making a persistent rattling noise when I accelerate  
+      at low speeds.  
 
-      - My car is making a persistent rattling noise when I accelerate  
-        at low speeds.  
+    - I noticed a sudden drop in oil pressure along with a slight  
+      rise in engine temperature.  
 
-      - I noticed a sudden drop in oil pressure along with a slight  
-        rise in engine temperature.  
+    - My vehicle’s fuel consumption has increased significantly over  
+      the past week. What might be wrong with the engine or fuel  
+      system?  
 
-      - My vehicle’s fuel consumption has increased significantly over  
-        the past week. What might be wrong with the engine or fuel  
-        system?  
-
-      - A warning light recently appeared on my dashboard, and the car  
-        is struggling to accelerate.  
+    - A warning light recently appeared on my dashboard, and the car  
+      is struggling to accelerate.  
   
 - Click the “Run Agent” button and wait for a minute or two as the agent
   finishes its run.  
 
-- Viewing workflow:  
+**Viewing workflow**  
   
-  - The workflow, chain-of-thought output, and the final recommendation
-    is shown in the left column.  
+- The workflow, chain-of-thought output, and the final recommendation
+  is shown in the left column.  
   
-  - The workflow is generated in real time, giving transparency into the
-    agent's decision-making process.  
+- The workflow is generated in real time, giving transparency into the
+  agent's decision-making process.  
   
-- Reviewing MongoDB documents:  
+**Reviewing MongoDB documents**  
 
-  - In the right column, the documents shown are the records inserted during the current agent run:
+- In the right column, the documents shown are the records inserted during the current agent run:
 
-    - **agent_sessions:** Contains session metadata and the thread ID.  
+  - **agent_sessions:** Contains session metadata and the thread ID.  
 
-    - **historical_recommendations:** Stores the final recommendations and related diagnostics.  
+  - **historical_recommendations:** Stores the final recommendations and related diagnostics.  
 
-    - **telemetry_data:** Holds the telemetry sensor readings.  
+  - **telemetry_data:** Holds the telemetry sensor readings.  
         
-    - **logs:** Contains log entries for the diagnostic process.  
+  - **logs:** Contains log entries for the diagnostic process.  
         
-    - **agent_profiles:** Shows the agent's profile that was used during diagnosis.  
+  - **agent_profiles:** Shows the agent's profile that was used during diagnosis.  
         
-    - **past_issues:** (If available) Displays a sample of historical issues.  
+  - **past_issues:** (If available) Displays a sample of historical issues.  
         
-    - **checkpoints:** (From the checkpointing database) Shows the last saved state for potential recovery.  
+  - **checkpoints:** (From the checkpointing database) Shows the last saved state for potential recovery.  
   
-- Resume functionality:  
+**Resume functionality**
 
-  - Optionally, we can demonstrate the "Resume Diagnosis" feature by  
-    entering a thread ID and showing how the system retrieves the  
-    corresponding session.  
+- Optionally, we can demonstrate the "Resume Diagnosis" feature by  
+  entering a thread ID and showing how the system retrieves the  
+  corresponding session.  
   
 .. figure:: /includes/images/industry-solutions/fleet-management-diagram.svg
    :figwidth: 1200px
