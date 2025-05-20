@@ -149,7 +149,7 @@ Agent Profile
 This contains the identity of the agent, including instructions, goals
 and constraints.  
   
-Example of an Agent Profile  
+**Example of an Agent Profile**  
   
 .. code-block:: javascript  
   
@@ -174,8 +174,8 @@ checkpointer stores intermediate states of the agent’s actions and/or
 reasoning. This memory allows the agent to seamlessly pause and  
 resume operations.  
   
-Example of short term memory - Telemetry data stored in Time Series  
-Collections
+**Example of short term memory - Telemetry data stored in Time Series  
+Collections**
   
 .. code-block:: javascript  
   
@@ -196,8 +196,8 @@ This is where the agent stores accumulated knowledge over time. This
 may include patterns, trends, logs, historical recommendations, and  
 decisions.  
   
-Example of long term memory - historical issues with connected  
-vehicles vectorized and stored in MongoDB
+**Example of long term memory - historical issues with connected  
+vehicles vectorized and stored in MongoDB**
    
 .. code-block:: javascript  
   
