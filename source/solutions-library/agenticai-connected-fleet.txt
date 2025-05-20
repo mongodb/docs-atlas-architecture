@@ -361,23 +361,23 @@ Backend Setup
   
 Running the solution:  
 ~~~~~~~~~~~~~~~~~~~~~  
-  
+
 - Starting a new diagnosis:  
-    
+
     - Open the frontend and choose “New Diagnosis.”  
     - Enter an issue report in the text box (e.g., the sample complaint already shown).  
   
     - Example prompts:  
   
         - I am hearing knocking sound while turning at low speeds.  
-        - My car is making a persistent rattling noise when I accelerate
+        - My car is making a persistent rattling noise when I accelerate  
           at low speeds.  
-        - I noticed a sudden drop in oil pressure along with a slight
+        - I noticed a sudden drop in oil pressure along with a slight  
           rise in engine temperature.  
-        - My vehicle’s fuel consumption has increased significantly over
-          the past week. What might be wrong with the engine or fuel
+        - My vehicle’s fuel consumption has increased significantly over  
+          the past week. What might be wrong with the engine or fuel  
           system?  
-        - A warning light recently appeared on my dashboard, and the car
+        - A warning light recently appeared on my dashboard, and the car  
           is struggling to accelerate.  
 
 - Click the “Run Agent” button and wait for a a min or two as the agent finishes its run  
@@ -387,9 +387,9 @@ Running the solution:
    - The workflow is being generated in real time, giving transparency into the agent's decision-making process.  
 
 - Reviewing MongoDB documents:  
-    
+
     - In the right column, the documents shown are the records inserted during the current agent run.  
-  
+
         - **agent_sessions:** Contains session metadata and the thread ID.  
         - **historical_recommendations:** Stores the final
           recommendations and related diagnostics.  
