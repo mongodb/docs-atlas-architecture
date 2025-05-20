@@ -57,7 +57,8 @@ unlock new business opportunities. The global fleet management
 market is projected to reach `USD 65.7 billion
 <https://businessoutstanders.com/automobile/fleet-telematics-statistics>`__
 by 2030, growing at a rate  
-of almost 10.8% annually.  
+of almost 10.8% annually. 
+
 A `2024 study
 <https://www.webfleet.com/en_gb/webfleet/lp/fleet-digitisation-report/>`__
 conducted by Webfleet revealed that 32% of fleet  
@@ -75,6 +76,7 @@ routes, ensuring timely deliveries while advising drivers on their car
 condition as needed. This proactive approach contrasts with  
 traditional reactive methods, improving vehicle utilization and  
 reducing operational and maintenance costs.  
+
 An agent is an operational application that attempts to achieve a goal  
 by observing the world and acting upon it using the data and tools it  
 has at its disposal. The term "agentic" denotes having agency as an AI  
@@ -83,10 +85,11 @@ human oversight. For example, rather than just reporting an anomaly
 based on connected car telemetry data analysis, an agentic AI system  
 for a connected fleet could autonomously cross-check that anomaly  
 against known issues, decide whether it's critical or not, and schedule
-a  
-maintenance appointment all on its own.  
+a maintenance appointment all on its own.  
+
 In this solution, we will build an AI-powered Connected Fleet Advisor  
-built using MongoDB Atlas, Voyage AI, OpenAI, and LangGraph.  
+built using MongoDB Atlas, Voyage AI, OpenAI, and LangGraph.
+
 The system receives driver complaints or fleet manager queries,  
 processes vehicle telemetry data, generates a chain-of-thought,  
 performs a vector search for similar issues, persists the data in  
@@ -278,14 +281,14 @@ System Architecture:
   recommendation.   
   
 **MongoDB role:**  
-MongoDB stores everything: the agent profile, session logs, telemetry  
-data, historical recommendations, and even checkpoints. This makes  
-the system highly traceable and scalable.  
+- MongoDB stores everything: the agent profile, session logs, telemetry  
+  data, historical recommendations, and even checkpoints. This makes  
+  the system highly traceable and scalable.  
   
 **Frontend interface:**  
-The two-column UI shows both the real-time workflow and the relevant  
-MongoDB documents that validate each step.  
-  
+- The two-column UI shows both the real-time workflow and the relevant  
+  MongoDB documents that validate each step.  
+
 Backend Setup  
 ~~~~~~~~~~~~~  
 .. procedure::  
@@ -327,7 +330,7 @@ Backend Setup
   
    .. step:: Create a Atlas Vector Search index with name issues_index and path embeddings.  
   
-             For more details on how to set up Vector Search index, go to this link`IoT <https://www.mongodb.com/solutions/use-cases/internet-of-things>`__  
+             For more details on how to set up Vector Search index, go to this `link <https://mongodb-developer.github.io/search-lab/docs/vector-search/create-index>`__  
   
    .. step:: Run the backend server  
   
@@ -349,6 +352,7 @@ Backend Setup
   
          npm run dev  
   
+
             The frontend should now be accessible at http://localhost:3000.  
 
    .. step:: Feel free to adjust the prompt in main.py or update the telemetry data in the telemetry_data.csv file. 
@@ -373,7 +377,8 @@ Running the solution:
    - The workflow, chain-of-thought output, and the final recommendation is shown in the left column.  
    - The workflow is being generated in real time, giving transparency into the agent's decision-making process.  
   
-- Reviewing MongoDB documents:  
+- Reviewing MongoDB documents: 
+ 
    - In the right column, the documents shown are the records inserted during the current agent run.  
       - agent_sessions: Contains session metadata and the thread ID.  
       - historical_recommendations: Stores the final recommendations and related diagnostics.  
