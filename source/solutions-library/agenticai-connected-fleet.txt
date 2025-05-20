@@ -280,12 +280,14 @@ System Architecture:
 - Finally, the agent uses OpenAI’s ChatCompletion API to produce a final
   recommendation.   
   
-**MongoDB role:**  
+**MongoDB role:**
+
 - MongoDB stores everything: the agent profile, session logs, telemetry  
   data, historical recommendations, and even checkpoints. This makes  
   the system highly traceable and scalable.  
   
-**Frontend interface:**  
+**Frontend interface:** 
+
 - The two-column UI shows both the real-time workflow and the relevant  
   MongoDB documents that validate each step.  
 
@@ -363,22 +365,22 @@ Running the solution:
    - Open the frontend and choose “New Diagnosis.”  
    - Enter an issue report in the text box (e.g., the sample complaint already  
      shown).  
-  
+
    - Example prompts  
       - I am hearing knocking sound while turning at low speeds.  
       - My car is making a persistent rattling noise when I accelerate at low speeds.  
       - I noticed a sudden drop in oil pressure along with a slight rise in engine temperature.  
       - My vehicle’s fuel consumption has increased significantly over the past week. What might be wrong with the engine or fuel system?  
       - A warning light recently appeared on my dashboard, and the car is struggling to accelerate.  
-  
+
 - Click the “Run Agent” button and wait for a a min or two as the agent finishes its run  
-  
+
 - Viewing workflow:  
    - The workflow, chain-of-thought output, and the final recommendation is shown in the left column.  
    - The workflow is being generated in real time, giving transparency into the agent's decision-making process.  
-  
+
 - Reviewing MongoDB documents: 
- 
+
    - In the right column, the documents shown are the records inserted during the current agent run.  
       - agent_sessions: Contains session metadata and the thread ID.  
       - historical_recommendations: Stores the final recommendations and related diagnostics.  
@@ -387,12 +389,12 @@ Running the solution:
       - agent_profiles: Shows the agent's profile that was used during diagnosis.  
       - past_issues: (If available) Displays a sample of historical issues.  
       - checkpoints: (From the checkpointing database) Shows the last saved state for potential recovery.  
-  
+
 - Resume functionality:  
    - Optionally, we can demonstrate the "Resume Diagnosis" feature by
      entering a thread ID and showing how the system retrieves the
      corresponding session.  
-  
+
 .. figure:: /includes/images/industry-solutions/fleet3.svg
    :figwidth: 1200px
    :alt: Sequence Diagram of AI Agent Workflow     
