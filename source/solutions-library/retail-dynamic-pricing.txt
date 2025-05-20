@@ -34,7 +34,7 @@ Orchestrate real-time analytics with Atlas App Services and serverless functions
 `Triggers
 <https://www.mongodb.com/features/database-triggers>`__, `Atlas Functions
 <https://www.mongodb.com/docs/atlas/app-services/functions/>`__,
-`Atlas Charts https://www.mongodb.com/products/charts`__
+`Atlas Charts <https://www.mongodb.com/products/charts>`__
 
 **Partners:** `Databricks <https://www.mongodb.com/partners/databricks>`__
 
@@ -69,22 +69,12 @@ events data.
 Other Applicable industries and use cases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Transport**: Transportation companies, such as airlines, taxis, and
-ride-sharing services, can use real-time pricing to adjust fares based
-on factors like demand, supply, and external events. This enables them
-to optimize revenue and manage passenger demand during peak hours or
-special occasions.
-- **Telecommunications**: Telecom companies can use real-time pricing for
-data plans, international calling, and roaming charges. They can adjust
-prices based on network capacity and demand to manage traffic and ensure
-optimal service levels.
-- **Insurance**: Insurance companies can implement real-time pricing for
-usage-based insurance products, such as pay-as-you-drive or
-pay-as-you-live. Premiums can be adjusted based on actual customer
-behavior or risk factors.
+- **Transport**: Transportation companies, such as airlines, taxis, and ride-sharing services, can use real-time pricing to adjust fares based on factors like demand, supply, and external events. This enables them to optimize revenue and manage passenger demand during peak hours or special occasions.
+- **Telecommunications**: Telecom companies can use real-time pricing for data plans, international calling, and roaming charges. They can adjust prices based on network capacity and demand to manage traffic and ensure optimal service levels.
+- **Insurance**: Insurance companies can implement real-time pricing for usage-based insurance products, such as pay-as-you-drive or pay-as-you-live. Premiums can be adjusted based on actual customer behavior or risk factors.
 
 
-Reference Architectures
+Reference Architecture
 -----------------------
 
 .. figure:: /includes/images/industry-solutions/retail-dynamic-pricing-reference-architecture.svg
@@ -99,8 +89,8 @@ The event-driven architecture is very simple. It is made up of only four differe
 
 .. list-table::
    :header-rows: 1
-   :stub-columns: 1
-   :widths: 20 80
+   :stub-columns: 0
+   :widths: 50 50
 
    * - event_type
      - description
@@ -132,13 +122,13 @@ Event Schema
             "$numberLong": "1572566410000"
         }
     },
-    "event_type": "view",
-    "product_id": "5837166",
-    "category_id": "1783999064103190764",
-    "brand": "pnb",
-    "price": 22.22,
-    "user_id": "556138645",
-    "user_session": "57ed222e-a54a-4907-9944-5a875c2d7f4f"
+      "event_type": "view",
+      "product_id": "5837166",
+      "category_id": "1783999064103190764",
+      "brand": "pnb",
+      "price": 22.22,
+      "user_id": "556138645",
+      "user_session": "57ed222e-a54a-4907-9944-5a875c2d7f4f"
    }
 
 Purchase Log
@@ -224,19 +214,9 @@ solution for the retail industry.
 Key Learnings
 -------------
 
-- **Data transformation**: Recognizing the importance of transforming
-raw data into a more usable format or structure. In this project,
-triggers and functions are used to compute a historic purchase log and
-send data to external systems like Databricks. 
-- **Serverless
-architecture**: Gaining insights into the benefits and workings of
-serverless functions and triggers, which can automatically respond to
-changes in data and execute predefined actions without the need for a
-dedicated server. 
-- **Real-time data processing**: Understanding the
-importance and mechanisms of processing data in real-time, especially in
-the context of the retail industry where timely insights can drive
-immediate actions, such as dynamic pricing.
+- **Data transformation**: Recognizing the importance of transforming raw data into a more usable format or structure. In this project, triggers and functions are used to compute a historic purchase log and send data to external systems like Databricks. 
+- **Serverles architecture**: Gaining insights into the benefits and workings of serverless functions and triggers, which can automatically respond to changes in data and execute predefined actions without the need for a dedicated server. 
+- **Real-time data processing**: Understanding the importance and mechanisms of processing data in real-time, especially in the context of the retail industry where timely insights can drive immediate actions, such as dynamic pricing.
 
 Technologies and Products Used
 ------------------------------
@@ -256,5 +236,5 @@ Partner Technologies
 
 - `Databricks <https://www.mongodb.com/partners/databricks>`__
 
-..Author
-..------
+.. Author
+.. ------
