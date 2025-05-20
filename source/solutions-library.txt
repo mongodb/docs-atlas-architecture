@@ -51,7 +51,7 @@ kick-start their projects.
 
          .. card::
             :headline: Agentic AI-Powered Fleet Incident Advisor
-            :url: https://deploy-preview-229--docs-atlas-architecture.netlify.app/solutions-library/agenticai-connected-fleet/
+            :url: https://deploy-preview-233--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-fleet-management/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
