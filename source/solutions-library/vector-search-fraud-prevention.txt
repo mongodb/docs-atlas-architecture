@@ -1,11 +1,10 @@
-=======================================================
+===============================================================
 Fraud prevention and AML using {+avs+} and OpenAI
-=======================================================
+===============================================================
 
 .. meta:: 
    :keywords: Fraud Prevention, AML, Vector Search, OpenAI, MongoDB Atlas, Real-Time Analytics, Semantic Search, AI, Machine Learning
-   :description: Combine real-time analytics with semantic search by integrating MongoDB Atlas
-   Vector Search with OpenAI-generated embeddings to detect fraud that traditional methods miss.
+   :description: Combine real-time analytics with semantic search by integrating MongoDB Atlas Vector Search with OpenAI-generated embeddings to detect fraud that traditional methods miss
 
 .. contents:: On this page
    :local:
@@ -54,7 +53,7 @@ Building the Solution and Reference Architectures
 
 How {+avs+} Can Help
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A vector database like {+service-fullname+} makes it easier to find similarities and
+A vector database like |service-fullname| makes it easier to find similarities and
 relationships between different types of data. Rather than using a standalone or bolt-on
 vector database, MongoDB’s modern, multi-cloud database platform empowers users to store
 their operational data, metadata, and vector embeddings on `MongoDB Atlas
@@ -167,7 +166,7 @@ embeddings right next to source data and metadata–vectors inserted or updated 
 database are automatically synchronized to the vector index. - Optimize resource
 consumption, improve performance, and enhance availability with `Search Nodes
 <https://www.mongodb.com/docs/atlas/atlas-search/atlas-search-overview/>`__. - Remove
-operational heavy lifting with the battle-tested, fully managed {+service-fullname+} modern,
+operational heavy lifting with the battle-tested, fully managed |service-fullname| modern,
 multi-cloud database platform.
 
 Given the broad and evolving nature of fraud and AML, these areas typically require
@@ -206,6 +205,6 @@ Pipeline <https://www.mongodb.com/resources/products/capabilities/aggregation-pi
 
 Other key technologies:
 
-  - OpenAI
+- OpenAI
 
 

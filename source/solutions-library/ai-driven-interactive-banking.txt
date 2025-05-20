@@ -5,10 +5,8 @@ AI-Driven Interactive Banking
 ==========================================
 
 .. meta:: 
-   :keywords: AI, Generative AI, Interactive Banking, Chatbots, MongoDB Atlas, Vector 
-   Search, Large Language Models, Financial Services, Personalization
-   :description: Build an application using MongoDB Atlas Vector Search and large language
-   models to improve the interactivity of banking applications.
+   :keywords: AI, Generative AI, Interactive Banking, Chatbots, MongoDB Atlas, Vector Search, Large Language Models, Financial Services, Personalization.
+   :description: Build an application using MongoDB Atlas Vector Search and large language models to improve the interactivity of banking applications.
 
 .. contents:: On this page
    :local:
@@ -116,8 +114,9 @@ process orchestrator, enabling more flexible and scalable custom enterprise AI s
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After we’ve stored both the chunks and their embeddings in MongoDB, we can begin
-leveraging `MongoDB Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`_ for semantic querying.
+leveraging `Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search#query>`_ for semantic
+querying.
 
 3. Building the Chatbot UI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

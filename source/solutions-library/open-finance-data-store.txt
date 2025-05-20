@@ -6,8 +6,7 @@ MongoDB as the Open Finance Data Store
 
 .. meta:: 
    :keywords: Open Finance, Financial Services, |service-fullname|, Data Integration, Real-Time Analytics, Aggregation Pipeline, Secure Data Management, PSD2 Compliance, Personalized Financial Insights
-   :description: MongoDB powers open finance with flexible data integration, built-in 
-   security, and scalability—enabling seamless, compliant, and personalized financial services.
+   :description: MongoDB powers open finance with flexible data integration, built-in security, and scalability—enabling seamless, compliant, and personalized financial services.
 
 .. contents:: On this page
    :local:
@@ -37,6 +36,7 @@ personalized financial insights, and seamlessly adapt to evolving regulations—
 the complexity of traditional relational databases.
 
 .. figure:: /includes/images/industry-solutions/open-finance.gif
+  :alt: Open Finance demo in gif format
 
 Ref Architecture
 ---------------------
@@ -61,7 +61,8 @@ analyze and enrich the data, giving users a holistic financial view while enabli
 bank to offer personalized financial insights.
 
 .. figure:: /includes/images/industry-solutions/open-finance-architecture.svg
-
+  :alt: Open Finance architecture diagram
+  
 
 Data Model Approach
 -------------------
@@ -76,8 +77,8 @@ approach:
 
 - **Tokens collection:** 
   
-  - **Purpose**: Stores Bearer tokens used for authenticating and
-  authorizing API requests between Leafy Bank and external banks. 
+  - **Purpose**: Stores Bearer tokens used for authenticating and authorizing API requests
+    between Leafy Bank and external banks. 
   
   - **Structure**:
   
@@ -206,8 +207,11 @@ hub, providing an overview of all integrated services.
 
 Key Learnings
 -------------
-- MongoDB can serve as the backbone of an open finance ecosystem by acting as a flexible and efficient central `data store <https://www.mongodb.com/resources/basics/data-stores>`__.
-- With built-in encryption, access controls, and high availability, MongoDB ensures secure data management while meeting evolving regulatory requirements.
+- MongoDB can serve as the backbone of an open finance ecosystem by acting as a flexible
+  and efficient central `data store
+  <https://www.mongodb.com/resources/basics/data-stores>`__.
+- With built-in encryption, access controls, and high availability, MongoDB ensures secure
+  data management while meeting evolving regulatory requirements.
 
 Technologies and Products Used
 ------------------------------

@@ -6,8 +6,7 @@ Real-Time Card Fraud Solution Accelerator
 
 .. meta:: 
    :keywords: [Keywords related to the solution]
-   :description: Real-time AI/|ml| fraud detection for Financial Services using MongoDB and 
-   Databricks. Ensure data completeness and instant fraud analysis.
+   :description: Real-time AI/|ml| fraud detection for Financial Services using MongoDB and Databricks. Ensure data completeness and instant fraud analysis.
 
 .. contents:: On this page
    :local:
@@ -69,12 +68,14 @@ pipelines. Relevant Industries include:
 - Healthcare and Insurance - Fraud detection in claims
 
 .. figure:: /includes/images/industry-solutions/card-fraud-solution-architecture.png
+   :alt: Card Fraud Solution Architecture
    :figwidth: 750px
 
 Data Model Approach
 -------------------
 
 .. figure:: /includes/images/industry-solutions/card-fraud-solution-data-model.png
+   :alt: Card Fraud Solution Data Model
    :figwidth: 750px
    
 
@@ -102,7 +103,7 @@ These include:
    Databricks for advanced AI/|ml|-based fraud detection via a native Spark connector.
 
 3. **Databricks:** Hosts the |ml| platform to complement |service-fullname| in-app analytics.
-   A fraud detection algorithm used in this example is a notebook inspired by {+Databricks+}'s
+   A fraud detection algorithm used in this example is a notebook inspired by Databricks'
    fraud framework MLFlow, and it has been used to manage the MLOps for managing this
    model. The trained model is exposed as a REST endpoint.
 
@@ -134,7 +135,7 @@ MongoDB for Event-Driven, Shift-Left Analytics Architecture
 that make it the perfect choice as the datastore for card fraud transaction
 classification. It supports flexible data models and can handle various types of data,
 high scalability to meet demand, advanced security features to support compliance with
-regulatory requirements, |real-time| data processing for fast and accurate fraud
+regulatory requirements, real-time data processing for fast and accurate fraud
 detection, and `cloud-based deployment
 <https://www.mongodb.com/blog/post/introducing-mongodb-spark-connector-version-10-1>`__ to
 store data closer to customers and comply with local data privacy regulations.
@@ -163,7 +164,7 @@ user-related details. By filtering transactions based on these rules before invo
 expensive AI/|ml| models, the overall cost of fraud prevention is reduced.
 
 Databricks as an AI/|ml| Ops Platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Databricks is a powerful AI/|ml| platform to develop models for identifying fraudulent
 transactions. One of the key features of Databricks is the support of real-time analytics.
 As discussed above, real-time analytics is a key feature of modern fraud detection

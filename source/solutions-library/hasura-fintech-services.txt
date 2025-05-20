@@ -68,6 +68,7 @@ to distributed data nodes with centralized authentication, analytics, compliance
 external service integration.*
 
 .. figure:: /includes/images/industry-solutions/hasura-fintech-architecture.png
+    :alt: Hasura DDN with MongoDB architecture diagram
 
 Key components of the architecture:
 

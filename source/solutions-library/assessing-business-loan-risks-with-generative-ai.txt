@@ -1,11 +1,10 @@
-==========================================
+================================================
 Assessing Business Loan Risks with Generative AI
-==========================================
+================================================
 
 .. meta:: 
    :keywords: AI, Business Loans, |service|, |rag|, Risk Analysis
-   :description: Learn how generative AI can generate detailed risk assessments and how 
-   |service|'s multimodal features enable comprehensive and multidimensional loan risk analysis.
+   :description: Learn how generative AI can generate detailed risk assessments and how |service|'s multimodal features enable comprehensive and multidimensional loan risk analysis.
 
 .. contents:: On this page
    :local:
@@ -39,7 +38,8 @@ comprehensive and multidimensional risk analyses.
 
 The code to demonstrate all the features of |service| for building this solution 
 is available in the following `GitHub repo 
-<https://github.com/mongodb-industry-solutions/Risk-assessor/tree/Avatar>`__.
+<https://github.com/mongodb-industry-solutions/Risk-assessor/tree/Avatar>`__. 
+.. Non-working link up here. So is the case also in the original. 
 
 .. video:: https://www.youtube.com/watch?v=tUgSCnGjTI0
 
@@ -67,7 +67,7 @@ business plans, extracting essential information, identifying key risks, and pro
 consistent interpretations, thereby facilitating informed decision-making.
 
 Assessing Loans with Generative AI
---------------------------
+----------------------------------
 
 Interactive Risk Analysis With Generative AI-Powered Chatbots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -164,7 +164,7 @@ appropriate prompt engineering to provide a simplified analysis of the business 
 consideration of the location and also the flood risk earlier downloaded from external 
 flood data sources.
 
-.. figure:: /includes/images/industry-solutions/risk-assessment.png
+.. figure:: /includes/images/industry-solutions/risk-response-with-RAG.png
    :figwidth: 750px
    :alt: Figure 6: Loan risk response using RAG 
 
@@ -183,7 +183,7 @@ queried.
 To illustrate the ease in fetching the flood locations (using the flood data containing 
 geo-locations loaded to MongoDB) around a given coordinate, below is a sample snippet of 
 the geospatial query code. In this example, the :manual:`$geoNear 
-</reference/operator/aggregation/geoNear/>`_ command is 
+</reference/operator/aggregation/geoNear/>` command is 
 used, which allows one to fetch all the locations that are “near” a given point that is 
 specified by the longitude and latitude (e.g., the business location) and also within a 
 certain distance (e.g., five km). The geospatial query can be processed in MongoDB’s data 
@@ -191,9 +191,9 @@ certain distance (e.g., five km). The geospatial query can be processed in Mongo
 <https://www.mongodb.com/resources/products/capabilities/aggregation-pipeline>`_ to also 
 include other data processing such as selecting which data field to be returned from the 
 dataset by :manual:`$project 
-</reference/operator/aggregation/project/>`_ and also 
+</reference/operator/aggregation/project/>` and also 
 filter based on certain conditions via :manual:`$match 
-</reference/operator/aggregation/match/>`_ (e.g., data 
+</reference/operator/aggregation/match/>` (e.g., data 
 where the year is greater than 2016). This data is pulled from the `United States Flood 
 Database <https://zenodo.org/records/7545697>`_, which contains multiple sources, with 
 2020 as the latest dataset.

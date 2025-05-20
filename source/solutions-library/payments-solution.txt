@@ -1,6 +1,6 @@
-======================================
+============================================
 Payments Modernization Solution Accelerator
-======================================
+============================================
 
 .. meta:: 
    :keywords: Payments, Financial Services, MongoDB Atlas, Real-Time Analytics, Secure Transactions, Scalable Systems
@@ -119,6 +119,7 @@ about how it works with MongoDB, visit our `Real-Time Payments page
 <https://www.mongodb.com/basics/real-time-payments>`__.
 
 .. figure:: /includes/images/industry-solutions/payments-solution-architecture.png
+  :alt: Payments Solution Architecture Diagram
 
 Data Model Approach
 -------------------
@@ -147,9 +148,10 @@ can see the main flow for creating accounts.
   Bank account addition confirmation
 
 .. figure:: /includes/images/industry-solutions/account-creation-flow.png
+  :alt: Account Creation Flow
 
 Transaction processing (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/transaction>`__)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Manages transaction-related operations like initiating/completing or refunding a
 transaction. In the diagram below, you can see the transaction initiation process.
 
@@ -159,6 +161,7 @@ transaction. In the diagram below, you can see the transaction initiation proces
 - **Outputs:** Transaction status update (pending, completed, failed)
 
 .. figure:: /includes/images/industry-solutions/transaction-flow.png
+  :alt: Transaction Flow
 
 One additional functionality that this microservice is responsible for is the management
 of external provider transactions. For example, a demo shown in the solution is a mock
@@ -169,9 +172,10 @@ This process as shown below causes a similar payment verification process for th
 external transaction validation and processing/notification.
 
 .. figure:: /includes/images/industry-solutions/external-transaction-flow.png
+  :alt: External Transaction Flow
 
 Transaction history (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/transaction>`__)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Operate transaction logging and archival.
 
 - **Data Entities:** Transaction History, User Account
@@ -180,7 +184,7 @@ Operate transaction logging and archival.
 - **Outputs:** Transaction history data
 
 Account Reconciliation (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/payment>`__)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Verifying the account details are up to date.
 
 - **Data Entities:** Bank Account, Transaction
@@ -189,7 +193,7 @@ Verifying the account details are up to date.
 - **Outputs:** Reconciliation status, Adjusted account balances
 
 Payment verification (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/payment>`__)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This process reacts to a transaction initiation, processing the required steps. The
 diagram below shows the payment processing steps from the moment the service reacts to a
 payment until the user notification, including approving or rejecting payments.
@@ -200,6 +204,7 @@ payment until the user notification, including approving or rejecting payments.
 - **Outputs:** Verification status (success, failure)
   
 .. figure:: /includes/images/industry-solutions/payment-processing.png
+  :alt: Payment Processing Flow
 
 Reporting service
 ~~~~~~~~~~~~~~~~~
@@ -212,7 +217,7 @@ materialized view of your payment data.
 - **Outputs:** Generated financial reports
 
 Notification service (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/notification>`__)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This microservice utilizes Change Streams together with Web Sockets to notify the user UI
 of any changes.
 
@@ -290,7 +295,7 @@ The code for the following step-by-step guide can be found in this `Github repo
 
 Features covered
 ----------------
-**Cross microservices:** - Indexing and scalability - {+json+} schema validation - Permission
+**Cross microservices:** - Indexing and scalability - |json| schema validation - Permission
 and data segregation - Auditing
 
 **User and account microservices:** - `Document model
