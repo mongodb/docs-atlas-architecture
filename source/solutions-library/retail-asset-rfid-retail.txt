@@ -171,41 +171,150 @@ efficiently handle inventory checks.
       - Use connection string to connect your application to the
         cluster.
 
-   .. step:: Create Dataworkz RAG Application
+   .. step:: Configure your project in `XCode <https://developer.apple.com/xcode/>`__
 
-      Sign up to Dataworkz and create a RAG app for the e-commerce
-      policies. You can use the PDF `inside the repository
-      <https://github.com/mongodb-industry-solutions/retail-store-v2/blob/main/resources/LeafyCorpPolicy.pdf>`__
-      to use as the e-commerce policy document. This is the unstructured
-      data that can be made available as a tool to a Dataworkz Agent.
+      **Project Setup**
 
-   .. step:: Create the Dataworkz Agent
+      - Open the 123RFID (or the name you’ve given it) project in Xcode.
 
-      Connect to your MongoDB cluster provisioned at the previous step.
-      Follow `this guide
-      <https://github.com/mongodb-industry-solutions/retail-store-v2/blob/main/resources/chatbot/README.md>`__
-      to learn the configuration required by the Dataworkz connector to
-      access MongoDB. After that, create a MongoDB tool and a Dataworkz
-      agent and test the agent.
+      - Configure project settings (deployment target).
 
-   .. step:: Configure Your Application’s Frontend
+      - Add necessary frameworks and libraries from Zebra SDK.
 
-      Obtain the demo code by cloning the `GitHub repository
-      <https://github.com/mongodb-industry-solutions/retail-store-v2>`__
-      to your local machine, configure the environment variables and
-      install the dependencies. Finally, run the app locally at
-      http://localhost:8080.
+      - Configure build settings (library search paths, framework search
+        paths).
 
-For complete implementation details, including code samples,
-configuration files, and tutorial videos, visit the `GitHub repository
-<https://github.com/mongodb-industry-solutions/retail-store-v2>`__. 
+      **Device Pairing**
+
+      - Enable Bluetooth on iOS device.
+
+      - Pair RFID reader using 123RFID app.
+     
+      **Running the Application**
+
+      - Connect iOS device to Mac.
+
+      - Select device as target in Xcode.
+
+      - Run the application.
+
+   .. step:: Match Inventory Tags
+
+      The *getMatchingTagList* method in Objective-C compares RFID tags
+      from the current physical inventory with a predefined list of tags
+      and updates the user interface accordingly. This procedure works
+      as follows:
+
+      - Retrieves current inventory and predefined tag list.
+
+      - Compares inventory tags with the tag list to find matches.
+
+      - Removes matched tags from the missing tags list.
+
+      - Updates UI with counts of unique and total tags.
+
+      - Stops inventory operation and confirms a complete match if all
+        tags are accounted.
+
+   .. step:: Send Match Confirmation
+
+      The *sendUrlRequestToFlag* method sends a POST request to a
+      specified URL to indicate the result of the inventory check. This
+      process works as follows:
+
+      - Initializes POST request to the target URL.
+
+      - Sets JSON content type header.
+
+      - Prepares JSON payload with inventory check result.
+
+      - Sends POST request and logs the result.
+
+      - Displays a warning message based on the inventory check outcome.
+
+   .. step:: Display Your Inventory Checks in Real Time
+
+      We leverage `MongoDB Change Streams
+      <https://www.mongodb.com/docs/manual/changeStreams/>`__ for
+      instant notifications and visualize the data using `MongoDB Atlas
+      Charts
+      <https://www.mongodb.com/products/platform/atlas-charts>`__.The
+      code sets up a change stream to monitor new inventory checks in
+      the inventoryCheck collection.
+
+      .. code-block:: javascript  
+         :copyable: true  
+  
+         const startWatchInventoryCheck = async (dashboard, addAlert, utils) => {      
+             console.log("Start watching stream");      
+  
+             const runs = await getMongoCollection(utils.dbInfo.dbName, "inventoryCheck");      
+             const filter = {      
+                 filter: {      
+                     operationType: "insert"      
+                 }      
+             };      
+  
+             const stream = runs.watch(filter);      
+  
+             const closeStreamInventoryCheck = () => {      
+                 console.log("Closing stream");      
+                 stream.return();      
+             };      
+  
+             try {      
+                 for await (const change of stream) {      
+                     console.log(change.fullDocument);      
+                     addAlert(change.fullDocument.checkResult);      
+                     dashboard.refresh();      
+                 }      
+             } catch (error) {      
+                 console.error("Error watching stream:", error);      
+             }      
+         };   
+
+      **Endpoint Setup**
+
+      - Use MongoDB's Change Streams to monitor changes in the
+        inventoryCheck collection.
+
+      **Embed the dashboard**
+
+      - Use MongoDB Charts embedding SDK to integrate the dashboard into
+        your web application.
+
+      - Import necessary libraries and context.
+
+      - Create an instance of ChartsEmbedSDK with your base URL.
+ 
+      - Define and render the dashboard properties into a designated
+        div.
+      - Start the change stream and handle real-time updates with
+        alerts.
+
+      **Implement Real-Time Alerts**
+
+      - Display success or error alerts based on the inventory check
+        results using *pushToast*.
+
+      **Ensure Integration**
+
+      - Verify that real-time notifications and dashboard updates work
+        seamlessly.
+
+      - Maintain accurate inventory data and respond quickly to
+        discrepancies.
+
+Follow this guide to effectively integrate the Zebra 123RFID app with
+MongoDB Atlas, enabling real-time inventory management and data
+accuracy.
 
 Key Learnings
 -------------
 
-By combining RFID Technology with the power of MongoDB Atlas,
-retailerscan significantly enhance their inventory management
-capabilities. This integration offers several key advantages:
+By combining RFID Technology and MongoDB Atlas, retailers can enhance
+their inventory management capabilities. This integration provides several
+key advantages:
 
 - **Real-time inventory management:** Leverage RFID Technology and MongoDB
   Atlas to achieve accurate and up-to-date inventory data.
