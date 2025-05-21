@@ -72,11 +72,10 @@ challenges and unlock key advantages:
 Reference Architectures
 -----------------------
 
-By attaching RFID tags to products and utilizing a network of readers,
-businesses can accurately track items from the manufacturing floor to
-the end consumer. Below, we'll explain the general architecture of an
-RFID system and then provide a specific example using Zebra
-Technologies.
+Businesses can track items from the manufacturing floor to the end
+consumer by attaching RFID tags to products and using a network of
+readers. Below, we explain the general architecture of a RFID system
+and provide a specific example with Zebra Technologies.
 
 Supply Chain Tracking with RFID
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
