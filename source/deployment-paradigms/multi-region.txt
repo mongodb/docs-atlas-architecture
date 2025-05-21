@@ -73,7 +73,7 @@ Within these broad deployment strategies, there are additional configurations
 to meet your more specific needs. The following use cases outline specific 
 examples that might meet your own needs.
 
-.. _arch-center-multi-region-5+3:
+.. _arch-center-multi-region-tier-1:
 
 5-Node, 3-Region Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -154,7 +154,7 @@ While this architecture is less expensive than the 5-Node, 3-Region solution
 provided above, the reduced cost comes with some caveats:
 
 - If the majority region is lost, the minority region is not a fully-functional 
-  cluster; it does not have a primary and can only accept reads, but not writes.
+  cluster; it does not have a primary and can only accept reads but not writes.
 
   To turn it into a functional cluster again, an administrator needs to 
   reconfigure the 2 read-only nodes to electable nodes. However, there is a 
@@ -198,7 +198,6 @@ any region is unavailable.
    :alt: An image showing three types of multi-region deployments
 
 ..  _arch-center-global-deployments:
-
 Global Deployments 
 ------------------
 

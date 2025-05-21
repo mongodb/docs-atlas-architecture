@@ -178,7 +178,6 @@ voting, see :manual:`Replica Set Elections </core/replica-set-elections>`.
 
 Distribute Data Across At Least Three Data Centers in Different Availability Zones
 ``````````````````````````````````````````````````````````````````````````````````
-
 MongoDB provides high availability by storing multiple copies of data across replica sets.
 To ensure that members of the same replica set don't share the same resources, and that 
 a replica set can elect a primary if a data center becomes unavailable, you must distribute 

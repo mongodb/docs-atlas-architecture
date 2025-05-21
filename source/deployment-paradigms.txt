@@ -12,7 +12,10 @@
    :depth: 2
    :class: onecol
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/feature-multi-region
 When deploying your database, you must choose between deploying to a single region or multiple regions. The following diagram 
 shows these options, which are explained further below:
 
@@ -23,6 +26,7 @@ shows these options, which are explained further below:
 Single-Region Deployments
 -------------------------
 
+<<<<<<< HEAD
 A :ref:`Single-Region Deployment<arch-center-paradigms-single>` 
 is the simplest deployment option. In a single-region deployment, your 
 data is stored in one of a provider's regions (such as AWS's ``us-west-2`` 
@@ -31,6 +35,13 @@ the risk of lower availability and potentially higher latency, depending on the
 distribution of your application's users. Because {+service+} always provides a 
 minimum of zone-level availability, you cluster nodes are spread across the 
 availability zones within a single region, so if a single zone fails, your 
+=======
+A :ref:`single-region deployment <arch-center-paradigms-single>` is the simplest deployment paradigm.
+In a single-region deployment, your data is stored in one of a provider's regions (such as {+aws+}'s ``us-west-2`` 
+or {+gcp+}'s ``asia-northeast3``). Because {+service+} always provides a 
+minimum of zone-level availability, your cluster nodes are spread across the 
+availability zones within a single region. Therefore, if a single zone fails, your 
+>>>>>>> upstream/feature-multi-region
 data is still available in the other zones.
 
 With the simplicity and lower cost of a single-region deployment 
@@ -58,7 +69,11 @@ and low latency across a larger geographic range than a single-region deployment
 
   For example, you deploy clusters in the {+aws+} regions ``us-east-1`` and ``us-east-2``, 
   both of which are in the United States, and a third cluster in ``eu-west-2``, 
+<<<<<<< HEAD
   which is in Europe. 
+=======
+  which is in Europe.
+>>>>>>> upstream/feature-multi-region
   
 - **Multi-cloud** : 
   Deploys to one or more regions hosted by multiple cloud providers. 
@@ -74,6 +89,7 @@ and low latency across a larger geographic range than a single-region deployment
   situations; for example, where you need global aggregation of user data, or 
   where legal terms dictate specific hosting requirements.
 
+<<<<<<< HEAD
 Availability Considerations
 ---------------------------
 {+service+} has replication built into your deployments, which means: 
@@ -100,6 +116,11 @@ require restoring of backups.
    component. 
 
 Deployment Paradigm Comparison
+=======
+.. _arch-center-choosing-paradigms:
+
+Choosing a Deployment Paradigm
+>>>>>>> upstream/feature-multi-region
 ------------------------------
 
 To figure out which deployment pattern is right for you, break down your 
@@ -115,17 +136,29 @@ determine the best fit for your needs:
    :header-rows: 1
    :widths: 20 20 20 20 20 
 
+<<<<<<< HEAD
    * - Priority Level
      - Description
      - RTO
      - Deployment Model
      - Relative Cost
+=======
+   * - Design Consideration
+     - Single-Region
+     - Multi-Region in One Geography
+     - Multi-Region in Multiple Geographies
+     - Multi-Region and Multi-Cloud
+>>>>>>> upstream/feature-multi-region
 
    * - **Tier 1**
      - Highest criticality applications. Requires fully-automated failover even 
        in the event of regional outages.
      - 0
+<<<<<<< HEAD
      - :ref:`3 Regions with 5 or more nodes <arch-center-multi-region-5+3>`
+=======
+     - :ref:`3 Regions with 5 or more nodes <arch-center-multi-region-tier-1>`
+>>>>>>> upstream/feature-multi-region
      - $$$
 
    * - **Tier 2**

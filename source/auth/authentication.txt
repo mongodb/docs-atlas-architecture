@@ -92,7 +92,6 @@ Authentication Types
 The following sections provide details about the authentication methods used when 
 accessing the Atlas UI, Atlas Database, or the Atlas APIs.
 
-
 .. _arch-center-federated_auth:
 Federated Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -199,7 +198,7 @@ Service Accounts
 Service accounts use industry-standard OAuth2.0 to securely authenticate
 with {+service+} through the {+atlas-admin-api+}. We recommend that you use 
 service accounts instead of |api| keys when possible because they provide added 
-security through use short-lived access tokens and required credential rotations.
+security through short-lived access tokens and required credential rotations.
 
 You can manage programmatic access for service accounts only by using the 
 {+atlas-ui+} or the {+atlas-admin-api+}. You can't manage programmatic access 
@@ -234,20 +233,3 @@ Deployments
 -----------
 To learn our recommendations for deployments that relate to authentication, 
 see :ref:`arch-center-hierarchy`.
-
-
-
-.. collapsible::
-   :heading: Single-Region Deployment Recommendations
-   :sub_heading: Recommendations that apply only to deployments in a single region
-   :expanded: true
-
-   <<Recommendations that apply only to deployments in a single region here>>
-
-.. collapsible::
-   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
-   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
-   :expanded: true
-
-   <<Recommendations that apply only to deployments across multiple regions or multiple cloud providers here>>
-

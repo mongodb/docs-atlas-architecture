@@ -42,7 +42,11 @@ Consider the following factors:
   depending on where your users are located. For example, if most of your users 
   are in Asia, your primary node should also be in a region in Asia. 
 
+<<<<<<< HEAD
 - **Mirrored Reads:** Mirrored reads reduce the impact of primary elections 
+=======
+- **Mirrored Reads-** Mirrored reads reduce the impact of primary elections 
+>>>>>>> upstream/feature-multi-region
   following an outage by pre-warming the caches on the secondary nodes. 
 
 - **Read Preference:** By default, applications send read operations to the 
