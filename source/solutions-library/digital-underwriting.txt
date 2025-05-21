@@ -79,7 +79,7 @@ Reference Architecture
    :figwidth: 1200px
    :alt: An illustration shows a reference architecture
 
-   Figure 1: Reference Architecture With MongoDB
+   Figure 1. Reference Architecture With MongoDB
 
 Data Model Approach
 -------------------
@@ -97,7 +97,7 @@ MongoDB objects within this example can be found on `GitHub
    :figwidth: 1200px
    :alt: An illustration shows the MongoDB Data model approach
 
-   Figure 2: MongoDB Data model approach
+   Figure 2. MongoDB Data model approach
 
 Building the Solution
 ---------------------
@@ -149,7 +149,7 @@ data with MongoDB Charts.
          :figwidth: 1200px  
          :alt: An illustration shows on how to create a data processing pipeline  
   
-      Figure 3: Creating a data processing pipeline  
+      Figure 3. Creating a data processing pipeline  
   
    .. step:: Automating Insurance Premium Calculations with a Machine Learning Model  
   
@@ -178,7 +178,7 @@ data with MongoDB Charts.
   
       Figure 4: Automating Calculations with Machine Learning Model  
 
-   .. step:: Near-Real-Time Insights of Insurance Premium Changes over time
+   .. step:: Near-Real-Time Insights of Insurance Premium Changes over Time
 
       Once the monthly premium calculations have been appended, it’s
       easy to set up Atlas Charts to visualize your newly calculated
@@ -188,8 +188,8 @@ data with MongoDB Charts.
 Technologies and Products Used
 ------------------------------
 
-MongoDB modern, Multi-Cloud Database Platform:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas Database <https://www.mongodb.com/atlas/database>`__
 - `Aggregation Pipelines <https://www.mongodb.com/docs/v7.0/core/aggregation-pipeline/>`__
