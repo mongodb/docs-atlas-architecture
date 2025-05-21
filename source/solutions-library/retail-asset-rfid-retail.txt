@@ -134,9 +134,9 @@ data platform through an API gateway.
 Building the Solution
 ---------------------
 
-In this guide, we will explore how a retail RFID product tracking
-application can integrate with MongoDB Atlas and how to use it to
-efficiently handle inventory checks.
+This guide explains how a retail RFID product tracking application
+integrates with MongoDB Atlas and demonstrates how to use it for
+efficient inventory checks.
 
 .. procedure::
    :style: normal
