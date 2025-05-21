@@ -149,7 +149,7 @@ data with MongoDB Charts.
          :figwidth: 1200px  
          :alt: An illustration shows on how to create a data processing pipeline  
   
-      Figure 3. Creating a data processing pipeline  
+         Figure 3. Creating a data processing pipeline  
   
    .. step:: Automating Insurance Premium Calculations with a Machine Learning Model  
   
@@ -176,7 +176,7 @@ data with MongoDB Charts.
          :figwidth: 1200px  
          :alt: Automating Calculations with Machine Learning Model  
   
-      Figure 4: Automating Calculations with Machine Learning Model  
+         Figure 4: Automating Calculations with Machine Learning Model  
 
    .. step:: Near-Real-Time Insights of Insurance Premium Changes over Time
 
