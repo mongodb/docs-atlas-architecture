@@ -47,7 +47,8 @@ Harnessing RFID's potential requires a robust data layer. MongoDB Atlas
 provides the solution for capturing, processing, and analyzing these
 massive datasets.
 
-**Key benefits**
+Key benefits
+````````````
 
 - **Inventory accuracy:** Eliminate stock discrepancies and reduce
   out-of-stocks, ensuring products are where customers expect them to be.
@@ -85,7 +86,8 @@ movement throughout the supply chain using RFID technology. MongoDB
 Atlas serves as the underlying data layer for managing and analyzing
 RFID data.
 
-**Key Components and Functions**
+Key Components and Functions
+````````````````````````````
 
 - **RFID data collection:** Information is captured from RFID tags
   attached to products using RFID readers.
