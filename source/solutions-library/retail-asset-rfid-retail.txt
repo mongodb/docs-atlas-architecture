@@ -241,6 +241,11 @@ efficient inventory checks.
       code sets up a change stream to monitor new inventory checks in
       the inventoryCheck collection.
 
+      **Endpoint Setup**
+
+      - Use MongoDB Change Streams to monitor changes in the
+        inventoryCheck collection.
+
       .. code-block:: javascript  
          :copyable: true  
   
@@ -271,11 +276,6 @@ efficient inventory checks.
                  console.error("Error watching stream:", error);      
              }      
          };   
-
-      **Endpoint Setup**
-
-      - Use MongoDB Change Streams to monitor changes in the
-        inventoryCheck collection.
 
       **Embed the dashboard**
 
