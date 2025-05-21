@@ -198,8 +198,8 @@ MongoDB Developer Data Platform
 - `MongoDB Spark Connector <https://www.mongodb.com/products/spark-connector>`__
 - `Atlas Charts <https://www.mongodb.com/products/charts>`__
 
-Partner technologies:
-~~~~~~~~~~~~~~~~~~~~~
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
 
 - `Databricks <https://www.mongodb.com/partners/databricks>`__
 
