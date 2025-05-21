@@ -153,12 +153,12 @@ efficient inventory checks.
 
       **Network Security**
 
-      - Configure network access
+      - Configure network access.
 
       - Identify IP access list for edge devices and application
         servers.
 
-      - User authentication
+      - User authentication.
 
       - Create a database user with read and write permissions for the
         inventory database.
@@ -170,11 +170,12 @@ efficient inventory checks.
       - Use connection string to connect your application to the
         cluster.
 
-   .. step:: Configure your project in `XCode <https://developer.apple.com/xcode/>`__
+   .. step:: Configure your project in Xcode
 
       **Project Setup**
 
-      - Open the 123RFID (or the name you’ve given it) project in Xcode.
+      - Open the 123RFID (or the name you’ve given it) project in `Xcode
+        <https://developer.apple.com/xcode/>`__.
 
       - Configure project settings (deployment target).
 
@@ -225,9 +226,9 @@ efficient inventory checks.
 
       - Sets JSON content type header.
 
-      - Prepares JSON payload with inventory check result.
+      - Prepares JSON payload with inventory check results.
 
-      - Sends POST request and logs the result.
+      - Sends POST request and logs the results.
 
       - Displays a warning message based on the inventory check outcome.
 
@@ -237,7 +238,7 @@ efficient inventory checks.
       <https://www.mongodb.com/docs/manual/changeStreams/>`__ for
       instant notifications and visualize the data using `MongoDB Atlas
       Charts
-      <https://www.mongodb.com/products/platform/atlas-charts>`__.The
+      <https://www.mongodb.com/products/platform/atlas-charts>`__. The
       code sets up a change stream to monitor new inventory checks in
       the inventoryCheck collection.
 
@@ -274,7 +275,7 @@ efficient inventory checks.
 
       **Endpoint Setup**
 
-      - Use MongoDB's Change Streams to monitor changes in the
+      - Use MongoDB Change Streams to monitor changes in the
         inventoryCheck collection.
 
       **Embed the dashboard**
@@ -282,7 +283,7 @@ efficient inventory checks.
       - Use MongoDB Charts embedding SDK to integrate the dashboard into
         your web application.
 
-      - Import necessary libraries and context.
+      - Import the necessary libraries and context.
 
       - Create an instance of ChartsEmbedSDK with your base URL.
  
@@ -321,7 +322,7 @@ key advantages:
 - **Improved efficiency:** Streamline inventory processes, reduce stockouts,
   and optimize operations through data-driven insights.
 
-- **Data-driven decision making:** Utilize MongoDB Atlas Charts for real-time
+- **Data-driven decision making:** Use MongoDB Atlas Charts for real-time
   visualizations, enabling informed business decisions.
 
 Technologies and Products Used
