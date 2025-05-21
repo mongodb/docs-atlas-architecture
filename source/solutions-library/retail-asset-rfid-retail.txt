@@ -134,23 +134,44 @@ with the Atlas developer data platform using an API gateway.
 Building the Solution
 ---------------------
 
-Building this solution can be broken down in four major steps:
+In this guide, we will explore how a retail RFID product tracking
+application can integrate with MongoDB Atlas and how to use it to
+efficiently handle inventory checks.
 
 .. procedure::
    :style: normal
 
-   .. step:: Replicate the Demo Database
+   .. step:: Set Up MongoDB Atlas
 
-      You can either use a publicly hosted, pre-populated cluster or
-      provision your own cluster within your Atlas account and populate
-      your database with the required data for the demo. If you choose
-      to bring your own MongoDB, a data dump can be found `inside the
-      repository
-      <https://github.com/mongodb-industry-solutions/retail-store-v2/tree/main/dump/leafy_popup_store>`__
-      to quickly replicate the database with all the necessary data and
-      metadata with one quick `mongorestore
-      <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
-      command.
+      Cluster Setup
+      ~~~~~~~~~~~~~
+    
+      - Select a cloud provider.
+
+      - Choose a region.
+
+      - Configure cluster specifications (e.g., instance size, storage).
+
+    Network Security
+    ~~~~~~~~~~~~~~~~
+
+      - Configure network access
+
+      - Identify IP access list for edge devices and application
+        servers.
+
+      - User authentication
+
+      - Create a database user with read and write permissions for the
+        inventory database.
+
+    Connection
+    ~~~~~~~~~~
+
+      - Obtain connection string from MongoDB Atlas.
+
+      - Use connection string to connect your application to the
+        cluster.
 
    .. step:: Create Dataworkz RAG Application
 
