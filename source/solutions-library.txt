@@ -102,7 +102,17 @@ kick-start their projects.
 
             Find out how AI is being used in renewable energy by
             leveraging MongoDB Atlas Vector Search to drive efficiency
-            through real-time, audio diagnostics. 
+            through real-time, audio diagnostics.
+
+         .. card::
+            :headline: Building an IoT Data Hub for Smart Manufacturing
+            :url: https://deploy-preview-195--docs-atlas-architecture.netlify.app/solutions-library/IoT-datahub-manufacturing/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Use streaming data from edge devices to power machine
+            learning models and smart applications by integrating
+            MongoDB Atlas with Microsoft Azure IoT.   
       
       Modernization 
       -------------
@@ -126,23 +136,6 @@ kick-start their projects.
 
    .. tab:: Insurance
       :tabid: insurance
-
-      App-Driven Analytics
-      --------------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: AI-Powered Call Center Intelligence with MongoDB
-            :url: https://deploy-preview-228--docs-atlas-architecture.netlify.app/solutions-library/insurance-asset-call-centers/
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
-
-            Discover how MongoDB Atlas Vector Search and AI convert
-            insurance call recordings into searchable insights, enabling
-            faster, more efficient customer service.
 
       Gen AI
       ------
@@ -180,6 +173,10 @@ kick-start their projects.
             Discover how to combine Atlas Vector Search and large language
             models (LLMs) to streamline the claim adjustment process. 
 
+
+      .. App-Driven Analytics
+      .. --------------------
+
    .. tab:: Media
       :tabid: media
       
@@ -209,8 +206,8 @@ kick-start their projects.
          .. card::
             :headline: AI-Driven Media Personalization
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/media-personalization/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
 
             Learn about how to leverage data to create personalized 
             user experiences by using Atlas Database, 
@@ -219,8 +216,8 @@ kick-start their projects.
          .. card::
             :headline: Gen AI-Powered Video Summarization
             :url: https://deploy-preview-217--docs-atlas-architecture.netlify.app/solutions-library/AI-video-summarization/
-            :icon: mdb_vector_search
-            :icon-alt: Atlas mdb_vector_search icon
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
 
             Build a YouTube transcription and summarization service that
             leverages a large language model (LLM) and semantic search.           
@@ -289,16 +286,7 @@ kick-start their projects.
             Write engaging and multilingual product descriptions in
             practically no time with MongoDB and Together AI.
 
-         .. card::
-            :headline: Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
-            :url: https://deploy-preview-224--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-rag-chatbot/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
 
-            Discover how Agentic RAG creates seamless and natural
-            interactions with customers, enhancing their shopping
-            experience.
-            
       .. Personalization
       .. ---------------
 
