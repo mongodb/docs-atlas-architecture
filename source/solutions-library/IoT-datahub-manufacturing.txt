@@ -1,7 +1,7 @@
 .. _arch-center-is-manufacturing-iot-data-hub-solution:
 
 ================================================
-Building an IoT data hub for smart manufacturing
+Building an IoT Data Hub for Smart Manufacturing
 ================================================
 
 .. facet::
@@ -23,10 +23,8 @@ IoT.
 
 **Industries:** `Manufacturing and Mobility <https://www.mongodb.com/industries/manufacturing>`__
 
-**Products and tools:** `Atlas <https://www.mongodb.com/atlas>`__,
- `Time Series <https://www.mongodb.com/time-series>`__,
- `Atlas Charts <https://www.mongodb.com/products/charts>`__,
- `Connector for Business Intelligence <https://www.mongodb.com/products/bi-connector>`__
+**Products and tools:**  `Atlas <https://www.mongodb.com/atlas>`__, `Time Series <https://www.mongodb.com/time-series>`__,
+`Atlas Charts <https://www.mongodb.com/products/charts>`__, `Connector for Business Intelligence <https://www.mongodb.com/products/bi-connector>`__
 
 **Partners:** `Microsoft Azure <https://www.mongodb.com/mongodb-on-azure>`__
 
@@ -81,6 +79,7 @@ connect them to newer, smarter applications.
 .. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Ref Arch Before state.svg
    :figwidth: 1200px
    :alt: Reference Architecture Without MongoDB
+
    Figure 1: Reference Architecture Without MongoDB
 
 **With MongoDB**:
@@ -90,9 +89,10 @@ versatility of the document model allows teams to structure data in
 any way their application needs. The expressive API and indexing also
 allow teams to query data any way they want.
 
-.. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Ref Arch After state.svg
+.. figure:: /includes/images/industry-solutions/azure-smarthub-refarch-afterstate.svg
    :figwidth: 1200px
    :alt: Reference Architecture With MongoDB
+
    Figure 2: Reference Architecture With MongoDB
 
 Data Model Approach
@@ -115,40 +115,40 @@ store all sensor data coming in using
 `time-series collections <https://www.mongodb.com/docs/manual/core/timeseries/timeseries-procedures/#insert-measurements-into-a-time-series-collection>`__ .
 For example:
 
-   .. code-block:: sh
+.. code-block:: sh
 
-      {
-        "device_id": 1,
-        "sensor_id": 12345,
-        "start_date": ISODate("2023-01-31T10:00:00.000Z"),
-        "end_date": ISODate("2023-01-31T10:59:59.000Z"),
-        "measurements": [
-      {
-        "timestamp": ISODate("2023-01-31T10:00:00.000Z"),
-        "temperature": 298.1
-        "speed": 1551
-        "torque": 42.8
-        "failure": “No failure”
-      },
-      {
-        "timestamp": ISODate("2023-01-31T10:01:00.000Z"),
-        "temperature": 302.4
-        "speed": 1410
-        "torque": 65.7
-        "failure": “Power failure”
-      },
-      ...
-      {
-        "timestamp": ISODate("2023-01-31T10:42:00.000Z"),
-        "temperature": 298.8
-        "speed": 1455
-        "torque": 41.3
-        "failure": “Tool wear failure”
-      }
-     ],
-     "transaction_count": 4223,
-     "avg_temperature": 300.7
-    }
+   {
+      "device_id": 1,
+      "sensor_id": 12345,
+      "start_date": ISODate("2023-01-31T10:00:00.000Z"),
+      "end_date": ISODate("2023-01-31T10:59:59.000Z"),
+      "measurements": [
+   {
+      "timestamp": ISODate("2023-01-31T10:00:00.000Z"),
+      "temperature": 298.1
+      "speed": 1551
+      "torque": 42.8
+      "failure": “No failure”
+   },
+   {
+      "timestamp": ISODate("2023-01-31T10:01:00.000Z"),
+      "temperature": 302.4
+      "speed": 1410
+      "torque": 65.7
+      "failure": “Power failure”
+   },
+   ...
+   {
+      "timestamp": ISODate("2023-01-31T10:42:00.000Z"),
+      "temperature": 298.8
+      "speed": 1455
+      "torque": 41.3
+      "failure": “Tool wear failure”
+   }
+   ],
+   "transaction_count": 4223,
+   "avg_temperature": 300.7
+   }
 
 We can then use the MongoDB aggregation framework to easily 
 `query time-series data
@@ -158,9 +158,10 @@ For example, we can group documents by the date of the sensor measurement and re
 Building the Solution
 ---------------------
 
-.. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Solution Overview.svg
+.. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Solution Overview 2.svg
    :figwidth: 1200px
    :alt: Solution Overview
+
    Figure 3: Solution Overview
 
 This solution showcases how you can build a smart manufacturing hub
@@ -190,7 +191,7 @@ functions, and code can be found in this `solution repository <https://github.co
 
       We use Azure IoT Hub to connect, monitor, provision, and configure
       IoT devices. `Use this link <https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal#create-an-iot-hub>`__ to set up IoT Hub in your Azure
-      account, and when you’re ready,`register <https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal#register-a-new-device-in-the-iot-hub>`__ a new device.
+      account, and when you’re ready, `register <https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal#register-a-new-device-in-the-iot-hub>`__ a new device.
 
 
    .. step:: Simulate IoT data
@@ -260,4 +261,3 @@ Author
 - Diana Annie Jenosh, MongoDB
 - Utsav Talwar, MongoDB
 - Dr. Humza Akhtar, MongoDB
-   
