@@ -96,6 +96,8 @@ OpenAI LLM.
    :alt: Basic Components of an AI Agent 
 
    Figure 1: Basic components of an AI agent  
+
+.. video:: https://www.youtube.com/watch?v=_CAOb7BR-Rg
   
 Reference Architecture  
 ----------------------  

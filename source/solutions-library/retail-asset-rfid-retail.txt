@@ -47,8 +47,7 @@ Harnessing RFID's potential requires a robust data layer. MongoDB Atlas
 provides the solution for capturing, processing, and analyzing these
 massive datasets.
 
-Key benefits
-````````````
+**Key benefits**
 
 - **Inventory accuracy:** Eliminate stock discrepancies and reduce
   out-of-stocks, ensuring products are where customers expect them to be.
