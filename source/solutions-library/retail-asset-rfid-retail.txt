@@ -48,7 +48,6 @@ provides the solution for capturing, processing, and analyzing these
 massive datasets.
 
 Key benefits
-````````````
 
 - **Inventory accuracy:** Eliminate stock discrepancies and reduce
   out-of-stocks, ensuring products are where customers expect them to be.
