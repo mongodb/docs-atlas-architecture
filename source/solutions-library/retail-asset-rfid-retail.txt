@@ -50,7 +50,7 @@ massive datasets.
 RFID Technology Benefits
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-By integrating RFID technology with a powerful database solution,
+By integrating RFID Technology with a powerful database solution,
 retailers can efficiently address product information management
 challenges and unlock key advantages:
 
@@ -153,8 +153,8 @@ efficiently handle inventory checks.
 
       - Configure cluster specifications (e.g., instance size, storage).
 
-    Network Security
-    ~~~~~~~~~~~~~~~~
+      Network Security
+      ~~~~~~~~~~~~~~~~
 
       - Configure network access
 
@@ -166,8 +166,8 @@ efficiently handle inventory checks.
       - Create a database user with read and write permissions for the
         inventory database.
 
-    Connection
-    ~~~~~~~~~~
+      Connection
+      ~~~~~~~~~~
 
       - Obtain connection string from MongoDB Atlas.
 
