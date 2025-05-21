@@ -80,10 +80,9 @@ and provide a specific example with Zebra Technologies.
 Supply Chain Tracking with RFID
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This architecture outlines a comprehensive system for monitoring product
-movement throughout the supply chain using RFID Technology. MongoDB
-Atlas serves as the underlying data layer for managing and analyzing
-RFID data.
+This architecture shows a comprehensive system with RFID Technolgy to
+monitor product movement through the supply chain. MongoDB Atlas serves
+as the underlying data layer to manage and analyze RFID data.
 
 Key Components and Functions
 ````````````````````````````
