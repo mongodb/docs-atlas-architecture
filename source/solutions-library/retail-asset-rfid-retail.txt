@@ -110,9 +110,9 @@ Key Components and Functions
 RFID Product Tracking Implementation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With the help of an RFID product tracking architecture, we aim to
-showcase an example that integrates the Zebra Technologies 123RFID app
-with the Atlas developer data platform using an API gateway.
+Using a RFID product tracking architecture, we show an example that
+integrates the Zebra Technologies 123RFID app with the Atlas developer
+data platform through an API gateway.
 
 **Key Components and Functionalities**
 
