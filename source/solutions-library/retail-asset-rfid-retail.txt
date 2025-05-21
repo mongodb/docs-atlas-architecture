@@ -218,16 +218,19 @@ MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
-- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-Partner Technologies
-~~~~~~~~~~~~~~~~~~~~
+Additional Technologies
+~~~~~~~~~~~~~~~~~~~~~~~
 
--  `Dataworkz <https://cloud.mongodb.com/ecosystem/dataworkz>`__
--  `NextJS <https://nextjs.org/>`__
+- `Zebra Technologies 123RFID app <https://www.zebra.com/gb/en/support-downloads/software/rfid-software/123rfid-mobile.html>`__
+- `Zebra RFID readers/scanners <https://www.zebra.com/us/en/products/rfid.html>`__
 
 Authors
 -------
 
-- Angie Guemes, MongoDB
-- Sachin Hejip, Engineering at Dataworkz
+- Francesco Baldissera, MongoDB
+- Pedro Bereilh, MongoDB
+- Rami Pinto, MongoDB
+- Sebastian Rojas Arbulu, MongoDB
+- Mehar Grewal, MongoDB
+- Prashant Juttukonda, MongoDB
