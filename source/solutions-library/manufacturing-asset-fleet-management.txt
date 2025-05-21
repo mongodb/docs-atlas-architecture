@@ -373,7 +373,7 @@ Feel free to adjust the prompt in main.py or update the telemetry data in the te
 Running the solution  
 ~~~~~~~~~~~~~~~~~~~~  
   
-**Starting a new diagnosis**  
+**Starting a New Diagnosis**  
   
 - Open the frontend and choose “New Diagnosis”.  
 
@@ -399,7 +399,7 @@ Running the solution
 - Click the “Run Agent” button and wait for a minute or two as the agent
   finishes its run.  
 
-**Viewing workflow**  
+**Viewing Workflow**  
   
 - The workflow, chain-of-thought output, and the final recommendation
   is shown in the left column.  
@@ -407,7 +407,7 @@ Running the solution
 - The workflow is generated in real time, giving transparency into the
   agent's decision-making process.  
   
-**Reviewing MongoDB documents**  
+**Reviewing MongoDB Documents**  
 
 - In the right column, the documents shown are the records inserted during the current agent run:
 
@@ -425,7 +425,7 @@ Running the solution
         
   - **checkpoints:** (From the checkpointing database) Shows the last saved state for potential recovery.  
   
-**Resume functionality**
+**Resume Functionality**
 
 - Optionally, we can demonstrate the "Resume Diagnosis" feature by  
   entering a thread ID and showing how the system retrieves the  
