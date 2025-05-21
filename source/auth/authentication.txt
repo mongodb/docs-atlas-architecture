@@ -181,7 +181,7 @@ To learn more, refer to :manual:`X.509 </core/security-x.509/>`.
 SCRAM Password Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|service| clusters    support SCRAM password authentication for user authentication, 
+|service| {+clusters+} support SCRAM password authentication for user authentication, 
 but we recommend SCRAM only for use in development and test environments. 
 
 If you leverage X.509 or SCRAM authentication, we recommend that you use 
