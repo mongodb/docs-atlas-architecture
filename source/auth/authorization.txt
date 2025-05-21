@@ -33,6 +33,7 @@ The following recommendations apply to both workforce (human) and workload
 (application) users in all :ref:`deployment paradigms <arch-center-paradigms>`.
 
 .. _arch-center-rbac:
+
 RBAC and Predefined Roles
 -------------------------
 
@@ -124,8 +125,9 @@ To learn more about mapping roles to Federated Identity provider groups, refer
 to :atlas:`Role Mapping Process </security/manage-role-mapping/#role-mapping-process>`. 
 
 .. _arch-center-just-in-time:
-Just-in-Time Access 
-------------------
+
+Just-in-Time Access
+-------------------
 
 |service| also supports creating temporary database users
 that automatically expire after the predefined times. A user can be

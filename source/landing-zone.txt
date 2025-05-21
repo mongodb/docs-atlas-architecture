@@ -90,7 +90,7 @@ As you create your landing zone, define requirements for the following considera
    * - Disaster Recovery
      - Define and record a disaster recovery plan that meets the following criteria: 
      
-       - Defines an optimal :abbr: `RPO (Recovery Point Objective)` and :abbr: `RTO (Recovery Time Objective)` for your organization
+       - Defines an optimal :abbr:`RPO (Recovery Point Objective)` and :abbr:`RTO (Recovery Time Objective)` for your organization
        - Defines a backup snapshot schedule and requirements for snapshot retention and mutli-region distribution 
        - Identifies recovery methods such as snapshot restores, queryable backups, document versioning, region shifting, 
          or provider pivot

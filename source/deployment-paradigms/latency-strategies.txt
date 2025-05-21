@@ -65,11 +65,11 @@ Network Configuration
 ---------------------
 You can further reduce latency using the following network connectivity options: 
 
- - **Private Endpoints:** 
-   :atlas:`Private endpoints </data-federation/admin/manage-private-endpoint/>` 
-   establish direct and secure connections between your application's virtual 
-   network and your |service| cluster, potentially reducing network hops and 
-   improving latency.
+- **Private Endpoints:** 
+  :atlas:`Private endpoints </data-federation/admin/manage-private-endpoint/>` 
+  establish direct and secure connections between your application's virtual 
+  network and your |service| cluster, potentially reducing network hops and 
+  improving latency.
 
 - **VPC Peering:** 
   Configure :atlas:`VPC peering </atlas-stream-processing/manage-vpc-peering-connections/>` 

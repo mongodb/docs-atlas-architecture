@@ -59,12 +59,12 @@ the following requirements:
   offering high availability if there's a regional outage or a cloud
   provider outage that affects the primary node.
 
-.. _arch-center-multi-cloud-rec-summary
+.. _arch-center-multi-cloud-rec-summary:
+
 Considerations and Recommendations
 ----------------------------------
 
-Multi-cloud deployments have the same 
-:ref:`considerations <arch-center-multi-region-considerations>` and 
+Multi-cloud deployments have the same considerations and 
 :ref:`recommendations <arch-center-multi-region-rec-summary>` as other 
 multi-region deployments.
 

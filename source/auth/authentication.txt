@@ -93,6 +93,7 @@ The following sections provide details about the authentication methods used whe
 accessing the Atlas UI, Atlas Database, or the Atlas APIs.
 
 .. _arch-center-federated_auth:
+
 Federated Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Federated authentication allows you to manage all authentication to
@@ -107,6 +108,7 @@ Markup Language) 2.0` compatible identity provider such as Okta, Microsoft
 Entra ID, or Ping Identity.
 
 .. _arch-center-workforce_if:
+
 Workforce Identity Federation
 `````````````````````````````
 Workforce Identity Federation allows you to manage all authentication to 
@@ -114,6 +116,7 @@ the |service| database through your identity provider. To learn more,
 see :ref:`oidc-authentication-workforce`.
 
 .. _arch-center-workload_if:
+
 Workload Identity Federation
 ````````````````````````````
 Workload Identity Federation enables applications running in cloud
@@ -126,9 +129,9 @@ management and enhance security by allowing for passwordless access to
 the |service| database. 
 
 .. _arch-center-iam:
+
 AWS IAM Role Authentication
 ````````````````````````````
-
 You can also authenticate through |aws| |iam| roles. To learn more, 
 refer to :ref:`set-up-pwdless-auth`.
 
@@ -136,6 +139,7 @@ To learn more, refer to :ref:`oidc-authentication-workload` and
 :ref:`atlas-federated-authentication`.
 
 .. _arch-center-mfa:
+
 Multi-Factor Authentication 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -164,6 +168,7 @@ two forms of identification:
 To learn more, see :ref:`atlas-enable-mfa`.
 
 .. _arch-center-x509:
+
 X.509 Client Certificates 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -178,6 +183,7 @@ application security.
 To learn more, refer to :manual:`X.509 </core/security-x.509/>`.
 
 .. _arch-center-scram:
+
 SCRAM Password Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -192,6 +198,7 @@ or |aws| Secrets Manager to generate and store complex database credentials.
 To learn more, refer to :manual:`SCRAM </core/security-scram/>`.
 
 .. _arch-center-admin-service-accounts:
+
 Service Accounts
 ~~~~~~~~~~~~~~~~
 
@@ -207,6 +214,7 @@ for service accounts through the {+atlas-cli+} or Terraform.
 To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-overview/>`.
 
 .. _arch-center-admin-api-keys: 
+
 API Keys
 ~~~~~~~~
 
@@ -216,6 +224,7 @@ programmatic access. |api| key-based authentication uses |http| Digest
 authentication to protect requests. To learn more, see :ref:`api-authentication`.
 
 .. _arch-center-secrets:
+
 Secrets Management
 ------------------
 
