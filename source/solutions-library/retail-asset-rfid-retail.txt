@@ -18,9 +18,9 @@ RFID: Real-Time Product Tracking
    :depth: 1
    :class: singlecol
 
-Enhance retail inventory management with RFID technology and MongoDB
-Atlas for real-time tracking, improved accuracy, and data-driven
-insights across your supply chain.
+Enhance retail inventory management with Radio Frequency Identification
+(RFID) Technology and MongoDB Atlas for real-time tracking, improved
+accuracy, and data-driven insights across your supply chain.
 
 **Use cases:** `Catalog <https://www.mongodb.com/use-cases/catalog>`__,
 `Personalization <https://www.mongodb.com/solutions/use-cases/personalization>`__ 
