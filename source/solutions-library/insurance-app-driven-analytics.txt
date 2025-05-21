@@ -6,4 +6,4 @@ Insurance App-Driven Analytics
    :titlesonly:
 
    AI-Powered Call Center Intelligence <solutions-library/insurance-asset-call-centers>
-   Digital Underwriting </solutions-library/digital-underwriting>
+   Automating Digital Underwriting </solutions-library/digital-underwriting>

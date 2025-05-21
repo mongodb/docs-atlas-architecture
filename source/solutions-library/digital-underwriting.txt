@@ -27,9 +27,6 @@ digital underwriting.
 `Healthcare <https://www.mongodb.com/industries/healthcare>`__
 
 **Products and tools:** `Time Series <https://www.mongodb.com/time-series>`__,
-`Atlas App Services <https://www.mongodb.com/atlas/app-services>`__,
-`Atlas Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__,
-`Atlas Functions <https://www.mongodb.com/docs/realm/functions/>`__,
 `Atlas Charts <https://www.mongodb.com/products/charts>`__,
 `Spark Connector <https://www.mongodb.com/docs/spark-connector/current/>`__
 
@@ -120,7 +117,7 @@ data with MongoDB Charts.
 .. procedure::
    :style: normal
 
-   .. step:: Creating a data processing pipeline with a materialized view
+   .. step:: Creating a Data Processing Pipeline with a Materialized View
 
       The data processing pipeline component of this example consists of
       sample data, a daily materialized view, and a monthly materialized
@@ -154,7 +151,7 @@ data with MongoDB Charts.
   
       Figure 3: Creating a data processing pipeline  
   
-   .. step:: Automating insurance premium calculations with a machine learning model  
+   .. step:: Automating Insurance Premium Calculations with a Machine Learning Model  
   
       The decision-processing component of this example consists of a  
       scheduled trigger that collects the necessary data and posts the  
@@ -181,7 +178,7 @@ data with MongoDB Charts.
   
       Figure 4: Automating Calculations with Machine Learning Model  
 
-   .. step:: Near-real-time insights of insurance premium changes over time
+   .. step:: Near-Real-Time Insights of Insurance Premium Changes over time
 
       Once the monthly premium calculations have been appended, it’s
       easy to set up Atlas Charts to visualize your newly calculated
@@ -200,9 +197,6 @@ MongoDB modern, multi-cloud database platform:
 - `Time Series <https://www.mongodb.com/time-series>`__
 - `MongoDB Spark Connector <https://www.mongodb.com/products/spark-connector>`__
 - `Atlas Charts <https://www.mongodb.com/products/charts>`__
-- `Atlas App Services <https://www.mongodb.com/atlas/app-services>`__
-  - `Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
-  - `Functions <https://www.mongodb.com/docs/atlas/app-services/functions/>`__
 
 Partner technologies:
 ~~~~~~~~~~~~~~~~~~~~~
