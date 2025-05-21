@@ -188,7 +188,7 @@ data with MongoDB Charts.
 Technologies and Products Used
 ------------------------------
 
-MongoDB modern, multi-cloud database platform:
+MongoDB modern, Multi-Cloud Database Platform:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas Database <https://www.mongodb.com/atlas/database>`__
@@ -232,8 +232,3 @@ Author
 - Ainhoa Múgica, MongoDB
 - Luca Napoli, MongoDB
 - Karolina Ruiz Rogelj, MongoDB
-
-   
-
-
- 

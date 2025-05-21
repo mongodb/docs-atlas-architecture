@@ -180,23 +180,6 @@ kick-start their projects.
             capabilities by integrating MongoDB Atlas Vector Search,
             Superduper.io, and LLMs. 
 
-<<<<<<< HEAD
-      App-Driven Analytics
-      --------------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Automating digital underwriting with Machine Learning
-            :url: https://deploy-preview-220--docs-atlas-architecture.netlify.app/solutions-library/digital-underwriting/
-            :icon: mdb_vector_search
-            :icon-alt: Atlas mdb_vector_search icon
-
-            Leverage Machine Learning with real-time data processing and
-            automate digital underwriting. 
-=======
          .. card::
             :headline: Claim Management Using LLMs and Vector Search for RAG
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/claim-management/
@@ -205,7 +188,6 @@ kick-start their projects.
 
             Discover how to combine Atlas Vector Search and large language
             models (LLMs) to streamline the claim adjustment process. 
->>>>>>> upstream/solutions-poc
 
    .. tab:: Media
       :tabid: media
