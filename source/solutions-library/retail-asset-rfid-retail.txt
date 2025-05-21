@@ -87,7 +87,6 @@ Atlas serves as the underlying data layer for managing and analyzing
 RFID data.
 
 Key Components and Functions
-````````````````````````````
 
 - **RFID data collection:** Information is captured from RFID tags
   attached to products using RFID readers.
@@ -116,7 +115,6 @@ showcase an example that integrates the Zebra Technologies 123RFID app
 with the Atlas developer data platform using an API gateway.
 
 Key Components and Functionalities
-``````````````````````````````````
 
 - **RFID data capture:** The Zebra Technologies 123RFID app collects product
   information via RFID tags.
