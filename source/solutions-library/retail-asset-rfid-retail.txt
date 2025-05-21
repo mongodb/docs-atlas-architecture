@@ -130,7 +130,7 @@ with the Atlas developer data platform using an API gateway.
    :figwidth: 1200px
    :alt: Example of a RFID product architecture with Atlas and Zebra Technologies
    
-   Figure 2. Example of a RFID product tracking architecture based on the integration of Zebra Technologies with Atlas 
+   Figure 2. Example of a RFID product tracking architecture based on the integration of Zebra Technologies with MongoDB Atlas 
 
 Building the Solution
 ---------------------
@@ -144,8 +144,7 @@ efficiently handle inventory checks.
 
    .. step:: Set Up MongoDB Atlas
 
-      Cluster Setup
-      ~~~~~~~~~~~~~
+      **Cluster Setup**
     
       - Select a cloud provider.
 
@@ -153,8 +152,7 @@ efficiently handle inventory checks.
 
       - Configure cluster specifications (e.g., instance size, storage).
 
-      Network Security
-      ~~~~~~~~~~~~~~~~
+      **Network Security**
 
       - Configure network access
 
@@ -166,8 +164,7 @@ efficiently handle inventory checks.
       - Create a database user with read and write permissions for the
         inventory database.
 
-      Connection
-      ~~~~~~~~~~
+      **Connection**
 
       - Obtain connection string from MongoDB Atlas.
 
