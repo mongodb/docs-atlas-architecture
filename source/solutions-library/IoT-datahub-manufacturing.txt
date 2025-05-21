@@ -25,9 +25,6 @@ IoT.
 
 **Products and tools:** `Atlas <https://www.mongodb.com/atlas>`__,
  `Time Series <https://www.mongodb.com/time-series>`__,
- `Atlas App Services <https://www.mongodb.com/atlas/app-services>`__,
- `Atlas Device Sync <https://www.mongodb.com/atlas/app-services/device-sync>`__,
- `Atlas Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__,
  `Atlas Charts <https://www.mongodb.com/products/charts>`__,
  `Connector for Business Intelligence <https://www.mongodb.com/products/bi-connector>`__
 
@@ -232,8 +229,6 @@ MongoDB modern, multi-cloud database platform:
 
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 - `Time Series <https://www.mongodb.com/time-series>`__
-- `Atlas App Services <https://www.mongodb.com/atlas/app-services>`__
-- `Atlas Device Sync <https://www.mongodb.com/atlas/app-services/device-sync>`__
 - `MongoDB Charts <https://www.mongodb.com/products/charts>`__
 - `MongoDB BI Connector <https://www.mongodb.com/products/bi-connector>`__
 
