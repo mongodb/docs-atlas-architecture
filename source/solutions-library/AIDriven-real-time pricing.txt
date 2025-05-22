@@ -99,7 +99,7 @@ In the `GitHub repository <https://github.com/mongodb-industry-solutions/retail-
 .. procedure::
    :style: normal
 
-   .. step:: Setting up MongoDB Atlas
+   .. step:: Setting Up MongoDB Atlas
 
       - Sign in to `MongoDB Atlas <https://www.mongodb.com/atlas>`__ and
         create a new `cluster
@@ -111,7 +111,7 @@ In the `GitHub repository <https://github.com/mongodb-industry-solutions/retail-
          - Connect to your cluster using the connection string provided
            by Atlas for application integration.
       
-   .. step:: Setting up Google Cloud:
+   .. step:: Setting Up Google Cloud:
 
       - Log into `Google Cloud console <https://console.cloud.google.com/>`__ and create a new project for your microservice.
       - Ensure that the `necessary APIs <https://www.mongodb.com/developer/products/mongodb/dynamic-pricing-microservice-vertexai/#step-2--setting-up-gcp>`__  are enabled for your project.
@@ -160,8 +160,8 @@ In the `GitHub repository <https://github.com/mongodb-industry-solutions/retail-
       - Run the Simulation:
           - Execute the script to validate the complete end-to-end system.
   
-Advantage of MongoDB for modeling events:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Advantage of MongoDB for Modeling Events
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Adding a tensor allows for an event-driven architecture with all
 features in a single collection, which can streamline data retrieval and
@@ -186,7 +186,7 @@ Microservice with Vertex AI and MongoDB Atlas
 Key Learnings
 -------------
 
-- Centralized feature store: MongoDB serves as a feature store, acting
+- **Centralized feature store:** MongoDB serves as a feature store, acting
   as a centralized repository specifically designed for storing, managing,
   and serving features for `machine learning
   <https://www.mongodb.com/resources/basics/machine-learning>`__ (ML)
@@ -199,13 +199,13 @@ Key Learnings
   capability facilitates the seamless incorporation of new pricing factors
   or variables without causing disruptions to existing data structures or
   operations.
-- Scalability and efficiency: `Google Cloud Pub/Sub
+- **Scalability and efficiency:** `Google Cloud Pub/Sub
   <https://cloud.google.com/pubsub?hl=en>`__ can handle massive
   volumes of customer data efficiently, ensuring scalability for
   real-world applications. While this microservice simulates only 25
   customer events every three seconds, Pub/Sub is capable of processing
   much larger data streams.
-- Real-time price updates:`Cloud functions
+- **Real-time price updates:**`Cloud functions
   <https://cloud.google.com/functions?hl=en>`__ trigger `TensorFlow
   <https://www.youtube.com/watch?v=nykQEHp-fYg&t=7s>`__ models to
   generate dynamic prices based on customer behavior. These generated

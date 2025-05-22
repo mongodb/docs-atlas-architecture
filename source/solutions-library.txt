@@ -324,6 +324,15 @@ kick-start their projects.
 
             Leverage real-time data insights to optimize prices and gain a competitive edge.
 
+         .. card::
+            :headline: Dynamic Pricing
+            :url: https://deploy-preview-232--docs-atlas-architecture.netlify.app/solutions-library/retail-dynamic-pricing/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Orchestrate real-time analytics: Atlas App Services and serverless functions for dynamic pricing strategies.
+
+
    .. tab:: Telecommunications
       :tabid: Telco
 
