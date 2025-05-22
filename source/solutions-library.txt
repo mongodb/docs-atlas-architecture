@@ -352,7 +352,7 @@ kick-start their projects.
    :titlesonly:
 
    Financial Services </solutions-library/financial-services>
-   turing & Motion </solutions-library/turing>
+   Manufacturing & Motion </solutions-library/Manufacturing>
    Insurance </solutions-library/insurance>
    Media </solutions-library/media>
    Retail </solutions-library/retail>
