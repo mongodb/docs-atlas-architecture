@@ -175,13 +175,13 @@ While the reference implementation showcases Cedalo's MQTT Broker, the
 solution is designed to be broker-agnostic, supporting integration with
 various MQTT providers.
 
-Key solution components
+Key Solution Components
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. procedure::
    :style: normal
 
-   .. step:: **MQTT Broker (data ingestion layer)**
+   .. step:: **MQTT Broker (Data Ingestion Layer)**
 
                - Set up your MQTT broker for reliable message handling
                - Configure broker integration with MongoDB
@@ -198,7 +198,7 @@ Key solution components
                   - Analytics engine configuration
                   - Atlas Charts integration
 
-   .. step:: **Database configuration (data processing layer)**
+   .. step:: **Database Configuration (Data Processing Layer)**
 
                - Create MongoDB database with required collections
                - Set up time series collections for:
@@ -208,7 +208,7 @@ Key solution components
                - Configure data transformation pipelines
                - Enable real-time data processing capabilities 
 
-   .. step:: **Application deployment (analytics and visualization layer)**
+   .. step:: **Application Deployment (Analytics and Visualization Layer)**
 
                - Deploy application components
                - Implement real-time monitoring capabilities
