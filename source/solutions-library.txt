@@ -134,6 +134,26 @@ kick-start their projects.
       .. App-Driven Analytics
       .. --------------------
 
+   .. tab:: Healthcare
+      :tabid: healthcare
+
+      Interoperability
+      ----------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: AI-Powered Healthcare with MongoDB & Microsoft
+            :url: https://deploy-preview-238--docs-atlas-architecture.netlify.app/solutions-library/healthcare-asset-ai-healthcare/
+            :icon: mdb_search
+            :icon-alt: Atlas atlas_search icon
+
+            MongoDB and Microsoft deliver AI-powered solutions for
+            breast cancer care, unifying data and enabling predictive
+            modeling, intelligent chatbots, and analytics.     
+
    .. tab:: Insurance
       :tabid: insurance
 
@@ -188,27 +208,7 @@ kick-start their projects.
             :icon-alt: Atlas mdb_vector_search icon
 
             Discover how to combine Atlas Vector Search and large language
-            models (LLMs) to streamline the claim adjustment process. 
-
-   .. tab:: Healthcare
-      :tabid: healthcare
-
-      Interoperability
-      ----------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: AI-Powered Healthcare with MongoDB & Microsoft
-            :url: https://deploy-preview-238--docs-atlas-architecture.netlify.app/solutions-library/healthcare-asset-ai-healthcare/
-            :icon: mdb_search
-            :icon-alt: Atlas atlas_search icon
-
-            MongoDB and Microsoft deliver AI-powered solutions for
-            breast cancer care, unifying data and enabling predictive
-            modeling, intelligent chatbots, and analytics.        
+            models (LLMs) to streamline the claim adjustment process.    
 
    .. tab:: Media
       :tabid: media
