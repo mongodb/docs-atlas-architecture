@@ -210,7 +210,7 @@ manage MLOps cycles. In this solution, we trained two models.
    case. The training dataset is fetched from MongoDB Atlas and
    prediction output is updated back to MongoDB, thanks to the `MongoDB
    Spark Connector
-   <https://www.mongodb.com/docs/spark-connector/current/>`__ .    
+   <https://www.mongodb.com/docs/spark-connector/current/>`__.    
   
 Fabric Data Science makes the training and managing the end-to-end ML
 lifecycle easy and intuitive. Fabric Data Science manages the lifecycle
