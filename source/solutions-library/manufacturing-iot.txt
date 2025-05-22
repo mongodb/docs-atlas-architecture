@@ -7,4 +7,4 @@ Manufacturing & Motion IoT
 
    Building an IoT Data Hub <solutions-library/IoT-datahub-manufacturing>
    Real-Time Audio Diagnostics <solutions-library/audio-based-AI-diagnostics>
-   Streamline global gaming management <solutions-library/Streamline-global-gaming-management>
+   Streamline Global Gaming Management <solutions-library/Streamline-global-gaming-management>
