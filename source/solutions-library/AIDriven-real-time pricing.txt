@@ -218,7 +218,7 @@ Technologies and Products Used
 ------------------------------
 
 MongoDB Developer Data Platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 -  Atlas Collections
