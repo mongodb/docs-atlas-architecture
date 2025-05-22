@@ -1,3 +1,7 @@
+======================
+Retail Personalization
+======================
+
 .. toctree::
    :titlesonly:
 
