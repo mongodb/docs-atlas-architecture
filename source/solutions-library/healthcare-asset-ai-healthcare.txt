@@ -34,15 +34,15 @@ chatbots, and analytics.
 Solution Overview  
 -----------------  
   
-MongoDB Atlas and Microsoft AI technologies converge in an    
-innovative healthcare solution called "Leafy Hospital," showcasing how    
-cutting-edge technology can transform breast cancer diagnosis and    
-patient care. This integrated system leverages MongoDB's flexible data    
-platform for unifying operational, metadata, and AI data, while    
-incorporating Microsoft's advanced capabilities including Azure    
-OpenAI, Microsoft Fabric, and Power BI to create a comprehensive    
-healthcare analytics and diagnostic solution. The solution    
-demonstrates three key technological approaches:  
+MongoDB Atlas and Microsoft AI technologies converge in an innovative
+healthcare solution called "Leafy Hospital," showcasing how cutting-edge
+technology can transform breast cancer diagnosis and patient care. This
+integrated system leverages MongoDB's flexible data platform for
+unifying operational, metadata, and AI data, while incorporating
+Microsoft's advanced capabilities including Azure OpenAI, Microsoft
+Fabric, and Power BI to create a comprehensive healthcare analytics and
+diagnostic solution. The solution demonstrates three key technological
+approaches:  
   
 - **Predictive AI for early detection** using deep learning models to
   analyze mammograms and predict BI-RADS scores. 
@@ -54,9 +54,9 @@ demonstrates three key technological approaches:
 - **Advanced analytics** that combines real-time operational insights
   with long-term trend analysis through Power BI integration.  
   
-This approach enables healthcare providers to streamline diagnostic    
-processes, automate clinical documentation, and make data-driven    
-decisions while ensuring secure handling of sensitive patient    
+This approach enables healthcare providers to streamline diagnostic
+processes, automate clinical documentation, and make data-driven
+decisions while ensuring secure handling of sensitive patient
 information.  
 
 .. video:: https://www.youtube.com/watch?v=b4lCq_x5ujQ
@@ -64,7 +64,7 @@ information.
 Reference Architectures  
 -----------------------  
 
-The reference architecture illustrates how the Leafy Hospital solution    
+The reference architecture illustrates how the Leafy Hospital solution
 integrates various components across three main technological areas:    
   
 1. **Predictive AI layer** (bottom yellow box). 
@@ -102,8 +102,8 @@ integrates various components across three main technological areas:
 
    - Provides comprehensive analytics capabilities.
   
-The data flow begins with medical images stored in Azure Blob    
-Storage, which are then processed through the various layers:  
+The data flow begins with medical images stored in Azure Blob Storage,
+which are then processed through the various layers:  
   
 - Images and operational data flow through Fabric Data Science for AI  
   processing.
@@ -122,24 +122,23 @@ Storage, which are then processed through the various layers:
   
    Figure 1. Leafy Hospital solution architecture  
   
-This architecture ensures a seamless flow of information from raw    
-medical data to actionable insights while maintaining security and    
+This architecture ensures a seamless flow of information from raw
+medical data to actionable insights while maintaining security and
 performance throughout the system.  
   
 Building the Solution  
 ---------------------  
   
-The Leafy Hospital demo showcases the integration of MongoDB Atlas    
-with Microsoft's AI and analytics services through several key    
-components:  
+The Leafy Hospital demo showcases the integration of MongoDB Atlas with
+Microsoft's AI and analytics services through several key components:  
   
 Data Architecture and Flow  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~  
   
-The solution's data architecture supports both operational and    
-analytical workloads efficiently. MongoDB Atlas serves as the    
-operational datastore for real-time AI applications, while Microsoft    
-OneLake handles analytics for long-term trend analysis. This dual    
+The solution's data architecture supports both operational and
+analytical workloads efficiently. MongoDB Atlas serves as the
+operational datastore for real-time AI applications, while Microsoft
+OneLake handles analytics for long-term trend analysis. This dual
 architecture enables:  
   
 - Real-time processing of patient data and medical imaging.
@@ -160,12 +159,13 @@ architecture enables:
 Predictive AI for Early Detection  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
   
-Predictive AI is critical in healthcare as it aids in accurate diagnosis,    
-relying on predictions from large datasets compared with manual    
-analysis, which is likely to bring in manual errors.    
-`Microsoft Fabric Data Science
-<https://learn.microsoft.com/en-us/fabric/data-science/data-science-overview>`__ presents a robust
-platform to train and experiment with ML Models and manage MLOps cycles. 
+Predictive AI is critical in healthcare as it aids in accurate
+diagnosis, relying on predictions from large datasets compared with
+manual analysis, which is likely to bring in manual errors. `Microsoft
+Fabric Data Science
+<https://learn.microsoft.com/en-us/fabric/data-science/data-science-overview>`__
+presents a robust platform to train and experiment with ML Models and
+manage MLOps cycles. 
 
 Two models were trained and used to:  
   
@@ -198,20 +198,20 @@ Two models were trained and used to:
   
 #. **Biopsy classification:**    
 
-   For the use case of binary classification of the    
-   cancer as malignant or benign, classification or regression models    
-   can be used. Random forest classifier model is trained on a `dataset
-   <https://www.kaggle.com/datasets/ninjacoding/breast-cancer-wisconsin-benign-or-malignant>`__      
-   from Kaggle, with nine input parameters such as clump thickness,    
+   For the use case of binary classification of the cancer as malignant
+   or benign, classification or regression models can be used. Random
+   forest classifier model is trained on a `dataset
+   <https://www.kaggle.com/datasets/ninjacoding/breast-cancer-wisconsin-benign-or-malignant>`__
+   from Kaggle, with nine input parameters such as clump thickness,
    uniformity of cell size and shape, bare nuclei, mitoses, etc. Based
-   on the values of these parameters the model is able to predict if the    
-   cancer is malignant or benign. In production use cases, more    
-   parameters can be added and the model can be trained from their    
-   values to be able to predict with more accuracy. Random forest    
-   model gave an accuracy of more than 97% and thus was ideal for    
-   this use case. The training dataset is fetched from MongoDB Atlas    
-   and prediction output is updated back to MongoDB, thanks to the    
-   `MongoDB Spark Connector
+   on the values of these parameters the model is able to predict if the
+   cancer is malignant or benign. In production use cases, more
+   parameters can be added and the model can be trained from their
+   values to be able to predict with more accuracy. Random forest model
+   gave an accuracy of more than 97% and thus was ideal for this use
+   case. The training dataset is fetched from MongoDB Atlas and
+   prediction output is updated back to MongoDB, thanks to the `MongoDB
+   Spark Connector
    <https://www.mongodb.com/docs/spark-connector/current/>`__ .    
   
 Fabric Data Science makes the training and managing the end-to-end ML
