@@ -7,5 +7,4 @@ Retail Gen-AI
 
    AI Product Search </solutions-library/retail-ai-product-search>
    Automating Product Descriptions <solutions-library/retail-asset-product-description>
-   Dynamic Pricing </solutions-library/AIDriven-real-time pricing>
    Launching an Agentic RAG Chatbot <solutions-library/retail-asset-rag-chatbot>
