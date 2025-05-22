@@ -64,7 +64,7 @@ their personal devices.
 Reference Architectures
 -----------------------
 
-**Without MongoDB**:
+**Without MongoDB**
 
 It’s common in many manufacturing environments to have unique systems
 running their own proprietary software, often with a relational database
@@ -80,9 +80,9 @@ connect them to newer, smarter applications.
    :figwidth: 1200px
    :alt: Reference Architecture Without MongoDB
 
-   Figure 1: Reference Architecture Without MongoDB
+   Figure 1. Reference architecture without MongoDB
 
-**With MongoDB**:
+**With MongoDB**
 
 With MongoDB Atlas, architectural complexity is reduced, as the
 versatility of the document model allows teams to structure data in
@@ -93,7 +93,7 @@ allow teams to query data any way they want.
    :figwidth: 1200px
    :alt: Reference Architecture With MongoDB
 
-   Figure 2: Reference Architecture With MongoDB
+   Figure 2. Reference architecture with MongoDB
 
 Data Model Approach
 -------------------
@@ -162,7 +162,7 @@ Building the Solution
    :figwidth: 1200px
    :alt: Solution Overview
 
-   Figure 3: Solution Overview
+   Figure 3. Solution overview
 
 This solution showcases how you can build a smart manufacturing hub
 using MongoDB Atlas and Azure IoT Edge. The example use case is sending
