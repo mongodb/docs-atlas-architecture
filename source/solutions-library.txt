@@ -50,6 +50,16 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: Agentic AI-Powered Fleet Incident Advisor
+            :url: https://deploy-preview-233--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-fleet-management/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            MongoDB helps automotive companies manage fleets of
+            connected vehicles, optimize route planning, and improve
+            driver safety.
+
+         .. card::
             :headline: Automotive Diagnostics Using Atlas Vector Search
             :url: https://deploy-preview-204--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-automotive-diagnostics/
             :icon: industry_ai
