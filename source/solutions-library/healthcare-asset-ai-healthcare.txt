@@ -257,7 +257,7 @@ implemented in three key stages:
 
    - Enables intuitive access to patient information.
   
-.. figure:: /includes/images/industry-solutions/health6.svg  
+.. figure:: /includes/images/industry-solutions/ai-healthcare-3.svg  
    :figwidth: 1200px  
    :alt: Vector Search Implementation Process Flow  
   
@@ -267,8 +267,8 @@ RAG-based Chatbot Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
   
 The chatbot implementation leverages `retrieval augmented generation
-<https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__(RAG)
-architecture with three distinct data contexts:  
+<https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__
+(RAG) architecture with three distinct data contexts:  
   
 1. **Patient information retrieval:**    
 
