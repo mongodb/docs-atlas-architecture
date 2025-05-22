@@ -181,7 +181,7 @@ Key solution components
 .. procedure::
    :style: normal
 
-   .. step:: **MQTT broker (data ingestion layer)**
+   .. step:: **MQTT Broker (data ingestion layer)**
 
                - Set up your MQTT broker for reliable message handling
                - Configure broker integration with MongoDB
@@ -189,7 +189,7 @@ Key solution components
                - Enable real-time data collection from smart meters
                - Implement broker management and monitoring 
 
-   .. step:: **Environment configuration (configuration layer)**
+   .. step:: **Environment Configuration (Configuration Layer)**
 
                - Configure environment variables for:
                   - MQTT broker connection details
@@ -248,8 +248,8 @@ Key Learnings
 Technologies and Products Used
 ------------------------------
 
-MongoDB developer data platform:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 - `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__
@@ -257,8 +257,8 @@ MongoDB developer data platform:
 - `Atlas Charts <https://www.mongodb.com/products/charts>`__
 - `MongoDB Query API <https://www.mongodb.com/docs/manual/tutorial/query-documents/>`__
 
-Partner technologies:
-~~~~~~~~~~~~~~~~~~~~~
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
 
 - Cedalo MQTT Platform
 
