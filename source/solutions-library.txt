@@ -26,7 +26,7 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Use native stream processing and vector search in MongoDB Atlas to
+            Use native stream processing and Vector Search in MongoDB Atlas to
             continuously update, store, and search embeddings through a unified
             interface. 
 

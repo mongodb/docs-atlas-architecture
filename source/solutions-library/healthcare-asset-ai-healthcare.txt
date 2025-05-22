@@ -151,7 +151,7 @@ architecture enables:
 - Support for both millisecond-response operational queries and complex    
   analytical workloads.
   
-.. figure:: /includes/images/industry-solutions/health2.svg  
+.. figure:: /includes/images/industry-solutions/ai-healthcare-fig2.svg 
    :figwidth: 1200px  
    :alt: Real-Time to Analytics Data Pipeline  
   
@@ -257,7 +257,7 @@ implemented in three key stages:
 
    - Enables intuitive access to patient information.
   
-.. figure:: /includes/images/industry-solutions/ai-healthcare-3.svg  
+.. figure:: /includes/images/industry-solutions/ai-healthcare-fig3.svg  
    :figwidth: 1200px  
    :alt: Vector Search Implementation Process Flow  
   
@@ -294,7 +294,7 @@ The chatbot implementation leverages `retrieval augmented generation
 
    - Integrates relevant medical literature and case studies.
   
-.. figure:: /includes/images/industry-solutions/health3.svg  
+.. figure:: /includes/images/industry-solutions/ai-healthcare-fig4.svg 
    :figwidth: 1200px  
    :alt: Blueprint for the Chatbot architecture  
   
@@ -312,7 +312,7 @@ additional tools. The operational dashboard (Figure 5) demonstrates
 key metrics including patient numbers, appointment status, and clinic    
 distribution.  
   
-.. figure:: /includes/images/industry-solutions/health4.svg  
+.. figure:: /includes/images/industry-solutions/ai-healthcare-fig5.svg  
    :figwidth: 1200px  
    :alt: Atlas Charts Dashboard  
   
@@ -328,7 +328,7 @@ visualization dashboard (Figure 6) showcases this integration,
 displaying patient distribution and enabling sophisticated analytical    
 capabilities.  
   
-.. figure:: /includes/images/industry-solutions/health5.svg  
+.. figure:: /includes/images/industry-solutions/ai-healthcare-fig6.svg  
    :figwidth: 1200px  
    :alt: PowerBI integration with MongoDB Atlas  
   
