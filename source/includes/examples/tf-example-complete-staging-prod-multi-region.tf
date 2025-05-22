@@ -3,7 +3,7 @@ terraform {
   required_providers {
     mongodbatlas = {
       source  = "mongodb/mongodbatlas",
-      version = "1.8.0"
+      version = "1.34.0"
     }
   }
 }
@@ -25,24 +25,15 @@ resource "mongodbatlas_advanced_cluster" "atlas-cluster" {
   project_id = mongodbatlas_project.atlas-project.id
   name = "ClusterPortalProd"
   cluster_type = "REPLICASET"
-  mongo_db_major_version = var.mongodb_version
+  mongo_db_major_version = 8.0
   replication_specs {
-    region_configs {
-      electable_specs {
-        instance_size = var.cluster_instance_size_name
-        node_count    = 3
-      }
-      priority      = 7
-      provider_name = var.cloud_provider
-      region_name   = var.atlas_region
-    }
     region_configs {
       electable_specs {
         instance_size = "M10"
         node_count    = 2
       }
       provider_name = "GCP"
-      priority      = 6
+      priority      = 7
       region_name   = "NORTH_AMERICA_NORTHEAST_1"
     }
     region_configs {
