@@ -58,7 +58,7 @@ kick-start their projects.
             MongoDB helps automotive companies manage fleets of
             connected vehicles, optimize route planning, and improve
             driver safety.
-
+         
          .. card::
             :headline: Automotive Diagnostics Using Atlas Vector Search
             :url: https://deploy-preview-204--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-automotive-diagnostics/
@@ -105,6 +105,16 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: Building an IoT Data Hub for Smart Manufacturing
+            :url: https://deploy-preview-195--docs-atlas-architecture.netlify.app/solutions-library/IoT-datahub-manufacturing/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Use streaming data from edge devices to power machine
+            learning models and smart applications by integrating
+            MongoDB Atlas with Microsoft Azure IoT.
+
+         .. card::
             :headline: Real-Time Audio-Based AI Diagnostics
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
             :icon: general_content_play
@@ -112,7 +122,7 @@ kick-start their projects.
 
             Find out how AI is being used in renewable energy by
             leveraging MongoDB Atlas Vector Search to drive efficiency
-            through real-time, audio diagnostics. 
+            through real-time, audio diagnostics.
       
       Modernization 
       -------------
