@@ -165,9 +165,7 @@ manual analysis, which is likely to bring in manual errors. `Microsoft
 Fabric Data Science
 <https://learn.microsoft.com/en-us/fabric/data-science/data-science-overview>`__
 presents a robust platform to train and experiment with ML Models and
-manage MLOps cycles. 
-
-Two models were trained and used to:  
+manage MLOps cycles. In this solution, we trained two models.  
   
 1. **BI-RADS prediction:**    
 
