@@ -159,7 +159,6 @@ the |service| database.
 
 AWS IAM Role Authentication
 ````````````````````````````
-
 You can also authenticate through |aws| |iam| roles. To learn more, 
 see :ref:`set-up-pwdless-auth`.
 
@@ -235,20 +234,9 @@ with {+service+} through the {+atlas-admin-api+}. We recommend that you use
 service accounts instead of |api| keys when possible because they provide added 
 security through short-lived access tokens and required credential rotations.
 
-You can manage service accounts only through the {+atlas-ui+} or
-the {+atlas-admin-api+}. Currently, you can't manage programmatic access for 
-service accounts through the {+atlas-cli+} or Terraform.
-
-To further enhance security and
-minimize the risk of unauthorized access:
-
-- Rotate service account secrets before they expire. To learn more, see :ref:`rotate-service-account-secrets`.
-
-- Use the IP access list for your service accounts. To learn more, see
-  :atlas:`Require an IP Access List for the {+atlas-admin-api+} </configure-api-access/#optional--require-an-ip-access-list-for-the-atlas-administration-api>`.
-
-- Assign the least privileged |service| role required for the service account's intended 
-  purpose to adhere to the principle of least privilege.
+You can manage programmatic access for service accounts only by using the 
+{+atlas-ui+} or the {+atlas-admin-api+}. You can't manage programmatic access 
+for service accounts through the {+atlas-cli+} or Terraform.
 
 To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-overview/>`.
 
@@ -260,19 +248,7 @@ API Keys
 Service accounts are the preferred method of authentication. {+service+}  
 provides legacy support for |api| key-based authentication for managing 
 programmatic access. |api| key-based authentication uses |http| Digest 
-authentication to protect requests.
-
-To further enhance security and
-minimize the risk of unauthorized access:
-
-- Follow best practices for rotating |api| keys regularly. To learn how to rotate 
-  these keys with {+vault+}, for example, 
-  see `the Hashicorp documentation <https://developer.hashicorp.com/vault/docs/secrets/mongodbatlas>`__.
-
-- Use the IP access list for your API keys. To learn more, see
-  :atlas:`Require an IP Access List for the {+atlas-admin-api+} </configure-api-access/#optional--require-an-ip-access-list-for-the-atlas-administration-api>`.
-
-To learn more, see :ref:`api-authentication`.
+authentication to protect requests. To learn more, see :ref:`api-authentication`.
 
 .. _arch-center-secrets:
 

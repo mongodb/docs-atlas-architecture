@@ -225,7 +225,6 @@ This allows administrators to maintain different project configurations between 
 and uphold the principle of least privilege, which states that users should 
 only be granted the least level of access necessary for their role.
 
-
 However, this hierarchy might make it more complicated to share project-level configurations such as private endpoints and |cmk|\s across clusters.
 
 To learn more, see :ref:`hierarchy-multiple-clusters`. 

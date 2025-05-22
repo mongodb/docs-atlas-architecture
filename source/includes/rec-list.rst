@@ -14,6 +14,7 @@ refer to the following resources:
   - :ref:`arch-center-authorization-recs`
   - :ref:`arch-center-data-encryption-recs`
   - :ref:`arch-center-auditing-logging-recs`
+
 - Reliability
 
   - :ref:`arch-center-ha-recs`

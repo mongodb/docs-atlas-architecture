@@ -73,7 +73,7 @@ Within these broad deployment strategies, there are additional configurations
 to meet your more specific needs. The following use cases outline specific 
 examples that might meet your own needs.
 
-.. _arch-center-multi-region-tier-1:
+.. _arch-center-multi-region-5+3:
 
 5-Node, 3-Region Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -196,8 +196,6 @@ any region is unavailable.
 .. figure:: /includes/images/multi-region-3+3.png
    :figwidth: 750px
    :alt: An image showing three types of multi-region deployments
-
-..  _arch-center-global-deployments:
 
 ..  _arch-center-global-deployments:
 

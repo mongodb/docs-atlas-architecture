@@ -59,6 +59,22 @@ Use the following resources to get started with |service| and the
 
       Use a checklist to help you prepare for a deployment.
 
+   .. card::
+      :headline: Migration
+      :url: https://mongodb.com/docs/atlas/architecture/migration/
+      :icon: mdb_live_migration
+      :icon-alt:  icon 
+
+      Select a method for migrating to |service|.
+
+   .. card::
+      :headline: Operational Readiness Checklist
+      :url: https://mongodb.com/docs/atlas/architecture/operational-readiness-checklist/
+      :icon: general_action_audit
+      :icon-alt:  icon
+
+      Use a checklist to help you prepare for a deployment.
+
 .. toctree::
    :titlesonly:
 

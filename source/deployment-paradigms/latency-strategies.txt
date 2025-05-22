@@ -42,7 +42,7 @@ Consider the following factors:
   depending on where your users are located. For example, if most of your users 
   are in Asia, your primary node should also be in a region in Asia. 
 
-- **Mirrored Reads-** Mirrored reads reduce the impact of primary elections 
+- **Mirrored Reads:** Mirrored reads reduce the impact of primary elections 
   following an outage by pre-warming the caches on the secondary nodes. 
 
 - **Read Preference:** By default, applications send read operations to the 
@@ -55,7 +55,7 @@ Consider the following factors:
      Keep in mind that there is the possibility of a secondary node returning 
      stale data due to replication lag.
 
-- **Data Distribution-** Distributing data across regions by using replica sets 
+- **Data Distribution:** Distributing data across regions by using replica sets 
   or sharded clusters is an effective approach when your data is geographically 
   oriented. For example, if you have data that is only read from the EU, and other 
   data that is only read in North America, you can create shards that distribute 
@@ -65,11 +65,11 @@ Network Configuration
 ---------------------
 You can further reduce latency using the following network connectivity options: 
 
- - **Private Endpoints:** 
-   :atlas:`Private endpoints </data-federation/admin/manage-private-endpoint/>` 
-   establish direct and secure connections between your application's virtual 
-   network and your |service| cluster, potentially reducing network hops and 
-   improving latency.
+- **Private Endpoints:** 
+  :atlas:`Private endpoints </data-federation/admin/manage-private-endpoint/>` 
+  establish direct and secure connections between your application's virtual 
+  network and your |service| cluster, potentially reducing network hops and 
+  improving latency.
 
 - **VPC Peering:** 
   Configure :atlas:`VPC peering </atlas-stream-processing/manage-vpc-peering-connections/>` 
