@@ -5,6 +5,5 @@ Manufacturing & Motion IoT
 .. toctree::
    :titlesonly:
 
+   Power Smart Meter Solution <solutions-library/smart-meter>
    Real-Time Audio Diagnostics <solutions-library/audio-based-AI-diagnostics>
-   Smart Meter Demo <solutions-library/smart-meter>
-

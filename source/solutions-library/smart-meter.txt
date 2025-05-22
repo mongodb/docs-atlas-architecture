@@ -62,8 +62,8 @@ Reference Architectures
 
 There are two main components of this solution:
 
-1. Smart meter data storage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Smart Meter Data Storage
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 To use smart metering, power utility companies need to deploy a core
 smart metering ecosystem that includes the smart meters themselves, the
@@ -93,8 +93,8 @@ Subsequently, MongoDB stores the smart meter data, which includes
 information such as meter ID, timestamp, and measurements (energy,
 current, voltage, etc.).
 
-2. Next generation meter data management system with MongoDB
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Next Generation Meter Data Management System with MongoDB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the smart meter data is stored in MongoDB Atlas, it can be analyzed
 for anomalies and insights. This solution leverages three key MongoDB
@@ -216,8 +216,9 @@ Key Solution Components
                - Create customized dashboards
                - Enable interactive data exploration
 
-For a complete, hands-on implementation, check out the detailed repository: 
-`Link to Repository <https://github.com/mongodb-industry-solutions/Leafy-Smart-Meters>`__
+For a complete, hands-on implementation, check out the detailed
+`repository
+<https://github.com/mongodb-industry-solutions/Leafy-Smart-Meters>`__
 
 Key Learnings
 -------------
