@@ -121,7 +121,7 @@ performance of time series data, and enable fast operations.
    :figwidth: 1200px
    :alt: End-to-end smart meter management system architecture
 
-   Figure 1: End-to-end smart meter management system architecture
+   Figure 1. End-to-end smart meter management system architecture
 
 Data Model Approach
 -------------------
