@@ -118,9 +118,9 @@ Storage, which are then processed through the various layers:
   
 .. figure:: /includes/images/industry-solutions/ai-healthcare-fig1.svg  
    :figwidth: 1200px  
-   :alt: Leafy Hospital Solution Architecture  
+   :alt: Leafy Hospital solution architecture  
   
-   Figure 1: Leafy Hospital Solution Architecture  
+   Figure 1. Leafy Hospital solution architecture  
   
 This architecture ensures a seamless flow of information from raw    
 medical data to actionable insights while maintaining security and    
@@ -155,7 +155,7 @@ architecture enables:
    :figwidth: 1200px  
    :alt: Real-Time to Analytics Data Pipeline  
   
-   Figure 2: Real-Time to Analytics Data Pipeline  
+   Figure 2: Real-time to analytics data pipeline  
         
 Predictive AI for Early Detection  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
