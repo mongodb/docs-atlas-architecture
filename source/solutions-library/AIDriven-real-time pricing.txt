@@ -1,7 +1,7 @@
 .. _arch-center-is-ai-driven-realtime-pricing:
 
 ======================================================
-AI-driven real-time pricing with MongoDB and Vertex AI
+AI-Driven Real-Time Pricing with MongoDB and Vertex AI
 ======================================================
 
 .. facet::
@@ -88,7 +88,7 @@ continuous operation and seamless updates.
    :figwidth: 1200px
    :alt: Dynamic pricing architecture integrating different Google Cloud components and MongoDB Atlas as a Feature Store
 
-   Figure 1: Dynamic pricing architecture integrating different Google Cloud components and MongoDB Atlas as a Feature Store
+   Figure 1. Dynamic pricing architecture integrating different Google Cloud components and MongoDB Atlas as a Feature Store
 
 
 Building the Solution
@@ -119,7 +119,7 @@ In the `GitHub repository <https://github.com/mongodb-industry-solutions/retail-
          - Authenticate with your Google Cloud account.
          - Set your project as the default.
         
-   .. step:: Develop the microservice and model
+   .. step:: Develop the Microservice and Model
 
       - Clone the `repository <http://github.com/mongodb-industry-solutions/retail-store.git>`__ and navigate to the dynamicPricing microservice directory.
       - Install required Python packages using pip.
@@ -131,15 +131,15 @@ In the `GitHub repository <https://github.com/mongodb-industry-solutions/retail-
       - Save and upload the trained model to Google Cloud Storage.
       - Register the model in Vertex AI for management and deployment.
 
-   .. step:: Deploy a model to an endpoint:
+   .. step:: Deploy a Model to an Endpoint:
 
-      - Deploy the model:
+      - Deploy the Model:
          - Access the Vertex AI section in Google Cloud console.
          - Locate and select the model you want to deploy.
          - Click on `"Deploy to endpoint" <https://cloud.google.com/vertex-ai/docs/general/deployment>`__ under the "Deploy & Test" tab.
          - Complete the deployment setup by configuring model settings and monitoring.
 
-      - Retrieve endpoint ID:
+      - Retrieve Endpoint ID:
          - Go to "Endpoints" in Vertex AI and note the Endpoint ID for use in Cloud Function configuration.
 
       - Configure Cloud Function:
@@ -149,15 +149,15 @@ In the `GitHub repository <https://github.com/mongodb-industry-solutions/retail-
            invoke the Vertex AI model for predictions, and update MongoDB
            with the results.
 
-      - Prepare dependencies:
+      - Prepare Dependencies:
          - Ensure the requirements.txt file includes all necessary libraries for the Cloud Function.
 
-      - Simulate customer events:
+      - Simulate Customer Events:
           - Use a provided script to generate synthetic customer behavior data.
           - Push this data to MongoDB and Pub/Sub to test the model and
             microservice integration.
 
-      - Run the simulation:
+      - Run the Simulation:
           - Execute the script to validate the complete end-to-end system.
   
 Advantage of MongoDB for modeling events:
@@ -176,7 +176,7 @@ complexity in data management.
    :figwidth: 1200px
    :alt: Data structure within the events collection representing a simulated user view of MongoDB white socks, including price information.
 
-   Figure 2: Data structure within the events collection representing a simulated user view of MongoDB white socks, including price information.
+   Figure 2. Data structure within the events collection representing a simulated user view of MongoDB white socks, including price information.
 
 For more-detailed instructions on how to build your own dynamic
 microservice, please refer to our blog post, `Building a Dynamic Pricing
@@ -217,16 +217,16 @@ Key Learnings
 Technologies and Products Used
 ------------------------------
 
-MongoDB modern, multi-cloud database platform:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 -  Atlas Collections
 -  Atlas Clusters 
 
 
-Partner technologies:
-~~~~~~~~~~~~~~~~~~~~~
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
 
 - `Google Cloud <https://cloud.google.com/>`__
 - `Vertex AI <https://cloud.google.com/vertex-ai>`__
@@ -239,5 +239,4 @@ Author
 - Sebastian Rojas Arbulu, MongoDB
 
    
-
 
