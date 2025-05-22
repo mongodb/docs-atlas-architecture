@@ -5,8 +5,4 @@ Manufacturing & Motion IoT
 .. toctree::
    :titlesonly:
 
-<<<<<<< HEAD
-   Audio-Based AI Diagnostics <solutions-library/audio-based-AI-diagnostics>
-=======
    Real-Time Audio Diagnostics <solutions-library/audio-based-AI-diagnostics>
->>>>>>> upstream/solutions-poc
