@@ -89,7 +89,7 @@ versatility of the document model allows teams to structure data in
 any way their application needs. The expressive API and indexing also
 allow teams to query data any way they want.
 
-.. figure:: /includes/images/industry-solutions/azure-smarthub-refarch-afterstate.svg
+.. figure:: /includes/images/industry-solutions/Azure Smart IoT Hub - Ref Arch After state.svg
    :figwidth: 1200px
    :alt: Reference Architecture With MongoDB
 
