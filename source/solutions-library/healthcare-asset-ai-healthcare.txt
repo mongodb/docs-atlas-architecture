@@ -47,7 +47,7 @@ demonstrates three key technological approaches:
 - **Predictive AI for early detection** using deep learning models to
   analyze mammograms and predict BI-RADS scores. 
 
-- **Generative AI for workflow automation,** featuring Vector Search  
+- **Generative AI for workflow automation**, featuring Vector Search  
   capabilities and RAG-based chatbots for intelligent information
   retrieval. 
 
@@ -190,7 +190,7 @@ Two models were trained and used to:
    version helps in the selection process of the final model. The images    
    for training are directly uploaded to the Lakehouse in OneLake from    
    the user's local machine using the UI itself. Additionally, the
-   images stored in Azure blob storage can be easily referenced in the    
+   images stored in Azure Blob Storage can be easily referenced in the    
    notebook downloading them from the blob URL using wget/curl,    
    referencing using `shortcuts
    <https://learn.microsoft.com/en-us/fabric/data-engineering/get-started-shortcuts>`__
@@ -304,13 +304,14 @@ Analytics and Visualization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~  
   
 The solution leverages two complementary visualization platforms for    
-comprehensive analytics: MongoDB Atlas Charts provides native, real-    
-time operational dashboards directly connected to MongoDB data. It    
-enables immediate insights into critical healthcare metrics through    
-intuitive visualizations without requiring data transformations or    
-additional tools. The operational dashboard (Figure 5) demonstrates    
-key metrics including patient numbers, appointment status, and clinic    
-distribution.  
+comprehensive analytics.
+
+First, MongoDB Atlas Charts provides native, real-time operational
+dashboards directly connected to MongoDB data. It enables immediate
+insights into critical healthcare metrics through intuitive
+visualizations without requiring data transformations or additional
+tools. The operational dashboard (Figure 5) demonstrates key metrics
+including patient numbers, appointment status, and clinic distribution.  
   
 .. figure:: /includes/images/industry-solutions/ai-healthcare-fig5.svg  
    :figwidth: 1200px  
@@ -318,15 +319,14 @@ distribution.
   
    Figure 5. Atlas Charts  
   
-Power BI integration extends the analytics capabilities by enabling    
-enterprise-wide data analysis and advanced visualizations. Through    
-the `MongoDB Atlas Connector
-<https://learn.microsoft.com/en-us/power-query/connectors/mongodb-atlas-sql-interface>`__
-, healthcare data can be combined with    
-other enterprise sources in Microsoft OneLake. The geographical    
-visualization dashboard (Figure 6) showcases this integration,    
-displaying patient distribution and enabling sophisticated analytical    
-capabilities.  
+Then, Power BI integration extends the analytics capabilities by
+enabling enterprise-wide data analysis and advanced visualizations.
+Through the `MongoDB Atlas Connector
+<https://learn.microsoft.com/en-us/power-query/connectors/mongodb-atlas-sql-interface>`__,
+healthcare data can be combined with other enterprise sources in
+Microsoft OneLake. The geographical visualization dashboard (Figure 6)
+showcases this integration, displaying patient distribution and enabling
+sophisticated analytical capabilities.  
   
 .. figure:: /includes/images/industry-solutions/ai-healthcare-fig6.svg  
    :figwidth: 1200px  
@@ -338,12 +338,13 @@ Together, these platforms provide a complete analytics solution that
 handles both immediate operational needs and long-term analytical    
 requirements.    
 
-The solution demonstrates how MongoDB Atlas serves as a unified    
-platform that handles operational data, Vector Search capabilities,    
-and analytics requirements while seamlessly integrating with    
-Microsoft's AI and visualization tools. This architecture enables    
-healthcare providers to leverage both real-time operational insights    
-and long-term analytical capabilities within a single, coherent system.    
+The solution demonstrates how MongoDB Atlas serves as a unified platform
+that handles operational data, Vector Search capabilities, and analytics
+requirements while seamlessly integrating with Microsoft's AI and
+visualization tools. This architecture enables healthcare providers to
+leverage both real-time operational insights and long-term analytical
+capabilities within a single, coherent system.    
+
 For a detailed, step-by-step guide on implementing this solution,    
 including code samples and specific configuration instructions, visit    
 our `GitHub repository <https://github.com/mongodb-partners/Leafy_Hospital_Microsoft_genAI_resources>`__  .  
@@ -351,28 +352,28 @@ our `GitHub repository <https://github.com/mongodb-partners/Leafy_Hospital_Micro
 Key Learnings  
 -------------  
   
-- **Unified data platform:** MongoDB Atlas serves as a central repository    
-  that effectively unifies operational data, metadata, and AI data,    
-  enabling seamless integration between different components of the    
+- **Unified data platform:** MongoDB Atlas serves as a central
+  repository that effectively unifies operational data, metadata, and AI
+  data, enabling seamless integration between different components of the
   healthcare system.    
 
-- **AI integration capabilities:** The architecture demonstrates how    
-  different types of AI (Predictive, Generative, and Analytics) can be    
-  effectively integrated into a single healthcare solution using    
+- **AI integration capabilities:** The architecture demonstrates how
+  different types of AI (Predictive, Generative, and Analytics) can be
+  effectively integrated into a single healthcare solution using
   Microsoft's AI services and MongoDB Atlas.    
 
-- **Workflow automation:** The solution shows how AI can automate    
-  critical healthcare workflows, from diagnostic predictions to report    
-  generation and intelligent querying through chatbots, reducing    
-  manual effort and potential errors.    
+- **Workflow automation:** The solution shows how AI can automate
+  critical healthcare workflows, from diagnostic predictions to report
+  generation and intelligent querying through chatbots, reducing manual
+  effort and potential errors.    
 
-- **Scalable analytics:** The combination of MongoDB Atlas with    
-  Microsoft Fabric and Power BI enables both real-time operational    
-  analytics and long-term trend analysis, providing comprehensive    
+- **Scalable analytics:** The combination of MongoDB Atlas with
+  Microsoft Fabric and Power BI enables both real-time operational
+  analytics and long-term trend analysis, providing comprehensive
   insights for healthcare decision-making.    
 
-- **Secure healthcare architecture:** The solution exemplifies how to    
-  build a modern healthcare system that maintains data security and    
+- **Secure healthcare architecture:** The solution exemplifies how to
+  build a modern healthcare system that maintains data security and
   privacy while enabling advanced AI capabilities and data analytics.  
   
 Technologies and Products Used  
