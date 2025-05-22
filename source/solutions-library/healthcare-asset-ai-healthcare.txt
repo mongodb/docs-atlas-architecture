@@ -116,7 +116,7 @@ Storage, which are then processed through the various layers:
 - Finally, Fabric Power BI and OneLake enable advanced analytics and  
   visualization.
   
-.. figure:: /includes/images/industry-solutions/health1.svg  
+.. figure:: /includes/images/industry-solutions/ai-healthcare-fig1.svg  
    :figwidth: 1200px  
    :alt: Leafy Hospital Solution Architecture  
   
