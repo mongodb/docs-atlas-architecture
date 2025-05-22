@@ -225,7 +225,7 @@ Building the Solution
 .. procedure::
    :style: normal
 
-   .. step:: **Include meaningful CSV data for your use case**
+   .. step:: **Include Meaningful CSV Data for Your Use Case**
 
       The data should be relevant to your use case and respect the
       following guidelines:
@@ -280,7 +280,7 @@ Building the Solution
          VIX within normal range (12-20),Maintain current asset allocation as market conditions are stable.
          Combination of rising interest rates and high VIX,Focus on bond assets to hedge against market volatility and borrowing cost impacts.
 
-   .. step:: **Set up MongoDB database and collections**
+   .. step:: **Set Up MongoDB Database and Collections**
 
       Log in to MongoDB Atlas and create a database named
       “agentic_<YOUR_USE_CASE>,” e.g. “agentic_macro_indicators”. Ensure
@@ -293,7 +293,7 @@ Building the Solution
       - Queries (for storing queries): You must import the queries from
         the queries.csv file created in Step 1.
 
-   .. step:: **Configure your agentic worklfow through a JSON config file**
+   .. step:: **Configure Your Agentic Worklfow through a JSON Config File**
 
       Go to the config folder and create or update the JSON config.json
       file. The file should contain the following structure:
