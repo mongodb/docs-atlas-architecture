@@ -5,10 +5,6 @@ Manufacturing & Motion IoT
 .. toctree::
    :titlesonly:
 
-<<<<<<< HEAD
-   Audio-Based AI Diagnostics <solutions-library/audio-based-AI-diagnostics>
-   Smart Meter Demo <solutions-library/smart-meter>
-   
-=======
    Real-Time Audio Diagnostics <solutions-library/audio-based-AI-diagnostics>
->>>>>>> upstream/solutions-poc
+   Smart Meter Demo <solutions-library/smart-meter>
+
