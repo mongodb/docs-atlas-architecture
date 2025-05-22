@@ -171,30 +171,28 @@ Two models were trained and used to:
   
 1. **BI-RADS prediction:**    
 
-   BI-RADS is an industry standard mechanism to    
-   describe mammogram findings and is classified in seven categories    
-   with a score of possibility of a malignant cancer increasing with the    
-   score value from 0 to 6. VGG16 is a deep convolutional neural    
-   network (CNN) model. It is trained on mammogram images from the    
-   `dataset
+   BI-RADS is an industry standard mechanism to describe mammogram
+   findings and is classified in seven categories with a score of
+   possibility of a malignant cancer increasing with the score value
+   from 0 to 6. VGG16 is a deep convolutional neural network (CNN)
+   model. It is trained on mammogram images from the `dataset
    <https://www.kaggle.com/datasets/asmaasaad/king-abdulaziz-university-mammogram-dataset>`__
-   on Kaggle, which were grouped in folders as per their BI-    
-   RADS. Image analysis needs deep neural network models and the    
-   best model needs to be selected based on training on actual    
-   datasets running into multiple epochs.  
+   on Kaggle, which were grouped in folders as per their BI-RADS. Image
+   analysis needs deep neural network models and the best model needs to
+   be selected based on training on actual datasets running into
+   multiple epochs.  
 
-   Fabric Data Science is used to train the models, run experiments,    
-   and manage the multiple versions. Multiple experiments were run    
-   with the two algorithms VGG16 and EfficientNetV2L, and the easy    
-   comparison of the multiple ML parameters and metrics for each    
-   version helps in the selection process of the final model. The images    
-   for training are directly uploaded to the Lakehouse in OneLake from    
-   the user's local machine using the UI itself. Additionally, the
-   images stored in Azure Blob Storage can be easily referenced in the    
-   notebook downloading them from the blob URL using wget/curl,    
-   referencing using `shortcuts
-   <https://learn.microsoft.com/en-us/fabric/data-engineering/get-started-shortcuts>`__
-   , or even using a `data pipeline
+   Fabric Data Science is used to train the models, run experiments, and
+   manage the multiple versions. Multiple experiments were run with the
+   two algorithms VGG16 and EfficientNetV2L, and the easy comparison of
+   the multiple ML parameters and metrics for each version helps in the
+   selection process of the final model. The images for training are
+   directly uploaded to the Lakehouse in OneLake from the user's local
+   machine using the UI itself. Additionally, the images stored in Azure
+   Blob Storage can be easily referenced in the notebook downloading
+   them from the blob URL using wget/curl, referencing using `shortcuts
+   <https://learn.microsoft.com/en-us/fabric/data-engineering/get-started-shortcuts>`__,
+   or even using a `data pipeline
    <https://learn.microsoft.com/en-us/fabric/data-engineering/tutorial-lakehouse-data-ingestion>`__.
    The image metadata and final prediction are stored in MongoDB Atlas.    
   
@@ -216,11 +214,10 @@ Two models were trained and used to:
    `MongoDB Spark Connector
    <https://www.mongodb.com/docs/spark-connector/current/>`__ .    
   
-Fabric Data Science makes the training and managing the end-to-    
-end ML lifecycle easy and intuitive. Fabric Data Science manages    
-the lifecycle by auto logging related parameters for each    
-experiment and model using the de-facto data science standards of    
-MLflow.  
+Fabric Data Science makes the training and managing the end-to-end ML
+lifecycle easy and intuitive. Fabric Data Science manages the lifecycle
+by auto logging related parameters for each experiment and model using
+the de-facto data science standards of MLflow.  
   
 Vector Search Implementation  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
@@ -345,9 +342,11 @@ visualization tools. This architecture enables healthcare providers to
 leverage both real-time operational insights and long-term analytical
 capabilities within a single, coherent system.    
 
-For a detailed, step-by-step guide on implementing this solution,    
-including code samples and specific configuration instructions, visit    
-our `GitHub repository <https://github.com/mongodb-partners/Leafy_Hospital_Microsoft_genAI_resources>`__  .  
+For a detailed, step-by-step guide on implementing this solution,
+including code samples and specific configuration instructions, visit
+our `GitHub repository
+<https://github.com/mongodb-partners/Leafy_Hospital_Microsoft_genAI_resources>`__
+.  
   
 Key Learnings  
 -------------  
