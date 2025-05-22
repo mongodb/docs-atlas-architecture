@@ -53,6 +53,7 @@ partner propose the following reference architecture:
 
 .. figure:: /includes/images/industry-solutions/leafy-bank-in-aws.svg
   :width: 750px
+  :height: 750px
   :alt: Reference architecture for AI-driven interactive banking proposal
    
 MongoDB is positioned as an operational data store (ODS) acting as a medium layer between
@@ -147,7 +148,7 @@ Key Learnings
 - AI-driven technologies like chatbots simplify customer interactions by providing
   instant, context-aware responses, allowing users to navigate banking operations
   independently without wading through complex terms and conditions.
-- By using `Atlas Vector Search
+- By `using Atlas Vector Search
   <https://www.mongodb.com/lp/cloud/atlas/try4?webxp579=true&utm_source=google&utm_campaign=search_gs_pl_evergreen_vector-search_product_prosp-brand_gic-null_ww-multi_ps-all_desktop_eng_lead&utm_term=atlas%20vector%20search&utm_medium=cpc_paid_search&utm_ad=p&utm_ad_campaign_id=21100816499&adgroup=162920454394&cq_cmp=21100816499&gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0csk-_Qoo_ueUqYt9NWSXxtFux2OIoLzNPCk8Kuty16s0vQA6R3ykwQEaAqEIEALw_wcB>`_
   and document chunking, MongoDB enables efficient querying of dense legal documents,
   ensuring customers receive accurate, context-rich answers.
