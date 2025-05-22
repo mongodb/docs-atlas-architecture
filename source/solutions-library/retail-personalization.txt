@@ -4,3 +4,5 @@ Retail Personalization
 
 .. toctree::
    :titlesonly:
+
+   Dynamic Pricing </solutions-library/retail-dynamic-pricing.txt>
