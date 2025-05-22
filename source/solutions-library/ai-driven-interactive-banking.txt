@@ -17,8 +17,6 @@ AI-Driven Interactive Banking
 - **Use cases**: `Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_, 
   `Personalization <https://www.mongodb.com/solutions/use-cases/personalization>`_
 - **Industries**: `Financial Services <https://www.mongodb.com/solutions/industries/financial-services>`_
-- **Products**: `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_, 
-  `Atlas <https://www.mongodb.com/products/platform/atlas-database>`_
 - **Partners**: `Amazon Bedrock <https://aws.amazon.com/bedrock>`_
 
 Solution Overview
@@ -54,8 +52,8 @@ and not easily usable within digital banking environments. To remedy this MongoD
 partner propose the following reference architecture:
 
 .. figure:: /includes/images/industry-solutions/leafy-bank-in-aws.svg
-   :figwidth: 750px
-   :alt: Reference architecture for AI-driven interactive banking proposal
+  :width: 750px
+  :alt: Reference architecture for AI-driven interactive banking proposal
    
 MongoDB is positioned as an operational data store (ODS) acting as a medium layer between
 the AI technologies and the application layer, which allows organizations to operate with
@@ -80,7 +78,7 @@ unstructured, and AI-driven data. With this foundation, businesses can efficient
 extend, and iterate their applications to seize emerging technological opportunities.
 
 .. figure:: /includes/images/industry-solutions/sol_lib_doc.svg
-   :figwidth: 1200px
+   :width: 750px
    :alt: View of chunk and embedding structure in MongoDB
 
 Building the Solution
@@ -114,11 +112,11 @@ process orchestrator, enabling more flexible and scalable custom enterprise AI s
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After we’ve stored both the chunks and their embeddings in MongoDB, we can begin
-leveraging `Atlas Vector Search
+leveraging `Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search#query>`_ for semantic
 querying.
 
-3. Building the Chatbot UI
+1. Building the Chatbot UI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The next step involves building an application—in our case, an interactive chatbot. This

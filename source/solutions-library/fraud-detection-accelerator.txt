@@ -148,7 +148,7 @@ Below you will find an overview of those steps taken:
    to which the |service-fullname| data needs to be exported.
 2. `Set up
    <https://www.mongodb.com/basics/clusters/mongodb-cluster-setup#:~:text=about%20storage%20capacity.-,Creating,-a%20MongoDB%20Cluster>`__
-   a |service-| Cluster.
+   a {+service+} Cluster.
 3. Set up {+atlas-app-services+}.
 4. Set up the `Amazon SageMaker
    <https://docs.aws.amazon.com/sagemaker/latest/dg/onboard-quick-start.html>`__ domain.

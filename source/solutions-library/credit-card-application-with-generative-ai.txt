@@ -1,6 +1,6 @@
-==========================================
+===========================================
 Credit Card Application with Generative AI 
-==========================================
+===========================================
 
 .. meta:: 
    :keywords: AI, Credit, |service|, Spark, Vector Search
@@ -59,7 +59,7 @@ are some of the challenges or limitations of traditional credit scoring models:
   and enhance their creditworthiness for future applications.
 
 Transforming Credit Scoring and Applications with |service|
----------------------------------------------------------
+------------------------------------------------------------
 
 An online application process generally aims to provide convenience and efficiency,
 allowing individuals to access tailored financial products while ensuring transparency and
@@ -268,7 +268,7 @@ top 15 most important features:
    :alt: Example of a rejection explanation.
 
 For more details on features used in this demo and the explanation of each feature used,
-please have a look at the source code provided via the `GitHub repository
+please have a look at the source code provided via the `credit score GitHub repository
 <https://github.com/mongodb-industry-solutions/Credit_score>`_.
 
 To demonstrate the difference between the ML versus traditional credit scoring approach,
