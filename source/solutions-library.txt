@@ -190,6 +190,26 @@ kick-start their projects.
             Discover how to combine Atlas Vector Search and large language
             models (LLMs) to streamline the claim adjustment process. 
 
+   .. tab:: Healthcare
+      :tabid: healthcare
+
+      Interoperability
+      ----------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: AI-Powered Healthcare with MongoDB & Microsoft
+            :url: https://deploy-preview-238--docs-atlas-architecture.netlify.app/solutions-library/healthcare-asset-ai-healthcare/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            MongoDB and Microsoft deliver AI-powered solutions for
+            breast cancer care, unifying data and enabling predictive
+            modeling, intelligent chatbots, and analytics.        
+
    .. tab:: Media
       :tabid: media
       
@@ -274,7 +294,6 @@ kick-start their projects.
             Enable real-time order tracking and management across all
             retail channels using MongoDB Atlas.
 
-
       Gen AI
       ------
 
@@ -342,21 +361,13 @@ kick-start their projects.
             Build a generative AI ops architecture with MongoDB and enable
             network introspection.
 
-.. .. tab:: Healthcare
-   .. :tabid: healthcare
-
-   .. Interoperability
-   .. ----------------
-
-
 .. toctree::
    :titlesonly:
 
    Financial Services </solutions-library/financial-services>
    Manufacturing & Motion </solutions-library/manufacturing>
+   Healthcare  <solutions-library/healthcare>
    Insurance </solutions-library/insurance>
    Media </solutions-library/media>
    Retail </solutions-library/retail>
    Telecommunications </solutions-library/telco>
-
-.. Healthcare  <solutions-library/healthcare>
