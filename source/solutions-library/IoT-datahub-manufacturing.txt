@@ -179,7 +179,7 @@ functions, and code can be found in this `solution repository <https://github.co
 .. procedure::
    :style: normal
 
-   .. step:: Train your ML model
+   .. step:: Train Your ML Model
 
       You can use MongoDB as a feature store to train ML models, and
       once models are trained, those binaries can be converted and
@@ -187,7 +187,7 @@ functions, and code can be found in this `solution repository <https://github.co
       `notebook <https://github.com/mongodb-partners/Azure-IIoT/blob/main/ml-model/fraud-detection.ipynb>`__ to train your ML model, and once your models are trained, use
       `this model <https://github.com/mongodb-partners/Azure-IIoT/blob/main/azure-functions/fault_prediction.py#L61>`__ to make predictions using Azure functions.
 
-   .. step:: Set up Azure IoT Hub
+   .. step:: Set Up Azure IoT Hub
 
       We use Azure IoT Hub to connect, monitor, provision, and configure
       IoT devices. `Use this link <https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal#create-an-iot-hub>`__ to set up IoT Hub in your Azure
