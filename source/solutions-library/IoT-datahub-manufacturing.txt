@@ -225,16 +225,16 @@ functions, and code can be found in this `solution repository <https://github.co
 Technologies and Products Used
 ------------------------------
 
-MongoDB modern, multi-cloud database platform:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 - `Time Series <https://www.mongodb.com/time-series>`__
 - `MongoDB Charts <https://www.mongodb.com/products/charts>`__
 - `MongoDB BI Connector <https://www.mongodb.com/products/bi-connector>`__
 
-Partner technologies:
-~~~~~~~~~~~~~~~~~~~~~
+Partner Technologies 
+~~~~~~~~~~~~~~~~~~~~
 
 - `Azure IoT Edge <https://learn.microsoft.com/en-us/azure/iot-edge/about-iot-edge?view=iotedge-1.4>`__
 - `Azure IoT Hub <https://azure.microsoft.com/en-us/products/iot-hub/>`__
