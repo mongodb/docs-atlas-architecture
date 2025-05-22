@@ -147,7 +147,7 @@ kick-start their projects.
          .. card::
             :headline: AI-Powered Healthcare with MongoDB & Microsoft
             :url: https://deploy-preview-238--docs-atlas-architecture.netlify.app/solutions-library/healthcare-asset-ai-healthcare/
-            :icon: mdb_search
+            :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
             MongoDB and Microsoft deliver AI-powered solutions for
