@@ -84,7 +84,7 @@ issues. Publishers and subscribers can independently continue processing
 their logic, ensuring a robust and flexible system that supports
 continuous operation and seamless updates.
 
-.. figure:: /includes/images/industry-solutions/Dynamic Pricing Fig1.avif
+.. figure:: /includes/images/industry-solutions/Dynamic Pricing 1.svg
    :figwidth: 1200px
    :alt: Dynamic pricing architecture integrating different Google Cloud components and MongoDB Atlas as a Feature Store
 
@@ -172,7 +172,7 @@ collection, facilitating integrated data analytics and real-time
 decision-making while potentially increasing storage costs and
 complexity in data management.
 
-.. figure:: /includes/images/industry-solutions/Dynamic Pricing Fig2.avif
+.. figure:: /includes/images/industry-solutions/Dynamic Pricing 2.svg
    :figwidth: 1200px
    :alt: Data structure within the events collection representing a simulated user view of MongoDB white socks, including price information.
 
