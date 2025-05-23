@@ -86,31 +86,35 @@ process**. Let’s delve into the details:
    which can be time-consuming. Here’s a brief overview of the process:
    
    - **Choosing a card**: First, you must select a credit card that suits your needs. This
-       involves researching various cards, comparing features, and understanding their
-       terms and conditions.
+     involves researching various cards, comparing features, and understanding their terms
+     and conditions.
+
    - **Eligibility check**: Next, you must verify if you meet the eligibility criteria set
-       by the bank. These criteria typically consider factors like your credit rating,
-       age, income, and liabilities.
+     by the bank. These criteria typically consider factors like your credit rating, age,
+     income, and liabilities.
+
    - **Document submission**: You’ll need to provide documents such as identity proof
-       (like Social Security ID, passport, and/or driver's license), address proof (rental
-       agreement, utility bills), and income proof (bank statements, salary slips, Form
-       16).
+     (like Social Security ID, passport, and/or driver's license), address proof (rental
+     agreement, utility bills), and income proof (bank statements, salary slips, Form 16).
+
    - **Application form**: Filling out the credit card application form can be cumbersome.
-       You can do this online via the bank’s website, net banking, or by visiting a
-       branch. Some banks even require physical documents, although digital processes are
-       becoming more common.
+     You can do this online via the bank’s website, net banking, or by visiting a branch.
+     Some banks even require physical documents, although digital processes are becoming
+     more common.
+
    - **Verification and references**: Banks verify the authenticity of your documents and
-       cross-check the information provided. This step also involves computing the
-       probability of delinquency using AI/ML algorithms.
+     cross-check the information provided. This step also involves computing the
+     probability of delinquency using AI/ML algorithms.
 
 2. **Redundant information collection**: Unfortunately, banks often collect “redundant”
-     data that they should already have. For instance:
+   data that they should already have. For instance:
    
-     - **KYC details**: Even though they have access to your KYC (Know Your Customer)
-       details, they still ask you to submit them repeatedly.
-     - **Income verification**: Despite having your salary details, banking history, utility
-       bills, rental payments, mobile payments, shopping expenditures, etc., from your bank
-       statements, they may request additional proof to verify the same.
+   - **KYC details**: Even though they have access to your KYC (Know Your Customer)
+     details, they still ask you to submit them repeatedly.
+
+   - **Income verification**: Despite having your salary details, banking history, utility
+     bills, rental payments, mobile payments, shopping expenditures, etc., from your bank
+     statements, they may request additional proof to verify the same.
 
 In summary, streamlining this process by eliminating redundant requests and leveraging
 existing data could significantly enhance the user experience.
