@@ -1,4 +1,8 @@
+==========
+Healthcare
+==========
+
 .. toctree::
    :titlesonly:
 
-.. Interoperability <solutions-library/healthcare-interoperability.txt>
+   Interoperability <solutions-library/healthcare-interoperability.txt>
