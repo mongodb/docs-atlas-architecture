@@ -1,6 +1,5 @@
 .. toctree::
    :titlesonly:
-   :hidden:
 
    AI-Powered Investment Portfolio </solutions-library/fin-services-agentic-portfolio.txt>
    RAG Applications <solutions-library/rag-applications>

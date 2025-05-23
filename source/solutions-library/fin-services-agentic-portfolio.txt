@@ -76,10 +76,10 @@ The solution is composed of three agents and two applications:
 - Data ingestion application
 - Market insight generation application 
 
-.. figure:: /includes/images/industry-solutions/fleet-management-architecture.svg
-   :alt: Reference architecture of the fleet management solution   
+.. figure:: /includes/images/industry-solutions/fin-services-high-level-arch.svg
+   :alt: Reference architecture of the agentic ai-powered investment portfolio manager 
 
-   Figure 2: High-level Architecture
+   Figure 1: High-level Architecture 
 
 As shown in the diagram, MongoDB serves as the backbone for storing the
 data ingestion application data. Market data (time-series), financial
@@ -161,10 +161,10 @@ Let’s now understand how the solution was built, the code is split into three 
 Part 1. Loaders Service
 ~~~~~~~~~~~~~~~~~~~~~~~  
 
-.. figure:: /includes/images/industry-solutions/fleet-management-diagram.svg
-   :alt: Sequence Diagram of AI Agent Workflow     
+.. figure:: /includes/images/industry-solutions/fin-services-Loaders-arch.svg
+   :alt: Loaders Service Architecture   
 
-   Figure 2: Sequence diagram of AI agent workflow  
+   Figure 2: Loaders Service Architecture 
 
 This part focuses on the data ingestion application, which handles the extraction of data from three sources:
 
@@ -222,10 +222,10 @@ Finally, all collections are stored into MongoDB Atlas.
 Part 2. Agents Service
 ~~~~~~~~~~~~~~~~~~~~~~  
 
-.. figure:: /includes/images/industry-solutions/fleet-management-diagram.svg
-   :alt: Sequence Diagram of AI Agent Workflow     
+.. figure:: /includes/images/industry-solutions/fin-services-agents-arch.svg
+   :alt: Agents Service Architecture   
 
-   Figure 3: Sequence diagram of AI agent workflow  
+   Figure 3: Agents Service Architecture  
 
 Once data is ingested and stored into the appropriate MongoDB collections, two scheduled agents analyze it to generate portfolio-specific insights.
 
@@ -266,10 +266,10 @@ Finally, all generated insights—market analysis and news sentiment reports—a
 Part 3. Market Assistant Agent Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 
-.. figure:: /includes/images/industry-solutions/fleet-management-diagram.svg
-   :alt: Sequence Diagram of AI Agent Workflow     
+.. figure:: /includes/images/industry-solutions/fin-services-reAct-chatbot-arch.svg
+   :alt: Market Assistant Agent Service Architecture   
 
-   Figure 4: Sequence diagram of AI agent workflow  
+   Figure 4: Market Assistant Agent Service Architecture  
 
 Once the data is ingested and embedded into MongoDB Atlas collections, the Market Assistant Agent uses the ReAct reasoning pattern, implemented through LangGraph, to autonomously interpret user queries, access relevant tools, and generate actionable financial insights.
 
@@ -308,10 +308,10 @@ The system uses the Voyage-finance-2 embedding model—optimized for financial t
 
 Both collections support semantic querying via MongoDB Atlas Vector Search, enabling high-relevance retrieval across market and news contexts.
 
-.. figure:: /includes/images/industry-solutions/fleet-management-diagram.svg
+.. figure:: /includes/images/industry-solutions/fin-services-demo-gif.svg
    :alt: Sequence Diagram of AI Agent Workflow     
 
-[demo-gif.svg]
+   Figure 5. Agentic AI Investment Portfolio Management Demo
 
 Visit our `GitHub repo: Leafy Bank UI <https://github.com/mongodb-industry-solutions/leafy-bank-ui>`__ and create this demo for yourself by following the instructions. (Note: Each part of the solution has its own repo, you’ll find them in the README as the “Capital Markets” services).
 
