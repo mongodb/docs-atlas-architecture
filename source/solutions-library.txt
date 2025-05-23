@@ -42,6 +42,23 @@ kick-start their projects.
    .. tab:: Manufacturing & Motion
       :tabid: manufacturing
 
+      App-Driven Analytics
+      --------------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Elevate Flight Operations with Real-Time Analytics
+            :url: https://deploy-preview-222--docs-atlas-architecture.netlify.app/solutions-library/realtime-flightmanagement/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Transform flight operations with powerful real-time
+            analytics. Cut costs, minimize delays, and boost efficiency
+            through intelligent data monitoring.
+
       Gen AI 
       ------
 
@@ -140,23 +157,6 @@ kick-start their projects.
             Find out how MongoDB helps manufacturers unify production
             data, optimize operations, and enable real-time insights in
             a Unified Namespace.
-
-      App-Driven Analytics
-      --------------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Elevate Flight Operations with Real-Time Analytics
-            :url: https://deploy-preview-222--docs-atlas-architecture.netlify.app/solutions-library/realtime-flightmanagement/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Transform flight operations with powerful real-time
-            analytics. Cut costs, minimize delays, and boost efficiency
-            through intelligent data monitoring.
 
    .. tab:: Healthcare
       :tabid: healthcare
