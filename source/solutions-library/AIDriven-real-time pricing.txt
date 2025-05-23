@@ -237,6 +237,3 @@ Author
 
 - Francesco Baldissera, MongoDB
 - Sebastian Rojas Arbulu, MongoDB
-
-   
-
