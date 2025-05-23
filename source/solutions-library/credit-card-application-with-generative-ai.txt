@@ -22,7 +22,7 @@ Solution Overview
 
 In this solution, you’ll learn how the convergence of alternative data, artificial
 intelligence, and `generative AI
-<https://www.mongodb.com/resources/basics/artificial-intelligence/generative-ai>`_. (gen
+<https://www.mongodb.com/resources/basics/artificial-intelligence/generative-ai>`_ (gen
 AI) is reshaping the foundations of credit scoring. The challenges of traditional models
 are being overcome through the adoption of alternative credit scoring methods by offering
 a more inclusive and nuanced assessment of creditworthiness. This solution provides an
