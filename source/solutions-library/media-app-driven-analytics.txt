@@ -1,2 +1,8 @@
+==========================
+Media App-Driven Analytics
+==========================
+
 .. toctree::
    :titlesonly:
+
+   Streamline Global Gaming Management <solutions-library/Streamline-global-gaming-management>
