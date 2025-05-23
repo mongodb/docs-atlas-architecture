@@ -5,5 +5,4 @@ Manufacturing & Motion App-Driven Analytics
 .. toctree::
    :titlesonly:
 
-   Elevate Flight Operations with Real-Time Analytics <solutions-library/realtime-flightmanagement>
-   
+   Elevate Flight Operations with Real-Time Analytics <solutions-library/testair>

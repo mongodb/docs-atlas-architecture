@@ -1,0 +1,18 @@
+.. _arch-center-real-time-flight-management:  
+  
+=================================================  
+Elevate Flight Operations with RealTime Analytics  
+=================================================  
+  
+.. facet::  
+   :name: genre  
+   :values: tutorial  
+  
+.. contents:: On this page  
+   :local:  
+   :backlinks: none  
+   :depth: 1  
+   :class: singlecol  
+  
+Transform flight operations with powerful real-time analytics.  
+...  
