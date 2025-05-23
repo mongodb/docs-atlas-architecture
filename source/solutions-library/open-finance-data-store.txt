@@ -126,7 +126,7 @@ approach:
 
   - **Structure**:
     
-    .. code-block:: jso
+    .. code-block:: json
         
         {
         "_id": { "$oid": "unique_id" }, "ProductId": "string", "ProductBank": "string",
