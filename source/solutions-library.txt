@@ -130,8 +130,8 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Learn how to create real-time analysis on IoT data during
-            and post operation in MongoDB Atlas.
+            Learn how to monitor a rocket launch using MongoDB Atlas and
+            real-time IoT data.
       
       Modernization 
       -------------

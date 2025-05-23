@@ -79,16 +79,16 @@ Other Applicable Industries and Use Cases
 Other industries that leverage IoT sensor data for both real-time and
 post-event analytics include:
 
-- Manufacturing: Oftentimes manufacturing machinery is loaded with IoT
+- **Manufacturing:** Oftentimes manufacturing machinery is loaded with IoT
   sensors that operate for hours at a time, similar to a rocket launch.
   It’s important that analysis can be done while the machinery is
   operating and post-operation.
 
-- Logistics: From the modes of transportation to the packages themselves,
+- **Logistics:** From the modes of transportation to the packages themselves,
   IoT sensors enable supply chain optimization both while in-transit and
   post-transit.
 
-- eCommerce: In addition to warehouses and shipping logistics, retailers
+- **eCommerce:** In addition to warehouses and shipping logistics, retailers
   use real-time insights to drive personalization or improve business
   processes.
 
