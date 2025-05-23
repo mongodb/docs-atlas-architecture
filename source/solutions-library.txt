@@ -30,6 +30,17 @@ kick-start their projects.
             continuously update, store, and search embeddings through a unified
             interface. 
 
+         .. card::
+            :headline: Optimizing RAG Applications with Fireworks.AI and MongoDB for Peak Performance
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Learn how MongoDB and Fireworks.AI optimize RAG
+            applications, enhancing latency, reducing TCO, and
+            accelerating AI with advanced data management and model
+            fine-tuning techniques.
+
       .. Fraud Prevention
       .. ----------------
 

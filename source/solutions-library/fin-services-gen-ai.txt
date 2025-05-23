@@ -3,3 +3,4 @@
    :hidden:
 
    RAG Applications <solutions-library/rag-applications>
+   MongoDB and Fireworks <solutions-library/fin-services-fireworks-rag.txt>
