@@ -46,6 +46,7 @@ optimization tools, this collaboration not only enhances latency and
 throughput but effectively minimizes operational costs.
 
 This article will address the following topics: 
+
 - Methods for leveraging MongoDB and Fireworks AI to enhance performance and reduce Total Cost of Ownership (TCO). 
 - Strategies for caching queries and responses that will later help optimize retrieval augmented generation(RAG)  when leveraging MongoDB Atlas alongside the Large Language Model (LLM). 
 - Techniques employed with Fireworks AI platform to fine-tune models, accelerate inference speeds, and decrease hardware requirements for LLMs. 
@@ -396,10 +397,12 @@ Achievements and Potential Outcomes
 ------------------------------------
 
 Fine-tuning LLMs for credit card recommendations has yielded impressive
-results: Applying the above fine-tuning steps to the LLM model in the
-context of of the alternative credit card product recommendation
-process, we observed a tremendous improvement in the response time of
-the process using the fine-tuned SLM:
+results: 
+
+Applying the above fine-tuning steps to the LLM model in the context of
+of the alternative credit card product recommendation process, we
+observed a tremendous improvement in the response time of the process
+using the fine-tuned SLM:
 
 1. **Response Time Improvement**: Originally, the response time with a
 large LLM would be around 5 seconds. By using an SLM, this can be
@@ -506,6 +509,7 @@ MongoDB:
 - Wei You Pan
 - Ashwin Gangadhar
 - Peyman Parsi
+- Andrea Alaman Calderon
 
 Fireworks AI:
 ~~~~~~~~~~~~~
