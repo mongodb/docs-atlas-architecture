@@ -231,7 +231,11 @@ Building the Solution
                  print(f"Error updating document: {e}")  
   
              finally:  
-                 client.close()  
+                 client.close()
+      
+      - Deploy Google Cloud’s Vertex AI for analytics, ensuring to
+        obtain a Google Maps API Key for enhanced geospatial analysis and
+        visualization.
   
    .. step:: `Install Your Demo Application to Run Locally <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
   
