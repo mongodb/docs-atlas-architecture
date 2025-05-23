@@ -52,7 +52,7 @@ offers a comprehensive approach to minimizing operational disruptions.
    :figwidth: 1200px  
    :alt: Components of an Event-Driven Architecture  
   
-   Figure 1: Components of an Event-Driven Architecture  
+   Figure 1. Components of an Event-Driven Architecture  
   
 The solution delivers:  
   
