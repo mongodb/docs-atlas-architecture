@@ -30,6 +30,18 @@ kick-start their projects.
             continuously update, store, and search embeddings through a unified
             interface. 
 
+         .. card::
+            :headline: Agentic AI-Powered Investment Portfolio Management
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Discover how MongoDB powers AI agent integration with Vector
+            Search, Time Series collections, Aggregation Pipeline, and
+            Charts for semantic analysis, real-time insights, and
+            adaptive decision-making to enhance portfolio management and
+            risk assessment.
+
       .. Fraud Prevention
       .. ----------------
 
