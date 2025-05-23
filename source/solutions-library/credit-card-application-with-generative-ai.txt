@@ -155,7 +155,7 @@ In essence, |service| provides a versatile and efficient platform for storing an
 Enhance Credit Scoring with AI
 ------------------------------
 
-Leveraging `MongoDB’s developer data platform
+Leveraging `Atlas, MongoDB’s developer data platform
 <https://www.mongodb.com/products/platform/atlas-database>`_ — an integrated suite of data
 services centered around a cloud database — we can create a comprehensive customer/user
 banking profile by combining relevant data points.
