@@ -180,10 +180,8 @@ The data pipeline for credit scoring a customer involves the following steps:
 
 3. **Risk profile generation**: From this unified view, risk profiles or product
    suggestions are generated. This involves using statistical methods to perform
-   descriptive analytics and also `artificial intelligence
-   <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_ (AI) or
-   `machine learning
-   <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_ (ML) techniques
+   descriptive analytics and also `artificial intelligence (AI) or machine learning (ML)
+   <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_ techniques
    to identify patterns in the data to perform propensity scoring for risk.
 
 4. **Model development**: Various machine learning algorithms can be used for credit
