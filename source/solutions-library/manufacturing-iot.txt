@@ -5,4 +5,5 @@ Manufacturing & Motion IoT
 .. toctree::
    :titlesonly:
 
+   Building an IoT Data Hub <solutions-library/IoT-datahub-manufacturing>
    Real-Time Audio Diagnostics <solutions-library/audio-based-AI-diagnostics>
