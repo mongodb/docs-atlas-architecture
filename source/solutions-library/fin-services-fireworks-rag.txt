@@ -20,10 +20,10 @@ Optimizing RAG Applications with Fireworks AI and MongoDB for Peak Performance
 
 Optimize AI with MongoDB & Fireworks AI: Faster inference, reduced costs, and efficient RAG applications.
 
-**Use cases:** `IoT <https://www.mongodb.com/use-cases/internet-of-things>`__,
-`App Driven Analytics <https://www.mongodb.com/collateral/application-driven-analytics>`__
+**Use cases:** `Gen AI
+<https://www.mongodb.com/use-cases/artificial-intelligence>`__, Model Performance Tuning
 
-**Industries:** `Finance
+**Industries:** `Financial Services
 <https://www.mongodb.com/industries/financial-services>`__
 
 **Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__
@@ -38,8 +38,8 @@ the battle. True success lies in striking the perfect balance between
 performance and Total Cost of Ownership (TCO). Enterprises are
 constantly challenged to optimize the price/performance ratio, ensuring
 that every gain in speed or efficiency translates into tangible cost
-benefits. Enter the strategic partnership of MongoDB and Fireworks AI --
-a formidable combination that empowers organizations to elevate
+benefits. Enter the strategic partnership of MongoDB and Fireworks AI—a
+formidable combination that empowers organizations to elevate
 performance while conserving resources. Seamlessly blending MongoDB's
 robust data management capabilities with Fireworks AI’s model
 optimization tools, this collaboration not only enhances latency and
@@ -60,7 +60,7 @@ metrics.
 
 
 The Power of MongoDB and Fireworks AI
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 MongoDB is renowned for its flexible schema, efficient indexing, and
 distributed architecture, allowing organizations to scale their data
@@ -94,8 +94,9 @@ The key benefits that can be achieved are:
 
 Let’s dive deeper into the FireOptimizer framework.
 
+
 FireOptimizer: Smarter Token Generation Through Adaptation
-----------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Large Language Models (LLMs) typically generate outputs one word (or token) at a time , which can make responses slower, especially for long outputs. To accelerate this process, a technique called speculative decoding is used. This involves a smaller, faster model—known as a **draft model**—that quickly generates several possible words or phrases in advance while the main LLM is still processing. The main LLM then evaluates these guesses and retains only the accurate ones. This technique is commonly referred to as **speculative execution or decoding**.
 
@@ -131,8 +132,11 @@ Fireworks AI’s optimizations extend beyond adaptive speculation. Three critica
 - Customizable Quantization: Balances 4-/8-bit precision with model quality, doubling speeds while retaining >99% accuracy for tasks like batch processing.
 - Disaggregated Serving: Tailors hardware allocation to workload type—host multiple lightweight model copies (e.g., 8 GPUs → 8 parallel instances) or shard large models (e.g., LLaMA 70B) across GPUs for complex tasks.
 
+Building the Solution
+----------------------
+
 Fine-Tuning Strategies for Smaller, Efficient Models : A Practical Credit Application demo with MongoDB
---------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Smaller, efficient models present unique opportunities for fine-tuning, allowing for specialized adaptation while maintaining resource efficiency. There has been constant research in this space as making finetuned or optimized LLM to various mediums such as cloud, on-device, dedicated hardware is becoming extremely competitive. 
 
@@ -188,7 +192,7 @@ can be found at the `MongoDB Credit Card Application Solution Library Page
 <https://www.mongodb.com/solutions/solutions-library/credit-card-application-with-generative-ai>`__
 
 Current Challenges
-~~~~~~~~~~~~~~~~~~
+```````````````````
 
 LLMs can cause slower response times due to the complex calculations
 they must perform over billions of parameters. For example, generating
@@ -198,7 +202,7 @@ or more seconds). Additionally, LLMs can be difficult and expensive to
 productionize and scale for millions of users.
 
 A Shift Towards Small Language Models (SLMs)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````````````````````````
 
 By leveraging Small Language Models (SLMs), enterprises can achieve
 significant gains in processing speed and cost-efficiency. SLMs require
@@ -207,7 +211,7 @@ resources, while providing faster responses and lowering operational
 costs.
 
 Parameter-Efficient Fine-Tuning and LoRA
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````````````````````````
 
 PEFT and its method, Low-Rank Adaptation (LoRA), significantly improve
 efficiency by optimizing only a subset of parameters. This approach
@@ -216,7 +220,7 @@ synergy with MongoDB enhances data handling and facilitates efficient
 model tuning processes.
 
 MongoDB's Unique Value
-~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````
 
 MongoDB is integral, providing seamless data management and real-time
 integration that improves operational efficiency. By storing trace data
@@ -226,7 +230,7 @@ doubles up as a caching layer to avoid unnecessarily invoking LLM on
 repeated requests for the same data.
 
 Step-by-Step guide for Fine-Tuning a Small Language Model with Fireworks AI 
------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A critical aspect of the Credit Card Application demo is explaining
 credit scores or credit ratings to the customer in clear, everyday
@@ -393,8 +397,11 @@ After deploying the model in the fireworks platform as a serverless API,
 the model id (models/ft-m88hxaga-pi11m) shown in Fig 2 can be used to
 invoke the LLM model using the LLM framework of your choice.
 
+Key Learnings
+-------------
+
 Achievements and Potential Outcomes
-------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Fine-tuning LLMs for credit card recommendations has yielded impressive
 results: 
@@ -471,7 +478,7 @@ deployment on standard CPUs or a single server, leading to a drastic
 reduction in hardware costs.
 
 Conclusion
------------
+~~~~~~~~~~
 
 The integration of MongoDB with Fireworks AI significantly enhances the
 efficiency and cost-effectiveness of training Large Language Models
