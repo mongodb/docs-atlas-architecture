@@ -5,5 +5,6 @@ Manufacturing & Motion IoT
 .. toctree::
    :titlesonly:
 
+   Building an IoT Data Hub <solutions-library/IoT-datahub-manufacturing>
    Power Smart Meter Solution <solutions-library/smart-meter>
    Real-Time Audio Diagnostics <solutions-library/audio-based-AI-diagnostics>
