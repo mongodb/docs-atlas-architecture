@@ -117,7 +117,7 @@ The analyzed data is stored in time series collections. These
 specialized collections provide high compression, enhance query
 performance of time series data, and enable fast operations.
 
-.. figure:: /includes/images/industry-solutions/smart-meter-architecture.svg
+.. figure:: /includes/images/industry-solutions/smart-meter-architecture-1.svg
    :figwidth: 1200px
    :alt: End-to-end smart meter management system architecture
 
