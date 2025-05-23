@@ -5,6 +5,6 @@ Retail Catalog
 .. toctree::
    :titlesonly:
 
-   As-you-type suggestions <solutions-library/retail-as-you-type-suggestions.txt> 
+   As-You-Type Suggestions <solutions-library/retail-as-you-type-suggestions.txt> 
    Building Inventory Management System <solutions-library/retail-asset-event-driven-inventory>
    Building Omnichannel Ordering Solution <solutions-library/retail-asset-omnichannel-ordering>
