@@ -123,13 +123,13 @@ authorized third-party data sources by the borrower. MongoDB’s flexible develo
 platform natively supports |json| data and does not require documents to have the same
 schema, improving the ability to handle various types of data.
 
-Leveraging |json| for online credit application forms simplifies the data capture process
-and also the performance in data processing. |json|'s structured data representation proves
+Leveraging JSON for online credit application forms simplifies the data capture process
+and also the performance in data processing. JSON's structured data representation proves
 highly conducive for organizing the multifaceted information within credit applications,
 encompassing personal, financial, and employment details. Its human-readable format
 facilitates collaboration among developers, supporting ease of editing and understanding
 of the data model, while interoperability across various platforms ensures seamless data
-exchange. The flexibility of |json| aligns perfectly with the dynamic nature of credit
+exchange. The flexibility of JSON aligns perfectly with the dynamic nature of credit
 application requirements, enabling straightforward modifications and additions.
 
 |service| stands out as an optimal choice for processing |json| documents in credit
