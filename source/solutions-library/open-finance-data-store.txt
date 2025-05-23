@@ -62,7 +62,6 @@ bank to offer personalized financial insights.
 
 .. figure:: /includes/images/industry-solutions/open-finance-architecture.svg
   :width: 750px
-  :height: 750px
   :alt: Open Finance architecture diagram
   
 
