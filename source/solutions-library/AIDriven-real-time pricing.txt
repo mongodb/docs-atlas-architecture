@@ -205,7 +205,7 @@ Key Learnings
   real-world applications. While this microservice simulates only 25
   customer events every three seconds, Pub/Sub is capable of processing
   much larger data streams.
-- **Real-time price updates:**`Cloud functions
+- **Real-time price updates:** `Cloud functions
   <https://cloud.google.com/functions?hl=en>`__ trigger `TensorFlow
   <https://www.youtube.com/watch?v=nykQEHp-fYg&t=7s>`__ models to
   generate dynamic prices based on customer behavior. These generated
