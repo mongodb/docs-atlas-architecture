@@ -476,25 +476,9 @@ efficiency and cost-effectiveness of training Large Language Models
 economically viable, ensuring future-proof AI investments. Key value
 propositions of this collaboration include:
 
-- **Reduced Total Cost of Ownership (TCO)**: Fireworks AI's LoRA and
-qLoRA techniques minimize computational resource needs by applying
-low-rank adaptation and quantization, which lowers costs associated with
-fine-tuning LLMs. MongoDB supports this with its distributed
-architecture, flexible schema, and efficient indexing to scale data
-infrastructure on-demand and minimize storage costs, thus reducing both
-capital and operational expenditures (CapEx and OpEx). - **Integrated
-Data and AI Workflows**: MongoDB facilitates real-time data integration,
-enabling instantaneous data availability for AI models, thereby
-enhancing operational efficiency. This integration with Fireworks AI's
-fine-tuning tools ensures a streamlined workflow that keeps AI models
-continuously updated and relevant, improving decision-making and
-delivering accurate insights. - **Robust Retrieval Augmented Generation
-(RAG) Solutions**: The seamless combination of MongoDB Atlas and
-Fireworks AI streamlines the creation of RAG frameworks, enhancing data
-storage and retrieval. MongoDB Atlas provides a scalable platform for
-embedding storage, while Fireworks AI offers managed LLM hosting and
-other features. Together, we enable scalable and intelligent systems
-that improve user experience with relevant information retrieval.
+- **Reduced Total Cost of Ownership (TCO)**: Fireworks AI's LoRA and qLoRA techniques minimize computational resource needs by applying low-rank adaptation and quantization, which lowers costs associated with fine-tuning LLMs. MongoDB supports this with its distributed architecture, flexible schema, and efficient indexing to scale data infrastructure on-demand and minimize storage costs, thus reducing both capital and operational expenditures (CapEx and OpEx). 
+- **Integrated Data and AI Workflows**: MongoDB facilitates real-time data integration, enabling instantaneous data availability for AI models, thereby enhancing operational efficiency. This integration with Fireworks AI's fine-tuning tools ensures a streamlined workflow that keeps AI models continuously updated and relevant, improving decision-making and delivering accurate insights. 
+- **Robust Retrieval Augmented Generation (RAG) Solutions**: The seamless combination of MongoDB Atlas and Fireworks AI streamlines the creation of RAG frameworks, enhancing data storage and retrieval. MongoDB Atlas provides a scalable platform for embedding storage, while Fireworks AI offers managed LLM hosting and other features. Together, we enable scalable and intelligent systems that improve user experience with relevant information retrieval.
 
 Organizations adopting this strategy can achieve accelerated AI
 performance, resource savings, and future-proof solutions—driving
