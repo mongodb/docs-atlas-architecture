@@ -137,27 +137,23 @@ Smaller, efficient models present unique opportunities for fine-tuning, allowing
 
 These fine tuning techniques can be categorized as follows:
 
-1. Additive Parameter-Efficient Fine-Tuning (PEFT): This category includes approaches that introduce additional trainable parameters to the existing pre-trained model without modifying its original weights.
+1. **Additive Parameter-Efficient Fine-Tuning (PEFT)**: This category includes approaches that introduce additional trainable parameters to the existing pre-trained model without modifying its original weights.
     
     - **Adapters**: These methods involve inserting small, trainable layers, known as adapter modules, between the layers of the pre-trained model. These adapters learn task-specific transformations, enabling adaptation to new tasks without altering the pre-trained parameters.
     - **Soft Prompts**: These are trainable vector embeddings appended to the input sequence. They serve as guidance cues, influencing the model’s behavior towards the desired task.
     - **Prefix Tuning**: This technique involves adding a trainable prefix to the input sequence. This prefix learns task-specific information without requiring modifications to the core model architecture.
 
-2. Reparametrization PEFT: This approach involves reparameterizing existing model weights using low-rank approximations to reduce the number of trainable parameters.
+2. **Reparametrization PEFT**: This approach involves reparameterizing existing model weights using low-rank approximations to reduce the number of trainable parameters.
 
     - **Low-Rank Adaptation (LoRA)**: LoRA approximates weight updates in the attention layers of a pre-trained model using low-rank matrices. This significantly decreases the number of trainable parameters.
     - **Quantized LoRA (QLoRA)**: QLoRA enhances LoRA by incorporating quantization techniques, further reducing memory usage and computational costs.
 
-3. Selective Fine-Tuning
-
-    This category focuses on selectively fine-tuning specific parameters of the pre-trained model, resulting in greater computational efficiency.
+3. **Selective Fine-Tuning**: This category focuses on selectively fine-tuning specific parameters of the pre-trained model, resulting in greater computational efficiency.
 
     - **BitFit**: This method fine-tunes only the bias terms, or other specific parameters, of the pre-trained model, improving computational efficiency.
     - **DiffPruning**: This technique identifies and removes parameters that contribute minimally to the model's performance, thereby reducing the number of trainable parameters.
 
-4. Layer Freezing Strategies
-
-    These strategies involve strategically freezing certain layers of the pre-trained model while fine-tuning others, optimizing the adaptation process.
+4. **Layer Freezing Strategies**: These strategies involve strategically freezing certain layers of the pre-trained model while fine-tuning others, optimizing the adaptation process.
 
     - **Freeze and Reconfigure (FAR)**: FAR involves freezing specific layers of the pre-trained model and fine-tuning the remaining layers to optimize model adaptation.
     - **FishMask**: This technique employs a mask to selectively freeze or fine-tune layers, optimizing adaptation for specific tasks.
@@ -190,7 +186,8 @@ summarization tasks. Details of the application design and source code
 can be found at the `MongoDB Credit Card Application Solution Library Page
 <https://www.mongodb.com/solutions/solutions-library/credit-card-application-with-generative-ai>`__
 
-**Current Challenges**
+Current Challenges
+~~~~~~~~~~~~~~~~~~
 
 LLMs can cause slower response times due to the complex calculations
 they must perform over billions of parameters. For example, generating
@@ -199,7 +196,8 @@ in a total response time of 10 to 20 seconds (with each query taking 5
 or more seconds). Additionally, LLMs can be difficult and expensive to
 productionize and scale for millions of users.
 
-**A Shift Towards Small Language Models (SLMs)**
+A Shift Towards Small Language Models (SLMs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By leveraging Small Language Models (SLMs), enterprises can achieve
 significant gains in processing speed and cost-efficiency. SLMs require
@@ -207,7 +205,8 @@ less computational power, making them ideal for devices with limited
 resources, while providing faster responses and lowering operational
 costs.
 
-**Parameter-Efficient Fine-Tuning and LoRA**
+Parameter-Efficient Fine-Tuning and LoRA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 PEFT and its method, Low-Rank Adaptation (LoRA), significantly improve
 efficiency by optimizing only a subset of parameters. This approach
@@ -215,7 +214,8 @@ reduces memory requirements and cuts down on operational costs. The
 synergy with MongoDB enhances data handling and facilitates efficient
 model tuning processes.
 
-**MongoDB's Unique Value**
+MongoDB's Unique Value
+~~~~~~~~~~~~~~~~~~~~~~~
 
 MongoDB is integral, providing seamless data management and real-time
 integration that improves operational efficiency. By storing trace data
@@ -436,7 +436,7 @@ reduced to approximately 19x reduction in latency.
 
 .. list-table:: Model Inference Times
    :header-rows: 1
-   :widths: 40 15 15 15 15
+   :widths: 28 18 18 18 18
 
    * - Model
      - Inference Time 1 (s)
