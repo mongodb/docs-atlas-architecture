@@ -48,9 +48,7 @@ analysis with generative AI models, it offers an intuitive, end-to-end
 experience through an AI-powered Portfolio Assistant—transforming how
 portfolio managers explore insights and take action.
 
-Powered by large language models (LLMs), retrieval-augmented generation
-(RAG), and MongoDB Atlas—including Vector Search, Time Series
-collections, and Atlas Charts—this solution empowers AI agents to:
+Powered by large language models (LLMs), retrieval-augmented generation (RAG), and MongoDB Atlas, including Vector Search, Time Series collections, and Atlas Charts—this solution empowers AI agents to:
 
 - Analyze vast financial datasets from multiple sources, and process it into meaningful analytics—like macroeconomic correlations, moving averages, and portfolio-level metrics. 
 - Provide dynamic insights and recommendations based on portfolio performance.
@@ -325,17 +323,17 @@ Technologies and Products Used
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__,
-- `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__,
-- `Atlas Charts <https://www.mongodb.com/docs/charts/>`__,
-- `Time Series collections <https://www.mongodb.com/docs/php-library/current/databases-collections/time-series/>`__,
-- `MongoDB Checkpointer <https://www.mongodb.com/docs/atlas/atlas-vector-search/ai-integrations/langgraph/#mongodb-checkpointer>`,__
+- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+- `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__
+- `Atlas Charts <https://www.mongodb.com/docs/charts/>`__
+- `Time Series collections <https://www.mongodb.com/docs/php-library/current/databases-collections/time-series/>`__
+- `MongoDB Checkpointer <https://www.mongodb.com/docs/atlas/atlas-vector-search/ai-integrations/langgraph/#mongodb-checkpointer>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
-- `Voyage AI <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai?tck=pencil_banner>`__,
-- `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__,
+- `Voyage AI <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai?tck=pencil_banner>`__
+- `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
 - `LangChain <https://cloud.mongodb.com/ecosystem/langchain>`__
 
 Author

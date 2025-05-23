@@ -21,18 +21,8 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Building Continuously Updating RAG Applications
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Use native stream processing and vector search in MongoDB Atlas to
-            continuously update, store, and search embeddings through a unified
-            interface. 
-
-         .. card::
             :headline: Agentic AI-Powered Investment Portfolio Management
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
+            :url: https://deploy-preview-239--docs-atlas-architecture.netlify.app/solutions-library/fin-services-agentic-portfolio/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -41,6 +31,16 @@ kick-start their projects.
             Charts for semantic analysis, real-time insights, and
             adaptive decision-making to enhance portfolio management and
             risk assessment.
+
+         .. card::
+            :headline: Building Continuously Updating RAG Applications
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Use native stream processing and vector search in MongoDB Atlas to
+            continuously update, store, and search embeddings through a unified
+            interface. 
 
       .. Fraud Prevention
       .. ----------------
