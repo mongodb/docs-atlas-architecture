@@ -54,7 +54,7 @@ offers a comprehensive approach to minimizing operational disruptions.
    :figwidth: 1200px  
    :alt: Components of an Event-Driven Architecture
 
-Figure 1: Components of an Event-Driven Architecture  
+   Figure 1: Components of an Event-Driven Architecture  
 
 The solution delivers:
 
@@ -81,19 +81,19 @@ event-driven architecture that consists of several key components:
 .. procedure::
    :style: normal
 
-   .. step:: **Data generation and processing:**
+   .. step:: **Data Generation and Processing:**
 
                - FastAPI microservice housing Real-Time Data Simulator and Path Finder
                - PubSub topics handling both static and real-time data streams
                - Cloud Functions for processing application and telemetry data
 
-   .. step:: **Analytics and cost management:**
+   .. step:: **Analytics and Cost Management:**
 
                - Vertex AI Cost Calculator for financial impact analysis
                - Analytical data creator Cloud Function for data transformation
                - Aggregation pipeline for complex data processing
 
-   .. step:: **Database structure:**
+   .. step:: **Database Structure:**
 
                - MongoDB database as the central data store
                - Specialized collections:
@@ -105,7 +105,7 @@ event-driven architecture that consists of several key components:
                       <https://www.mongodb.com/docs/manual/core/timeseries-collections/>`__ )
                   - **flights** collection for comprehensive general flight information management
 
-   .. step:: **Integration components:**
+   .. step:: **Integration Components:**
 
                - Change Streams for real-time data changes
                - Google Maps API for visualizing geographical data
@@ -121,7 +121,7 @@ event-driven architecture that consists of several key components:
    :figwidth: 1200px  
    :alt: Event-Driven Architecture 
 
-Figure 2: Event-Driven Architecture
+   Figure 2. Event-Driven Architecture
 
 The solution specifically addresses delay management by providing
 real-time monitoring, predictive insights, and resource optimization
@@ -141,7 +141,7 @@ Building the Solution
 .. procedure::  
    :style: normal  
   
-   .. step:: `Set up MongoDB
+   .. step:: `Set Up MongoDB
              <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
                - Store flight data in flexible schema
                - Support for real-time updates
@@ -151,7 +151,7 @@ Building the Solution
                  configuration and integration steps 
                - Example model 
 
-   .. step:: Configure `GCP services <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
+   .. step:: Configure `GCP Services <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
                - Deploy application as a containerized service using Google Cloud’s Cloud Run
                - Configure Google Cloud’s Cloud Build for automated deployments
                - Set up Google Cloud’s Cloud Storage for assets
@@ -234,16 +234,16 @@ Building the Solution
                        print(f"Error updating document: {e}")    
     
                        finally:    
-                       client.close()  
+                       client.close()
 
-   .. step:: `Install your demo application to run locally
+   .. step:: `Install Your Demo Application to Run Locally
              <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
                - Clone the repository and install dependencies
                - Configure environment variables
                - Set up MongoDB connection
                - Run development server 
 
-   .. step:: `(Optional) Deploy the solution
+   .. step:: `(Optional) Deploy the Solution
              <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#deployment>`__  
                - Containerize application using Docker
                - Deploy to Google Cloud’s Cloud Run for automatic scaling
@@ -256,13 +256,13 @@ Building the Solution
    :figwidth: 1200px  
    :alt: Flight management dashboard with filters
 
-Figure 3: Flight management dashboard with filters
+   Figure 3. Flight management dashboard with filters
 
 .. figure:: /includes/images/industry-solutions/Airline Fig2.svg
    :figwidth: 1200px  
    :alt: Flight route and cost monitoring 
 
-Figure 4: Flight route and cost monitoring
+   Figure 4. Flight route and cost monitoring
 
 This solution provides a scalable, event-driven architecture that
 enables airlines to manage flight operations efficiently while
@@ -300,16 +300,16 @@ Key Learnings
 Technologies and Products Used  
 ------------------------------  
   
-MongoDB modern, multi-cloud database platform:  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+MongoDB Developer Data Platform  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__  
 - `Time Series Collections <https://www.mongodb.com/products/capabilities/time-series>`__  
 - `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__  
 - `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__   
   
-Partner technologies:  
-~~~~~~~~~~~~~~~~~~~~~  
+Partner Technologies  
+~~~~~~~~~~~~~~~~~~~~  
   
 - `Google Cloud Platform <https://cloud.google.com/>`__  
 - `PubSub <https://cloud.google.com/pubsub>`__  
