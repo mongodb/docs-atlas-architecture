@@ -18,7 +18,7 @@ Learn how to build a smart investment portfolio with agentic AI, MongoDB Atlas, 
 
 **Use cases:** `Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`__, 
 
-**Industries:** `Finance <https://www.mongodb.com/solutions/industries/manufacturing>`__
+**Industries:** `Financial Services <https://www.mongodb.com/solutions/industries/manufacturing>`__
 
 **Products and tools:** `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__,
 `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__,
@@ -74,7 +74,7 @@ The solution is composed of three agents and two applications:
 .. figure:: /includes/images/industry-solutions/fin-services-high-level-arch.svg
    :alt: Reference architecture of the agentic ai-powered investment portfolio manager 
 
-   Figure 1: High-level Architecture 
+   Figure 1. High-level Architecture 
 
 As shown in the diagram, MongoDB serves as the backbone for storing the
 data ingestion application data. Market data (time-series), financial
@@ -102,7 +102,7 @@ Part 1. Loaders Service
 .. figure:: /includes/images/industry-solutions/fin-services-Loaders-arch.svg
    :alt: Loaders Service Architecture   
 
-   Figure 2: Loaders Service Architecture 
+   Figure 2. Loaders Service Architecture 
 
 This part focuses on the data ingestion application, which handles the extraction of data from three sources:
 
@@ -163,7 +163,7 @@ Part 2. Agents Service
 .. figure:: /includes/images/industry-solutions/fin-services-agents-arch.svg
    :alt: Agents Service Architecture   
 
-   Figure 3: Agents Service Architecture  
+   Figure 3. Agents Service Architecture  
 
 Once data is ingested and stored into the appropriate MongoDB collections, two scheduled agents analyze it to generate portfolio-specific insights.
 
@@ -207,7 +207,7 @@ Part 3. Market Assistant Agent Service
 .. figure:: /includes/images/industry-solutions/fin-services-reAct-chatbot-arch.svg
    :alt: Market Assistant Agent Service Architecture   
 
-   Figure 4: Market Assistant Agent Service Architecture  
+   Figure 4. Market Assistant Agent Service Architecture  
 
 Once the data is ingested and embedded into MongoDB Atlas collections, the Market Assistant Agent uses the ReAct reasoning pattern, implemented through LangGraph, to autonomously interpret user queries, access relevant tools, and generate actionable financial insights.
 
@@ -336,8 +336,8 @@ Partner Technologies
 - `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__
 - `LangChain <https://cloud.mongodb.com/ecosystem/langchain>`__
 
-Author
-------
+Authors
+-------
 
 - Peyman Parsi
 - Ainhoa Múgica
