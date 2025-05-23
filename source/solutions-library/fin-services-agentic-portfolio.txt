@@ -24,7 +24,7 @@ Learn how to build a smart investment portfolio with agentic AI, MongoDB Atlas, 
 `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__,
 `Atlas Charts <https://www.mongodb.com/docs/charts/>`__,
 `Time Series collections <https://www.mongodb.com/docs/php-library/current/databases-collections/time-series/>`__,
-`MongoDB Checkpointer <https://www.mongodb.com/docs/atlas/atlas-vector-search/ai-integrations/langgraph/#mongodb-checkpointer>`,__
+`MongoDB Checkpointer <https://www.mongodb.com/docs/atlas/atlas-vector-search/ai-integrations/langgraph/#mongodb-checkpointer>`__
 
 **Partners:** `Voyage AI <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai?tck=pencil_banner>`__,
 `Amazon Bedrock <https://cloud.mongodb.com/ecosystem/amazon-bedrock>`__,
@@ -52,11 +52,8 @@ Powered by large language models (LLMs), retrieval-augmented generation
 (RAG), and MongoDB Atlas—including Vector Search, Time Series
 collections, and Atlas Charts—this solution empowers AI agents to:
 
-- Analyze vast financial datasets from multiple sources, and process it
-into meaningful analytics—like macroeconomic correlations, moving
-averages, and portfolio-level metrics. 
-- Provide dynamic insights and
-recommendations based on portfolio performance.
+- Analyze vast financial datasets from multiple sources, and process it into meaningful analytics—like macroeconomic correlations, moving averages, and portfolio-level metrics. 
+- Provide dynamic insights and recommendations based on portfolio performance.
 
 This advanced approach enhances decision-making, improves risk
 management, and enables more accurate performance and impact
@@ -95,63 +92,6 @@ insights and recommendations for capital markets using a LangGraph ReAct
 agent, leveraging MongoDB Atlas for data storage, vector search, and
 agent state management.
 
-  
-Why MongoDB
-------------
-  
-**A Modern Data Foundation for AI-Driven Financial Applications**
-
-MongoDB is a unified, high-performance data platform built for the
-complexity of financial services. It replaces fragmented point solutions
-with a single system capable of handling structured, time series,
-unstructured, and vectorized data—making it ideal for powering
-intelligent, adaptive applications in capital markets, wealth
-management, and beyond.
-
-**Schema Flexibility and Document Model** 
-
-MongoDB’s JSON-like BSON model aligns naturally with agent state and
-object-oriented design, simplifying data modeling for accounts,
-portfolios, transactions, and AI metadata. Developers can:
-
-- Evolve data models without disruptive migrations thanks to dynamic schemas. 
-- Store related data together (e.g., user profiles and trade history) for faster, more efficient queries. 
-- Handle diverse data types—from primitives to arrays and embedded documents—in a unified structure.
-
-**Time Series Collections for Market Data** 
-Purpose-built Time Series collections ingest and analyze large volumes
-of market data efficiently. Features include:
-
-- High-throughput ingestion for equities, bonds, and commodities.
-- Automatic compression, indexing, and data expiration for performance and cost control. 
-- Native support for windowed analytics like moving averages and volatility tracking.
-
-**Atlas Vector Search for Semantic Understanding** 
-MongoDB Atlas Vector Search enables semantic understanding across
-financial content using vector embeddings. This solution leverages
-Voyage-Finance-2, a finance-specific model it powers:
-
-- Context-aware retrieval of financial news using interactive prompts and similarity-based matching. 
-- Semantic similarity search enhanced with metadata filtering for more precise results.
-
-**MongoDB Checkpointer for Agent Memory** 
-The Checkpointer pattern allows AI agents to persist their internal state across interactions, supporting:
-
-- Context retention and long-term reasoning. 
-- Full visibility into past AI decisions, supporting easy audits and regulatory compliance.
-
-**Aggregation Pipelines and Atlas Charts for Insight Generation** 
-MongoDB’s aggregation framework delivers real-time insights, from trend
-analysis to macroeconomic correlations. Combined with Atlas Charts,
-teams can build dynamic dashboards that surface:
-
-- AI-driven portfolio signals. 
-- Market anomalies. 
-- Real-time performance indicators.
-
-Together, these capabilities make MongoDB a robust, future-ready data
-layer for AI-driven financial solutions—delivering the flexibility,
-scalability, and intelligence modern finance demands.
   
 Building the Solution  
 ---------------------  
@@ -248,13 +188,13 @@ Agent Tools
 
 Each agent uses a tailored set of tools to retrieve, analyze, and synthesize insights:
 
-``check_portfolio_allocation_tool``: Retrieves the current asset allocation from MongoDB.
-``calculate_asset_trends_tool``: Compares current prices vs. 50-day moving averages to detect trends.
-``assess_macro_indicators_tool``: Fetches and interprets FRED economic data (e.g., GDP, rates, unemployment).
-``assess_vix_tool``: Analyzes market volatility using VIX data.
-``generate_overall_diagnosis_tool``: Synthesizes all inputs and delivers LLM-based recommendations.
-``fetch_market_news_tool``: Uses vector search to find semantically relevant financial news.
-``generate_news_summaries_tool``: Applies sentiment analysis and summarization with an LLM.
+- ``check_portfolio_allocation_tool``: Retrieves the current asset allocation from MongoDB.
+- ``calculate_asset_trends_tool``: Compares current prices vs. 50-day moving averages to detect trends.
+- ``assess_macro_indicators_tool``: Fetches and interprets FRED economic data (e.g., GDP, rates, unemployment).
+- ``assess_vix_tool``: Analyzes market volatility using VIX data.
+- ``generate_overall_diagnosis_tool``: Synthesizes all inputs and delivers LLM-based recommendations.
+- ``fetch_market_news_tool``: Uses vector search to find semantically relevant financial news.
+- ``generate_news_summaries_tool``: Applies sentiment analysis and summarization with an LLM.
 
 Each tool includes a natural-language docstring, which guides the agent in understanding when and how to use the tool by describing its purpose, expected input, and output behavior.
 
@@ -308,13 +248,68 @@ The system uses the Voyage-finance-2 embedding model—optimized for financial t
 
 Both collections support semantic querying via MongoDB Atlas Vector Search, enabling high-relevance retrieval across market and news contexts.
 
-.. figure:: /includes/images/industry-solutions/fin-services-demo-gif.svg
-   :alt: Sequence Diagram of AI Agent Workflow     
-
-   Figure 5. Agentic AI Investment Portfolio Management Demo
-
 Visit our `GitHub repo: Leafy Bank UI <https://github.com/mongodb-industry-solutions/leafy-bank-ui>`__ and create this demo for yourself by following the instructions. (Note: Each part of the solution has its own repo, you’ll find them in the README as the “Capital Markets” services).
 
+Why MongoDB
+------------
+  
+**A Modern Data Foundation for AI-Driven Financial Applications**
+
+MongoDB is a unified, high-performance data platform built for the
+complexity of financial services. It replaces fragmented point solutions
+with a single system capable of handling structured, time series,
+unstructured, and vectorized data—making it ideal for powering
+intelligent, adaptive applications in capital markets, wealth
+management, and beyond.
+
+**Schema Flexibility and Document Model** 
+
+MongoDB’s JSON-like BSON model aligns naturally with agent state and
+object-oriented design, simplifying data modeling for accounts,
+portfolios, transactions, and AI metadata. Developers can:
+
+- Evolve data models without disruptive migrations thanks to dynamic schemas. 
+- Store related data together (e.g., user profiles and trade history) for faster, more efficient queries. 
+- Handle diverse data types—from primitives to arrays and embedded documents—in a unified structure.
+
+**Time Series Collections for Market Data** 
+
+Purpose-built Time Series collections ingest and analyze large volumes
+of market data efficiently. Features include:
+
+- High-throughput ingestion for equities, bonds, and commodities.
+- Automatic compression, indexing, and data expiration for performance and cost control. 
+- Native support for windowed analytics like moving averages and volatility tracking.
+
+**Atlas Vector Search for Semantic Understanding** 
+
+MongoDB Atlas Vector Search enables semantic understanding across
+financial content using vector embeddings. This solution leverages
+Voyage-Finance-2, a finance-specific model it powers:
+
+- Context-aware retrieval of financial news using interactive prompts and similarity-based matching. 
+- Semantic similarity search enhanced with metadata filtering for more precise results.
+
+**MongoDB Checkpointer for Agent Memory** 
+
+The Checkpointer pattern allows AI agents to persist their internal state across interactions, supporting:
+
+- Context retention and long-term reasoning. 
+- Full visibility into past AI decisions, supporting easy audits and regulatory compliance.
+
+**Aggregation Pipelines and Atlas Charts for Insight Generation** 
+
+MongoDB’s aggregation framework delivers real-time insights, from trend
+analysis to macroeconomic correlations. Combined with Atlas Charts,
+teams can build dynamic dashboards that surface:
+
+- AI-driven portfolio signals. 
+- Market anomalies. 
+- Real-time performance indicators.
+
+Together, these capabilities make MongoDB a robust, future-ready data
+layer for AI-driven financial solutions—delivering the flexibility,
+scalability, and intelligence modern finance demands.
  
 Key Learnings  
 -------------  
