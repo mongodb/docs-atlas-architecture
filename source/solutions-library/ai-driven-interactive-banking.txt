@@ -53,7 +53,6 @@ partner propose the following reference architecture:
 
 .. figure:: /includes/images/industry-solutions/leafy-bank-in-aws.svg
   :width: 750px
-  :height: 750px
   :alt: Reference architecture for AI-driven interactive banking proposal
    
 MongoDB is positioned as an operational data store (ODS) acting as a medium layer between
