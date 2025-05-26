@@ -38,8 +38,7 @@ comprehensive and multidimensional risk analyses.
 
 The code to demonstrate all the features of |service| for building this solution 
 is available in the following `GitHub repo 
-<https://github.com/mongodb-industry-solutions/Risk-assessor/tree/Avatar>`__. 
-.. Non-working link up here. So is the case also in the original. 
+<https://github.com/mongodb-industry-solutions/Risk-assessor>`__. 
 
 .. video:: https://www.youtube.com/watch?v=tUgSCnGjTI0
 
