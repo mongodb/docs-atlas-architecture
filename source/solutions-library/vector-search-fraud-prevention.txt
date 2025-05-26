@@ -1,5 +1,5 @@
 ===============================================================
-Fraud prevention and AML using {+avs+} and OpenAI
+Fraud Prevention and AML Using {+avs+} and OpenAI
 ===============================================================
 
 .. meta:: 
@@ -196,12 +196,16 @@ Key Learnings
 
 Technologies and Products Used
 ------------------------------
-MongoDB modern, multi-cloud database platform: - `MongoDB Atlas
-<https://www.mongodb.com/products/platform/atlas-database>`__ - `MongoDB Atlas Text Search
-<https://www.mongodb.com/docs/manual/text-search/>`__ - `MongoDB Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__ - `MongoDB Collections
-<https://www.mongodb.com/docs/compass/current/collections/>`__ - `MongoDB Aggregation
-Pipeline <https://www.mongodb.com/resources/products/capabilities/aggregation-pipeline>`__
+MongoDB modern, multi-cloud database platform: 
+- `MongoDB Atlas
+<https://www.mongodb.com/products/platform/atlas-database>`__ 
+- `MongoDB Atlas Text Search <https://www.mongodb.com/docs/manual/text-search/>`__ 
+
+- `MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__ 
+
+- `MongoDB Collections <https://www.mongodb.com/docs/compass/current/collections/>`__ 
+
+- `MongoDB Aggregation Pipeline <https://www.mongodb.com/resources/products/capabilities/aggregation-pipeline>`__
 
 Other key technologies:
 
