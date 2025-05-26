@@ -59,8 +59,8 @@ analyze and enrich the data, giving users a holistic financial view while enabli
 bank to offer personalized financial insights.
 
 .. figure:: /includes/images/industry-solutions/open-finance-architecture.svg
-  :width: 750px
-  :alt: Open Finance architecture diagram
+   :width: 750px
+   :alt: Open Finance architecture diagram
   
 
 Data Model Approach
