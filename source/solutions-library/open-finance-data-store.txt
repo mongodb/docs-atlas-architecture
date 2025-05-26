@@ -81,7 +81,7 @@ approach:
   
   - **Structure**:
   
-    .. code-block:: 
+    .. code-block:: json
         
         {
         "_id": { "$oid": "unique_id" }, 
@@ -103,7 +103,7 @@ approach:
   
   - **Structure**:
   
-    .. code-block:: 
+    .. code-block:: json
         
         {
         "_id": { "$oid": "unique_id" }, 
