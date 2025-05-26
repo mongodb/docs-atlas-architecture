@@ -2,10 +2,8 @@
 MongoDB as the Open Finance Data Store
 ======================================
 
-.. missing: snooty, doctree, landing page
-
 .. meta:: 
-   :keywords: Open Finance, Financial Services, |service-fullname|, Data Integration, Real-Time Analytics, Aggregation Pipeline, Secure Data Management, PSD2 Compliance, Personalized Financial Insights
+   :keywords: Open Finance, Financial Services, Atlas, Data Integration, Real-Time Analytics, Aggregation Pipeline, Secure Data Management, PSD2 Compliance, Personalized Financial Insights
    :description: MongoDB powers open finance with flexible data integration, built-in security, and scalability—enabling seamless, compliant, and personalized financial services.
 
 .. contents:: On this page
@@ -86,10 +84,13 @@ approach:
     .. code-block:: 
         
         {
-        "_id": { "$oid": "unique_id" }, "UserName": "string", "BearerToken": "string",
+        "_id": { "$oid": "unique_id" }, 
+        "UserName": "string", 
+        "BearerToken": "string",
         "TokenDates": {
-            "CreationDate": { "$date": "ISODate" }, "LastUseDate": { "$date": "ISODate" }
-        }
+            "CreationDate": { "$date": "ISODate" }, 
+            "LastUseDate": { "$date": "ISODate" }
+          },
         }
     
   - **Simplification**: In a real-world scenario, token management would involve more
@@ -105,12 +106,19 @@ approach:
     .. code-block:: 
         
         {
-        "_id": { "$oid": "unique_id" }, "AccountId": "string", "AccountBank": "string",
-        "AccountStatus": "string", "AccountType": "string", "AccountBalance": "number",
-        "AccountCurrency": "string", "AccountDate": {
+        "_id": { "$oid": "unique_id" }, 
+        "AccountId": "string", 
+        "AccountBank": "string",
+        "AccountStatus": "string", 
+        "AccountType": "string", 
+        "AccountBalance": "number",
+        "AccountCurrency": "string", 
+        "AccountDate": {
             "OpeningDate": { "$date": "ISODate" }
-        }, "AccountCustomer": {
-            "UserName": "string", "UserId": { "$oid": "unique_id" }
+        }, 
+        "AccountUser": {
+            "UserName": "string", 
+            "UserId": { "$oid": "unique_id" }
         }, "GreenAccountNarrative": "string"
         }
   
@@ -128,19 +136,30 @@ approach:
     .. code-block:: json
         
         {
-        "_id": { "$oid": "unique_id" }, "ProductId": "string", "ProductBank": "string",
-        "ProductStatus": "string", "ProductType": "string", "ProductAmount": "number",
-        "ProductCurrency": "string", "ProductInterestRate": "number", "ProductDate": {
+        "_id": { "$oid": "unique_id" }, 
+        "ProductId": "string", 
+        "ProductBank": "string",
+        "ProductStatus": "string", 
+        "ProductType": "string", 
+        "ProductAmount": "number",
+        "ProductCurrency": "string", 
+        "ProductInterestRate": "number", 
+        "ProductDate": {
             "OpeningDate": { "$date": "ISODate" }
-        }, "ProductCustomer": {
-            "UserName": "string", "UserId": { "$oid": "unique_id" }
-        }, "GreenProductNarrative": "string", "RepaymentPeriod": "number", "LoanCollateral":
-        "string"
+        }, 
+        "ProductCustomer": {
+            "UserName": "string", 
+            "UserId": { "$oid": "unique_id" }
+        }, 
+        "GreenProductNarrative": "string", 
+        "RepaymentPeriod": "number", 
+        "LoanCollateral": "string"
         }
 
   - **Simplification**: In a real-world scenario, product data would be more
     comprehensive, including detailed terms and conditions, repayment schedules, and
     collateral details.
+  - **Real-world scenario considerations**
 
 In a real-world implementation, each financial entity would have its own data model
 definitions, which could vary significantly. The following considerations would be
