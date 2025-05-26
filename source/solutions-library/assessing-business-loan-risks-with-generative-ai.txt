@@ -3,8 +3,8 @@ Assessing Business Loan Risks with Generative AI
 ================================================
 
 .. meta:: 
-   :keywords: AI, Business Loans, |service|, |rag|, Risk Analysis
-   :description: Learn how generative AI can generate detailed risk assessments and how |service|'s multimodal features enable comprehensive and multidimensional loan risk analysis.
+   :keywords: AI, Business Loans, Atlas, RAG, Risk Analysis
+   :description: Learn how generative AI can generate detailed risk assessments and how MongoDB's multimodal features enable comprehensive and multidimensional loan risk analysis.
 
 .. contents:: On this page
    :local:
@@ -33,14 +33,14 @@ Besides credit risk, where the borrower may default, banks also face business ri
 which economic downturns or sector-specific declines can impact borrowers' ability to
 repay loans. This solution dives into the potential of `generative AI
 <https://www.mongodb.com/basics/generative-ai>`__ (gen AI) to facilitate detailed risk assessments
-for business loans, and how |service|'s multimodal features can be leveraged for
+for business loans, and how MongoDB's multimodal features can be leveraged for
 comprehensive and multidimensional risk analyses.
 
-The code to demonstrate all the features of |service| for building this solution 
+The code to demonstrate all the features of MongoDB for building this solution 
 is available in the following `GitHub repo 
 <https://github.com/mongodb-industry-solutions/Risk-assessor>`__. 
 
-.. video:: https://www.youtube.com/watch?v=tUgSCnGjTI0
+.. video:: https://www.youtube.com/watch?v=cgrGoj1TabI
 
 The Critical Business Plan
 ---------------------------
@@ -145,7 +145,7 @@ reports to obtain accurate information.”
    :alt: Figure 4: LLM’s response with fictional flood locations 
 
 With this consistent demonstration of the knowledge gap in the LLMs for specialized areas, 
-it reinforces the need to explore how |rag| (retrieval-augmented generation) with a multimodal 
+it reinforces the need to explore how RAG (retrieval-augmented generation) with a multimodal 
 data platform can help.
 
 In this simplified demo, you select a business location, a business purpose, and a 
@@ -209,15 +209,15 @@ Database <https://zenodo.org/records/7545697>`_, which contains multiple sources
 Reference Architecture
 -----------------------
 
-The following diagram provides a logical architecture overview of the |rag| data process
+The following diagram provides a logical architecture overview of the RAG data process
 implemented in this solution highlighting the different technologies used including
 MongoDB, Meta Llama 3, and Fireworks.AI.
 
 .. figure:: /includes/images/industry-solutions/risk-assessment-achitecture.png
    :figwidth: 750px
-   :alt: Figure 8: |rag| data flow architecture diagram
+   :alt: Figure 8: RAG data flow architecture diagram
 
-With MongoDB's multimodal capabilities, developers can enhance the |rag| process by
+With MongoDB's multimodal capabilities, developers can enhance the RAG process by
 utilizing features such as network graphs, time series, and vector search. This enriches
 the context for the gen AI agent, enabling it to provide more comprehensive and
 multidimensional risk analysis through multimodal analytics. It can provide more accurate
@@ -225,7 +225,7 @@ and context-aware insights (eg. using geospatial data to identify flood risk loc
 reduce hallucination and offer profound insights to augment a complex business loan risk
 assessment process.
 
-Due to the iterative nature of the |rag| process, the gen AI model will continually learn
+Due to the iterative nature of the RAG process, the gen AI model will continually learn
 and improve from new data and feedback, leading to increasingly accurate risk assessments
 and minimizing hallucinations. A multimodal data platform would allow you to to fully
 maximize the capabilities of the multimodal AI models.

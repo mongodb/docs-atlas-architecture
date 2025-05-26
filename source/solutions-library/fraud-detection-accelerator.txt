@@ -1,7 +1,7 @@
 .. _arch-center-is-fraud-detection-accelerator:
 
 ===================================================
-Fraud Detection Accelerator Using Amazon SageMaker
+Fraud Detection Accelerator Using AWS SageMaker
 ===================================================
 
 .. meta:: 
@@ -148,7 +148,7 @@ Below you will find an overview of those steps taken:
    to which the |service-fullname| data needs to be exported.
 2. `Set up
    <https://www.mongodb.com/basics/clusters/mongodb-cluster-setup#:~:text=about%20storage%20capacity.-,Creating,-a%20MongoDB%20Cluster>`__
-   a {+service+} Cluster.
+   an |service-fullname| Cluster.
 3. Set up {+atlas-app-services+}.
 4. Set up the `Amazon SageMaker
    <https://docs.aws.amazon.com/sagemaker/latest/dg/onboard-quick-start.html>`__ domain.
@@ -189,14 +189,15 @@ Key Learnings
 
 Technologies and Products Used
 ------------------------------
-MongoDB developer data platform: - `Atlas Database
-<https://www.mongodb.com/atlas/database>`__ - `Atlas App Services
-<https://www.mongodb.com/products/platform/atlas-app-services>`__ - `Atlas Charts
-<https://www.mongodb.com/products/charts>`__ - `Atlas Data Federation
-<https://www.mongodb.com/products/platform/atlas-data-federation>`__
+MongoDB developer data platform: 
+- `Atlas Database <https://www.mongodb.com/atlas/database>`__ 
+- `Atlas App Services <https://www.mongodb.com/products/platform/atlas-app-services>`__ 
+- `Atlas Charts <https://www.mongodb.com/products/charts>`__ 
+- `Atlas Data Federation <https://www.mongodb.com/products/platform/atlas-data-federation>`__
 
-Partner technologies: - `AWS S3 <https://aws.amazon.com/s3/>`__ - `AWS SageMaker Canvas
-<https://aws.amazon.com/pm/sagemaker/>`__
+Partner technologies: 
+- `AWS S3 <https://aws.amazon.com/s3/>`__ 
+- `AWS SageMaker Canvas <https://aws.amazon.com/pm/sagemaker/>`__
 
 Authors
 -------
