@@ -87,7 +87,7 @@ schema design allows fintech organizations to adapt quickly to new financial pro
 regulatory requirements without disruptive schema migrations. For optimal performance, the
 model employs strategic decisions around data organization.
 
-.. code-block::
+.. code-block:: json
     
     // Example Customer Document with Embedded Account Information
     {
@@ -172,27 +172,27 @@ Key Learnings
 Implementing the Hasura DDN with MongoDB architecture for fintech applications reveals
 several important insights that organizations should consider:
 
-1. Distributed data architecture drives performance: The combination of MongoDB's distributed
+1. **Distributed data architecture drives performance:** The combination of MongoDB's distributed
 clusters with Hasura DDN's regional deployment model enables financial institutions to
 achieve the microsecond-level latency required for trading platforms and high-frequency
 transaction processing while maintaining data consistency across global operations.
 
-1. Security must be multi-layered: Effective security in fintech applications requires both
+2. **Security must be multi-layered:** Effective security in fintech applications requires both
 centralized and decentralized approaches. The hybrid policy management strategy leveraging
 Hasura's permission systems and MongoDB's field-level security provides comprehensive
 protection while maintaining flexibility for evolving regulatory requirements like GDPR,
 PSD2, and MiFID II.
 
-1. Data model flexibility accelerates innovation: MongoDB's schema flexibility paired with
+3. **Data model flexibility accelerates innovation:** MongoDB's schema flexibility paired with
 Hasura's GraphQL API generation capabilities allows fintech without extensive
 redevelopment, significantly reducing time-to-market for new offerings. 
 
-1. Real-time capabilities transform customer experiences: The architecture's support for
+4. **Real-time capabilities transform customer experiences:** The architecture's support for
 real-time data subscriptions and complex relationship mapping enables next-generation
 financial applications like personalized banking, immediate fraud detection, and
 comprehensive risk assessment that leverage a complete view of customer data.
 
-1. Modernization can be incremental: The API-first approach allows organizations to
+5. **Modernization can be incremental:** The API-first approach allows organizations to
 gradually transition from legacy systems by creating a modern data access layer while
 maintaining existing data sources, reducing risk during digital transformation initiatives
 in the highly regulated financial services industry.

@@ -102,7 +102,7 @@ target column as Fraud.
 
 *Data courtesy of* `Kaggle <https://www.kaggle.com/c/ieee-fraud-detection/data>`__.
 
-.. code-block:: json
+.. code-block::
 
    Source Table1: Transaction
 
