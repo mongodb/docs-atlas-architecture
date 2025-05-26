@@ -52,7 +52,7 @@ Several factors are pushing the modernization of payment systems:
 - Competition: Fintech startups are offering new payment solutions, challenging
   traditional financial institutions to update their systems.
 
-Modernization challenges
+Modernization Challenges
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Updating payment systems is challenging due to:
 
@@ -67,7 +67,7 @@ Updating payment systems is challenging due to:
 In this example solution, we'll delve into modernization approaches and how MongoDB plays
 a pivotal role in this transformation.
 
-Approaches to modernization
+Approaches to Modernization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To navigate the complexities of updating their systems, businesses are embracing
 innovative strategies:
@@ -80,7 +80,7 @@ innovative strategies:
   architecture provides significant advantages. It introduces more flexibility and allows
   for quicker updates, facilitating agile responses to changing business requirements.
 
-How MongoDB supports modernization
+How MongoDB Supports Modernization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 MongoDB is at the forefront of supporting modernization efforts, especially in the context
 of payment systems, through its comprehensive features:
@@ -127,7 +127,7 @@ The following approach focuses on entities like User Accounts, Transactions, Ban
 Accounts, and Payment Methods, and their relationships. It includes data attributes for
 each entity ensuring comprehensive and detailed information covering each entity.
 
-Microservices architecture
+Microservices Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A `microservice architecture <https://www.mongodb.com/databases/what-are-microservices>`__
 helps to break large monolithic applications into smaller pieces and provides you with the
@@ -135,9 +135,8 @@ following benefits: faster time to market, modularity, flexibility and scalabili
 resiliency, organizational alignment, and reduction in costs. This is broken into the
 following:
 
-**User management (`Github repo
-<https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/user>`__)**
-
+User management (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/user>`__)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Facilitates the main operations around user/account interaction. In the diagram below, you
 can see the main flow for creating accounts.
 
@@ -150,7 +149,7 @@ can see the main flow for creating accounts.
 .. figure:: /includes/images/industry-solutions/account-creation-flow.png
   :alt: Account Creation Flow
 
-Transaction processing (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/transaction>`__)
+Transaction Processing (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/transaction>`__)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Manages transaction-related operations like initiating/completing or refunding a
 transaction. In the diagram below, you can see the transaction initiation process.
@@ -174,7 +173,7 @@ external transaction validation and processing/notification.
 .. figure:: /includes/images/industry-solutions/external-transaction-flow.png
   :alt: External Transaction Flow
 
-Transaction history (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/transaction>`__)
+Transaction History (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/transaction>`__)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Operate transaction logging and archival.
 
@@ -192,7 +191,7 @@ Verifying the account details are up to date.
 - **Inputs:** Transaction details, Bank account details
 - **Outputs:** Reconciliation status, Adjusted account balances
 
-Payment verification (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/payment>`__)
+Payment Verification (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/payment>`__)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This process reacts to a transaction initiation, processing the required steps. The
 diagram below shows the payment processing steps from the moment the service reacts to a
@@ -206,7 +205,7 @@ payment until the user notification, including approving or rejecting payments.
 .. figure:: /includes/images/industry-solutions/payment-processing.png
   :alt: Payment Processing Flow
 
-Reporting service
+Reporting Service
 ~~~~~~~~~~~~~~~~~
 With `MongoDB Charts <https://www.mongodb.com/products/charts>`__, you can create a
 materialized view of your payment data.
@@ -216,7 +215,7 @@ materialized view of your payment data.
 - **Inputs:** User account number, Report criteria (date range, transaction type)
 - **Outputs:** Generated financial reports
 
-Notification service (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/notification>`__)
+Notification Service (`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/notification>`__)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This microservice utilizes Change Streams together with Web Sockets to notify the user UI
 of any changes.
@@ -226,7 +225,7 @@ of any changes.
 - **Inputs:** User account details, Transaction details
 - **Outputs:** Notifications and alerts to users
 
-Database schema and document structures
+Database Schema and Document Structures
 ---------------------------------------
 The following document structures and microservices form the backbone of the MongoDB-based
 payment solution, ensuring scalability, security, and efficient data management.
@@ -235,31 +234,49 @@ payment solution, ensuring scalability, security, and efficient data management.
 
 .. code-block:: json
 
-   {
-       "_id": ObjectId, "username": String, "email": String, "password": String, // hashed
-       "linkedAccounts": [
-           {
-               "accountId": String, "accountType": String, "externalDetails": {
-                   "apiEndpoint": String, "accessKey": String, "additionalInfo": String
-               }
-           }
-       ], "recentTransactions": [
-           {
-               "transactionId": String, "date": Date, "amount": Number, "type": String, //
-               e.g., 'debit', 'credit' "status": String // e.g., 'completed', 'pending'
-           }
-       ]
-   }
+  {
+      "_id": ObjectId, 
+      "username": String, 
+      "email": String, 
+      "password": String, // hashed
+      "linkedAccounts": [
+          {
+              "accountId": String, 
+              "accountType": String, 
+              "externalDetails": {
+                  "apiEndpoint": String, 
+                  "accessKey": String, 
+                  "additionalInfo": String
+              }
+          }
+      ], "recentTransactions": [
+          {
+              "transactionId": String, 
+              "date": Date, 
+              "amount": Number, 
+              "type": String, // e.g., 'debit', 'credit' 
+              "status": String // e.g., 'completed', 'pending'
+          }
+      ]
+  }
 
 2. **Accounts collection** 
 
 .. code-block:: json
 
    {
-       "_id": ObjectId, "userId": ObjectId, "accountNumber": String, // Encrypted
-       "accountType": String, "balance": Number, "limitations": {
-           "withdrawalLimit": Number, "transferLimit": Number, "otherLimitations": String
-       }, "securityTags": [String], "encryptedDetails": String
+       "_id": ObjectId, 
+       "userId": ObjectId, 
+       "accountNumber": String, // Encrypted
+       "accountType": String, 
+       "balance": Number, 
+       "limitations": {
+           "withdrawalLimit": Number, 
+           "transferLimit": Number, 
+           "otherLimitations": String
+       }, 
+       "securityTags": [String], 
+       "encryptedDetails": String
    }
 
 3. **Transactions collection** 
@@ -267,11 +284,20 @@ payment solution, ensuring scalability, security, and efficient data management.
 .. code-block:: json
 
    {
-       "_id": ObjectId, "account_id": ObjectId, "amount": Number, "date": Date, "type":
-       String, // e.g., 'debit', 'credit' "status": String, // e.g., 'completed',
-       'pending', 'refund' "details": String, // Encrypted if sensitive "referenceData": {
-           "sender": { ... }, "receiver": { ... }, "steps": [{ ... }],
-           "relatedTransactions": [{ ... }], "notes": String, "reportingTags": [String]
+       "_id": ObjectId, 
+       "account_id": ObjectId, 
+       "amount": Number, 
+       "date": Date, 
+       "type": String, // e.g., 'debit', 'credit' 
+       "status": String, // e.g., 'completed', 'pending', 'refund' 
+       "details": String, // Encrypted if sensitive 
+       "referenceData": {
+           "sender": { ... }, 
+           "receiver": { ... }, 
+           "steps": [{ ... }],
+           "relatedTransactions": [{ ... }], 
+           "notes": String, 
+           "reportingTags": [String]
        }
    }
 
@@ -280,57 +306,87 @@ payment solution, ensuring scalability, security, and efficient data management.
 .. code-block:: json
 
    {
-       "_id": ObjectId, "relatedEntityId": ObjectId, "userIds": [ObjectId], "message":
-       String, "createdAt": Date, "statuses": [
+       "_id": ObjectId, 
+       "relatedEntityId": ObjectId, 
+       "userIds": [ObjectId], 
+       "message": String, 
+       "createdAt": Date, 
+       "statuses": [
            {
-               "userId": ObjectId, "status": String // e.g., 'unread', 'read'
+               "userId": ObjectId, 
+               "status": String // e.g., 'unread', 'read'
            }
        ]
    }
 
-Building the solution
+Building the Solution
 ---------------------
 The code for the following step-by-step guide can be found in this `Github repo
 <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main>`__.
 
-Features covered
+Features Covered
 ----------------
-**Cross microservices:** - Indexing and scalability - |json| schema validation - Permission
-and data segregation - Auditing
+**Cross microservices:** 
 
-**User and account microservices:** - `Document model
-<https://www.mongodb.com/document-databases>`__: Flexible user and account structure for
-different accounts and user profiles - `Kafka streaming sink
-<https://www.mongodb.com/docs/kafka-connector/current/sink-connector/configuration-properties/>`__:
-Data being streamed from external sources - Transactions (User to Account references):
-Keeping account and user data `ACID-compliant
-<https://www.mongodb.com/products/capabilities/transactions>`__ - In-use `encryption
-<https://www.mongodb.com/products/capabilities/security/encryption>`__ - Full-text search:
-Account IDs and usernames are searchable for users to pick via `full-text search
-<https://www.mongodb.com/atlas/search>`__.
+- Indexing and scalability 
 
-**Transactions and payments microservices:** - `Change streams
-<https://www.mongodb.com/basics/change-streams>`__: Payments are event-driven by
-transactions - `Time series <https://www.mongodb.com/products/capabilities/time-series>`__
-for transaction history: Transaction history is built in a time series collection - In-use
-`encryption <https://www.mongodb.com/products/capabilities/security/encryption>`__
+- |json| schema validation 
 
-**Notification microservices:** - {+kafka+} source: Notifications are being down-streamed to
-external systems and users via {+kafka+} - `Change streams
-<https://www.mongodb.com/basics/change-streams>`__: Notifications are being captured by
-change streams and pushed via Websockets
+- Permission and data segregation 
 
-**Reports:** - Materialized views: Materialized views are built to preprocess and clear
-sensitive data for reporting - `Charts <https://www.mongodb.com/products/charts>`__
+- Auditing
 
-Key considerations
+**User and account microservices:** 
+
+- `Document model <https://www.mongodb.com/document-databases>`__: Flexible user and
+  account structure for different accounts and user profiles 
+
+- `Kafka streaming sink
+  <https://www.mongodb.com/docs/kafka-connector/current/sink-connector/configuration-properties/>`__:
+  Data being streamed from external sources 
+
+- Transactions (User to Account references): Keeping account and user data `ACID-compliant
+  <https://www.mongodb.com/products/capabilities/transactions>`__ 
+
+- In-use `encryption
+  <https://www.mongodb.com/products/capabilities/security/encryption>`__ 
+
+- Full-text search: Account IDs and usernames are searchable for users to pick via
+  `full-text search <https://www.mongodb.com/atlas/search>`__.
+
+**Transactions and payments microservices:** 
+
+- `Change streams <https://www.mongodb.com/basics/change-streams>`__: Payments are
+  event-driven by transactions 
+
+- `Time series <https://www.mongodb.com/products/capabilities/time-series>`__ for
+  transaction history: Transaction history is built in a time series collection 
+
+- In-use `encryption
+  <https://www.mongodb.com/products/capabilities/security/encryption>`__
+
+**Notification microservices:** 
+
+- {+kafka+} source: Notifications are being down-streamed to external systems and users via {+kafka+} 
+
+- `Change streams <https://www.mongodb.com/basics/change-streams>`__: Notifications are
+  being captured by change streams and pushed via Websockets
+
+**Reports:** 
+- Materialized views: Materialized views are built to preprocess and clear sensitive data for reporting 
+
+- `Charts <https://www.mongodb.com/products/charts>`__
+
+Key Considerations
 -------------------
 The proposed solution requires the following considerations to be taken into account:
 
-- **Security and compliance:** Adherence to GDPR, PCI DSS, and other financial
-  regulations.
+- **Security and compliance:** Adherence to GDPR, PCI DSS, and other financial regulations.
+
 - **Scalability and performance:** Ensuring efficient query processing and data handling.
+
 - **Audit and logging:** Comprehensive logging for transactions to support audits.
+
 - **Backup and recovery:** Robust plan for data recovery using |service-fullname|.
 
 Authors
