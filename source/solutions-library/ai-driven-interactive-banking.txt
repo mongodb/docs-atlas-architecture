@@ -136,7 +136,7 @@ generate a more comprehensive and accurate response. This framework is known as
 combining semantic search with powerful language model generation.
 
 .. figure:: /includes/images/industry-solutions/chatbot.gif
-   :figwidth: 1200px
+   :width: 750px
    :alt: Leafy Bank mock-up chatbot in action
 
 Key Learnings
