@@ -166,22 +166,23 @@ definitions, which could vary significantly. The following considerations would 
 essential:
 
 - **Data mapping and relationships**: 
-  - Implementing a robust data mapping and
+  
+  Implementing a robust data mapping and
   relationship layer to translate diverse data models from different financial entities
   into a unified format.
 
 - **Security and compliance**: 
-  - Ensuring data security and compliance with regulations
+  Ensuring data security and compliance with regulations
   such as GDPR, PSD2, and other local financial regulations. This includes encryption,
   access controls, and audit trails.
 
 - **Scalability and performance**: 
-  - Designing the data model to handle large volumes of
+  Designing the data model to handle large volumes of
   data efficiently, with considerations for indexing, sharding, and performance
   optimization.
 
 - **Integration and interoperability**: 
-  - Building APIs and microservices that can
+  Building APIs and microservices that can
   seamlessly integrate with various external systems, ensuring interoperability and
   real-time data exchange.
 
