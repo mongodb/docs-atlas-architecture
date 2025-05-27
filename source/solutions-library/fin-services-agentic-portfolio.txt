@@ -16,7 +16,7 @@ Agentic AI-Powered Investment Portfolio Management
   
 Learn how to build a smart investment portfolio with agentic AI, MongoDB Atlas, Vector Search, and Charts.
 
-**Use cases:** `Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`__, 
+**Use cases:** `Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`__ 
 
 **Industries:** `Financial Services <https://www.mongodb.com/solutions/industries/manufacturing>`__
 
@@ -212,6 +212,7 @@ Part 3. Market Assistant Agent Service
 Once the data is ingested and embedded into MongoDB Atlas collections, the Market Assistant Agent uses the ReAct reasoning pattern, implemented through LangGraph, to autonomously interpret user queries, access relevant tools, and generate actionable financial insights.
 
 This agent functions as a structured LLM-powered financial advisor, capable of step-by-step reasoning, action execution, and memory retention. Built with LangGraph’s ReAct agent framework, it follows a cycle of:
+
 - Reasoning about the query
 - Acting (e.g., calling a tool)
 - Observing the result
