@@ -1,5 +1,5 @@
 ===========================================
-Credit card application with generative AI
+Credit Card Application with Generative AI
 ===========================================
 
 .. meta:: 
