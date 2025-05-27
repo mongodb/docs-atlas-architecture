@@ -21,6 +21,18 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: Agentic AI-Powered Investment Portfolio Management
+            :url: https://deploy-preview-239--docs-atlas-architecture.netlify.app/solutions-library/fin-services-agentic-portfolio/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Discover how MongoDB powers AI agent integration with Vector
+            Search, Time Series collections, Aggregation Pipeline, and
+            Charts for semantic analysis, real-time insights, and
+            adaptive decision-making to enhance portfolio management and
+            risk assessment.
+
+         .. card::
             :headline: Building Continuously Updating RAG Applications
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
             :icon: industry_ai
