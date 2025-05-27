@@ -322,6 +322,15 @@ kick-start their projects.
             Enable real-time order tracking and management across all
             retail channels using MongoDB Atlas.
 
+         .. card::
+            :headline: Real-Time Product Tracking
+            :url: https://deploy-preview-236--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-rfid-retail/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Learn how to build a real-time inventory management system
+            with RFID and MongoDB Atlas.
+
       Gen AI
       ------
 
