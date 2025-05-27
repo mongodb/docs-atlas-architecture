@@ -165,19 +165,23 @@ In a real-world implementation, each financial entity would have its own data mo
 definitions, which could vary significantly. The following considerations would be
 essential:
 
-- **Data mapping and relationships**: - Implementing a robust data mapping and
+- **Data mapping and relationships**: 
+  - Implementing a robust data mapping and
   relationship layer to translate diverse data models from different financial entities
   into a unified format.
 
-- **Security and compliance**: - Ensuring data security and compliance with regulations
+- **Security and compliance**: 
+  - Ensuring data security and compliance with regulations
   such as GDPR, PSD2, and other local financial regulations. This includes encryption,
   access controls, and audit trails.
 
-- **Scalability and performance**: - Designing the data model to handle large volumes of
+- **Scalability and performance**: 
+  - Designing the data model to handle large volumes of
   data efficiently, with considerations for indexing, sharding, and performance
   optimization.
 
-- **Integration and interoperability**: - Building APIs and microservices that can
+- **Integration and interoperability**: 
+  - Building APIs and microservices that can
   seamlessly integrate with various external systems, ensuring interoperability and
   real-time data exchange.
 
