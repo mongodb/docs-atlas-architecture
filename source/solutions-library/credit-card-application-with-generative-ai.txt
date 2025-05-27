@@ -1,6 +1,6 @@
-============================================================
-Assessing Business Loan Risks with MongoDB and Generative AI 
-============================================================
+===========================================
+Credit card application with generative AI
+===========================================
 
 .. meta:: 
    :keywords: AI, Credit, Atlas, Spark, Vector Search
