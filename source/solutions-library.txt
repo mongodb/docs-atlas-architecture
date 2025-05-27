@@ -21,6 +21,18 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: Agentic AI-Powered Investment Portfolio Management
+            :url: https://deploy-preview-239--docs-atlas-architecture.netlify.app/solutions-library/fin-services-agentic-portfolio/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Discover how MongoDB powers AI agent integration with Vector
+            Search, Time Series collections, Aggregation Pipeline, and
+            Charts for semantic analysis, real-time insights, and
+            adaptive decision-making to enhance portfolio management and
+            risk assessment.
+
+         .. card::
             :headline: Building Continuously Updating RAG Applications
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
             :icon: industry_ai
@@ -212,6 +224,16 @@ kick-start their projects.
             Use streaming data from edge devices to power machine
             learning models and smart applications by integrating
             MongoDB Atlas with Microsoft Azure IoT.
+
+         .. card::
+            :headline: Power Smart Meter Analysis with MongoDB
+            :url: https://deploy-preview-214--docs-atlas-architecture.netlify.app/solutions-library/smart-meter/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            MongoDB provides a scalable platform for smart meter
+            systems, enabling real-time data collection, time series
+            analysis, and anomaly detection. 
 
          .. card::
             :headline: Real-Time Audio-Based AI Diagnostics
@@ -420,6 +442,15 @@ kick-start their projects.
 
             Enable real-time order tracking and management across all
             retail channels using MongoDB Atlas.
+
+         .. card::
+            :headline: Real-Time Product Tracking
+            :url: https://deploy-preview-236--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-rfid-retail/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Learn how to build a real-time inventory management system
+            with RFID and MongoDB Atlas.
 
       Gen AI
       ------
