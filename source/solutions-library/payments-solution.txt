@@ -37,7 +37,7 @@ secure, and easy-to-use payment solutions. This need is driven by several factor
 including new regulations, customer expectations, and competition. MongoDB gives financial
 services organizations a powerful tool for modernizing their payment systems efficiently.
 
-Key drivers for modernizing payment systems
+Key Drivers for Modernizing Payment Systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Several factors are pushing the modernization of payment systems:
 
