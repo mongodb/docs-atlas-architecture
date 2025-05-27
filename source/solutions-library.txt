@@ -127,6 +127,16 @@ kick-start their projects.
             MongoDB Atlas with Microsoft Azure IoT.
 
          .. card::
+            :headline: Power Smart Meter Analysis with MongoDB
+            :url: https://deploy-preview-214--docs-atlas-architecture.netlify.app/solutions-library/smart-meter/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            MongoDB provides a scalable platform for smart meter
+            systems, enabling real-time data collection, time series
+            analysis, and anomaly detection. 
+
+         .. card::
             :headline: Real-Time Audio-Based AI Diagnostics
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
             :icon: general_content_play
