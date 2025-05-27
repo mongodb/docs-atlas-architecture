@@ -200,6 +200,7 @@ MongoDB developer data platform:
 - `Atlas Data Federation <https://www.mongodb.com/products/platform/atlas-data-federation>`__
 
 Partner technologies: 
+
 - `AWS S3 <https://aws.amazon.com/s3/>`__ 
 
 - `AWS SageMaker Canvas <https://aws.amazon.com/pm/sagemaker/>`__
