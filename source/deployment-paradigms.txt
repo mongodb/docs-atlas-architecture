@@ -67,12 +67,6 @@ and low latency across a larger geographic range than a single-region deployment
   For example, you deploy clusters in the {+aws+} region ``us-west-1`` and the {+gcp+} 
   region ``us-east4``. 
 
-- **Global**:
-  Deploys a global cluster with up to nine single or multi-region zones.
-  Consider this option for only the most complex 
-  situations; for example, where you need global aggregation of user data, or 
-  where legal terms dictate specific hosting requirements.
-
 Availability Considerations
 ---------------------------
 {+service+} has replication built into your deployments, which means: 
@@ -129,7 +123,7 @@ determine the best fit for your needs:
 
    * - **Tier 2**
      - Lower criticality applications. Can experience some downtime or 
-       maintenance windows warmingithout significant revenue impact.
+       maintenance windows without significant revenue impact.
      - > 1 hour and < 8 hours
      - | :ref:`2 regions with 3 nodes and backups <arch-center-multi-region-5+2>` or
        | :ref:`3 regions with 1 node in each <arch-center-multi-region-3+3>`
@@ -172,11 +166,13 @@ Users Mostly in One Geography
 
 If the majority of your application's users are located in one geography,
 we recommend that you deploy to one or more regions within the same geography.
-While a single-region deployment can protect against an outage in a single availability zone,
-a multi-region deployment covers a larger geographical area and ensures availability during both zonal and regional outages.
-For even higher availability, you can deploy across multiple regions *and* multiple cloud providers to protect against cloud-provider outages.
-These options all support low latency and simplify compliance with data sovereignty requirements 
-because all user data is accessed and stored within the same geography. 
+While a single-region deployment can protect against an outage in a single 
+availability zone, a multi-region deployment covers a larger geographical area 
+and ensures availability during both zonal and regional outages.
+For even higher availability, you can deploy across multiple regions.
+These options all support low latency and simplify compliance with data 
+sovereignty requirements because all user data is accessed and stored within the 
+same geography. 
 
 To learn more about these deployment paradigms, see the following paradigm pages: 
 
@@ -194,8 +190,8 @@ availability in case of a geographical outage. You can also meet data sovereignt
 by partitioning your data so that user data from each geography is hosted within that geography.
 
 To ensure high availability in case of regional outages without increasing latency or violating data sovereignty requirements,
-you can also deploy to multiple regions in each geography. You can achieve the highest availabilty for a multi-region deployment 
-by deploying clusters to multiple regions, in multiple geographies, hosted by multiple cloud providers. 
+you can also deploy to multiple regions in each geography. You can achieve the highest availability for a multi-region deployment 
+by deploying clusters to multiple regions, in multiple geographies. 
 
 To learn more about these deployment paradigms, see the following paradigm pages: 
 
@@ -205,10 +201,13 @@ To learn more about these deployment paradigms, see the following paradigm pages
 Users Distributed Worldwide
 ```````````````````````````
 
-If you are deploying an application to a worldwide audience, we recommend that you deploy a multi-region deployment 
-across multiple geographies before considering a global deployment. Global |service| deployments are the most complex multi-region deployment paradigms,
-and therefore require very careful planning. In most cases, a multi-region deployment in multiple geographies can fulfill your requirements
-for high availability, low latency, and data sovereignty.
+If you are deploying an application to a worldwide audience, we recommend that you 
+deploy a multi-region deployment across multiple geographies before considering a 
+global deployment. In almost all cases, a multi-region deployment in multiple 
+geographies can fulfill your requirements for high availability, low latency, 
+and data sovereignty. In rare cases, you might need global |service| deployments, 
+which are the most complex multi-region deployment paradigms and require very 
+careful planning. 
 
 To learn more about these deployment paradigms, see the following pages: 
 
