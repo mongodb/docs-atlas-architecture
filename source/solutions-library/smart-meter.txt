@@ -218,7 +218,7 @@ Key Solution Components
 
 For a complete, hands-on implementation, check out the detailed
 `repository
-<https://github.com/mongodb-industry-solutions/Leafy-Smart-Meters>`__
+<https://github.com/mongodb-industry-solutions/Leafy-Smart-Meters>`__.
 
 Key Learnings
 -------------
