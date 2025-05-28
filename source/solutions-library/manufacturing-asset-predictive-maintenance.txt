@@ -53,8 +53,8 @@ operations through four strategic stages:
 
 1. Machine prioritization and criticality analysis
 
-   - Addresses the question: "Which machine should I prioritize for
-     predictive maintenance and why?" 
+   - Addresses the question: Which machine should I prioritize for
+     predictive maintenance and why? 
    - Uses machine learning and RAG-based analysis to prioritize critical
      equipment.
    - Leverages historical data and expert knowledge to make informed
@@ -62,15 +62,15 @@ operations through four strategic stages:
 
 #. Failure prediction
 
-   - Answers the critical question: "What is the root cause of imminent
-     failure?"
+   - Answers the critical question: What is the root cause of imminent
+     failure?
    - Processes real-time sensor data through `Atlas Stream Processing
      <https://www.mongodb.com/products/platform/atlas-stream-processing>`__.
    - Enables early detection of potential failures before they occur.
 
 #. Maintenance plan generation
 
-   - Focuses on: "How should I schedule the repair procedure?" 
+   - Focuses on: How should I schedule the repair procedure? 
    - Automatically generates detailed repair plans using large language
      models. 
    - Combines maintenance manuals, inventory data, and resource
@@ -78,7 +78,7 @@ operations through four strategic stages:
 
 #. Maintenance guidance generation
 
-   - Addresses: "How do I get better guidance on fixing machines?" 
+   - Addresses: How do I get better guidance on fixing machines? 
    - Provides enhanced maintenance guidance by integrating service notes
      and repair instructions. 
    - Delivers instructions directly to technicians' mobile devices
@@ -89,7 +89,7 @@ operations through four strategic stages:
    :figwidth: 1200px
    :alt: Predictive maintenance workflow stages
    
-   Figure 1: Four stages of predictive maintenance workflow
+   Figure 1. Four stages of predictive maintenance workflow
 
 .. video:: https://www.youtube.com/watch?v=YwTWpUl3QS8
 
@@ -202,7 +202,7 @@ Building the Solution
 .. procedure::
    :style: normal
 
-   .. step:: `Set Up MongoDB Atlas Environment <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-1-create-a-mongodb-atlas-instance>`__
+   .. step:: `Set up MongoDB Atlas environment <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-1-create-a-mongodb-atlas-instance>`__
 
       - Configure cluster, database and collections for machine
         failures, sensor data (raw and transformed), ML models,
@@ -230,7 +230,7 @@ Building the Solution
       - Create Atlas Charts dashboards for monitoring and visualization.
 
 
-   .. step:: `Configure AI Services Integration <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-2-configure-environment-variables>`__
+   .. step:: `Configure AI services integration <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-2-configure-environment-variables>`__
 
       - Select one LLM provider for your implementation:
 
@@ -244,7 +244,7 @@ Building the Solution
 
       - Set up Google Cloud Translation API for multilingual support.
 
-   .. step:: `Application Setup <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-3-add-some-documents-in-mongodb>`__
+   .. step:: `Application setup <https://github.com/mongodb-industry-solutions/Leafy-Predictive-Maintenance?tab=readme-ov-file#step-3-add-some-documents-in-mongodb>`__
 
       - Configure environment variables including MongoDB connection
         strings, database settings, and required API credentials.
