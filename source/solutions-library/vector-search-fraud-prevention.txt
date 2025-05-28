@@ -160,14 +160,20 @@ database. MongoDB’s document data model incorporates any kind of data–any st
 often it changes, allowing you to create a holistic picture of customers to better predict
 transaction anomalies in real-time.
 
-By incorporating {+avs+}, institutions can: - Build intelligent applications
-powered by semantic search and generative AI over any type of data. - Store vector
-embeddings right next to source data and metadata–vectors inserted or updated in the
-database are automatically synchronized to the vector index. - Optimize resource
-consumption, improve performance, and enhance availability with `Search Nodes
-<https://www.mongodb.com/docs/atlas/atlas-search/atlas-search-overview/>`__. - Remove
-operational heavy lifting with the battle-tested, fully managed |service-fullname| modern,
-multi-cloud database platform.
+By incorporating {+avs+}, institutions can: 
+
+- Build intelligent applications powered by semantic search and generative AI over any
+  type of data. 
+
+- Store vector embeddings right next to source data and metadata–vectors inserted or
+  updated in the database are automatically synchronized to the vector index. 
+
+- Optimize resource consumption, improve performance, and enhance availability with
+  `Search Nodes
+  <https://www.mongodb.com/docs/atlas/atlas-search/atlas-search-overview/>`__. 
+
+- Remove operational heavy lifting with the battle-tested, fully managed
+  |service-fullname| modern, multi-cloud database platform.
 
 Given the broad and evolving nature of fraud and AML, these areas typically require
 multiple methods and a multi-modal approach. As such, a unified risk data platform offers
