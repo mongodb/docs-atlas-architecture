@@ -95,7 +95,7 @@ OpenAI LLM.
    :figwidth: 1200px
    :alt: Basic Components of an AI Agent 
 
-   Figure 1: Basic components of an AI agent  
+   Figure 1. Basic components of an AI agent  
 
 .. video:: https://www.youtube.com/watch?v=_CAOb7BR-Rg
   
@@ -133,7 +133,7 @@ The agent processes an issue report by:
    :figwidth: 1200px
    :alt: Reference architecture of the fleet management solution   
 
-   Figure 2: Reference architecture of the proposed solution
+   Figure 2. Reference architecture of the proposed solution
   
 Data Modelling Approach  
 -----------------------  
@@ -164,7 +164,7 @@ and constraints.
      "goals": "Provide accurate diagnostics and actionable recommendations."  
    } 
 
-Short Term Memory  
+Short-term Memory  
 ~~~~~~~~~~~~~~~~~    
   
 This holds temporary, contextual information—recent data inputs or  
@@ -176,8 +176,8 @@ checkpointer stores intermediate states of the agent’s actions and/or
 reasoning. This memory allows the agent to seamlessly pause and  
 resume operations.  
   
-**Example of short term memory - Telemetry data stored in Time Series  
-Collections**
+**Example of short term memory: Telemetry data stored in time series  
+collections**
   
 .. code-block:: javascript  
   
@@ -191,14 +191,14 @@ Collections**
      "thread_id": "thread_20250307_125027"  
    } 
 
-Long-Term Memory  
+Long-term Memory  
 ~~~~~~~~~~~~~~~~  
 
 This is where the agent stores accumulated knowledge over time. This  
 may include patterns, trends, logs, historical recommendations, and  
 decisions.  
   
-**Example of long term memory - historical issues with connected  
+**Example of long term memory: Historical issues with connected  
 vehicles vectorized and stored in MongoDB**
    
 .. code-block:: javascript  
@@ -307,26 +307,26 @@ Backend Setup
 .. procedure::  
    :style: normal  
   
-   .. step:: Clone the Repository and Navigate to the Backend Directory
+   .. step:: Clone the repository and navigate to the backend directory
 
       .. code-block:: sh  
   
          cd agent/backend   
   
-   .. step:: Create and Activate a Virtual Environment  
+   .. step:: Create and activate a virtual environment  
   
       .. code-block:: sh  
   
          python -m venv venv  
          source venv/bin/activate   # On Windows: venv\Scripts\activate  
   
-   .. step:: Install Dependencies  
+   .. step:: Install dependencies  
   
       .. code-block:: sh  
   
          pip install -r requirements.txt  
   
-   .. step:: Configure Environment Variables  
+   .. step:: Configure environment variables  
   
       Create a .env file in the backend directory with the following content:  
   
@@ -339,28 +339,28 @@ Backend Setup
          TELEMETRY_PATH=data/telemetry_data.csv  
          VECTOR_SEARCH_INDEX=issues_index  
   
-   .. step:: Run create_issue_embeddings.py to Create and Store Embeddings in MongoDB  
+   .. step:: Run create_issue_embeddings.py to create and store embeddings in MongoDB  
   
-   .. step:: Create an Atlas Vector Search Index with Name issues_index and Path Embeddings  
+   .. step:: Create an Atlas Vector Search index with name issues_index and path embeddings  
   
-      For more details on how to set up Vector Search index, go to this `link <https://mongodb-developer.github.io/search-lab/docs/vector-search/create-index>`__  
+      For more details on how to set up Vector Search index, go to this `link <https://mongodb-developer.github.io/search-lab/docs/vector-search/create-index>`__.  
   
-   .. step:: Run the Backend Server  
+   .. step:: Run the backend server  
   
       .. code-block:: sh  
   
          uvicorn main:app --host 0.0.0.0 --port 8000 --reload  
   
-   .. step:: Setup the Frontend
+   .. step:: Setup the frontend
 
-      Navigate to the frontend directory and install dependencies  
+      Navigate to the frontend directory and install dependencies.  
   
       .. code-block:: sh  
   
          cd ../frontend  
          npm install  
   
-   .. step:: Run the Next.js Development Server  
+   .. step:: Run the Next.js development server  
   
       .. code-block:: sh  
   
@@ -370,7 +370,7 @@ Backend Setup
 
 Feel free to adjust the prompt in main.py or update the telemetry data in the telemetry_data.csv file. 
   
-Running the solution  
+Running the Solution  
 ~~~~~~~~~~~~~~~~~~~~  
   
 **Starting a New Diagnosis**  
