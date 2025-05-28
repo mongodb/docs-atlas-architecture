@@ -2,4 +2,5 @@
    :titlesonly:
 
    Agentic AI-Powered Investment Portfolio </solutions-library/fin-services-agentic-portfolio.txt>
+   Optimizing Gen AI with Fireworks AI and MongoDB </solutions-library/fin-services-fireworks-rag.txt>
    RAG Applications <solutions-library/rag-applications>

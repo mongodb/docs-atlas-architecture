@@ -1,7 +1,7 @@
 .. _arch-center-is-fireworks-rag:
 
 ========================================================================================
-Optimizing Generative AI Applications with Fireworks.AI and MongoDB for Peak Performance
+Optimizing Generative AI Applications with Fireworks AI and MongoDB for Peak Performance
 ========================================================================================
 
 .. facet::
@@ -530,9 +530,9 @@ Further Reading
 ````````````````
 How Fireworks AI's platform accelerates inference speeds and throughput:
 
-- `FireAttention V2 <https://fireworks.ai/blog/fireattention-v2-long-context-inference >`__: This innovation improves the efficiency of handling long contexts during online inference, achieving up to 12 times faster processing.  
-- `FireAttention V3 <https://fireworks.ai/blog/fireattention-v3 >`__: This advancement enables the use of AMD hardware as a viable alternative for GPU inference, broadening hardware options and potentially reducing costs. 
-- `FireOptimizer <https://fireworks.ai/blog/fireoptimizer >`__: This tool allows customization of latency and quality for production inference workloads, enabling users to tailor performance to their specific needs. 
+- `FireAttention V2 <https://fireworks.ai/blog/fireattention-v2-long-context-inference>`__: This innovation improves the efficiency of handling long contexts during online inference, achieving up to 12 times faster processing.  
+- `FireAttention V3 <https://fireworks.ai/blog/fireattention-v3>`__: This advancement enables the use of AMD hardware as a viable alternative for GPU inference, broadening hardware options and potentially reducing costs. 
+- `FireOptimizer <https://fireworks.ai/blog/fireoptimizer>`__: This tool allows customization of latency and quality for production inference workloads, enabling users to tailor performance to their specific needs. 
 
 Technologies and Products Used
 ------------------------------
