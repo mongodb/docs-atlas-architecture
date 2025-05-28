@@ -19,6 +19,8 @@ AI-Driven Interactive Banking
 - **Industries**: `Financial Services <https://www.mongodb.com/solutions/industries/financial-services>`_
 - **Partners**: `Amazon Bedrock <https://aws.amazon.com/bedrock>`_
 
+
+
 Solution Overview
 -----------------
 
@@ -113,7 +115,7 @@ process orchestrator, enabling more flexible and scalable custom enterprise AI s
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After we’ve stored both the chunks and their embeddings in MongoDB, we can begin
-leveraging `Vector Search
+leveraging `MongoDB Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search#query>`_ for semantic
 querying.
 
@@ -147,7 +149,7 @@ Key Learnings
   instant, context-aware responses, allowing users to navigate banking operations
   independently without wading through complex terms and conditions.
 - By `using Atlas Vector Search
-  <https://www.mongodb.com/lp/cloud/atlas/try4?webxp579=true&utm_source=google&utm_campaign=search_gs_pl_evergreen_vector-search_product_prosp-brand_gic-null_ww-multi_ps-all_desktop_eng_lead&utm_term=atlas%20vector%20search&utm_medium=cpc_paid_search&utm_ad=p&utm_ad_campaign_id=21100816499&adgroup=162920454394&cq_cmp=21100816499&gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0csk-_Qoo_ueUqYt9NWSXxtFux2OIoLzNPCk8Kuty16s0vQA6R3ykwQEaAqEIEALw_wcB>`_
+  <https://www.mongodb.com/products/platform/atlas-vector-search>`_
   and document chunking, MongoDB enables efficient querying of dense legal documents,
   ensuring customers receive accurate, context-rich answers.
 - MongoDB's integration with vector search, LLMs, and dedicated search infrastructure
