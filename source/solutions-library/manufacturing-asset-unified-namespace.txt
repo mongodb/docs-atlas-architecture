@@ -163,7 +163,7 @@ Prerequisites
 .. procedure::
    :style: normal
 
-   .. step:: Data Ingestion with MQTT Broker
+   .. step:: Data ingestion with MQTT broker
 
       The solution begins by employing Cedalo's Mosquitto MQTT Broker to
       handle real-time data streams from shop floor machines. This
@@ -173,7 +173,7 @@ Prerequisites
       broker-agnostic, capable of integrating with various other MQTT
       providers as needed.
 
-   .. step:: SQL Data Integration via Kafka Connector
+   .. step:: SQL data integration via Kafka connector
 
       Concurrent with MQTT data reception, SQL data from ERP and MES systems
       is ingested using Kafka. The Debezium connector captures SQL-based
@@ -184,7 +184,7 @@ Prerequisites
       This integration ensures that ERP data remains continuously updated,
       serving as a reliable source of live business-critical information.
 
-   .. step:: Database Management with MongoDB Atlas
+   .. step:: Database management with MongoDB Atlas
 
       MongoDB Atlas acts as the central repository, leveraging its flexible
       schema capabilities to accommodate diverse data structures, from raw
@@ -268,7 +268,7 @@ Prerequisites
             }  
          }  
 
-   .. step:: Real-Time Analysis with Time Series Collections
+   .. step:: Real-time analysis with time series collections
 
       MongoDB Atlas utilizes Time Series collections to manage and analyze
       streaming data efficiently. This capability allows manufacturers to
@@ -278,7 +278,7 @@ Prerequisites
       promptly to any changes, fostering proactive decision-making and
       optimizing resource utilization.
 
-   .. step:: Visualization and Analytics with Atlas Charts
+   .. step:: Visualization and analytics with Atlas Charts
 
       Atlas Charts plays a crucial role in visualizing the integrated
       data, providing intuitive graphical representations of production
@@ -289,7 +289,7 @@ Prerequisites
       enabling stakeholders to track performance and identify
       opportunities for optimization effectively.
 
-   .. step:: Unified Namespace Architecture Deployment
+   .. step:: Unified Namespace architecture deployment
 
       As data flows into MongoDB, it undergoes contextualization and
       enrichment based on the ISA95 structure. MongoDB's architecture
@@ -309,14 +309,14 @@ facilitating improved operational efficiency and insights.
    
    Figure 2. The automation pyramid versus a Unified Namespace
 
-- **Adaptability to Operational Changes:** The success of a UNS hinges on
+- **Adaptability to operational changes:** The success of a UNS hinges on
   its ability to effortlessly integrate new data sources and scale with
   expanding production lines. MongoDB's flexible document-oriented model
   is particularly adept at accommodating these shifts without requiring
   exhaustive architectural overhauls, allowing manufacturers to maintain a
   dynamic data ecosystem.
 
-- **Centralized Data Layer for Advanced Applications:** While the UNS
+- **Centralized data layer for advanced applications:** While the UNS
   itself doesn't perform applications like predictive maintenance
   directly, it provides the essential infrastructure for such initiatives.
   By centralizing both real-time and historical data, manufacturers can
@@ -324,13 +324,13 @@ facilitating improved operational efficiency and insights.
   optimize costs. This approach translates to reduced downtime and
   improved resource utilization.
 
-- **Cross-Functional Insight Generation:** Leveraging MongoDB's powerful
+- **Cross-functional insight generation:** Leveraging MongoDB's powerful
   analytics capabilities allows manufacturing teams to gain comprehensive
   insights. By integrating diverse datasets, such as MES metrics and ERP
   outputs, the UNS facilitates correlations that drive improvements in
   quality control and operational planning.
 
-- **Ensured Data Availability and Reliability:** With high availability
+- **Ensured data availability and reliability:** With high availability
   being critical for a centralized data hub, MongoDB employs features like
   replica sets to ensure the system remains operational without
   interruption. This prevents potential disruptions in the manufacturing
