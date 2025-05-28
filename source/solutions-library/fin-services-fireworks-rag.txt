@@ -181,32 +181,32 @@ These fine tuning techniques can be categorized as follows:
 
    .. step:: Additive Parameter-Efficient Fine-Tuning (PEFT): 
    
-   This category includes approaches that introduce additional trainable parameters to the existing pre-trained model without modifying its original weights.
-    
-    - **Adapters**: These methods involve inserting small, trainable layers, known as adapter modules, between the layers of the pre-trained model. These adapters learn task-specific transformations, enabling adaptation to new tasks without altering the pre-trained parameters.
-    - **Soft Prompts**: These are trainable vector embeddings appended to the input sequence. They serve as guidance cues, influencing the model’s behavior towards the desired task.
-    - **Prefix Tuning**: This technique involves adding a trainable prefix to the input sequence. This prefix learns task-specific information without requiring modifications to the core model architecture.
+      This category includes approaches that introduce additional trainable parameters to the existing pre-trained model without modifying its original weights.
+      
+      - **Adapters**: These methods involve inserting small, trainable layers, known as adapter modules, between the layers of the pre-trained model. These adapters learn task-specific transformations, enabling adaptation to new tasks without altering the pre-trained parameters.
+      - **Soft Prompts**: These are trainable vector embeddings appended to the input sequence. They serve as guidance cues, influencing the model’s behavior towards the desired task.
+      - **Prefix Tuning**: This technique involves adding a trainable prefix to the input sequence. This prefix learns task-specific information without requiring modifications to the core model architecture.
 
    .. step:: Reparametrization PEFT: 
    
-   This approach involves reparameterizing existing model weights using low-rank approximations to reduce the number of trainable parameters.
+      This approach involves reparameterizing existing model weights using low-rank approximations to reduce the number of trainable parameters.
 
-    - **Low-Rank Adaptation (LoRA)**: LoRA approximates weight updates in the attention layers of a pre-trained model using low-rank matrices. This significantly decreases the number of trainable parameters.
-    - **Quantized LoRA (QLoRA)**: QLoRA enhances LoRA by incorporating quantization techniques, further reducing memory usage and computational costs.
+      - **Low-Rank Adaptation (LoRA)**: LoRA approximates weight updates in the attention layers of a pre-trained model using low-rank matrices. This significantly decreases the number of trainable parameters.
+      - **Quantized LoRA (QLoRA)**: QLoRA enhances LoRA by incorporating quantization techniques, further reducing memory usage and computational costs.
 
    .. step:: Selective Fine-Tuning: 
    
-   This category focuses on selectively fine-tuning specific parameters of the pre-trained model, resulting in greater computational efficiency.
+      This category focuses on selectively fine-tuning specific parameters of the pre-trained model, resulting in greater computational efficiency.
 
-    - **BitFit**: This method fine-tunes only the bias terms, or other specific parameters, of the pre-trained model, improving computational efficiency.
-    - **DiffPruning**: This technique identifies and removes parameters that contribute minimally to the model's performance, thereby reducing the number of trainable parameters.
+      - **BitFit**: This method fine-tunes only the bias terms, or other specific parameters, of the pre-trained model, improving computational efficiency.
+      - **DiffPruning**: This technique identifies and removes parameters that contribute minimally to the model's performance, thereby reducing the number of trainable parameters.
 
    .. step:: Layer Freezing Strategies: 
    
-   These strategies involve strategically freezing certain layers of the pre-trained model while fine-tuning others, optimizing the adaptation process.
+      These strategies involve strategically freezing certain layers of the pre-trained model while fine-tuning others, optimizing the adaptation process.
 
-    - **Freeze and Reconfigure (FAR)**: FAR involves freezing specific layers of the pre-trained model and fine-tuning the remaining layers to optimize model adaptation.
-    - **FishMask**: This technique employs a mask to selectively freeze or fine-tune layers, optimizing adaptation for specific tasks.
+      - **Freeze and Reconfigure (FAR)**: FAR involves freezing specific layers of the pre-trained model and fine-tuning the remaining layers to optimize model adaptation.
+      - **FishMask**: This technique employs a mask to selectively freeze or fine-tune layers, optimizing adaptation for specific tasks.
 
 The most popular technique of these is the PEFT based ones. PEFT
 techniques used with large pre-trained models can adapt them to new
@@ -499,9 +499,9 @@ reduced to approximately 19x reduction in latency.
      - 0.0473
      - 0.1502
 
-**# Memory Reduction**:  LLMs typically require substantial memory, often in the range of  8x80GB VRAM. A SLM can operate efficiently with around 16 GB VRAM of memory, leading to a 97.5% reduction in memory usage.
+**2. Memory Reduction**:  LLMs typically require substantial memory, often in the range of  8x80GB VRAM. A SLM can operate efficiently with around 16 GB VRAM of memory, leading to a 97.5% reduction in memory usage.
 
-**# Hardware Reduction**: Deploying LLMs often necessitates high-end GPUs or multiple servers. With an SLM, the hardware requirements can be significantly reduced, potentially allowing deployment on standard CPUs or a single server, leading to a drastic reduction in hardware costs.
+**3. Hardware Reduction**: Deploying LLMs often necessitates high-end GPUs or multiple servers. With an SLM, the hardware requirements can be significantly reduced, potentially allowing deployment on standard CPUs or a single server, leading to a drastic reduction in hardware costs.
 
 Conclusion
 -----------
