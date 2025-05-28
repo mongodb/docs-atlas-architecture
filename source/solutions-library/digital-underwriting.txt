@@ -91,7 +91,7 @@ vehicles insured by those policies.
 This example builds out three MongoDB collections, as well two
 materialized views. The full Hackloade data model which defines all the
 MongoDB objects within this example can be found on `GitHub
-<https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Collections/usageBasedInsurance_HackoladeModel.json>`__,.
+<https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Collections/usageBasedInsurance_HackoladeModel.json>`__.
 
 .. figure:: /includes/images/industry-solutions/Writing fig5.png
    :figwidth: 1200px
@@ -139,11 +139,11 @@ data with MongoDB Charts.
 
       See the following Github repos to create the data processing pipeline:  
   
-      - Step 1 `Load the sample data <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/LoadingtheSampleData.md>`__.  
+      - **Step 1:** `Load the sample data <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/LoadingtheSampleData.md>`__.  
   
-      - Step 2 `Setup a daily cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DailyCronJob.md>`__.  
+      - **Step 2:** `Setup a daily cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DailyCronJob.md>`__.  
   
-      - Step 3 `Setup a monthly cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/MonthlyCronJob.md>`__.  
+      - **Step 3:** `Setup a monthly cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/MonthlyCronJob.md>`__.  
   
       .. figure:: /includes/images/industry-solutions/Writing Fig3.svg  
          :figwidth: 1200px  
@@ -166,11 +166,11 @@ data with MongoDB Charts.
   
       See the following Github repos to create the data processing pipeline:  
   
-      - Step 4 `Setup a calculate premium trigger <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/CalculatePremiumTrigger.md>`__.  
+      - **Step 4:** `Setup a calculate premium trigger <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/CalculatePremiumTrigger.md>`__.  
   
-      - Step 5 `Setup the Databricks connection <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DatabricksConfiguration.md>`__.  
+      - **Step 5:** `Setup the Databricks connection <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DatabricksConfiguration.md>`__.  
   
-      - Step 6 `Write the machine learning model prediction to MongoDB <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Prediction.md>`__.  
+      - **Step 6:** `Write the machine learning model prediction to MongoDB <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Prediction.md>`__.  
   
       .. figure:: /includes/images/industry-solutions/Writing Fig4.svg  
          :figwidth: 1200px  
