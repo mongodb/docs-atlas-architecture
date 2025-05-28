@@ -460,7 +460,7 @@ together. You’ll find all required assets and resources inside the
 .. procedure::
    :style: normal
 
-   .. step:: Replicate the Demo Database
+   .. step:: Replicate the demo database
 
       Provision a cluster within your `Atlas account
       <https://www.mongodb.com/cloud/atlas/register>`__ and populate
@@ -471,7 +471,7 @@ together. You’ll find all required assets and resources inside the
       <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
       command.
 
-   .. step:: Configure Your Google Cloud Environment
+   .. step:: Configure your Google Cloud environment
 
       Create a Google Cloud project and enable the required APIs:
       `Speech-to-Text <https://cloud.google.com/speech-to-text>`__,
@@ -483,7 +483,7 @@ together. You’ll find all required assets and resources inside the
       instructions are provided in the `Google Cloud documentation
       <https://cloud.google.com/docs/authentication/application-default-credentials>`__.
 
-   .. step:: (Optional) Create Your Own Document Embeddings
+   .. step:: (Optional) Create your own document embeddings
 
       The demo includes a precomputed set of embeddings for the car
       manual. However, you can generate your own embeddings by parsing
@@ -491,14 +491,14 @@ together. You’ll find all required assets and resources inside the
       This gives you flexibility to extend the assistant with custom
       documents or additional manuals as needed.
 
-   .. step:: Configure PowerSync for Real-time Vehicle Data
+   .. step:: Configure PowerSync for real-time vehicle data
 
       Create a PowerSync account and link your MongoDB database using your
       connection string. PowerSync acts as a data bridge, syncing MongoDB data
       to client applications in real-time. Define sync rules for the
       *vehicleData* collection. 
 
-   .. step:: Run the Application
+   .. step:: Run the application
 
       Clone the repository locally and create a *.env* file using the template
       provided. Once your environment is configured, run *npm install* to
