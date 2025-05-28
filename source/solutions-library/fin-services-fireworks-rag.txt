@@ -499,9 +499,9 @@ reduced to approximately 19x reduction in latency.
      - 0.0473
      - 0.1502
 
-#. Memory Reduction:  LLMs typically require substantial memory, often in the range of  8x80GB VRAM. A SLM can operate efficiently with around 16 GB VRAM of memory, leading to a 97.5% reduction in memory usage.
+2. Memory Reduction:  LLMs typically require substantial memory, often in the range of  8x80GB VRAM. A SLM can operate efficiently with around 16 GB VRAM of memory, leading to a 97.5% reduction in memory usage.
 
-#. Hardware Reduction: Deploying LLMs often necessitates high-end GPUs or multiple servers. With an SLM, the hardware requirements can be significantly reduced, potentially allowing deployment on standard CPUs or a single server, leading to a drastic reduction in hardware costs.
+3. Hardware Reduction: Deploying LLMs often necessitates high-end GPUs or multiple servers. With an SLM, the hardware requirements can be significantly reduced, potentially allowing deployment on standard CPUs or a single server, leading to a drastic reduction in hardware costs.
 
 Conclusion
 -----------
