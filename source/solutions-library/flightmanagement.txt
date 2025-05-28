@@ -81,38 +81,38 @@ event-driven architecture that consists of several key components:
   
    .. step:: Data generation and processing  
   
-      - FastAPI microservice housing Real-Time Data Simulator and Path Finder  
-      - PubSub topics handling both static and real-time data streams  
-      - Cloud Functions for processing application and telemetry data  
+      - FastAPI microservice housing Real-Time Data Simulator and Path Finder.  
+      - PubSub topics handling both static and real-time data streams.  
+      - Cloud Functions for processing application and telemetry data.  
   
    .. step:: Analytics and cost management  
   
-      - Vertex AI Cost Calculator for financial impact analysis  
-      - Analytical data creator Cloud Function for data transformation  
-      - Aggregation pipeline for complex data processing  
+      - Vertex AI Cost Calculator for financial impact analysis.  
+      - Analytical data creator Cloud Function for data transformation.  
+      - Aggregation pipeline for complex data processing.  
   
    .. step:: Database structure  
   
-      - MongoDB database as the central data store  
+      - MongoDB database as the central data store.  
       - Specialized collections:  
-         - **flight_costs** collection to track and analyze flight-related expenses  
-         - **flight_plane** simulation collection for predictive modeling and scenario planning  
+         - **flight_costs** collection to track and analyze flight-related expenses.  
+         - **flight_plane** simulation collection for predictive modeling and scenario planning.  
          - **flight_realtimeCF** collection designed for  
            real-time data tracking and historical analysis (`Time  
-           Series Collection <https://www.mongodb.com/docs/manual/core/timeseries-collections/>`__)  
-         - **flights** collection for comprehensive general flight information management  
+           Series Collection <https://www.mongodb.com/docs/manual/core/timeseries-collections/>`__).  
+         - **flights** collection for comprehensive general flight information management.  
   
    .. step:: Integration Components  
   
-      - Change Streams for real-time data changes  
-      - Google Maps API for visualizing geographical data  
-      - Next.js for front-end interface and visualization  
+      - Change Streams for real-time data changes.  
+      - Google Maps API for visualizing geographical data.  
+      - Next.js for front-end interface and visualization.  
   
 **This architecture enables three distinct data flows:**  
   
-- Operational data flow (blue lines): Handles real-time flight operations  
-- Analytical data flow (green lines): Manages business intelligence  
-- Internal connections (black lines): Maintains system integration  
+- Operational data flow (blue lines): Handles real-time flight operations.  
+- Analytical data flow (green lines): Manages business intelligence.  
+- Internal connections (black lines): Maintains system integration.  
   
 .. figure:: /includes/images/industry-solutions/Airline Fig5.svg  
    :figwidth: 1200px  
