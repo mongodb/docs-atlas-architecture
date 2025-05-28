@@ -381,7 +381,7 @@ model by following the steps below.
 
          firectl login
 
-   .. step:: Upload your fine-tuning dataset that was created as part of data generation process to the Fireworks platform.
+   .. step:: Upload your fine-tuning dataset that was created as part of data generation process to the Fireworks platform:
       
       .. code-block:: python
          :copyable: true
@@ -395,7 +395,7 @@ model by following the steps below.
 
          firectl create sftj --base-model accounts/fireworks/models/llama-v3p1-8b-instruct --dataset <dataset_name> --output-model ccmodel --lora-rank 8 --epochs 1
 
-   .. step:: Monitor the fine-tuning process using the portal to ensure it runs smoothly.
+   .. step:: Monitor the fine-tuning process using the portal to ensure it runs smoothly:
 
       .. figure:: /includes/images/industry-solutions/fin-services-monitoring-fine-tuning process.svg
          :alt: Monitoring the fine-tuning process
