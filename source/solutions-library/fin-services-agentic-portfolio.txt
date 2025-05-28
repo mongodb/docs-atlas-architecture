@@ -48,10 +48,16 @@ analysis with generative AI models, it offers an intuitive, end-to-end
 experience through an AI-powered Portfolio Assistant—transforming how
 portfolio managers explore insights and take action.
 
-Powered by large language models (LLMs), retrieval-augmented generation (RAG), and MongoDB Atlas, including Vector Search, Time Series collections, and Atlas Charts—this solution empowers AI agents to:
+Powered by large language models (LLMs), retrieval-augmented generation
+(RAG), and MongoDB Atlas, including Vector Search, Time Series
+collections, and Atlas Charts—this solution empowers AI agents to:
 
-- Analyze vast financial datasets from multiple sources, and process it into meaningful analytics—like macroeconomic correlations, moving averages, and portfolio-level metrics. 
-- Provide dynamic insights and recommendations based on portfolio performance.
+- Analyze vast financial datasets from multiple sources, and process it
+  into meaningful analytics—like macroeconomic correlations, moving
+  averages, and portfolio-level metrics. 
+
+- Provide dynamic insights and recommendations based on portfolio
+  performance.
 
 This advanced approach enhances decision-making, improves risk
 management, and enables more accurate performance and impact
@@ -74,7 +80,7 @@ The solution is composed of three agents and two applications:
 .. figure:: /includes/images/industry-solutions/fin-services-high-level-arch.svg
    :alt: Reference architecture of the agentic ai-powered investment portfolio manager 
 
-   Figure 1. High-level Architecture 
+   Figure 1. High-level architecture 
 
 As shown in the diagram, MongoDB serves as the backbone for storing the
 data ingestion application data. Market data (time-series), financial
@@ -102,7 +108,7 @@ Part 1. Loaders Service
 .. figure:: /includes/images/industry-solutions/fin-services-Loaders-arch.svg
    :alt: Loaders Service Architecture   
 
-   Figure 2. Loaders Service Architecture 
+   Figure 2. Loaders service architecture 
 
 This part focuses on the data ingestion application, which handles the extraction of data from three sources:
 
@@ -163,23 +169,33 @@ Part 2. Agents Service
 .. figure:: /includes/images/industry-solutions/fin-services-agents-arch.svg
    :alt: Agents Service Architecture   
 
-   Figure 3. Agents Service Architecture  
+   Figure 3. Agents service architecture  
 
-Once data is ingested and stored into the appropriate MongoDB collections, two scheduled agents analyze it to generate portfolio-specific insights.
+Once data is ingested and stored into the appropriate MongoDB
+collections, two scheduled agents analyze it to generate
+portfolio-specific insights.
 
 
 Market Analysis Agent
 ``````````````````````
 
-Evaluates macroeconomic indicators (via FRED), asset price trends (using 50-day moving averages), and market volatility (via VIX), combining these inputs with LLM-based reasoning (via AWS Bedrock/Anthropic) to produce tailored portfolio recommendations.
+Evaluates macroeconomic indicators (via FRED), asset price trends (using
+50-day moving averages), and market volatility (via VIX), combining
+these inputs with LLM-based reasoning (via AWS Bedrock/Anthropic) to
+produce tailored portfolio recommendations.
 
 
 Market News Agent
 ``````````````````
 
-Uses MongoDB Atlas Vector Search to retrieve semantically relevant financial news per asset, followed by LLM-based sentiment analysis and summarization to highlight key signals.
+Uses MongoDB Atlas Vector Search to retrieve semantically relevant
+financial news per asset, followed by LLM-based sentiment analysis and
+summarization to highlight key signals.
 
-As shown in the architecture diagram, the agents are LLM-powered, tool-augmented workflows, orchestrated using LangGraph. Each follows a structured, deterministic process where tools are invoked in a fixed sequence, ensuring reliable and explainable execution. 
+As shown in the architecture diagram, the agents are LLM-powered,
+tool-augmented workflows, orchestrated using LangGraph. Each follows a
+structured, deterministic process where tools are invoked in a fixed
+sequence, ensuring reliable and explainable execution. 
 
 Agent Tools
 +++++++++++
@@ -199,7 +215,10 @@ Each tool includes a natural-language docstring, which guides the agent in under
 Semantic Vector Storage
 +++++++++++++++++++++++
 
-Finally, all generated insights—market analysis and news sentiment reports—are embedded using the Voyage-Finance-2 model and stored in MongoDB Atlas, enabling semantic retrieval and historical traceability across both workflows.
+Finally, all generated insights—market analysis and news sentiment
+reports—are embedded using the Voyage-Finance-2 model and stored in
+MongoDB Atlas, enabling semantic retrieval and historical traceability
+across both workflows.
 
 Part 3. Market Assistant Agent Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
@@ -207,25 +226,36 @@ Part 3. Market Assistant Agent Service
 .. figure:: /includes/images/industry-solutions/fin-services-reAct-chatbot-arch.svg
    :alt: Market Assistant Agent Service Architecture   
 
-   Figure 4. Market Assistant Agent Service Architecture  
+   Figure 4. Market assistant agent service architecture  
 
-Once the data is ingested and embedded into MongoDB Atlas collections, the Market Assistant Agent uses the ReAct reasoning pattern, implemented through LangGraph, to autonomously interpret user queries, access relevant tools, and generate actionable financial insights.
+Once the data is ingested and embedded into MongoDB Atlas collections,
+the Market Assistant Agent uses the ReAct reasoning pattern, implemented
+through LangGraph, to autonomously interpret user queries, access
+relevant tools, and generate actionable financial insights.
 
-This agent functions as a structured LLM-powered financial advisor, capable of step-by-step reasoning, action execution, and memory retention. Built with LangGraph’s ReAct agent framework, it follows a cycle of:
+This agent functions as a structured LLM-powered financial advisor,
+capable of step-by-step reasoning, action execution, and memory
+retention. Built with LangGraph’s ReAct agent framework, it follows a
+cycle of:
 
 - Reasoning about the query
 - Acting (e.g., calling a tool)
 - Observing the result
 - Iteratively continuing until a final response is reached.
 
-Agent behavior is defined via a customizable agent profile stored in MongoDB, while long-term memory and state persistence are managed using the MongoDB checkpointer, which tracks interaction steps via ``checkpoints_aio`` and ``checkpoint_writes_aio``.
+Agent behavior is defined via a customizable agent profile stored in
+MongoDB, while long-term memory and state persistence are managed using
+the MongoDB checkpointer, which tracks interaction steps via
+``checkpoints_aio`` and ``checkpoint_writes_aio``.
 
 Agent Tools Overview
-`````````````````````
-The Market Assistant Agent relies on a modular toolset, divided into portfolio-specific analysis and general market intelligence:
+````````````````````
+
+The Market Assistant Agent relies on a modular toolset, divided into
+portfolio-specific analysis and general market intelligence:
 
 Portfolio-Specific Tools
-`````````````````````````
+````````````````````````
 
 - ``market_analysis_reports_vector_search_tool``: Retrieves semantically relevant market reports using Voyage-finance-2 embeddings, balancing vector similarity and recency to return both portfolio-wide and asset-specific insights.
 - ``market_news_reports_vector_search_tool``: Finds and summarizes recent news relevant to portfolio assets, including sentiment classification (positive/neutral/negative) and overall news impact.
@@ -234,20 +264,29 @@ Portfolio-Specific Tools
 - ``get_vix_closing_value_tool``: Provides the most recent VIX closing price as a quick indicator of market volatility and risk.
 
 General Financial Intelligence
-```````````````````````````````
+``````````````````````````````
 
 - ``tavily_search_tool``: Complements internal tools by retrieving up-to-date external financial data and news via web search, particularly useful for assets not currently in the portfolio.
 
 Embeddings and Vector Search
-`````````````````````````````
-The system uses the Voyage-finance-2 embedding model—optimized for financial text—to generate semantic representations for reports. These embeddings are stored in:
+````````````````````````````
+
+The system uses the Voyage-finance-2 embedding model—optimized for
+financial text—to generate semantic representations for reports. These
+embeddings are stored in:
 
 - ``reports_market_analysis`` (market reports)
 - ``reports_market_news`` (news articles)
 
-Both collections support semantic querying via MongoDB Atlas Vector Search, enabling high-relevance retrieval across market and news contexts.
+Both collections support semantic querying via MongoDB Atlas Vector
+Search, enabling high-relevance retrieval across market and news
+contexts.
 
-Visit our `GitHub repo: Leafy Bank UI <https://github.com/mongodb-industry-solutions/leafy-bank-ui>`__ and create this demo for yourself by following the instructions. (Note: Each part of the solution has its own repo, you’ll find them in the README as the “Capital Markets” services).
+Visit our `GitHub repo: Leafy Bank UI
+<https://github.com/mongodb-industry-solutions/leafy-bank-ui>`__ and
+create this demo for yourself by following the instructions. (Note: Each
+part of the solution has its own repo, you’ll find them in the README as
+the “Capital Markets” services).
 
 Why MongoDB
 ------------
@@ -291,7 +330,8 @@ Voyage-Finance-2, a finance-specific model it powers:
 
 **MongoDB Checkpointer for Agent Memory** 
 
-The Checkpointer pattern allows AI agents to persist their internal state across interactions, supporting:
+The Checkpointer pattern allows AI agents to persist their internal
+state across interactions, supporting:
 
 - Context retention and long-term reasoning. 
 - Full visibility into past AI decisions, supporting easy audits and regulatory compliance.
@@ -313,10 +353,23 @@ scalability, and intelligence modern finance demands.
 Key Learnings  
 -------------  
   
-- AI powered solutions in investment portfolio management unlock a new level of insights that was not possible before. Portfolio managers are now equipped with the power of AI Agents that can analyze market data, market news, market events and propose insightful and actionable recommendations about portfolio assets and risks in real time.
-- MongoDB is a key enabler in the Agentic AI journey for investment portfolio management. MongoDB’s flexible document model natively stores unstructured and dynamic market data, including news, events and social media data. MongoDB Vector Search retrieves contextual market similarities and correlations, while seamlessly integrating with embeddings and generative AI models.
-- Agentic AI is a fast evolving paradigm in AI-driven decision-making. AI Agents continuously adapt, adjusting their actions and strategies based on real-time market conditions and market fluctuations. AI Agents learn from past experiences, refining their performance over time.
+- AI powered solutions in investment portfolio management unlock a new
+  level of insights that was not possible before. Portfolio managers are
+  now equipped with the power of AI Agents that can analyze market data,
+  market news, market events and propose insightful and actionable
+  recommendations about portfolio assets and risks in real time.
 
+- MongoDB is a key enabler in the Agentic AI journey for investment
+  portfolio management. MongoDB’s flexible document model natively stores
+  unstructured and dynamic market data, including news, events and social
+  media data. MongoDB Vector Search retrieves contextual market
+  similarities and correlations, while seamlessly integrating with
+  embeddings and generative AI models.
+
+- Agentic AI is a fast evolving paradigm in AI-driven decision-making.
+  AI Agents continuously adapt, adjusting their actions and strategies
+  based on real-time market conditions and market fluctuations. AI Agents
+  learn from past experiences, refining their performance over time.
   
 Technologies and Products Used
 ------------------------------

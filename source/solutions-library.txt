@@ -26,11 +26,10 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Discover how MongoDB powers AI agent integration with Vector
-            Search, Time Series collections, Aggregation Pipeline, and
-            Charts for semantic analysis, real-time insights, and
-            adaptive decision-making to enhance portfolio management and
-            risk assessment.
+            Discover how MongoDB powers AI agents with Vector Search,
+            Time Series collections, Aggregation Pipeline, and Charts
+            for portfolio management, risk assessment, and real-time
+            insights.
 
          .. card::
             :headline: Building Continuously Updating RAG Applications
