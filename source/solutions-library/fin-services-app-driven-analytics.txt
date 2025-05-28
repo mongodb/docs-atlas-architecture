@@ -1,2 +1,6 @@
 .. toctree::
    :titlesonly:
+
+   Open Finance Data Store <solutions-library/open-finance-data-store>
+   Fintech Services </solutions-library/hasura-fintech-services>
+

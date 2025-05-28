@@ -39,16 +39,115 @@ kick-start their projects.
 
             Use native stream processing and Vector Search in MongoDB Atlas to
             continuously update, store, and search embeddings through a unified
-            interface. 
+            interface.
 
-      .. Fraud Prevention
-      .. ----------------
+         .. card::
+            :headline: Credit Card Application with Generative AI
+            :url: /solutions-library/credit-card-application-with-generative-ai/
+            :icon: industry_credit_card
+            :icon-alt: Atlas industry_credit_card icon
 
-      .. App-Driven Analytics
-      .. --------------------
+            Learn how the convergence of alternative data, artificial intelligence, and
+            generative AI is reshaping the foundations of credit scoring.
 
-      .. Modernization
-      .. -------------
+         .. card::
+            :headline: Assessing Business Loan Risks with Generative AI
+            :url: /solutions-library/assessing-business-loan-risks-with-generative-ai/
+            :icon: industry_finance
+            :icon-alt: Atlas industry_finance icon
+
+            Learn how generative AI can generate detailed risk assessments and how 
+            MongoDB’s multimodal features enable comprehensive and multidimensional loan risk
+            analysis.
+
+         .. card::
+            :headline: AI-Driven Interactive Banking
+            :url: /solutions-library/ai-driven-interactive-banking/
+            :icon: industry_enterprise
+            :icon-alt: Atlas industry_enterprise icon
+
+            Build an application using MongoDB Atlas Vector Search and large language
+            models to improve the interactivity of banking applications.
+
+      Fraud Prevention
+      ----------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Fraud Detection Accelerator Using AWS SageMaker
+            :url: /solutions-library/fraud-detection-accelerator/
+            :icon: general_security
+            :icon-alt: Atlas general_security icon
+
+            Revolutionize fraud detection in finance with MongoDB Atlas and Amazon
+            SageMaker Canvas. Leverage real-time data and AI for stronger defenses against
+            cybercrime.
+
+         .. card::
+            :headline: Card Fraud Solution Accelerator
+            :url: /solutions-library/card-fraud-solution/
+            :icon: industry_credit_card
+            :icon-alt: Atlas industry_credit_card icon
+
+            Real-time AI/ML fraud detection for Financial Services using MongoDB and 
+            Databricks. Ensure data completeness and instant fraud analysis.
+
+         .. card::
+            :headline: Vector Search Fraud Prevention Accelerator
+            :url: /solutions-library/vector-search-fraud-prevention/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Combine real-time analytics with semantic search by integrating MongoDB Atlas
+            Vector Search with OpenAI-generated embeddings to detect fraud that
+            traditional methods miss.      
+
+      App-Driven Analytics
+      --------------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: MongoDB as the Open Finance Data Store
+            :url: /solutions-library/open-finance-data-store/
+            :icon: industry_finance
+            :icon-alt: Atlas industry_finance icon
+
+            MongoDB powers open finance with flexible data integration, built-in security,
+            and scalability—enabling seamless, compliant, and personalized financial
+            services.
+
+         .. card::
+            :headline: MongoDB and Hasura for Modern Fintech Services
+            :url: /solutions-library/hasura-fintech-services/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Leverage agentic RAG using MongoDB and Dataworkz to enhance customers’
+            shopping experiences with a personalized chatbot.
+
+      Modernization
+      -------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Payments Modernization Solution Accelerator
+            :url: /solutions-library/payments-solution/
+            :icon: industry_credit_card
+            :icon-alt: Atlas industry_credit_card icon
+
+            Learn how to build an operational data layer (ODL) to unlock siloed payment
+            data and power modern applications.
+
+
 
    .. tab:: Manufacturing & Motion
       :tabid: manufacturing
