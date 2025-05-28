@@ -97,7 +97,7 @@ ChatGPT-4o the question differently, focusing on its knowledge of flood data. (S
 3**.) It suggested reviewing FEMA flood maps and local flood history, indicating it might 
 not have the latest information.
 
-.. figure:: /includes/images/industry-solutions/chatGPT-flood-risk-assessment.png
+.. figure:: /includes/images/industry-solutions/GPT-flood-location-specific-answer-png.png
    :figwidth: 750px
    :alt: Figure 3: Asking location-specific flood questions
 
