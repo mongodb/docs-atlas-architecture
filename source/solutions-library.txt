@@ -21,12 +21,24 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: Agentic AI-Powered Investment Portfolio Management
+            :url: https://deploy-preview-239--docs-atlas-architecture.netlify.app/solutions-library/fin-services-agentic-portfolio/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Discover how MongoDB powers AI agent integration with Vector
+            Search, Time Series collections, Aggregation Pipeline, and
+            Charts for semantic analysis, real-time insights, and
+            adaptive decision-making to enhance portfolio management and
+            risk assessment.
+
+         .. card::
             :headline: Building Continuously Updating RAG Applications
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Use native stream processing and vector search in MongoDB Atlas to
+            Use native stream processing and Vector Search in MongoDB Atlas to
             continuously update, store, and search embeddings through a unified
             interface. 
 
@@ -52,6 +64,23 @@ kick-start their projects.
 
    .. tab:: Manufacturing & Motion
       :tabid: manufacturing
+
+      App-Driven Analytics
+      --------------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Elevate Flight Operations with Real-Time Analytics
+            :url: https://deploy-preview-222--docs-atlas-architecture.netlify.app/solutions-library/flightmanagement/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Transform flight operations with powerful real-time
+            analytics. Cut costs, minimize delays, and boost efficiency
+            through intelligent data monitoring.
 
       Gen AI 
       ------
@@ -126,6 +155,16 @@ kick-start their projects.
             MongoDB Atlas with Microsoft Azure IoT.
 
          .. card::
+            :headline: Power Smart Meter Analysis with MongoDB
+            :url: https://deploy-preview-214--docs-atlas-architecture.netlify.app/solutions-library/smart-meter/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            MongoDB provides a scalable platform for smart meter
+            systems, enabling real-time data collection, time series
+            analysis, and anomaly detection. 
+
+         .. card::
             :headline: Real-Time Audio-Based AI Diagnostics
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
             :icon: general_content_play
@@ -133,7 +172,16 @@ kick-start their projects.
 
             Find out how AI is being used in renewable energy by
             leveraging MongoDB Atlas Vector Search to drive efficiency
-            through real-time, audio diagnostics.
+            through real-time, audio diagnostics. 
+
+         .. card::
+            :headline: Real-Time IoT Analytics
+            :url: https://deploy-preview-234--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-rocket-launch/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Learn how to monitor a rocket launch using MongoDB Atlas and
+            real-time IoT data.
       
       Modernization 
       -------------
@@ -152,8 +200,25 @@ kick-start their projects.
             data, optimize operations, and enable real-time insights in
             a Unified Namespace.
 
-      .. App-Driven Analytics
-      .. --------------------
+   .. tab:: Healthcare
+      :tabid: healthcare
+
+      Interoperability
+      ----------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: AI-Powered Healthcare with MongoDB & Microsoft
+            :url: https://deploy-preview-238--docs-atlas-architecture.netlify.app/solutions-library/healthcare-asset-ai-healthcare/
+            :icon: atlas_search
+            :icon-alt: Atlas atlas_search icon
+
+            MongoDB and Microsoft deliver AI-powered solutions for
+            breast cancer care, unifying data and enabling predictive
+            modeling, intelligent chatbots, and analytics.     
 
    .. tab:: Insurance
       :tabid: insurance
@@ -174,6 +239,15 @@ kick-start their projects.
             Discover how MongoDB Atlas Vector Search and AI convert
             insurance call recordings into searchable insights, enabling
             faster, more efficient customer service.
+
+         .. card::
+            :headline: Automating Digital Underwriting with Machine Learning
+            :url: https://deploy-preview-235--docs-atlas-architecture.netlify.app/solutions-library/digital-underwriting/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Leverage Machine Learning with real-time data processing and
+            automate digital underwriting.    
 
       Gen AI
       ------
@@ -209,7 +283,7 @@ kick-start their projects.
             :icon-alt: Atlas mdb_vector_search icon
 
             Discover how to combine Atlas Vector Search and large language
-            models (LLMs) to streamline the claim adjustment process. 
+            models (LLMs) to streamline the claim adjustment process.    
 
    .. tab:: Media
       :tabid: media
@@ -295,6 +369,14 @@ kick-start their projects.
             Enable real-time order tracking and management across all
             retail channels using MongoDB Atlas.
 
+         .. card::
+            :headline: Real-Time Product Tracking
+            :url: https://deploy-preview-236--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-rfid-retail/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Learn how to build a real-time inventory management system
+            with RFID and MongoDB Atlas.
 
       Gen AI
       ------
@@ -326,14 +408,24 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Discover how Agentic RAG creates seamless and natural interactions with customers, enhancing their shopping experience.
-
+            Discover how Agentic RAG creates seamless and natural
+            interactions with customers, enhancing their shopping
+            experience.
+            
       Personalization
       ---------------
 
       .. card-group::
          :columns: 2
          :style: extra-compact
+
+         .. card::
+            :headline: AI-Driven Real-Time Pricing with MongoDB and Vertex AI
+            :url: https://deploy-preview-199--docs-atlas-architecture.netlify.app/solutions-library/AIDriven-real-time%20pricing/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Leverage real-time data insights to optimize prices and gain a competitive edge.
 
          .. card::
             :headline: Dynamic Pricing
@@ -363,21 +455,13 @@ kick-start their projects.
             Build a generative AI ops architecture with MongoDB and enable
             network introspection.
 
-.. .. tab:: Healthcare
-   .. :tabid: healthcare
-
-   .. Interoperability
-   .. ----------------
-
-
 .. toctree::
    :titlesonly:
 
    Financial Services </solutions-library/financial-services>
    Manufacturing & Motion </solutions-library/manufacturing>
+   Healthcare  <solutions-library/healthcare>
    Insurance </solutions-library/insurance>
    Media </solutions-library/media>
    Retail </solutions-library/retail>
    Telecommunications </solutions-library/telco>
-
-.. Healthcare  <solutions-library/healthcare>

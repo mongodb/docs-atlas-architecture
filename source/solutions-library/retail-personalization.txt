@@ -5,4 +5,5 @@ Retail Personalization
 .. toctree::
    :titlesonly:
 
-   Dynamic Pricing </solutions-library/retail-dynamic-pricing.txt>
+   AI-Driven Real-Time Pricing </solutions-library/AIDriven-real-time pricing>   
+   Dynamic Pricing </solutions-library/retail-dynamic-pricing>
