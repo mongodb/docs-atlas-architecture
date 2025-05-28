@@ -21,7 +21,7 @@ Optimizing Generative AI Applications with Fireworks AI and MongoDB for Peak Per
 Optimize AI with MongoDB & Fireworks AI: Faster inference, reduced costs, and efficient RAG applications.
 
 **Use cases:** `Gen AI
-<https://www.mongodb.com/use-cases/artificial-intelligence>`__, Model Performance Tuning
+<https://www.mongodb.com/use-cases/artificial-intelligence>`__, `Model Performance Tuning <https://www.mongodb.com/developer/products/mongodb/guide-to-optimizing-mongodb-performance/>`__
 
 **Industries:** `Financial Services
 <https://www.mongodb.com/industries/financial-services>`__
@@ -286,8 +286,6 @@ Here’s how to leverage this platform and tool:
    :alt: LLM Fine Tuning Process
 
    Figure 2. LLM Fine Tuning Process
-
-*Note: In the diagram LLM refers to LLM/SLM; the 8B model is specifically an SLM.*
 
 The fine-tuning process starts with the collection of relevant,
 task-specific data. As shown in Fig 1, MongoDB Atlas, being a
