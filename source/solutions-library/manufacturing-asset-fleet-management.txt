@@ -176,7 +176,7 @@ checkpointer stores intermediate states of the agent’s actions and/or
 reasoning. This memory allows the agent to seamlessly pause and  
 resume operations.  
   
-**Example of short term memory: Telemetry data stored in time series  
+**Example of short-term memory: Telemetry data stored in time series  
 collections**
   
 .. code-block:: javascript  
@@ -198,7 +198,7 @@ This is where the agent stores accumulated knowledge over time. This
 may include patterns, trends, logs, historical recommendations, and  
 decisions.  
   
-**Example of long term memory: Historical issues with connected  
+**Example of long-term memory: Historical issues with connected  
 vehicles vectorized and stored in MongoDB**
    
 .. code-block:: javascript  
