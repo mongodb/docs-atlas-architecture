@@ -67,7 +67,7 @@ Reference Architectures
 The reference architecture illustrates how the Leafy Hospital solution
 integrates various components across three main technological areas:    
   
-1. **Predictive AI layer** (bottom yellow box): 
+1. **Predictive AI layer** (bottom yellow box) 
   
    - Fabric Data Science processes mammogram images and clinical data.
 
@@ -80,7 +80,7 @@ integrates various components across three main technological areas:
 
    - Outputs operational data to MongoDB Atlas.
   
-#. **Generative AI layer** (middle purple box): 
+#. **Generative AI layer** (middle purple box) 
   
    - Azure AI Studio integrates with MongoDB Atlas on Azure.
 
@@ -92,7 +92,7 @@ integrates various components across three main technological areas:
 
    - Facilitates natural language interactions with the system.
   
-#. **Advanced analytics layer** (middle green box): 
+#. **Advanced analytics layer** (middle green box) 
   
    - Combines Fabric Power BI and Fabric OneLak.
 
