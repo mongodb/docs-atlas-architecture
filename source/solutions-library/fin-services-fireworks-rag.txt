@@ -519,7 +519,8 @@ collaboration include:
 Organizations adopting this strategy can achieve accelerated AI performance, resource savings, and future-proof solutions—driving innovation and competitive advantage across different sectors.
 
 Further Reading
-````````````````
+~~~~~~~~~~~~~~~~
+
 How Fireworks AI's platform accelerates inference speeds and throughput:
 
 - `FireAttention V2 <https://fireworks.ai/blog/fireattention-v2-long-context-inference>`__: This innovation improves the efficiency of handling long contexts during online inference, achieving up to 12 times faster processing.  
