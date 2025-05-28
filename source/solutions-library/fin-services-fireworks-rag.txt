@@ -10,7 +10,7 @@ Optimizing Generative AI Applications with Fireworks AI and MongoDB for Peak Per
 
 .. meta:: 
    :keywords: RAG, Atlas
-   :description: Optimize AI with MongoDB & Fireworks AI: Faster inference, reduced costs, and efficient RAG applications.
+   :description: Learn how MongoDB and Fireworks AI optimize RAG applications, enhancing latency, reducing TCO, and accelerating AI with advanced data management and model fine-tuning techniques.
 
 .. contents:: On this page
    :local:
