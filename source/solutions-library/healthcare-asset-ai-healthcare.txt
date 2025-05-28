@@ -130,7 +130,7 @@ Building the Solution
 ---------------------  
   
 The Leafy Hospital demo showcases the integration of MongoDB Atlas with
-Microsoft's AI and analytics services through several key components:  
+Microsoft's AI and analytics services through several key components.  
   
 Data Architecture and Flow  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~  
@@ -165,7 +165,7 @@ manual analysis, which is likely to bring in manual errors. `Microsoft
 Fabric Data Science
 <https://learn.microsoft.com/en-us/fabric/data-science/data-science-overview>`__
 presents a robust platform to train and experiment with ML Models and
-manage MLOps cycles. In this solution, we trained two models.  
+manage MLOps cycles. In this solution, we trained two models: 
   
 1. **BI-RADS prediction:**    
 
@@ -312,7 +312,7 @@ including patient numbers, appointment status, and clinic distribution.
    :figwidth: 1200px  
    :alt: Atlas Charts Dashboard  
   
-   Figure 5. Atlas Charts  
+   Figure 5. Operational dashboard with Atlas Charts  
   
 Then, Power BI integration extends the analytics capabilities by
 enabling enterprise-wide data analysis and advanced visualizations.
@@ -387,7 +387,8 @@ MongoDB Developer Data Platform
 
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__   
   
-**Partner technologies:**  
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~  
   
 - `Microsoft Azure <https://azure.microsoft.com/>`__  
 
