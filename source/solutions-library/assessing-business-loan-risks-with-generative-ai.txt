@@ -124,15 +124,17 @@ chatbot relies on loan officers repeatedly prompting and augmenting the context 
 relevant information. This can be time-consuming and impractical due to the lack of prompt
 engineering skills or the lack of data needed.
 
-Below is a simplified solution of how gen AI can be used to augment the risk 
-analysis process and fill the knowledge gap of the |llm|. This demo uses MongoDB as an 
-`operational data store <https://www.mongodb.com/resources/basics/implementing-an-operational-data-layer>`_ 
-leveraging Geospatial Queries to discover floods within five kilometers of the proposed 
-business location. The prompting for this risk analysis highlights the analysis of the 
-flood risk assessment rather than the financial projections.
+Below is a simplified solution of how gen AI can be used to augment the risk analysis
+process and fill the knowledge gap of the |llm|. This demo uses MongoDB as an `operational
+data store
+<https://www.mongodb.com/resources/basics/implementing-an-operational-data-layer>`_
+leveraging `geospatial queries <https://www.mongodb.com/docs/manual/geospatial-queries/>`_
+to discover floods within five kilometers of the proposed business location. The prompting
+for this risk analysis highlights the analysis of the flood risk assessment rather than
+the financial projections.
 
 A similar test was performed on `Llama 3 <https://llama.meta.com/llama3/>`_, hosted by our 
-`MAAP partner <https://www.mongodb.com/services/consulting/ai-applications-program>`_ 
+`MAAP <https://www.mongodb.com/services/consulting/ai-applications-program>`_  partner  
 `Fireworks.AI <https://fireworks.ai/>`_. It tested the model’s knowledge of flood data, 
 showing a similar knowledge gap as ChatGPT-4o. Interestingly, rather than providing 
 misleading answers, Llama 3 provided a “hallucinated list of flood data,” but highlighted 
