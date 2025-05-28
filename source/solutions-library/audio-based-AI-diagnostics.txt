@@ -103,7 +103,7 @@ Reference Architectures
 
 **With MongoDB** 
 
-The solution demo is divided in two parts:
+The solution demo is divided in two parts.
 
 Audio Preparation
 ~~~~~~~~~~~~~~~~~
@@ -177,7 +177,7 @@ Building the Solution
       Create a file called .env in the main directory alongside the add_audio.py file
       and add your atlas connection string in the following format:
 
-      MONGO_CONNECTION_STRING="mongodb+srv://connectionstringfromatlas"
+      - MONGO_CONNECTION_STRING="mongodb+srv://connectionstringfromatlas"
 
       Then copy this file into the nodeUI directory.
 
