@@ -131,7 +131,7 @@ crawl. Fireworks AI’s **FireAttention V2** tackles this, delivering 12x
 faster processing for long-context tasks.
 
 How it works:
-~~~~~~~~~~~~~~
+`````````````
 
 - Optimized Attention Scaling: Reduces computational overhead when handling lengthy inputs.
 - Multi-Host Deployment: Distributes workloads efficiently across GPUs.
@@ -285,7 +285,7 @@ Here’s how to leverage this platform and tool:
 .. figure:: /includes/images/industry-solutions/fin-services-LLM-fine-tuning.drawio.svg
    :alt: LLM Fine Tuning Process
 
-   Figure 2. LLM Fine Tuning Process
+   Figure 2. LLM/SLM Fine Tuning Process
 
 The fine-tuning process starts with the collection of relevant,
 task-specific data. As shown in Fig 1, MongoDB Atlas, being a
@@ -448,7 +448,7 @@ of the alternative credit card product recommendation process, we
 observed a tremendous improvement in the response time of the process
 using the fine-tuned SLM:
 
-1. **Response Time Improvement**: Originally, the response time with a
+**1. Response Time Improvement**: Originally, the response time with a
 large LLM would be around 5 seconds. By using an SLM, this can be
 reduced to approximately 19x reduction in latency.
 
@@ -505,9 +505,8 @@ reduced to approximately 19x reduction in latency.
      - 0.0473
      - 0.1502
 
-2. **Memory Reduction**:  LLMs typically require substantial memory, often in the range of  8x80GB VRAM. A SLM can operate efficiently with around 16 GB VRAM of memory, leading to a 97.5% reduction in memory usage.
-
-3. **Hardware Reduction**: Deploying LLMs often necessitates high-end GPUs or multiple servers. With an SLM, the hardware requirements can be significantly reduced, potentially allowing deployment on standard CPUs or a single server, leading to a drastic reduction in hardware costs.
+**2. Memory Reduction**:  LLMs typically require substantial memory, often in the range of  8x80GB VRAM. A SLM can operate efficiently with around 16 GB VRAM of memory, leading to a 97.5% reduction in memory usage.
+**3. Hardware Reduction**: Deploying LLMs often necessitates high-end GPUs or multiple servers. With an SLM, the hardware requirements can be significantly reduced, potentially allowing deployment on standard CPUs or a single server, leading to a drastic reduction in hardware costs.
 
 Conclusion
 ~~~~~~~~~~
