@@ -367,12 +367,13 @@ Features Covered
 
 **Notification microservices:** 
 
-- {+kafka+} source: Notifications are being down-streamed to external systems and users via {+kafka+} 
+- {+kafka+} source: Notifications are being down-streamed to external systems and users via Kafka 
 
 - `Change streams <https://www.mongodb.com/basics/change-streams>`__: Notifications are
   being captured by change streams and pushed via Websockets
 
 **Reports:** 
+
 - Materialized views: Materialized views are built to preprocess and clear sensitive data for reporting 
 
 - `Charts <https://www.mongodb.com/products/charts>`__
