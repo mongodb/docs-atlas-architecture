@@ -179,7 +179,7 @@ functions, and code can be found in this `solution repository <https://github.co
 .. procedure::
    :style: normal
 
-   .. step:: Train Your ML Model
+   .. step:: Train your ML model
 
       You can use MongoDB as a feature store to train ML models, and
       once models are trained, those binaries can be converted and
@@ -187,26 +187,26 @@ functions, and code can be found in this `solution repository <https://github.co
       `notebook <https://github.com/mongodb-partners/Azure-IIoT/blob/main/ml-model/fraud-detection.ipynb>`__ to train your ML model, and once your models are trained, use
       `this model <https://github.com/mongodb-partners/Azure-IIoT/blob/main/azure-functions/fault_prediction.py#L61>`__ to make predictions using Azure functions.
 
-   .. step:: Set Up Azure IoT Hub
+   .. step:: Set up Azure IoT hub
 
       We use Azure IoT Hub to connect, monitor, provision, and configure
       IoT devices. `Use this link <https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal#create-an-iot-hub>`__ to set up IoT Hub in your Azure
       account, and when you’re ready, `register <https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal#register-a-new-device-in-the-iot-hub>`__ a new device.
 
 
-   .. step:: Simulate IoT Data
+   .. step:: Simulate IoT data
 
       To generate data for our sample solution, we built `this web app <https://github.com/mongodb-partners/Azure-IIoT/tree/main/web-app>`__ to
       simulate data flow to Azure IoT.
 
-   .. step:: Serve Data to Azure Stream Analytics
+   .. step:: Serve data to Azure Stream Analytics
 
       Once data is in Azure IoT Hub, it can then be served to Stream
       Analytics for filtering, then pushed into MongoDB. Follow these
       `instructions <https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-quick-create-portal#create-a-stream-analytics-job>`__ to 
       set up a Stream Analytics job, then add IoT Hub as an input for that job.
 
-   .. step:: Use Azure Functions to Push Data to MongoDB Atlas
+   .. step:: Use Azure functions to push data to MongoDB Atlas
 
       Now that data is in Stream Analytics, you can push it to a
       time-series collection in MongoDB Atlas using this `function <https://github.com/mongodb-partners/Azure-IIoT/blob/main/azure-functions/telemetry_data.py>`__ to
@@ -214,7 +214,7 @@ functions, and code can be found in this `solution repository <https://github.co
       your machine learning model to get failure inferences using this
       `function <https://github.com/mongodb-partners/Azure-IIoT/blob/main/azure-functions/fault_prediction.py>`__.
 
-   .. step:: Use MongoDB Atlas to Turn Data into Insights
+   .. step:: Use MongoDB Atlas to turn data into insights
 
       Once your machine failure data is in MongoDB Atlas, you can easily
       put it in the hands of users through MongoDB’s platform services.
