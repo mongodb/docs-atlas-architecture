@@ -91,6 +91,7 @@ The functional features listed above can be implemented by a few architectural c
 These include:
 
 1. **Data sourcing** 
+   
    - Producer apps: The producer mobile app simulates the generation of live transactions. 
    
    - Legacy data source: The SQL external data source is used for customer demographics. 
