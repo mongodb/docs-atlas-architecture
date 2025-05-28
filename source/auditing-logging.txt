@@ -22,7 +22,7 @@ Features for {+service+} Auditing and Logging
 Auditing
 ~~~~~~~~
 
-Available on ``M10+`` {+clusters+}, database auditing lets you track system 
+Available on ``M10+`` {+clusters+}, database auditing lets you track system
 activity for deployments with
 multiple users. As an |service| administrator, you can:
 
@@ -34,7 +34,7 @@ multiple users. As an |service| administrator, you can:
   - source IP addresses
   - timestamps for successful and failed attempts
 
-- :atlas:`Configure a JSON-formatted audit filter 
+- :atlas:`Configure a JSON-formatted audit filter
   </database-auditing/#configure-a-custom-auditing-filter>` to
   customize MongoDB auditing
   and select the actions, database users, |service| roles, and |ldap| groups
@@ -42,9 +42,9 @@ multiple users. As an |service| administrator, you can:
   skip using the managed {+atlas-ui+} auditing filter builder and configure
   your own tailored filter of event auditing. For a full list of
   events you can configure for auditing, and for a list of examples,
-  see :manual:`MongoDB auditing </core/auditing>` and :atlas:`Example Auditing Filters 
+  see :manual:`MongoDB auditing </core/auditing>` and :atlas:`Example Auditing Filters
   </database-auditing/#example-auditing-filters>`.
-  
+
   You can :manual:`configure manual auditing </core/auditing>` of most of the
   documented :manual:`system event actions </reference/audit-message/mongo/#audit-event-actions--details--and-results>`
   in |service|. Granular MongoDB database auditing allows you to track
@@ -57,20 +57,20 @@ multiple users. As an |service| administrator, you can:
 Accessing Audit Logs
 ~~~~~~~~~~~~~~~~~~~~
 
-You can use the {+atlas-cli+}, {+atlas-admin-api+}, or {+atlas-ui+} for the following auditing activities: 
+You can use the {+atlas-cli+}, {+atlas-admin-api+}, or {+atlas-ui+} for the following auditing activities:
 
 - :ref:`View and download audit logs <set-up-database-auditing>` to track :ref:`system event actions <audit-action-details-results>`
-  for deployments with multiple users. {+service+} administrators can configure a custom auditing filter to 
+  for deployments with multiple users. {+service+} administrators can configure a custom auditing filter to
   choose the actions, database users, {+service+} roles, and |ldap| groups that they want to audit.
 
-- :ref:`View and download MongoDB logs <mongodb-logs>` to track log events for your deployment, including incoming connections, 
+- :ref:`View and download MongoDB logs <mongodb-logs>` to track log events for your deployment, including incoming connections,
   commands run, and issues encountered. Generally, log messages are useful for diagnosing issues, monitoring your deployment, and tuning performance.
 
 - :ref:`View project and organization events <view-activity-feed>` in the :guilabel:`Project Activity Feed`
-  and :guilabel:`Organization Activity Feed`. These activity feeds list all events at the organization or project level, including 
-  changes related to {+service+} access, alert configurations and monitoring, billing, and more.  
+  and :guilabel:`Organization Activity Feed`. These activity feeds list all events at the organization or project level, including
+  changes related to {+service+} access, alert configurations and monitoring, billing, and more.
 
-- :ref:`View database authentication attempts <access-tracking>` that users make against your {+cluster+} in your access logs 
+- :ref:`View database authentication attempts <access-tracking>` that users make against your {+cluster+} in your access logs
   (i.e. :guilabel:`Database access history` in the {+atlas-ui+}).
   |service| logs both successful and unsuccessful authentication attempts,
   including the timestamp of each attempt and which user tried to authenticate.
@@ -88,8 +88,8 @@ the |json|-formatted output to your external tools:
   use the {+atlas-admin-api+} endpoints for :oas-atlas-tag:`Monitoring and Logs </Monitoring-and-Logs>`
   and :oas-atlas-tag:`Project and Organization Events </Events>`.
 - To retrieve deployment logs, use the :ref:`atlas deployment logs <atlas-deployments-logs>`
-  command in the {+atlas-cli+}. 
-  
+  command in the {+atlas-cli+}.
+
 .. _arch-center-auditing-logging-recs:
 
 Recommendations for {+service+} Auditing and Logging
@@ -118,15 +118,15 @@ The following recommendations apply to all :ref:`deployment paradigms
 <arch-center-paradigms>`.
 
 We recommend that you :atlas:`set up database auditing </database-auditing>`
-when you provision your {+clusters+}. To perform a full audit, 
-you can use a combination of :manual:`audit logs </reference/audit-message/>`, 
-:manual:`MongoDB log messages </reference/log-messages/>`, 
+when you provision your {+clusters+}. To perform a full audit,
+you can use a combination of :manual:`audit logs </reference/audit-message/>`,
+:manual:`MongoDB log messages </reference/log-messages/>`,
 and :ref:`the project and organization activity feed <view-activity-feed>`.
 
-Auditing puts additional load on your {+clusters+} and increases costs. 
-To optimize {+cluster+} performance and minimize costs, we recommend that you 
-limit the number of users that you audit, and disable auditing in development environments.  
-Certain industries, such as healthcare and financial services, may opt to keep 
+Auditing puts additional load on your {+clusters+} and increases costs.
+To optimize {+cluster+} performance and minimize costs, we recommend that you
+limit the number of users that you audit, and disable auditing in development environments.
+Certain industries, such as healthcare and financial services, may opt to keep
 auditing enabled in development environments for compliance reasons.
 
 We recommend that you audit the following events at a minimum:
@@ -144,29 +144,29 @@ We recommend that you audit the following events at a minimum:
 - Altering security
 - Running database start and stop commands
 
-By default, audit log messages are returned in a format designed by MongoDB, 
-called the :manual:`mongo schema </reference/audit-message/mongo/>`. 
+By default, audit log messages are returned in a format designed by MongoDB,
+called the :manual:`mongo schema </reference/audit-message/mongo/>`.
 Audit log messages that follow the ``mongo`` schema always include the following information:
 
 - Action type (``atype``)
-- Timestamp 
-- Client connection ID (UUID) 
+- Timestamp
+- Client connection ID (UUID)
 - Client IP address and port number
 - Incoming connection IP address and port numbe
 - Username(s)
 - User authentication database(s)
 - User role(s)
 - User role database(s)
-- ``param`` document containing specific details for the event 
+- ``param`` document containing specific details for the event
 - Result value or error code
 
-For a full list of audit action types and their associated ``param`` details and ``result`` values, 
-see :manual:`mongo Schema Audit Messages </reference/audit-message/mongo/>`. 
+For a full list of audit action types and their associated ``param`` details and ``result`` values,
+see :manual:`mongo Schema Audit Messages </reference/audit-message/mongo/>`.
 
 Automation Examples: {+service+} Auditing and Logging
 -----------------------------------------------------
 
-.. include:: /includes/complete-examples.rst
+.. include:: /includes/complete-examples-terraform.rst
 
 The following examples show how to retrieve and download logs and configure auditing
 using |service| :ref:`tools for automation <arch-center-automation>`.
@@ -183,19 +183,19 @@ In addition to the following examples, see the blogpost
       ~~~~~~~~~~~~~~~~~~~~~~~~
 
       The following document defines an audit filter that restricts audits to only the
-      authentication operations that occur against the ``test`` database. 
+      authentication operations that occur against the ``test`` database.
       To learn more, see :manual:`Configure Audit Filters </tutorial/configure-audit-filters/>`.
 
       .. include:: /includes/examples/cli/cli-example-audit-filter.rst
 
       To enable an audit filter, run the :ref:`atlas auditing update <atlas-auditing-update>`
       command with the ``--enabled`` flag and specify the audit filter document in single quotes
-      to pass the document as a string: 
+      to pass the document as a string:
 
       .. include:: /includes/examples/cli/cli-example-audit-filter-use.rst
 
-      The following {+atlas-cli+} command enables an audit filter that is defined in 
-      the specified |json| configuration file: 
+      The following {+atlas-cli+} command enables an audit filter that is defined in
+      the specified |json| configuration file:
 
       .. include:: /includes/examples/cli/cli-example-audit-logs-config-file.rst
 
@@ -203,8 +203,8 @@ In addition to the following examples, see the blogpost
       ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
       To update your project's audit configuration, use the :ref:`atlas auditing update <atlas-auditing-describe>`
-      command and specify the new audit filter. The following command replaces the existing 
-      audit filter configuration with a new filter that audits all authentication events for known users in the project: 
+      command and specify the new audit filter. The following command replaces the existing
+      audit filter configuration with a new filter that audits all authentication events for known users in the project:
 
       .. include:: /includes/examples/cli/cli-example-audit-logs-known-users.rst
 
@@ -220,31 +220,31 @@ In addition to the following examples, see the blogpost
       ~~~~~~~~~~~~~
 
       Each |mongod| and |mongos| instance in a cluster outputs its own
-      :manual:`MongoDB log </reference/log-messages/>` and audit log messages 
-      with potentially different contents than other instances. 
-      You can view these log messages in the {+atlas-cli+} using the 
-      :ref:`atlas deployment logs <atlas-deployments-logs>` command. 
+      :manual:`MongoDB log </reference/log-messages/>` and audit log messages
+      with potentially different contents than other instances.
+      You can view these log messages in the {+atlas-cli+} using the
+      :ref:`atlas deployment logs <atlas-deployments-logs>` command.
 
-      To retrieve audit log entries for a |mongod| instance in your cluster, 
-      provide the |mongod| hostname and specify ``mongodb-audit-log.gz`` as the name of the audit log file: 
+      To retrieve audit log entries for a |mongod| instance in your cluster,
+      provide the |mongod| hostname and specify ``mongodb-audit-log.gz`` as the name of the audit log file:
 
       .. include:: /includes/examples/cli/cli-example-retrieve-audit-logs-mongod.rst
 
-      To retrieve audit log entries for a |mongos| instance in a sharded cluster deployment, 
-      provide the |mongos| hostname and specify ``mongos-audit-log.gz`` as the name of the audit log file: 
+      To retrieve audit log entries for a |mongos| instance in a sharded cluster deployment,
+      provide the |mongos| hostname and specify ``mongos-audit-log.gz`` as the name of the audit log file:
 
       .. include:: /includes/examples/cli/cli-example-retrieve-audit-logs-mongos.rst
 
-      To retrieve :manual:`MongoDB log messages </reference/log-messages/>`, provide the hostname of your |mongod| or |mongos| instance, 
+      To retrieve :manual:`MongoDB log messages </reference/log-messages/>`, provide the hostname of your |mongod| or |mongos| instance,
       and specify the name of the log file as ``mongodb.gz`` or ``mongos.gz``, respectively:
 
       .. include:: /includes/examples/cli/cli-example-retrieve-logs.rst
 
       You can also use the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command to view the access log for
       a node or cluster.
-      The access log is a |json|-formatted list of all authentication requests against your specified node or cluster. 
-      To retrieve the access log, run the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command 
-      and specify the hostname or {+cluster+} name of the target node or {+cluster+}: 
+      The access log is a |json|-formatted list of all authentication requests against your specified node or cluster.
+      To retrieve the access log, run the :ref:`atlas accessLogs list <atlas-accessLogs-list>` command
+      and specify the hostname or {+cluster+} name of the target node or {+cluster+}:
 
       .. include:: /includes/examples/cli/cli-example-retrieve-access-logs.rst
 
@@ -253,21 +253,21 @@ In addition to the following examples, see the blogpost
 
       Each |mongod| and |mongos| instance in a cluster has its own
       :manual:`MongoDB log </reference/log-messages/>` and audit log
-      with potentially different contents than other instances. 
-      You can download each log as a compressed file using the 
-      :ref:`atlas logs download <atlas-deployments-logs>` {+atlas-cli+} command. 
+      with potentially different contents than other instances.
+      You can download each log as a compressed file using the
+      :ref:`atlas logs download <atlas-deployments-logs>` {+atlas-cli+} command.
 
-      To download the audit log for a |mongod| instance in your cluster, 
-      provide the |mongod| hostname and the audit log file name ``mongodb-auditlog.gz`` as arguments: 
+      To download the audit log for a |mongod| instance in your cluster,
+      provide the |mongod| hostname and the audit log file name ``mongodb-auditlog.gz`` as arguments:
 
       .. include:: /includes/examples/cli/cli-example-download-audit-logs-mongod.rst
 
-      To download the audit log for a |mongos| instance in a sharded cluster deployment, 
-      provide the |mongos| hostname and the audit log file name ``mongos-auditlog.gz`` as arguments: 
+      To download the audit log for a |mongos| instance in a sharded cluster deployment,
+      provide the |mongos| hostname and the audit log file name ``mongos-auditlog.gz`` as arguments:
 
       .. include:: /includes/examples/cli/cli-example-download-audit-logs-mongos.rst
 
-      To download the :manual:`MongoDB log </reference/log-messages/>` for a |mongod| or |mongos| instance, 
+      To download the :manual:`MongoDB log </reference/log-messages/>` for a |mongod| or |mongos| instance,
       provide as arguments the hostname of the instance and the log file names ``mongodb.gz`` or ``mongos.gz``, respectively:
 
       .. include:: /includes/examples/cli/cli-example-download-logs.rst
@@ -277,7 +277,7 @@ In addition to the following examples, see the blogpost
 
       You can use the following {+atlas-cli+} commands to return alerts triggered by
       events for your project or organization. {+service+} provides alerts such as
-      :alert:`Replica set has no primary` and :alert:`User joined the project` by default. 
+      :alert:`Replica set has no primary` and :alert:`User joined the project` by default.
       These events provide a record of significant activities and changes within the project or organization,
       including significant database, billing, or security activities or status changes.
       To customize which events trigger alerts for your project and organization, see :ref:`configure-alerts`.
@@ -287,15 +287,15 @@ In addition to the following examples, see the blogpost
 
       You can use the following {+atlas-cli+} commands to return project or organization events from your
       :guilabel:`Project Activity Feed` or :guilabel:`Organization Activity Feed`.
-      :alert:`Replica set has no primary` and :alert:`User joined the project` by default. 
+      :alert:`Replica set has no primary` and :alert:`User joined the project` by default.
 
-      To return all events for your organization, use the :ref:`atlas events organizations list <atlas-events-organizations-list>` 
+      To return all events for your organization, use the :ref:`atlas events organizations list <atlas-events-organizations-list>`
       command and specify your organization ID. The following command returns a JSON-formatted list of events for the
       organization with the ID ``5dd5a6b6f10fab1d71a58495``:
 
       .. include:: /includes/examples/cli/cli-example-retrieve-logs-org.rst
 
-      To return all events for your project, use the :ref:`atlas events projects list <atlas-events-projects-list>` 
+      To return all events for your project, use the :ref:`atlas events projects list <atlas-events-projects-list>`
       command and specify your project ID. The following command returns a JSON-formatted list of events for the
       project with the ID ``64ac57bfe9810c0263e9d655``:
 
@@ -306,7 +306,7 @@ In addition to the following examples, see the blogpost
 
       You can use the following {+atlas-cli+} commands to return alerts triggered by
       events for your project or organization. {+service+} provides alerts such as
-      :alert:`Replica set has no primary` and :alert:`User joined the project` by default. 
+      :alert:`Replica set has no primary` and :alert:`User joined the project` by default.
       These events provide a record of significant activities and changes within the project or organization,
       including significant database, billing, or security activities or status changes.
       To customize which events trigger alerts for your project and organization, see :ref:`configure-alerts`.
@@ -316,15 +316,15 @@ In addition to the following examples, see the blogpost
 
       You can use the following {+atlas-cli+} commands to return project or organization events from your
       :guilabel:`Project Activity Feed` or :guilabel:`Organization Activity Feed`.
-      :alert:`Replica set has no primary` and :alert:`User joined the project` by default. 
+      :alert:`Replica set has no primary` and :alert:`User joined the project` by default.
 
-      To return all events for your organization, use the :ref:`atlas events organizations list <atlas-events-organizations-list>` 
+      To return all events for your organization, use the :ref:`atlas events organizations list <atlas-events-organizations-list>`
       command and specify your organization ID. The following command returns a JSON-formatted list of events for the
       organization with the ID ``5dd5a6b6f10fab1d71a58495``:
 
       .. include:: /includes/examples/cli/cli-example-retrieve-logs-org.rst
 
-      To return all events for your project, use the :ref:`atlas events projects list <atlas-events-projects-list>` 
+      To return all events for your project, use the :ref:`atlas events projects list <atlas-events-projects-list>`
       command and specify your project ID. The following command returns a JSON-formatted list of events for the
       project with the ID ``64ac57bfe9810c0263e9d655``:
 
@@ -332,7 +332,7 @@ In addition to the following examples, see the blogpost
 
    .. tab:: Terraform
       :tabid: Terraform
- 
+
       The following example demonstrates how to enable auditing for
       your deployment. Before you can create resources with Terraform,
       you must:
