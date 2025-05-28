@@ -70,6 +70,13 @@ external service integration.*
 .. figure:: /includes/images/industry-solutions/hasura-fintech-architecture.png
     :alt: Hasura DDN with MongoDB architecture diagram
 
+This architecture diagram shows the key components and their interactions within the
+reference implementation. Fintech client applications connect through a global load
+balancer to multiple Hasura DDN regions, which in turn interact with MongoDB clusters
+deployed across different geographical regions. The architecture also incorporates
+centralized authentication and access control, AI and analytics capabilities, global
+compliance and security measures, and integration with external financial services.
+
 Key components of the architecture:
 
 - Data layer: MongoDB clusters for primary data storage
@@ -88,40 +95,41 @@ regulatory requirements without disruptive schema migrations. For optimal perfor
 model employs strategic decisions around data organization.
 
 .. code-block:: json
-    
-    // Example Customer Document with Embedded Account Information
-    {
+   :copyable: true
+  
+  // Example Customer Document with Embedded Account Information
+  {
     "_id": ObjectId("5f8a7b2b9d3b2e5a7c8b4567"),
     "customerId": "C10045678",
     "customerInfo": {
-        "name": "Jane Smith",
-        "contactDetails": {
+      "name": "Jane Smith",
+      "contactDetails": {
         "email": "jane.smith@example.com",
         "phone": "+1-555-123-4567",
         // PII fields can utilize MongoDB's field-level encryption
-        },
-        "kycStatus": "verified",
-        "riskProfile": "moderate"
+      },
+      "kycStatus": "verified",
+      "riskProfile": "moderate"
     },
     "accounts": [
-        {
+      {
         "accountId": "A200387645",
         "accountType": "savings",
         "balance": 45678.92,
         "currency": "USD",
         "status": "active",
         "createdDate": ISODate("2022-03-15T10:30:00Z")
-        },
-        {
+      },
+      {
         "accountId": "A200456789",
         "accountType": "investment",
         "balance": 125000.00,
         "currency": "USD",
         "status": "active",
         "createdDate": ISODate("2022-08-22T14:45:00Z")
-        }
+      }
     ]
-    }
+  }
 
 This model implements key approaches mentioned in the document: using MongoDB's flexible
 schema for financial product adaptation, supporting sharding strategies for high-volume
