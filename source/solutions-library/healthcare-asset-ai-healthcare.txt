@@ -343,8 +343,7 @@ capabilities within a single, coherent system.
 For a detailed, step-by-step guide on implementing this solution,
 including code samples and specific configuration instructions, visit
 our `GitHub repository
-<https://github.com/mongodb-partners/Leafy_Hospital_Microsoft_genAI_resources>`__
-.  
+<https://github.com/mongodb-partners/Leafy_Hospital_Microsoft_genAI_resources>`__.  
   
 Key Learnings  
 -------------  
