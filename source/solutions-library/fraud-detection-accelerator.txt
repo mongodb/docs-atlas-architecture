@@ -20,8 +20,8 @@ Fraud Detection Accelerator Using AWS SageMaker
 - **Industries:** `Financial Services
   <https://www.mongodb.com/industries/financial-services>`__, `Insurance
   <https://www.mongodb.com/industries/insurance>`__
-- **Products and tools:** `Atlas <https://www.mongodb.com/atlas/database>`__, `Atlas App
-  Services <https://www.mongodb.com/products/platform/atlas-app-services>`__, `Atlas
+- **Products and tools:** `Atlas <https://www.mongodb.com/atlas/database>`__, :atlas:`Atlas App
+  Services </app-services/>`, `Atlas
   Charts <https://www.mongodb.com/products/charts>`__, `Data Federation
   <https://www.mongodb.com/products/platform/atlas-data-federation>`__
 - **Partners:** `Amazon S3 <https://aws.amazon.com/s3/>`__, `Amazon SageMaker Canvas
@@ -193,7 +193,7 @@ MongoDB developer data platform:
 
 - `Atlas Database <https://www.mongodb.com/atlas/database>`__ 
 
-- `Atlas App Services <https://www.mongodb.com/products/platform/atlas-app-services>`__ 
+- :atlas:`Atlas App Services </app-services/>` 
 
 - `Atlas Charts <https://www.mongodb.com/products/charts>`__ 
 
