@@ -164,34 +164,34 @@ Building the Solution
 The code for the following steps can be found in this `GitHub repo
 <https://github.com/fabiofalavinha/mongodb-ai-video-transcript>`__.
 
-- Setting up the Environment: Start by ensuring you have all required
+- **Setting up the environment:** Start by ensuring you have all required
   libraries installed. This includes langchain, json, pymongo, and any
   other domain or service-specific libraries.
 
-- Configuration: Use the ApplicationConfiguration to load configurations
+- **Configuration:** Use the ApplicationConfiguration to load configurations
   such as the OpenAI API key and MongoDB connection details.
 
-- Loading YouTube videos: For each video link in
+- **Loading YouTube videos:** For each video link in
   MONGODB_YOUTUBE_VIDEO_LINKS, the YoutubeLoader fetches metadata and the
   transcript.
 
-- Summarizing the Transcript: OpenAI's GPT model, specified by the
+- **Summarizing the transcript:** OpenAI's GPT model, specified by the
   engine gpt-35-turbo (or any variety of the model like 16K for large
   video transcriptions) is used to condense the content. The summarization
   process involves setting up a conversation prompt that helps the model
   generate a context-rich summary.
 
-- Handling errors: If the summarization process encounters an error,
+- **Handling errors:** If the summarization process encounters an error,
   it's caught and stored in the summary field for that particular video.
 
-- Storing data locally: The compiled data, including the video summary,
+- **Storing data locally:** The compiled data, including the video summary,
   is serialized into a JSON format and saved to individual files, named
   video_transcript_<index>.json.
 
-- Storing data in MongoDB Atlas with Vector Search:
+- **Storing data in MongoDB Atlas with Vector Search:**
 
   - Convert the summarized transcript into embeddings suitable for
-    vector search using the model "text-embedding-ada-002."
+    vector search using the model "text-embedding-ada-002".
 
   - Store these embeddings in MongoDB Atlas. Using MongoDB Atlas Vector
     Search, you can index these embeddings to make the summarized content
@@ -213,7 +213,7 @@ The code for the following steps can be found in this `GitHub repo
    :figwidth: 1200px
    :alt: Reference Architecture With MongoDB
 
-   Figure 3: Storing data in MongoDB Atlas with Vector Search
+   Figure 3. Storing data in MongoDB Atlas with Vector Search
 
 You can find more information accessing the `MongoDB Atlas Vector Search
 <https://www.mongodb.com/docs/atlas/atlas-search/field-types/knn-vector/#try-an-example-for-the-fts-field-type-type>`__
