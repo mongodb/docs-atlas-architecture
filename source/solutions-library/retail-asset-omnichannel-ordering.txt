@@ -118,7 +118,7 @@ foundation for various real-time scenarios, such as:
 
    Figure 1. Database modifications are logged in the oplog as events.
    The Change Streams API monitors changes, detects watched events, and
-   triggers real-time responses in applications or Atlas Triggers.
+   triggers real-time responses in applications or Atlas Triggers
 
 The simplicity of this process comes from MongoDB’s `replication
 <https://www.mongodb.com/resources/products/capabilities/replication>`__
