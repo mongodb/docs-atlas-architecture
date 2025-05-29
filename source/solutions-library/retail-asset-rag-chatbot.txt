@@ -209,7 +209,7 @@ To build something transformational, conventional RAG systems, which
 primarily utilize vector search techniques, must be integrated with
 up-to-date information from operational databases. 
 
-`MongoDB Atlas Vector Search
+`Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-search>`__ provides
 built-in support for vector embeddings, which eliminates the need for a
 separate vector database, simplifying the architecture and reducing
