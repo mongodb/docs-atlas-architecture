@@ -21,17 +21,17 @@ AI-Driven Media Personalization with MongoDB and Vector Search
    :class: onecol
 
 **Use cases:** 
-`Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_,
-`Personalization <https://www.mongodb.com/solutions/use-cases/personalization>`
+`Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`__,
+`Personalization <https://www.mongodb.com/solutions/use-cases/personalization>`__
 
 **Industries:** 
-`Telecommunications <https://www.mongodb.com/solutions/industries/telecommunications>`_,
+`Telecommunications <https://www.mongodb.com/solutions/industries/telecommunications>`__,
 Media
 
 **Products and Tools:** 
-`MongoDB Atlas <https://www.mongodb.com/products/platform/atlas-database>`_,
-`Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_,
-`MongoDB PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`_
+`MongoDB Atlas <https://www.mongodb.com/products/platform/atlas-database>`__,
+`Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__,
+`MongoDB PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`__
 
 Solution Overview
 -----------------
@@ -120,13 +120,13 @@ or other emerging technologies, our solution seamlessly incorporates these tools
 to synthesize and summarize vast amounts of data. Here's a deeper look at how 
 this works:
 
-- **Integration with Multiple Sources:**  The system pulls content from a variety of
+- **Integration with multiple sources:**  The system pulls content from a variety of
   articles and data sources, retrieved with MongoDB Atlas Vector Search. Found 
   items are then compiled into dossiers, which provide users with a detailed and
   contextual exploration of topics, curated to offer a narrative or analytical 
   perspective that adds value beyond the original content.
 
-- **Customizable Output:** The output is highly customizable. Publishers can set 
+- **Customizable output:** The output is highly customizable. Publishers can set 
   parameters based on their audience's preferences or specific project 
   requirements. This includes adjusting the level of detail, the use of technical
   versus layman terms, and the inclusion of multimedia elements to complement 
@@ -192,9 +192,9 @@ Technologies and products used
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Atlas Database <https://www.mongodb.com/products/platform/atlas-database>`_
-- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_
-- `PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`_
+- `Atlas Database <https://www.mongodb.com/products/platform/atlas-database>`__
+- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+- `PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`__
 
 Authors
 -------
