@@ -70,7 +70,7 @@ patient’s own home and on their personal devices.
 Reference Architectures
 -----------------------
 
-- **Data Source**: YouTube links that are processed for video metadata and transcripts.
+- **Data source**: YouTube links that are processed for video metadata and transcripts.
 
   - Leveraging OCR and AI for real-time code analysis
     
@@ -85,10 +85,10 @@ Reference Architectures
       making your video resources more comprehensive and insightful than
       ever.
 
-- **Processing Layer**: Python script utilizing the OpenAI API and other
+- **Processing layer**: Python script utilizing the OpenAI API and other
   libraries to fetch and summarize the transcript.
 
-- **Orchestration Layer**: In any software system, there is often a need to
+- **Orchestration layer**: In any software system, there is often a need to
   coordinate between various services, modules, or components to
   accomplish more complex tasks. The orchestration layer serves this
   purpose, acting as a middleman that handles the logic required to manage
@@ -100,7 +100,7 @@ Reference Architectures
   central orchestrator, mediating between different services such as
   OpenAIService, VideoService, SearchService, and MongoDbRepository.
 
-- **Processing Layer**: Python script utilizing the OpenAI API and other
+- **Processing layer**: Python script utilizing the OpenAI API and other
   libraries to fetch and summarize the transcript.
 
 - **Output**: JSON files with video metadata, full transcript, and its AI-generated summary.
