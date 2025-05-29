@@ -196,7 +196,7 @@ kick-start their projects.
 
             Discover how MongoDB Atlas Vector Search and AI convert
             insurance call recordings into searchable insights, enabling
-            faster, more efficient customer service.
+            more efficient customer service.
 
          .. card::
             :headline: Automating Digital Underwriting with Machine Learning
@@ -204,7 +204,7 @@ kick-start their projects.
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
-            Leverage Machine Learning with real-time data processing and
+            Leverage machine learning with real-time data processing and
             automate digital underwriting.    
 
       Gen AI
@@ -230,8 +230,8 @@ kick-start their projects.
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
-            Streamline operations and claims processing with powerful PDF search
-            capabilities by integrating MongoDB Atlas Vector Search,
+            Streamline operations and claims processing with powerful
+            PDF search capabilities by integrating Atlas Vector Search,
             Superduper.io, and LLMs. 
 
          .. card::
@@ -241,7 +241,7 @@ kick-start their projects.
             :icon-alt: Atlas mdb_vector_search icon
 
             Discover how to combine Atlas Vector Search and large language
-            models (LLMs) to streamline the claim adjustment process.    
+            models to streamline the claim adjustment process.    
 
    .. tab:: Manufacturing & Motion
       :tabid: manufacturing
@@ -261,7 +261,7 @@ kick-start their projects.
 
             Transform flight operations with powerful real-time
             analytics. Cut costs, minimize delays, and boost efficiency
-            through intelligent data monitoring.
+            with intelligent data monitoring.
 
       Gen AI 
       ------
@@ -287,8 +287,7 @@ kick-start their projects.
             :icon-alt: Atlas industry_ai icon
 
             Combine real-time analytics with vector search by using
-            MongoDB Atlas Vector Search integrated with OpenAI-generated
-            embeddings.  
+            Atlas Vector Search integrated with OpenAI embeddings.  
 
          .. card::
             :headline: Framework for Rapid AI Agent Deployment
@@ -314,9 +313,8 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Discover how MongoDB and Google Cloud are powering
-            generative AI-driven, hyper-personalized in-car experiences
-            for automotive innovation.
+            Learn how MongoDB and Google Cloud enable AI-powered,
+            personalized in-car experiences for automotive innovation.
 
       IoT 
       ---
@@ -331,9 +329,9 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Use streaming data from edge devices to power machine
-            learning models and smart applications by integrating
-            MongoDB Atlas with Microsoft Azure IoT.
+            Discover how to stream data from edge devices to power
+            machine learning models and smart applications with MongoDB
+            Atlas and Microsoft Azure IoT.
 
          .. card::
             :headline: Power Smart Meter Analysis with MongoDB
@@ -341,9 +339,9 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            MongoDB provides a scalable platform for smart meter
-            systems, enabling real-time data collection, time series
-            analysis, and anomaly detection. 
+            Learn how MongoDB provides a scalable platform for smart
+            meter systems, enabling real-time data collection, time
+            series analysis, and anomaly detection. 
 
          .. card::
             :headline: Real-Time Audio-Based AI Diagnostics
@@ -351,9 +349,9 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Find out how AI is being used in renewable energy by
-            leveraging MongoDB Atlas Vector Search to drive efficiency
-            through real-time, audio diagnostics. 
+            Learn how AI and MongoDB Atlas Vector Search improve
+            renewable energy efficiency with real-time audio
+            diagnostics.
 
          .. card::
             :headline: Real-Time IoT Analytics
@@ -397,8 +395,9 @@ kick-start their projects.
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
-            Seamless game data management with MongoDB Atlas including
-            global profiles, records and real-time dashboards.  
+            Learn how to streamline game data management with MongoDB
+            Atlas, including global profiles, records and real-time
+            dashboards.  
       
       Gen AI
       ------
@@ -413,9 +412,9 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Learn about how to leverage data to create personalized 
-            user experiences by using Atlas Database, 
-            Atlas Vector Search, and Pymongo.
+            Learn how to leverage data to create personalized user
+            experiences with Atlas Database, Atlas Vector Search, and
+            Pymongo.
 
          .. card::
             :headline: Gen AI-Powered Video Summarization
@@ -423,8 +422,8 @@ kick-start their projects.
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
-            Build a YouTube transcription and summarization service that
-            leverages a large language model (LLM) and semantic search.           
+            Discover how to build a YouTube transcription and
+            summarization service that uses LLMs and semantic search.           
 
       .. App-Driven Analytics
       .. --------------------
