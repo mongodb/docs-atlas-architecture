@@ -140,7 +140,7 @@ efficient inventory checks.
 .. procedure::
    :style: normal
 
-   .. step:: Set Up MongoDB Atlas
+   .. step:: Set up MongoDB Atlas
 
       **Cluster Setup**
     
@@ -197,7 +197,7 @@ efficient inventory checks.
 
       - Run the application.
 
-   .. step:: Match Inventory Tags
+   .. step:: Match inventory tags
 
       The *getMatchingTagList* method in Objective-C compares RFID tags
       from the current physical inventory with a predefined list of tags
@@ -215,7 +215,7 @@ efficient inventory checks.
       - Stops inventory operation and confirms a complete match if all
         tags are accounted.
 
-   .. step:: Send Match Confirmation
+   .. step:: Send match confirmation
 
       The *sendUrlRequestToFlag* method sends a POST request to a
       specified URL to indicate the result of the inventory check. This
@@ -231,7 +231,7 @@ efficient inventory checks.
 
       - Displays a warning message based on the inventory check outcome.
 
-   .. step:: Display Your Inventory Checks in Real Time
+   .. step:: Display your inventory checks in real-time
 
       We leverage `MongoDB Change Streams
       <https://www.mongodb.com/docs/manual/changeStreams/>`__ for
