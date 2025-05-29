@@ -106,7 +106,8 @@ include:
 Reference Architectures
 -----------------------
 
-**With MongoDB**:
+With MongoDB
+~~~~~~~~~~~~
 
 At the core of this architecture we have three key components: 
 
@@ -176,7 +177,7 @@ Building this solution can be broken down in five major steps:
 .. procedure::
    :style: normal
 
-   .. step:: Replicate the Demo Database
+   .. step:: Replicate the demo database
 
       Provision a cluster within your `Atlas account
       <https://www.mongodb.com/cloud/atlas/register>`__ and populate
@@ -188,25 +189,25 @@ Building this solution can be broken down in five major steps:
       <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
       command.
 
-   .. step:: Retrieve MongoDB Atlas Connection String
+   .. step:: Retrieve MongoDB Atlas connection string
 
       Navigate to your cluster and click on *Connect*. Copy the
       connection string provided and save it for your .env file.
 
-   .. step:: Create Your Together AI Account
+   .. step:: Create your Together AI account
 
       Sign in to `Together AI <https://www.together.ai/>`__. Navigate to
       your account and retrieve your user key, which can be found inside
       your *Profile*, then go to *Settings* and select *API Keys*. Save this
       key, as you will need it in your .env file.
 
-   .. step:: Create Your Object Storage
+   .. step:: Create your object storage
 
       Create a new bucket in your AWS account and generate an IAM user
       with programmatic access. Save the access key and secret key for
       your .env file.
 
-   .. step:: Configure Your Application’s Frontend
+   .. step:: Configure your application frontend
 
       Obtain the demo code by cloning the GitHub repository to your
       local machine, configure the environment variables and install the
