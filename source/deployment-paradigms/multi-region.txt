@@ -12,8 +12,8 @@ Multi-Region Deployment Paradigm
    :depth: 2
    :class: onecol
 
-Multi-region {+service+} deployments set up {+cluster+}s across
-multiple regions. Multi-region deployments:
+Multi-region {+service+} deployments are {+cluster+}s set up across
+more than one region. Multi-region deployments:
 
 - Enhance protection in the case of a :ref:`regional outage <arch-center-regional-outage>` 
   by automatically rerouting traffic to another region for continuous 
@@ -25,28 +25,24 @@ multiple regions. Multi-region deployments:
   <arch-center-compliance-data-sovereignty>`, such as the EU's General Data 
   Protection Regulation (GDPR) law. You can set up one or more 
   clusters in the regions where you need to ensure data sovereignty, and configure 
-  you architecture to write that specific data to the correct clusters. Likewise, 
-  any non-specific, public data can be distributed to all of the clusters. 
-  For example, for an application that requires the storage of EU customer's data, 
-  you can create a multi-region deployment with clusters in ``eu-west-1``, 
-  ``us-east-1``, and ``ap-south-1``. You store EU customer data only in 
-  ``eu-west-1`` to ensure compliance with GDPR, APAC customer data to 
-  `ap-south-1``, and distribute non-sensitive data to all 3 clusters. This 
-  ensures data sovereignty while offering high availability if there's a regional 
+  you architecture to write that specific data to the correct clusters. 
+  Any public data can be distributed to all of the clusters. 
+  
+  For example, you have an application that requires the storage of EU customer's 
+  data. You can create a multi-region deployment with clusters in ``eu-west-1`` 
+  and ``eu-east-1``, ``ap-south-1`` and ``ap-northeast-1``, and ``us-east-1``. 
+  You store EU customer data only in ``eu-west-1`` and ``eu-east-1`` to ensure 
+  compliance with GDPR, APAC customer data to ``ap-south-1`` and ``ap-northeast-1``, 
+  and distribute non-sensitive data to all 5 clusters. This ensures data 
+  sovereignty while offering high availability if there's a regional 
   outage that affects one of the nodes.
 
 Regions and Geographies
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 A multi-region deployment might have multiple regions within the same geography 
 (a large area like a continent or country), a single region in each of several 
 geographies, or multiple regions in multiple geographies.
-
-To learn how to configure multi-region deployments and learn about the
-different types of nodes you can add, see 
-:atlas:`Configure High Availability and Workload Isolation 
-</cluster-config/multi-cloud-distribution/>` in the {+service+}
-documentation.
 
 .. note::
 
@@ -57,7 +53,7 @@ Multi-Region Deployment Strategies
 ----------------------------------
 
 The following image shows two architectures: a 5-node, 3-region configuration 
-and a 3-node, 3-region design:
+(2+2+1) and a 3-node, 3-region design (1+1+1):
 
 .. figure:: /includes/images/multi-region-types.png
    :figwidth: 750px
@@ -80,7 +76,7 @@ architecture provides high availability in at least 2 regions. If a node goes
 down, the traffic can be served from the same region to ensure the same latency 
 on the primary region. 
 
-In the diagram above, we have an example with 5 clusters in 3 different 
+The diagram above shows an example with 5 clusters in 3 different 
 regions: 2 clusters in ``US3``, 2 in ``EU1``, and 1 in ``AP1``. This is the 
 recommended architecture for large enterprises, because:
 
@@ -201,7 +197,7 @@ any region is unavailable.
 ..  _arch-center-global-deployments:
 
 Global Clusters 
----------------
+~~~~~~~~~~~~~~~
 
 Global {+service+} clusters are used in the most complex deployments, and 
 therefore require very careful planning. In almost all cases, 
@@ -225,6 +221,12 @@ You might consider a global deployment strategy if:
 
 Recommendations for Multi-Region Deployments
 ---------------------------------------------
+
+To learn how to configure multi-region deployments and learn about the
+different types of nodes you can add, see 
+:atlas:`Configure High Availability and Workload Isolation 
+</cluster-config/multi-cloud-distribution/>` in the {+service+}
+documentation.
 
 .. include:: /includes/rec-list.rst
 
