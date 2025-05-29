@@ -240,7 +240,7 @@ kick-start their projects.
             :icon-alt: Atlas mdb_vector_search icon
 
             Discover how to combine Atlas Vector Search and large language
-            models to streamline the claim adjustment process.    
+            models to streamline claim adjustment processes.    
 
    .. tab:: Manufacturing & Motion
       :tabid: manufacturing
@@ -293,7 +293,7 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Implement a modular solution for building diagnostic and
+            Implement a modular solution to build diagnostic and
             recommendation agents with MongoDB Atlas. 
 
          .. card::
@@ -302,7 +302,7 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Optimize your maintenance strategy with AI. Predict
+            Optimize maintenance strategies with AI. Predict
             failures, generate repair plans, and guide technicians.
 
          .. card::
@@ -373,9 +373,9 @@ kick-start their projects.
             :icon: industry_enterprise
             :icon-alt: Atlas industry_enterprise icon
 
-            Find out how MongoDB helps manufacturers unify production
-            data, optimize operations, and enable real-time insights in
-            a Unified Namespace.
+            Discover how MongoDB helps manufacturers unify production
+            data, streamline operations, and gain real-time insights
+            with a Unified Namespace.
 
    .. tab:: Media
       :tabid: media
@@ -449,7 +449,7 @@ kick-start their projects.
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
-            Learn about how to build a real-time, event-driven inventory
+            Learn how to build a real-time, event-driven inventory
             management system using MongoDB Atlas.
 
          .. card::
@@ -483,7 +483,9 @@ kick-start their projects.
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
-            Personalize and optimize e-commerce with AI-powered search using MongoDB Atlas Vector Search and Databricks.
+            Transform e-commerce experiences with personalized,
+            AI-driven search powered by MongoDB Atlas Vector Search and
+            Databricks.
 
          .. card::
             :headline: Automating Product Descriptions Using Generative AI
@@ -491,8 +493,8 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Write engaging and multilingual product descriptions in
-            practically no time with MongoDB and Together AI.
+            Create engaging and multilingual product descriptions
+            quickly and easily with MongoDB and Together AI.
 
          .. card::
             :headline: Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
@@ -500,7 +502,7 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Discover how Agentic RAG creates seamless and natural
+            Discover how agentic RAG creates seamless and natural
             interactions with customers, enhancing their shopping
             experience.
             
@@ -517,7 +519,8 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Leverage real-time data insights to optimize prices and gain a competitive edge.
+            Leverage real-time data insights to optimize prices and gain
+            a competitive edge.
 
          .. card::
             :headline: Dynamic Pricing
@@ -525,7 +528,8 @@ kick-start their projects.
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
-            Orchestrate real-time analytics: Atlas App Services and serverless functions for dynamic pricing strategies.
+            Implement real-time analytics and serverless functions to
+            enable dynamic pricing strategies.
 
    .. tab:: Telecommunications
       :tabid: Telco
