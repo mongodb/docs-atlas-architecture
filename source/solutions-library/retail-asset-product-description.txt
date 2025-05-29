@@ -119,7 +119,7 @@ At the core of this architecture we have three key components:
   (i.e. for translations in multiple languages) without introducing
   complexity. 
 
-- The object storage: An effective system for efficient product image
+- **The object storage:** An effective system for efficient product image
   file storage and retrieval. This can be built with Google Cloud
   storage, Azure Blob Storage or AWS S3. 
 
