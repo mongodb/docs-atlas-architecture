@@ -2,7 +2,9 @@
    :titlesonly:
 
    Agentic AI-Powered Investment Portfolio </solutions-library/fin-services-agentic-portfolio.txt>
-   RAG Applications <solutions-library/rag-applications>
+   AI-Driven Interactive Banking <solutions-library/ai-driven-interactive-banking>
    Credit Card Application <solutions-library/credit-card-application-with-generative-ai> 
    Loan Risk Assessment <solutions-library/assessing-business-loan-risks-with-generative-ai>
-   AI-Driven Interactive Banking <solutions-library/ai-driven-interactive-banking>
+   Optimizing Gen AI with Fireworks AI and MongoDB </solutions-library/fin-services-fireworks-rag.txt>
+   RAG Applications <solutions-library/rag-applications>
+
