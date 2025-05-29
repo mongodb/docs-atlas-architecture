@@ -135,8 +135,8 @@ The agent processes an issue report by:
 
    Figure 2. Reference architecture of the proposed solution
   
-Data Modelling Approach  
------------------------  
+Data Model Approach  
+-------------------
   
 An agent requires different types of data to function. MongoDB’s  
 document model allows you to easily model all of this data in one  

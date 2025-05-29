@@ -84,7 +84,8 @@ enhancing real-time monitoring and maintenance.
 Reference Architectures
 -----------------------
 
-**With MongoDB**
+With MongoDB
+~~~~~~~~~~~~
 
 The demo architecture comprises several key components working together
 to capture, store, analyze, and report data.

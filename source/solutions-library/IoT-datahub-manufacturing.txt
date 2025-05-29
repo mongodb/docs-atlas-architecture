@@ -64,7 +64,8 @@ their personal devices.
 Reference Architectures
 -----------------------
 
-**Without MongoDB**
+Without MongoDB
+~~~~~~~~~~~~~~~
 
 It’s common in many manufacturing environments to have unique systems
 running their own proprietary software, often with a relational database
@@ -82,7 +83,8 @@ connect them to newer, smarter applications.
 
    Figure 1. Reference architecture without MongoDB
 
-**With MongoDB**
+With MongoDB
+~~~~~~~~~~~~
 
 With MongoDB Atlas, architectural complexity is reduced, as the
 versatility of the document model allows teams to structure data in

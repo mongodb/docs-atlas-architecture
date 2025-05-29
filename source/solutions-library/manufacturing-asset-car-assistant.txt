@@ -107,7 +107,7 @@ personalized, and reliable interactions.
 
 Let’s break down how it works.
 
-On-Board Components
+On-board Components
 ~~~~~~~~~~~~~~~~~~~
 
 These run in the vehicle, close to the driver, and enable real-time

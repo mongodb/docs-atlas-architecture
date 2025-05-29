@@ -102,7 +102,7 @@ event-driven architecture that consists of several key components:
            Series Collection <https://www.mongodb.com/docs/manual/core/timeseries-collections/>`__).  
          - **flights** collection for comprehensive general flight information management.  
   
-   .. step:: Integration Components  
+   .. step:: Integration components  
   
       - Change Streams for real-time data changes.  
       - Google Maps API for visualizing geographical data.  
@@ -110,9 +110,9 @@ event-driven architecture that consists of several key components:
   
 **This architecture enables three distinct data flows:**  
   
-- Operational data flow (blue lines): Handles real-time flight operations.  
-- Analytical data flow (green lines): Manages business intelligence.  
-- Internal connections (black lines): Maintains system integration.  
+- **Operational data flow (blue lines):** Handles real-time flight operations.  
+- **Analytical data flow (green lines):** Manages business intelligence.  
+- **Internal connections (black lines):** Maintains system integration.  
   
 .. figure:: /includes/images/industry-solutions/Airline Fig5.svg  
    :figwidth: 1200px  

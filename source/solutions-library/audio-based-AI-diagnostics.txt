@@ -101,7 +101,8 @@ or experiencing any issues.
 Reference Architectures
 -----------------------
 
-**With MongoDB** 
+With MongoDB
+~~~~~~~~~~~~ 
 
 The solution demo is divided in two parts.
 

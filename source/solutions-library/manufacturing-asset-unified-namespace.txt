@@ -32,18 +32,14 @@ processes.
 **Industries:** `Manufacturing & Mobility
 <https://www.mongodb.com/solutions/industries/manufacturing>`__
 
-**Products:** `Atlas Database
-<https://www.mongodb.com/products/platform/atlas-database>`__, `Atlas
-Charts <https://www.mongodb.com/products/platform/atlas-charts>`__,
-`Change Streams
-<https://www.mongodb.com/resources/products/capabilities/change-streams>`__,
-`MongoDB Time Series
-<https://www.mongodb.com/products/capabilities/time-series>`__
+**Products:** `Atlas Database <https://www.mongodb.com/products/platform/atlas-database>`__, 
+`Atlas Charts <https://www.mongodb.com/products/platform/atlas-charts>`__,
+`Change Streams <https://www.mongodb.com/resources/products/capabilities/change-streams>`__,
+`MongoDB Connector for Kafka <https://www.mongodb.com/products/integrations/kafka-connector>`__,
+`MongoDB Time Series <https://www.mongodb.com/products/capabilities/time-series>`__
 
 **Partners:** `Cedalo (Mosquitto)
-<https://cedalo.com/blog/mqtt-to-mongodb-integration/>`__, `Kafka
-Connector
-<https://www.mongodb.com/products/integrations/kafka-connector>`__ 
+<https://cedalo.com/blog/mqtt-to-mongodb-integration/>`__
 
 Solution Overview
 -----------------
@@ -90,7 +86,7 @@ Reference Architectures
    :figwidth: 1200px
    :alt: Architecture diagram for the unified namespace solution
    
-   Figure 1. Leafy factory UNS architecture
+   Figure 1. Leafy Factory UNS architecture
 
 In the `Leafy Factory demo
 <https://github.com/mongodb-industry-solutions/leafy_factory>`__, SQL
@@ -173,12 +169,12 @@ Prerequisites
       broker-agnostic, capable of integrating with various other MQTT
       providers as needed.
 
-   .. step:: SQL data integration via Kafka connector
+   .. step:: SQL data integration via Kafka Connector
 
       Concurrent with MQTT data reception, SQL data from ERP and MES systems
       is ingested using Kafka. The Debezium connector captures SQL-based
       data—such as work orders, material tracking, and cost breakdowns—and
-      streams it into Kafka topics. MongoDB's Kafka Connector then processes
+      streams it into Kafka topics. Kafka Connector then processes
       this data, transforming and inserting it into MongoDB Atlas, which
       facilitates efficient synchronization between SQL systems and MongoDB.
       This integration ensures that ERP data remains continuously updated,
@@ -307,7 +303,7 @@ facilitating improved operational efficiency and insights.
    :figwidth: 1200px
    :alt: Unified namespace simplifies the architecture deployment
    
-   Figure 2. The automation pyramid versus a Unified Namespace
+   Figure 2. Automation pyramid versus a Unified Namespace
 
 - **Adaptability to operational changes:** The success of a UNS hinges on
   its ability to effortlessly integrate new data sources and scale with
@@ -345,13 +341,13 @@ MongoDB Developer Data Platform
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 - `Atlas Charts <https://www.mongodb.com/products/platform/atlas-charts>`__
 - `Change Streams <https://www.mongodb.com/resources/products/capabilities/change-streams>`__ 
+- `MongoDB Connector for Kafka <https://www.mongodb.com/products/integrations/kafka-connector>`__
 - `MongoDB Time Series <https://www.mongodb.com/products/capabilities/time-series>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
 - `Cedalo MQTT Broker <https://cedalo.com/>`__
-- `Kafka Connector <https://www.mongodb.com/products/integrations/kafka-connector>`__
 
 Authors
 -------

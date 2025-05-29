@@ -119,7 +119,8 @@ or projects.
 Reference Architectures
 -----------------------
 
-**With MongoDB**
+With MongoDB
+~~~~~~~~~~~~
 
 The agentic framework is a versatile AI-driven recommendation assistant
 designed to understand your data, execute a multi-step diagnostic

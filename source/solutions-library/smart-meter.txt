@@ -60,7 +60,7 @@ operational insights through customizable dashboards and reports.
 Reference Architectures
 -----------------------
 
-There are two main components of this solution:
+There are two main components of this solution.
 
 Smart Meter Data Storage
 ~~~~~~~~~~~~~~~~~~~~~~~~
