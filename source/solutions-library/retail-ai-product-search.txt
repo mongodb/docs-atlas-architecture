@@ -81,7 +81,7 @@ but also anticipates future needs, adapting and evolving continuously.
 This results in higher customer satisfaction, increased engagement, and
 ultimately, a significant boost in sales and business growth.
 
-Other applicable industries:
+This solution can be implemented in other industries, such as:
 
 - Insurance 
 - Healthcare 
@@ -243,7 +243,7 @@ Key Learnings
   can be shaped as needed to feed the different machine learning
   algorithms.
 
-- Real-time data processing: Understanding the importance and mechanisms
+- **Real-time data processing:** Understanding the importance and mechanisms
   of processing data in real-time — especially in the context of the
   retail industry where timely insights can drive immediate actions, such
   as product scoring, promotions, and recommendation engines — and of
