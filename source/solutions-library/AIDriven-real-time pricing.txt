@@ -88,7 +88,7 @@ continuous operation and seamless updates.
    :figwidth: 1200px
    :alt: Dynamic pricing architecture integrating different Google Cloud components and MongoDB Atlas as a Feature Store
 
-   Figure 1. Dynamic pricing architecture integrating different Google Cloud components and MongoDB Atlas as a Feature Store
+   Figure 1. Dynamic pricing architecture integrating different Google Cloud components and MongoDB Atlas as a feature store
 
 
 Building the Solution

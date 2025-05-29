@@ -224,7 +224,7 @@ MongoDB Developer Data Platform
 - `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__
 - `Atlas Charts <https://www.mongodb.com/products/charts>`__
 - `Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__
-- `Atlas Functions <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/functions/>`
+- `Atlas Functions <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/functions/>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
