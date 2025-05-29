@@ -221,8 +221,8 @@ The code for the following steps can be found in this `GitHub repo
 
    Figure 3. Storing data in MongoDB Atlas with Vector Search
 
-- Create an orchestration layer that sits at the center of the
-  application. Its role is to coordinate the services, manage complex
+- **Create an orchestration layer at the center of the
+  application:** Its role is to coordinate the services, manage complex
   workflows, and deliver a seamless experience. The VideoServiceFacade
   class within this layer acts as the orchestrator, effectively tying all
   the loose ends.
