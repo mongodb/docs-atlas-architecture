@@ -279,7 +279,7 @@ maintaining secure and reliable backups.
 Automation Examples: {+service+} Backups
 ----------------------------------------
 
-.. include:: /includes/complete-examples.rst
+.. include:: /includes/complete-examples-terraform.rst
 
 The following examples enable backup and restore operations using |service|
 :ref:`tools for automation <arch-center-automation>`.

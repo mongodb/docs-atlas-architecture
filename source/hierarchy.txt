@@ -397,7 +397,7 @@ them, see the {+service+} documentation for each cloud provider:
 Automation Examples: {+service+} Orgs, Projects, and {+Clusters+}
 -----------------------------------------------------------------
 
-.. include:: /includes/complete-examples.rst
+.. include:: /includes/complete-examples-terraform.rst
 
 The following examples create organizations, projects, and {+clusters+}
 using |service| :ref:`tools for automation <arch-center-automation>`.

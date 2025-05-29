@@ -144,7 +144,7 @@ Recommendations for {+service+} Data Encryption
    :sub_heading: Recommendations that apply only to deployments in a single region
    :expanded: true
 
-   Singe-region deployments have no unique considerations for data encryption.
+   Single-region deployments have no unique considerations for data encryption.
    See the next section for "All Deployment Paradigm Recommendations".
 
 .. collapsible::
@@ -248,7 +248,7 @@ Consider the following data classification levels as a starting point:
 Automation Examples: {+service+} Data Encryption
 ------------------------------------------------
 
-.. include:: /includes/complete-examples.rst
+.. include:: /includes/complete-examples-terraform.rst
 
 The following examples configure encryption with customer key management
 using |service| :ref:`tools for automation <arch-center-automation>`.

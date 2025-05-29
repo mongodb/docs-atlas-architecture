@@ -402,7 +402,7 @@ If you configure |vpc| or {+vnet+} peering, we recommend that you:
 Automation Examples: {+service+} Network Security
 -------------------------------------------------
 
-.. include:: /includes/complete-examples.rst
+.. include:: /includes/complete-examples-terraform.rst
 
 The following examples configure connections between your application
 environment and your {+service+} {+clusters+} using {+ip-access-list+}s,
