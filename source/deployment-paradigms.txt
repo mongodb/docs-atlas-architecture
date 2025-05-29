@@ -152,7 +152,7 @@ determine the best fit for your needs:
    refer to the `MongoDB Pricing <https://www.mongodb.com/pricing>`_.
 
 Use Cases 
-~~~~~~~~~
+---------
 
 When choosing your deployment paradigm, start by identifying the smallest number of regions that you can deploy to serve 
 the widest geographical distribution of your users. Then, consider adding additional regions or 
@@ -162,7 +162,7 @@ cloud providers according to your requirements for availability, performance, an
 Consider the following use cases to help decide which deployment paradigm works for the geographical distribution of your application's users: 
 
 Users Mostly in One Geography
-`````````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the majority of your application's users are located in one geography,
 we recommend that you deploy to one or more regions within the same geography.
@@ -181,7 +181,7 @@ To learn more about these deployment paradigms, see the following paradigm pages
 - :ref:`Multi-Region and Multi-Cloud Deployment in One Geography <arch-center-paradigms-multi-cloud>`
 
 Users Distributed Across Multiple Geographies
-`````````````````````````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your application's users are distributed across multiple geographies, such as between the US and Europe,
 we recommend that you deploy to one or more regions in each geography. 
@@ -199,7 +199,7 @@ To learn more about these deployment paradigms, see the following paradigm pages
 - :ref:`Multi-Region and Multi-Cloud Deployment in Multiple Geographies <arch-center-paradigms-multi-cloud>`
 
 Users Distributed Worldwide
-```````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are deploying an application to a worldwide audience, we recommend that you 
 deploy a multi-region deployment across multiple geographies before considering a 
