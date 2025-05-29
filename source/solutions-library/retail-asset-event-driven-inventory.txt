@@ -23,7 +23,7 @@ inventory operations for retail and manufacturing with MongoDB Atlas.
 
 **Use cases:** `Catalog
 <https://www.mongodb.com/solutions/use-cases/catalog>`__,
-`Application-Driven Analytics
+`Analytics
 <https://www.mongodb.com/solutions/use-cases/analytics>`__
 
 **Industries:** `Retail
@@ -31,19 +31,16 @@ inventory operations for retail and manufacturing with MongoDB Atlas.
 `Manufacturing <https://www.mongodb.com/industries/manufacturing>`__
 
 **Products:** `Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__, 
-`MongoDB Atlas Charts
-<https://www.mongodb.com/products/platform/atlas-charts>`__, 
-`MongoDB Atlas Search
-<https://www.mongodb.com/products/platform/atlas-search>`__,
-`MongoDB Atlas Triggers
-<https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
+`MongoDB Atlas Charts <https://www.mongodb.com/products/platform/atlas-charts>`__, 
+`MongoDB Atlas Search <https://www.mongodb.com/products/platform/atlas-search>`__,
+`MongoDB Atlas Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
 
 **Partners:** `Next.js <https://nextjs.org/>`__
 
 Solution Overview
 -----------------
 
-Executive summary
+Executive Summary
 ~~~~~~~~~~~~~~~~~
 
 In the competitive business landscape of retail and manufacturing,
@@ -334,12 +331,12 @@ you will find detailed instructions on how to build this solution.
 .. procedure::
    :style: normal
 
-   .. step:: Replicate the Demo Database
+   .. step:: Replicate the demo database
 
       Create a MongoDB Atlas cluster and replicate the collections,
       views, and indexes from the demo database.
       
-   .. step:: Add the Auto-Replenishment Trigger
+   .. step:: Add the auto-replenishment trigger
 
       Create a database trigger that automatically issues a
       replenishment order when stock levels fall below a defined
