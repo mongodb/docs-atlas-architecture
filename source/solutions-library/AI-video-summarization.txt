@@ -21,9 +21,10 @@ large language model (LLM) and semantic search.
 
 **Industries:** `Media <https://www.mongodb.com/industries/media-and-entertainment>`__
 
-**Products:**  `Atlas <https://www.mongodb.com/atlas>`__, `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+**Products:**  `MongoDB Atlas <https://www.mongodb.com/atlas>`__, 
+`Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** `Langchain <https://python.langchain.com/docs/integrations/vectorstores/mongodb_atlas>`__
+**Partners:** `LangChain <https://python.langchain.com/docs/integrations/vectorstores/mongodb_atlas>`__
 
 Solution Overview
 -----------------
@@ -104,22 +105,24 @@ Reference Architectures
 
 - **Output**: JSON files with video metadata, full transcript, and its AI-generated summary.
 
-**Without MongoDB:**:
+Without MongoDB
+~~~~~~~~~~~~~~~
 
 .. figure:: /includes/images/industry-solutions/VideoSummarization Figure1.svg
    :figwidth: 1200px
    :alt: Reference Architecture Without MongoDB
 
-   Figure 1: Reference Architecture (Without MongoDB)
+   Figure 1. Reference architecture without MongoDB
 
 
-**With MongoDB:**:
+With MongoDB
+~~~~~~~~~~~~
 
 .. figure:: /includes/images/industry-solutions/VideoSummarization_Figure2.svg
    :figwidth: 1200px
    :alt: Reference Architecture With MongoDB
 
-   Figure 2: Reference Architecture (With MongoDB)
+   Figure 2. Reference architecture with MongoDB
 
 Data Model Approach
 -------------------
@@ -241,50 +244,42 @@ Here's how it all comes together:
 .. procedure::
    :style: normal
 
-   .. step:: The VideoServiceFacade's processVideo method is called with a user prompt.
+   .. step:: The VideoServiceFacade's processVideo method is called with a user prompt
 
-   .. step:: The AI interprets this and determines what actions to take, encapsulated within a VideoProcessResult.
+   .. step:: The AI interprets this and determines what actions to take, encapsulated within a VideoProcessResult
 
-   .. step:: If actions include summarization, VideoService is called to perform it.
+   .. step:: If actions include summarization, VideoService is called to perform it
 
-   .. step:: If there's a search query, SearchService is invoked to perform a search in MongoDB Atlas.
+   .. step:: If there's a search query, SearchService is invoked to perform a search in MongoDB Atlas
 
 Technologies and Products Used
 ------------------------------
+
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas Database <https://www.mongodb.com/atlas/database>`__
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 - `Python driver <https://www.mongodb.com/docs/drivers/python/>`__, `PyMongo <https://www.mongodb.com/docs/drivers/pymongo/>`__
 
-Partner technologies:
-~~~~~~~~~~~~~~~~~~~~~
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
 
-- Langchain (`Python <https://python.langchain.com/docs/integrations/vectorstores/mongodb_atlas>`__, `JavaScript <https://js.langchain.com/docs/modules/data_connection/vectorstores/integrations/mongodb_atlas>`__)
-
-AI technologies:
-~~~~~~~~~~~~~~~~
-
+- LangChain (`Python <https://python.langchain.com/docs/integrations/vectorstores/mongodb_atlas>`__, `JavaScript <https://js.langchain.com/docs/modules/data_connection/vectorstores/integrations/mongodb_atlas>`__)
 - `Microsoft OpenAI LLM GPT 3.5 or (16k version from OpenAI) <https://learn.microsoft.com/en-us/azure/iot-edge/about-iot-edge?view=iotedge-1.4>`__
 - `ADA Text Embedding 002 <https://platform.openai.com/docs/guides/embeddings/what-are-embeddings>`__
 
 Key Considerations
 ------------------
 
-- Creating and storing vector indexes in Atlas Vector Search
-- How to generate embeddings and outputs from an LLM, and store them in MongoDB Atlas
-- Leveraging the popular AI framework, Langchain, to facilitate building a Gen-AI powered application
-- Conducting semantic search to retrieve relevant data that may not have exact keyword matches
-- Orchestrating various AI-powered services in an application
+- Creating and storing vector indexes in Atlas Vector Search.
+- How to generate embeddings and outputs from an LLM, and store them in MongoDB Atlas.
+- Leveraging the popular AI framework, Langchain, to facilitate building a Gen-AI powered application.
+- Conducting semantic search to retrieve relevant data that may not have exact keyword matches.
+- Orchestrating various AI-powered services in an application.
 
 Author
 ------
 
 - Fabio Falavinha, MongoDB
 - David Macias, MongoDB
-   
-
-
-
-
-
-
