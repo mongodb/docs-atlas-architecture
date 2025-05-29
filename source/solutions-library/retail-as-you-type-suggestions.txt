@@ -134,7 +134,7 @@ steps:
 2. Create an Atlas Search “entities_index” using an index configuration as described below. 
 3. Craft a robust set of query clauses, along with any pertinent boosting factors, within a $search-using aggregation pipeline.
 
-Importing entities 
+Importing Entities 
 ~~~~~~~~~~~~~~~~~~
 
 While there are multiple ways to populate the
@@ -197,7 +197,7 @@ This cast-specific entities import brings in “Keanu Reeves” as:
       "weight": 6.637
    }
 
-Indexing entities 
+Indexing Entities 
 ~~~~~~~~~~~~~~~~~
 The ``name`` field is indexed in a multitude of ways, which will
 facilitate partial matching and ranking at query time.
@@ -221,7 +221,7 @@ index definition, either through dynamic mapping or the static
 definitions you provide. In this example, ``weight`` is custom and handled
 dynamically as a numeric type.
 
-Searching for suggestions 
+Searching for Suggestions 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The resulting specialized search index provides the foundation for
@@ -281,7 +281,10 @@ nuanced queries to match entities and rank suggestions as desired.
 Technology and Products
 -----------------------
 
-- `Atlas <http://mongodb.com/atlas>`__, 
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- `Atlas <http://mongodb.com/atlas>`__
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 Author
