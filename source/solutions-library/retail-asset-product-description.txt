@@ -252,8 +252,8 @@ MongoDB Developer Data Platform
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
--  `Next.js <https://nextjs.org/>`__.
--  `Together AI <https://www.together.ai/>`__.
+-  `Next.js <https://nextjs.org/>`__
+-  `Together AI <https://www.together.ai/>`__
 
 Authors
 -------
