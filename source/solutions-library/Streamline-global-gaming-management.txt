@@ -22,8 +22,8 @@ profiles, records and real-time dashboards.
 
 **Industries:** Media
 
-**Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Global Clusters
-<https://www.mongodb.com/docs/atlas/global-clusters/>`__,
+**Products:** `Atlas <http://mongodb.com/atlas>`__, 
+`Atlas Global Clusters <https://www.mongodb.com/docs/atlas/global-clusters/>`__,
 `Atlas Search <https://www.mongodb.com/atlas/search>`__,
 `Atlas Charts <https://www.mongodb.com/products/charts>`__,
 `Aggregation Framework <https://www.mongodb.com/docs/manual/aggregation/>`__,
@@ -49,13 +49,14 @@ harmoniously in the gaming industry.
 Reference Architectures
 -----------------------
 
-**Without Atlas**:
+Without MongoDB
+~~~~~~~~~~~~~~~
 
 .. figure:: /includes/images/industry-solutions/Gaming-Player-Profiles-Ref-Arch-WithoutMongodb.svg
    :figwidth: 1200px
    :alt: Reference Architecture Without Atlas
 
-   Figure 1: Reference Architecture Without Atlas
+   Figure 1. Reference architecture without Atlas
 
 Traditional approach to managing gaming data and profiles at a global
 scale involves building a global query router, replication services
@@ -65,13 +66,14 @@ engine and visualization tool, with a serverless query service to
 federate our data into the visualization tool.
 
 
-**With Atlas**:
+With MongoDB
+~~~~~~~~~~~~
 
 .. figure:: /includes/images/industry-solutions/Gaming-Player-Profiles-Ref-Arch-With-Mongodb.svg
    :figwidth: 1200px
-   :alt: Reference Architecture With Atlas
+   :alt: Reference architecture with Atlas
 
-   Figure 2: Reference Architecture With Atlas
+   Figure 2. Reference architecture with Atlas
 
 With Atlas, a single connection to the MongoDB Atlas modern, multi-cloud
 database platform suffices. By leveraging global clusters, Online
@@ -86,7 +88,7 @@ Data Model Approach
    :figwidth: 1200px
    :alt: Data model approach illustration
 
-   Figure 3: Data model approach illustration
+   Figure 3. Data model approach illustration
 
 A recording signifies a player's gameplay from an event, including
 scores, moves, and statistics. Using .net (C#), a subset of the player
@@ -186,8 +188,8 @@ Game Aspects
 Technologies and Products Used
 ------------------------------
 
-MongoDB modern, multi-cloud database platform:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas Global Clusters <https://www.mongodb.com/docs/atlas/global-clusters/>`__
 - `Atlas Search <https://www.mongodb.com/atlas/search>`__
@@ -195,8 +197,8 @@ MongoDB modern, multi-cloud database platform:
 - `Aggregation Framework <https://www.mongodb.com/docs/manual/aggregation/>`__
 - `Atlas Data Federation <https://www.mongodb.com/atlas/data-federation>`__
 
-Partner technologies:
-~~~~~~~~~~~~~~~~~~~~~
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
 
 - `Unity Game Engine <https://www.mongodb.com/developer/technologies/unity/>`__
 - `Amazon EC2 <https://www.mongodb.com/mongodb-on-aws>`__
