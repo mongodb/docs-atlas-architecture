@@ -174,9 +174,8 @@ kick-start their projects.
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
-            Develop AI-driven breast cancer care solutions with MongoDB
-            and Microsoft, unifying data management to power predictive
-            modeling, intelligent chatbots, and advanced analytics.
+            Learn how AI is transforming breast cancer diagnosis and
+            care, making it more personalized and data-driven.
 
    .. tab:: Insurance
       :tabid: insurance
