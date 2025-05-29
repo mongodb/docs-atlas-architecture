@@ -83,7 +83,7 @@ context.
    :figwidth: 1200px
    :alt: RAG Querying Flow
 
-   RAG Querying Flow
+   Figure 1. RAG querying flow
 
 Data Model Approach
 -------------------

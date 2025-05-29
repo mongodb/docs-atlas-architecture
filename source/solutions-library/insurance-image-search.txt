@@ -199,7 +199,7 @@ In order to build our image search pipeline we need to follow two simple steps:
          :figwidth: 1200px
          :alt: Index configuration
       
-         Figure 4. How to configure the Search Index in the Atlas UI.
+         Figure 4. How to configure the Search Index in the Atlas UI
 
 Visit the `GitHub repo: Insurance-image-search <https://github.com/mongodb-industry-solutions/Insurance-image-search?tab=readme-ov-file>`__ and create this demo for yourself by following the instructions and associated models in this solution’s repository.
 
