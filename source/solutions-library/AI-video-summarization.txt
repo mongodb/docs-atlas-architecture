@@ -209,17 +209,17 @@ The code for the following steps can be found in this `GitHub repo
     relevant video summaries by querying with a phrase or sentence,
     enhancing content discoverability.
 
+  - You can find more information accessing the `MongoDB Atlas Vector Search
+    <https://www.mongodb.com/docs/atlas/atlas-search/field-types/knn-vector/#try-an-example-for-the-fts-field-type-type>`__
+    documentation. Visit the `Atlas Vector Search Quick Start guide
+    <https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
+    and create your first index in minutes.
+
 .. figure:: /includes/images/industry-solutions/VideoSummarization Figure3.png
    :figwidth: 1200px
    :alt: Reference Architecture With MongoDB
 
    Figure 3. Storing data in MongoDB Atlas with Vector Search
-
-You can find more information accessing the `MongoDB Atlas Vector Search
-<https://www.mongodb.com/docs/atlas/atlas-search/field-types/knn-vector/#try-an-example-for-the-fts-field-type-type>`__
-documentation. Visit the `Atlas Vector Search Quick Start guide
-<https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
-and create your first index in minutes.
 
 - Create an orchestration layer that sits at the center of the
   application. Its role is to coordinate the services, manage complex
