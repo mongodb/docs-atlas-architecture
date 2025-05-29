@@ -176,7 +176,7 @@ data with MongoDB Charts.
          :figwidth: 1200px  
          :alt: Automating Calculations with Machine Learning Model  
   
-         Figure 4: Automating calculations with machine learning model  
+         Figure 4. Automating calculations with machine learning model  
 
    .. step:: Near real-time insights of insurance premium changes over time
 

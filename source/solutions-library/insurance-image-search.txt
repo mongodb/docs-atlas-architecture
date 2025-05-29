@@ -233,7 +233,7 @@ Technologies and Products Used
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `MongoDB Atlas <http://mongodb.com/atlas>`__, 
+- `MongoDB Atlas <http://mongodb.com/atlas>`__ 
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 Partner Technologies
