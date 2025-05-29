@@ -255,8 +255,8 @@ kick-start their projects.
          .. card::
             :headline: Elevate Flight Operations with Real-Time Analytics
             :url: https://deploy-preview-222--docs-atlas-architecture.netlify.app/solutions-library/flightmanagement/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
 
             Transform flight operations with powerful real-time
             analytics. Cut costs, minimize delays, and boost efficiency
