@@ -13,13 +13,16 @@ Multi-Region Deployment Paradigm
    :class: onecol
 
 Multi-region {+service+} deployments are {+cluster+}s set up across
-more than one region. Multi-region deployments:
+more than one region. A multi-region deployment might have multiple regions
+within the same geography (a large area like a continent or country), a single 
+region in each of several geographies, or multiple regions in multiple 
+geographies. Multi-region deployments:
 
 - Enhance protection in the case of a :ref:`regional outage <arch-center-regional-outage>` 
   by automatically rerouting traffic to another region for continuous 
   availability and a smooth user experience. 
 
-- Enhance performance.
+- Provide high performance and availability.
 
 - Ensure you meet compliance requirements for :ref:`data sovereignty
   <arch-center-compliance-data-sovereignty>`, such as the EU's General Data 
@@ -37,13 +40,6 @@ more than one region. Multi-region deployments:
   sovereignty while offering high availability if there's a regional 
   outage that affects one of the nodes.
 
-Regions and Geographies
------------------------
-
-A multi-region deployment might have multiple regions within the same geography 
-(a large area like a continent or country), a single region in each of several 
-geographies, or multiple regions in multiple geographies.
-
 .. note::
 
    Multi-region deployments are available only for ``M10`` dedicated
@@ -53,12 +49,12 @@ Multi-Region Deployment Strategies
 ----------------------------------
 
 The following image shows two architectures: a 5-node, 3-region configuration 
-(2+2+1) and a 3-node, 3-region design (1+1+1):
+(2+2+1) and a 3-node, 3-region design (1+1+1). These paradigms, and others, are 
+discussed in the sections that follow.
 
 .. figure:: /includes/images/multi-region-types.png
    :figwidth: 750px
    :alt: An image showing three types of multi-region deployments
-
 
 .. _arch-center-multi-region-5+3:
 
