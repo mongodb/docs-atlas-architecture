@@ -281,8 +281,8 @@ kick-start their projects.
          .. card::
             :headline: Automotive Diagnostics Using Atlas Vector Search
             :url: https://deploy-preview-204--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-automotive-diagnostics/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
 
             Combine real-time analytics and vector search with Atlas
             Vector Search, powered by OpenAI embeddings.  
@@ -299,8 +299,8 @@ kick-start their projects.
          .. card::
             :headline: Predictive Maintenance Excellence with MongoDB Atlas
             :url: https://deploy-preview-210--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-predictive-maintenance/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
 
             Optimize maintenance strategies with AI. Predict
             failures, generate repair plans, and guide technicians.
@@ -344,8 +344,8 @@ kick-start their projects.
          .. card::
             :headline: Real-Time Audio-Based AI Diagnostics
             :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
 
             Learn how AI and MongoDB Atlas Vector Search improve
             renewable energy efficiency with real-time audio
@@ -354,8 +354,8 @@ kick-start their projects.
          .. card::
             :headline: Real-Time IoT Analytics
             :url: https://deploy-preview-234--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-rocket-launch/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
 
             Monitor a rocket launch using MongoDB Atlas and real-time
             IoT data.
