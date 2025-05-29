@@ -284,8 +284,8 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Combine real-time analytics with vector search by using
-            Atlas Vector Search integrated with OpenAI embeddings.  
+            Combine real-time analytics and vector search with Atlas
+            Vector Search, powered by OpenAI embeddings.  
 
          .. card::
             :headline: Framework for Rapid AI Agent Deployment
@@ -293,8 +293,8 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Implement a modular solution to build diagnostic and
-            recommendation agents with MongoDB Atlas. 
+            Develop a modular solution to create diagnostic and
+            recommendation agents using MongoDB Atlas.
 
          .. card::
             :headline: Predictive Maintenance Excellence with MongoDB Atlas
@@ -547,7 +547,7 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Build a generative AI ops architecture with MongoDB and enable
+            Build a generative AI ops architecture with MongoDB for
             network introspection.
 
 .. toctree::
