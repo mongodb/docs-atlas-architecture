@@ -20,20 +20,16 @@ Enabling Real-Time Pricing with MongoDB and Databricks
 
 Orchestrate real-time analytics with Atlas App Services and serverless functions to create dynamic pricing strategies on the fly.
 
-**Use cases:** `Analytics
-<https://www.mongodb.com/use-cases/analytics>`__,
-`Catalog Management
-<https://www.mongodb.com/use-cases/catalog>`__,
-`Personalization
-<https://www.mongodb.com/use-cases/personalization>`__
+**Use cases:** `Analytics <https://www.mongodb.com/use-cases/analytics>`__,
+`Catalog Management <https://www.mongodb.com/use-cases/catalog>`__,
+`Personalization <https://www.mongodb.com/use-cases/personalization>`__
 
 **Industries:** `Retail
 <https://www.mongodb.com/industries/retail>`__
 
 **Products:** `Aggregation Pipeline <https://www.mongodb.com/basics/aggregation-pipeline>`__, 
-`Triggers
-<https://www.mongodb.com/features/database-triggers>`__, `Atlas Functions
-<https://www.mongodb.com/docs/atlas/app-services/functions/>`__,
+`Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__, 
+`Atlas Functions <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/functions/>`__,
 `Atlas Charts <https://www.mongodb.com/products/charts>`__
 
 **Partners:** `Databricks <https://www.mongodb.com/partners/databricks>`__
@@ -74,7 +70,7 @@ Other Applicable Industries and Use Cases
 - **Insurance**: Insurance companies can implement real-time pricing for usage-based insurance products, such as pay-as-you-drive or pay-as-you-live. Premiums can be adjusted based on actual customer behavior or risk factors.
 
 
-Reference Architecture
+Reference Architectures
 -----------------------
 
 .. figure:: /includes/images/industry-solutions/retail-dynamic-pricing-reference-architecture.svg
@@ -184,7 +180,7 @@ solution for the retail industry.
 .. procedure::
    :style: normal
 
-   .. step:: Data Ingestion
+   .. step:: Data ingestion
 
       `The GitHub repo
       <https://github.com/mongodb-industry-solutions/Real-Time-Pricing/tree/main/Part-1-dataIngestion>`__
@@ -193,14 +189,14 @@ solution for the retail industry.
       database and collection parameters to mimic the purchase events
       happening on an ecommerce storefront in real time.
       
-   .. step:: Data Transformations
+   .. step:: Data transformations
 
       In `this GitHub directory
       <https://github.com/mongodb-industry-solutions/Real-Time-Pricing/tree/main/Part-2-dataTransformation>`__
       you'll find instructions on how to use triggers and functions to: 
 
-      - Compute a historic purchase log per product in your collection
-      - Send an HTTP POST request to a Databricks-deployed endpoint
+      - Compute a historic purchase log per product in your collection.
+      - Send an HTTP POST request to a Databricks-deployed endpoint.
 
    .. step:: ML/AI
 
@@ -227,14 +223,10 @@ MongoDB Developer Data Platform
 - `Atlas Database <http://mongodb.com/atlas>`__
 - `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__
 - `Atlas Charts <https://www.mongodb.com/products/charts>`__
-- `Atlas App Services <https://www.mongodb.com/atlas/app-services>`__
-   - `Triggers <https://www.mongodb.com/features/database-triggers>`__
-   - `Functions <https://www.mongodb.com/docs/atlas/app-services/functions/>`__
+- `Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__
+- `Atlas Functions <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/functions/>`
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
 - `Databricks <https://www.mongodb.com/partners/databricks>`__
-
-.. Author
-.. ------
