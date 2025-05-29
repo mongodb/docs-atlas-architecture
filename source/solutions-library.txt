@@ -174,9 +174,9 @@ kick-start their projects.
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
-            MongoDB and Microsoft deliver AI-powered solutions for
-            breast cancer care, unifying data and enabling predictive
-            modeling, intelligent chatbots, and analytics.     
+            Develop AI-driven breast cancer care solutions with MongoDB
+            and Microsoft, unifying data management to power predictive
+            modeling, intelligent chatbots, and advanced analytics.
 
    .. tab:: Insurance
       :tabid: insurance
@@ -204,7 +204,7 @@ kick-start their projects.
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
-            Leverage machine learning with real-time data processing and
+            Leverage machine learning and real-time data processing to
             automate digital underwriting.    
 
       Gen AI
@@ -276,9 +276,8 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            MongoDB helps automotive companies manage fleets of
-            connected vehicles, optimize route planning, and improve
-            driver safety.
+            Manage fleets of connected vehicles, optimize route
+            planning, and improve driver safety with MongoDB Atlas.
          
          .. card::
             :headline: Automotive Diagnostics Using Atlas Vector Search
@@ -295,8 +294,8 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Learn how to implement a modular solution for building
-            diagnostic and recommendation agents with MongoDB Atlas. 
+            Implement a modular solution for building diagnostic and
+            recommendation agents with MongoDB Atlas. 
 
          .. card::
             :headline: Predictive Maintenance Excellence with MongoDB Atlas
@@ -329,9 +328,9 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Discover how to stream data from edge devices to power
-            machine learning models and smart applications with MongoDB
-            Atlas and Microsoft Azure IoT.
+            Streamline data from edge devices to power machine learning
+            models and smart applications with MongoDB Atlas and
+            Microsoft Azure IoT.
 
          .. card::
             :headline: Power Smart Meter Analysis with MongoDB
@@ -339,9 +338,9 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Learn how MongoDB provides a scalable platform for smart
-            meter systems, enabling real-time data collection, time
-            series analysis, and anomaly detection. 
+            Build a scalable platform for smart meter systems, enabling
+            real-time data collection, time series analysis, and anomaly
+            detection. 
 
          .. card::
             :headline: Real-Time Audio-Based AI Diagnostics
@@ -359,8 +358,8 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Learn how to monitor a rocket launch using MongoDB Atlas and
-            real-time IoT data.
+            Monitor a rocket launch using MongoDB Atlas and real-time
+            IoT data.
       
       Modernization 
       -------------
@@ -395,9 +394,8 @@ kick-start their projects.
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
-            Learn how to streamline game data management with MongoDB
-            Atlas, including global profiles, records and real-time
-            dashboards.  
+            Streamline game data management with MongoDB Atlas including
+            global profiles, records and real-time dashboards.  
       
       Gen AI
       ------
@@ -412,7 +410,7 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Learn how to leverage data to create personalized user
+            Leverage data effectively to create personalized user
             experiences with Atlas Database, Atlas Vector Search, and
             Pymongo.
 
@@ -422,8 +420,8 @@ kick-start their projects.
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
-            Discover how to build a YouTube transcription and
-            summarization service that uses LLMs and semantic search.           
+            Build a YouTube transcription and summarization service with
+            LLMs and semantic search.           
 
       .. App-Driven Analytics
       .. --------------------
