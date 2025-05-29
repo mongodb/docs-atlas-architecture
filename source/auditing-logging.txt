@@ -100,7 +100,7 @@ Recommendations for {+service+} Auditing and Logging
    :sub_heading: Recommendations that apply only to deployments in a single region
    :expanded: true
 
-   Singe-region deployments have no unique considerations for auditing and logging.
+   Single-region deployments have no unique considerations for auditing and logging.
    See the next section for "All Deployment Paradigm Recommendations".
 
 .. collapsible::
@@ -166,7 +166,7 @@ see :manual:`mongo Schema Audit Messages </reference/audit-message/mongo/>`.
 Automation Examples: {+service+} Auditing and Logging
 -----------------------------------------------------
 
-.. include:: /includes/complete-examples.rst
+.. include:: /includes/complete-examples-terraform.rst
 
 The following examples show how to retrieve and download logs and configure auditing
 using |service| :ref:`tools for automation <arch-center-automation>`.

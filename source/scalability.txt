@@ -126,7 +126,7 @@ For staging and production environments, we recommend that you:
 Automation Examples: {+service+} Scalability
 --------------------------------------------
 
-.. include:: /includes/complete-examples.rst
+.. include:: /includes/complete-examples-terraform.rst
 
 The following examples enable auto-scaling compute and storage using |service| 
 :ref:`tools for automation <arch-center-automation>`.

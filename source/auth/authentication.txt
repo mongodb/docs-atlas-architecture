@@ -44,7 +44,7 @@ Recommendations for {+service+} Authentication: Single-Region and Multi-Region
    :sub_heading: Recommendations that apply only to deployments in a single region
    :expanded: true
 
-   Singe-region deployments have no unique considerations for authentication.
+   Single-region deployments have no unique considerations for authentication.
    See the next section for "All Deployment Paradigm Recommendations".
 
 .. collapsible::
