@@ -266,8 +266,8 @@ The Next.js frontend provides a two-column view:
   agent run, including session details, telemetry logs, historical
   recommendations, agent profiles and sample past issues.   
   
-System Architecture 
-~~~~~~~~~~~~~~~~~~~
+System Architectures 
+~~~~~~~~~~~~~~~~~~~~
 
 **Backend Workflow**  
 

@@ -1,8 +1,8 @@
 .. _arch-center-real-time-flight-management:  
 
-=================================================  
-Elevate Flight Operations with RealTime Analytics  
-=================================================  
+==================================================  
+Elevate Flight Operations with Real-Time Analytics  
+==================================================  
   
 .. facet::  
    :name: genre  
@@ -94,13 +94,18 @@ event-driven architecture that consists of several key components:
    .. step:: Database structure  
   
       - MongoDB database as the central data store.  
+
       - Specialized collections:  
-         - **flight_costs** collection to track and analyze flight-related expenses.  
-         - **flight_plane** simulation collection for predictive modeling and scenario planning.  
-         - **flight_realtimeCF** collection designed for  
-           real-time data tracking and historical analysis (`Time  
-           Series Collection <https://www.mongodb.com/docs/manual/core/timeseries-collections/>`__).  
-         - **flights** collection for comprehensive general flight information management.  
+
+        - **flight_costs** collection to track and analyze flight-related expenses.  
+        
+        - **flight_plane** simulation collection for predictive modeling and scenario planning.  
+        
+        - **flight_realtimeCF** collection designed for  
+          real-time data tracking and historical analysis (`Time  
+          Series Collection <https://www.mongodb.com/docs/manual/core/timeseries-collections/>`__).  
+        
+        - **flights** collection for comprehensive general flight information management.  
   
    .. step:: Integration components  
   
