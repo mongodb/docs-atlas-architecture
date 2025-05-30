@@ -81,11 +81,11 @@ compliance and security measures, and integration with external financial servic
 
 Key components of the architecture:
 
-- Data layer: MongoDB clusters for primary data storage.
-- API and access layer: Hasura DDN for data access and real-time subscriptions.
-- Application layer: Fintech services and applications.
-- Security layer: Authentication and authorization services.
-- Analytics layer: Data processing and |ml| services.
+- **Data layer:** MongoDB clusters for primary data storage.
+- **API and access layer:** Hasura DDN for data access and real-time subscriptions.
+- **Application layer:** Fintech services and applications.
+- **Security layer:** Authentication and authorization services.
+- **Analytics layer:** Data processing and |ml| services.
 
 Data Model Approach
 -------------------
