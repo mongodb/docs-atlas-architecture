@@ -66,8 +66,8 @@ informed investment decisions through “human in the loop” (HITL)
 implementation.
 
   
-Reference Architecture  
-----------------------  
+Reference Architectures  
+-----------------------  
   
 The solution is composed of three agents and two applications: 
 
@@ -112,9 +112,9 @@ Part 1. Loaders Service
 
 This part focuses on the data ingestion application, which handles the extraction of data from three sources:
 
-- **Yahoo Finance Market Data ETL**: Extracts, transforms, and loads market data for various asset types using the yfinance Python package.
-- **FRED API Macroeconomic Data ETL**: Extracts, transforms, and loads macroeconomic data using the pyfredapi Python package.
-- **Financial News Processing**: Scrapes financial news, generates embeddings using voyage-finance-2 model from Voyage AI, and calculates sentiment scores using the FinBERT model from Hugging Face.
+- **Yahoo Finance market data ETL**: Extracts, transforms, and loads market data for various asset types using the yfinance Python package.
+- **FRED API macroeconomic data ETL**: Extracts, transforms, and loads macroeconomic data using the pyfredapi Python package.
+- **Financial news processing**: Scrapes financial news, generates embeddings using voyage-finance-2 model from Voyage AI, and calculates sentiment scores using the FinBERT model from Hugging Face.
 - Generating portfolio performance (emulation).
 
 Afterwards, financial news articles are processed to calculate their
@@ -291,7 +291,7 @@ the “Capital Markets” services).
 Why MongoDB
 ------------
   
-**A Modern Data Foundation for AI-Driven Financial Applications**
+**A Modern Data Foundation for AI-driven Financial Applications**
 
 MongoDB is a unified, high-performance data platform built for the
 complexity of financial services. It replaces fragmented point solutions
@@ -342,9 +342,9 @@ MongoDB’s aggregation framework delivers real-time insights, from trend
 analysis to macroeconomic correlations. Combined with Atlas Charts,
 teams can build dynamic dashboards that surface:
 
-- AI-driven portfolio signals. 
-- Market anomalies. 
-- Real-time performance indicators.
+- AI-driven portfolio signals 
+- Market anomalies
+- Real-time performance indicators
 
 Together, these capabilities make MongoDB a robust, future-ready data
 layer for AI-driven financial solutions—delivering the flexibility,
