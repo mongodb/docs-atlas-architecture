@@ -443,7 +443,7 @@ kick-start their projects.
             Add fast and relevant as-you-type suggestions to your application, incorporating user context and domain-specific ranking factors.
 
          .. card::
-            :headline: Building an Event-Driven Inventory Management System
+            :headline: Building an Inventory Management System
             :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
@@ -452,7 +452,7 @@ kick-start their projects.
             management system using MongoDB Atlas.
 
          .. card::
-            :headline: Building Modern Omnichannel Ordering on MongoDB
+            :headline: Building an Omnichannel Ordering System
             :url: https://deploy-preview-216--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-omnichannel-ordering/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
