@@ -67,8 +67,11 @@ and low latency across a larger geographic range than a single-region deployment
   For example, you deploy clusters in the {+aws+} region ``us-west-1`` and the {+gcp+} 
   region ``us-east4``. 
 
+.. _arch-center-deployment-topologies:
+
 Availability Considerations
 ---------------------------
+
 {+service+} has replication built into your deployments, which means: 
 
 - Database instances are kept tightly in sync with each other, typically in the 

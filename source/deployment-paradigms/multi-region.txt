@@ -45,6 +45,7 @@ geographies. Multi-region deployments:
    Multi-region deployments are available only for ``M10`` dedicated
    {+clusters+} and larger.
 
+
 Multi-Region Deployment Strategies
 ----------------------------------
 
