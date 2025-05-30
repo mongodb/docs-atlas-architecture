@@ -37,8 +37,8 @@ and robust security measures. The system aims to facilitate ease of operation an
 collaboration between application development and data science teams. Furthermore, it
 supports end-to-end CI/CD pipelines to ensure up-to-date and secure systems.
 
-Existing Challenges:
-~~~~~~~~~~~~~~~~~~~~
+Existing Challenges
+~~~~~~~~~~~~~~~~~~~
 - **Incomplete data visibility** from legacy systems: Lack of access to relevant data
   sources hampers fraud pattern detection.
 - **Latency issues** in fraud prevention systems: Legacy systems lack real-time
@@ -56,8 +56,8 @@ Existing Challenges:
 
 .. video:: https://www.youtube.com/watch?v=avE8TOWVw0M
 
-Reference Architecture
-----------------------
+Reference Architectures
+-----------------------
 The ML-based fraud solution is suitable for industries where real-time processing, AI/ML
 modeling, model observability, flexibility, and collaboration between teams are absolutely
 essential. The system ensures up-to-date and secure operations through end-to-end CI/CD
@@ -71,13 +71,16 @@ pipelines. Relevant Industries include:
    :alt: Card Fraud Solution Architecture
    :figwidth: 750px
 
+   Figure 1. Card fraud solution architecture
+
 Data Model Approach
 -------------------
 
 .. figure:: /includes/images/industry-solutions/card-fraud-solution-data-model.png
    :alt: Card Fraud Solution Data Model
    :figwidth: 750px
-   
+
+   Figure 2. Card fraud solution data model
 
 As you can see from the domain diagram, there are three entities when working with credit
 card transactions: the transaction itself, the merchant, and payer involved in the
@@ -184,20 +187,6 @@ This includes access to model metrics, logs, and other relevant data, which can 
 identify issues and improve the accuracy of the model over time. Additionally, these
 features can help in the design of modern fraud detection systems using AI/ML.
 
-Technologies and Products Used
-------------------------------
-
-MongoDB Modern, Multi-Cloud Database Platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- `Atlas Clusters <https://www.mongodb.com/basics/clusters>`__
-- `Change Streams <https://www.mongodb.com/developer/products/mongodb/change-streams/>`__
-- `Atlas Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
-- `Spark Streaming Connector <https://www.mongodb.com/docs/spark-connector/v2.4/scala/streaming/>`__
-
-Partner Technologies
-~~~~~~~~~~~~~~~~~~~~
-- `Databricks <https://www.mongodb.com/partners/databricks>`__
-
 Key Learnings
 -------------
 The proposed solution's functional and nonfunctional features include:
@@ -212,6 +201,20 @@ The proposed solution's functional and nonfunctional features include:
 - **Ease of operation:** Reduces operational complexities
 - **Application and data science team collaboration:** Aligns goals and cooperation
 - **End-to-end CI/CD pipeline support:** Ensures up-to-date and secure systems
+
+Technologies and Products Used
+------------------------------
+
+MongoDB Data Developer Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Atlas Clusters <https://www.mongodb.com/basics/clusters>`__
+- `Change Streams <https://www.mongodb.com/developer/products/mongodb/change-streams/>`__
+- `Atlas Triggers <https://www.mongodb.com/docs/atlas/app-services/triggers/>`__
+- `Spark Streaming Connector <https://www.mongodb.com/docs/spark-connector/v2.4/scala/streaming/>`__
+
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
+- `Databricks <https://www.mongodb.com/partners/databricks>`__
 
 Authors
 -------
