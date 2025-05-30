@@ -180,12 +180,12 @@ embeddings asynchronously and at scale, leveraging MongoDB Atlas.
       We will create a cluster in Atlas using AWS as our cloud provider and
       us-east-1 as our region. Additionally, create an Atlas Stream Processing
       Instance (SPI) following the instructions in the documentation:
-      https://www.mongodb.com/docs/atlas/atlas-sp/manage-processing-instance/
+      https://www.mongodb.com/docs/atlas/atlas-sp/manage-processing-instance/.
       
    .. step:: Create a Kafka cluster in Confluent
 
       To create a Kafka cluster in Confluent Cloud follow the instructions in 
-      their documentation: https://docs.confluent.io/cloud/current/clusters/create-cluster.html#create-ak-clusters
+      their documentation: https://docs.confluent.io/cloud/current/clusters/create-cluster.html#create-ak-clusters.
 
       Once you have created the cluster, go to cluster settings and copy the
       bootstrap URL.
@@ -241,7 +241,7 @@ embeddings asynchronously and at scale, leveraging MongoDB Atlas.
 
          Figure 6. Stream Processing to Atlas settings
 
-   .. step:: Connect to the Stream Processing Instance
+   .. step:: Connect to the Stream Processing instance
 
       To configure the pipelines and connections in the Stream Processing 
       Instance, you can connect to the cluster using the Mongo Shell (mongosh).
@@ -327,14 +327,14 @@ Key Learnings
 - **Optimize language-model pairing:** To maximize semantic search accuracy,
   ensure your large language model (LLM) closely aligns with the language of
   your data to significantly enhance the relevance and precision of your search results.
-- **Embrace Flexible Embeddings:** MongoDB's flexible data model eliminates the
+- **Embrace flexible embeddings:** MongoDB's flexible data model eliminates the
   need for rigid schema definitions. This flexibility allows you to store
   embeddings directly alongside your data, regardless of their length or the 
   model used to generate them.
 - **Choose the right similarity function:** The effectiveness of your semantic
   searches depends on the chosen similarity function. Tailor your selection to 
   your specific use case.
-- **Asynchronous Embedding Generation:** Generating embeddings can be
+- **Asynchronous embedding generation:** Generating embeddings can be
   computationally expensive. Consider running this task asynchronously to avoid
   impacting your application's performance. Leverage the cloud's elasticity by
   horizontally scaling the functions responsible for embedding generation to 
