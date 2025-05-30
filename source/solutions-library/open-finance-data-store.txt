@@ -17,7 +17,7 @@ MongoDB as the Open Finance Data Store
 - **Industries:** `Financial Services <https://www.mongodb.com/industries/financial-services>`__
 
 - **Products and tools:** `Aggregation pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__, 
-`MongoDB Atlas <https://www.mongodb.com/atlas/database>`__
+  `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__
 
 Solution Overview
 ------------------
@@ -203,7 +203,7 @@ production-grade implementation would require addressing the complexities and nu
 real-world financial data integration.
 
 Building the Solution
---------------------------------
+---------------------
 For detailed setup instructions you can follow the steps outlined in our `public GitHub
 repository
 <https://github.com/mongodb-industry-solutions/leafy-bank-backend-openfinance>`__. This
@@ -214,27 +214,30 @@ demonstration purposes.
 
 How to build the solution step-by-step:
 
-**Step 1: Set up MongoDB database and collections** 
+.. procedure::
+   :style: normal
 
-Create a new database in |service-fullname| named **open_finance**, then add three collections:
-**tokens**, **external_accounts**, and **external_products**. Import the provided sample
-data.
+   .. step:: Set up MongoDB database and collections
 
-**Step 2: Add MongoDB user** 
+   Create a new database in |service-fullname| named **open_finance**, then add three collections:
+   **tokens**, **external_accounts**, and **external_products**. Import the provided sample
+   data.
 
-Create a new user with **readWrite** access to the **open_finance** database to manage
-data securely.
+   .. step:: Add MongoDB user
 
-**Step 3: Configure environment variables** 
+   Create a new user with **readWrite** access to the **open_finance** database to manage
+   data securely.
 
-Add the necessary database credentials and API origins to a **.env** file for seamless
-connectivity.
+   .. step:: Configure environment variables
 
-**Step 4: Run it locally** 
+   Add the necessary database credentials and API origins to a **.env** file for seamless
+   connectivity.
 
-Set up a virtual environment using Poetry, install
-dependencies, and start the backend with uvicorn. Ensure the service runs on the correct
-port for API communication.
+   .. step:: Run it locally
+
+   Set up a virtual environment using Poetry, install
+   dependencies, and start the backend with uvicorn. Ensure the service runs on the correct
+   port for API communication.
 
 Frontend for This Solution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
