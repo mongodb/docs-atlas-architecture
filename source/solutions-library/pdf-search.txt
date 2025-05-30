@@ -262,6 +262,6 @@ Partner Technologies
 Authors
 -------
 
-- **Luca Napoli**: Industry Solutions Consultant at MongoDB
-- **Clarence Ondieki**: Solutions Architect at MongoDB
-- **Pedro Bereilh**: Specialist, Industry Solutions at MongoDB
+- Luca Napoli, Industry Solutions, MongoDB
+- Clarence Ondieki, Solutions Architect, MongoDB
+- Pedro Bereilh, Industry Solutions, MongoDB

@@ -32,7 +32,7 @@ streamline the claim adjustment process.
 **Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** `Langchain <https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`__,
+**Partners:** `LangChain <https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`__,
 `OpenAI <https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb/>`__,
 `FastAPI <https://www.mongodb.com/developer/technologies/fastapi/>`__
 
