@@ -191,16 +191,16 @@ Key Learnings
 -------------
 The proposed solution's functional and nonfunctional features include:
 
-- **Data completeness:** Integrated with external sources for accurate data analysis
-- **Real-time processing:** Enables timely detection of fraudulent activities
-- **AI/ML modeling:** Identifies potential fraud patterns and behaviors
-- **Real-time monitoring:** Allows instant data processing and analysis
-- **Model observability:** Ensures full visibility into fraud patterns
-- **Flexibility and scalability:** Accommodates changing business needs
-- **Robust security measures:** Protects against potential breaches
-- **Ease of operation:** Reduces operational complexities
-- **Application and data science team collaboration:** Aligns goals and cooperation
-- **End-to-end CI/CD pipeline support:** Ensures up-to-date and secure systems
+- **Data completeness:** Integrated with external sources for accurate data analysis.
+- **Real-time processing:** Enables timely detection of fraudulent activities.
+- **AI/ML modeling:** Identifies potential fraud patterns and behaviors.
+- **Real-time monitoring:** Allows instant data processing and analysis.
+- **Model observability:** Ensures full visibility into fraud patterns.
+- **Flexibility and scalability:** Accommodates changing business needs.
+- **Robust security measures:** Protects against potential breaches.
+- **Ease of operation:** Reduces operational complexities.
+- **Application and data science team collaboration:** Aligns goals and cooperation.
+- **End-to-end CI/CD pipeline support:** Ensures up-to-date and secure systems.
 
 Technologies and Products Used
 ------------------------------
