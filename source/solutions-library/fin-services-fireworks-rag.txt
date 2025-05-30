@@ -48,7 +48,7 @@ throughput but effectively minimizes operational costs.
 
 This article will address the following topics: 
 
-- Methods for leveraging MongoDB and Fireworks.AI to enhance performance and reduce Total Cost of Ownership (TCO).
+- Methods for leveraging MongoDB and Fireworks.AI to enhance performance and reduce TCO.
 - Strategies for caching queries and responses that will later help optimize retrieval augmented generation(RAG) when leveraging MongoDB Atlas with Generative AI models.
 - Fine-tune Small Language Models (SLM)  based on the Large Language Model (LLM) to achieve faster performance with comparable quality of responses.
 - Techniques employed with Fireworks.AI platform to fine-tune models, accelerate inference speeds, and decrease hardware requirements for LLMs.
@@ -89,8 +89,8 @@ computational footprint.
 
 The key benefits that can be achieved are:
 
-- Faster Inference: With FireOptimizer’s adaptive speculative execution, production workloads across various models saw up to 3x latency improvements, ensuring applications are always highly responsive.
-- Hassle-Free Optimization: FireOptimizer automates the complex optimization process, so you can focus on building your application, while we handle the rest.
+- Faster inference: With FireOptimizer’s adaptive speculative execution, production workloads across various models saw up to 3x latency improvements, ensuring applications are always highly responsive.
+- Hassle-free optimization: FireOptimizer automates the complex optimization process, so you can focus on building your application, while we handle the rest.
 
 Let’s dive deeper into the FireOptimizer framework.
 
@@ -133,14 +133,14 @@ faster processing for long-context tasks.
 How it works:
 `````````````
 
-- Optimized Attention Scaling: Reduces computational overhead when handling lengthy inputs.
-- Multi-Host Deployment: Distributes workloads efficiently across GPUs.
-- Advanced Kernels: Streamlines operations for faster execution.
+- Optimized attention scaling: Reduces computational overhead when handling lengthy inputs.
+- Multi-host deployment: Distributes workloads efficiently across GPUs.
+- Advanced kernels: Streamlines operations for faster execution.
 
 With **FireAttention V3**, Fireworks AI extends its lead to AMD’s MI300 GPUs, offering a cost-efficient alternative to NVIDIA. Performance highlights include:
 
-- 1.4x–1.8x Higher Throughput: For models like LLaMA 8B and 70B, compared to standard setups.
-- Up to 5.5x Speed Gains: In low-latency scenarios, outperforming AMD’s own vLLM.
+- 1.4x–1.8x higher throughput: For models like LLaMA 8B and 70B, compared to standard setups.
+- Up to 5.5x speed gains: In low-latency scenarios, outperforming AMD’s own vLLM.
 - This leap comes from architectural tweaks like redesigned attention kernels and smarter memory use, proving that AMD GPUs are now formidable players in LLM inference.
 
 With the above capabilities, FireAttention can significantly enhance the
@@ -157,9 +157,9 @@ making fine-tuning both faster and more affordable.
 
 Fireworks AI’s optimizations extend beyond adaptive speculation. Three critical techniques maximize throughput and cost-efficiency:
 
-- Adaptive Caching: Reuses frequent computations (e.g., repetitive API calls) to skip redundant work, slashing latency by 30–50% for high-traffic workloads.
-- Customizable Quantization: Balances 4-/8-bit precision with model quality, doubling speeds while retaining >99% accuracy for tasks like batch processing.
-- Disaggregated Serving: Tailors hardware allocation to workload type—host multiple lightweight model copies (e.g., 8 GPUs → 8 parallel instances) or shard large models (e.g., LLaMA 70B) across GPUs for complex tasks.
+- Adaptive caching: Reuses frequent computations (e.g., repetitive API calls) to skip redundant work, slashing latency by 30–50% for high-traffic workloads.
+- Customizable quantization: Balances 4-/8-bit precision with model quality, doubling speeds while retaining >99% accuracy for tasks like batch processing.
+- Disaggregated serving: Tailors hardware allocation to workload type—host multiple lightweight model copies (e.g., 8 GPUs → 8 parallel instances) or shard large models (e.g., LLaMA 70B) across GPUs for complex tasks.
 
 Building the Solution
 ----------------------
@@ -184,14 +184,14 @@ These fine tuning techniques can be categorized as follows:
       This category includes approaches that introduce additional trainable parameters to the existing pre-trained model without modifying its original weights.
       
       - **Adapters**: These methods involve inserting small, trainable layers, known as adapter modules, between the layers of the pre-trained model. These adapters learn task-specific transformations, enabling adaptation to new tasks without altering the pre-trained parameters.
-      - **Soft Prompts**: These are trainable vector embeddings appended to the input sequence. They serve as guidance cues, influencing the model’s behavior towards the desired task.
-      - **Prefix Tuning**: This technique involves adding a trainable prefix to the input sequence. This prefix learns task-specific information without requiring modifications to the core model architecture.
+      - **Soft prompts**: These are trainable vector embeddings appended to the input sequence. They serve as guidance cues, influencing the model’s behavior towards the desired task.
+      - **Prefix tuning**: This technique involves adding a trainable prefix to the input sequence. This prefix learns task-specific information without requiring modifications to the core model architecture.
 
    .. step:: Reparametrization PEFT 
    
       This approach involves reparameterizing existing model weights using low-rank approximations to reduce the number of trainable parameters.
 
-      - **Low-Rank Adaptation (LoRA)**: LoRA approximates weight updates in the attention layers of a pre-trained model using low-rank matrices. This significantly decreases the number of trainable parameters.
+      - **Low-rank adaptation (LoRA)**: LoRA approximates weight updates in the attention layers of a pre-trained model using low-rank matrices. This significantly decreases the number of trainable parameters.
       - **Quantized LoRA (QLoRA)**: QLoRA enhances LoRA by incorporating quantization techniques, further reducing memory usage and computational costs.
 
    .. step:: Selective fine-tuning 
@@ -205,7 +205,7 @@ These fine tuning techniques can be categorized as follows:
    
       These strategies involve strategically freezing certain layers of the pre-trained model while fine-tuning others, optimizing the adaptation process.
 
-      - **Freeze and Reconfigure (FAR)**: FAR involves freezing specific layers of the pre-trained model and fine-tuning the remaining layers to optimize model adaptation.
+      - **Freeze and reconfigure (FAR)**: FAR involves freezing specific layers of the pre-trained model and fine-tuning the remaining layers to optimize model adaptation.
       - **FishMask**: This technique employs a mask to selectively freeze or fine-tune layers, optimizing adaptation for specific tasks.
 
 The most popular technique of these is the PEFT based ones. PEFT
@@ -246,14 +246,13 @@ in a total response time of 10 to 20 seconds (with each query taking 5
 or more seconds). Additionally, LLMs can be difficult and expensive to
 productionize and scale for millions of users.
 
-Shift Towards Small Language Models (SLMs)
-``````````````````````````````````````````
+Shift Towards Small Language Models
+```````````````````````````````````
 
-By leveraging Small Language Models (SLMs), enterprises can achieve
-significant gains in processing speed and cost-efficiency. SLMs require
-less computational power, making them ideal for devices with limited
-resources, while providing faster responses and lowering operational
-costs.
+By leveraging SLMs, enterprises can achieve significant gains in
+processing speed and cost-efficiency. SLMs require less computational
+power, making them ideal for devices with limited resources, while
+providing faster responses and lowering operational costs.
 
 Parameter-efficient Fine-tuning and LoRA
 `````````````````````````````````````````
