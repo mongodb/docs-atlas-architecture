@@ -219,25 +219,25 @@ How to build the solution step-by-step:
 
    .. step:: Set up MongoDB database and collections
 
-   Create a new database in |service-fullname| named **open_finance**, then add three collections:
-   **tokens**, **external_accounts**, and **external_products**. Import the provided sample
-   data.
+      Create a new database in |service-fullname| named **open_finance**, then add three collections:
+      **tokens**, **external_accounts**, and **external_products**. Import the provided sample
+      data.
 
    .. step:: Add MongoDB user
 
-   Create a new user with **readWrite** access to the **open_finance** database to manage
-   data securely.
+      Create a new user with **readWrite** access to the **open_finance** database to manage
+      data securely.
 
    .. step:: Configure environment variables
 
-   Add the necessary database credentials and API origins to a **.env** file for seamless
-   connectivity.
+      Add the necessary database credentials and API origins to a **.env** file for seamless
+      connectivity.
 
    .. step:: Run it locally
 
-   Set up a virtual environment using Poetry, install
-   dependencies, and start the backend with uvicorn. Ensure the service runs on the correct
-   port for API communication.
+      Set up a virtual environment using Poetry, install
+      dependencies, and start the backend with uvicorn. Ensure the service runs on the correct
+      port for API communication.
 
 Frontend for This Solution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
