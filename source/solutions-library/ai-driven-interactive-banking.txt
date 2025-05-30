@@ -58,6 +58,8 @@ partner propose the following reference architecture:
    :width: 750px
    :alt: Reference architecture for AI-driven interactive banking proposal.
 
+   Figure 1. AI-driven interactive banking architecture
+
 MongoDB is positioned as an operational data store (ODS) acting as a medium layer between
 the AI technologies and the application layer, which allows organizations to operate with
 a more unified dataset. This unification streamlines data management, ensuring that
@@ -87,60 +89,62 @@ extend, and iterate their applications to seize emerging technological opportuni
 Building the Solution
 ---------------------
 
-1. Document Preprocessing and Chunking
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. procedure::
+   :style: normal
 
-The initial step involves processing and transforming the text-based unstructured data
-(such as the Terms & Conditions PDF), that will serve as the source for answering customer
-queries.
+   .. step:: Document preprocessing and chunking
 
-The document is divided into `N chunks
-<https://www.mongodb.com/developer/products/atlas/choosing-chunking-strategy-rag/>`_,
-which are stored in |service-fullname|. A custom script scans the document, creates the chunks,
-and vectorizes them (as illustrated in the figure below). The chunking process uses a
-sliding window technique, ensuring that transitional data between chunks is preserved
-while maintaining continuity and context.
+      The initial step involves processing and transforming the text-based unstructured data
+      (such as the Terms & Conditions PDF), that will serve as the source for answering customer
+      queries.
 
-Once the document has been transformed into vectorized chunks, they are passed through an
-embedding model to generate vector embeddings. The embedding model can be selected
-according to the user's requirements. For illustration purposes, we are using Cohere
-'cohere.embed-english-v3' on AWS Bedrock for the embedding creation.
+      The document is divided into `N chunks
+      <https://www.mongodb.com/developer/products/atlas/choosing-chunking-strategy-rag/>`_,
+      which are stored in |service-fullname|. A custom script scans the document, creates the chunks,
+      and vectorizes them (as illustrated in the figure below). The chunking process uses a
+      sliding window technique, ensuring that transitional data between chunks is preserved
+      while maintaining continuity and context.
 
-Both the chunks and their corresponding vectors are stored in |service-fullname|. In this
-sample scenario, we are using `SuperDuper <https://superduper.io/>`_ (an open-source
-Python framework that integrates AI models and workflows directly with MongoDB) as the
-process orchestrator, enabling more flexible and scalable custom enterprise AI solutions.
+      Once the document has been transformed into vectorized chunks, they are passed through an
+      embedding model to generate vector embeddings. The embedding model can be selected
+      according to the user's requirements. For illustration purposes, we are using Cohere
+      'cohere.embed-english-v3' on AWS Bedrock for the embedding creation.
 
-2. Vector Search and Querying
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Both the chunks and their corresponding vectors are stored in |service-fullname|. In this
+      sample scenario, we are using `SuperDuper <https://superduper.io/>`_ (an open-source
+      Python framework that integrates AI models and workflows directly with MongoDB) as the
+      process orchestrator, enabling more flexible and scalable custom enterprise AI solutions.
 
-After we’ve stored both the chunks and their embeddings in MongoDB, we can begin
-leveraging `MongoDB Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search#query>`_ for semantic
-querying.
+   .. step:: Vector Search and querying
 
-3. Building the Chatbot UI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      After we’ve stored both the chunks and their embeddings in MongoDB, we can begin
+      leveraging `MongoDB Atlas Vector Search
+      <https://www.mongodb.com/products/platform/atlas-vector-search#query>`_ for semantic
+      querying.
 
-The next step involves building an application—in our case, an interactive chatbot. This
-chatbot is powered by MongoDB Atlas Vector Search and a pre-trained |llm|. When a user
-inputs a question, that question is first vectorized, and MongoDB Atlas Vector Search is
-used to find documents with similar embeddings.
+   .. step:: Building the chatbot UI
 
-Once relevant documents are retrieved, the next step is to send this data to an LLM. In
-this case, we use Amazon Bedrock as the `LLM
-<https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`_
-container. For this specific use case, we are leveraging Claude from Anthropic. The LLM
-receives both the question and the retrieved documents, using the documents as context to
-generate a more comprehensive and accurate response. This framework is known as
-`retrieval-augmented generation
-<https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`_
-(|rag|) architecture. RAG enhances the chatbot’s ability to provide accurate answers by
-combining semantic search with powerful language model generation.
+      The next step involves building an application—in our case, an interactive chatbot. This
+      chatbot is powered by MongoDB Atlas Vector Search and a pre-trained |llm|. When a user
+      inputs a question, that question is first vectorized, and MongoDB Atlas Vector Search is
+      used to find documents with similar embeddings.
 
-.. figure:: /includes/images/industry-solutions/chatbot.gif
-   :width: 750px
-   :alt: Leafy Bank mock-up chatbot in action
+      Once relevant documents are retrieved, the next step is to send this data to an LLM. In
+      this case, we use Amazon Bedrock as the `LLM
+      <https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`_
+      container. For this specific use case, we are leveraging Claude from Anthropic. The LLM
+      receives both the question and the retrieved documents, using the documents as context to
+      generate a more comprehensive and accurate response. This framework is known as
+      `retrieval-augmented generation
+      <https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`_
+      (|rag|) architecture. RAG enhances the chatbot’s ability to provide accurate answers by
+      combining semantic search with powerful language model generation.
+
+      .. figure:: /includes/images/industry-solutions/chatbot.gif
+         :width: 750px
+         :alt: Leafy Bank mock-up chatbot in action
+
+         Figure 2. Leafy Bank chatbot in action
 
 Key Learnings
 -------------
@@ -159,14 +163,14 @@ Key Learnings
 Technologies and Products Used
 ------------------------------
 
-MongoDB Developer Data Platform:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas Database <https://www.mongodb.com/products/platform/atlas-database>`_
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_
 
-Partner Technologies:
-~~~~~~~~~~~~~~~~~~~~~
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
 
 - `Amazon Bedrock <https://aws.amazon.com/bedrock>`_
 
