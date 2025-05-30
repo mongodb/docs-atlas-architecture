@@ -22,7 +22,7 @@ kick-start their projects.
 
          .. card::
             :headline: Agentic AI-Powered Investment Portfolio Management
-            :url: https://deploy-preview-239--docs-atlas-architecture.netlify.app/solutions-library/fin-services-agentic-portfolio/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/ai-powered-portfolio-management/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -34,7 +34,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Driven Interactive Banking
-            :url: /solutions-library/ai-driven-interactive-banking/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/ai-driven-interactive-banking/
             :icon: industry_enterprise
             :icon-alt: Atlas industry_enterprise icon
 
@@ -43,7 +43,7 @@ kick-start their projects.
 
          .. card::
             :headline: Assessing Business Loan Risks with Generative AI
-            :url: /solutions-library/assessing-business-loan-risks-with-generative-ai/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/loan-risk-assesment-with-gen-ai/
             :icon: industry_finance
             :icon-alt: Atlas industry_finance icon
 
@@ -53,7 +53,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building Continuously Updating RAG Applications
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
+            https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/rag-applications-unified-interface/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -63,7 +63,7 @@ kick-start their projects.
 
          .. card::
             :headline: Credit Card Application with Generative AI
-            :url: /solutions-library/credit-card-application-with-generative-ai/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/credit-card-application-with-gen-ai/
             :icon: industry_credit_card
             :icon-alt: Atlas industry_credit_card icon
 
@@ -72,7 +72,7 @@ kick-start their projects.
 
          .. card::
             :headline: Optimizing RAG Applications with Fireworks AI and MongoDB
-            :url: https://deploy-preview-240--docs-atlas-architecture.netlify.app/solutions-library/fin-services-fireworks-rag/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/rag-applications-with-fireworks/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -90,7 +90,7 @@ kick-start their projects.
 
          .. card::
             :headline: Fraud Detection Accelerator Using AWS SageMaker
-            :url: /solutions-library/fraud-detection-accelerator/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/fraud-detection-accelerator/
             :icon: general_security
             :icon-alt: Atlas general_security icon
 
@@ -100,7 +100,7 @@ kick-start their projects.
 
          .. card::
             :headline: Card Fraud Solution Accelerator
-            :url: /solutions-library/card-fraud-solution/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/real-time-card-fraud-detection/
             :icon: industry_credit_card
             :icon-alt: Atlas industry_credit_card icon
 
@@ -109,7 +109,7 @@ kick-start their projects.
 
          .. card::
             :headline: Vector Search Fraud Prevention Accelerator
-            :url: /solutions-library/vector-search-fraud-prevention/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/fraud-and-aml-detection-with-vector-search/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -126,7 +126,7 @@ kick-start their projects.
 
          .. card::
             :headline: MongoDB as the Open Finance Data Store
-            :url: /solutions-library/open-finance-data-store/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/open-finance-data-store/
             :icon: industry_finance
             :icon-alt: Atlas industry_finance icon
 
@@ -136,7 +136,7 @@ kick-start their projects.
 
          .. card::
             :headline: MongoDB and Hasura for Modern Fintech Services
-            :url: /solutions-library/hasura-fintech-services/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/hasura-ddn-fintech/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -152,7 +152,7 @@ kick-start their projects.
 
          .. card::
             :headline: Payments Modernization Solution Accelerator
-            :url: /solutions-library/payments-solution/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/payments-modernization/
             :icon: industry_credit_card
             :icon-alt: Atlas industry_credit_card icon
 
@@ -172,7 +172,7 @@ kick-start their projects.
 
          .. card::
             :headline: Elevate Flight Operations with Real-Time Analytics
-            :url: https://deploy-preview-222--docs-atlas-architecture.netlify.app/solutions-library/flightmanagement/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/real-time-flight-management/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -189,7 +189,7 @@ kick-start their projects.
 
          .. card::
             :headline: Agentic AI-Powered Fleet Incident Advisor
-            :url: https://deploy-preview-233--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-fleet-management/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/fleet-agents/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -199,7 +199,7 @@ kick-start their projects.
          
          .. card::
             :headline: Automotive Diagnostics Using Atlas Vector Search
-            :url: https://deploy-preview-204--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-automotive-diagnostics/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/automotive-diagnostics-with-vector-search/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -209,7 +209,7 @@ kick-start their projects.
 
          .. card::
             :headline: Framework for Rapid AI Agent Deployment
-            :url: https://deploy-preview-187--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-agentic-ai-framework/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/agentic-framework/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -218,7 +218,7 @@ kick-start their projects.
 
          .. card::
             :headline: Predictive Maintenance Excellence with MongoDB Atlas
-            :url: https://deploy-preview-210--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-predictive-maintenance/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/ai-powered-predictive-maintenance/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -227,7 +227,7 @@ kick-start their projects.
 
          .. card::
             :headline: Transforming the Driver Experience with MongoDB & Google Cloud
-            :url: https://deploy-preview-223--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-car-assistant
+            :url:https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/in-car-voice-assistant/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -244,7 +244,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building an IoT Data Hub for Smart Manufacturing
-            :url: https://deploy-preview-195--docs-atlas-architecture.netlify.app/solutions-library/IoT-datahub-manufacturing/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/manufacturing-iot-data-hub/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -254,7 +254,7 @@ kick-start their projects.
 
          .. card::
             :headline: Power Smart Meter Analysis with MongoDB
-            :url: https://deploy-preview-214--docs-atlas-architecture.netlify.app/solutions-library/smart-meter/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/smart-meters-with-mongodb/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -264,7 +264,7 @@ kick-start their projects.
 
          .. card::
             :headline: Real-Time Audio-Based AI Diagnostics
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/real-time-audio-based-ai-diagnostics/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -274,7 +274,7 @@ kick-start their projects.
 
          .. card::
             :headline: Real-Time IoT Analytics
-            :url: https://deploy-preview-234--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-rocket-launch/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/real-time-iot-data-analytics/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -290,7 +290,7 @@ kick-start their projects.
 
          .. card::
             :headline: Unified Namespace Data Integrity
-            :url: https://deploy-preview-221--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-unified-namespace/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/unified-namespace/
             :icon: industry_enterprise
             :icon-alt: Atlas industry_enterprise icon
 
@@ -310,7 +310,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Powered Healthcare with MongoDB & Microsoft
-            :url: https://deploy-preview-238--docs-atlas-architecture.netlify.app/solutions-library/healthcare-asset-ai-healthcare/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/ai-powered-healthcare/
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
@@ -330,7 +330,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Powered Call Center Intelligence with MongoDB
-            :url: https://deploy-preview-228--docs-atlas-architecture.netlify.app/solutions-library/insurance-asset-call-centers/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/ai-powered-call-centers/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -340,7 +340,7 @@ kick-start their projects.
 
          .. card::
             :headline: Automating Digital Underwriting with Machine Learning
-            :url: https://deploy-preview-235--docs-atlas-architecture.netlify.app/solutions-library/digital-underwriting/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/machine-learning-underwriting/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -356,7 +356,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Enhanced Claims Adjustment
-            :url: https://deploy-preview-213--docs-atlas-architecture.netlify.app/solutions-library/insurance-image-search/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/vector-image-search/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -366,7 +366,7 @@ kick-start their projects.
 
          .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/pdf-search/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/pdf-search-with-vector-search-and-llm/
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
@@ -376,7 +376,7 @@ kick-start their projects.
 
          .. card::
             :headline: Claim Management Using LLMs and Vector Search for RAG
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/claim-management/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/claim-management-llms-vector-search/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -395,7 +395,7 @@ kick-start their projects.
 
          .. card::
             :headline: Streamline Global Gaming Management
-            :url: https://deploy-preview-202--docs-atlas-architecture.netlify.app/solutions-library/Streamline-global-gaming-management/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/gaming-player-profiles/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -411,7 +411,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Driven Media Personalization
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/media-personalization/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/ai-powered-media-personalization/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -421,7 +421,7 @@ kick-start their projects.
 
          .. card::
             :headline: Gen AI-Powered Video Summarization
-            :url: https://deploy-preview-217--docs-atlas-architecture.netlify.app/solutions-library/AI-video-summarization/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/gen-ai-powered-video-summarization/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -443,7 +443,7 @@ kick-start their projects.
 
          .. card::
             :headline: As-You-Type Suggestions
-            :url: https://deploy-preview-194--docs-atlas-architecture.netlify.app/solutions-library/retail-as-you-type-suggestions/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/as-you-type-suggestions/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -451,7 +451,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building an Event-Driven Inventory Management System
-            :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/event-driven-inventory-management/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -460,7 +460,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building Modern Omnichannel Ordering on MongoDB
-            :url: https://deploy-preview-216--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-omnichannel-ordering/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/omnichannel-ordering/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -469,7 +469,7 @@ kick-start their projects.
 
          .. card::
             :headline: Real-Time Product Tracking
-            :url: https://deploy-preview-236--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-rfid-retail/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/real-time-product-tracking/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -485,7 +485,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI Product Search
-            :url: https://deploy-preview-209--docs-atlas-architecture.netlify.app/solutions-library/retail-ai-product-search/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/ai-product-search/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -493,7 +493,7 @@ kick-start their projects.
 
          .. card::
             :headline: Automating Product Descriptions Using Generative AI
-            :url: https://deploy-preview-197--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-product-description/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/product-descriptions-with-together-ai/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -502,7 +502,7 @@ kick-start their projects.
 
          .. card::
             :headline: Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
-            :url: https://deploy-preview-224--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-rag-chatbot/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/agentic-rag-retail/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -519,7 +519,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Driven Real-Time Pricing with MongoDB and Vertex AI
-            :url: https://deploy-preview-199--docs-atlas-architecture.netlify.app/solutions-library/AIDriven-real-time%20pricing/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/ai-driven-real-time-pricing/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -527,7 +527,7 @@ kick-start their projects.
 
          .. card::
             :headline: Dynamic Pricing
-            :url: https://deploy-preview-232--docs-atlas-architecture.netlify.app/solutions-library/retail-dynamic-pricing/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/real-time-dynamic-pricing/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -546,7 +546,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Powered Chatbot for Network Management
-            :url: https://deploy-preview-227--docs-atlas-architecture.netlify.app/solutions-library/telecom-asset-telco-ops/
+            :url: https://www.mongodb.com/docs/atlas/architecture/current/solutions-library/telco-ai-ops/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
