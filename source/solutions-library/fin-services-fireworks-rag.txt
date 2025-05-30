@@ -98,7 +98,7 @@ Let’s dive deeper into the FireOptimizer framework.
 FireOptimizer: Smarter Token Generation Through Adaptation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Large Language Models (LLMs) typically generate outputs one word (or
+LLMs typically generate outputs one word (or
 token) at a time , which can make responses slower, especially for long
 outputs. To accelerate this process, a technique called speculative
 decoding is used. This involves a smaller, faster model—known as a
@@ -257,11 +257,10 @@ providing faster responses and lowering operational costs.
 Parameter-efficient Fine-tuning and LoRA
 `````````````````````````````````````````
 
-PEFT and its method, Low-Rank Adaptation (LoRA), significantly improve
-efficiency by optimizing only a subset of parameters. This approach
-reduces memory requirements and cuts down on operational costs. The
-synergy with MongoDB enhances data handling and facilitates efficient
-model tuning processes.
+PEFT and its LoRA method significantly improve efficiency by optimizing
+only a subset of parameters. This approach reduces memory requirements
+and cuts down on operational costs. The synergy with MongoDB enhances
+data handling and facilitates efficient model tuning processes.
 
 MongoDB Unique Value
 ````````````````````
@@ -441,69 +440,69 @@ of the alternative credit card product recommendation process, we
 observed a tremendous improvement in the response time of the process
 using the fine-tuned SLM:
 
-1. Response Time Improvement: Originally, the response time with a
-large LLM would be around 5 seconds. By using an SLM, this can be
-reduced to approximately 19x reduction in latency.
+1. **Response time improvement:** Originally, the response time with a
+   large LLM would be around 5 seconds. By using an SLM, this can be
+   reduced to approximately 19x reduction in latency.
 
-.. code-block:: python
-   :copyable: true
+   .. code-block:: python
+      :copyable: true
 
-    import time
-    class tiktok:
-    """
-    Decorator to time the execution of a function and log the time taken.
-    """
-    def __init__(self, function):
-          self.function = function
+      import time
+      class tiktok:
+      """
+      Decorator to time the execution of a function and log the time taken.
+      """
+      def __init__(self, function):
+            self.function = function
 
-    def __call__(self, *args, **kwargs):
-          import time
-          start = time.time()
-          value = self.function(*args, **kwargs)
-          end = time.time()
-          print(f"Time taken for {self.function.__name__}: {end - start} seconds")
-          return value
+      def __call__(self, *args, **kwargs):
+            import time
+            start = time.time()
+            value = self.function(*args, **kwargs)
+            end = time.time()
+            print(f"Time taken for {self.function.__name__}: {end - start} seconds")
+            return value
 
-    @tiktok
-    @mdbcache
-    def invoke_llm(prompt):
-    """
-    Invoke the language model with the given prompt with cache. The invole LLM method can invoke either a LLM or SLM based on the Fireworks Model ID initialised.
+      @tiktok
+      @mdbcache
+      def invoke_llm(prompt):
+      """
+      Invoke the language model with the given prompt with cache. The invole LLM method can invoke either a LLM or SLM based on the Fireworks Model ID initialised.
 
-    Args:
-          prompt (str): The prompt to pass to the LLM.
-    """
-    ...
+      Args:
+            prompt (str): The prompt to pass to the LLM.
+      """
+      ...
 
 
-.. list-table:: Model Inference Times
-   :header-rows: 1
-   :widths: 28 18 18 18 18
+   .. list-table:: Model Inference Times
+      :header-rows: 1
+      :widths: 28 18 18 18 18
 
-   * - Model
-     - Inference Time 1 (s)
-     - Inference Time 2 (s)
-     - Inference Time 3 (s)
-     - Average Time (s)
+      * - Model
+      - Inference Time 1 (s)
+      - Inference Time 2 (s)
+      - Inference Time 3 (s)
+      - Average Time (s)
 
-   * - llama-v3p1-405b-instruct
-     - 5.5954
-     - 7.5936
-     - 4.9121
-     - 6.0337
+      * - llama-v3p1-405b-instruct
+      - 5.5954
+      - 7.5936
+      - 4.9121
+      - 6.0337
 
-   * - SLM - fine-tuned llama-v3p1-8b
-     - 0.3554
-     - 0.0480
-     - 0.0473
-     - 0.1502
+      * - SLM - fine-tuned llama-v3p1-8b
+      - 0.3554
+      - 0.0480
+      - 0.0473
+      - 0.1502
 
-2. **Memory Reduction:**  LLMs typically require substantial memory,
+#. **Memory reduction:**  LLMs typically require substantial memory,
    often in the range of  8x80GB VRAM. A SLM can operate efficiently with
    around 16 GB VRAM of memory, leading to a 97.5% reduction in memory
    usage.
 
-3. **Hardware Reduction:** Deploying LLMs often necessitates high-end
+#. **Hardware reduction:** Deploying LLMs often necessitates high-end
    GPUs or multiple servers. With an SLM, the hardware requirements can be
    significantly reduced, potentially allowing deployment on standard CPUs
    or a single server, leading to a drastic reduction in hardware costs.
@@ -524,7 +523,7 @@ collaboration include:
 Organizations adopting this strategy can achieve accelerated AI performance, resource savings, and future-proof solutions—driving innovation and competitive advantage across different sectors.
 
 Further Reading
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 How Fireworks AI's platform accelerates inference speeds and throughput:
 
