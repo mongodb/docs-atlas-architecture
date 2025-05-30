@@ -91,6 +91,8 @@ for inference.
    :figwidth: 750px
    :alt: Fraud Detection Architecture
 
+   Figure 1. Fraud detection architecture
+
 Data Model Approach
 -------------------
 The data is divided into two separate files: one containing identity information and the
@@ -189,7 +191,9 @@ Key Learnings
 
 Technologies and Products Used
 ------------------------------
-MongoDB developer data platform: 
+
+MongoDB Developer Data Platform 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas Database <https://www.mongodb.com/atlas/database>`__ 
 
@@ -199,7 +203,8 @@ MongoDB developer data platform:
 
 - `Atlas Data Federation <https://www.mongodb.com/products/platform/atlas-data-federation>`__
 
-Partner technologies: 
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~ 
 
 - `AWS S3 <https://aws.amazon.com/s3/>`__ 
 
