@@ -90,7 +90,7 @@ Distribute Data Across At Least Three Data Centers in Different Availability Zon
 MongoDB provides high availability by storing multiple copies of data across replica sets.
 To ensure that members of the same replica set don't share the same resources, and that 
 a replica set can elect a primary if a data center becomes unavailable, you must distribute 
-nodes across at least three data centers. We recommend that you use at least five data centers.
+nodes across at least three data centers.
 
 You can distribute data across multiple data centers by deploying your {+cluster+} to a region that supports multiple availability zones. 
 Each availability zone typically contains one or more discrete data centers, each with redundant power, networking and connectivity, often housed in separate
