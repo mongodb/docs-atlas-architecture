@@ -13,6 +13,68 @@ kick-start their projects.
    .. tab:: Financial Services
       :tabid: gen-ai
 
+      App-Driven Analytics
+      --------------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: MongoDB as the Open Finance Data Store
+            :url: /solutions-library/open-finance-data-store/
+            :icon: industry_finance
+            :icon-alt: Atlas industry_finance icon
+
+            MongoDB powers open finance with flexible data integration, built-in security,
+            and scalability—enabling seamless, compliant, and personalized financial
+            services.
+
+         .. card::
+            :headline: MongoDB and Hasura for Modern Fintech Services
+            :url: /solutions-library/hasura-fintech-services/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Leverage agentic RAG using MongoDB and Dataworkz to enhance customers’
+            shopping experiences with a personalized chatbot.
+
+      Fraud Prevention
+      ----------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Fraud Detection Accelerator Using AWS SageMaker
+            :url: /solutions-library/fraud-detection-accelerator/
+            :icon: general_security
+            :icon-alt: Atlas general_security icon
+
+            Revolutionize fraud detection in finance with MongoDB Atlas and Amazon
+            SageMaker Canvas. Leverage real-time data and AI for stronger defenses against
+            cybercrime.
+
+         .. card::
+            :headline: Card Fraud Solution Accelerator
+            :url: /solutions-library/card-fraud-solution/
+            :icon: industry_credit_card
+            :icon-alt: Atlas industry_credit_card icon
+
+            Real-time AI/ML fraud detection for Financial Services using MongoDB and 
+            Databricks. Ensure data completeness and instant fraud analysis.
+
+         .. card::
+            :headline: Vector Search Fraud Prevention Accelerator
+            :url: /solutions-library/vector-search-fraud-prevention/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Combine real-time analytics with semantic search by integrating MongoDB Atlas
+            Vector Search with OpenAI-generated embeddings to detect fraud that
+            traditional methods miss.   
+
       Gen AI
       ------
 
@@ -78,69 +140,7 @@ kick-start their projects.
             Learn how MongoDB and Fireworks AI optimize RAG
             applications, enhancing latency, reducing TCO, and
             accelerating AI with advanced data management and model
-            fine-tuning techniques.
-
-      Fraud Prevention
-      ----------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Fraud Detection Accelerator Using AWS SageMaker
-            :url: /solutions-library/fraud-detection-accelerator/
-            :icon: general_security
-            :icon-alt: Atlas general_security icon
-
-            Revolutionize fraud detection in finance with MongoDB Atlas and Amazon
-            SageMaker Canvas. Leverage real-time data and AI for stronger defenses against
-            cybercrime.
-
-         .. card::
-            :headline: Card Fraud Solution Accelerator
-            :url: /solutions-library/card-fraud-solution/
-            :icon: industry_credit_card
-            :icon-alt: Atlas industry_credit_card icon
-
-            Real-time AI/ML fraud detection for Financial Services using MongoDB and 
-            Databricks. Ensure data completeness and instant fraud analysis.
-
-         .. card::
-            :headline: Vector Search Fraud Prevention Accelerator
-            :url: /solutions-library/vector-search-fraud-prevention/
-            :icon: mdb_vector_search
-            :icon-alt: Atlas mdb_vector_search icon
-
-            Combine real-time analytics with semantic search by integrating MongoDB Atlas
-            Vector Search with OpenAI-generated embeddings to detect fraud that
-            traditional methods miss.      
-
-      App-Driven Analytics
-      --------------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: MongoDB as the Open Finance Data Store
-            :url: /solutions-library/open-finance-data-store/
-            :icon: industry_finance
-            :icon-alt: Atlas industry_finance icon
-
-            MongoDB powers open finance with flexible data integration, built-in security,
-            and scalability—enabling seamless, compliant, and personalized financial
-            services.
-
-         .. card::
-            :headline: MongoDB and Hasura for Modern Fintech Services
-            :url: /solutions-library/hasura-fintech-services/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Leverage agentic RAG using MongoDB and Dataworkz to enhance customers’
-            shopping experiences with a personalized chatbot.
+            fine-tuning techniques.   
 
       Modernization
       -------------
