@@ -21,23 +21,22 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: MongoDB as the Open Finance Data Store
-            :url: /solutions-library/open-finance-data-store/
-            :icon: industry_finance
-            :icon-alt: Atlas industry_finance icon
-
-            MongoDB powers open finance with flexible data integration, built-in security,
-            and scalability—enabling seamless, compliant, and personalized financial
-            services.
-
-         .. card::
-            :headline: MongoDB and Hasura for Modern Fintech Services
+            :headline: Modern Fintech Services with MongoDB and Hasura
             :url: /solutions-library/hasura-fintech-services/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Leverage agentic RAG using MongoDB and Dataworkz to enhance customers’
+            Leverage agentic RAG using MongoDB and Dataworkz to enhance
             shopping experiences with a personalized chatbot.
+
+         .. card::
+            :headline: Open Finance Data Store with MongoDB
+            :url: /solutions-library/open-finance-data-store/
+            :icon: industry_finance
+            :icon-alt: Atlas industry_finance icon
+
+            Learn how MongoDB powers open finance with flexible data
+            integration, built-in security, and scalability.
 
       Fraud Prevention
       ----------------
@@ -47,6 +46,16 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: Card Fraud Solution Accelerator
+            :url: /solutions-library/card-fraud-solution/
+            :icon: industry_credit_card
+            :icon-alt: Atlas industry_credit_card icon
+
+            Implement real-time fraud detection techniques for Financial
+            Services using MongoDB and Databricks. Ensure data
+            completeness and instant fraud analysis.
+         
+         .. card::
             :headline: Fraud Detection Accelerator Using AWS SageMaker
             :url: /solutions-library/fraud-detection-accelerator/
             :icon: general_security
@@ -55,15 +64,6 @@ kick-start their projects.
             Revolutionize fraud detection in finance with MongoDB Atlas and Amazon
             SageMaker Canvas. Leverage real-time data and AI for stronger defenses against
             cybercrime.
-
-         .. card::
-            :headline: Card Fraud Solution Accelerator
-            :url: /solutions-library/card-fraud-solution/
-            :icon: industry_credit_card
-            :icon-alt: Atlas industry_credit_card icon
-
-            Real-time AI/ML fraud detection for Financial Services using MongoDB and 
-            Databricks. Ensure data completeness and instant fraud analysis.
 
          .. card::
             :headline: Vector Search Fraud Prevention Accelerator
@@ -103,7 +103,7 @@ kick-start their projects.
             models to improve the interactivity of banking applications.
 
          .. card::
-            :headline: Assessing Business Loan Risks with Generative AI
+            :headline: Assess Business Loan Risks with Generative AI
             :url: /solutions-library/assessing-business-loan-risks-with-generative-ai/
             :icon: industry_finance
             :icon-alt: Atlas industry_finance icon
@@ -111,16 +111,6 @@ kick-start their projects.
             Learn how generative AI can generate detailed risk assessments and how 
             MongoDB’s multimodal features enable comprehensive and multidimensional loan risk
             analysis.
-
-         .. card::
-            :headline: Building Continuously Updating RAG Applications
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Use native stream processing and Vector Search in MongoDB Atlas to
-            continuously update, store, and search embeddings through a unified
-            interface.
 
          .. card::
             :headline: Credit Card Application with Generative AI
@@ -138,9 +128,18 @@ kick-start their projects.
             :icon-alt: Atlas industry_ai icon
 
             Learn how MongoDB and Fireworks AI optimize RAG
-            applications, enhancing latency, reducing TCO, and
-            accelerating AI with advanced data management and model
-            fine-tuning techniques.   
+            applications, enhancing latency and reducing TCO with
+            advanced data management and model fine-tuning techniques.  
+
+         .. card::
+            :headline: Unified Interface for RAG Applications
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Use native stream processing and Vector Search in MongoDB Atlas to
+            continuously update, store, and search embeddings through a unified
+            interface. 
 
       Modernization
       -------------
@@ -150,7 +149,7 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Payments Modernization Solution Accelerator
+            :headline: Payments Modernization Accelerator
             :url: /solutions-library/payments-solution/
             :icon: industry_credit_card
             :icon-alt: Atlas industry_credit_card icon

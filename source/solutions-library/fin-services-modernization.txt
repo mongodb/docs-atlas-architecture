@@ -1,5 +1,8 @@
+================================
+Financial Services Modernization
+================================
+
 .. toctree::
    :titlesonly:
 
-   Payments Solution Accelerator </solutions-library/payments-solution>
-   
+   Payments Modernization Accelerator </solutions-library/payments-solution>
