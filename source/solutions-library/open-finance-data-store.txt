@@ -13,8 +13,11 @@ MongoDB as the Open Finance Data Store
    :class: singlecol
 
 - **Use cases:** `App Driven-Analytics <https://www.mongodb.com/collateral/application-driven-analytics>`__
+
 - **Industries:** `Financial Services <https://www.mongodb.com/industries/financial-services>`__
-- **Products and tools:** Aggregation pipeline, `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__
+
+- **Products and tools:** `Aggregation pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__, 
+`MongoDB Atlas <https://www.mongodb.com/atlas/database>`__
 
 Solution Overview
 ------------------
@@ -36,8 +39,10 @@ the complexity of traditional relational databases.
 .. figure:: /includes/images/industry-solutions/open-finance.gif
   :alt: Open Finance demo in gif format
 
-Ref Architecture
----------------------
+  Figure 1. Open finance application with MongoDB
+
+Reference Architectures
+-----------------------
 
 At the center of this architecture is our fictional demo bank, Leafy Bank, which allows
 users to connect external bank accounts securely.
@@ -61,6 +66,8 @@ bank to offer personalized financial insights.
 .. figure:: /includes/images/industry-solutions/open-finance-architecture.svg
    :width: 750px
    :alt: Open Finance architecture diagram
+
+   Figure 2. Open finance architecture diagram
   
 
 Data Model Approach
@@ -72,7 +79,8 @@ approach leverages MongoDB's flexible document model to handle diverse data stru
 from different financial entities. Here’s a detailed description of the data model
 approach:
 
-**Simplified components for demonstration purposes**
+Simplified Components for Demonstration Purposes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Tokens collection:** 
   
@@ -228,7 +236,8 @@ Set up a virtual environment using Poetry, install
 dependencies, and start the backend with uvicorn. Ensure the service runs on the correct
 port for API communication.
 
-**Frontend for this solution** 
+Frontend for This Solution
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The frontend for this solution is available in the `Leafy Bank UI repository
 <https://github.com/mongodb-industry-solutions/leafy-bank-ui>`__. The different components
@@ -245,8 +254,12 @@ Key Learnings
 
 Technologies and Products Used
 ------------------------------
+
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 - `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__
-- Aggregation Pipeline
+- `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__
 
 Authors
 -------
