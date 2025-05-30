@@ -291,7 +291,7 @@ efficient inventory checks.
       - Start the change stream and handle real-time updates with
         alerts.
 
-      **Implement Real-Time Alerts**
+      **Implement Real-time Alerts**
 
       - Display success or error alerts based on the inventory check
         results using *pushToast*.

@@ -153,7 +153,7 @@ The data extracted from each YouTube video consists of the following:
 - **Metadata**: Video details such as title, uploader, date, etc.
 - **Transcript**: A textual representation of the content spoken in the video.
 - **Summary**: A concise version of the transcript, distilled using AI.
-- **Code Analyzed list**: A list of programming language code extracted from the video and analyzed by AI.
+- **Code analyzed list**: A list of programming language code extracted from the video and analyzed by AI.
 
 The data is finally stored in JSON format, which provides flexibility in
 terms of utilization in various applications.

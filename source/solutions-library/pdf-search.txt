@@ -249,8 +249,8 @@ MongoDB Developer Data Platform
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 - `MongoDB Atlas Vector Search
   <https://www.mongodb.com/products/platform/atlas-vector-search>`__
-- Atlas Collections
-- Atlas Clusters
+- `Atlas Collections <https://www.mongodb.com/docs/manual/core/databases-and-collections/>`__
+- `Atlas Clusters <https://www.mongodb.com/resources/products/fundamentals/clusters>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~

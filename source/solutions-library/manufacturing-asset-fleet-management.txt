@@ -99,8 +99,8 @@ OpenAI LLM.
 
 .. video:: https://www.youtube.com/watch?v=_CAOb7BR-Rg
   
-Reference Architecture  
-----------------------  
+Reference Architectures  
+-----------------------  
   
 The reference architecture shown below illustrates the inner workings
 and data flow of the AI agent. The workflow begins when a user (driver)

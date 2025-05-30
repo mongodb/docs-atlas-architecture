@@ -226,7 +226,7 @@ Database <https://zenodo.org/records/7545697>`_, which contains multiple sources
        {"$match": {"year": {"$gte": 2016}}}
    ]
 
-Reference Architecture
+Reference Architectures
 -----------------------
 
 The following diagram provides a logical architecture overview of the RAG data process

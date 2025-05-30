@@ -47,7 +47,7 @@ convenience and efficiency.
 
 .. video:: https://www.youtube.com/watch?v=Pn0IOrn3TKI
 
-Reference Architecture
+Reference Architectures
 -----------------------
 
 The problem with traditional terms and conditions is that they are dense, unstructured,
