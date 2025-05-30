@@ -67,9 +67,10 @@ methods. MongoDB facilitates this through {+avs+} integrated with
 OpenAI-generated embeddings as illustrated in Figure 1 below.
 
 .. figure:: /includes/images/industry-solutions/vector-search-openai-integration.png
-    :alt: Figure 1: {+avs+} in action for Fraud and AML detection     
-  
+    :alt: Figure 1: {+avs+} in action for Fraud and AML detection    
 
+    Figure 1. {+avs+} in action for Fraud and AML detection  
+  
 How Are Vector Embeddings for Fraud Detection and AML Created?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In this solution, the fraud embedding is based on a combination of text, transactions, and
@@ -182,6 +183,8 @@ several advantages for organizations aiming to build effective solutions.
 .. figure:: /includes/images/industry-solutions/aml-fraud-detection-achitecture.png
     :alt: Figure 2: High level architecture of a fraud detection/AML system
 
+    Figure 2. High level architecture of a fraud detection/AML system
+
 This `GitHub repository
 <https://github.com/mongodb-industry-solutions/AML-Fraud-prevention-Demo>`__ presents a
 demo where a customer accesses a bank's website to perform transactions. It focuses on the
@@ -202,7 +205,8 @@ Key Learnings
 
 Technologies and Products Used
 ------------------------------
-MongoDB modern, multi-cloud database platform:
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 - `MongoDB Atlas <https://www.mongodb.com/products/platform/atlas-database>`__ 
 
@@ -214,8 +218,7 @@ MongoDB modern, multi-cloud database platform:
 
 - `MongoDB Aggregation Pipeline <https://www.mongodb.com/resources/products/capabilities/aggregation-pipeline>`__
 
-Other key technologies:
+Other Technologies
+~~~~~~~~~~~~~~~~~~
 
 - OpenAI
-
-
