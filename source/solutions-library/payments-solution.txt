@@ -355,13 +355,13 @@ Features Covered
   <https://www.mongodb.com/docs/kafka-connector/current/sink-connector/configuration-properties/>`__:
   Data being streamed from external sources. 
 
-- Transactions (User to Account references): Keeping account and user data `ACID-compliant
+- **Transactions (User to Account references):** Keeping account and user data `ACID-compliant
   <https://www.mongodb.com/products/capabilities/transactions>`__. 
 
 - In-use `encryption
   <https://www.mongodb.com/products/capabilities/security/encryption>`__ 
 
-- Full-text search: Account IDs and usernames are searchable for users to pick via
+- **Full-text search:** Account IDs and usernames are searchable for users to pick via
   `full-text search <https://www.mongodb.com/atlas/search>`__.
 
 **Transactions and payments microservices:** 
@@ -384,7 +384,7 @@ Features Covered
 
 **Reports:** 
 
-- Materialized views: Materialized views are built to preprocess and clear sensitive data for reporting. 
+- **Materialized views:** Materialized views are built to preprocess and clear sensitive data for reporting. 
 
 - `Charts <https://www.mongodb.com/products/charts>`__
 
