@@ -167,7 +167,7 @@ type the description template from scratch.
    :figwidth: 750px
    :alt: Figure 5: Choosing a location on the map and writing a brief plan description 
 
-   Figure 5. User input for loan risk assesment demo
+   Figure 5. User input for the loan risk assessment demonstration
 
 Upon submission, it will provide an analysis using `RAG 
 <https://www.mongodb.com/resources/basics/retrieval-augmented-generation>`_ with the 
@@ -179,7 +179,7 @@ flood data sources.
    :figwidth: 750px
    :alt: Figure 6: Loan risk response using RAG 
 
-   Figure 6. User input for the loan risk assessment demonstration
+   Figure 6. Loan risk response with a RAG architecture
 
 In the Flood Risk Assessment section, gen AI-powered geospatial analytics enable loan 
 officers to quickly discover historical flood occurrences and identify the data sources.
