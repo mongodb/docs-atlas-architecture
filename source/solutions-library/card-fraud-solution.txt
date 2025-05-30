@@ -137,7 +137,7 @@ Additionally, the proposed event-driven architecture provides the following bene
 The producer application for the demonstration is a Python script that generates live
 transaction information at a predefined rate (transactions/sec, which is configurable).
 
-MongoDB for Event-Driven, Shift-Left Analytics Architecture
+MongoDB for Event-driven, Shift-left Analytics Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 |service-fullname| is a modern, multi-cloud database platform that offers several features
 that make it the perfect choice as the datastore for card fraud transaction
