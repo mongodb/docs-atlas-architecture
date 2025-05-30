@@ -85,7 +85,7 @@ computational footprint.
 .. figure:: /includes/images/industry-solutions/fin-services-fireoptimizer.svg
    :alt: FireOptimizer
 
-   Figure 1. FireOptimizer Architecture for Adaptive Optimization and High-Quality Inference
+   Figure 1. FireOptimizer architecture for adaptive optimization and high-quality inference
 
 The key benefits that can be achieved are:
 
@@ -123,7 +123,7 @@ increases hit rates (e.g., from 29% to 76% in code generation tasks),
 and reduces inference costs, leading to latency improvements of up to
 3x.
 
-**Proprietary LLM serving stack: Mastering Long-Context Workloads**
+**Proprietary LLM Serving Stack: Mastering Long-context Workloads**
 
 Processing long prompts (8K-32K tokens) is critical for applications
 like document analysis or code completion—but often slows systems to a
@@ -164,7 +164,7 @@ Fireworks AI’s optimizations extend beyond adaptive speculation. Three critica
 Building the Solution
 ----------------------
 
-Fine-Tuning Strategies for Smaller, Efficient Models : A Practical Credit Application demo with MongoDB
+Fine-tuning Strategies for Smaller, Efficient Models : A Practical Credit Application Demo with MongoDB
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Smaller, efficient models present unique opportunities for fine-tuning,
@@ -179,7 +179,7 @@ These fine tuning techniques can be categorized as follows:
 .. procedure::
    :style: normal
 
-   .. step:: Additive Parameter-Efficient Fine-Tuning (PEFT): 
+   .. step:: Additive parameter-efficient fine-tuning (PEFT) 
    
       This category includes approaches that introduce additional trainable parameters to the existing pre-trained model without modifying its original weights.
       
@@ -187,21 +187,21 @@ These fine tuning techniques can be categorized as follows:
       - **Soft Prompts**: These are trainable vector embeddings appended to the input sequence. They serve as guidance cues, influencing the model’s behavior towards the desired task.
       - **Prefix Tuning**: This technique involves adding a trainable prefix to the input sequence. This prefix learns task-specific information without requiring modifications to the core model architecture.
 
-   .. step:: Reparametrization PEFT: 
+   .. step:: Reparametrization PEFT 
    
       This approach involves reparameterizing existing model weights using low-rank approximations to reduce the number of trainable parameters.
 
       - **Low-Rank Adaptation (LoRA)**: LoRA approximates weight updates in the attention layers of a pre-trained model using low-rank matrices. This significantly decreases the number of trainable parameters.
       - **Quantized LoRA (QLoRA)**: QLoRA enhances LoRA by incorporating quantization techniques, further reducing memory usage and computational costs.
 
-   .. step:: Selective Fine-Tuning: 
+   .. step:: Selective fine-tuning 
    
       This category focuses on selectively fine-tuning specific parameters of the pre-trained model, resulting in greater computational efficiency.
 
       - **BitFit**: This method fine-tunes only the bias terms, or other specific parameters, of the pre-trained model, improving computational efficiency.
       - **DiffPruning**: This technique identifies and removes parameters that contribute minimally to the model's performance, thereby reducing the number of trainable parameters.
 
-   .. step:: Layer Freezing Strategies: 
+   .. step:: Layer freezing strategies 
    
       These strategies involve strategically freezing certain layers of the pre-trained model while fine-tuning others, optimizing the adaptation process.
 
@@ -246,8 +246,8 @@ in a total response time of 10 to 20 seconds (with each query taking 5
 or more seconds). Additionally, LLMs can be difficult and expensive to
 productionize and scale for millions of users.
 
-A Shift Towards Small Language Models (SLMs)
-````````````````````````````````````````````
+Shift Towards Small Language Models (SLMs)
+``````````````````````````````````````````
 
 By leveraging Small Language Models (SLMs), enterprises can achieve
 significant gains in processing speed and cost-efficiency. SLMs require
@@ -255,7 +255,7 @@ less computational power, making them ideal for devices with limited
 resources, while providing faster responses and lowering operational
 costs.
 
-Parameter-Efficient Fine-Tuning and LoRA
+Parameter-efficient Fine-tuning and LoRA
 `````````````````````````````````````````
 
 PEFT and its method, Low-Rank Adaptation (LoRA), significantly improve
@@ -264,8 +264,8 @@ reduces memory requirements and cuts down on operational costs. The
 synergy with MongoDB enhances data handling and facilitates efficient
 model tuning processes.
 
-MongoDB's Unique Value
-```````````````````````
+MongoDB Unique Value
+````````````````````
 
 MongoDB is integral, providing seamless data management and real-time
 integration that improves operational efficiency. By storing trace data
@@ -274,7 +274,7 @@ substantial value to the process of fine-tuning models. MongoDB also
 doubles up as a caching layer to avoid unnecessarily invoking LLM on
 repeated requests for the same data.
 
-Step-by-Step guide for Fine-Tuning a Small Language Model with Fireworks AI 
+Step-by-step Guide for Fine-tuning a Small Language Model with Fireworks AI 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A critical aspect of the Credit Card Application demo is explaining
@@ -296,7 +296,7 @@ Here’s how to leverage this platform and tool:
 .. figure:: /includes/images/industry-solutions/fin-services-LLM-fine-tuning.drawio.svg
    :alt: LLM Fine Tuning Process
 
-   Figure 2. LLM/SLM Fine Tuning Process
+   Figure 2. LLM/SLM fine-tuning process
 
 The fine-tuning process starts with the collection of relevant,
 task-specific data. As shown in Figure 2, MongoDB Atlas, being a
@@ -378,42 +378,42 @@ model by following the steps below.
 .. procedure::
    :style: normal
 
-   .. step:: Install firectl Install firectl, the command-line tool for managing Fireworks AI platform resources:
+   .. step:: Install firectl, the command-line tool for managing Fireworks AI platform resources
 
       .. code-block:: python
          :copyable: true
 
          pip install firectl
 
-   .. step:: Authenticate firectl with your Fireworks account:
+   .. step:: Authenticate firectl with your Fireworks account
 
       .. code-block:: python
          :copyable: true
 
          firectl login
 
-   .. step:: Upload your fine-tuning dataset that was created as part of data generation process to the Fireworks platform:
+   .. step:: Upload your fine-tuning dataset that was created as part of data generation process to the Fireworks platform
       
       .. code-block:: python
          :copyable: true
 
          firectl create dataset <dataset_name> cc_cache.jsonl
 
-   .. step:: Create a fine-tuning job with the uploaded dataset and your chosen model:
+   .. step:: Create a fine-tuning job with the uploaded dataset and your chosen model
 
       .. code-block:: python
          :copyable: true
 
          firectl create sftj --base-model accounts/fireworks/models/llama-v3p1-8b-instruct --dataset <dataset_name> --output-model ccmodel --lora-rank 8 --epochs 1
 
-   .. step:: Monitor the fine-tuning process using the portal to ensure it runs smoothly:
+   .. step:: Monitor the fine-tuning process using the portal to ensure it runs smoothly
 
       .. figure:: /includes/images/industry-solutions/fin-services-monitoring-fine-tuning process.svg
          :alt: Monitoring the fine-tuning process
 
          Figure 3. Monitoring the fine-tuning process
 
-   .. step:: Deploy the fine-tuned model on the Fireworks platform for inference:
+   .. step:: Deploy the fine-tuned model on the Fireworks platform for inference
 
       .. code-block:: python
          :copyable: true
@@ -499,12 +499,18 @@ reduced to approximately 19x reduction in latency.
      - 0.0473
      - 0.1502
 
-2. Memory Reduction:  LLMs typically require substantial memory, often in the range of  8x80GB VRAM. A SLM can operate efficiently with around 16 GB VRAM of memory, leading to a 97.5% reduction in memory usage.
+2. **Memory Reduction:**  LLMs typically require substantial memory,
+   often in the range of  8x80GB VRAM. A SLM can operate efficiently with
+   around 16 GB VRAM of memory, leading to a 97.5% reduction in memory
+   usage.
 
-3. Hardware Reduction: Deploying LLMs often necessitates high-end GPUs or multiple servers. With an SLM, the hardware requirements can be significantly reduced, potentially allowing deployment on standard CPUs or a single server, leading to a drastic reduction in hardware costs.
+3. **Hardware Reduction:** Deploying LLMs often necessitates high-end
+   GPUs or multiple servers. With an SLM, the hardware requirements can be
+   significantly reduced, potentially allowing deployment on standard CPUs
+   or a single server, leading to a drastic reduction in hardware costs.
 
 Conclusion
------------
+~~~~~~~~~~
 
 The integration of MongoDB with Fireworks AI significantly enhances the
 efficiency and cost-effectiveness of training SLMs. This partnership
@@ -544,16 +550,9 @@ Partner Technologies
 Authors
 -------
 
-MongoDB:
-~~~~~~~~
-
-- Wei You Pan
-- Ashwin Gangadhar
-- Peyman Parsi
-- Andrea Alaman Calderon
-
-Fireworks AI:
-~~~~~~~~~~~~~
-
-- Benny Chen
-- Ayaan Momin
+- Wei You Pan, MongoDB 
+- Ashwin Gangadhar, MongoDB
+- Peyman Parsi, MongoDB
+- Andrea Alaman Calderon, MongoDB
+- Benny Chen, Fireworks AI
+- Ayaan Momin, Fireworks AI
