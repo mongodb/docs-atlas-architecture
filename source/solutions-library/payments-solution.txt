@@ -336,7 +336,9 @@ The code for the following step-by-step guide can be found in this `Github repo
 
 Features Covered
 ~~~~~~~~~~~~~~~~
-**Cross microservices:** 
+
+Cross Microservices
+```````````````````
 
 - Indexing and scalability 
 
@@ -346,7 +348,8 @@ Features Covered
 
 - Auditing
 
-**User and account microservices:** 
+User and Account Microservices
+``````````````````````````````
 
 - `Document model <https://www.mongodb.com/document-databases>`__: Flexible user and
   account structure for different accounts and user profiles. 
@@ -364,7 +367,8 @@ Features Covered
 - **Full-text search:** Account IDs and usernames are searchable for users to pick via
   `full-text search <https://www.mongodb.com/atlas/search>`__.
 
-**Transactions and payments microservices:** 
+Transactions and Payments Microservices
+```````````````````````````````````````
 
 - `Change streams <https://www.mongodb.com/basics/change-streams>`__: Payments are
   event-driven by transactions. 
@@ -375,14 +379,16 @@ Features Covered
 - In-use `encryption
   <https://www.mongodb.com/products/capabilities/security/encryption>`__
 
-**Notification microservices:** 
+Notification Microservices
+``````````````````````````
 
 - {+kafka+} source: Notifications are being down-streamed to external systems and users via Kafka. 
 
 - `Change streams <https://www.mongodb.com/basics/change-streams>`__: Notifications are
   being captured by change streams and pushed via Websockets.
 
-**Reports:** 
+Reports
+```````
 
 - **Materialized views:** Materialized views are built to preprocess and clear sensitive data for reporting. 
 
