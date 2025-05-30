@@ -416,6 +416,6 @@ The proposed solution's functional and nonfunctional features include:
 Authors
 -------
 
-- **Ashwin Gangadhar**: Solutions Architect, Partner Solutions, MongoDB
-- **Wei You Pan**: Global Director, Financial Industry Solutions, MongoDB
-- **Julian Boronat**: Senior Specialist, Industry Solutions, MongoDB
+- Ashwin Gangadhar, Partner Solutions, MongoDB
+- Wei You Pan, Industry Solutions, MongoDB
+- Julian Boronat, Industry Solutions, MongoDB
