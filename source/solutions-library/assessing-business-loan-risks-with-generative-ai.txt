@@ -68,7 +68,7 @@ consistent interpretations, thereby facilitating informed decision-making.
 Assessing Loans with Generative AI
 ----------------------------------
 
-Interactive Risk Analysis With Generative AI-Powered Chatbots
+Interactive Risk Analysis with Generative AI-powered Chatbots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Figure 1** below shows an example of how `ChatGPT-4o 
@@ -79,6 +79,8 @@ simplistic, Generative AI can offer a detailed analysis.
 .. figure:: /includes/images/industry-solutions/chatGPT-loan-risk-assessment.png
    :figwidth: 750px
    :alt: Example of how ChatGPT-4o could respond when asked to assess the risk of a business loan
+
+   Figure 1. Example of a ChatGPT-4.0 response for business loan risk assessment
 
 Hallucinations or Ignorance?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,6 +94,8 @@ previous question to see what the ChatGPT-4o comes back with.
    :figwidth: 750px
    :alt: Figure 2: Example of how ChatGPT-4o responded to flood risk as a factor
 
+   Figure 2. Example of a ChatGPT-4.0 response to flood risk as a factor
+
 Based on the response, there is a low risk of flooding. To validate this, we asked 
 ChatGPT-4o the question differently, focusing on its knowledge of flood data. (See **Figure 
 3**.) It suggested reviewing FEMA flood maps and local flood history, indicating it might 
@@ -100,6 +104,8 @@ not have the latest information.
 .. figure:: /includes/images/industry-solutions/GPT-flood-location-specific-answer-png.png
    :figwidth: 750px
    :alt: Figure 3: Asking location-specific flood questions
+
+   Figure 3. Example of location-specific flood question
 
 In the query shown, ChatGPT-4o gave an opposite answer and indicated there is “significant
 flooding” providing references to flood evidence after having performed an internet search
@@ -146,6 +152,8 @@ reports to obtain accurate information.”
    :figwidth: 750px
    :alt: Figure 4: LLM’s response with fictional flood locations 
 
+   Figure 4. LLM response to fictional flood locations 
+
 With this consistent demonstration of the knowledge gap in the LLMs for specialized areas, 
 it reinforces the need to explore how RAG (retrieval-augmented generation) with a multimodal 
 data platform can help.
@@ -159,6 +167,8 @@ type the description template from scratch.
    :figwidth: 750px
    :alt: Figure 5: Choosing a location on the map and writing a brief plan description 
 
+   Figure 5. User input for loan risk assesment demo
+
 Upon submission, it will provide an analysis using `RAG 
 <https://www.mongodb.com/resources/basics/retrieval-augmented-generation>`_ with the 
 appropriate prompt engineering to provide a simplified analysis of the business with the 
@@ -168,6 +178,8 @@ flood data sources.
 .. figure:: /includes/images/industry-solutions/risk-response-with-RAG.png
    :figwidth: 750px
    :alt: Figure 6: Loan risk response using RAG 
+
+   Figure 6. User input for the loan risk assessment demonstration
 
 In the Flood Risk Assessment section, gen AI-powered geospatial analytics enable loan 
 officers to quickly discover historical flood occurrences and identify the data sources.
@@ -180,6 +192,8 @@ queried.
 .. figure:: /includes/images/industry-solutions/flood-locations-in-map.png
    :figwidth: 750px
    :alt: Figure 7: Flood locations displayed with pins 
+
+   Figure 7. Flood locations displayed in the demo
 
 To illustrate the ease in fetching the flood locations (using the flood data containing 
 geo-locations loaded to MongoDB) around a given coordinate, below is a sample snippet of 
@@ -218,6 +232,8 @@ MongoDB, Meta Llama 3, and Fireworks.AI.
 .. figure:: /includes/images/industry-solutions/risk-assessment-achitecture.png
    :figwidth: 750px
    :alt: Figure 8: RAG data flow architecture diagram
+
+   Figure 8. RAG data flow architecture diagram
 
 With MongoDB's multimodal capabilities, developers can enhance the RAG process by
 utilizing features such as network graphs, time series, and vector search. This enriches
