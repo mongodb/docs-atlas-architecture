@@ -12,6 +12,10 @@ Fraud Prevention and AML Using {+avs+} and OpenAI
    :depth: 1
    :class: singlecol
 
+Combine real-time analytics with semantic search by integrating MongoDB
+Atlas Vector Search with OpenAI-generated embeddings to detect fraud
+that traditional methods miss.
+
 - **Use cases:** `Fraud Prevention
   <https://www.mongodb.com/solutions/industries/financial-services/fraud-prevention>`__,
   `Gen AI <https://www.mongodb.com/basics/generative-ai>`__

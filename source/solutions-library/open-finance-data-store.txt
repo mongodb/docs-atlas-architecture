@@ -12,6 +12,10 @@ MongoDB as the Open Finance Data Store
    :depth: 1
    :class: singlecol
 
+MongoDB powers open finance with flexible data integration, built-in
+security, and scalability—enabling seamless, compliant, and personalized
+financial services.
+
 - **Use cases:** `App Driven-Analytics <https://www.mongodb.com/collateral/application-driven-analytics>`__
 
 - **Industries:** `Financial Services <https://www.mongodb.com/industries/financial-services>`__

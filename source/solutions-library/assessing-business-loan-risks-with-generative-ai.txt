@@ -12,6 +12,10 @@ Assessing Business Loan Risks with Generative AI
    :depth: 1
    :class: singlecol
 
+Learn how generative AI can generate detailed risk assessments and how
+MongoDB’s multimodal features enable comprehensive and multidimensional
+loan risk analysis.
+
 - **Use cases**: `Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`_, 
   `Lending and Leasing 
   <https://www.mongodb.com/solutions/industries/financial-services/lending-leasing>`_

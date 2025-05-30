@@ -14,6 +14,9 @@ Real-Time Card Fraud Solution Accelerator
    :depth: 1
    :class: singlecol
 
+Real-time AI/ML fraud detection for Financial Services using MongoDB and
+Databricks. Ensure data completeness and instant fraud analysis.
+
 - **Use cases:** `Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__, 
   `Fraud Prevention <https://www.mongodb.com/industries/financial-services/fraud-prevention>`__
 - **Industries:** `Financial Services <https://www.mongodb.com/industries/financial-services>`__, 

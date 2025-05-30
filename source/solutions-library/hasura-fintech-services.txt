@@ -12,6 +12,10 @@ MongoDB and Hasura for Modern Fintech Services
    :depth: 1
    :class: singlecol
 
+Build secure, high-performance fintech applications with MongoDB and
+Hasura Data Delivery Network, featuring real-time data access and
+regulatory support.
+
 - **Use cases:** `App Driven-Analytics <https://www.mongodb.com/collateral/application-driven-analytics>`__, 
   `Payments <https://www.mongodb.com/solutions/use-cases/payments>`__, 
   `Fraud Prevention <http://mongodb.com/solutions/industries/financial-services/fraud-prevention>`__, 

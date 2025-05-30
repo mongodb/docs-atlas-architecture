@@ -12,6 +12,9 @@ Payments Modernization Solution Accelerator
    :depth: 1
    :class: singlecol
 
+Learn how to build an operational data layer (ODL) to unlock siloed
+payment data to power modern applications.
+
 - **Use cases:** `Payments <https://www.mongodb.com/use-cases/payments>`__, `Modernization
   <https://www.mongodb.com/solutions/use-cases/modernize>`__
 - **Industries:** `Financial Services
