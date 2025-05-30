@@ -177,9 +177,10 @@ If you have an application that can experience temporary interruptions, and
 the cost of deployment is more of a factor than availability or latency, you 
 can create an architecture that is less expensive by using 1 node in each of 
 3 regions. You have a electable node in each of the regions, which means if the 
-primary node is unavailable, there is latency as another node is elected primary 
-and writes are routed to that region. However, you still have availability if 
-any region is unavailable.
+primary node is unavailable, your cluster will fail over to a new region to ensure 
+continued availability. However, if your app tier in the original primary 
+region is still servicing user requests, there will be increased latency as 
+requests are routed across multiple regions.
 
 .. note::
 
