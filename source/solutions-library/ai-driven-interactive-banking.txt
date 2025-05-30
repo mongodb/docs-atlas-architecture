@@ -14,12 +14,13 @@ AI-Driven Interactive Banking
    :depth: 1
    :class: singlecol
 
+Build an application using MongoDB Atlas Vector Search and large
+language models to improve the interactivity of banking applications.
+
 - **Use cases**: `Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_, 
   `Personalization <https://www.mongodb.com/solutions/use-cases/personalization>`_
 - **Industries**: `Financial Services <https://www.mongodb.com/solutions/industries/financial-services>`_
 - **Partners**: `Amazon Bedrock <https://aws.amazon.com/bedrock>`_
-
-
 
 Solution Overview
 -----------------
