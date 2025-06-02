@@ -22,7 +22,7 @@ kick-start their projects.
 
          .. card::
             :headline: Modern Fintech Services with MongoDB and Hasura
-            :url: /solutions-library/hasura-ddn-fintech/
+            :url: /solutions-library/hasura-fintech-services/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -47,7 +47,7 @@ kick-start their projects.
 
          .. card::
             :headline: Card Fraud Solution Accelerator
-            :url: /solutions-library/real-time-card-fraud-detection/
+            :url: /solutions-library/card-fraud-solution/
             :icon: industry_credit_card
             :icon-alt: Atlas industry_credit_card icon
 
@@ -67,7 +67,7 @@ kick-start their projects.
 
          .. card::
             :headline: Vector Search Fraud Prevention Accelerator
-            :url: /solutions-library/fraud-and-aml-detection-with-vector-search/
+            :url: /solutions-library/vector-search-fraud-prevention/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -84,7 +84,7 @@ kick-start their projects.
 
          .. card::
             :headline: Agentic AI-Powered Investment Portfolio Management
-            :url: /solutions-library/ai-powered-portfolio-management/
+            :url: /solutions-library/fin-services-agentic-portfolio/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -104,7 +104,7 @@ kick-start their projects.
 
          .. card::
             :headline: Assess Business Loan Risks with Generative AI
-            :url: /solutions-library/loan-risk-assesment-with-gen-ai/
+            :url: /solutions-library/assessing-business-loan-risks-with-generative-ai/
             :icon: industry_finance
             :icon-alt: Atlas industry_finance icon
 
@@ -114,7 +114,7 @@ kick-start their projects.
 
          .. card::
             :headline: Credit Card Application with Generative AI
-            :url: /solutions-library/credit-card-application-with-gen-ai/
+            :url: /solutions-library/credit-card-application-with-generative-ai/
             :icon: industry_credit_card
             :icon-alt: Atlas industry_credit_card icon
 
@@ -123,7 +123,7 @@ kick-start their projects.
 
          .. card::
             :headline: Optimize RAG Applications with Fireworks AI and MongoDB
-            :url: /solutions-library/rag-applications-with-fireworks/
+            :url: /solutions-library/fin-services-fireworks-rag/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -133,7 +133,7 @@ kick-start their projects.
 
          .. card::
             :headline: Unified Interface for RAG Applications
-            :url: /solutions-library/rag-applications-unified-interface/
+            :url: /solutions-library/rag-applications/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -150,7 +150,7 @@ kick-start their projects.
 
          .. card::
             :headline: Payments Modernization Accelerator
-            :url: /solutions-library/payments-modernization/
+            :url: /solutions-library/payments-solution/
             :icon: industry_credit_card
             :icon-alt: Atlas industry_credit_card icon
 
@@ -169,7 +169,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Powered Healthcare with MongoDB & Microsoft
-            :url: /solutions-library/ai-powered-healthcare/
+            :url: /solutions-library/healthcare-asset-ai-healthcare/
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
@@ -188,7 +188,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Powered Call Center Intelligence with MongoDB
-            :url: /solutions-library/ai-powered-call-centers/
+            :url: /solutions-library/insurance-asset-call-centers/
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
@@ -198,7 +198,7 @@ kick-start their projects.
 
          .. card::
             :headline: Automating Digital Underwriting with Machine Learning
-            :url: /solutions-library/machine-learning-underwriting/
+            :url: /solutions-library/digital-underwriting/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -214,7 +214,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Enhanced Claims Adjustment
-            :url: /solutions-library/vector-image-search/
+            :url: /solutions-library/insurance-image-search/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -224,7 +224,7 @@ kick-start their projects.
 
          .. card::
             :headline: Build a PDF Search Application with Vector Search and LLMs
-            :url: /solutions-library/pdf-search-with-vector-search-and-llm/
+            :url: /solutions-library/pdf-search/
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
@@ -234,7 +234,7 @@ kick-start their projects.
 
          .. card::
             :headline: Claim Management Using LLMs and Vector Search for RAG
-            :url: /solutions-library/claim-management-llms-vector-search/
+            :url: /solutions-library/claim-management/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -253,7 +253,7 @@ kick-start their projects.
 
          .. card::
             :headline: Elevate Flight Operations with Real-Time Analytics
-            :url: /solutions-library/real-time-flight-management/
+            :url: /solutions-library/flightmanagement/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -270,7 +270,7 @@ kick-start their projects.
 
          .. card::
             :headline: Agentic AI-Powered Fleet Incident Advisor
-            :url: /solutions-library/fleet-agents/
+            :url: /solutions-library/manufacturing-asset-fleet-management/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -279,7 +279,7 @@ kick-start their projects.
          
          .. card::
             :headline: Automotive Diagnostics Using Atlas Vector Search
-            :url: /solutions-library/automotive-diagnostics-with-vector-search/
+            :url: /solutions-library/manufacturing-asset-automotive-diagnostics/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -288,7 +288,7 @@ kick-start their projects.
 
          .. card::
             :headline: Framework for Rapid AI Agent Deployment
-            :url: /solutions-library/agentic-framework/
+            :url: /solutions-library/manufacturing-agentic-ai-framework/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -297,7 +297,7 @@ kick-start their projects.
 
          .. card::
             :headline: Predictive Maintenance Excellence with MongoDB Atlas
-            :url: /solutions-library/ai-powered-predictive-maintenance/
+            :url: /solutions-library/manufacturing-asset-predictive-maintenance/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -306,7 +306,7 @@ kick-start their projects.
 
          .. card::
             :headline: Transforming the Driver Experience with MongoDB & Google Cloud
-            :url: /solutions-library/in-car-voice-assistant/
+            :url: /solutions-library/manufacturing-asset-car-assistant/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -322,7 +322,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building an IoT Data Hub for Smart Manufacturing
-            :url: /solutions-library/manufacturing-iot-data-hub/
+            :url: /solutions-library/IoT-datahub-manufacturing/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -332,7 +332,7 @@ kick-start their projects.
 
          .. card::
             :headline: Power Smart Meter Analysis with MongoDB
-            :url: /solutions-library/smart-meters-with-mongodb/
+            :url: /solutions-library/smart-meter/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -342,7 +342,7 @@ kick-start their projects.
 
          .. card::
             :headline: Real-Time Audio-Based AI Diagnostics
-            :url: /solutions-library/real-time-audio-based-ai-diagnostics/
+            :url: /solutions-library/audio-based-AI-diagnostics/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -352,7 +352,7 @@ kick-start their projects.
 
          .. card::
             :headline: Real-Time IoT Analytics
-            :url: /solutions-library/real-time-iot-data-analytics/
+            :url: /solutions-library/manufacturing-asset-rocket-launch/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -368,7 +368,7 @@ kick-start their projects.
 
          .. card::
             :headline: Unified Namespace Data Integrity
-            :url: /solutions-library/unified-namespace/
+            :url: /solutions-library/manufacturing-asset-unified-namespace/
             :icon: industry_enterprise
             :icon-alt: Atlas industry_enterprise icon
 
@@ -388,7 +388,7 @@ kick-start their projects.
 
          .. card::
             :headline: Streamline Global Gaming Management
-            :url: /solutions-library/gaming-player-profiles/
+            :url: /solutions-library/Streamline-global-gaming-management/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -404,7 +404,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Driven Media Personalization
-            :url: /solutions-library/ai-powered-media-personalization/
+            :url: /solutions-library/media-personalization/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -414,7 +414,7 @@ kick-start their projects.
 
          .. card::
             :headline: Gen AI-Powered Video Summarization
-            :url: /solutions-library/gen-ai-powered-video-summarization/
+            :url: /solutions-library/AI-video-summarization/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -436,7 +436,7 @@ kick-start their projects.
 
          .. card::
             :headline: As-You-Type Suggestions
-            :url: /solutions-library/as-you-type-suggestions/
+            :url: /solutions-library/retail-as-you-type-suggestions/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -444,7 +444,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building an Inventory Management System
-            :url: /solutions-library/event-driven-inventory-management/
+            :url: /solutions-library/retail-asset-event-driven-inventory/
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
@@ -453,7 +453,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building an Omnichannel Ordering System
-            :url: /solutions-library/omnichannel-ordering/
+            :url: /solutions-library/retail-asset-omnichannel-ordering/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -462,7 +462,7 @@ kick-start their projects.
 
          .. card::
             :headline: Real-Time Product Tracking
-            :url: /solutions-library/real-time-product-tracking/
+            :url: /solutions-library/retail-asset-rfid-retail/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -478,7 +478,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI Product Search
-            :url: /solutions-library/ai-product-search/
+            :url: /solutions-library/retail-ai-product-search/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
@@ -488,7 +488,7 @@ kick-start their projects.
 
          .. card::
             :headline: Automating Product Descriptions Using Generative AI
-            :url: /solutions-library/product-descriptions-with-together-ai/
+            :url: /solutions-library/retail-asset-product-description/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -497,7 +497,7 @@ kick-start their projects.
 
          .. card::
             :headline: Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
-            :url: /solutions-library/agentic-rag-retail/
+            :url: /solutions-library/retail-asset-rag-chatbot/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
@@ -523,7 +523,7 @@ kick-start their projects.
 
          .. card::
             :headline: Dynamic Pricing
-            :url: /solutions-library/real-time-dynamic-pricing/
+            :url: /solutions-library/retail-dynamic-pricing
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -542,7 +542,7 @@ kick-start their projects.
 
          .. card::
             :headline: AI-Powered Chatbot for Network Management
-            :url: /solutions-library/telco-ai-ops/
+            :url: /solutions-library/telecom-asset-telco-ops/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
