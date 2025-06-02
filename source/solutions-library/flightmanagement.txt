@@ -1,8 +1,8 @@
 .. _arch-center-real-time-flight-management:  
 
-=================================================  
-Elevate Flight Operations with RealTime Analytics  
-=================================================  
+==================================================  
+Elevate Flight Operations with Real-Time Analytics  
+==================================================  
   
 .. facet::  
    :name: genre  
@@ -52,7 +52,7 @@ offers a comprehensive approach to minimizing operational disruptions.
    :figwidth: 1200px  
    :alt: Components of an Event-Driven Architecture  
   
-   Figure 1. Components of an Event-Driven Architecture  
+   Figure 1. Components of an event-driven architecture  
   
 The solution delivers:  
   
@@ -79,46 +79,51 @@ event-driven architecture that consists of several key components:
 .. procedure::  
    :style: normal  
   
-   .. step:: **Data Generation and Processing:**  
+   .. step:: Data generation and processing  
   
-      - FastAPI microservice housing Real-Time Data Simulator and Path Finder  
-      - PubSub topics handling both static and real-time data streams  
-      - Cloud Functions for processing application and telemetry data  
+      - FastAPI microservice housing Real-Time Data Simulator and Path Finder.  
+      - PubSub topics handling both static and real-time data streams.  
+      - Cloud Functions for processing application and telemetry data.  
   
-   .. step:: **Analytics and Cost Management:**  
+   .. step:: Analytics and cost management  
   
-      - Vertex AI Cost Calculator for financial impact analysis  
-      - Analytical data creator Cloud Function for data transformation  
-      - Aggregation pipeline for complex data processing  
+      - Vertex AI Cost Calculator for financial impact analysis.  
+      - Analytical data creator Cloud Function for data transformation.  
+      - Aggregation pipeline for complex data processing.  
   
-   .. step:: **Database Structure:**  
+   .. step:: Database structure  
   
-      - MongoDB database as the central data store  
+      - MongoDB database as the central data store.  
+
       - Specialized collections:  
-         - **flight_costs** collection to track and analyze flight-related expenses  
-         - **flight_plane** simulation collection for predictive modeling and scenario planning  
-         - **flight_realtimeCF** collection designed for  
-           real-time data tracking and historical analysis (`Time  
-           Series Collection <https://www.mongodb.com/docs/manual/core/timeseries-collections/>`__)  
-         - **flights** collection for comprehensive general flight information management  
+
+        - **flight_costs** collection to track and analyze flight-related expenses.  
+        
+        - **flight_plane** simulation collection for predictive modeling and scenario planning.  
+        
+        - **flight_realtimeCF** collection designed for  
+          real-time data tracking and historical analysis (`Time  
+          Series Collection <https://www.mongodb.com/docs/manual/core/timeseries-collections/>`__).  
+        
+        - **flights** collection for comprehensive general flight information management.  
   
-   .. step:: **Integration Components:**  
+   .. step:: Integration components  
   
-      - Change Streams for real-time data changes  
-      - Google Maps API for visualizing geographical data  
-      - Next.js for front-end interface and visualization  
+      - Change Streams for real-time data changes.  
+      - Google Maps API for visualizing geographical data.  
+      - Next.js for front-end interface and visualization.  
   
 **This architecture enables three distinct data flows:**  
   
-- Operational data flow (blue lines): Handles real-time flight operations  
-- Analytical data flow (green lines): Manages business intelligence  
-- Internal connections (black lines): Maintains system integration  
+- **Operational data flow (blue lines):** Handles real-time flight operations.  
+- **Analytical data flow (green lines):** Manages business intelligence.  
+- **Internal connections (black lines):** Maintains system integration.  
   
 .. figure:: /includes/images/industry-solutions/Airline Fig5.svg  
    :figwidth: 1200px  
    :alt: Event-Driven Architecture  
   
-   Figure 2. Event-Driven Architecture  
+   Figure 2. Event-driven architecture  
   
 The solution specifically addresses delay management by providing  
 real-time monitoring, predictive insights, and resource optimization  
@@ -137,23 +142,23 @@ Building the Solution
 .. procedure::  
    :style: normal  
   
-   .. step:: `Set Up MongoDB <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
+   .. step:: `Set up MongoDB <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
   
-      - Store flight data in flexible schema  
-      - Support for real-time updates  
-      - Handle time series data for analytics  
+      - Store flight data in flexible schema.  
+      - Support for real-time updates.  
+      - Handle time series data for analytics.  
       - Maintain operational flight information, ensuring you  
         obtain the MongoDB connection string for subsequent  
-        configuration and integration steps  
-      - Example model  
+        configuration and integration steps.  
+      - Example model.  
   
-   .. step:: Configure `GCP Services <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
+   .. step:: Configure `GCP services <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
   
-      - Deploy application as a containerized service using Google Cloud’s Cloud Run  
-      - Configure Google Cloud’s Cloud Build for automated deployments  
-      - Set up Google Cloud’s Cloud Storage for assets  
-      - Use Google Cloud Pub/Sub for real-time data distribution  
-      - Implement Google Cloud’s Cloud Functions for data  
+      - Deploy application as a containerized service using Google Cloud’s Cloud Run.  
+      - Configure Google Cloud’s Cloud Build for automated deployments.  
+      - Set up Google Cloud’s Cloud Storage for assets.  
+      - Use Google Cloud Pub/Sub for real-time data distribution.  
+      - Implement Google Cloud’s Cloud Functions for data.  
         processing. The following code snippet runs in a cloud  
         function to update the new path obtained from the path  
         finder algorithm once a disruption has been identified,  
@@ -237,19 +242,19 @@ Building the Solution
         obtain a Google Maps API Key for enhanced geospatial analysis and
         visualization.
   
-   .. step:: `Install Your Demo Application to Run Locally <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
+   .. step:: `Install your demo application to run locally <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#prerequisites>`__  
   
-      - Clone the repository and install dependencies  
-      - Configure environment variables  
-      - Set up MongoDB connection  
-      - Run development server  
+      - Clone the repository and install dependencies.  
+      - Configure environment variables.  
+      - Set up MongoDB connection.  
+      - Run development server.  
   
-   .. step:: `(Optional) Deploy the Solution <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#deployment>`__  
+   .. step:: `(Optional) Deploy the solution <https://github.com/mongodb-industry-solutions/leafy-airline/blob/main/README.md#deployment>`__  
   
-      - Containerize application using Docker  
-      - Deploy to Google Cloud’s Cloud Run for automatic scaling  
-      - Configure continuous deployment with Cloud Build  
-      - Set up environment variables and secrets  
+      - Containerize application using Docker.  
+      - Deploy to Google Cloud’s Cloud Run for automatic scaling.  
+      - Configure continuous deployment with Cloud Build.  
+      - Set up environment variables and secrets.  
   
 **In the end your app should look like this:**  
   
@@ -302,7 +307,7 @@ Technologies and Products Used
 ------------------------------  
   
 MongoDB Developer Data Platform  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
   
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__  
 - `Time Series Collections <https://www.mongodb.com/products/capabilities/time-series>`__  

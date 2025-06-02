@@ -84,7 +84,8 @@ enhancing real-time monitoring and maintenance.
 Reference Architectures
 -----------------------
 
-**With MongoDB**:
+With MongoDB
+~~~~~~~~~~~~
 
 The demo architecture comprises several key components working together
 to capture, store, analyze, and report data.
@@ -145,7 +146,7 @@ Building the Solution
 .. procedure::
    :style: normal
 
-   .. step:: **Get Your Hardware Ready**
+   .. step:: Get your hardware ready
 
       To replicate this demo, you will need:
 
@@ -163,7 +164,7 @@ Building the Solution
       `Simulate this solution without the physical engine here
       <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics>`__.
 
-   .. step:: **Set Up MongoDB Atlas**
+   .. step:: Set up MongoDB Atlas
 
       In order to make the demo work from end to end, you will need to
       set up the backend.
@@ -184,14 +185,14 @@ Building the Solution
       which you can use with the *mongorestore* command to import the
       data into your cluster.
 
-   .. step:: **Anomaly Detection through Sound Input**
+   .. step:: Anomaly detection through sound input
 
       Complete instructions can be found on `this GitHub page
       <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics/tree/main/acoustic-diagnostics-api>`__,
       including how to set up the analytics dashboard, link it to the
       correct data source, and create a vector search index.
 
-   .. step:: **Integrate AWS Bedrock for AI-enhanced Analytics**
+   .. step:: Integrate AWS Bedrock for AI-enhanced analytics
 
       We have followed a simple approach to integrate with AWS Bedrock,
       which can serve as a baseline for more complex approaches
@@ -203,7 +204,7 @@ Building the Solution
       our GitHub page
       <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics/tree/main?tab=readme-ov-file#step-4---integrate-aws-bedrock-for-ai-enhanced-analytics>`__. 
 
-   .. step:: **Run the Web Portal UI**
+   .. step:: Run the web portal UI
 
       The web portal, built with Next.js, includes the vehicle's digital
       twin, an acoustic diagnostics interface for audio streaming and
@@ -216,7 +217,7 @@ Building the Solution
       <https://github.com/mongodb-industry-solutions/automotive-acoustic-diagnostics/tree/main/web-app>`__
       for specific commands and additional setup details.
 
-   .. step:: **Bonus! Control Your Vehicle from a Mobile Device**
+   .. step:: Bonus! Control your vehicle from a mobile device
 
       For a more realistic connected vehicle experience, you can control
       the engine replica and digital twin from a mobile app. Open the

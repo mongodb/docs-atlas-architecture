@@ -72,7 +72,8 @@ through autonomous networks.
 Reference Architectures
 -----------------------
 
-**With MongoDB**:
+With MongoDB
+~~~~~~~~~~~~
 
 There are three main components of this solution: 
 
@@ -140,22 +141,22 @@ telecommunication environments.
 .. procedure::
    :style: normal
 
-   .. step:: Clone the Application Locally
+   .. step:: Clone the application locally
 
       Download and clone the following `github repository
       <https://github.com/mongodb-industry-solutions/telco-ai-ops/tree/main>`__.
 
-   .. step:: Configure Your Environment
+   .. step:: Configure your environment
 
       Configure environment variables for:
       
-      - API key from the LLM service provider. 
+      - LLM API key 
 
-      - MongoDB connection URI.
+      - MongoDB connection URI
 
-      - Database and collection names.
+      - Database and collection names
 
-   .. step:: Deploy Your Application
+   .. step:: Deploy your application
 
       - Install python appropriate version.
       

@@ -116,7 +116,8 @@ informative outputs.
 Reference Architectures
 -----------------------
 
-**With MongoDB**:
+With MongoDB
+~~~~~~~~~~~~
 
 Now that we’ve looked at the components of the pre-processing pipeline,
 let’s explore the proposed real-time system architecture in detail. It

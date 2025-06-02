@@ -13,6 +13,68 @@ kick-start their projects.
    .. tab:: Financial Services
       :tabid: gen-ai
 
+      App-Driven Analytics
+      --------------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Modern Fintech Services with MongoDB and Hasura
+            :url: /solutions-library/hasura-fintech-services/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Leverage agentic RAG using MongoDB and Dataworkz to enhance
+            shopping experiences with a personalized chatbot.
+
+         .. card::
+            :headline: Open Finance Data Store with MongoDB
+            :url: /solutions-library/open-finance-data-store/
+            :icon: industry_finance
+            :icon-alt: Atlas industry_finance icon
+
+            Learn how MongoDB powers open finance with flexible data
+            integration, built-in security, and scalability.
+
+      Fraud Prevention
+      ----------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Card Fraud Solution Accelerator
+            :url: /solutions-library/card-fraud-solution/
+            :icon: industry_credit_card
+            :icon-alt: Atlas industry_credit_card icon
+
+            Implement real-time fraud detection techniques for Financial
+            Services using MongoDB and Databricks. Ensure data
+            completeness and instant fraud analysis.
+         
+         .. card::
+            :headline: Fraud Detection Accelerator Using AWS SageMaker
+            :url: /solutions-library/fraud-detection-accelerator/
+            :icon: general_security
+            :icon-alt: Atlas general_security icon
+
+            Revolutionize fraud detection in finance with MongoDB Atlas and Amazon
+            SageMaker Canvas. Leverage real-time data and AI for stronger defenses against
+            cybercrime.
+
+         .. card::
+            :headline: Vector Search Fraud Prevention Accelerator
+            :url: /solutions-library/vector-search-fraud-prevention/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Combine real-time analytics with semantic search by integrating MongoDB Atlas
+            Vector Search with OpenAI-generated embeddings to detect fraud that
+            traditional methods miss.   
+
       Gen AI
       ------
 
@@ -26,11 +88,10 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Discover how MongoDB powers AI agent integration with Vector
-            Search, Time Series collections, Aggregation Pipeline, and
-            Charts for semantic analysis, real-time insights, and
-            adaptive decision-making to enhance portfolio management and
-            risk assessment.
+            Discover how MongoDB powers AI agents with Vector Search,
+            Time Series collections, Aggregation Pipeline, and Charts
+            for portfolio management, risk assessment, and real-time
+            insights.
 
          .. card::
             :headline: AI-Driven Interactive Banking
@@ -42,7 +103,7 @@ kick-start their projects.
             models to improve the interactivity of banking applications.
 
          .. card::
-            :headline: Assessing Business Loan Risks with Generative AI
+            :headline: Assess Business Loan Risks with Generative AI
             :url: /solutions-library/assessing-business-loan-risks-with-generative-ai/
             :icon: industry_finance
             :icon-alt: Atlas industry_finance icon
@@ -50,16 +111,6 @@ kick-start their projects.
             Learn how generative AI can generate detailed risk assessments and how 
             MongoDB’s multimodal features enable comprehensive and multidimensional loan risk
             analysis.
-
-         .. card::
-            :headline: Building Continuously Updating RAG Applications
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Use native stream processing and Vector Search in MongoDB Atlas to
-            continuously update, store, and search embeddings through a unified
-            interface.
 
          .. card::
             :headline: Credit Card Application with Generative AI
@@ -71,77 +122,24 @@ kick-start their projects.
             generative AI is reshaping the foundations of credit scoring.
 
          .. card::
-            :headline: Optimizing RAG Applications with Fireworks AI and MongoDB
+            :headline: Optimize RAG Applications with Fireworks AI and MongoDB
             :url: https://deploy-preview-240--docs-atlas-architecture.netlify.app/solutions-library/fin-services-fireworks-rag/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
             Learn how MongoDB and Fireworks AI optimize RAG
-            applications, enhancing latency, reducing TCO, and
-            accelerating AI with advanced data management and model
-            fine-tuning techniques.
-
-      Fraud Prevention
-      ----------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
+            applications, enhancing latency and reducing TCO with
+            advanced data management and model fine-tuning techniques.  
 
          .. card::
-            :headline: Fraud Detection Accelerator Using AWS SageMaker
-            :url: /solutions-library/fraud-detection-accelerator/
-            :icon: general_security
-            :icon-alt: Atlas general_security icon
-
-            Revolutionize fraud detection in finance with MongoDB Atlas and Amazon
-            SageMaker Canvas. Leverage real-time data and AI for stronger defenses against
-            cybercrime.
-
-         .. card::
-            :headline: Card Fraud Solution Accelerator
-            :url: /solutions-library/card-fraud-solution/
-            :icon: industry_credit_card
-            :icon-alt: Atlas industry_credit_card icon
-
-            Real-time AI/ML fraud detection for Financial Services using MongoDB and 
-            Databricks. Ensure data completeness and instant fraud analysis.
-
-         .. card::
-            :headline: Vector Search Fraud Prevention Accelerator
-            :url: /solutions-library/vector-search-fraud-prevention/
-            :icon: mdb_vector_search
-            :icon-alt: Atlas mdb_vector_search icon
-
-            Combine real-time analytics with semantic search by integrating MongoDB Atlas
-            Vector Search with OpenAI-generated embeddings to detect fraud that
-            traditional methods miss.      
-
-      App-Driven Analytics
-      --------------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: MongoDB as the Open Finance Data Store
-            :url: /solutions-library/open-finance-data-store/
-            :icon: industry_finance
-            :icon-alt: Atlas industry_finance icon
-
-            MongoDB powers open finance with flexible data integration, built-in security,
-            and scalability—enabling seamless, compliant, and personalized financial
-            services.
-
-         .. card::
-            :headline: MongoDB and Hasura for Modern Fintech Services
-            :url: /solutions-library/hasura-fintech-services/
+            :headline: Unified Interface for RAG Applications
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/rag-applications/
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Leverage agentic RAG using MongoDB and Dataworkz to enhance customers’
-            shopping experiences with a personalized chatbot.
+            Use native stream processing and Vector Search in MongoDB Atlas to
+            continuously update, store, and search embeddings through a unified
+            interface. 
 
       Modernization
       -------------
@@ -151,152 +149,13 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
-            :headline: Payments Modernization Solution Accelerator
+            :headline: Payments Modernization Accelerator
             :url: /solutions-library/payments-solution/
             :icon: industry_credit_card
             :icon-alt: Atlas industry_credit_card icon
 
             Learn how to build an operational data layer (ODL) to unlock siloed payment
             data and power modern applications.
-
-
-   .. tab:: Manufacturing & Motion
-      :tabid: manufacturing
-
-      App-Driven Analytics
-      --------------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Elevate Flight Operations with Real-Time Analytics
-            :url: https://deploy-preview-222--docs-atlas-architecture.netlify.app/solutions-library/flightmanagement/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Transform flight operations with powerful real-time
-            analytics. Cut costs, minimize delays, and boost efficiency
-            through intelligent data monitoring.
-
-      Gen AI 
-      ------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Agentic AI-Powered Fleet Incident Advisor
-            :url: https://deploy-preview-233--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-fleet-management/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            MongoDB helps automotive companies manage fleets of
-            connected vehicles, optimize route planning, and improve
-            driver safety.
-         
-         .. card::
-            :headline: Automotive Diagnostics Using Atlas Vector Search
-            :url: https://deploy-preview-204--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-automotive-diagnostics/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Combine real-time analytics with vector search by using
-            MongoDB Atlas Vector Search integrated with OpenAI-generated
-            embeddings.  
-
-         .. card::
-            :headline: Framework for Rapid AI Agent Deployment
-            :url: https://deploy-preview-187--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-agentic-ai-framework/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Learn how to implement a modular solution for building
-            diagnostic and recommendation agents with MongoDB Atlas. 
-
-         .. card::
-            :headline: Predictive Maintenance Excellence with MongoDB Atlas
-            :url: https://deploy-preview-210--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-predictive-maintenance/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Optimize your maintenance strategy with AI. Predict
-            failures, generate repair plans, and guide technicians.
-
-         .. card::
-            :headline: Transforming the Driver Experience with MongoDB & Google Cloud
-            :url: https://deploy-preview-223--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-car-assistant
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Discover how MongoDB and Google Cloud are powering
-            generative AI-driven, hyper-personalized in-car experiences
-            for automotive innovation.
-
-      IoT 
-      ---
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Building an IoT Data Hub for Smart Manufacturing
-            :url: https://deploy-preview-195--docs-atlas-architecture.netlify.app/solutions-library/IoT-datahub-manufacturing/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Use streaming data from edge devices to power machine
-            learning models and smart applications by integrating
-            MongoDB Atlas with Microsoft Azure IoT.
-
-         .. card::
-            :headline: Power Smart Meter Analysis with MongoDB
-            :url: https://deploy-preview-214--docs-atlas-architecture.netlify.app/solutions-library/smart-meter/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            MongoDB provides a scalable platform for smart meter
-            systems, enabling real-time data collection, time series
-            analysis, and anomaly detection. 
-
-         .. card::
-            :headline: Real-Time Audio-Based AI Diagnostics
-            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Find out how AI is being used in renewable energy by
-            leveraging MongoDB Atlas Vector Search to drive efficiency
-            through real-time, audio diagnostics. 
-
-         .. card::
-            :headline: Real-Time IoT Analytics
-            :url: https://deploy-preview-234--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-rocket-launch/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Learn how to monitor a rocket launch using MongoDB Atlas and
-            real-time IoT data.
-      
-      Modernization 
-      -------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: Unified Namespace Data Integrity
-            :url: https://deploy-preview-221--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-unified-namespace/
-            :icon: industry_enterprise
-            :icon-alt: Atlas industry_enterprise icon
-
-            Find out how MongoDB helps manufacturers unify production
-            data, optimize operations, and enable real-time insights in
-            a Unified Namespace.
 
    .. tab:: Healthcare
       :tabid: healthcare
@@ -314,9 +173,8 @@ kick-start their projects.
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
-            MongoDB and Microsoft deliver AI-powered solutions for
-            breast cancer care, unifying data and enabling predictive
-            modeling, intelligent chatbots, and analytics.     
+            Learn how AI is transforming breast cancer diagnosis and
+            care, making it more personalized and data-driven.
 
    .. tab:: Insurance
       :tabid: insurance
@@ -331,20 +189,20 @@ kick-start their projects.
          .. card::
             :headline: AI-Powered Call Center Intelligence with MongoDB
             :url: https://deploy-preview-228--docs-atlas-architecture.netlify.app/solutions-library/insurance-asset-call-centers/
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
+            :icon: atlas_search
+            :icon-alt: Atlas atlas_search icon
 
             Discover how MongoDB Atlas Vector Search and AI convert
             insurance call recordings into searchable insights, enabling
-            faster, more efficient customer service.
+            more efficient customer service.
 
          .. card::
             :headline: Automating Digital Underwriting with Machine Learning
             :url: https://deploy-preview-235--docs-atlas-architecture.netlify.app/solutions-library/digital-underwriting/
-            :icon: mdb_vector_search
-            :icon-alt: Atlas mdb_vector_search icon
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
 
-            Leverage Machine Learning with real-time data processing and
+            Leverage machine learning and real-time data processing to
             automate digital underwriting.    
 
       Gen AI
@@ -370,8 +228,8 @@ kick-start their projects.
             :icon: atlas_search
             :icon-alt: Atlas atlas_search icon
 
-            Streamline operations and claims processing with powerful PDF search
-            capabilities by integrating MongoDB Atlas Vector Search,
+            Streamline operations and claims processing with powerful
+            PDF search capabilities by integrating Atlas Vector Search,
             Superduper.io, and LLMs. 
 
          .. card::
@@ -381,7 +239,142 @@ kick-start their projects.
             :icon-alt: Atlas mdb_vector_search icon
 
             Discover how to combine Atlas Vector Search and large language
-            models (LLMs) to streamline the claim adjustment process.    
+            models to streamline claim adjustment processes.    
+
+   .. tab:: Manufacturing & Motion
+      :tabid: manufacturing
+
+      App-Driven Analytics
+      --------------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Elevate Flight Operations with Real-Time Analytics
+            :url: https://deploy-preview-222--docs-atlas-architecture.netlify.app/solutions-library/flightmanagement/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Transform flight operations with powerful real-time
+            analytics. Cut costs, minimize delays, and boost efficiency
+            with intelligent data monitoring.
+
+      Gen AI 
+      ------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Agentic AI-Powered Fleet Incident Advisor
+            :url: https://deploy-preview-233--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-fleet-management/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Manage fleets of connected vehicles, optimize route
+            planning, and improve driver safety with MongoDB Atlas.
+         
+         .. card::
+            :headline: Automotive Diagnostics Using Atlas Vector Search
+            :url: https://deploy-preview-204--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-automotive-diagnostics/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Combine real-time analytics and vector search with Atlas
+            Vector Search, powered by OpenAI embeddings.  
+
+         .. card::
+            :headline: Framework for Rapid AI Agent Deployment
+            :url: https://deploy-preview-187--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-agentic-ai-framework/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Develop a modular solution to create diagnostic and
+            recommendation agents using MongoDB Atlas.
+
+         .. card::
+            :headline: Predictive Maintenance Excellence with MongoDB Atlas
+            :url: https://deploy-preview-210--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-predictive-maintenance/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Optimize maintenance strategies with AI. Predict
+            failures, generate repair plans, and guide technicians.
+
+         .. card::
+            :headline: Transforming the Driver Experience with MongoDB & Google Cloud
+            :url: https://deploy-preview-223--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-car-assistant
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Learn how MongoDB and Google Cloud enable AI-powered,
+            personalized in-car experiences for automotive innovation.
+
+      IoT 
+      ---
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Building an IoT Data Hub for Smart Manufacturing
+            :url: https://deploy-preview-195--docs-atlas-architecture.netlify.app/solutions-library/IoT-datahub-manufacturing/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Streamline data from edge devices to power machine learning
+            models and smart applications with MongoDB Atlas and
+            Microsoft Azure IoT.
+
+         .. card::
+            :headline: Power Smart Meter Analysis with MongoDB
+            :url: https://deploy-preview-214--docs-atlas-architecture.netlify.app/solutions-library/smart-meter/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Build a scalable platform for smart meter systems, enabling
+            real-time data collection, time series analysis, and anomaly
+            detection. 
+
+         .. card::
+            :headline: Real-Time Audio-Based AI Diagnostics
+            :url: https://deploy-preview-184--docs-atlas-architecture.netlify.app/solutions-library/audio-based-AI-diagnostics/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Learn how AI and MongoDB Atlas Vector Search improve
+            renewable energy efficiency with real-time audio
+            diagnostics.
+
+         .. card::
+            :headline: Real-Time IoT Analytics
+            :url: https://deploy-preview-234--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-rocket-launch/
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Monitor a rocket launch using MongoDB Atlas and real-time
+            IoT data.
+      
+      Modernization 
+      -------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Unified Namespace Data Integrity
+            :url: https://deploy-preview-221--docs-atlas-architecture.netlify.app/solutions-library/manufacturing-asset-unified-namespace/
+            :icon: industry_enterprise
+            :icon-alt: Atlas industry_enterprise icon
+
+            Discover how MongoDB helps manufacturers unify production
+            data, streamline operations, and gain real-time insights
+            with a Unified Namespace.
 
    .. tab:: Media
       :tabid: media
@@ -399,7 +392,7 @@ kick-start their projects.
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
-            Seamless game data management with MongoDB Atlas including
+            Streamline game data management with MongoDB Atlas including
             global profiles, records and real-time dashboards.  
       
       Gen AI
@@ -415,9 +408,9 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Learn about how to leverage data to create personalized 
-            user experiences by using Atlas Database, 
-            Atlas Vector Search, and Pymongo.
+            Leverage data effectively to create personalized user
+            experiences with Atlas Database, Atlas Vector Search, and
+            Pymongo.
 
          .. card::
             :headline: Gen AI-Powered Video Summarization
@@ -425,8 +418,8 @@ kick-start their projects.
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
-            Build a YouTube transcription and summarization service that
-            leverages a large language model (LLM) and semantic search.           
+            Build a YouTube transcription and summarization service with
+            LLMs and semantic search.           
 
       .. App-Driven Analytics
       .. --------------------
@@ -450,19 +443,19 @@ kick-start their projects.
             Add fast and relevant as-you-type suggestions to your application, incorporating user context and domain-specific ranking factors.
 
          .. card::
-            :headline: Building an Event-Driven Inventory Management System
+            :headline: Building an Inventory Management System
             :url: https://deploy-preview-191--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-event-driven-inventory/
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
+            :icon: atlas_search
+            :icon-alt: Atlas atlas_search icon
 
-            Learn about how to build a real-time, event-driven inventory
+            Learn how to build a real-time, event-driven inventory
             management system using MongoDB Atlas.
 
          .. card::
-            :headline: Building Modern Omnichannel Ordering on MongoDB
+            :headline: Building an Omnichannel Ordering System
             :url: https://deploy-preview-216--docs-atlas-architecture.netlify.app/solutions-library/retail-asset-omnichannel-ordering/
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
 
             Enable real-time order tracking and management across all
             retail channels using MongoDB Atlas.
@@ -489,7 +482,9 @@ kick-start their projects.
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
-            Personalize and optimize e-commerce with AI-powered search using MongoDB Atlas Vector Search and Databricks.
+            Transform e-commerce experiences with personalized,
+            AI-driven search powered by MongoDB Atlas Vector Search and
+            Databricks.
 
          .. card::
             :headline: Automating Product Descriptions Using Generative AI
@@ -497,8 +492,8 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Write engaging and multilingual product descriptions in
-            practically no time with MongoDB and Together AI.
+            Create engaging and multilingual product descriptions
+            quickly and easily with MongoDB and Together AI.
 
          .. card::
             :headline: Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
@@ -506,7 +501,7 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Discover how Agentic RAG creates seamless and natural
+            Discover how agentic RAG creates seamless and natural
             interactions with customers, enhancing their shopping
             experience.
             
@@ -523,7 +518,8 @@ kick-start their projects.
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
-            Leverage real-time data insights to optimize prices and gain a competitive edge.
+            Leverage real-time data insights to optimize prices and gain
+            a competitive edge.
 
          .. card::
             :headline: Dynamic Pricing
@@ -531,8 +527,8 @@ kick-start their projects.
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
-            Orchestrate real-time analytics: Atlas App Services and serverless functions for dynamic pricing strategies.
-
+            Implement real-time analytics and serverless functions to
+            enable dynamic pricing strategies.
 
    .. tab:: Telecommunications
       :tabid: Telco
@@ -550,16 +546,16 @@ kick-start their projects.
             :icon: industry_ai
             :icon-alt: Atlas industry_ai icon
 
-            Build a generative AI ops architecture with MongoDB and enable
+            Build a generative AI ops architecture with MongoDB for
             network introspection.
 
 .. toctree::
    :titlesonly:
 
    Financial Services </solutions-library/financial-services>
-   Manufacturing & Motion </solutions-library/manufacturing>
    Healthcare  <solutions-library/healthcare>
    Insurance </solutions-library/insurance>
+   Manufacturing & Motion </solutions-library/manufacturing>
    Media </solutions-library/media>
    Retail </solutions-library/retail>
    Telecommunications </solutions-library/telco>

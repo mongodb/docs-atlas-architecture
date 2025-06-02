@@ -113,7 +113,7 @@ For more details see `Dataworkz Agentic RAG
    :figwidth: 1200px
    :alt: Comparison between a conventional and an agentic RAG architecture
    
-   Figure 3. Conventional vs Agentic RAG comparison
+   Figure 3. Conventional vs agentic RAG comparison
 
 Impact on the Retail Industry
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -209,7 +209,7 @@ To build something transformational, conventional RAG systems, which
 primarily utilize vector search techniques, must be integrated with
 up-to-date information from operational databases. 
 
-`MongoDB Atlas Vector Search
+`Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-search>`__ provides
 built-in support for vector embeddings, which eliminates the need for a
 separate vector database, simplifying the architecture and reducing
@@ -276,7 +276,7 @@ to develop and deploy.
    :figwidth: 1200px
    :alt: Dataworkz and MongoDB Agentic RAG architecture
    
-   Figure 4. Dataworkz & MongoDB Agentic RAG architecture
+   Figure 4. Dataworkz and MongoDB agentic RAG architecture
 
 .. video:: https://www.youtube.com/watch?v=hPSEG6QYHkA
 
@@ -288,7 +288,7 @@ Building this solution can be broken down in four major steps:
 .. procedure::
    :style: normal
 
-   .. step:: Replicate the Demo Database
+   .. step:: Replicate the demo database
 
       You can either use a publicly hosted, pre-populated cluster or
       provision your own cluster within your Atlas account and populate
@@ -301,7 +301,7 @@ Building this solution can be broken down in four major steps:
       <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
       command.
 
-   .. step:: Create Dataworkz RAG Application
+   .. step:: Create Dataworkz RAG application
 
       Sign up to Dataworkz and create a RAG app for the e-commerce
       policies. You can use the PDF `inside the repository
@@ -309,7 +309,7 @@ Building this solution can be broken down in four major steps:
       to use as the e-commerce policy document. This is the unstructured
       data that can be made available as a tool to a Dataworkz Agent.
 
-   .. step:: Create the Dataworkz Agent
+   .. step:: Create the Dataworkz agent
 
       Connect to your MongoDB cluster provisioned at the previous step.
       Follow `this guide
@@ -318,7 +318,7 @@ Building this solution can be broken down in four major steps:
       access MongoDB. After that, create a MongoDB tool and a Dataworkz
       agent and test the agent.
 
-   .. step:: Configure Your Application’s Frontend
+   .. step:: Configure your application frontend
 
       Obtain the demo code by cloning the `GitHub repository
       <https://github.com/mongodb-industry-solutions/retail-store-v2>`__

@@ -54,7 +54,7 @@ to and from Databricks.
 
 **By the end of this demo, you’ll have created a data visualization with
 Atlas Charts that tracks the changes of automated insurance premiums in
-near real-time:**
+near real-time.**
 
 .. video:: https://www.youtube.com/watch?v=91WlXYEUEkk
 
@@ -72,14 +72,14 @@ detection, and more.
 themselves, IoT sensors enable supply chain optimization while
 in-transit and on-site.
 
-Reference Architecture
-----------------------
+Reference Architectures
+-----------------------
 
 .. figure:: /includes/images/industry-solutions/Writing Fig1.svg
    :figwidth: 1200px
    :alt: An illustration shows a reference architecture
 
-   Figure 1. Reference Architecture With MongoDB
+   Figure 1. Reference architecture with MongoDB
 
 Data Model Approach
 -------------------
@@ -91,13 +91,13 @@ vehicles insured by those policies.
 This example builds out three MongoDB collections, as well two
 materialized views. The full Hackloade data model which defines all the
 MongoDB objects within this example can be found on `GitHub
-<https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Collections/usageBasedInsurance_HackoladeModel.json>`__,.
+<https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Collections/usageBasedInsurance_HackoladeModel.json>`__.
 
 .. figure:: /includes/images/industry-solutions/Writing fig5.png
    :figwidth: 1200px
    :alt: An illustration shows the MongoDB Data model approach
 
-   Figure 2. MongoDB Data model approach
+   Figure 2. MongoDB data model approach
 
 Building the Solution
 ---------------------
@@ -117,7 +117,7 @@ data with MongoDB Charts.
 .. procedure::
    :style: normal
 
-   .. step:: Creating a Data Processing Pipeline with a Materialized View
+   .. step:: Creating a data processing pipeline with a materialized view
 
       The data processing pipeline component of this example consists of
       sample data, a daily materialized view, and a monthly materialized
@@ -139,11 +139,11 @@ data with MongoDB Charts.
 
       See the following Github repos to create the data processing pipeline:  
   
-      - Step 1 `Load the sample data <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/LoadingtheSampleData.md>`__  
+      - **Step 1:** `Load the sample data <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/LoadingtheSampleData.md>`__.  
   
-      - Step 2 `Setup a daily cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DailyCronJob.md>`__  
+      - **Step 2:** `Setup a daily cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DailyCronJob.md>`__.  
   
-      - Step 3 `Setup a monthly cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/MonthlyCronJob.md>`__  
+      - **Step 3:** `Setup a monthly cron job <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/MonthlyCronJob.md>`__.  
   
       .. figure:: /includes/images/industry-solutions/Writing Fig3.svg  
          :figwidth: 1200px  
@@ -151,7 +151,7 @@ data with MongoDB Charts.
   
          Figure 3. Creating a data processing pipeline  
   
-   .. step:: Automating Insurance Premium Calculations with a Machine Learning Model  
+   .. step:: Automating insurance premium calculations with a machine learning model  
   
       The decision-processing component of this example consists of a  
       scheduled trigger that collects the necessary data and posts the  
@@ -166,19 +166,19 @@ data with MongoDB Charts.
   
       See the following Github repos to create the data processing pipeline:  
   
-      - Step 4 `Setup a calculate premium trigger <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/CalculatePremiumTrigger.md>`__  
+      - **Step 4:** `Setup a calculate premium trigger <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/CalculatePremiumTrigger.md>`__.  
   
-      - Step 5 `Setup the Databricks connection <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DatabricksConfiguration.md>`__  
+      - **Step 5:** `Setup the Databricks connection <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/DatabricksConfiguration.md>`__.  
   
-      - Step 6 `Write the machine learning model prediction to MongoDB <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Prediction.md>`__  
+      - **Step 6:** `Write the machine learning model prediction to MongoDB <https://github.com/mongodb-industry-solutions/Digital-Underwriting-Usage-Based-Insurance/blob/main/src/Prediction.md>`__.  
   
       .. figure:: /includes/images/industry-solutions/Writing Fig4.svg  
          :figwidth: 1200px  
          :alt: Automating Calculations with Machine Learning Model  
   
-         Figure 4: Automating Calculations with Machine Learning Model  
+         Figure 4. Automating calculations with machine learning model  
 
-   .. step:: Near-Real-Time Insights of Insurance Premium Changes over Time
+   .. step:: Near real-time insights of insurance premium changes over time
 
       Once the monthly premium calculations have been appended, it’s
       easy to set up Atlas Charts to visualize your newly calculated

@@ -14,18 +14,22 @@ Fraud Detection Accelerator Using AWS SageMaker
    :depth: 1
    :class: singlecol
 
+Revolutionize fraud detection in finance with MongoDB Atlas and Amazon
+SageMaker Canvas. Leverage real-time data and AI for stronger defenses
+against cybercrime.
+
 - **Use cases:** `Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__,
-  `Fraud Prevention
-  <https://www.mongodb.com/industries/financial-services/fraud-prevention>`__
-- **Industries:** `Financial Services
-  <https://www.mongodb.com/industries/financial-services>`__, `Insurance
-  <https://www.mongodb.com/industries/insurance>`__
-- **Products and tools:** `Atlas <https://www.mongodb.com/atlas/database>`__, :atlas:`Atlas App
-  Services </app-services/>`, `Atlas
-  Charts <https://www.mongodb.com/products/charts>`__, `Data Federation
-  <https://www.mongodb.com/products/platform/atlas-data-federation>`__
-- **Partners:** `Amazon S3 <https://aws.amazon.com/s3/>`__, `Amazon SageMaker Canvas
-  <https://aws.amazon.com/pm/sagemaker/>`__
+  `Fraud Prevention <https://www.mongodb.com/industries/financial-services/fraud-prevention>`__
+
+- **Industries:** `Financial Services <https://www.mongodb.com/industries/financial-services>`__, 
+  `Insurance <https://www.mongodb.com/industries/insurance>`__
+
+- **Products and tools:** `Atlas <https://www.mongodb.com/atlas/database>`__, 
+  `Atlas Charts <https://www.mongodb.com/products/charts>`__, 
+  `Data Federation <https://www.mongodb.com/products/platform/atlas-data-federation>`__
+
+- **Partners:** `Amazon S3 <https://aws.amazon.com/s3/>`__, 
+  `Amazon SageMaker Canvas <https://aws.amazon.com/pm/sagemaker/>`__
 
 Solutions Overview
 ------------------
@@ -90,6 +94,8 @@ for inference.
 .. figure:: /includes/images/industry-solutions/fraud-prevention-architecture.png
    :figwidth: 750px
    :alt: Fraud Detection Architecture
+
+   Figure 1. Fraud detection architecture
 
 Data Model Approach
 -------------------
@@ -189,17 +195,18 @@ Key Learnings
 
 Technologies and Products Used
 ------------------------------
-MongoDB developer data platform: 
+
+MongoDB Developer Data Platform 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - `Atlas Database <https://www.mongodb.com/atlas/database>`__ 
-
-- :atlas:`Atlas App Services </app-services/>` 
 
 - `Atlas Charts <https://www.mongodb.com/products/charts>`__ 
 
 - `Atlas Data Federation <https://www.mongodb.com/products/platform/atlas-data-federation>`__
 
-Partner technologies: 
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~ 
 
 - `AWS S3 <https://aws.amazon.com/s3/>`__ 
 

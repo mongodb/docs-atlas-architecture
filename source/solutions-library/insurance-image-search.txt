@@ -70,8 +70,8 @@ accidents with similar damage profiles from the claims history database.
 The adjuster is now able to quickly compare the car accident photos with
 the most relevant ones in the insurer's claim history.
 
-Broader Applications:
-~~~~~~~~~~~~~~~~~~~~~
+Broader Applications
+~~~~~~~~~~~~~~~~~~~~
 
 While tailored for the insurance industry, this solution's principles
 are universally applicable. Sectors dealing with large volumes of
@@ -82,33 +82,35 @@ processes.
 
 .. video:: https://www.youtube.com/watch?v=N4Fp1_HYr1Q
 
-This video showcases how MongoDB turbocharges the process of building semantic search and AI-powered applications
+This video showcases how MongoDB turbocharges the process of building
+semantic search and AI-powered applications.
 
 Reference Architectures
 -----------------------
 
-MongoDB Atlas combines transactional and search capabilities in the same 
-platform, providing a unified development experience. As embeddings are stored 
-alongside existing data, when running a vector search query, we get the document 
-containing both the vector embeddings and the associated metadata, eliminating 
-the need to retrieve the data elsewhere. This is a great advantage for 
-developers who don’t need to learn to use and maintain a separate technology and
-can fully focus on building their apps.
+MongoDB Atlas combines transactional and search capabilities in the same
+platform, providing a unified development experience. As embeddings are
+stored alongside existing data, when running a vector search query, we
+get the document containing both the vector embeddings and the
+associated metadata, eliminating the need to retrieve the data
+elsewhere. This is a great advantage for developers who don’t need to
+learn to use and maintain a separate technology and can fully focus on
+building their apps.
 
 .. figure:: /includes/images/industry-solutions/insurance-image-search-arch1.svg
    :alt: AI-enhanced claim adjustment
 
-   Figure 1. Reference architecture with MongoDB.
+   Figure 1. Reference architecture with MongoDB
 
 .. figure:: /includes/images/industry-solutions/insurance-image-search-store.svg
    :alt: Store
 
-   Figure 2. A dataset of photos of past accidents is vectorized and stored in Atlas.
+   Figure 2. A dataset of photos of past accidents is vectorized and stored in Atlas
 
 .. figure:: /includes/images/industry-solutions/insurance-image-search-query.svg
    :alt: Query
 
-   Figure 3. An image similarity query is performed, and the 5 top similar images are returned.
+   Figure 3. An image similarity query is performed, and the 5 top similar images are returned
 
 Data Model Approach
 -------------------
@@ -197,18 +199,33 @@ In order to build our image search pipeline we need to follow two simple steps:
          :figwidth: 1200px
          :alt: Index configuration
       
-         Figure 4. How to configure the Search Index in the Atlas UI.
+         Figure 4. How to configure the Search Index in the Atlas UI
 
 Visit the `GitHub repo: Insurance-image-search <https://github.com/mongodb-industry-solutions/Insurance-image-search?tab=readme-ov-file>`__ and create this demo for yourself by following the instructions and associated models in this solution’s repository.
 
 Key Learnings
 -------------
 
-- Image vectorization: The embedding generation process can be carried out using different models and deployment options. It is always important to be mindful of privacy and data protection requirements. If we need our data to never leave our servers, a locally deployed model is probably a good idea. Otherwise, we can simply call an API and get our vectors back, as explained in `this tutorial <https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/>`__ that tells us how to do it with OpenAI. 
+- **Image vectorization:** The embedding generation process can be carried
+  out using different models and deployment options. It is always
+  important to be mindful of privacy and data protection requirements. If
+  we need our data to never leave our servers, a locally deployed model is
+  probably a good idea. Otherwise, we can simply call an API and get our
+  vectors back, as explained in `this tutorial
+  <https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/>`__
+  that tells us how to do it with OpenAI. 
 
-- Creation of a Vector Search index in Atlas: It is now possible to create indexes for `local deployments <https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-local/#std-label-atlas-cli-deploy-local-avs>`__. 
+- **Creation of a Vector Search index in Atlas:** It is now possible to
+  create indexes for `local deployments
+  <https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-local/#std-label-atlas-cli-deploy-local-avs>`__. 
 
-- Performing a Vector Search query: Notably `Vector Search queries <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__ have a dedicated operator within MongoDB’s `aggregation pipeline <https://www.mongodb.com/docs/manual/aggregation/>`__. This means that they can be concatenated with other operations, making it extremely convenient for developers because they don’t need to learn a different language or change context.
+- **Performing a Vector Search query:** Notably `Vector Search queries
+  <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__
+  have a dedicated operator within MongoDB’s `aggregation pipeline
+  <https://www.mongodb.com/docs/manual/aggregation/>`__. This means that
+  they can be concatenated with other operations, making it extremely
+  convenient for developers because they don’t need to learn a different
+  language or change context.
 
 Technologies and Products Used
 ------------------------------
@@ -216,7 +233,7 @@ Technologies and Products Used
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Atlas <http://mongodb.com/atlas>`__, 
+- `MongoDB Atlas <http://mongodb.com/atlas>`__ 
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 Partner Technologies

@@ -67,7 +67,7 @@ Reference Architectures
 The reference architecture illustrates how the Leafy Hospital solution
 integrates various components across three main technological areas:    
   
-1. **Predictive AI layer** (bottom yellow box): 
+1. **Predictive AI layer** (bottom yellow box) 
   
    - Fabric Data Science processes mammogram images and clinical data.
 
@@ -80,7 +80,7 @@ integrates various components across three main technological areas:
 
    - Outputs operational data to MongoDB Atlas.
   
-#. **Generative AI layer** (middle purple box): 
+#. **Generative AI layer** (middle purple box) 
   
    - Azure AI Studio integrates with MongoDB Atlas on Azure.
 
@@ -92,7 +92,7 @@ integrates various components across three main technological areas:
 
    - Facilitates natural language interactions with the system.
   
-#. **Advanced analytics layer** (middle green box): 
+#. **Advanced analytics layer** (middle green box) 
   
    - Combines Fabric Power BI and Fabric OneLak.
 
@@ -130,7 +130,7 @@ Building the Solution
 ---------------------  
   
 The Leafy Hospital demo showcases the integration of MongoDB Atlas with
-Microsoft's AI and analytics services through several key components:  
+Microsoft's AI and analytics services through several key components.  
   
 Data Architecture and Flow  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~  
@@ -165,9 +165,9 @@ manual analysis, which is likely to bring in manual errors. `Microsoft
 Fabric Data Science
 <https://learn.microsoft.com/en-us/fabric/data-science/data-science-overview>`__
 presents a robust platform to train and experiment with ML Models and
-manage MLOps cycles. In this solution, we trained two models.  
+manage MLOps cycles. In this solution, we trained two models: 
   
-1. **BI-RADS prediction:**    
+1. **BI-RADS prediction**    
 
    BI-RADS is an industry standard mechanism to describe mammogram
    findings and is classified in seven categories with a score of
@@ -194,7 +194,7 @@ manage MLOps cycles. In this solution, we trained two models.
    <https://learn.microsoft.com/en-us/fabric/data-engineering/tutorial-lakehouse-data-ingestion>`__.
    The image metadata and final prediction are stored in MongoDB Atlas.    
   
-#. **Biopsy classification:**    
+#. **Biopsy classification**    
 
    For the use case of binary classification of the cancer as malignant
    or benign, classification or regression models can be used. Random
@@ -225,7 +225,7 @@ Vector Search Implementation
 form the foundation of the solution's intelligent querying system,
 implemented in three key stages:  
   
-1. **Data preparation:**   
+1. **Data preparation**   
 
    - Clinical notes are processed using Azure OpenAI's
      text-embedding-ada-002 model.
@@ -236,7 +236,7 @@ implemented in three key stages:
    - Vector embeddings are stored in MongoDB Atlas with optimized search
      indexes.    
   
-#. **Query processing:**    
+#. **Query processing**    
 
    - Natural language queries are converted to vector representations.
 
@@ -244,7 +244,7 @@ implemented in three key stages:
 
    - Query vectors are matched against stored embeddings.
   
-#. **Document retrieval:**    
+#. **Document retrieval**    
 
    - Atlas Search executes similarity-based searches.
 
@@ -265,7 +265,7 @@ The chatbot implementation leverages `retrieval augmented generation
 <https://www.mongodb.com/resources/basics/artificial-intelligence/retrieval-augmented-generation>`__
 (RAG) architecture with three distinct data contexts:  
   
-1. **Patient information retrieval:**    
+1. **Patient information retrieval**    
 
    - Executes queries to fetch current patient details.
 
@@ -273,7 +273,7 @@ The chatbot implementation leverages `retrieval augmented generation
 
    - Provides immediate access to critical patient information.
   
-2. **Historical data processing:**    
+2. **Historical data processing**    
 
    - Accesses 10-year patient history from MongoDB Atlas.
 
@@ -281,7 +281,7 @@ The chatbot implementation leverages `retrieval augmented generation
 
    - Implements thought chaining for context-aware responses.
   
-3. **Medical knowledge integration:**    
+3. **Medical knowledge integration**    
 
    - Uses vectorized medical documentation.
 
@@ -312,7 +312,7 @@ including patient numbers, appointment status, and clinic distribution.
    :figwidth: 1200px  
    :alt: Atlas Charts Dashboard  
   
-   Figure 5. Atlas Charts  
+   Figure 5. Operational dashboard with Atlas Charts  
   
 Then, Power BI integration extends the analytics capabilities by
 enabling enterprise-wide data analysis and advanced visualizations.
@@ -343,8 +343,7 @@ capabilities within a single, coherent system.
 For a detailed, step-by-step guide on implementing this solution,
 including code samples and specific configuration instructions, visit
 our `GitHub repository
-<https://github.com/mongodb-partners/Leafy_Hospital_Microsoft_genAI_resources>`__
-.  
+<https://github.com/mongodb-partners/Leafy_Hospital_Microsoft_genAI_resources>`__.  
   
 Key Learnings  
 -------------  
@@ -387,7 +386,8 @@ MongoDB Developer Data Platform
 
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__   
   
-**Partner technologies:**  
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~  
   
 - `Microsoft Azure <https://azure.microsoft.com/>`__  
 

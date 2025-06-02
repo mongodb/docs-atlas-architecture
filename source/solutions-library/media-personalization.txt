@@ -1,8 +1,8 @@
 .. _arch-center-is-ai-media-personalization:
 
-==========================================================
-AI-Driven Media Personalization: MongoDB and Vector Search
-==========================================================
+==============================================================
+AI-Driven Media Personalization with MongoDB and Vector Search
+==============================================================
 
 .. default-domain:: mongodb
 
@@ -21,19 +21,19 @@ AI-Driven Media Personalization: MongoDB and Vector Search
    :class: onecol
 
 **Use cases:** 
-`Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_,
-Personalization
+`Gen AI <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`__,
+`Personalization <https://www.mongodb.com/solutions/use-cases/personalization>`__
 
 **Industries:** 
-`Telecommunications <https://www.mongodb.com/solutions/industries/telecommunications>`_,
+`Telecommunications <https://www.mongodb.com/solutions/industries/telecommunications>`__,
 Media
 
 **Products and Tools:** 
-`Atlas <https://www.mongodb.com/products/platform/atlas-database>`_,
-`Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_,
-`PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`_
+`MongoDB Atlas <https://www.mongodb.com/products/platform/atlas-database>`__,
+`Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__,
+`MongoDB PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`__
 
-Solution overview
+Solution Overview
 -----------------
 
 In today's rapidly evolving media landscape, publishers face unprecedented 
@@ -59,7 +59,7 @@ This insight enables publishers to construct a highly personalized content journ
 To achieve this, we integrate several advanced capabilities.
 
 
-Content suggestions and personalization
+Content Suggestions and Personalization
 ---------------------------------------
 
 By utilizing user data, behavior analytics, and the multi-dimensional vectorization
@@ -79,7 +79,7 @@ independently from operational database nodes, thus adapting to the specific loa
 scenario.
 
 
-Content summarization and reformatting
+Content Summarization and Reformatting
 --------------------------------------
 
 In an age of information overload, our solution provides concise summaries and 
@@ -87,7 +87,7 @@ adapts content formats based on user preferences and device specifications. This
 tailored approach addresses the diverse consumption habits of users across 
 different platforms.
 
-Keyword extraction
+Keyword Extraction
 ------------------
 
 Essential information is drawn from content through advanced keyword extraction,
@@ -103,7 +103,7 @@ which can diminish the content's visibility and engagement. With the help of the
 underlying `LLM <https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`_,
 our solution extracts keywords automatically and with high sophistication.
 
-Automatic creation of insights and dossiers
+Automatic Creation of Insights and Dossiers
 -------------------------------------------
 
 Our system can automatically generate comprehensive insights and dossiers from 
@@ -120,13 +120,13 @@ or other emerging technologies, our solution seamlessly incorporates these tools
 to synthesize and summarize vast amounts of data. Here's a deeper look at how 
 this works:
 
-**Integration with Multiple Sources:**  The system pulls content from a variety of
+- **Integration with multiple sources:**  The system pulls content from a variety of
   articles and data sources, retrieved with MongoDB Atlas Vector Search. Found 
   items are then compiled into dossiers, which provide users with a detailed and
   contextual exploration of topics, curated to offer a narrative or analytical 
   perspective that adds value beyond the original content.
 
-**Customizable Output:** The output is highly customizable. Publishers can set 
+- **Customizable output:** The output is highly customizable. Publishers can set 
   parameters based on their audience's preferences or specific project 
   requirements. This includes adjusting the level of detail, the use of technical
   versus layman terms, and the inclusion of multimedia elements to complement 
@@ -140,21 +140,23 @@ using LLMs to automate these processes, publishers can maintain a high level of
 productivity and innovation in content creation, ensuring they remain at the 
 cutting edge of media technology.
 
-Other applicable industries
+Other Applicable Industries
 ---------------------------
 
 The core concepts of the solution above can be reused equally across other 
 industries, namely retail, where presenting and matching the right product to the
 right users is essential to keep sales high.
 
-Reference architecture
-----------------------
+Reference Architectures
+-----------------------
 
 .. figure:: /includes/images/industry-solutions/reference-architecture.svg
    :figwidth: 750px
    :alt: An image showing the reference architecture of vector search
 
-Demo application
+   Figure 1. Media personalization architecture with Atlas Vector Search
+
+Demo Application
 ----------------
 
 We have developed a showcase of the solution. It is available at 
@@ -164,12 +166,16 @@ We have developed a showcase of the solution. It is available at
    :figwidth: 750px
    :alt: An image showing the homepage of the ist website
 
+   Figure 2. Media platform homepage interface
+
 The underlying data model is straightforward; a representative news article looks
 like this:
 
 .. figure:: /includes/images/industry-solutions/demo-model.svg
    :figwidth: 750px
    :alt: An image showing an example of a news article in data model format
+
+   Figure 3. Data model for a news article
 
 Embeddings are calculated using the OpenAI model `text-embedding-ada-002 <https://platform.openai.com/docs/guides/embeddings/embedding-models>`_.
 A Vector Index has been created from the MongoDB Atlas web interface like this:
@@ -178,15 +184,17 @@ A Vector Index has been created from the MongoDB Atlas web interface like this:
    :figwidth: 750px
    :alt: An image showing an embedding model
 
+   Figure 4. Vector index for the embedding model
+
 Technologies and products used
 ------------------------------
 
-MongoDB developer data platform
-*******************************
+MongoDB Developer Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Atlas Database <https://www.mongodb.com/products/platform/atlas-database>`_
-- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`_
-- `PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`_
+- `Atlas Database <https://www.mongodb.com/products/platform/atlas-database>`__
+- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+- `PyMongo <https://www.mongodb.com/docs/languages/python/pymongo-driver/current/>`__
 
 Authors
 -------

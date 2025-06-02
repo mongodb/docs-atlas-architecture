@@ -107,35 +107,35 @@ personalized, and reliable interactions.
 
 Let’s break down how it works.
 
-On-Board Components
+On-board Components
 ~~~~~~~~~~~~~~~~~~~
 
 These run in the vehicle, close to the driver, and enable real-time
 voice interaction.
 
-- **Car Console:** The in-car interface where users speak to the assistant
+- **Car console:** The in-car interface where users speak to the assistant
   and get responses. It’s a web app in this demo, but represents the
   embedded system in a real vehicle.
 
-- **Local Data Storage:** Vehicles store key signals locally using
+- **Local data storage:** Vehicles store key signals locally using
   PowerSync SDK, a lightweight edge database built on SQLite. This ensures
   fast access to diagnostic data and keeps data synced with MongoDB Atlas.
 
-- **Assistant Backend:** This component manages the conversation. It
+- **Assistant backend:** This component manages the conversation. It
   handles voice transcription using Google Cloud Speech-to-Text and reads
   the driver’s intent. Depending on the query, it may respond directly or
   call tools to fetch more data or take action. For the demo version, we
   included four sample tools: 
   
-  - Consult Manual: Uses Atlas Vector Search to retrieve relevant info
+  - Consult manual: Uses Atlas Vector Search to retrieve relevant info
     from the car manual. 
 
-  - Run Diagnostics: Fetches current diagnostic codes from local vehicle
+  - Run diagnostics: Fetches current diagnostic codes from local vehicle
     data. 
     
-  - Recalculate Route: Adjusts the trip if the driver adds a stop. 
+  - Recalculate route: Adjusts the trip if the driver adds a stop. 
   
-  - Close Chat: Ends the conversation gracefully.
+  - Close chat: Ends the conversation gracefully.
 
 .. code-block:: javascript  
    :copyable: true  
@@ -204,18 +204,18 @@ Cloud Components
 These provide AI intelligence, scalable storage, and data processing
 capabilities.
 
-- **Data Ingestion:** Unstructured content like car manuals is uploaded
+- **Data ingestion:** Unstructured content like car manuals is uploaded
   to Google Cloud Storage. This triggers a pipeline using Pub/Sub, Cloud
   Run, and Document AI to split the PDFs into chunks. Vertex AI generates
   embeddings for these chunks, which are then stored in MongoDB Atlas for
   semantic search. 
 
-- **Serving Speech APIs:** Google Cloud’s Text-to-Speech and
+- **Serving speech APIs:** Google Cloud’s Text-to-Speech and
   Speech-to-Text handle natural voice interaction. Vertex AI: Provides
   text embeddings for search queries and powers the LLM (Gemini) used by
   the assistant.
 
-- **Data Storage and Retrieval:** MongoDB Atlas stores:
+- **Data storage and retrieval:** MongoDB Atlas stores:
   
   - Manual chunk embeddings for retrieval via Atlas Vector Search.
 
@@ -229,14 +229,14 @@ relevant manual sections, enabling a Retrieval-Augmented Generation
 and vector data in one place simplifies the assistant logic and speeds
 up development.
 
-- **Data Sync:** We use PowerSync for two-way sync between the vehicle
+- **Data sync:** We use PowerSync for two-way sync between the vehicle
   and cloud: 
   
-  - Vehicle to Cloud: Vehicle sends telemetry data like diagnostic
-    codes, speed, or acceleration. A Cloud Run function processes
+  - Vehicle to cloud: Vehicle sends telemetry data like diagnostic
+    codes, speed, or acceleration. A cloud run function processes
     and stores this in Atlas. 
 
-  - Cloud to Vehicle: Enables updates or actions sent remotely to the
+  - Cloud to vehicle: Enables updates or actions sent remotely to the
     car—like OTA updates or remote locking.
 
 The Role of MongoDB in Conversational AI
@@ -460,7 +460,7 @@ together. You’ll find all required assets and resources inside the
 .. procedure::
    :style: normal
 
-   .. step:: Replicate the Demo Database
+   .. step:: Replicate the demo database
 
       Provision a cluster within your `Atlas account
       <https://www.mongodb.com/cloud/atlas/register>`__ and populate
@@ -471,7 +471,7 @@ together. You’ll find all required assets and resources inside the
       <https://www.mongodb.com/docs/database-tools/mongorestore/>`__
       command.
 
-   .. step:: Configure Your Google Cloud Environment
+   .. step:: Configure your Google Cloud environment
 
       Create a Google Cloud project and enable the required APIs:
       `Speech-to-Text <https://cloud.google.com/speech-to-text>`__,
@@ -483,7 +483,7 @@ together. You’ll find all required assets and resources inside the
       instructions are provided in the `Google Cloud documentation
       <https://cloud.google.com/docs/authentication/application-default-credentials>`__.
 
-   .. step:: (Optional) Create Your Own Document Embeddings
+   .. step:: (Optional) Create your own document embeddings
 
       The demo includes a precomputed set of embeddings for the car
       manual. However, you can generate your own embeddings by parsing
@@ -491,14 +491,14 @@ together. You’ll find all required assets and resources inside the
       This gives you flexibility to extend the assistant with custom
       documents or additional manuals as needed.
 
-   .. step:: Configure PowerSync for Real-time Vehicle Data
+   .. step:: Configure PowerSync for real-time vehicle data
 
       Create a PowerSync account and link your MongoDB database using your
       connection string. PowerSync acts as a data bridge, syncing MongoDB data
       to client applications in real-time. Define sync rules for the
       *vehicleData* collection. 
 
-   .. step:: Run the Application
+   .. step:: Run the application
 
       Clone the repository locally and create a *.env* file using the template
       provided. Once your environment is configured, run *npm install* to

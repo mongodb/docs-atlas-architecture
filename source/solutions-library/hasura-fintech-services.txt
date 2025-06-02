@@ -12,6 +12,10 @@ MongoDB and Hasura for Modern Fintech Services
    :depth: 1
    :class: singlecol
 
+Build secure, high-performance fintech applications with MongoDB and
+Hasura Data Delivery Network, featuring real-time data access and
+regulatory support.
+
 - **Use cases:** `App Driven-Analytics <https://www.mongodb.com/collateral/application-driven-analytics>`__, 
   `Payments <https://www.mongodb.com/solutions/use-cases/payments>`__, 
   `Fraud Prevention <http://mongodb.com/solutions/industries/financial-services/fraud-prevention>`__, 
@@ -23,7 +27,7 @@ MongoDB and Hasura for Modern Fintech Services
 
 - **Products and tools:** `MongoDB Atlas <https://www.mongodb.com/products/platform/atlas-database>`__, 
   `MongoDB Kafka Connector <https://www.mongodb.com/docs/kafka-connector/current/>`__, 
-  `Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+  `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 - **Partners:** `Hasura <https://cloud.mongodb.com/ecosystem/hasura>`__
 
@@ -34,13 +38,13 @@ The fintech sector is rapidly transforming, driven by technological innovation, 
 customer needs, and regulatory changes. This dynamic landscape creates both opportunities
 and challenges for financial services providers:
 
-- A high volume of real-time transactions requiring millisecond-level processing
+- A high volume of real-time transactions requiring millisecond-level processing.
 - Complex data relationships spanning customer profiles, financial instruments, and
-  privacy issues
-- Strict regulatory compliance requirements with geographical data residency concerns
+  privacy issues.
+- Strict regulatory compliance requirements with geographical data residency concerns.
 - Need for scalable and flexible systems that can adapt to spikes in volume and new
-  product offerings
-- Real-time analytics capabilities for risk assessment and fraud detection
+  product offerings.
+- Real-time analytics capabilities for risk assessment and fraud detection.
 
 We present a reference architecture using Hasura DDN (Data Delivery Network) with
 |service-fullname| to address these challenges. This combination offers a powerful,
@@ -70,6 +74,8 @@ external service integration.*
 .. figure:: /includes/images/industry-solutions/hasura-fintech-architecture.png
     :alt: Hasura DDN with MongoDB architecture diagram
 
+    Figure 1. Hasura DDN with MongoDB architecture diagram
+
 This architecture diagram shows the key components and their interactions within the
 reference implementation. Fintech client applications connect through a global load
 balancer to multiple Hasura DDN regions, which in turn interact with MongoDB clusters
@@ -79,11 +85,11 @@ compliance and security measures, and integration with external financial servic
 
 Key components of the architecture:
 
-- Data layer: MongoDB clusters for primary data storage
-- API and access layer: Hasura DDN for data access and real-time subscriptions
-- Application layer: Fintech services and applications
-- Security layer: Authentication and authorization services
-- Analytics layer: Data processing and |ml| services
+- **Data layer:** MongoDB clusters for primary data storage.
+- **API and access layer:** Hasura DDN for data access and real-time subscriptions.
+- **Application layer:** Fintech services and applications.
+- **Security layer:** Authentication and authorization services.
+- **Analytics layer:** Data processing and |ml| services.
 
 Data Model Approach
 -------------------
@@ -209,12 +215,13 @@ in the highly regulated financial services industry.
 Technologies and Products Used
 ------------------------------
 
-MongoDB:
-~~~~~~~~
+MongoDB Develeoper Data Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 
-Partner technologies:
-~~~~~~~~~~~~~~~~~~~~~
+Partner Technologies
+~~~~~~~~~~~~~~~~~~~~
 - `Hasura <https://hasura.io/>`__
 - {+kafka+} for event streaming
 

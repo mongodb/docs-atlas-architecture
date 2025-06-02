@@ -126,14 +126,14 @@ of the document model for two main Atlas collections used to store the
 launch data: launchData and notes. There are two main collections used
 in the demo:
 
-- LaunchData.
+- LaunchData
 
-- Notes.
+- Notes
 
 In general, the rocket metrics are produced by the rockets in 4-element
 tuples having the structure below:
 
-- device, timestamp, metric, value.
+- device, timestamp, metric, value
 
 In the real-world scenario that inspired this demonstration, an
 intermediate app server collected these tuples and aggregated them by
@@ -183,7 +183,7 @@ time-stamped IoT sensor data.
 .. procedure::
    :style: normal
 
-   .. step:: Development Environment Setup
+   .. step:: Development environment setup
 
       Prior to watching any of the livestreams, you’ll want to go
       through the setup steps listed in  `GitHub readme
@@ -191,7 +191,7 @@ time-stamped IoT sensor data.
       you get started with an Atlas free tier account (if you don’t
       already have one) and download Compass.
 
-   .. step:: Pre-launch: Rocket Launch Setup and Basic Analytical Queries with MongoDB’s Aggregation Framework
+   .. step:: Pre-launch: Rocket launch setup and basic analytical queries with MongoDB Aggregation Framework
 
       The `Livestream 1 <https://www.youtube.com/live/RUTsdqehWjo>`__
       recording will walk you through the data captured in a rocket
@@ -200,7 +200,7 @@ time-stamped IoT sensor data.
       data with Atlas Charts. `GitHub folder
       <https://github.com/jayrunkel/rocketLivestream/tree/main/liveStream1>`__.
 
-   .. step:: During Launch: Embedding Visualizations and Building Search Capabilities in a React App for Real-Time Analytics
+   .. step:: During launch: Embedding visualizations and building search capabilities in a React app for real-time analytics
 
       `Livestream 2 <https://www.youtube.com/live/-jSQhlkaBCc>`__ will
       show you how to embed charts into a React app for real-time
@@ -209,7 +209,7 @@ time-stamped IoT sensor data.
       interest. `GitHub folder
       <https://github.com/jayrunkel/rocketLivestream/tree/main/liveStream2>`__.
 
-   .. step:: Post-launch: Finding Insights Across Multiple Application and Third-Party Data Sources
+   .. step:: Post-launch: Finding insights across multiple application and third-party data sources
 
       Lastly, `Livestream 3
       <https://www.youtube.com/watch?v=VOxy5VRk4g0>`__ will show you how

@@ -114,12 +114,13 @@ or projects.
    :figwidth: 1200px
    :alt: Real-time wind turbine diagnosis
 
-   Figure 1. Basic components of an AI agent.
+   Figure 1. Basic components of an AI agent
 
 Reference Architectures
 -----------------------
 
-**With MongoDB**:
+With MongoDB
+~~~~~~~~~~~~
 
 The agentic framework is a versatile AI-driven recommendation assistant
 designed to understand your data, execute a multi-step diagnostic
@@ -139,7 +140,7 @@ and reusability of past insights.
    :figwidth: 1200px
    :alt: Real-time wind turbine diagnosis
 
-   Figure 2. Agentic AI reference architecture.
+   Figure 2. Agentic AI reference architecture
 
 Why MongoDB
 -----------
@@ -225,7 +226,7 @@ Building the Solution
 .. procedure::
    :style: normal
 
-   .. step:: **Include Meaningful CSV Data for Your Use Case**
+   .. step:: **Include meaningful CSV data for your use case**
 
       The data should be relevant to your use case and respect the
       following guidelines:
@@ -280,7 +281,7 @@ Building the Solution
          VIX within normal range (12-20),Maintain current asset allocation as market conditions are stable.
          Combination of rising interest rates and high VIX,Focus on bond assets to hedge against market volatility and borrowing cost impacts.
 
-   .. step:: **Set Up MongoDB Database and Collections**
+   .. step:: **Set up MongoDB database and collections**
 
       Log in to MongoDB Atlas and create a database named
       “agentic_<YOUR_USE_CASE>,” e.g. “agentic_macro_indicators”. Ensure
@@ -293,7 +294,7 @@ Building the Solution
       - Queries (for storing queries): You must import the queries from
         the queries.csv file created in Step 1.
 
-   .. step:: **Configure Your Agentic Worklfow through a JSON Config File**
+   .. step:: **Configure your agentic worklfow through a JSON config file**
 
       Go to the config folder and create or update the JSON config.json
       file. The file should contain the following structure:
@@ -390,7 +391,7 @@ Building the Solution
          :figwidth: 1200px
          :alt: Real-time wind turbine diagnosis
 
-         Figure 3. Logical architecture.
+         Figure 3. Logical architecture
 
 Key Learnings
 -------------

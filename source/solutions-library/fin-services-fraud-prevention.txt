@@ -1,7 +1,10 @@
+===================================
+Financial Services Fraud Prevention
+===================================
+
 .. toctree::
    :titlesonly:
 
-   Fraud Detection Accelerator <solutions-library/fraud-detection-accelerator>
    Card Fraud Solution <solutions-library/card-fraud-solution>
-   Fraud Prevention with Vector Search <solutions-library/vector-search-fraud-prevention>
-   
+   Fraud Detection Accelerator <solutions-library/fraud-detection-accelerator>
+   Vector Search Fraud Prevention <solutions-library/vector-search-fraud-prevention>

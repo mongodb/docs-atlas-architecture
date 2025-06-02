@@ -32,7 +32,7 @@ streamline the claim adjustment process.
 **Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** `Langchain <https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`__,
+**Partners:** `LangChain <https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`__,
 `OpenAI <https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb/>`__,
 `FastAPI <https://www.mongodb.com/developer/technologies/fastapi/>`__
 
@@ -83,7 +83,7 @@ context.
    :figwidth: 1200px
    :alt: RAG Querying Flow
 
-   RAG Querying Flow
+   Figure 1. RAG querying flow
 
 Data Model Approach
 -------------------
@@ -151,7 +151,7 @@ reference documents used as context.
 Key Learnings
 -------------
 
-- **Text embedding creation** — The embedding generation process can be carried 
+- **Text embedding creation:** The embedding generation process can be carried 
   out using different models and deployment options. It is always important to 
   be mindful of privacy and data protection requirements. A locally deployed 
   model is recommended if we need our data to never leave our servers. 
@@ -159,10 +159,10 @@ Key Learnings
   `this tutorial <https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/>`__ 
   that tells you how to do it with OpenAI.
 
-- **Creation of a Vector Search index in Atlas** — It is now possible to create 
+- **Creation of a Vector Search index in Atlas:** It is now possible to create 
   indexes for `local deployments <https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-local/#std-label-atlas-cli-deploy-local-avs>`__.
 
-- **Performing a Vector Search query** — Notably, `Vector Search queries <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__ 
+- **Performing a Vector Search query:** Notably, `Vector Search queries <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__ 
   have a dedicated operator within MongoDB’s `aggregation pipelin <https://www.mongodb.com/docs/manual/aggregation/>`__. 
   This means they can be concatenated with other operations, making it extremely 
   convenient for developers because they don’t need to learn a different 

@@ -60,7 +60,7 @@ operational insights through customizable dashboards and reports.
 Reference Architectures
 -----------------------
 
-There are two main components of this solution:
+There are two main components of this solution.
 
 Smart Meter Data Storage
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -181,40 +181,59 @@ Key Solution Components
 .. procedure::
    :style: normal
 
-   .. step:: **MQTT Broker (Data Ingestion Layer)**
+   .. step:: MQTT broker (data ingestion layer)
 
-               - Set up your MQTT broker for reliable message handling
-               - Configure broker integration with MongoDB
-               - Establish secure data streaming pipelines
-               - Enable real-time data collection from smart meters
-               - Implement broker management and monitoring 
+      - Set up your MQTT broker for reliable message handling.
 
-   .. step:: **Environment Configuration (Configuration Layer)**
+      - Configure broker integration with MongoDB.
 
-               - Configure environment variables for:
-                  - MQTT broker connection details
-                  - MongoDB connection URI
-                  - Database and collection names
-                  - Analytics engine configuration
-                  - Atlas Charts integration
+      - Establish secure data streaming pipelines.
 
-   .. step:: **Database Configuration (Data Processing Layer)**
+      - Enable real-time data collection from smart meters.
 
-               - Create MongoDB database with required collections
-               - Set up time series collections for:
-                  - Anomalies data
-                  - Metrics data
-                  - Transformed data
-               - Configure data transformation pipelines
-               - Enable real-time data processing capabilities 
+      - Implement broker management and monitoring. 
 
-   .. step:: **Application Deployment (Analytics and Visualization Layer)**
+   .. step:: Environment configuration (configuration layer)
 
-               - Deploy application components
-               - Implement real-time monitoring capabilities
-               - Set up anomaly detection algorithms
-               - Create customized dashboards
-               - Enable interactive data exploration
+      - Configure environment variables for:
+
+        - MQTT broker connection details.
+
+        - MongoDB connection URI.
+
+        - Database and collection names.
+
+        - Analytics engine configuration.
+                  
+        - Atlas Charts integration.
+
+   .. step:: Database configuration (data processing layer)
+
+      - Create MongoDB database with required collections.
+
+      - Set up time series collections for:
+
+        - Anomalies data.
+
+        - Metrics data.
+
+        - Transformed data.
+
+      - Configure data transformation pipelines.
+
+      - Enable real-time data processing capabilities. 
+
+   .. step:: Application deployment (analytics and visualization layer)
+
+      - Deploy application components.
+
+      - Implement real-time monitoring capabilities.
+
+      - Set up anomaly detection algorithms.
+
+      - Create customized dashboards.
+
+      - Enable interactive data exploration.
 
 For a complete, hands-on implementation, check out the detailed
 `repository

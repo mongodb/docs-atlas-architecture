@@ -114,7 +114,7 @@ retrieval system with ease. Let's break down the process:
    :figwidth: 1200px
    :alt: Figure 1: PDF chunking, embedding creation, and storage, orchestrated with Superduper.io
 
-   Figure 1: PDF chunking, embedding creation, and storage, orchestrated with Superduper.io
+   Figure 1. PDF chunking, embedding creation, and storage, orchestrated with Superduper.io
 
 Each customer has a guidelines PDF associated with their account based
 on country of residency. When the user selects a customer and asks a
@@ -140,7 +140,7 @@ availability, and the ability to better optimize resource usage.
    :figwidth: 1200px
    :alt: Figure 2: PDF querying flow, orchestrated with Superduper.io
 
-   Figure 2: PDF querying flow, orchestrated with Superduper.io
+   Figure 2. PDF querying flow, orchestrated with Superduper.io
 
 .. code-block:: javascript
 
@@ -249,8 +249,8 @@ MongoDB Developer Data Platform
 - `MongoDB Atlas <https://www.mongodb.com/atlas>`__
 - `MongoDB Atlas Vector Search
   <https://www.mongodb.com/products/platform/atlas-vector-search>`__
-- Atlas Collections
-- Atlas Clusters
+- `Atlas Collections <https://www.mongodb.com/docs/manual/core/databases-and-collections/>`__
+- `Atlas Clusters <https://www.mongodb.com/resources/products/fundamentals/clusters>`__
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
@@ -262,6 +262,6 @@ Partner Technologies
 Authors
 -------
 
-- **Luca Napoli**: Industry Solutions Consultant at MongoDB
-- **Clarence Ondieki**: Solutions Architect at MongoDB
-- **Pedro Bereilh**: Specialist, Industry Solutions at MongoDB
+- Luca Napoli, Industry Solutions, MongoDB
+- Clarence Ondieki, Solutions Architect, MongoDB
+- Pedro Bereilh, Industry Solutions, MongoDB
