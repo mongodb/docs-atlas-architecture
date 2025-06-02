@@ -1,6 +1,6 @@
 .. _arch-center-is-Gen-AI-powered-video-summarization-solution:
 
-==================================
+================================== 
 Gen AI-Powered Video Summarization
 ==================================
 
