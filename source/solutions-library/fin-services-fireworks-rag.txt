@@ -480,22 +480,22 @@ using the fine-tuned SLM:
       :widths: 28 18 18 18 18
 
       * - Model
-      - Inference Time 1 (s)
-      - Inference Time 2 (s)
-      - Inference Time 3 (s)
-      - Average Time (s)
+        - Inference Time 1 (s)
+        - Inference Time 2 (s)
+        - Inference Time 3 (s)
+        - Average Time (s)
 
       * - llama-v3p1-405b-instruct
-      - 5.5954
-      - 7.5936
-      - 4.9121
-      - 6.0337
+        - 5.5954
+        - 7.5936
+        - 4.9121
+        - 6.0337
 
       * - SLM - fine-tuned llama-v3p1-8b
-      - 0.3554
-      - 0.0480
-      - 0.0473
-      - 0.1502
+        - 0.3554
+        - 0.0480
+        - 0.0473
+        - 0.1502
 
 #. **Memory reduction:**  LLMs typically require substantial memory,
    often in the range of  8x80GB VRAM. A SLM can operate efficiently with
