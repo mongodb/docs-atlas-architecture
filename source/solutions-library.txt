@@ -322,7 +322,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building an IoT Data Hub for Smart Manufacturing
-            :url: /solutions-library/iot-datahub-manufacturing/
+            :url: /solutions-library/iot-datahub-smart-manufacturing/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -388,7 +388,7 @@ kick-start their projects.
 
          .. card::
             :headline: Streamline Global Gaming Management
-            :url: /solutions-library/streamline-global-gaming-management/
+            :url: /solutions-library/streamline-gaming-management/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -414,7 +414,7 @@ kick-start their projects.
 
          .. card::
             :headline: Gen AI-Powered Video Summarization
-            :url: /solutions-library/ai-video-summarization/
+            :url: /solutions-library/ai-powered-video-summarization/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
