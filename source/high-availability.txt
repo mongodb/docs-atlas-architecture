@@ -324,11 +324,9 @@ with previous versions. You should ensure that you perform major version upgrade
 far before your current version reaches 
 `end of life <https://www.mongodb.com/legal/support-policy/lifecycles>`__. 
 
-Note that you can't downgrade your MongoDB version using the {+atlas-ui+}. Because 
-of this, when planning and executing a major version upgrade, we recommend that 
-you use Feature Compatibility (FCV) to ensure version compatibility, and work 
-directly with MongoDB Professional or Technical Services to help you avoid any 
-issues that might occur during the upgrade process.
+When planning and executing a major version upgrade, we recommend that 
+you use Feature Compatibility ({+fcv+}) to ensure version compatibility. By 
+pinning your cluster's FVC, you can revert MongoDB to the previous version.
 
 For more information on FCV, see 
 :atlas:`Manage Feature Compatibility (FCV) During Upgrades </tutorial/major-version-change/#manage-feature-compatibility--fcv--during-upgrades>`.
