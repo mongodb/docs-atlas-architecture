@@ -253,7 +253,7 @@ kick-start their projects.
 
          .. card::
             :headline: Elevate Flight Operations with Real-Time Analytics
-            :url: /solutions-library/flightmanagement/
+            :url: /solutions-library/flight-management/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -322,7 +322,7 @@ kick-start their projects.
 
          .. card::
             :headline: Building an IoT Data Hub for Smart Manufacturing
-            :url: /solutions-library/IoT-datahub-manufacturing/
+            :url: /solutions-library/iot-datahub-manufacturing/
             :icon: general_content_play
             :icon-alt: Atlas general_content_play icon
 
@@ -388,7 +388,7 @@ kick-start their projects.
 
          .. card::
             :headline: Streamline Global Gaming Management
-            :url: /solutions-library/Streamline-global-gaming-management/
+            :url: /solutions-library/streamline-global-gaming-management/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
@@ -414,7 +414,7 @@ kick-start their projects.
 
          .. card::
             :headline: Gen AI-Powered Video Summarization
-            :url: /solutions-library/AI-video-summarization/
+            :url: /solutions-library/ai-video-summarization/
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
