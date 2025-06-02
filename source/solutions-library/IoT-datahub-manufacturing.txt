@@ -1,7 +1,7 @@
 .. _arch-center-is-manufacturing-iot-data-hub-solution:
 
-================================================
-Building an IoT Data Hub for Smart Manufacturing
+================================================ 
+Building an IoT Data Hub for Smart Manufacturing 
 ================================================
 
 .. facet::
