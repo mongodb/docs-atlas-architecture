@@ -326,7 +326,7 @@ far before your current version reaches
 
 When planning and executing a major version upgrade, we recommend that 
 you use Feature Compatibility (FCV) to ensure version compatibility. By 
-pinning your cluster's FVC, you can revert MongoDB to the previous version.
+pinning your cluster's FCV, you can revert MongoDB to the previous version.
 
 For more information, see 
 :atlas:`Manage FCV During Upgrades </tutorial/major-version-change/#manage-feature-compatibility--fcv--during-upgrades>`.
