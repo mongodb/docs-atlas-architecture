@@ -1,5 +1,6 @@
 name = "atlas-architecture"
 title = "Atlas Architecture Center"
+eol = true
 
 intersphinx = [ "https://www.mongodb.com/docs/master/objects.inv",
                 "https://www.mongodb.com/docs/drivers/objects.inv",
@@ -22,6 +23,13 @@ intersphinx = [ "https://www.mongodb.com/docs/master/objects.inv",
                 "https://www.mongodb.com/docs/atlas/operator/current/objects.inv",
                 "https://www.mongodb.com/docs/charts/objects.inv"
               ]
+
+[[banners]]
+targets = ["*"]
+variant = "info"
+value = """\
+    This version of the documentation is archived and no longer supported. View the `current documentation <link>`__ to learn how to `upgrade your version of [product name] <link>`__.\
+    """
 
 # toc_landing_pages = ["/paths/to/pages/that/have/nested/content"]
 
