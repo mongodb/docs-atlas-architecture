@@ -24,15 +24,6 @@ intersphinx = [ "https://www.mongodb.com/docs/master/objects.inv",
                 "https://www.mongodb.com/docs/charts/objects.inv"
               ]
 
-[[banners]]
-targets = ["*"]
-variant = "info"
-value = """\
-    This version of the documentation is archived and no longer supported. View the `current documentation <link>`__ to learn how to `upgrade your version of [product name] <link>`__.\
-    """
-
-# toc_landing_pages = ["/paths/to/pages/that/have/nested/content"]
-
 toc_landing_pages = [
     "/getting-started",
     "/operational-efficiency",
@@ -385,8 +376,8 @@ vercel-dynamic = "`dynamic IP addresses <https://www.vercel.com/support/articles
 workload = "Workload Identity Federation"
 
 [[banners]]
-targets = ["index.txt", "high-availability.txt", "resiliency.txt"]
+targets = ["*"]
 variant = "info"
 value = """\
-    The {+atlas-arch-center+} is in early release and includes recommendations for a single-cloud, single-region architecture. MongoDB plans to add multi-region recommendations, recommendations for compliance with external standards, and a plug-and-play Terraform code repository in future releases.
+    This version of the documentation is archived and no longer supported. View the `current documentation <link>`__ to learn how to `upgrade your version of [product name] <link>`__.\
     """
