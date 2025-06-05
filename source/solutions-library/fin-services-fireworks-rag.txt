@@ -71,7 +71,7 @@ remarkable efficiency and performance gains without financial strain.
 
 Central to this optimized approach is the FireOptimizer framework,
 integrating MongoDB’s flexible, high-performance database with
-Fireworks.AI’s model tuning prowess. 
+Fireworks.AI’s model tuning process. 
 
 This framework accelerates batch inferencing through solutions like
 FireAttention, a method that enhances request processing using existing
