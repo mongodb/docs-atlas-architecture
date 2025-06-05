@@ -171,8 +171,7 @@ Smaller, efficient models present unique opportunities for fine-tuning,
 allowing for specialized adaptation while maintaining resource
 efficiency. There has been constant research in this space as making
 finetuned or optimized SLM to various mediums such as cloud, on-device,
-dedicated hardware is becoming extremely competitive. These fine tuning
-techniques can be categorized as follows:
+dedicated hardware is becoming extremely competitive.
 
 These fine tuning techniques can be categorized as follows:
 
