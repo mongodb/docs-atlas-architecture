@@ -550,6 +550,5 @@ Authors
 - Wei You Pan, MongoDB 
 - Ashwin Gangadhar, MongoDB
 - Peyman Parsi, MongoDB
-- Andrea Alaman Calderon, MongoDB
 - Benny Chen, Fireworks AI
 - Ayaan Momin, Fireworks AI
