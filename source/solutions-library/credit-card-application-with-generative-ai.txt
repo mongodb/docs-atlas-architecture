@@ -36,11 +36,11 @@ artificial intelligence, and `generative AI
 is reshaping the foundations of credit scoring. The challenges of
 traditional models are being overcome through the adoption of
 alternative credit scoring methods by offering a more inclusive and
-nuanced assessment of creditworthiness. This solution uses a sample
-online credit card application process to show how you can use MongoDB
-to support credit scoring. This approach can also be applied to other credit
-products such as personal loans, mortgages, corporate loans, and trade
-finance credit lines.
+nuanced assessment of creditworthiness. This solution walks through a
+sample online credit card application process and shows how MongoDB can
+support credit scoring. You can also use a similar approach for other
+credit products such as personal loans, mortgages, corporate loans, and
+trade finance credit lines.
 
 .. video:: https://www.youtube.com/watch?v=tUgSCnGjTI0
 
@@ -83,13 +83,14 @@ credit application in the following key aspects of the process:
 
    .. step:: Simplify Data Capture and Processing
 
-      Applying for credit products can often be a lengthy and intricate
-      process for the following reasons:
+      Applying for credit products can often be a challenging process
+      for the following reasons:
 
-      1. **Application process complexity**: Obtaining a credit card involves several steps,
-         which can be time-consuming. Here is a brief overview of the process:
+      1. **Application process complexity**: Obtaining a credit card
+         involves several time-consuming steps. Here is a brief overview
+         of the process:
          
-         - **Choosing a card**: First, you must select a credit card that suits your needs. This
+         - **Choose a card**: First, you must select a credit card that suits your needs. This
            involves researching various cards, comparing features, and understanding their terms
            and conditions.
 
@@ -144,36 +145,26 @@ credit application in the following key aspects of the process:
       understood by other developers, which enables collaboration and makes
       the data easy to understand at a glance. 
 
-      MongoDB stands out as an optimal choice for processing JSON documents in credit
+      MongoDB works well for processing JSON documents in credit
       applications due to its native support for `JSON-like BSON format
-      <https://www.mongodb.com/resources/basics/json-and-bson>`_. The database's flexibility
-      allows for dynamic schema adjustments, aligning well with the evolving nature of credit
-      application forms. MongoDB's ability to handle hierarchical data structures, coupled with
-      robust querying and indexing capabilities, ensures efficient retrieval and organization of
-      complex credit application information. As a scalable solution, MongoDB accommodates
-      growing volumes of credit data while maintaining performance. Its seamless integration
-      with `JavaScript and other popular programming languages
-      <https://www.mongodb.com/resources/products/compatibilities/compatibility>`_, `tools
-      <https://www.mongodb.com/try/download/tools>`_, and technologies (e.g., `Spark
-      <https://www.mongodb.com/docs/spark-connector/current/>`_, `Kafka
-      <https://www.mongodb.com/docs/kafka-connector/current/>`_) enhances development workflows,
-      while features such as document validation and support for open banking standards further
-      contribute to data integrity and standardized information
-      exchange. 
-
-      In essence, MongoDB provides a versatile and efficient platform for storing and processing
-      JSON documents that are highly suited for the nature of online
-      credit applications.
+      <https://www.mongodb.com/resources/basics/json-and-bson>`_. The
+      database's flexibility allows for dynamic schema adjustments,
+      aligning well with the evolving nature of credit application
+      forms. MongoDB's ability to handle hierarchical data structures,
+      coupled with robust querying and indexing capabilities, ensures
+      efficient retrieval and organization of complex credit application
+      information. As a scalable solution, MongoDB accommodates growing
+      volumes of credit data while maintaining performance.
       
    .. step:: Enhance Credit Scoring with AI
 
       Leveraging `Atlas, MongoDB's developer data platform
-      <https://www.mongodb.com/products/platform/atlas-database>`_ — an integrated suite of data
-      services centered around a cloud database — we can create a comprehensive customer/user
-      banking profile by combining relevant data points.
+      <https://www.mongodb.com/products/platform/atlas-database>`_ we
+      can create a comprehensive user banking profile by combining
+      relevant data points.
 
-      Below, we will show you how it can be done. Here is an architectural diagram of the data
-      processing pipeline for predicting the probability of delinquency and credit scoring:
+      Here is an architectural diagram of the data processing pipeline
+      for predicting the probability of delinquency and credit scoring:
 
       .. figure:: /includes/images/industry-solutions/credit-score-data-pipeline.png
          :figwidth: 750px
@@ -183,45 +174,56 @@ credit application in the following key aspects of the process:
 
       The data pipeline for credit scoring a customer involves the following steps:
 
-      1. **Data collection**: The process begins with collecting data from various sources such
-         as credit bureaus, open banking, fraud detection systems, and other relevant sources.
+      1. **Data collection**: First, the process collects data from
+         various sources such as credit bureaus, open banking, fraud
+         detection systems, and other relevant sources.
 
-      2. **Data processing**: The collected data is processed using tools like `Spark Streaming
-         Connectors <https://www.mongodb.com/docs/spark-connector/v2.4/scala/streaming/>`_ to
-         create a unified view of the customer's financial profile and store the same data as a
-         single view in |service-fullname|. Further, these data points can be converted to
-         features, as shown in the sample schema image above.
+      2. **Data processing**: The collected data is processed using
+         tools like `Spark Streaming Connectors
+         <https://www.mongodb.com/docs/spark-connector/v2.4/scala/streaming/>`_
+         to create a unified view of the customer's financial profile
+         and store the same data as a single view in |service-fullname|.
 
-      3. **Risk profile generation**: From this unified view, risk profiles or product
-         suggestions are generated. This involves using statistical methods to perform
-         descriptive analytics and also `artificial intelligence (AI) or machine learning (ML)
-         <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_ techniques
-         to identify patterns in the data to perform propensity scoring for risk.
+      3. **Risk profile generation**: From this unified view, risk
+         profiles or product suggestions are generated. This involves
+         using statistical methods to perform descriptive analytics and
+         also `artificial intelligence (AI) or machine learning (ML)
+         <https://www.mongodb.com/solutions/use-cases/artificial-intelligence>`_
+         techniques to identify patterns in the data to perform
+         propensity scoring for risk.
 
-      4. **Model development**: Various machine learning algorithms can be used for credit
-         scoring and decisioning, starting from logistic regression, decision trees, support
-         vector machines, to neural networks. In this tutorial, for the sake of simplicity, we
-         are employing the **XGBoost (Extreme Gradient Boosted Trees)** model — a
-         state-of-the-art machine learning algorithm that's renowned for its exceptional
-         predictive performance. - It's a supervised learning method that is based on function
-         approximation by optimizing specific loss functions and applying several regularization
-         techniques. - It's widely used by data scientists to achieve exceptional results on
-         many machine learning challenges. - This model can handle high-dimensional data and
-         capture complex patterns for classification and regression. - The models also provide
-         feature importance for supporting its inference outcome, which will come in handy in
-         the current demonstration to explain the outcome of this predictive model.
+      4. **Model development**: Various machine learning algorithms can
+         be used for credit scoring and decisions. For example, you
+         might consider logistic regression, decision trees, support
+         vector machines, and neural networks.
+         
+         In this tutorial, we are employing the **XGBoost (Extreme
+         Gradient Boosted Trees)** model, a machine learning algorithm
+         commonly used for its predictive performance. The algorithm is a
+         supervised learning method that is based on function
+         approximation. Specifically, the algorithm optimizes specific loss functions and
+         applies several regularization techniques.
+         
+         The model can handle high-dimensional data and capture complex
+         patterns for classification and regression. The models also
+         provide feature importance for supporting its inference
+         outcome, which will come in handy in the current demonstration
+         to explain the outcome of this predictive model.
 
-      5. **Data transformation**: Before risk profile scoring is performed, the raw user data
-         undergoes further processing involving data transformation/creation of new fields using
-         Spark (or any similar managed analytics framework). - Data is collated across multiple
-         sources to create a single and materialized view of data, which can be derived from the
-         |service-fullname| :manual:`collection </core/databases-and-collections/>` directly to be
-         used in model development and also various descriptive analysis tasks. - This step can
-         also involve model inference.
+      5. **Data transformation**: Before risk profile scoring is
+         performed, the raw user data is processed using Spark (or a
+         similar managed analytics framework). Data is collated across
+         multiple sources to create a single and materialized view of
+         data, which can be derived from the |service-fullname|
+         :manual:`collection </core/databases-and-collections/>`
+         directly to be used in model development and also various
+         descriptive analysis tasks. This step can also involve model
+         inference.
 
-      6. **Decision collection**: The final transformed data is then populated into a decision
-         collection. This helps banks and financial institutions to support their financial
-         decisions and tracking/auditing purposes.
+      6. **Decision collection**: The final transformed data is
+         populated into a decision collection. This helps banks and
+         financial institutions to support their financial decisions and
+         tracking/auditing purposes.
 
       The goal is to accurately assess the creditworthiness of a customer to make informed
       lending decisions and financial product recommendations. The pipeline is a demonstration
@@ -369,23 +371,25 @@ credit application in the following key aspects of the process:
 
          Figure 6. Example of an approved application
 
-      In conclusion, credit scoring is undergoing a transformative phase with the integration of
-      generative AI. As we explore the dynamics of traditional models, challenges faced by
-      borrowers, and the future envisioned with generative AI, it becomes evident that
-      transparency, efficiency, and personalization are at the forefront of the evolving credit
-      scoring landscape. The synergy of technology and financial acumen is shaping a future
-      where credit decisions are not only accurate but also empowering for borrowers.
-
-      The code to demonstrate all the features of MongoDB for building such a solution is
-      available in this `GitHub repository
-      <https://github.com/ashwin-gangadhar-mdb/mdb-bfsi-genai/blob/gcp/notebooks/mdb-credit-worthy-genai.ipynb>`_.
-      We have `developed and deployed the application on Fireworks.AI
-      <https://www.mongodb.com/blog/post/fireworks-ai-mongodb-fastest-ai-apps-with-best-models-powered-by-your-data>`_,
-      a key AI partner of MongoDB, to make innovating with generative AI faster, more efficient,
-      and more secure.
-
 Summary
 -------
+
+In conclusion, credit scoring is undergoing a transformative phase with
+the integration of generative AI. As we explore the dynamics of
+traditional models, challenges faced by borrowers, and the future
+envisioned with generative AI, it becomes evident that transparency,
+efficiency, and personalization are at the forefront of the evolving
+credit scoring landscape. The synergy of technology and financial acumen
+is shaping a future where credit decisions are not only accurate but
+also empowering for borrowers.
+
+The code to demonstrate all the features of MongoDB for building such a
+solution is available in this `GitHub repository
+<https://github.com/ashwin-gangadhar-mdb/mdb-bfsi-genai/blob/gcp/notebooks/mdb-credit-worthy-genai.ipynb>`_.
+We have `developed and deployed the application on Fireworks.AI
+<https://www.mongodb.com/blog/post/fireworks-ai-mongodb-fastest-ai-apps-with-best-models-powered-by-your-data>`_,
+a key AI partner of MongoDB, to make innovating with generative AI
+faster, more efficient, and more secure.
 
 The proposed solution's functional and nonfunctional features include:
 
