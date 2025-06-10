@@ -1,0 +1,101 @@
+.. _arch-center-latency-strategies:
+
+=========================================
+Multi-Region Latency Reduction Strategies
+=========================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+Multi-region {+service+} deployments can be used to enhance performance by 
+reducing latency. The following sections list the factors and configuration 
+choices you can make to reduce latency.
+
+Physical Distance
+-----------------
+Physical distance is the primary cause of latency. The distance between 
+users and your application, between your application and your data, and between 
+{+cluster+} nodes all impact system latency.
+
+To reduce latency for read operations, it's crucial to place both your 
+application and data geographically closer to users. 
+
+Replication Configuration
+-------------------------
+
+:manual:`Replication </replication>` is the copying of data from the primary 
+node to secondary nodes. How you configure replication contributes to latency. 
+Consider the following factors:
+
+- **Write Concern Levels:** There is a trade-off between write durability and 
+  write latency. The write concern level you configure (for example, 
+  ``w: "majority"``) defines replication across multiple data centers, 
+  potentially increasing latency for more durable writes. 
+
+- **Order of Regions:** The order of regions in your configuration can determine 
+  the priority for the primary node location, which can impact write latency 
+  depending on where your users are located. For example, if most of your users 
+  are in Asia, your primary node should also be in a region in Asia. 
+
+- **Mirrored Reads:** Mirrored reads reduce the impact of primary elections 
+  following an outage by pre-warming the caches on the secondary nodes. 
+
+- **Read Preference:** By default, applications send read operations to the 
+  primary node. However, you can configure the read preference to send read 
+  operations to secondary nodes. By doing so, you ensure reads go to the 
+  geographically closest cluster. 
+  
+  .. important:: 
+  
+     Keep in mind that there is the possibility of a secondary node returning 
+     stale data due to replication lag.
+
+- **Data Distribution:** Distributing data across regions by using replica sets 
+  or sharded clusters is an effective approach when your data is geographically 
+  oriented. For example, if you have data that is only read from the EU, and other 
+  data that is only read in North America, you can create shards that distribute 
+  that data appropriately. 
+
+Network Configuration
+---------------------
+You can further reduce latency using the following network connectivity options: 
+
+- **Private Endpoints:** 
+  :atlas:`Private endpoints </data-federation/admin/manage-private-endpoint/>` 
+  establish direct and secure connections between your application's virtual 
+  network and your |service| cluster, potentially reducing network hops and 
+  improving latency.
+
+- **VPC Peering:** 
+  Configure :atlas:`VPC peering </atlas-stream-processing/manage-vpc-peering-connections/>` 
+  in your replica sets to allow applications to connect to peered regions.
+
+Data Modeling and Query Optimization
+------------------------------------
+
+The speed at which your application accesses data contributes to latency. 
+Good :manual:`data modeling </data-modeling>` and 
+:atlas:`query optimization </atlas-search/performance/query-performance/>` can 
+improve data access speeds. For example, you can:
+
+- **Reduce Document Size:** Consider shortening field names and value lengths to 
+  decrease the amount of data transferred over the network.
+
+- **Optimize Query Patterns:** Use indexes effectively to minimize the amount 
+  of data that needs to be read across regions.
+
+Monitoring and Testing Latency
+------------------------------
+
+{+service+} provides the 
+:atlas:`Real-Time Performance Panel (RTPP) </real-time-performance-panel/>` to 
+observe latency metrics for different regions. You can also implement 
+application-level monitoring to track end-to-end latency to and from the 
+application. Before final production deployment, we suggest conducting performance 
+testing under various multi-region scenarios to identify and address latency 
+bottlenecks.

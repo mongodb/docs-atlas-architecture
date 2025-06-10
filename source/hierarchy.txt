@@ -94,8 +94,30 @@ security settings and governance for your {+service+} enterprise estate:
 Recommendations for {+service+} Orgs, Projects, and {+Clusters+}
 ----------------------------------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. _arch-center-orgs-projects-clusters-recs-multi:
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 Development, Testing, Staging, and Production Environments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````````````````````````````````````````
 
 We recommend that you use the following four environments to isolate
 your sandbox and test projects and {+clusters+} from your application
@@ -128,7 +150,7 @@ projects and {+clusters+}:
        end users.
 
 Local {+service+} Deployments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`````````````````````````````
 
 For development and testing purposes, developers can use the {+atlas-cli+} to 
 :atlascli:`create a local {+service+} deployment</atlas-cli-deploy-local>`.
@@ -143,7 +165,7 @@ local {+service+} deployments in secure, reliable, and portable test
 environments. To learn more, see :atlascli:`Create a Local {+service+} Deployment with Docker </atlas-cli-deploy-docker>`.
 
 Org and Project Hierarchies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````````
 
 Generally, we recommend a paying organization that is managed
 centrally, and one organization for each {+BU+} or department that is
@@ -162,7 +184,7 @@ increase the limits. To learn more, see
 .. _project-hierarchy-1:
 
 Recommended Hierarchy
-`````````````````````
+#####################
 
 Consider the following hierarchy, which creates fewer |service| organizations, if you have common teams and permissions across the 
 {+BU+} and less than the raiseable limit of 250 projects per organization. 
@@ -175,7 +197,7 @@ Consider the following hierarchy, which creates fewer |service| organizations, i
 .. _project-hierarchy-2:
 
 Recommended Hierarchy 2: Decentralized Business Units/Departments
-`````````````````````````````````````````````````````````````````
+#################################################################
 
 Consider the following hierarchy if your organization is highly
 decentralized without a centralized function to serve as the contract
@@ -195,7 +217,7 @@ this hierarchy.
 .. _deployment-hierarchy:
 
 {+Cluster+} Hierarchy
-~~~~~~~~~~~~~~~~~~~~~
+`````````````````````
 
 To maintain isolation between environments, we recommend that you deploy 
 each cluster within its own project, as shown in the following diagram. 
@@ -203,7 +225,8 @@ This allows administrators to maintain different project configurations between 
 and uphold the principle of least privilege, which states that users should 
 only be granted the least level of access necessary for their role.
 
-However, this hierarchy may make it more complicated to share project-level configurations such as private endpoints and |cmk|\s across clusters.
+However, this hierarchy might make it more complicated to share project-level configurations such as private endpoints and |cmk|\s across clusters.
+
 To learn more, see :ref:`hierarchy-multiple-clusters`. 
 
 .. figure:: /includes/images/deployment-hierarchy.svg
@@ -238,7 +261,7 @@ Deploy multiple {+clusters+} within the same project only if both of the followi
    :lightbox:
 
 Resource Tagging
-~~~~~~~~~~~~~~~~
+````````````````
 
 We recommend that you :atlas:`tag {+clusters+} or projects <database-deployment-tags>` 
 with the following details to enable easy parsing for reporting and integrations:
@@ -258,7 +281,7 @@ To learn more about parsing billing data using tags, see
 .. _arch-center-cluster-size-guide:
 
 {+service+} {+Cluster+} Size Guide
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``````````````````````````````````
 
 In a dedicated deployment ({+cluster+} size ``M10``\+), {+service+}
 allocates resources exclusively. We recommend dedicated deployments
@@ -292,9 +315,13 @@ Use the following {+cluster+} size guide to select a {+cluster+} tier that ensur
 This table displays the default storage and performance capabilities for each {+cluster+} tier, as well as 
 whether or not the {+cluster+} tier is suitable for staging and production environments. 
 
+The {+cluster+} size guide also includes expected values for a {+cluster+}'s
+total data size and peak IOPS, based on median {+cluster+} sizes and 98th percentile IOPS analytics from existing enterprise account {+clusters+}
+in each {+cluster+} tier.
+
 .. list-table::
    :header-rows: 1
-   :widths: 10 10 20 20 10 10 10 10
+   :widths: 10 10 10 10 10 10 10 10 10 10
 
    * - T-Shirt Size
      - Cluster Tier
@@ -303,6 +330,9 @@ whether or not the {+cluster+} tier is suitable for staging and production envir
      - CPUs (#)
      - Default RAM
      - Default IOPS
+
+     - Expected Total Data Size
+     - Expected Peak IOPS
      - Suitable For
 
    * - Small
@@ -312,6 +342,8 @@ whether or not the {+cluster+} tier is suitable for staging and production envir
      - 2
      - 2 GB
      - 1000
+     - 1 GB to 10 GB
+     - 120
      - Dev/Test only
 
    * - Med
@@ -320,6 +352,8 @@ whether or not the {+cluster+} tier is suitable for staging and production envir
      - 8 GB to 512 GB
      - 2
      - 8 GB
+     - 3000
+     - 20 GB to 50 GB
      - 3000
      - Prod
 
@@ -330,6 +364,8 @@ whether or not the {+cluster+} tier is suitable for staging and production envir
      - 16
      - 32 GB
      - 3000
+     - 360 GB to 420 GB
+     - 3000
      - Prod
 
    * - X-Large
@@ -339,9 +375,15 @@ whether or not the {+cluster+} tier is suitable for staging and production envir
      - 32
      - 128 GB
      - 3000
+     - 1200 GB to 1750 GB
+     - 6000
      - Prod
 
 .. [1] ``M10`` is a shared CPU tier. For highly-regulated industries or sensitive data, your minimum and smallest starting tier should be ``M30``.
+
+For example, consider a fictional fintech company, MongoFinance, that must store a total of 400 GB of processed data.
+At peak activity, MongoFinance employees and customers perform up to 3000 reads or writes to MongoFinance databases per second. 
+MongoFinance's storage and performance requirements are best satisfied by a large, or ``M50``, {+cluster+} tier.  
 
 To learn more about {+cluster+} tiers and the regions that support
 them, see the {+service+} documentation for each cloud provider:
@@ -355,7 +397,7 @@ them, see the {+service+} documentation for each cloud provider:
 Automation Examples: {+service+} Orgs, Projects, and {+Clusters+}
 -----------------------------------------------------------------
 
-.. include:: /includes/complete-examples.rst
+.. include:: /includes/complete-examples-terraform.rst
 
 The following examples create organizations, projects, and {+clusters+}
 using |service| :ref:`tools for automation <arch-center-automation>`.
@@ -415,7 +457,7 @@ These examples also apply other recommended configurations, including:
 
       Run the following command for each application and environment pair. Change the IDs and names to use your values:
 
-      .. include:: /includes/examples/cli-example-create-projects.rst
+      .. include:: /includes/examples/cli/cli-example-create-projects.rst
 
       For more configuration options and info about this example, 
       see :ref:`atlas-projects-create`.
@@ -446,7 +488,7 @@ These examples also apply other recommended configurations, including:
             For your development and testing environments, run the following command for each project that you created. Change
             the IDs and names to use your values:
 
-            .. include:: /includes/examples/cli-example-create-clusters-devtest.rst
+            .. include:: /includes/examples/cli/dev-test/cli-example-create-clusters-devtest.rst
 
          .. tab:: Staging and Prod Environments
             :tabid: stagingprod
@@ -454,13 +496,13 @@ These examples also apply other recommended configurations, including:
             For your staging and production environments, create the following ``cluster.json`` file for each project that you
             created. Change the IDs and names to use your values:
 
-            .. include:: /includes/examples/cli-json-example-create-clusters.rst
+            .. include:: /includes/examples/cli/cli-json-example-create-clusters.rst
 
             After you create the ``cluster.json`` file, run the
             following command for each project that you created. The
             command uses the ``cluster.json`` file to create a cluster.
 
-            .. include:: /includes/examples/cli-example-create-clusters-stagingprod.rst 
+            .. include:: /includes/examples/cli/staging-prod/cli-example-create-clusters-stagingprod.rst 
 
       For more configuration options and info about this example, 
       see :ref:`atlas-clusters-create`.
@@ -502,22 +544,22 @@ These examples also apply other recommended configurations, including:
             main.tf
             ```````
 
-            .. include:: /includes/examples/tf-example-main-devtest.rst 
+            .. include:: /includes/examples/terraform/dev-test/tf-example-main-devtest.rst 
 
             variables.tf
             ````````````
 
-            .. include:: /includes/examples/tf-example-variables.rst
+            .. include:: /includes/examples/terraform/tf-example-variables.rst
 
             terraform.tfvars
             ````````````````
 
-            .. include:: /includes/examples/tf-example-tfvars-devtest.rst
+            .. include:: /includes/examples/terraform/dev-test/tf-example-tfvars-devtest.rst
 
             provider.tf
             ```````````
 
-            .. include:: /includes/examples/tf-example-provider.rst
+            .. include:: /includes/examples/terraform/tf-example-provider.rst
 
          .. tab:: Staging and Prod Environments
             :tabid: stagingprod
@@ -530,22 +572,22 @@ These examples also apply other recommended configurations, including:
             main.tf
             ```````
 
-            .. include:: /includes/examples/tf-example-main-stagingprod.rst 
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-main-stagingprod.rst 
 
             variables.tf
             ````````````
 
-            .. include:: /includes/examples/tf-example-variables.rst
+            .. include:: /includes/examples/terraform/tf-example-variables.rst
 
             terraform.tfvars
             ````````````````
 
-            .. include:: /includes/examples/tf-example-tfvars-stagingprod.rst
+            .. include:: /includes/examples/terraform/staging-prod/tf-example-tfvars-stagingprod.rst
 
             provider.tf
             ```````````
 
-            .. include:: /includes/examples/tf-example-provider.rst
+            .. include:: /includes/examples/terraform/tf-example-provider.rst
       
       For more configuration options and info about this example, 
       see |service-terraform| and the `MongoDB Terraform Blog Post

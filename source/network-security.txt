@@ -24,7 +24,7 @@ database deployments, such as:
 
 - Mandatory |tls-ssl| connection encryption
 - {+vpc+}\s for all projects with one-or-more {+Dedicated-clusters+}
-- Authentication that uses {+ip-access-list+}s and only accepts connections
+- Authentication that uses {+ip-access-list+}s and only accepts database connections
   from sources you explicitly declare
 
 You can further configure these protections to meet your unique security
@@ -41,6 +41,7 @@ databases.
 
 We recommend using M10+ dedicated {+clusters+} because all {+service+} projects with 
 one or more M10+ dedicated {+clusters+} receive their own dedicated: 
+
 - |vpc| on {+aws+} or {+gcp+}. 
 - {+vnet+} on |azure|.
 
@@ -49,12 +50,14 @@ one or more M10+ dedicated {+clusters+} receive their own dedicated:
 By default, all access to your {+clusters+} is blocked. You must explicitly allow 
 an inbound connection by one of the following methods:
 
-- Add public IP addresses to your {+ip-access-list+}.
-- Use |vpc| / {+vnet+} peering to add private IP addresses.
 - Add private endpoints, which {+service+} adds automatically to your {+ip-access-list+}. 
   No other access is automatically added.
+- Use |vpc| or {+vnet+} peering to add private IP addresses.
+- Add public IP addresses to your {+ip-access-list+}.
 
 You can also use multiple methods together for added security.
+
+.. _arch-center-tls:
 
 |tls|
 ~~~~~~~~~~~~~~
@@ -64,6 +67,8 @@ databases. |tls| 1.2 is the default protocol. To learn more, see the
 :guilabel:`Set Minimum TLS Protocol Version` section of
 :ref:`Configure Additional Settings
 <create-cluster-additional-settings>`.
+
+.. _arch-center-ip-access-list:
 
 {+ip-access-list+}s
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,6 +80,9 @@ attempt authentication to your database.
 
 Your {+service+} {+clusters+} allow access only from the IP addresses
 and |cidr| block IP ranges that you add to your {+ip-access-list+}.
+We recommend that you permit access to the smallest network segments
+possible, such as an individual ``/32`` address.
+
 Application servers and other clients can't access your {+service+}
 {+clusters+} if their IP addresses aren't included in your {+ip-access-list+}.
 
@@ -110,11 +118,13 @@ you must update your connection string to reflect your new cluster topology.
 In the case of adding new shards, the failure to reconnect the application 
 clients may cause your application to suffer from a data outage.
 
+.. _arch-center-private-endpoints:
+
 Private Endpoints
 ~~~~~~~~~~~~~~~~~
 
-A private endpoint facilitates a one-way connection from your own |vpc|
-to your {+service+} |vpc|, without permitting {+service+} to initiate a
+A private endpoint facilitates a one-way connection from a |vpc| that you manage 
+directly to your {+service+} |vpc|, without permitting {+service+} to initiate a
 reciprocal connection. This allows you to make use of secure connections
 to {+service+} without extending your network trust boundary. The following
 private endpoints are available:
@@ -129,6 +139,25 @@ private endpoints are available:
 .. figure:: /includes/images/private-link.svg
    :alt: "An image representing how MongoDB Atlas private endpoints work."
    :figwidth: 750px
+
+.. _arch-center-multi-region-recs-private-endpoints:
+
+Multi-Region Considerations
+```````````````````````````
+
+- For global private endpoints, |service| automatically generates a |srv| record 
+  that points to all |service| cluster nodes. The MongoDB driver attempts to 
+  connect to each |srv| record from your application. This allows the driver to 
+  handle a failover event without waiting for |dns| replication and without 
+  requiring you to update the driver's connection string.
+- In order to facilitate automatic |srv| record generation for all nodes in your 
+  |service| cluster, you must establish a |vpc| peering connection between the 
+  |vpc| in which your application is deployed and and your MongoDB |vpc| with 
+  `PrivateLink <https://aws.amazon.com/privatelink/>`__ or equivalent.
+- Private endpoints must be enabled in every region that you have an |service| 
+  cluster deployed.
+
+.. _arch-center-vpc-vnet-peering:
 
 VPC/{+vnet+} Peering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -161,27 +190,182 @@ based on the |cidr| block. For example, a project with a |cidr| block of
 Recommendations for {+service+} Network Security
 ------------------------------------------------
 
+.. collapsible::
+   :heading: Single-Region Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments in a single region
+   :expanded: true
+
+   Recommendations here
+
+.. collapsible::
+   :heading: Multi-Region and Multi-Cloud Deployment Recommendations
+   :sub_heading: Recommendations that apply only to deployments across multiple regions or multiple cloud providers
+   :expanded: true
+
+   Recommendations here
+
+All Deployment Paradigm Recommendations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following recommendations apply to all :ref:`deployment paradigms
+<arch-center-paradigms>`.
+
 Private Endpoints
-~~~~~~~~~~~~~~~~~
+`````````````````
 
-We recommend that you set up private endpoints for all new staging and production projects to limit the extension of your network trust
-boundary.
+We recommend that you set up private endpoints for all new staging and production 
+projects to limit the extension of your network trust boundary.
 
-In general, we recommend using private endpoints for every {+service+} project 
-because it provides the most granular security and eases the administrative burden 
-that can come from managing {+ip-access-list+}\s and large blocks of IP addresses 
-as your cloud network scales. There is a cost associated with each endpoint, so you 
-might consider not requiring private endpoints in lower environments but you should 
-leverage them in higher environments to limit the extension of your network trust 
-boundary.
+In general, we recommend using private endpoints for every {+service+} project, 
+because this approach provides the most granular security and eases the 
+administrative burden that can come from managing {+ip-access-list+}\s and large 
+blocks of IP addresses as your cloud network scales. There is a cost associated 
+with each endpoint. So, you don't need private endpoints in 
+lower environments, but you should leverage them in higher environments to limit 
+the extension of your network trust boundary.
+
+If VPCs or VNets in which your application is deployed can't be peered with one 
+another, potentially due to a combination of on-premises and cloud deployments, 
+you might want to consider a regional private endpoint. 
+
+With regional private endpoints, you can do the following:
+
+- Connect a single private endpoint to multiple VNets or VPCs without peering 
+  them directly to each other.
+
+- Mitigate partial region failures in which one or more services within a region fails.
+
+To network with regional endpoints, you must do the following:
+
+- Perform regular and robust health checks to detect an outage and update routing. 
+  
+- Use a distinct connection string for each region.
+  
+- Manage cross-region routing in |service|. 
+  
+- Deploy a Mongos server and an additional metadata server if you are running a 
+  MongoDB version older than v8.0. 
 
 To learn more about private endpoints
 in {+service+}, including limitations and considerations, see :atlas:`Learn About Private Endpoints in {+service+} </security-private-endpoint/>`. To learn how to set up private
 endpoints for your {+clusters+}, see
 :atlas:`Set Up a Private Endpoint for a Dedicated Cluster </security-cluster-private-endpoint/>`.
 
+Cloud Provider-Specific Guidance
+`````````````````````````````````
+- |aws|: We recommend |vpc| peering across all of your self-managed VPCs that 
+  need to connect to |service|. Leverage global private endpoints.
+
+- |azure|: We recommend VNet peering across all of your self-managed VNets that 
+  need to connect to |service|. Leverage global private endpoints.
+
+- |gcp|: Peering is not required across your self-managed VPCs when using 
+  GlobalConnect. All |service| regions must be networked with private endpoints 
+  to your self-managed VPC in each region. 
+
+|gcp| Private Endpoints Considerations and Limitations
+```````````````````````````````````````````````````````
+
+Atlas services are accessed through GCP Private Service Connect endpoints on 
+ports 27015 through 27017. The ports can change under specific circumstances, 
+including (but not limited to) cluster changes.
+
+- {+gcp-psc+} must be active in all regions into which you 
+  deploy a multi-region cluster. You will receive an error 
+  if {+gcp-psc+} is active in some, but not all, targeted 
+  regions.
+
+- You can do only one of the following:
+
+  - Deploy nodes in more than one region, and have one
+    private endpoint per region.
+  - Have multiple private endpoints in one region, and no
+    other private endpoints. 
+
+    .. important::
+
+       This limitation applies across cloud providers. For
+       example, if you create more than one private endpoint
+       in a single region in |gcp|, you can't create
+       private endpoints in |aws| or any other |gcp|
+       region.
+
+  See :ref:`atlas_regionalized-pl` for an exception for
+  multi-region and global sharded clusters.
+
+- |service| creates 50 service attachments, each with a
+  subnet mask value of 27. You can change the number of
+  service attachments and the subnet masks that |service|
+  creates by setting the following limits with the 
+  :oas-atlas-op:`Set One Project Limit </setProjectLimit>` 
+  {+atlas-admin-api+} endpoint:
+
+  - Set the 
+    ``atlas.project.deployment.privateServiceConnectionsPerRegionGroup`` limit to
+    change the number of service attachments.
+  - Set the ``atlas.project.deployment.privateServiceConnectionsSubnetMask``
+    limit to change the subnet mask for each service
+    attachment.
+
+  To learn more, see :oas-atlas-op:`Set One Project Limit 
+  </setProjectLimit>`.
+
+- You can have up to 50 nodes when you create |service| projects 
+  that use {+gcp-psc+} in a **single region**. If you need
+  to change the number of nodes, perform one of the
+  following actions:
+
+  - Remove existing private endpoints and then
+    change the limit using the :oas-atlas-op:`Set One
+    Project Limit </setProjectLimit>` {+atlas-admin-api+}
+    endpoint.
+  - Contact :ref:`MongoDB Support <request-support>`.
+  - Use additional projects or regions to connect to nodes 
+    beyond this limit.
+
+.. important::
+   
+   - Each private endpoint in |gcp| reserves an IP address 
+     within your |gcp| |vpc| and forwards traffic from the 
+     endpoints' IP addresses to the 
+     :gcp:`service attachments </vpc/docs/private-service-connect#service-attachments>`.
+     You must create an equal number of private endpoints 
+     to the number of service attachments. The number of 
+     service attachments defaults to 50.
+
+   Addressable targets include:
+
+   - Each |mongod| instance in a replica set deployment 
+     (sharded clusters excluded).
+   - Each |mongos| instance in a sharded cluster deployment.
+   - Each |bic| instance across all dedicated clusters in the
+     project.
+
+- You can have up to 40 nodes when you create |service| projects 
+  that use {+gcp-psc+} across **multiple regions**. This total 
+  excludes the following instances:
+
+  - |gcp| regions communicating with each other
+  - {+Free-clusters+} or {+Shared-clusters+}
+
+- |gcp| {+google-psc+} supports up to 1024 outgoing 
+  connections per virtual machine. As a result, you can't 
+  have more than 1024 connections from a single |gcp| 
+  virtual machine to an |service| cluster.
+
+  To learn more, see the |gcp|
+  :gcp:`cloud NAT documentation 
+  </nat/docs/ports-and-addresses>`.
+
+- |gcp| {+google-psc+} is region-specific. However, you
+  can configure :gcp:`global access 
+  </vpc/docs/about-accessing-vpc-hosted-services-endpoints#global-access>`
+  to access private endpoints from a different region.
+  
+  To learn more, see :ref:`Multi-Region Support <private-endpoint-ha>`.
+
 IP Access Lists
-~~~~~~~~~~~~~~~
+```````````````
 
 We recommend that you configure an {+ip-access-list+} for your API keys and programmatic 
 access to allow access only from trusted IP addresses such as your CI/CD pipeline 
@@ -201,7 +385,7 @@ When you configure your {+ip-access-list+}, we recommend that you:
   and avoid large |cidr| blocks.
 
 VPC/{+vnet+} Peering
-~~~~~~~~~~~~~~~~~~~~
+````````````````````
 
 If you configure |vpc| or {+vnet+} peering, we recommend that you:
 
@@ -218,7 +402,7 @@ If you configure |vpc| or {+vnet+} peering, we recommend that you:
 Automation Examples: {+service+} Network Security
 -------------------------------------------------
 
-.. include:: /includes/complete-examples.rst
+.. include:: /includes/complete-examples-terraform.rst
 
 The following examples configure connections between your application
 environment and your {+service+} {+clusters+} using {+ip-access-list+}s,
@@ -308,7 +492,7 @@ These examples also apply other recommended configurations, including:
          :copyable: true
 
          atlas privateEndpoints aws create --region us-east-1 --projectId 5e2211c17a3e5a48f5497de3 --output json
-
+      
       For more configuration options and information about this example, see:
 
       - :ref:`atlas-privateEndpoints-aws-create`, for connections from {+aws+} |vpc|\s
@@ -349,7 +533,7 @@ These examples also apply other recommended configurations, including:
       accessEntryForAddress1.tf
       `````````````````````````````
 
-      .. include:: /includes/examples/tf-example-access-entry-for-add-1.rst
+      .. include:: /includes/examples/terraform/tf-example-access-entry-for-add-1.rst
 
       After you create the files, navigate to your project directory
       and run the following command to initialize Terraform:
@@ -386,7 +570,7 @@ These examples also apply other recommended configurations, including:
       vpcConnection.tf
       ````````````````
 
-      .. include:: /includes/examples/tf-example-vpc-connection.rst
+      .. include:: /includes/examples/terraform/tf-example-vpc-connection.rst
 
       After you create the file, navigate to your project directory
       and run the following command to initialize Terraform:
@@ -423,7 +607,7 @@ These examples also apply other recommended configurations, including:
       privateLink.tf
       ``````````````
 
-      .. include:: /includes/examples/tf-example-private-link.rst
+      .. include:: /includes/examples/terraform/tf-example-private-link.rst
 
       After you create the file, navigate to your project directory
       and run the following command to initialize Terraform:
