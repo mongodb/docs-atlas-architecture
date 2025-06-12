@@ -242,12 +242,12 @@ Building the Solution
 
       - Select one LLM provider for your implementation:
 
-        - Option 1 - Amazon Bedrock: Configure access to Cohere models
+        - **Amazon Bedrock:** Configure access to Cohere models
           for embeddings and completions (Examples of available models:
           cohere.embed-english-v3 for embeddings, cohere.command-r-10
           for completions).
 
-        - Option 2 - Direct API access: Set up integration with a
+        - **Direct API access:** Set up integration with a
           third-party provider of your choice for embeddings and
           completions.
 
