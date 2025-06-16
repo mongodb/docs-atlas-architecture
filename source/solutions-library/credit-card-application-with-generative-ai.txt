@@ -368,22 +368,22 @@ credit application in the following key aspects of the process:
       in the process are described below:
 
       1. **Load private data**: Each credit card product has different
-         offerings. These products change occasionally, and so do
-         the fees charged for various lifestyle benefits such as movie
-         tickets and concierge services. Storing product data in
-         MongoDB as an `operational data store (ODS)
+         offerings. These products change occasionally, and so do the
+         fees charged for various lifestyle benefits such as movie
+         tickets and concierge services. Storing product data in MongoDB
+         as an `operational data store (ODS)
          <https://www.mongodb.com/resources/basics/implementing-an-operational-data-layer>`__
          helps maintain changes yet builds vector indexes alongside.
 
          - The large data points can be suitably updated, deleted,
            inserted, or replaced according to the needs.
 
-         - The credit card product descriptions are very large, so breaking them
-           into smaller chunks helps retrieve relevant information
-           accordingly.
+         - The credit card product descriptions are very large, so
+           breaking them into smaller chunks helps retrieve relevant
+           information accordingly.
 
-         - You can leverage LLMs can be leveraged here to shorten the product
-           description to summaries that carry all the salient
+         - You can leverage LLMs can be leveraged here to shorten the
+           product description to summaries that carry all the salient
            product features and costs. This change lets you quickly
            retrieve and recommend the relevant products.
 
@@ -428,9 +428,9 @@ the integration of generative AI. As we explore the dynamics of
 traditional models, challenges faced by borrowers, and the future
 envisioned with generative AI, it becomes evident that transparency,
 efficiency, and personalization are at the forefront of the evolving
-credit scoring landscape. The synergy of technology and financial acumen
-is shaping a future where credit decisions are not only accurate but
-also empowering for borrowers.
+credit scoring landscape. The synergy of technology and finance is
+shaping a future where credit decisions are not only accurate but also
+empowering for borrowers.
 
 The code to demonstrate all the features of MongoDB for building such a
 solution is available in this `GitHub repository
