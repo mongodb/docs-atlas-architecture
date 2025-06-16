@@ -244,11 +244,11 @@ credit application in the following key aspects of the process:
    .. step:: Explain the Credit Application Declination
 
       Understanding the reasons for credit application declination is an
-      essential part of the application. crucial. Let's explore how
-      MongoDB and `large language models
+      essential part of the application. Learn how MongoDB and `large
+      language models
       <https://www.mongodb.com/resources/basics/artificial-intelligence/large-language-models>`__
-      (LLMs) can shed light on XGBoost model predictions (the model used
-      in this tutorial).
+      (LLMs) can explain XGBoost model predictions (the model used in
+      this tutorial).
 
       Here is the architecture diagram explaining credit scoring using an LLM:
 
@@ -263,9 +263,9 @@ credit application in the following key aspects of the process:
       product recommendation. This message is communicated back to the
       user in a standardized way where only the final status of the
       application is communicated to the end user. In the proposed
-      architecture with LLMs, prompt engineering can be utilized
-      effectively to explain the reason for the final approved product
-      status with valid reasons explained to the end customer.
+      architecture with LLMs, you can use prompt engineering to explain
+      the reason for the final approved product status with valid
+      reasons explained to the end customer.
 
       Here, you can `find the code and example responses
       <https://github.com/ashwin-gangadhar-mdb/mdb-bfsi-genai/blob/gcp/notebooks/mdb-credit-worthy-genai.ipynb>`__.
@@ -290,15 +290,14 @@ credit application in the following key aspects of the process:
       reasons for the end customer to explain their user profile, as
       shown above. LLMs can also help summarize the list of descriptive
       reasons to provide a simplified view of the description. The
-      application can then allow drill-downs to the details if the
-      customer wants to find out more to enhance their credit profile
-      and user experience.
+      application can let the customer drill down into details if they
+      want to enhance their credit profile and user experience.
 
       In this demo, there are two approaches used to score the credit
       application. The credit application status is determined using an
       ML approach as described in the earlier section with the use of
-      more than 20 credit-related features/dimensions. Here is a subset
-      of the top 15 most important features:
+      more than 20 credit-related features. Here is a subset of the top
+      15 most important features:
 
       .. figure:: /includes/images/industry-solutions/top_15_credit_features.png
          :figwidth: 750px
@@ -312,13 +311,11 @@ credit application in the following key aspects of the process:
       <https://github.com/mongodb-industry-solutions/Credit_score>`_.
 
       To demonstrate the difference between the ML versus traditional
-      credit scoring approach, we are also showing how a typical
-      traditional credit scoring method may score the same credit
-      application but typically using only a handful of dimensions. In
-      this demo, we have used several features typically used by leading
-      credit score providers:
+      credit scoring approach, consider how a typical traditional credit
+      scoring method may score the same credit application but typically
+      using only a handful of dimensions. In this demo, we have used
+      several features typically used by leading credit score providers:
 
-      
       - The credit applicant's repayment history
       - Credit utilization
       - Credit history
