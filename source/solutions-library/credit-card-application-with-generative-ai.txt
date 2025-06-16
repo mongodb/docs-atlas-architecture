@@ -218,8 +218,8 @@ credit application in the following key aspects of the process:
          - Handle high-dimensional data.
          - Capture complex patterns for classification and regression.
 
-         The model supports its inference outcome, which will come in handy in the current
-         demonstration to explain the outcome of this predictive model.
+         The model supports its inference outcome, which helps explain
+         the outcome of this predictive model.
 
       5. **Data transformation**: Before risk profile scoring is
          performed, the raw user data is transformed using Spark (or a
@@ -234,7 +234,7 @@ credit application in the following key aspects of the process:
       6. **Decision collection**: The final transformed data is
          populated into a decision collection. This helps banks and
          financial institutions to support their financial decisions and
-         tracking/auditing purposes.
+         auditing purposes.
 
       The goal is to accurately assess the creditworthiness of a
       customer to make informed lending decisions and financial product
@@ -315,8 +315,9 @@ credit application in the following key aspects of the process:
       credit scoring approach, we are also showing how a typical
       traditional credit scoring method may score the same credit
       application but typically using only a handful of dimensions. In
-      this demo, we have used five features typically used for leading
-      credit score providers. These features are:
+      this demo, we have used several features typically used by leading
+      credit score providers:
+
       
       - The credit applicant's repayment history
       - Credit utilization
