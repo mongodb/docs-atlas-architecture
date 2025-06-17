@@ -29,8 +29,8 @@ streamline the claim adjustment process.
 `Manufacturing and Mobility <https://www.mongodb.com/industries/manufacturing>`__, 
 `Retail <https://www.mongodb.com/industries/retail>`__
 
-**Products:** `Atlas <http://mongodb.com/atlas>`__, 
-`Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, 
+`MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 **Partners:** `LangChain <https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`__, 
 `FastAPI <https://www.mongodb.com/developer/technologies/fastapi/>`__
