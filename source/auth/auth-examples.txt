@@ -1,0 +1,233 @@
+.. _arch-center-examples:
+
+=========================================
+Authorization and Authentication Examples
+=========================================
+
+.. default-domain:: mongodb
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta:   
+   :description: Learn about the different authorization and authentication mechanisms that Atlas supports.
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+The following examples show how to configure {+service+} Authentication and Authorization.
+
+.. include:: `/includes/complete-examples.rst` 
+
+The following examples configure authentication and custom roles using
+|service| :ref:`tools for automation <arch-center-automation>`.
+
+.. tabs::
+
+   .. tab:: Dev and Test Environments
+      :tabid: devtest
+
+      .. tabs::
+
+         .. tab:: CLI
+            :tabid: cli
+
+            Run the following command to create a user authentication
+            with IAM credentials to a specified {+cluster+}. 
+            
+            .. include:: /includes/examples/cli-example-auth-aws-iam-devtest.rst
+
+            Run the following command to create a temporary user with
+            SCRAM authentication.
+
+            .. include:: /includes/examples/cli-example-auth-temp-user-devtest.rst
+
+            Run the following command to configure Workforce Identity
+            Federation with OIDC. 
+
+            .. include:: /includes/examples/cli-example-auth-oid-devtest.rst
+
+         .. tab:: Terraform
+            :tabid: Terraform
+
+            The following examples demonstrate how to configure
+            authentication and authorization. Before you can create
+            resources with Terraform, you must: 
+
+            - :ref:`Create your paying organization
+              <configure-paying-org>` and :ref:`create an API key
+              <atlas-admin-api-access>` for the paying organization.
+              Store your API key as environment variables by running the
+              following command in the terminal: 
+
+              .. code-block::
+
+                 export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+                 export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+            - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
+
+            Common Files 
+            ~~~~~~~~~~~~
+
+            You must create the following files for each example. Place
+            the files for each example in their own directory. Change
+            the IDs and names to use your values. Then run the commands
+            to initialize Terraform, view the Terraform plan, and apply
+            the changes. 
+
+            azure.tf 
+            ````````
+
+            .. include:: /includes/examples/tf-example-auth-tfazure.rst
+
+            variables.tf 
+            ````````````
+
+            .. include:: /includes/examples/tf-example-auth-variables-devtest.rst
+
+            terraform.tfvars 
+            ````````````````
+
+            .. include:: /includes/examples/tf-example-auth-tfvars-devtest.rst
+
+
+            Authentication Example 
+            ~~~~~~~~~~~~~~~~~~~~~~
+
+            Use the following to create an |service| user with username
+            and password authentication.
+
+            main.tf 
+            ```````
+
+            .. include:: /includes/examples/tf-example-auth-scram-devtest.rst
+
+            Use the following example to set up an :abbr:`OIDC (OpenID Connect)`
+            federated identity provider in |service|, for using it with
+            |azure| and then create an :abbr:`OIDC (OpenID Connect)`
+            federated authentication user. It uses OIDC tokens issued by |azure| Active Directory to allow access. 
+
+            main.tf 
+            ```````
+
+            .. include:: /includes/examples/tf-example-auth-oidc-devtest.rst 
+
+            outputs.tf 
+            ``````````
+
+            .. include:: /includes/examples/tf-example-auth-tfoutputs-devtest.rst
+
+            Authorization Example 
+            ~~~~~~~~~~~~~~~~~~~~~
+            
+            Use the following to grant users admin rights on the
+            {+cluster+} and project member rights for the projects in the
+            {+cluster+}. 
+
+            main.tf 
+            ```````
+
+            .. include:: /includes/examples/tf-example-auth-grant-roles-devtest.rst  
+
+   .. tab:: Staging and Prod Environments
+      :tabid: stagingprod
+
+      .. tabs::
+
+         .. tab:: CLI
+            :tabid: cli
+
+            Run the following command to create a database user from a specific
+            group in the Identity Provider. You can manage the user
+            authentication and authorization through the identity provider,
+            Okta. The command also grants the users in the identity provider
+            group ``dbAdmin`` and ``readWrite`` privileges on the |service|
+            {+cluster+}. 
+
+            .. include:: /includes/examples/cli-example-auth-okta-stagingprod.rst 
+
+            Run the following command to create an :abbr:`OIDC (OpenID
+            Connect)`-compatible identity providers from your federation
+            settings.  
+
+            .. include:: /includes/examples/cli-example-auth-oidc-stagingprod.rst 
+
+         .. tab:: Terraform
+            :tabid: Terraform
+
+            The following examples demonstrate how to configure
+            authentication and authorization. Before you can create
+            resources with Terraform, you must: 
+
+            - :ref:`Create your paying organization
+              <configure-paying-org>` and :ref:`create an API key
+              <atlas-admin-api-access>` for the paying organization.
+              Store your API key as environment variables by running the
+              following command in the terminal: 
+
+              .. code-block::
+
+                 export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+                 export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+            - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
+
+            Common Files 
+            ~~~~~~~~~~~~
+
+            You must create the following files for each example. Place
+            the files for each example in their own directory. Change
+            the IDs and names to use your values. Then run the commands
+            to initialize Terraform, view the Terraform plan, and apply
+            the changes. 
+
+            azure.tf 
+            ````````
+
+            .. include:: /includes/examples/tf-example-auth-tfazure.rst
+
+            variables.tf 
+            ````````````
+
+            .. include:: /includes/examples/tf-example-auth-variables-stagingprod.rst
+
+            terraform.tfvars 
+            ````````````````
+            .. include:: /includes/examples/tf-example-auth-tfvars-stagingprod.rst
+
+            outputs.tf 
+            ``````````
+
+            .. include:: /includes/examples/tf-example-auth-tfoutputs-stagingprod.rst
+
+            Configure Federated Settings for Identity Provider 
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            Use the following to set up an :abbr:`OIDC (OpenID Connect)`
+            federated identity provider in |service|, for using it with
+            |azure|. It allows access by using OIDC tokens issued by |azure|
+            Active Directory. 
+
+            .. include:: /includes/examples/tf-example-auth-oidc-stagingprod.rst
+
+            Use the following to create an :abbr:`OIDC (OpenID Connect)`
+            federated authentication user. 
+
+            .. include:: /includes/examples/tf-example-auth-create-oidc-user-stagingprod.rst
+
+            Configure Custom Role 
+            ~~~~~~~~~~~~~~~~~~~~~
+
+            Use the following to create a custom role named ``my_custom_role``
+            which allows update, add, and delete operations on any collection
+            in the database named ``myDb``.
+
+            .. include:: /includes/examples/tf-example-auth-create-custom-role-stagingprod.rst
+
+For an example of an |service| project with the |service| role assigned
+to a specific group, see :ref:`Examples <arch-center-hierarchy>`.

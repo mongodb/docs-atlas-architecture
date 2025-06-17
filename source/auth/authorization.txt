@@ -159,3 +159,7 @@ that automatically expire after the predefined times. A user can be
 created for 6 hours, 1 day, or 1 week.
 
 To learn more, see :ref:`mongodb-users`. 
+
+Examples
+--------
+For examples of configuring Authorization, see :ref:`arch-center-examples`.
