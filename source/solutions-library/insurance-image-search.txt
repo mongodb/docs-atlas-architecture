@@ -241,11 +241,9 @@ Partner Technologies
 
 - `Image embedding generation with PyTorch <https://pytorch.org/>`__
 
-
 Authors
 -------
 
 - Luca Napoli, MongoDB
 - Jeff Needham, MongoDB
 - Karthic Subramanian, MongoDB
-
