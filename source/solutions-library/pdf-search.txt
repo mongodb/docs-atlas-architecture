@@ -36,8 +36,7 @@ Superduper.io, and LLMs.
 **Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** `Superduper.io <http://superduper.io/>`__, `OpenAI
-<https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb>`__,
+**Partners:** `Superduper.io <http://superduper.io/>`__, 
 `FastAPI <https://www.mongodb.com/developer/technologies/fastapi>`__
 
 Solution Overview
@@ -58,7 +57,7 @@ indicate the source of the information, including the page and paragraph
 where it was found.
 
 In this `GitHub repo
-<https://github.com/mongodb-industry-solutions/Insurance-PDF-Search/tree/main>`__,
+<https://github.com/mongodb-industry-solutions/Insurance-PDF-Search>`__,
 you will find detailed, step-by-step instructions on how to build the
 PDF search application combining MongoDB, Superduper, and LLMs. Our use
 case for this solution focuses on a claim adjuster or an underwriter
@@ -196,9 +195,8 @@ tools, eliminating data migration and duplication.
   data, minimizing engineering efforts, time to production, and
   computation resources.
 
-- Implement AI workflows with any open- and closed-source AI models and
-  APIs, on any type of data, with any AI and Python framework, package,
-  class, or function.
+- Implement AI workflows with any AI models and APIs, on any type of
+  data, with any AI and Python framework, package, class, or function.
 
 - Safeguard data by switching from APIs to hosting and fine-tuning your
   own models, on your own and existing infrastructure, whether
@@ -232,9 +230,9 @@ Key Learnings
   always important to be mindful of privacy and data protection
   requirements. A locally deployed model is recommended if you need your
   data to remain on the servers. Otherwise, you can simply call an API
-  and get your vector embeddings back, as explained in `this tutorial
+  and get your vector embeddings back, as explained in `this
   <https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/>`__
-  that tells you how to do it with OpenAI.
+  tutorial.
 
 - Superduper is the framework that helps us with the plumbing of the
   moving pieces, providing a simple and standard interface to interact
@@ -256,7 +254,6 @@ Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
 - `Superduper.io <https://www.superduper.io/>`__
-- `OpenAI <https://www.mongodb.com/developer/products/atlas/using-openai-latest-embeddings-rag-system-mongodb>`__
 - `FastAPI <https://www.mongodb.com/developer/technologies/fastapi>`__
 
 Authors
