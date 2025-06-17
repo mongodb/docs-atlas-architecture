@@ -270,3 +270,75 @@ Deployments
 
 To learn our recommendations for deployments that relate to authentication, 
 see :ref:`arch-center-hierarchy`.
+
+Authentication Examples
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The following examples show how to set up OIDC-based authentication via the CLI and the :ref:`HashiCorp Terraform provider <getting-started-terraform>`. 
+
+.. tabs::
+
+   .. tab:: CLI
+      :tabid: cli
+
+      Run the following command to configure Workforce Identity
+      Federation with OIDC. 
+
+      .. include:: /includes/examples/cli-example-auth-oid-devtest.rst
+
+   .. tab:: Terraform
+      :tabid: Terraform
+      
+      The following example demonstrates how to configure authentication with 
+      Terraform. Before you can create resources with Terraform, you must: 
+
+      - :ref:`Create your paying organization <configure-paying-org>` and 
+        :ref:`create an API key <atlas-admin-api-access>` for the paying 
+        organization.
+ 
+      - Store your API key as environment variables by running the following    
+        command in the terminal: 
+
+        .. code-block::
+
+           export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+           export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+      - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
+
+      Common Files 
+      ````````````
+
+      You must create the following files for each example. Place 
+      the files for each example in their own directory. Change 
+      the IDs and names to use your values. Then run the commands 
+      to initialize Terraform, view the Terraform plan, and apply 
+      the changes. 
+      
+      **azure.tf**
+
+      .. include:: /includes/examples/tf-example-auth-tfazure.rst
+
+      **variables.tf**
+
+      .. include:: /includes/examples/tf-example-auth-variables-devtest.rst
+
+      **terraform.tfvars**
+      
+      .. include:: /includes/examples/tf-example-auth-tfvars-devtest.rst
+
+      Authenitcation Files 
+      ````````````````````
+
+      Use the following example to set up an :abbr:`OIDC (OpenID Connect)` 
+      federated identity provider in |service|, for using it with |azure| and then create an :abbr:`OIDC (OpenID Connect)` federated authentication 
+      user. It uses OIDC tokens issued by |azure| Active Directory to allow 
+      access. 
+
+      **main.tf**
+
+      .. include:: /includes/examples/tf-example-auth-oidc-devtest.rst 
+
+      **outputs.tf**
+      
+      .. include:: /includes/examples/tf-example-auth-tfoutputs-devtest.rst
