@@ -159,3 +159,20 @@ that automatically expire after the predefined times. A user can be
 created for 6 hours, 1 day, or 1 week.
 
 To learn more, see :ref:`mongodb-users`. 
+
+Authorization Example
+---------------------
+
+The following example shows how to configure Authorization with 
+:ref:`HashiCorp Terraform provider <getting-started-terraform>`. For an example 
+of configuring authentication with Terraform, see the 
+:ref:`Authentication Examples <arch-center-auth_examples>`.
+
+Use the following to grant users admin rights on the {+cluster+} and project member rights for the projects in the {+cluster+}. 
+
+**main.tf**
+
+   .. include:: /includes/examples/tf-example-auth-grant-roles-devtest.rst
+
+
+

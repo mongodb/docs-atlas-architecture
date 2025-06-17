@@ -271,8 +271,10 @@ Deployments
 To learn our recommendations for deployments that relate to authentication, 
 see :ref:`arch-center-hierarchy`.
 
+.. _arch-center-auth_examples:
+
 Authentication Examples
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 The following examples show how to set up OIDC-based authentication via the CLI and the :ref:`HashiCorp Terraform provider <getting-started-terraform>`. 
 
@@ -307,7 +309,7 @@ The following examples show how to set up OIDC-based authentication via the CLI 
       - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
 
       Common Files 
-      ````````````
+      ~~~~~~~~~~~~
 
       You must create the following files for each example. Place 
       the files for each example in their own directory. Change 
@@ -328,7 +330,7 @@ The following examples show how to set up OIDC-based authentication via the CLI 
       .. include:: /includes/examples/tf-example-auth-tfvars-devtest.rst
 
       Authenitcation Files 
-      ````````````````````
+      ~~~~~~~~~~~~~~~~~~~~
 
       Use the following example to set up an :abbr:`OIDC (OpenID Connect)` 
       federated identity provider in |service|, for using it with |azure| and then create an :abbr:`OIDC (OpenID Connect)` federated authentication 
