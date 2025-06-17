@@ -283,8 +283,8 @@ kick-start their projects.
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
-            Combine real-time analytics and vector search with Atlas
-            Vector Search.  
+            Combine real-time analytics and vector search with MongoDB
+            Atlas Vector Search.  
 
          .. card::
             :headline: Framework for Rapid AI Agent Deployment
