@@ -231,7 +231,7 @@ Key Learnings
   requirements. A locally deployed model is recommended if you need your
   data to remain on the servers. Otherwise, you can simply call an API
   and get your vector embeddings back, as explained in `this
-  <https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/>`__
+  <https://www.mongodb.com/docs/atlas/atlas-vector-search/create-embeddings/>`__
   tutorial.
 
 - Superduper is the framework that helps us with the plumbing of the
