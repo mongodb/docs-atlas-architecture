@@ -329,7 +329,7 @@ The following examples show how to set up OIDC-based authentication via the CLI 
       
       .. include:: /includes/examples/tf-example-auth-tfvars-devtest.rst
 
-      Authenitcation Files 
+      Authentication Files 
       ~~~~~~~~~~~~~~~~~~~~
 
       Use the following example to set up an :abbr:`OIDC (OpenID Connect)` 
