@@ -22,7 +22,7 @@ Vector Search to detect fraud that traditional methods miss.
   `Retail <https://www.mongodb.com/industries/retail>`__
 - **Products and tools:** `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__, 
   `MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__,
-  `Change Streams <https://www.mongodb.com/resources/products/capabilities/change-streams>`__
+  `MongoDB Change Streams <https://www.mongodb.com/resources/products/capabilities/change-streams>`__
 
 Solution Overview
 ------------------
