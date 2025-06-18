@@ -33,8 +33,8 @@ Superduper.io, and LLMs.
 <https://www.mongodb.com/industries/manufacturing>`__,
 `Retail <https://www.mongodb.com/industries/retail>`__
 
-**Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, 
+`MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 **Partners:** `Superduper.io <http://superduper.io/>`__, 
 `FastAPI <https://www.mongodb.com/developer/technologies/fastapi>`__
@@ -225,14 +225,16 @@ Key Learnings
     turns them into vector embeddings.
   - The querying step allows the user to interrogate the documents.
 
-- Text embedding creation: The embedding generation process can be
+- **Text embedding creation:** The embedding generation process can be
   carried out using different models and deployment options. It is
-  always important to be mindful of privacy and data protection
-  requirements. A locally deployed model is recommended if you need your
-  data to remain on the servers. Otherwise, you can simply call an API
-  and get your vector embeddings back, as explained in `this
+  important to consider privacy and data protection requirements. You
+  can deploy a model locally if your data needs to remain on the
+  servers. Otherwise, you can call an API and get your vector embeddings
+  back, as explained in `this
   <https://www.mongodb.com/docs/atlas/atlas-vector-search/create-embeddings/>`__
-  tutorial.
+  tutorial. Some options available include `Voyage AI
+  <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai>`__
+  or open-source models. 
 
 - Superduper is the framework that helps us with the plumbing of the
   moving pieces, providing a simple and standard interface to interact
