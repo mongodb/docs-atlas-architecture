@@ -165,8 +165,8 @@ Reference Architectures
 
    Figure 1. Media personalization architecture with Atlas Vector Search
 
-Building the Solution
----------------------
+Demo Application
+----------------
 
 We have developed a showcase of the solution. It is available at 
 `<https://ist.media>`_ and incorporates the concepts discussed above.
