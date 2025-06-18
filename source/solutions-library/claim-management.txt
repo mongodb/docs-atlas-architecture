@@ -167,7 +167,7 @@ Key Learnings
   <https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-local/#std-label-atlas-cli-deploy-local-avs>`__.
 
 - **Performing a Vector Search query:** Notably, `Vector Search queries <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__ 
-  have a dedicated operator within MongoDB’s `aggregation pipelin
+  have a dedicated operator within MongoDB’s `aggregation pipeline
   <https://www.mongodb.com/docs/manual/aggregation/>`__. This means they
   can be concatenated with other operations, making it extremely
   convenient for developers because they don’t need to learn a different
