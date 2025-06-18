@@ -187,7 +187,7 @@ The code for this solutions is available on this `GitHub repo
 - **Storing data in MongoDB Atlas with Vector Search:**
 
   - Convert the summarized transcript into embeddings for
-    vector search. You can use `VoyageAI
+    vector search. You can use `Voyage AI
     <https://www.mongodb.com/docs/atlas/atlas-vector-search/create-embeddings/>`__
     for your embeddings models.
 
@@ -259,7 +259,7 @@ MongoDB Developer Data Platform
 - `Atlas Database <https://www.mongodb.com/atlas/database>`__
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 - `Python driver <https://www.mongodb.com/docs/drivers/python/>`__, `PyMongo <https://www.mongodb.com/docs/drivers/pymongo/>`__
-- `VoyageAI <https://www.voyageai.com/>`__ for text embedding generation
+- `Voyage AI <https://www.voyageai.com/>`__ for text embedding generation
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
@@ -270,7 +270,7 @@ Key Considerations
 ------------------
 
 - Creating and storing vector indexes in Atlas Vector Search.
-- How to generate embeddings and outputs from an LLM, and store them in MongoDB Atlas.
+- Generating embeddings and outputs from an LLM, and store them in MongoDB Atlas.
 - Leveraging the popular AI framework, Langchain, to facilitate building a Gen-AI powered application.
 - Conducting semantic search to retrieve relevant data that may not have exact keyword matches.
 - Orchestrating various AI-powered services in an application.
