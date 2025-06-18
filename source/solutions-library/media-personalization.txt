@@ -71,19 +71,17 @@ vectorization of media items, our platform suggests content that aligns
 with individual preferences and past interactions. This not only
 enhances user engagement but also increases the likelihood of converting
 free users into paying subscribers. By integrating MongoDB's vector
-search to perform `|knn|
-<https://www.mongodb.com/resources/basics/knn-search>`__ searches,
-we streamline and optimize how content is matched. Vectors are embedded
-directly in MongoDB documents. This has several advantages. For
-instance, there are no complexities of a polyglot persistence
-architecture. No need to :abbr:`ETL (extract, transform, and load)`
-data between different database systems, which simplifies the data
-architecture and reduces overhead. Furthermore, MongoDB's built-in
-scalability and resilience become particularly advantageous when
-handling vector search operations. Organizations can scale their
-operations vertically or horizontally, and they can even choose to scale
-search nodes independently from operational database nodes, thus
-adapting to the specific load scenario.
+search to perform |knn| searches, we streamline and optimize how content
+is matched. Vectors are embedded directly in MongoDB documents. This has
+several advantages. For instance, there are no complexities of a
+polyglot persistence architecture. No need to :abbr:`ETL (extract,
+transform, and load)` data between different database systems, which
+simplifies the data architecture and reduces overhead. Furthermore,
+MongoDB's built-in scalability and resilience become particularly
+advantageous when handling vector search operations. Organizations can
+scale their operations vertically or horizontally, and they can even
+choose to scale search nodes independently from operational database
+nodes, thus adapting to the specific load scenario.
 
 Content Summarization and Reformatting
 --------------------------------------
