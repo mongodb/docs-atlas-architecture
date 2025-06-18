@@ -199,8 +199,9 @@ Key Learnings
 - This solution uses vector embeddings for semantic search, requiring an
   embedding model to generate them. The `GitHub repository
   <https://github.com/mongodb-industry-solutions/AML-Fraud-prevention-Demo>`__
-  does not include provider credentials. You can use Voyage AI as your
-  embedding service, depending on your setup.
+  does not include provider credentials. You can use `Voyage AI
+  <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai>`
+  as your embedding service, depending on your setup.
 
 Technologies and Products Used
 ------------------------------
