@@ -75,7 +75,7 @@ search to perform |knn| searches, we streamline and optimize how content
 is matched. Vectors are embedded directly in MongoDB documents. This has
 several advantages. For instance, there are no complexities of a
 polyglot persistence architecture. No need to :abbr:`ETL (Extract,
-transform, and load)` data between different database systems, which
+Transform, and Load)` data between different database systems, which
 simplifies the data architecture and reduces overhead. Furthermore,
 MongoDB's built-in scalability and resilience become particularly
 advantageous when handling vector search operations. Organizations can
@@ -98,8 +98,8 @@ Essential information is drawn from content through advanced keyword
 extraction, enabling users to grasp key news dimensions quickly and
 enhancing the searchability of content within the platform. Keywords are
 fundamental to how content is indexed and found in search engines, and
-they significantly influence the :abbr:`SEO (Search engine
-optimization)` performance of digital content. In traditional publishing
+they significantly influence the :abbr:`SEO (Search Engine
+Optimization)` performance of digital content. In traditional publishing
 workflows, selecting these keywords can be a highly manual and
 labor-intensive task, requiring content creators to identify and
 incorporate relevant keywords meticulously. This process is not only
@@ -140,7 +140,7 @@ This feature significantly enhances user engagement by delivering highly
 personalized and context-rich content. It caters to users looking for quick 
 summaries as well as those seeking in-depth analyses, thereby broadening the 
 appeal of the platform and encouraging deeper interaction with the content. By 
-using |llm|s to automate these processes, publishers can maintain a high level of 
+using an |llm| to automate these processes, publishers can maintain a high level of 
 productivity and innovation in content creation, ensuring they remain at the 
 cutting edge of media technology.
 
@@ -181,8 +181,8 @@ like this:
 
    Figure 3. Data model for a news article
 
-You can use `Voyage AI https://www.voyageai.com/>` to generate your
-embeddings. To perform vector search, we created a Vector Index in the
+You can use `Voyage AI https://www.voyageai.com/>`__ to generate your
+embeddings. To perform vector search, we created a vector index in the
 MongoDB Atlas web interface with the following configuration:
 
 .. figure:: /includes/images/industry-solutions/vector-index.svg
