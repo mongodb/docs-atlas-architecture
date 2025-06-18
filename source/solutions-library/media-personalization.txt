@@ -181,7 +181,7 @@ like this:
 
    Figure 3. Data model for a news article
 
-You can use `Voyage AI https://www.voyageai.com/>`__ to generate your
+You can use `Voyage AI <https://www.voyageai.com/>`__ to generate your
 embeddings. To perform vector search, we created a vector index in the
 MongoDB Atlas web interface with the following configuration:
 
