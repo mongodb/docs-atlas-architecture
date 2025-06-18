@@ -76,7 +76,7 @@ search to perform `k-nearest neighbor
 we streamline and optimize how content is matched. Vectors are embedded
 directly in MongoDB documents. This has several advantages. For
 instance, there are no complexities of a polyglot persistence
-architecture. No need to :abbr: `extract, transform, and load (ETL)`
+architecture. No need to :abbr:`extract, transform, and load (ETL)`
 data between different database systems, which simplifies the data
 architecture and reduces overhead. Furthermore, MongoDB's built-in
 scalability and resilience become particularly advantageous when
@@ -84,6 +84,8 @@ handling vector search operations. Organizations can scale their
 operations vertically or horizontally, and they can even choose to scale
 search nodes independently from operational database nodes, thus
 adapting to the specific load scenario.
+
+ETL
 
 
 Content Summarization and Reformatting
