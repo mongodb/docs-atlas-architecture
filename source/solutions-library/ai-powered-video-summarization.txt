@@ -271,7 +271,7 @@ Key Considerations
 
 - Creating and storing vector indexes in Atlas Vector Search.
 - Generating embeddings and outputs from an LLM, and store them in MongoDB Atlas.
-- Leveraging the popular AI framework, Langchain, to facilitate building a Gen-AI powered application.
+- Leveraging the popular AI framework, LangChain, to facilitate building a Gen-AI powered application.
 - Conducting semantic search to retrieve relevant data that may not have exact keyword matches.
 - Orchestrating various AI-powered services in an application.
 
