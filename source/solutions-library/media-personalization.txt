@@ -64,7 +64,7 @@ several advanced capabilities.
 
 
 Content Suggestions and Personalization
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By utilizing user data, behavior analytics, and the multi-dimensional
 vectorization of media items, our platform suggests content that aligns
@@ -84,7 +84,7 @@ choose to scale search nodes independently from operational database
 nodes, thus adapting to the specific load scenario.
 
 Content Summarization and Reformatting
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In an age of information overload, our solution provides concise
 summaries and adapts content formats based on user preferences and
@@ -92,7 +92,7 @@ device specifications. This tailored approach addresses the diverse
 consumption habits of users across different platforms.
 
 Keyword Extraction
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Essential information is drawn from content through advanced keyword
 extraction, enabling users to grasp key news dimensions quickly and
@@ -111,7 +111,7 @@ our solution extracts keywords automatically and with high
 sophistication.
 
 Automatic Creation of Insights and Dossiers
--------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Our system can automatically generate comprehensive insights and
 dossiers from multiple articles. This feature is particularly valuable
@@ -150,7 +150,7 @@ productivity and innovation in content creation, ensuring they remain at the
 cutting edge of media technology.
 
 Other Applicable Industries
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The core concepts of the solution above can be reused equally across other 
 industries, namely retail, where presenting and matching the right product to the
@@ -165,8 +165,8 @@ Reference Architectures
 
    Figure 1. Media personalization architecture with Atlas Vector Search
 
-Demo Application
-----------------
+Building the Solution
+---------------------
 
 We have developed a showcase of the solution. It is available at 
 `<https://ist.media>`_ and incorporates the concepts discussed above.
