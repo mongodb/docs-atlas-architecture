@@ -147,7 +147,7 @@ availability, and the ability to better optimize resource usage.
       "fields": [
          {
             "numDimensions": 1536,
-            "path": "_outputs.elements.text-embedding-ada-002.0",
+            "path": "_outputs.elements.text-embedding.0",
             "similarity": "cosine",
             "type": "vector"
          },
@@ -164,7 +164,7 @@ availability, and the ability to better optimize resource usage.
       {
          "$vectorSearch": {  
             'index': INDEX_NAME,
-            'path': "_outputs.elements.text-embedding-ada-002.0",
+            'path': "_outputs.elements.text-embedding.0",
             'queryVector': query_embedding,
             'numCandidates': vector_search_top_k,
             'limit': vector_search_top_k,
@@ -173,7 +173,7 @@ availability, and the ability to better optimize resource usage.
       },
       {
          "$project": {
-            "_outputs.elements.text-embedding-ada-002.0": 0,
+            "_outputs.elements.text-embedding.0": 0,
             "score": { "$meta": "vectorSearchScore" }
          }
       }
@@ -232,7 +232,7 @@ Key Learnings
   servers. Otherwise, you can call an API and get your vector embeddings
   back, as explained in `this
   <https://www.mongodb.com/docs/atlas/atlas-vector-search/create-embeddings/>`__
-  tutorial. You can use `Voyage AI
+  tutorial. You can use `Voyage AI (acquired by MongoDB)
   <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai>`__
   or open-source models. 
 
