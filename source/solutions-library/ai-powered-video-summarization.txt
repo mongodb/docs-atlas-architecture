@@ -259,7 +259,6 @@ MongoDB Developer Data Platform
 - `Atlas Database <https://www.mongodb.com/atlas/database>`__
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 - `Python driver <https://www.mongodb.com/docs/drivers/python/>`__, `PyMongo <https://www.mongodb.com/docs/drivers/pymongo/>`__
-- `Voyage AI <https://www.voyageai.com/>`__ for text embedding generation
 
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
