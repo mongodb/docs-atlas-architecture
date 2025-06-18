@@ -153,12 +153,14 @@ Key Learnings
 
 - **Text embedding creation:** The embedding generation process can be
   carried out using different models and deployment options. It is
-  always important to be mindful of privacy and data protection
-  requirements. A locally deployed model is recommended if we need our
-  data to never leave our servers. Otherwise, we can simply call an API
-  and get our vectors back, as explained in `this
+  important to consider privacy and data protection requirements. You
+  can deploy a model locally if your data needs to remain on the
+  servers. Otherwise, you can call an API and get your vector embeddings
+  back, as explained in `this
   <https://www.mongodb.com/docs/atlas/atlas-vector-search/create-embeddings/>`__
-  tutorial.
+  tutorial. You can use `Voyage AI (acquired by MongoDB)
+  <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai>`__
+  or open-source models. 
 
 - **Creation of a Vector Search index in Atlas:** It is now possible to
   create indexes for `local deployments
