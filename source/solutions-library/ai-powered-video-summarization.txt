@@ -158,7 +158,7 @@ terms of utilization in various applications.
 Building the Solution
 ---------------------
 
-The code for this solutions is available on this `GitHub repo
+The code for this solution is available on this `GitHub repo
 <https://github.com/fabiofalavinha/mongodb-ai-video-transcript>`__.
 
 - **Setting up the environment:** Start by ensuring you have all required

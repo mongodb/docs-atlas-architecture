@@ -112,7 +112,7 @@ used to retrieve documents associated with the user prompt.
 Building the Solution
 ---------------------
 
-The instructions to build the demo are included in the readme of `this
+The instructions to build the demo are included in the README of `this
 Github repo <https://github.com/mongodb-industry-solutions/RAG-Insurance>`__.
 You’ll be guided through the following steps:
 
@@ -122,13 +122,14 @@ You’ll be guided through the following steps:
 - LLM configuration options
 - Vector Search index creation
 
-Visit the `Atlas Vector Search Quick Start guide <https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__ 
+Visit the `Atlas Vector Search Quick Start guide
+<https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
 to try our semantic search tool now.
 
-Step 4 of `this tutorial
-<https://www.mongodb.com/developer/products/atlas/building-generative-ai-applications-vector-search-open-source-models/?hideMenu=1>`__
+This `document
+<https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-type/#create-an-atlas-vector-search-index>`__
 walks you through the creation and configuration of the Vector Search
-index within the Atlas UI. Make sure you follow this structure:
+index. Make sure you follow this structure:
 
 .. code-block:: json
    :copyable: true 
@@ -145,7 +146,7 @@ index within the Atlas UI. Make sure you follow this structure:
    }
 
 Ultimately you have to run both the front and the back end. You’ll
-access a web UI that allows you to ask questions of the LLM, obtain an
+access a web UI that allows you to ask questions to the LLM, obtain an
 answer, and see the reference documents used as context.
 
 Key Learnings
