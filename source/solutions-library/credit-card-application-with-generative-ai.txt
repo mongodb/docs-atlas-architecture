@@ -283,15 +283,15 @@ credit application in the following key aspects of the process:
 
          Figure 3. Example of a rejection explanation
 
-      This sort of messaging to the customer can be categorized as a
-      form of explainable AI where the features used in the model to
-      perform risk profiling can be ranked and used as a part of the
-      custom prompt to the LLM. This can help generate more descriptive
-      reasons for the end customer to explain their user profile, as
-      shown above. LLMs can also help summarize the list of descriptive
-      reasons to provide a simplified view of the description. The
-      application can let the customer drill down into details if they
-      want to enhance their credit profile and user experience.
+      This messaging to the customer is a form of explainable AI where
+      the features used in the model to perform risk profiling are
+      ranked and used as a part of the custom prompt to the LLM. This
+      can help generate more descriptive reasons for the end customer to
+      explain their user profile, as shown above. LLMs can also help
+      summarize the list of descriptive reasons to provide a simplified
+      view of the description. The application can let the customer
+      drill down into details if they want to enhance their credit
+      profile and user experience.
 
       In this demo, there are two approaches used to score the credit
       application. The credit application status is determined using an
@@ -305,9 +305,8 @@ credit application in the following key aspects of the process:
 
          Figure 4. Feature importance chart
 
-      For more details on features used in this demo and the explanation
-      of each feature used, please have a look at the source code
-      provided via the `credit score GitHub repository
+      For more details on features used in this demo, look at the source
+      code provided in the `credit score GitHub repository
       <https://github.com/mongodb-industry-solutions/Credit_score>`_.
 
       To demonstrate the difference between the ML versus traditional
