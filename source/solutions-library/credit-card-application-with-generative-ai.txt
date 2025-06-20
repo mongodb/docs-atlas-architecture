@@ -27,8 +27,8 @@ and generative AI is reshaping the foundations of credit scoring.
   <https://www.mongodb.com/developer/products/mongodb/langchain-vector-search/>`__,
   `Fireworks.ai <https://fireworks.ai/>`__
 
-About this Task
----------------
+Solution Overview
+-----------------
 
 In this solution, you'll learn how the convergence of alternative data,
 artificial intelligence, and `generative AI
@@ -69,8 +69,8 @@ scoring models:
   rejection reasons makes it difficult for customers to address the root
   cause and enhance their creditworthiness for future applications.
 
-Steps
------
+Build the Solution
+------------------
 
 In the following solution, you will learn how MongoDB can help transform
 credit application in the following key aspects of the process:
@@ -395,10 +395,9 @@ credit application in the following key aspects of the process:
          LLM to generate relevant product recommendation summaries for
          the end user.
          
-         - This helps the financial institution
-           personalize the recommendation and offer relevant
-           recommendations to the end customer, which drives higher
-           conversion rates.
+         - This helps the financial institution personalize the
+           recommendation and offer relevant recommendations to the end
+           customer, which drives higher conversion rates.
 
          - The product recommendation increases customer engagement and
            enhances user experiences by improving the "Likely
@@ -417,9 +416,6 @@ credit application in the following key aspects of the process:
 
          Figure 6. Example of an approved application
 
-Summary
--------
-
 In conclusion, credit scoring is undergoing a transformative phase with
 the integration of generative AI. As we explore the dynamics of
 traditional models, challenges faced by borrowers, and the future
@@ -437,6 +433,9 @@ We have `developed and deployed the application on Fireworks.AI
 a key AI partner of MongoDB, to make innovating with generative AI
 faster, more efficient, and more secure.
 
+Key Learnings
+-------------
+
 The proposed solution's functional and nonfunctional features include:
 
 - **Understanding GenAI's capabilities**: Synthesizing diverse data sets
@@ -453,14 +452,13 @@ The proposed solution's functional and nonfunctional features include:
 
 - **Alternative data**: Understanding the advantages of alternative data
   for more accurate credit scoring. This credit scoring model, for
-  example, can be further augmented with alternative data points such as
-  utility bills, mobile phone bills, education/certification history,
-  etc.
+  example, can be further improved with alternative data points such as
+  utility bills, mobile phone bills, and education history.
 
 - **Addressing hallucination**: Mitigating hallucination risk by
   leveraging :atlas:`retrieval-augmented generation (RAG)
   </atlas-vector-search/ai-integrations/langchain/>` by grounding the
-  model's responses in factual information from up-to-date sources,
+  model's responses in factual information from current sources,
   ensuring the model's responses reflect the most current and accurate
   information available.
 
@@ -470,3 +468,12 @@ Authors
 - Ashwin Gangadhar, Partner Solutions, MongoDB
 - Wei You Pan, Industry Solutions, MongoDB
 - Julian Boronat, Industry Solutions, MongoDB
+
+Learn More
+----------
+
+- :ref:`arch-center-is-card-fraud-solution`
+
+- :ref:`arch-center-hasura-fintech-services`
+
+- :ref:`arch-center-is-image-search`
