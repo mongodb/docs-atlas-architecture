@@ -349,16 +349,16 @@ credit application in the following key aspects of the process:
       operational database and vector search in a single, unified, and
       fully managed platform with a MongoDB native interface. You can
       create vector embeddings with machine learning models, then store
-      and index them in |service-fullname| for retrieval-augmented
-      generation (RAG), semantic search, recommendation engines, dynamic
+      and index them in |service-fullname| for
+      :atlas:`retrieval-augmented generation
+      </atlas-vector-search/ai-integrations/langchain/>`
+      (RAG), semantic search, recommendation engines, dynamic
       personalization, and other use cases.
 
-      :atlas:`Retrieval-augmented generation
-      </atlas-vector-search/ai-integrations/langchain/>` (RAG) is a
-      paradigm that uses vector search to retrieve relevant documents
-      based on the input query. It then provides these retrieved
-      documents as context to the LLMs to help generate a more informed
-      and accurate response.
+      |rag| is a paradigm that uses vector search to retrieve relevant
+      documents based on the input query. It then provides these
+      retrieved documents as context to the LLMs to help generate a more
+      informed and accurate response.
 
       The tutorial above mentions technologies that can be used to solve
       a credit card product recommendation use case. The steps involved
@@ -379,10 +379,10 @@ credit application in the following key aspects of the process:
            breaking them into smaller chunks helps retrieve relevant
            information accordingly.
 
-         - You can leverage LLMs can be leveraged here to shorten the
-           product description to summaries that carry all the salient
-           product features and costs. This change lets you quickly
-           retrieve and recommend the relevant products.
+         - You can leverage LLMs to shorten the product description to
+           summaries that carry all the salient product features and
+           costs. This change lets you quickly retrieve and recommend
+           the relevant products.
 
       2. **LLM-powered recommendations**: In this use case, the LLM is
          used as a recommender system where the user profile generated
@@ -456,11 +456,9 @@ The proposed solution's functional and nonfunctional features include:
   utility bills, mobile phone bills, and education history.
 
 - **Addressing hallucination**: Mitigating hallucination risk by
-  leveraging :atlas:`retrieval-augmented generation (RAG)
-  </atlas-vector-search/ai-integrations/langchain/>` by grounding the
-  model's responses in factual information from current sources,
-  ensuring the model's responses reflect the most current and accurate
-  information available.
+  leveraging |rag| to ground the model's responses in factual information
+  from current sources, ensuring the model's responses reflect the most
+  current and accurate information available.
 
 Authors
 -------
