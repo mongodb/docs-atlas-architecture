@@ -13,8 +13,7 @@ MongoDB as the Open Finance Data Store
    :class: singlecol
 
 MongoDB powers open finance with flexible data integration, built-in
-security, and scalability—enabling seamless, compliant, and personalized
-financial services.
+security, and scalable financial services.
 
 - **Use cases:** `App Driven-Analytics <https://www.mongodb.com/collateral/application-driven-analytics>`__
 
@@ -23,22 +22,24 @@ financial services.
 - **Products and tools:** `Aggregation pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__, 
   `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__
 
-Solution Overview
-------------------
+About this Task
+---------------
 
-Open finance is transforming the financial industry, enabling seamless data sharing across
-banks, fintech companies, and third-party providers. However, integrating diverse
-financial data while ensuring security, compliance, and scalability is a major challenge.
+Open finance is transforming the financial industry, enabling seamless
+data sharing across banks, fintech companies, and third-party providers.
+However, integrating diverse financial data while ensuring security,
+compliance, and scalability is a major challenge.
 
-MongoDB provides the ideal foundation for open finance with its flexible document model,
-native `JSON <https://www.mongodb.com/resources/languages/what-is-json>`__ support, and
-powerful aggregation framework—allowing institutions to unify data from multiple sources
-effortlessly. With built-in encryption, fine-grained access controls, and high
-availability, MongoDB ensures secure and compliant data management.
+MongoDB provides the ideal foundation for open finance with its flexible
+document model, native `JSON
+<https://www.mongodb.com/resources/languages/what-is-json>`__ support,
+and powerful aggregation framework. These features allow institutions to
+unify data from multiple sources and ensure secure and compliant data
+management.
 
-By leveraging MongoDB, financial institutions can accelerate innovation, offer
-personalized financial insights, and seamlessly adapt to evolving regulations—all without
-the complexity of traditional relational databases.
+By leveraging MongoDB, financial institutions can accelerate innovation,
+offer personalized financial insights, and adapt to evolving regulations
+without the complexity of traditional relational databases.
 
 .. figure:: /includes/images/industry-solutions/open-finance.gif
   :alt: Open Finance demo in gif format
@@ -46,10 +47,10 @@ the complexity of traditional relational databases.
   Figure 1. Open finance application with MongoDB
 
 Reference Architectures
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
-At the center of this architecture is our fictional demo bank, Leafy Bank, which allows
-users to connect external bank accounts securely.
+At the center of this architecture is our fictional demo bank, Leafy
+Bank, which allows users to connect external bank accounts securely.
 
 First, the user initiates a request to connect their external bank accounts. This requires
 explicit user consent, ensuring security and compliance with regulations like PSD2. To
