@@ -96,7 +96,7 @@ Simplified Components for Demonstration Purposes
    * - Collection
      - Description
      - Structure
-					- Simplification
+     - Simplification
 
    * - ``tokens``
      - Stores Bearer tokens used for authenticating and authorizing API
@@ -105,18 +105,19 @@ Simplified Components for Demonstration Purposes
      - .. code-block:: javascript
 
           {
-													"_id": { "$oid": "unique_id" }, 
-													"UserName": "string", 
-													"BearerToken": "string",
-													"TokenDates": {
-																	"CreationDate": { "$date": "ISODate" }, 
-																	"LastUseDate": { "$date": "ISODate" }
-															},
-											}
+             "_id": { "$oid": "unique_id" }, 
+             "UserName": "string", 
+             "BearerToken": "string",
+             "TokenDates": {
+                "CreationDate": { "$date": "ISODate" }, 
+                "LastUseDate": { "$date": "ISODate" }
+              },
+           }
 
      - In a real-world scenario, token management would involve more
        complex mechanisms, including token expiration, refresh tokens,
        and secure storage practices.
+
 
 - **External accounts collection:** 
 
