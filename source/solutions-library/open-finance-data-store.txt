@@ -100,7 +100,8 @@ Simplified Components for Demonstration Purposes
 
    * - ``tokens``
      - Stores Bearer tokens used for authenticating and authorizing API
-       requests between Leafy Bank and external banks. 
+       requests between Leafy Bank and external banks.
+ 
      - .. code-block:: javascript
 
           {
