@@ -39,4 +39,3 @@ performance in {+service+}:
    :titlesonly:
 
    Scalability </scalability>
-   Latency Reduction </deployment-paradigms/latency-strategies>
