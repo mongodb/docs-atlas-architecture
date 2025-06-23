@@ -95,7 +95,7 @@ Simplified Components for Demonstration Purposes
 
    * - Collection
      - Description
-     - Structure
+     - Sample Document
 
    * - ``tokens``
      - Stores Bearer tokens used for authenticating and authorizing API
