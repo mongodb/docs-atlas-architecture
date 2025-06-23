@@ -91,17 +91,15 @@ Simplified Components for Demonstration Purposes
 
 .. list-table::
    :header-rows: 1
-   :widths: 10 10 20 10
+   :widths: 10 10 20
 
    * - Collection
      - Description
      - Structure
-     - Simplification
 
    * - ``tokens``
      - Stores Bearer tokens used for authenticating and authorizing API
        requests between Leafy Bank and external banks.
- 
      - .. code-block:: javascript
 
           {
@@ -114,110 +112,88 @@ Simplified Components for Demonstration Purposes
               },
            }
 
-     - In a real-world scenario, token management would involve more
-       complex mechanisms, including token expiration, refresh tokens,
-       and secure storage practices.
+   * - ``external_accounts``
+     - Stores information about external bank accounts linked by users.
+     - .. code-block:: javascript
+          
+          {
+             "_id": { "$oid": "unique_id" }, 
+             "AccountId": "string", 
+             "AccountBank": "string",
+             "AccountStatus": "string", 
+             "AccountType": "string", 
+             "AccountBalance": "number",
+             "AccountCurrency": "string", 
+             "AccountDate": {
+                 "OpeningDate": { "$date": "ISODate" }
+             }, 
+             "AccountUser": {
+                 "UserName": "string", 
+                 "UserId": { "$oid": "unique_id" }
+             },
+             "GreenAccountNarrative": "string"
+          }
+
+   * - ``external_products``
+     - Stores information about financial products (such as loans and
+       mortgages) associated with users.
+     - .. code-block:: javascript
+
+          {
+             "_id": { "$oid": "unique_id" }, 
+             "ProductId": "string", 
+             "ProductBank": "string",
+             "ProductStatus": "string", 
+             "ProductType": "string", 
+             "ProductAmount": "number",
+             "ProductCurrency": "string", 
+             "ProductInterestRate": "number", 
+             "ProductDate": {
+                 "OpeningDate": { "$date": "ISODate" }
+             }, 
+             "ProductCustomer": {
+                 "UserName": "string", 
+                 "UserId": { "$oid": "unique_id" }
+             }, 
+             "GreenProductNarrative": "string", 
+             "RepaymentPeriod": "number", 
+             "LoanCollateral": "string"
+          }
 
 
-- **External accounts collection:** 
+In a real-world scenario, these collections would involve more complex
+security mechanisms and detailed information. Additionally, each
+financial entity would have its own data model definitions, which could
+vary significantly. You would need to consider the following factors:
 
-  - **Purpose**: Stores information about external bank accounts linked by users. 
-  
-  - **Structure**:
-  
-    .. code-block:: json
-        
-        {
-        "_id": { "$oid": "unique_id" }, 
-        "AccountId": "string", 
-        "AccountBank": "string",
-        "AccountStatus": "string", 
-        "AccountType": "string", 
-        "AccountBalance": "number",
-        "AccountCurrency": "string", 
-        "AccountDate": {
-            "OpeningDate": { "$date": "ISODate" }
-        }, 
-        "AccountUser": {
-            "UserName": "string", 
-            "UserId": { "$oid": "unique_id" }
-        }, "GreenAccountNarrative": "string"
-        }
-  
-  - **Simplification**: Real-world account data would include more detailed information
-    such as transaction history, account limits, and additional metadata for compliance
-    and auditing.
+Data mapping and relationships
+  Implementing a robust data mapping and relationship layer to translate
+  diverse data models from different financial entities into a unified
+  format.
 
-- **External products collection:** 
-
-  - **Purpose**: Stores information about financial products (e.g., loans and mortgages)
-    associated with users. 
-
-  - **Structure**:
-    
-    .. code-block:: json
-        
-        {
-        "_id": { "$oid": "unique_id" }, 
-        "ProductId": "string", 
-        "ProductBank": "string",
-        "ProductStatus": "string", 
-        "ProductType": "string", 
-        "ProductAmount": "number",
-        "ProductCurrency": "string", 
-        "ProductInterestRate": "number", 
-        "ProductDate": {
-            "OpeningDate": { "$date": "ISODate" }
-        }, 
-        "ProductCustomer": {
-            "UserName": "string", 
-            "UserId": { "$oid": "unique_id" }
-        }, 
-        "GreenProductNarrative": "string", 
-        "RepaymentPeriod": "number", 
-        "LoanCollateral": "string"
-        }
-
-  - **Simplification**: In a real-world scenario, product data would be more
-    comprehensive, including detailed terms and conditions, repayment schedules, and
-    collateral details.
-  - **Real-world scenario considerations**
-
-In a real-world implementation, each financial entity would have its own data model
-definitions, which could vary significantly. The following considerations would be
-essential:
-
-- **Data mapping and relationships**: 
-  
-  Implementing a robust data mapping and
-  relationship layer to translate diverse data models from different financial entities
-  into a unified format.
-
-- **Security and compliance**: 
-  
-  Ensuring data security and compliance with regulations
-  such as GDPR, PSD2, and other local financial regulations. This includes encryption,
+Security and compliance
+  Ensuring data security and compliance with regulations such as GDPR,
+  PSD2, and other local financial regulations. This includes encryption,
   access controls, and audit trails.
 
-- **Scalability and performance**: 
-  
-  Designing the data model to handle large volumes of
-  data efficiently, with considerations for indexing, sharding, and performance
+Scalability and performance 
+  Designing the data model to handle large volumes of data efficiently,
+  with considerations for indexing, sharding, and performance
   optimization.
 
-- **Integration and interoperability**: 
-  
-  Building APIs and microservices that can
-  seamlessly integrate with various external systems, ensuring interoperability and
-  real-time data exchange.
+Integration and interoperability
+  Building APIs and microservices that can integrate with various
+  external systems, ensuring interoperability and real-time data
+  exchange.
 
-By using MongoDB's flexible document model, the demo solution effectively showcases how
-financial institutions can unify and manage diverse data sources. However, a
-production-grade implementation would require addressing the complexities and nuances of
-real-world financial data integration.
+By using MongoDB's flexible document model, the demo solution showcases
+how financial institutions can unify and manage diverse data sources.
+However, a production-grade implementation would require addressing the
+complexities and nuances of real-world financial data integration.
 
-Building the Solution
----------------------
+Build the Solution
+------------------
+
 For detailed setup instructions you can follow the steps outlined in our `public GitHub
 repository
 <https://github.com/mongodb-industry-solutions/leafy-bank-backend-openfinance>`__. This
