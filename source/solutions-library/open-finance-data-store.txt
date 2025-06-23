@@ -194,69 +194,72 @@ complexities and nuances of real-world financial data integration.
 Build the Solution
 ------------------
 
-For detailed setup instructions you can follow the steps outlined in our `public GitHub
-repository
-<https://github.com/mongodb-industry-solutions/leafy-bank-backend-openfinance>`__. This
-repository hosts the backend for Leafy Bank's open finance demo service. It demonstrates
-integration with third-party banks and showcases secure data exchange. MongoDB serves as
-the central data store. This code may include simplified or emulated components for
+For detailed setup instructions, follow the steps outlined in the
+Industry Solutions `public GitHub repository
+<https://github.com/mongodb-industry-solutions/leafy-bank-backend-openfinance>`__.
+This repository hosts the backend for Leafy Bank's open finance demo
+service. It demonstrates integration with third-party banks and
+showcases secure data exchange. MongoDB serves as the central data
+store. The code may include simplified or emulated components for
 demonstration purposes.
 
-How to build the solution step-by-step:
+To build the solution step-by-step, follow these instructions:
 
 .. procedure::
    :style: normal
 
    .. step:: Set up MongoDB database and collections
 
-      Create a new database in |service-fullname| named **open_finance**, then add three collections:
-      **tokens**, **external_accounts**, and **external_products**. Import the provided sample
-      data.
+      Create a new database in |service-fullname| named
+      ``open_finance``. Then add three collections:
+      - ``tokens``
+      - ``external_accounts``
+      - ``external_products``
 
-   .. step:: Add MongoDB user
+   .. step:: Import the provided sample data
+ 
+   .. step:: Create a MongoDB user
 
-      Create a new user with **readWrite** access to the **open_finance** database to manage
-      data securely.
+      Create a new user with ``readWrite`` access to the
+      ``open_finance`` database to manage data securely.
 
    .. step:: Configure environment variables
 
-      Add the necessary database credentials and API origins to a **.env** file for seamless
-      connectivity.
+      Add the necessary database credentials and API origins to a ``.env`` file.
 
-   .. step:: Run it locally
+   .. step:: Run the solution locally
 
-      Set up a virtual environment using Poetry, install
-      dependencies, and start the backend with uvicorn. Ensure the service runs on the correct
-      port for API communication.
+      Set up a virtual environment using Poetry, install dependencies,
+      and start the backend with Uvicorn. Ensure the service runs on the
+      correct port for API communication.
 
-Frontend for This Solution
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Solution Frontend
+~~~~~~~~~~~~~~~~~
 
-The frontend for this solution is available in the `Leafy Bank UI repository
-<https://github.com/mongodb-industry-solutions/leafy-bank-ui>`__. The different components
-of Leafy Bank are designed as microservices, with the UI repository serving as the main
-hub, providing an overview of all integrated services.
+The frontend for this solution is available in the `Leafy Bank UI
+repository
+<https://github.com/mongodb-industry-solutions/leafy-bank-ui>`__. The
+different components of Leafy Bank are designed as microservices. The UI
+repository serves as the main hub and provides an overview of all
+integrated services.
 
 Key Learnings
 -------------
-- MongoDB can serve as the backbone of an open finance ecosystem by acting as a flexible
+
+- MongoDB can support an open finance ecosystem by acting as a flexible
   and efficient central `data store
   <https://www.mongodb.com/resources/basics/data-stores>`__.
+
 - With built-in encryption, access controls, and high availability, MongoDB ensures secure
   data management while meeting evolving regulatory requirements.
 
-Technologies and Products Used
-------------------------------
-
-MongoDB Developer Data Platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__
-- `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__
-
 Authors
 -------
+
 - Luis Pazmino Diaz, MongoDB
 - Ainhoa Mugica, MongoDB
 - Julian Boronat, MongoDB
 - Andrea Alaman Calderon, MongoDB
+
+Learn More
+----------
