@@ -29,7 +29,7 @@ performance in {+service+}:
 
    .. card::
       :headline: Latency Reduction
-      :url: https://mongodb.com/docs/atlas/architecture/latency-reduction/
+      :url: https://mongodb.com/docs/atlas/architecture/latency-strategies/
       :icon: general_features_realtime
       :icon-alt: real time icon
 
@@ -39,4 +39,3 @@ performance in {+service+}:
    :titlesonly:
 
    Scalability </scalability>
-   Latency Reduction </latency-reduction>
