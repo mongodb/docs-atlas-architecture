@@ -19,12 +19,11 @@ Authorization and Authentication Examples
    :depth: 2
    :class: onecol
 
-The following examples show how to configure {+service+} Authentication and Authorization.
-
-.. include:: /includes/complete-examples.rst 
 
 The following examples configure authentication and custom roles using
 |service| :ref:`tools for automation <arch-center-automation>`.
+
+.. include:: /includes/complete-examples.rst 
 
 .. tabs::
 
