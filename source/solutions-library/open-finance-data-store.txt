@@ -212,6 +212,7 @@ To build the solution step-by-step, follow these instructions:
 
       Create a new database in |service-fullname| named
       ``open_finance``. Then add three collections:
+
       - ``tokens``
       - ``external_accounts``
       - ``external_products``
