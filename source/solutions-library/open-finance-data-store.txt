@@ -86,8 +86,8 @@ MongoDB's flexible document model to handle diverse data structures from
 different financial entities. Here's a detailed description of the data
 model approach:
 
-Simplified Components for Demonstration Purposes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Components
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
