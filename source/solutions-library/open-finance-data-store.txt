@@ -91,7 +91,7 @@ Simplified Components for Demonstration Purposes
 
 .. list-table::
    :header-rows: 1
-   :widths: 5 10 20
+   :widths: 8 10 20
 
    * - Collection
      - Description
