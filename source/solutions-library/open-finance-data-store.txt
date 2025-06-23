@@ -1,6 +1,6 @@
-======================================
-MongoDB as the Open Finance Data Store
-======================================
+=======================
+Open Finance Data Store
+=======================
 
 .. meta:: 
    :keywords: Open Finance, Financial Services, Atlas, Data Integration, Real-Time Analytics, Aggregation Pipeline, Secure Data Management, PSD2 Compliance, Personalized Financial Insights
