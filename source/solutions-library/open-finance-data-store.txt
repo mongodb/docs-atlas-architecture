@@ -22,8 +22,8 @@ security, and scalable financial services.
 - **Products and tools:** `Aggregation pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__, 
   `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__
 
-About this Task
----------------
+Solution Overview
+-----------------
 
 Open finance is transforming the financial industry, enabling seamless
 data sharing across banks, fintech companies, and third-party providers.
@@ -47,26 +47,28 @@ without the complexity of traditional relational databases.
   Figure 1. Open finance application with MongoDB
 
 Reference Architectures
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
-At the center of this architecture is our fictional demo bank, Leafy
-Bank, which allows users to connect external bank accounts securely.
+This example focuses on a fictional demo bank, Leafy Bank, which allows
+users to connect external bank accounts securely.
 
-First, the user initiates a request to connect their external bank accounts. This requires
-explicit user consent, ensuring security and compliance with regulations like PSD2. To
-authenticate, Leafy Bank emulates {+oauth2+}, generating Bearer tokens for secure
-communication between institutions.
+First, the user initiates a request to connect their external bank
+accounts. This requires explicit user consent, ensuring security and
+compliance with regulations like PSD2. To authenticate, Leafy Bank
+emulates {+oauth2+}, generating Bearer tokens for secure communication
+between institutions.
 
-Once authorized, Leafy Bank communicates with external banks—like Green Bank or MongoDB
-Bank—via APIs. These banks expose financial data such as accounts, transactions, and
-balances through their microservices. The response is returned in |json| format, ensuring
-compatibility and seamless data exchange.
+Once authorized, Leafy Bank communicates with external banks through
+APIs. These banks expose financial data such as accounts, transactions,
+and balances through their microservices. The response is returned in
+|json| format, ensuring compatibility and seamless data exchange.
 
-The retrieved financial data is then pushed into |service-fullname|, where it is centrally
-stored. MongoDB’s flexible document model makes it easy to handle diverse data structures
-from different banks. From here, Leafy Bank can leverage MongoDB Aggregation Pipelines to
-analyze and enrich the data, giving users a holistic financial view while enabling the
-bank to offer personalized financial insights.
+The financial data is then pushed into |service-fullname|, where it is
+centrally stored. MongoDB's flexible document model lets you handle
+diverse data structures from different banks. From here, Leafy Bank can
+use aggregation pipelines to analyze and enrich the data, giving users a
+holistic financial view while enabling the bank to offer personalized
+financial insights.
 
 .. figure:: /includes/images/industry-solutions/open-finance-architecture.svg
    :width: 750px
@@ -78,37 +80,42 @@ bank to offer personalized financial insights.
 Data Model Approach
 -------------------
 
-In the demo solution for open finance using MongoDB as the central data store, the data
-model is a simplified design that emulates real-world financial data integration. The
-approach leverages MongoDB's flexible document model to handle diverse data structures
-from different financial entities. Here’s a detailed description of the data model
-approach:
+In the demo solution, the data model is a simplified design that
+emulates real-world financial data integration. The approach leverages
+MongoDB's flexible document model to handle diverse data structures from
+different financial entities. Here's a detailed description of the data
+model approach:
 
 Simplified Components for Demonstration Purposes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Tokens collection:** 
-  
-  - **Purpose**: Stores Bearer tokens used for authenticating and authorizing API requests
-    between Leafy Bank and external banks. 
-  
-  - **Structure**:
-  
-    .. code-block:: json
-        
-        {
-        "_id": { "$oid": "unique_id" }, 
-        "UserName": "string", 
-        "BearerToken": "string",
-        "TokenDates": {
-            "CreationDate": { "$date": "ISODate" }, 
-            "LastUseDate": { "$date": "ISODate" }
-          },
-        }
-    
-  - **Simplification**: In a real-world scenario, token management would involve more
-    complex mechanisms, including token expiration, refresh tokens, and secure storage
-    practices.
+.. list-table::
+   :header-rows: 1
+   :widths: 10 10 20 20
+
+   * - Collection
+     - Description
+     - Structure
+					- Simplification
+
+   * - ``tokens``
+     - Stores Bearer tokens used for authenticating and authorizing API
+       requests between Leafy Bank and external banks. 
+     - .. code-block:: javascript
+
+          {
+													"_id": { "$oid": "unique_id" }, 
+													"UserName": "string", 
+													"BearerToken": "string",
+													"TokenDates": {
+																	"CreationDate": { "$date": "ISODate" }, 
+																	"LastUseDate": { "$date": "ISODate" }
+															},
+											}
+
+     - In a real-world scenario, token management would involve more
+       complex mechanisms, including token expiration, refresh tokens,
+       and secure storage practices.
 
 - **External accounts collection:** 
 
