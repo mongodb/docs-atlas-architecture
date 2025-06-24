@@ -145,7 +145,7 @@ index. Make sure you follow this structure:
       ]
    }
 
-Ultimately you have to run both the front and the back end. You’ll
+Ultimately, you have to run both the front and the back end. You’ll
 access a web UI that allows you to ask questions to the LLM, obtain an
 answer, and see the reference documents used as context.
 
