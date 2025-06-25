@@ -83,8 +83,7 @@ Data Model Approach
 In the demo solution, the data model is a simplified design that
 emulates real-world financial data integration. The approach leverages
 MongoDB's flexible document model to handle diverse data structures from
-different financial entities. Here's a detailed description of the data
-model approach:
+different financial entities.
 
 Components
 ~~~~~~~~~~
