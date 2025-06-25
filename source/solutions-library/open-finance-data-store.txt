@@ -249,7 +249,7 @@ Key Learnings
 - **Central data store**: MongoDB acts as a flexible
   and efficient central `data store
   <https://www.mongodb.com/resources/basics/data-stores>`__ that
-  supports open finance ecosystems..
+  supports open finance ecosystems.
 
 - **Secure data management**: MongoDB provides secure data management
   with built-in encryption, granular access controls, and high
