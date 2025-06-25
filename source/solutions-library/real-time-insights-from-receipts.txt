@@ -153,8 +153,8 @@ privacy. Including full lifecycle `data encryption
 to store data in your chosen region, supporting compliance and
 performance across regions.
 
-Unlocking Real-time Insights from Receipt Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unlock Real-time Insights from Receipt Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We created a proof of concept using MongoDB Atlas as the central data
 store, demonstrating how retailers can turn receipt data into real-time
@@ -183,62 +183,70 @@ homepage, enhancing their personalized post-shopping experience.
 Reference Architectures
 -----------------------
 
-With MongoDB
-~~~~~~~~~~~~
+Build a Foundation for Real-time Personalization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-At the core of this architecture we have three key components: 
+Personalized customer experiences start with connected, accessible, and
+actionable data in real-time. A `unified view of operational data
+<https://www.mongodb.com/resources/basics/implementing-an-operational-data-layer>`__
+is key to unlock the full potential of modern technologies.
 
-- `MongoDB Atlas
-  <https://www.mongodb.com/products/platform/atlas-database>`__: A
-  powerful, general-purpose data platform that
-  seamlessly manages our data in the cloud. MongoDB's flexible document
-  model allows products to scale easily by adding more descriptions
-  (i.e. for translations in multiple languages) without introducing
-  complexity. 
+This demo uses MongoDB's `flexible document model
+<https://www.mongodb.com/resources/basics/flexible-data-model>`__ and
+real-time integration capabilities to show how you can store, update,
+and activate operational data to deliver intelligent, responsive
+customer journeys.
 
-- **The object storage:** An effective system for efficient product image
-  file storage and retrieval. This can be built with Google Cloud
-  storage, Azure Blob Storage or AWS S3. 
+The diagram below shows a high-level view of the solution: 
 
-- `Together AI <https://www.together.ai/>`__: Offers a variety of
-  generative AI services, making it easy to run or fine-tune leading
-  open source models with only a few lines of code. This solution uses
-  their available `vision LLMs <https://www.together.ai/models>`__ to
-  generate the product descriptions.
+- E-commerce and in-store transactions flow into the MongoDB invoices
+  collection, creating a complete and unified purchase history for each
+  customer.
 
-.. figure:: /includes/images/industry-solutions/product-description-architecture.svg
+- Operational data is stored using the MongoDB document model as a
+  single source of truth. 
+
+- Microservices and external systems integrate seamlessly with
+  capabilities of MongoDB to deliver real-time, AI-powered
+  recommendations, triggered directly by invoice data.
+
+.. figure:: /includes/images/industry-solutions/digital-receipts-fig2.svg
    :figwidth: 1200px
-   :alt: Product description architecture diagram
+   :alt: Core solution components
    
-   Figure 1. Product description generative AI architecture
+   Figure 3. This diagram illustrates the core components of the demo solution
 
-The journey starts on the left side of the diagram with the *User/Event*
-label. A laptop icon represents the “Product Description Generator”
-system. First, a new product is received, this can be added manually by
-a user or in bulk through an automated event. 
+In this section, you will explore how MongoDB integrates seamlessly with
+surrounding systems to leverage invoice data and power personalized,
+real-time customer experiences.
 
-Then, retailers generate the descriptions by sending a *query* to Together
-AI’s endpoint, utilizing their vision models, combining computer vision
-and natural language processing (NLP) to process and understand images
-alongside text. The request includes the image URL, the desired
-description length, the vision model utilized, and the languages for the
-description. 
+To build this solution, you deploy two backend `microservices
+<https://www.mongodb.com/resources/solutions/use-cases/what-are-microservices>`__
+- invoice and recommendation - on `Azure App Services
+<https://learn.microsoft.com/en-us/azure/app-service/>`__, and use
+`Azure Functions
+<https://learn.microsoft.com/en-us/azure/azure-functions/>`__ to
+simulate external integrations such as tax logic or loyalty programs.
+Rendered receipts are stored as PDFs in `Azure Blob Storage
+<https://learn.microsoft.com/en-us/azure/storage/blobs/>`__, tightly
+linked to their structured metadata in MongoDB.
 
-Then, Together AI takes this data and uses one of its Llama3 vision
-models to scan the image and generate a description that matches the
-specified requirements, and returns the *product description* to the
-application.
+Model Invoices and Catalog Data for an AI-powered Use Case
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finally, the product along with its description will be upserted inside
-the catalog on MongoDB, ensuring real-time availability across all
-connected systems.
+The document model allows us to store all invoice-related data in a
+single collection, from tax details to a list of personalized product
+recommendations based on a specific purchase. This flexibility ensures
+that the schema can evolve alongside the business, enabling seamless
+updates without friction or downtime.
 
-To illustrate the scalability of this architecture, consider the diagram
-below. By integrating `MongoDB Change Streams
-<https://www.mongodb.com/docs/manual/changeStreams/>`__, it allows
-real-time updates on any application listening to the catalog. For
-example, the e-commerce portal, a social media platform, and any other
-touchpoints.
+To enable personalization, we are unlocking the strength of MongoDB in
+storing semi-structured data. Our product catalog collection not only
+includes core product information - such as price, description, and
+categories; but also captures the semantic meaning of each item, powered
+by AI embedding models. Using Voyage AI’s voyage-3-large text embedding
+model, we enrich product data with vector embeddings, enabling vector
+search for smarter, AI-driven retrieval across the catalog.
 
 .. figure:: /includes/images/industry-solutions/product-description-architecture-extended.svg
    :figwidth: 1200px
@@ -298,42 +306,29 @@ configuration files, and tutorial videos, visit the `GitHub repository
 Key Learnings
 -------------
 
-- **High-quality product descriptions drive business success:** A
-  well-crafted product description enhances user engagement, improves
-  SEO rankings with increased views, and helps customers make more
-  informed purchase decisions. 
+Lets recap some of the key takeaways from the solution:
 
-- **Leverage MongoDB and Together AI to automate product descriptions:**
-  By combining MongoDB’s flexible and scalable database with Together
-  AI’s available vision models, retailers are able to automate real-time
-  product description generation that aligns with their business needs. 
+- **AI-Powered personalization is crucial to stay competitive and on
+  top of the game:** It can boost customer engagement and strengthen
+  loyalty. 
 
-- **Modern architectures speed up time to market:** Streamlining the 
-  product onboarding process with AI and automation reduces manual
-  effort and speeds up approvals. Using a generative AI for product
-  descriptions maintains consistent UX and tone, enabling quick
-  scalability for expanding product catalogs with little extra effort.
+- **Digital receipts offer more value than just a transactional
+  record:** Their insight can be used to personalize a 360 shoppers
+  journey. They’re basically a marketing goldmine waiting to be
+  discovered.
 
-Together, these capabilities form a robust generative AI system that
-scales with your business needs while ensuring efficiency and
-reliability.
+- **MongoDB is built for modern use cases:** It offers flexibility at
+  scale, built-in security, and removes friction for seamless integration
+  with real-time architectures and AI features.
 
-Technologies and Products Used
-------------------------------
-
-MongoDB Developer Data Platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- `Atlas Database <https://www.mongodb.com/atlas/database>`__
-
-Partner Technologies
-~~~~~~~~~~~~~~~~~~~~
-
--  `Next.js <https://nextjs.org/>`__
--  `Together AI <https://www.together.ai/>`__
+Ready to turn your receipt data into personalized customer moments?
+Start building with `MongoDB today
+<https://www.mongodb.com/cloud/atlas/register>`__ or join the `MongoDB
+Developer Community <https://www.mongodb.com/community/forums/>`__ to
+connect with other tech lovers.
 
 Authors
 -------
 
+- Florencia Arin, MongoDB
 - Angie Guemes, MongoDB
-- Prashant Juttukonda, MongoDB
