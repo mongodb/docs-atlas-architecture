@@ -19,7 +19,7 @@ security, and scalable financial services.
 
 - **Industries:** `Financial Services <https://www.mongodb.com/industries/financial-services>`__
 
-- **Products and tools:** `Aggregation pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__, 
+- **Products and tools:** `Aggregation Pipeline <https://www.mongodb.com/docs/manual/core/aggregation-pipeline/>`__, 
   `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__
 
 Solution Overview
@@ -247,12 +247,15 @@ integrated services.
 Key Learnings
 -------------
 
-- MongoDB can support an open finance ecosystem by acting as a flexible
+- **Central data store**: MongoDB acts as a flexible
   and efficient central `data store
-  <https://www.mongodb.com/resources/basics/data-stores>`__.
+  <https://www.mongodb.com/resources/basics/data-stores>`__ that
+  supports open finance ecosystems..
 
-- With built-in encryption, access controls, and high availability, MongoDB ensures secure
-  data management while meeting evolving regulatory requirements.
+- **Secure data management**: MongoDB provides secure data management
+  with built-in encryption, granular access controls, and high
+  availability, helping organizations protect sensitive information and
+  comply with evolving regulatory requirements.
 
 Authors
 -------
@@ -264,3 +267,9 @@ Authors
 
 Learn More
 ----------
+
+- :ref:`arch-center-is-card-fraud-solution`
+
+- :ref:`arch-center-is-payments-solution`
+
+- :ref:`arch-center-hasura-fintech-services`
