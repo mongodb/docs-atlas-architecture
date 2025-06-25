@@ -29,7 +29,7 @@ powered by MongoDB.
 
 **Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, 
 `MongoDB Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__,
-`MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`
+`MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>__`
 `MongoDB Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__,
 `Voyage AI <https://www.voyageai.com/>`__ 
 
@@ -38,24 +38,24 @@ powered by MongoDB.
 Solution Overview
 -----------------
 
-We’re in a digital era where manual, paper-based processes are rapidly
-being replaced by automation and personalization. One example is the
-shift toward digital receipts, which are becoming the industry standard
-and are opening new opportunities for tailored customer experiences.
-
-Retailers that embrace this transformation gain a competitive advantage
-by unlocking the value of their data. Digital receipts provide rich,
-actionable insights that can be used to power personalized product
-recommendations. Data is power, and businesses that can effectively
-store, access, and activate their data are better positioned to
-differentiate themselves from the competition. 
-
-This document explores how retailers can leverage MongoDB to store and
-manage digital receipt data to deliver personalized product
-recommendations and enhance the post shopping experience. You'll learn
-about common challenges in managing receipt data and how MongoDB
-simplifies access and activation for real-time, customer-centric
+We live in a digital era where paper-based processes are rapidly being
+replaced by automation and personalization. One key example is the move
+toward digital receipts, which are becoming the industry standard and
+are opening new opportunities for delivering tailored customer
 experiences.
+
+Retailers who embrace this transformation gain a competitive advantage
+by unlocking the value of their data. Digital receipts provide rich,
+actionable insights that can drive personalized product recommendations.
+Data is power, and businesses that can effectively store, access, and
+activate their data are better positioned to differentiate themselves
+from the competition. 
+
+This document explores how retailers can use MongoDB to store and manage
+digital receipt data to deliver personalized product recommendations and
+enhance the post shopping experience. You'll discover the common
+challenges of managing receipt data and how MongoDB simplifies access
+and activation for real-time, customer-centric experiences.
 
 .. video:: https://youtu.be/42M-ftLc-F8?si=vnu4yjT_41q5i_KO 
 
@@ -206,9 +206,9 @@ The diagram below shows a high-level view of the solution:
 - Operational data is stored using the MongoDB document model as a
   single source of truth. 
 
-- Microservices and external systems integrate seamlessly with
-  capabilities of MongoDB to deliver real-time, AI-powered
-  recommendations, triggered directly by invoice data.
+- Microservices and external systems seamlessly integrate with
+  MongoDB capabilities to deliver real-time and AI-powered
+  recommendations, triggered by invoice data.
 
 .. figure:: /includes/images/industry-solutions/digital-receipts-fig2.svg
    :figwidth: 1200px
@@ -234,25 +234,87 @@ linked to their structured metadata in MongoDB.
 Model Invoices and Catalog Data for an AI-powered Use Case
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The document model allows us to store all invoice-related data in a
+The document model allows you to store all invoice-related data in a
 single collection, from tax details to a list of personalized product
 recommendations based on a specific purchase. This flexibility ensures
 that the schema can evolve alongside the business, enabling seamless
 updates without friction or downtime.
 
-To enable personalization, we are unlocking the strength of MongoDB in
-storing semi-structured data. Our product catalog collection not only
-includes core product information - such as price, description, and
-categories; but also captures the semantic meaning of each item, powered
-by AI embedding models. Using Voyage AI’s voyage-3-large text embedding
-model, we enrich product data with vector embeddings, enabling vector
-search for smarter, AI-driven retrieval across the catalog.
+To enable personalization, you can unlock the strength of MongoDB to
+store `semi-structured data
+<https://www.mongodb.com/resources/basics/big-data-explained>`__. The
+product catalog collection not only includes core product information -
+such as price, description, and categories; but also captures the
+semantic meaning of each item, powered by `AI embedding models
+<https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-overview/?utm_source=chatgpt.com#std-term-embedding-model>`__.
+Using `Voyage AI
+<https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai>`_
+voyage-3-large text embedding model, you can enrich product data with
+`vector embeddings
+<https://www.mongodb.com/resources/basics/vector-embeddings>`__,
+enabling vector search for smarter, AI-driven retrieval across the
+catalog.
 
-.. figure:: /includes/images/industry-solutions/product-description-architecture-extended.svg
+.. figure:: /includes/images/industry-solutions/digital-receipts-fig3.svg
    :figwidth: 1200px
-   :alt: Product description architecture diagram with real-time integration
+   :alt: Combination of traditional product details with vector embeddings from Voyage AI
    
-   Figure 2. Product description generative AI architecture with real-time applications
+   Figure 4. MongoDB combines traditional product details with vector
+   embeddings from Voyage AI, enabling semantic search and AI features
+   directly in the product catalog.
+
+In this use case, you can easily implement product recommendations by
+using `Vector Search
+<https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-overview/?tck=docs_server_toc>`__
+to identify products similar to those previously purchased by the
+customer. This functionality is powered by a dedicated recommendation
+microservice - the software component responsible for generating
+personalized suggestions. It can also use an AI model trained on
+historical purchase data to enhance recommendations.
+
+Orchestrate Real-time Data Flows with an Event-driven Design
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Real-time customer experiences rely on systems that respond instantly to
+events. `Event-driven architecture
+<https://www.mongodb.com/resources/solutions/use-cases/building-event-driven-applications-with-mongodb>`__
+makes this possible by enabling services to communicate through events,
+which signal that something important has happened.
+
+This pattern is widely adopted in modern retail systems because it
+allows services to stay decoupled, scalable, and highly responsive.
+
+In this demo, you can apply `Change Streams
+<https://www.youtube.com/watch?v=20YkaD5K_C8>`__ and `Atlas Triggers
+<https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__ to detect
+database changes and coordinate microservices through a `choreography
+pattern <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__. This
+is shown in the two microservices highlighted in the diagram below.
+
+.. figure:: /includes/images/industry-solutions/digital-receipts-fig4.svg
+   :figwidth: 1200px
+   :alt: Event-driven choreography
+   
+   Figure 5. Event-driven choreography enables real-time recommendations
+   based on a customer's most recent purchase, improving their overall
+   experience
+
+**Invoice microservice:**  When a customer places an order (step 1), the
+invoice microservice listens to the orders collection via Change
+Streams. It automatically detects it and creates the invoice document
+(step 2) inserting it into MongoDB Atlas. Then, the transaction data can
+continue its flow to external providers like :abbr:`ERP (Enterprise
+Resource Planning)` platforms (step 3).
+
+**Recommendation microservice:** As soon as a new invoice is added to
+the collection, the recommendation microservice reacts and creates
+AI-powered product suggestions based on the purchase (step 4). These
+recommendations are embedded in the invoice and the user profile
+documents using Atlas Triggers (step 5). This update personalizes the
+invoice and enriches the user profile with the latest embedded
+recommendations. The frontend can then quickly retrieve this data with a
+lightweight query and display it on the homepage (step 6), keeping the
+systems up to date and the user experience fast and responsive.
 
 Build the Solution
 ------------------
@@ -262,7 +324,7 @@ invoice data and deliver real-time personalization with a clean,
 event-driven architecture powered by MongoDB Atlas.
 
 The `backend repository
-<https://github.com/mongodb-industry-solutions/retail-digital-receipts-backend/tree/main.`__
+<https://github.com/mongodb-industry-solutions/retail-digital-receipts-backend/tree/main>`__
 implements two microservices: one for invoice generation and one for
 recommendations, along with supporting components such as Atlas
 Triggers, Azure Functions, and Azure Blob Storage. These services
