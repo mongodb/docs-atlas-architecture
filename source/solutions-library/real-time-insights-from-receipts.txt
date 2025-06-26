@@ -408,8 +408,7 @@ UI to simulate purchases and see the demo in action.
            folder containing sample Azure Functions and Atlas Triggers
            used in the demo, each with its own corresponding README.
 
-Note:  Make sure to deploy the frontend and order system from the `Leafy
-Pop-Up Store
+Note:  Deploy the frontend and order system from the `Leafy Pop-Up Store
 <https://github.com/mongodb-industry-solutions/retail-store-v2/tree/main/resources/digitalReceipts>`__
 demo before using this solution.
 
