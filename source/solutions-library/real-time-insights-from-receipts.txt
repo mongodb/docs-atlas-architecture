@@ -39,10 +39,9 @@ Solution Overview
 -----------------
 
 We live in a digital era where paper-based processes are rapidly being
-replaced by automation and personalization. One key example is the move
-toward digital receipts, which are becoming the industry standard and
-are opening new opportunities for delivering tailored customer
-experiences.
+replaced by automation and personalization. One key example is the shift
+toward digital receipts. These elements are becoming the industry
+standard and are delivering tailored customer experiences.
 
 Retailers who embrace this transformation gain a competitive advantage
 by unlocking the value of their data. Digital receipts provide rich,
@@ -63,15 +62,14 @@ Transform Transaction Data into Actionable Value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When a customer shops in a physical store, offering a digital receipt
-becomes a strategic touchpoint. Retailers can use these receipts to
-feature tailored suggestions and as a link to online shopping.
+becomes a strategic touchpoint. Retailers can use these items to
+provide tailored suggestions and as a link to online shopping.
 
-And when moving to the online experience, whether through a mobile app
-or login through a browser, customers receive personalized product
-recommendations based on their complete purchase history. This ensures
-customers keep their loyalty benefits across all channels, while
-enjoying a personalized experience powered by a unified 360° customer
-journey.
+When moving to the online experience, whether through a mobile app or a
+browser, customers receive personalized product recommendations based on
+their complete purchase history. Customers also keep their loyalty
+benefits across all channels, enjoying a personalized experience powered
+by a unified 360° customer journey.
 
 .. figure:: /includes/images/industry-solutions/digital-receipts-fig1.svg
    :figwidth: 1200px
@@ -98,8 +96,8 @@ advantages, including:
 Data Management Challenges and How MongoDB Can Solve Them
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Managing receipt data can be difficult. Let’s explore the key obstacles
-and how MongoDB can help overcome them. 
+Managing receipt data can be difficult. In this section, let’s explore
+which are the key obstacles and how MongoDB can help overcome them. 
 
 Siloed Data and No Single Source of Truth
 `````````````````````````````````````````
@@ -122,9 +120,10 @@ In :abbr:`RDBMS (Relational Database Management Systems)`, architects
 must spread the data in multiple tables to handle that complexity.
 Instead, MongoDB uses its `flexible document model
 <https://www.mongodb.com/resources/basics/flexible-data-model>`__ to
-adapt to the data, not the other way around. This capability enables
-faster development and easy schema changes, such as adding fields for
-personalized recommendations, at any time with no downtime.
+adapt to the data requirements, not the other way around. This
+capability enables faster development and easy schema changes, such as
+adding fields for personalized recommendations, at any time with no
+downtime.
 
 Rapid Data Scaling
 ``````````````````
@@ -156,22 +155,17 @@ performance across regions.
 Unlock Real-time Insights from Receipt Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We created a proof of concept using MongoDB Atlas as the central data
-store, demonstrating how retailers can turn receipt data into real-time
-value by storing and activating operational data. In this proof of
-concept, we built a backend microservice to handle invoice creation for
-a mock e-commerce system. This service can be extended to work with data
-from physical store systems. 
+Turn receipt data into real-time value with this proof of concept using
+MongoDB Atlas as the central data store. The demo showcases a backend
+microservice for invoice creation in a mock e-commerce system, adaptable
+to physical stores.
 
-In this demo solution, you’ll learn how MongoDB creates a unified
-operational view by combining operational and AI data. This approach
-gives businesses full control over their data and keeps it accessible
-for downstream use. 
+MongoDB unifies operational and AI data, providing full control over
+your data while keeping it accessible for downstream use. 
 
-As seen in the visual below, this solution uses receipt data to generate
-real-time product recommendations for each order and includes them in
-the digital receipt. These recommendations also appear on the user’s
-homepage, enhancing their personalized post-shopping experience.
+As shown below, this solution uses receipt data to generate real-time
+product recommendations, adding them to the digital receipt and the
+user’s homepage, personalizing their post-shopping experience.
 
 .. figure:: /includes/images/industry-solutions/digital-receipts-gif1.gif
    :figwidth: 1200px
@@ -330,18 +324,24 @@ scalability, and fault tolerance.
    Figure 6. Azure cloud integrations in action
 
 In the demo, the microservice serves as a Change Stream listener that
-reacts to database events. These events are then forwarded to
-Azure Event Grid or Azure Service Bus to trigger downstream workflows or
-integrate with external systems. Alternatively, you could use an Azure
-Function as a lightweight serverless bridge to capture Change Stream
-events directly from the database and push them to the event broker.
+reacts to database events. These events are then forwarded to `Azure
+Event Grid
+<https://learn.microsoft.com/en-us/azure/event-grid/overview>`__ or
+`Azure Service Bus
+<https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview>`__
+to trigger downstream workflows, or integrate with external systems.
+Alternatively, an Azure Function can act as a serverless bridge to
+capture Change Stream events from the database and push them to the
+event broker.
 
 For high-throughput scenarios, such as real-time analytics or AI
-training, you can stream events using the Kafka Connector to Azure Event
-Hubs.
+training, you can stream events using the `Kafka Connector
+<https://www.mongodb.com/products/integrations/kafka-connector>`__ to
+`Azure Event Hubs
+<https://azure.microsoft.com/en-us/products/event-hubs>`__.
 
-By combining Azure cloud services and MongoDB, you can build powerful,
-scalable solutions tailored to modern application requirements.
+With Azure cloud services and MongoDB, you can build powerful, scalable
+solutions tailored to modern application requirements.
 
 Build the Solution
 ------------------
