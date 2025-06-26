@@ -259,12 +259,13 @@ smarter, AI-driven catalog retrieval.
    available models and find the best fit for your use case, visit the
    `Text Embeddings Documentation <https://docs.voyageai.com/docs/embeddings>`__.
 
-In this use case, you can implement product recommendations with `Vector
+Furthermore, you can implement product recommendations with `Vector
 Search
 <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-overview/?tck=docs_server_toc>`__
 to identify products similar to those previously purchased by the
-customer. A recommendation microservice generates these suggestions and
-can be enhanced with an AI model trained on past purchase data.
+customer. In this use case, a recommendation microservice generates
+suggestions for each customer. This microservice can be further improved
+by incorporating an AI model trained on previous purchase data.
 
 Orchestrate Real-time Data Flows with an Event-driven Design
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
