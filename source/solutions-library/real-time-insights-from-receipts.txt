@@ -38,10 +38,10 @@ powered by MongoDB.
 Solution Overview
 -----------------
 
-We live in a digital era where paper-based processes are rapidly being
-replaced by automation and personalization. One key example is the shift
-toward digital receipts. These elements are becoming the industry
-standard and are delivering tailored customer experiences.
+We live in an era where paper processes are quickly being replaced by
+automated, personalized solutions like digital receipts. These elements
+are becoming the industry standard and are delivering tailored customer
+experiences.
 
 Retailers who embrace this transformation gain a competitive advantage
 by unlocking the value of their data. Digital receipts provide rich,
