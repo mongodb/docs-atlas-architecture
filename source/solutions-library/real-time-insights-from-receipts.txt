@@ -136,12 +136,11 @@ Retailers generate massive volumes of receipt data every day and systems
 must keep up. For example, `Albert Heijn, the largest supermarket chain
 in the Netherlands
 <https://www.mongodb.com/solutions/customer-case-studies/albert-heijn>`__,
-uses MongoDB to run over 50 microservices, including their digital
-receipts, processing over one million transactions daily. MongoDB scales
-automatically, offers sharding and replica sets for high availability,
-and allows you to separate workloads. This means real-time AI,
-reporting, or analytics can run without disrupting your main
-application.
+uses MongoDB to process over one million daily transactions across 50
+services. MongoDB scales automatically, offers sharding and replica sets
+for high availability, and allows you to separate workloads. This means
+real-time AI, reporting, or analytics can run without disrupting your
+main application.
 
 Customer Privacy
 ````````````````
@@ -192,9 +191,8 @@ is key to unlock the full potential of modern technologies.
 This demo shows how MongoDB's `flexible document model
 <https://www.mongodb.com/resources/basics/flexible-data-model>`__ and
 real-time integration capabilities can turn operational data into
-intelligent, responsive customer journeys.
-
-The diagram below shows a high-level view of the solution: 
+intelligent, responsive customer journeys. The diagram below shows a
+high-level view of the solution: 
 
 - E-commerce and in-store transactions flow into the MongoDB invoices
   collection, creating a complete and unified purchase history for each
@@ -212,9 +210,6 @@ The diagram below shows a high-level view of the solution:
    :alt: Core solution components
    
    Figure 3. This diagram illustrates the core components of the demo solution
-
-MongoDB integrates seamlessly with surrounding systems to leverage
-invoice data and power personalized, real-time customer experiences.
 
 To build this solution, you deploy two backend `microservices
 <https://www.mongodb.com/resources/solutions/use-cases/what-are-microservices>`__
