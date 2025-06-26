@@ -184,7 +184,7 @@ Build a Foundation for Real-time Personalization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Personalized customer experiences start with connected, accessible, and
-actionable data in real-time. A `unified view of operational data
+actionable data. A `unified view of operational data
 <https://www.mongodb.com/resources/basics/implementing-an-operational-data-layer>`__
 is key to unlock the full potential of modern technologies.
 
