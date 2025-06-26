@@ -93,6 +93,12 @@ advantages, including:
 - **Reducing operational costs:** By eliminating the need to print,
   store, and manage paper receipts. 
 
+.. note:: Customer Success Story
+
+   Discover `how Albert Heijn <https://www.mongodb.com/solutions/customer-case-studies/albert-heijn>`__,
+   the largest supermarket chain in the Netherlands uses MongoDB to
+   support customer-facing applications.
+
 Data Management Challenges and How MongoDB Can Solve Them
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -255,6 +261,13 @@ catalog.
    Figure 4. MongoDB combines traditional product details with vector
    embeddings from Voyage AI, enabling semantic search and AI features
    directly in the product catalog.
+
+.. note:: Embedding Models with Voyage AI
+
+   Voyage AI offers multiple text embedding models tailored to
+   different domains, including legal, code, and finance. To explore the
+   available models and find the best fit for your use case, visit
+   `Text Embeddings documentation <https://docs.voyageai.com/docs/embeddings>`__.
 
 In this use case, you can easily implement product recommendations by
 using `Vector Search
