@@ -29,7 +29,7 @@ powered by MongoDB.
 
 **Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, 
 `MongoDB Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__,
-`MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>__`
+`MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>__`,
 `MongoDB Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__,
 `Voyage AI <https://www.voyageai.com/>`__ 
 
