@@ -65,9 +65,9 @@ suggestions and as a link to online shopping.
 
 When moving to the online experience, whether through a mobile app or a
 browser, customers receive personalized product recommendations based on
-their complete purchase history. Customers also keep their loyalty
-benefits across all channels, enjoying a personalized experience powered
-by a unified 360° customer journey.
+their complete purchase history. They also keep their loyalty benefits
+across all channels, enjoying a personalized experience powered by a
+unified 360° customer journey.
 
 .. figure:: /includes/images/industry-solutions/digital-receipts-fig1.svg
    :figwidth: 1200px
@@ -77,7 +77,7 @@ by a unified 360° customer journey.
    journeys with real-time AI-powered recommendations, enabling a 360°
    customer experience
 
-Digital receipts provide businesses access to a range of strategic
+Digital receipts provide businesses access to multiple strategic
 advantages, including:
 
 - **Enhancing customer engagement through personalized experiences:**
@@ -137,10 +137,11 @@ must keep up. For example, `Albert Heijn, the largest supermarket chain
 in the Netherlands
 <https://www.mongodb.com/solutions/customer-case-studies/albert-heijn>`__,
 uses MongoDB to run over 50 microservices, including their digital
-receipts, processing over one million transactions daily. MongoDB
-auto-scales, supports sharding and replica sets for high availability,
-and enables workload isolation for real-time AI, reporting, or analytics
-without impacting core application.
+receipts, processing over one million transactions daily. MongoDB scales
+automatically, offers sharding and replica sets for high availability,
+and allows you to separate workloads. This means real-time AI,
+reporting, or analytics can run without disrupting your main
+application.
 
 Customer Privacy
 ````````````````
