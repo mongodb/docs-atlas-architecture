@@ -277,7 +277,7 @@ indicating the user when something important has happened. This pattern
 is widely adopted in modern retail systems because it allows services to
 stay decoupled, scalable, and highly responsive.
 
-In this demo, you can apply `Change Streams
+You can apply `Change Streams
 <https://www.youtube.com/watch?v=20YkaD5K_C8>`__ and `Atlas Triggers
 <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__ to detect
 database changes and coordinate microservices through a `choreography
