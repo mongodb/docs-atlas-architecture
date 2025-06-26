@@ -216,7 +216,7 @@ The diagram below shows a high-level view of the solution:
    
    Figure 3. This diagram illustrates the core components of the demo solution
 
-In this section, you will explore how MongoDB integrates seamlessly with
+In this section, you learn how MongoDB integrates seamlessly with
 surrounding systems to leverage invoice data and power personalized,
 real-time customer experiences.
 
@@ -226,7 +226,7 @@ To build this solution, you deploy two backend `microservices
 <https://learn.microsoft.com/en-us/azure/app-service/>`__, and use
 `Azure Functions
 <https://learn.microsoft.com/en-us/azure/azure-functions/>`__ to
-simulate external integrations such as tax logic or loyalty programs.
+simulate external integrations, such as tax logic or loyalty programs.
 Rendered receipts are stored as PDFs in `Azure Blob Storage
 <https://learn.microsoft.com/en-us/azure/storage/blobs/>`__, tightly
 linked to their structured metadata in MongoDB.
@@ -234,25 +234,24 @@ linked to their structured metadata in MongoDB.
 Model Invoices and Catalog Data for an AI-powered Use Case
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The document model allows you to store all invoice-related data in a
-single collection, from tax details to a list of personalized product
+The document model stores all invoice-related data in a single
+collection, from tax details to a list of personalized product
 recommendations based on a specific purchase. This flexibility ensures
 that the schema can evolve alongside the business, enabling seamless
 updates without friction or downtime.
 
-To enable personalization, you can unlock the strength of MongoDB to
-store `semi-structured data
-<https://www.mongodb.com/resources/basics/big-data-explained>`__. The
-product catalog collection not only includes core product information -
-such as price, description, and categories; but also captures the
-semantic meaning of each item, powered by `AI embedding models
+To enable personalization, you can store `semi-structured data
+<https://www.mongodb.com/resources/basics/big-data-explained>`__ in
+MongoDB. The product catalog collection includes core product
+information, such as price, description, and categories. Along with the
+semantic meaning of each item, which is powered by `AI embedding models
 <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-overview/?utm_source=chatgpt.com#std-term-embedding-model>`__.
 Using `Voyage AI
 <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai>`_
 voyage-3-large text embedding model, you can enrich product data with
 `vector embeddings
-<https://www.mongodb.com/resources/basics/vector-embeddings>`__,
-enabling vector search for smarter, AI-driven retrieval across the
+<https://www.mongodb.com/resources/basics/vector-embeddings>`__, that
+enable vector search for smarter, AI-driven retrieval across the
 catalog.
 
 .. figure:: /includes/images/industry-solutions/digital-receipts-fig3.svg
@@ -279,7 +278,7 @@ Real-time customer experiences rely on systems that respond instantly to
 events. `Event-driven architecture
 <https://www.mongodb.com/resources/solutions/use-cases/building-event-driven-applications-with-mongodb>`__
 makes this possible by enabling services to communicate through events,
-which signal that something important has happened.
+indicating the user when something important has happened.
 
 This pattern is widely adopted in modern retail systems because it
 allows services to stay decoupled, scalable, and highly responsive.
@@ -289,7 +288,7 @@ In this demo, you can apply `Change Streams
 <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__ to detect
 database changes and coordinate microservices through a `choreography
 pattern <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__. This
-is shown in the two microservices highlighted in the diagram below.
+pattern is highlighted in the diagram below.
 
 .. figure:: /includes/images/industry-solutions/digital-receipts-fig4.svg
    :figwidth: 1200px
@@ -301,10 +300,10 @@ is shown in the two microservices highlighted in the diagram below.
 
 **Invoice microservice:**  When a customer places an order (step 1), the
 invoice microservice listens to the orders collection via Change
-Streams. It automatically detects it and creates the invoice document
-(step 2) inserting it into MongoDB Atlas. Then, the transaction data can
-continue its flow to external providers like :abbr:`ERP (Enterprise
-Resource Planning)` platforms (step 3).
+Streams. It automatically detects the new order and creates the invoice
+document (step 2) inserting it into MongoDB Atlas. Then, the transaction
+data can continue its flow to external providers like :abbr:`ERP
+(Enterprise Resource Planning)` platforms (step 3).
 
 **Recommendation microservice:** As soon as a new invoice is added to
 the collection, the recommendation microservice reacts and creates
@@ -313,8 +312,36 @@ recommendations are embedded in the invoice and the user profile
 documents using Atlas Triggers (step 5). This update personalizes the
 invoice and enriches the user profile with the latest embedded
 recommendations. The frontend can then quickly retrieve this data with a
-lightweight query and display it on the homepage (step 6), keeping the
-systems up to date and the user experience fast and responsive.
+simple query and display it on the homepage (step 6), keeping the
+systems updated and the user experience responsive.
+
+Reliable Event Handling at Scale
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can integrate MongoDB into an event-driven architecture using an
+event broker to route and distribute events across multiple services.
+This enables systems to react in real time, ensuring decoupling,
+scalability, and fault tolerance.
+
+.. figure:: /includes/images/industry-solutions/digital-receipts-fig5.svg
+   :figwidth: 1200px
+   :alt: Azure cloud integrations in action
+   
+   Figure 6. Azure cloud integrations in action
+
+In the demo, the microservice serves as a Change Stream listener that
+reacts to database events. These events are then forwarded to
+Azure Event Grid or Azure Service Bus to trigger downstream workflows or
+integrate with external systems. Alternatively, you could use an Azure
+Function as a lightweight serverless bridge to capture Change Stream
+events directly from the database and push them to the event broker.
+
+For high-throughput scenarios, such as real-time analytics or AI
+training, you can stream events using the Kafka Connector to Azure Event
+Hubs.
+
+By combining Azure cloud services and MongoDB, you can build powerful,
+scalable solutions tailored to modern application requirements.
 
 Build the Solution
 ------------------
