@@ -29,7 +29,7 @@ powered by MongoDB.
 
 **Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, 
 `MongoDB Atlas Triggers <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__,
-`MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>__`,
+`MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__,
 `MongoDB Change Streams <https://www.mongodb.com/docs/manual/changeStreams/>`__,
 `Voyage AI <https://www.voyageai.com/>`__ 
 
@@ -266,8 +266,8 @@ catalog.
 
    Voyage AI offers multiple text embedding models tailored to
    different domains, including legal, code, and finance. To explore the
-   available models and find the best fit for your use case, visit
-   `Text Embeddings documentation <https://docs.voyageai.com/docs/embeddings>`__.
+   available models and find the best fit for your use case, visit the
+   `Text Embeddings Documentation <https://docs.voyageai.com/docs/embeddings>`__.
 
 In this use case, you can easily implement product recommendations by
 using `Vector Search
