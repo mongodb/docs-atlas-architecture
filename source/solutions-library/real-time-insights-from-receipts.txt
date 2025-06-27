@@ -211,10 +211,14 @@ high-level view of the solution:
    
    Figure 3. This diagram illustrates the core components of the demo solution
 
-To build this solution, you deploy two backend microservices - invoice
-and recommendation - on Azure App Services, and use Azure Functions to
+To build this solution, you deploy two backend `microservices
+<https://www.mongodb.com/resources/solutions/use-cases/what-are-microservices>`__
+- invoice and recommendation - on Azure App Services, and use
+`Azure Functions
+<https://learn.microsoft.com/en-us/azure/azure-functions/>`__ to
 simulate external integrations, such as tax logic or loyalty programs.
-Rendered receipts are stored as PDFs in Azure Blob Storage, tightly
+Rendered receipts are stored as PDFs in `Azure Blob Storage
+<https://learn.microsoft.com/en-us/azure/storage/blobs/>`__, tightly
 linked to their structured metadata in MongoDB.
 
 Model Invoices and Catalog Data for an AI-powered Use Case
