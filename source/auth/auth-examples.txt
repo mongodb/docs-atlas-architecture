@@ -1,0 +1,173 @@
+.. _arch-center-examples:
+
+=========================================
+Authorization and Authentication Examples
+=========================================
+
+.. default-domain:: mongodb
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta:   
+   :description: Learn about the different authorization and authentication mechanisms that Atlas supports.
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: onecol
+
+
+The following examples show how to implement our recommendations for authentication 
+and authorization for different access types. The examples show how to implement 
+the recommendations using both the |service| CLI and Terraform.
+
+To learn about Terraform, see :ref:`getting-started-terraform` and the
+`MongoDB Atlas Provider Terraform docs <https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs>`__. 
+
+.. tabs::
+
+   .. tab:: CLI
+      :tabid: cli
+
+
+      |service| UI
+      ------------
+
+      For access to the |service| UI, you should use IP restrictions in conjunction 
+      with either :ref:`Federated Authentication <arch-center-federated_auth>` or 
+      |service| credentials and :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
+      You then use RBAC with a Federated Identity Provider.
+
+      - To configure your {+ip-access-list+} using the CLI, follow the steps on this 
+      :ref:`page <access-list>`. 
+
+      - To configure Federated Authentication with an SAML 2.0 identity provider 
+      (such as Okta, Microsoft Entra ID, or Ping Identity) using the CLI, 
+
+      For more information, see :ref:`atlas-federated-authentication`.
+
+      - To use Atlas credentials with Multi-factor Authentication (MFA), 
+
+      Database Access
+      ---------------
+
+      Workforce Users
+
+      Use Workforce Identity Federation.
+
+      For development and test environments, you can also use SCRAM. Consider creating temporary database users with just-in-time database access.
+
+      Workload Users
+
+      Use one of the following:
+
+         Workload Identity Federation
+
+         AWS-IAM authentication
+
+         X.509 certificates
+
+
+      API Access
+      ----------
+
+      Use Service Accounts. For development and test environments, you can also use Service Accounts or API Keys.
+
+
+      Workload Identity Federation lets your applications access MongoDB Atlas clusters using 
+      external programmatic identities such as Azure Service Principals, Azure Managed Identities and Google Service Accounts.
+      https://www.mongodb.com/docs/atlas/workload-oidc/
+
+      - :atlascli:`serviceAccounts </commands/atlas-api-serviceAccounts/>` 
+
+
+      .. tab:: Terraform
+         :tabid: Terraform
+
+         The following examples demonstrate how to configure
+         authentication and authorization. Before you can create
+         resources with Terraform, you must: 
+
+         - :ref:`Create your paying organization
+            <configure-paying-org>` and :ref:`create an API key
+            <atlas-admin-api-access>` for the paying organization.
+            Store your API key as environment variables by running the
+            following command in the terminal: 
+
+            .. code-block::
+
+               export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+               export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+
+         - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
+
+         Common Files 
+         ~~~~~~~~~~~~
+
+         You must create the following files for each example. Place
+         the files for each example in their own directory. Change
+         the IDs and names to use your values. Then run the commands
+         to initialize Terraform, view the Terraform plan, and apply
+         the changes. 
+
+         azure.tf 
+         ````````
+
+         .. include:: /includes/examples/tf-example-auth-tfazure.rst
+
+         variables.tf 
+         ````````````
+
+         .. include:: /includes/examples/tf-example-auth-variables-stagingprod.rst
+
+         terraform.tfvars 
+         ````````````````
+         .. include:: /includes/examples/tf-example-auth-tfvars-stagingprod.rst
+
+         outputs.tf 
+         ``````````
+
+         .. include:: /includes/examples/tf-example-auth-tfoutputs-stagingprod.rst
+
+         Configure Federated Settings for Identity Provider 
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+         Use the following to set up an :abbr:`OIDC (OpenID Connect)`
+         federated identity provider in |service|, for using it with
+         |azure|. It allows access by using OIDC tokens issued by |azure|
+         Active Directory. 
+
+         .. include:: /includes/examples/tf-example-auth-oidc-stagingprod.rst
+
+         Use the following to create an :abbr:`OIDC (OpenID Connect)`
+         federated authentication user. 
+
+         .. include:: /includes/examples/tf-example-auth-create-oidc-user-stagingprod.rst
+
+         Configure Custom Role 
+         ~~~~~~~~~~~~~~~~~~~~~
+
+         Use the following to create a custom role named ``my_custom_role``
+         which allows update, add, and delete operations on any collection
+         in the database named ``myDb``.
+
+         .. include:: /includes/examples/tf-example-auth-create-custom-role-stagingprod.rst
+
+
+
+
+
+
+
+
+
+
+.. include:: /includes/complete-examples.rst 
+
+
+
+For an example of an |service| project with the |service| role assigned
+to a specific group, see :ref:`Examples <arch-center-hierarchy>`.
