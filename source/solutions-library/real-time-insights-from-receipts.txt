@@ -166,7 +166,7 @@ to physical stores. MongoDB unifies operational and AI data, providing
 full control over your data while keeping it accessible for downstream
 use. 
 
-As shown below, this solution uses receipt data to generate real-time
+As shown below, the solution uses receipt data to generate real-time
 product recommendations, adding them to the digital receipt and the
 user’s homepage, personalizing their post-shopping experience.
 
