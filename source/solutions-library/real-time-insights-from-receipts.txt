@@ -61,7 +61,8 @@ Transform Transaction Data into Actionable Value
 
 When a customer shops in a physical store, digital receipts become a
 strategic touchpoint. Retailers can use these items to provide tailored
-suggestions and as a link to online shopping.
+suggestions and as a link to continue online shopping, all within the
+same digital receipt.
 
 When moving to the online experience, whether through a mobile app or a
 browser, customers receive personalized product recommendations based on
@@ -283,7 +284,7 @@ You can apply `Change Streams
 <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__ to detect
 database changes and coordinate microservices through a `choreography
 pattern <https://www.mongodb.com/docs/atlas/atlas-ui/triggers/>`__. This
-pattern is highlighted in the diagram below.
+pattern is explained in the invoice and recommendation microservices.
 
 .. figure:: /includes/images/industry-solutions/digital-receipts-fig4.svg
    :figwidth: 1200px
