@@ -34,7 +34,7 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
 
 
       |service| UI
-      ------------
+      ~~~~~~~~~~~~
 
       For access to the |service| UI, you should use IP restrictions in conjunction 
       with either :ref:`Federated Authentication <arch-center-federated_auth>` or 
@@ -42,23 +42,27 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
       You then use RBAC with a Federated Identity Provider.
 
       - To configure your {+ip-access-list+} using the CLI, follow the steps on this 
-      :ref:`page <access-list>`. 
+        :ref:`page <access-list>`. 
 
       - To configure Federated Authentication with an SAML 2.0 identity provider 
-      (such as Okta, Microsoft Entra ID, or Ping Identity) using the CLI, 
+        (such as Okta, Microsoft Entra ID, or Ping Identity) using the CLI, 
+        TBD
 
-      For more information, see :ref:`atlas-federated-authentication`.
+        For more information, see :ref:`atlas-federated-authentication`.
 
       - To use Atlas credentials with Multi-factor Authentication (MFA), 
 
+        TBD
+
       Database Access
-      ---------------
+      ~~~~~~~~~~~~~~~
 
       Workforce Users
 
       Use Workforce Identity Federation.
 
-      For development and test environments, you can also use SCRAM. Consider creating temporary database users with just-in-time database access.
+      For development and test environments, you can also use SCRAM. Consider 
+      creating temporary database users with just-in-time database access.
 
       Workload Users
 
@@ -72,7 +76,7 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
 
 
       API Access
-      ----------
+      ~~~~~~~~~~
 
       Use Service Accounts. For development and test environments, you can also use Service Accounts or API Keys.
 
@@ -84,83 +88,77 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
       - :atlascli:`serviceAccounts </commands/atlas-api-serviceAccounts/>` 
 
 
-      .. tab:: Terraform
-         :tabid: Terraform
+   .. tab:: Terraform
+      :tabid: Terraform
 
-         The following examples demonstrate how to configure
-         authentication and authorization. Before you can create
-         resources with Terraform, you must: 
+      The following examples demonstrate how to configure
+      authentication and authorization. Before you can create
+      resources with Terraform, you must: 
 
-         - :ref:`Create your paying organization
-            <configure-paying-org>` and :ref:`create an API key
-            <atlas-admin-api-access>` for the paying organization.
-            Store your API key as environment variables by running the
-            following command in the terminal: 
+      - :ref:`Create your paying organization
+         <configure-paying-org>` and :ref:`create an API key
+         <atlas-admin-api-access>` for the paying organization.
+         Store your API key as environment variables by running the
+         following command in the terminal: 
 
-            .. code-block::
+         .. code-block::
 
-               export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
-               export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+            export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+            export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
 
-         - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
+      - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
 
-         Common Files 
-         ~~~~~~~~~~~~
+      Common Files 
+      ~~~~~~~~~~~~
 
-         You must create the following files for each example. Place
-         the files for each example in their own directory. Change
-         the IDs and names to use your values. Then run the commands
-         to initialize Terraform, view the Terraform plan, and apply
-         the changes. 
+      You must create the following files for each example. Place
+      the files for each example in their own directory. Change
+      the IDs and names to use your values. Then run the commands
+      to initialize Terraform, view the Terraform plan, and apply
+      the changes. 
 
-         azure.tf 
-         ````````
+      azure.tf 
+      ````````
 
-         .. include:: /includes/examples/tf-example-auth-tfazure.rst
+      .. include:: /includes/examples/tf-example-auth-tfazure.rst
 
-         variables.tf 
-         ````````````
+      variables.tf 
+      ````````````
 
-         .. include:: /includes/examples/tf-example-auth-variables-stagingprod.rst
+      .. include:: /includes/examples/tf-example-auth-variables-stagingprod.rst
 
-         terraform.tfvars 
-         ````````````````
-         .. include:: /includes/examples/tf-example-auth-tfvars-stagingprod.rst
+      terraform.tfvars 
+      ````````````````
+      .. include:: /includes/examples/tf-example-auth-tfvars-stagingprod.rst
 
-         outputs.tf 
-         ``````````
+      outputs.tf 
+      ``````````
 
-         .. include:: /includes/examples/tf-example-auth-tfoutputs-stagingprod.rst
+      .. include:: /includes/examples/tf-example-auth-tfoutputs-stagingprod.rst
 
-         Configure Federated Settings for Identity Provider 
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Configure Federated Settings for Identity Provider 
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-         Use the following to set up an :abbr:`OIDC (OpenID Connect)`
-         federated identity provider in |service|, for using it with
-         |azure|. It allows access by using OIDC tokens issued by |azure|
-         Active Directory. 
+      Use the following to set up an :abbr:`OIDC (OpenID Connect)`
+      federated identity provider in |service|, for using it with
+      |azure|. It allows access by using OIDC tokens issued by |azure|
+      Active Directory. 
 
-         .. include:: /includes/examples/tf-example-auth-oidc-stagingprod.rst
+      .. include:: /includes/examples/tf-example-auth-oidc-stagingprod.rst
 
-         Use the following to create an :abbr:`OIDC (OpenID Connect)`
-         federated authentication user. 
+      Use the following to create an :abbr:`OIDC (OpenID Connect)`
+      federated authentication user. 
 
-         .. include:: /includes/examples/tf-example-auth-create-oidc-user-stagingprod.rst
+      .. include:: /includes/examples/tf-example-auth-create-oidc-user-stagingprod.rst
 
-         Configure Custom Role 
-         ~~~~~~~~~~~~~~~~~~~~~
+      Configure Custom Role 
+      ~~~~~~~~~~~~~~~~~~~~~
 
-         Use the following to create a custom role named ``my_custom_role``
-         which allows update, add, and delete operations on any collection
-         in the database named ``myDb``.
+      Use the following to create a custom role named ``my_custom_role``
+      which allows update, add, and delete operations on any collection
+      in the database named ``myDb``.
 
-         .. include:: /includes/examples/tf-example-auth-create-custom-role-stagingprod.rst
-
-
-
-
-
-
+      .. include:: /includes/examples/tf-example-auth-create-custom-role-stagingprod.rst
 
 
 
