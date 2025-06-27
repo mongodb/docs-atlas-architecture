@@ -334,10 +334,8 @@ to trigger downstream workflows, or integrate with external systems.
 Alternatively, an Azure Function can act as a serverless bridge to
 capture Change Stream events from the database and push them to the
 event broker. For high-throughput scenarios, such as real-time analytics
-or AI training, you can stream events using the `Kafka Connector
-<https://www.mongodb.com/products/integrations/kafka-connector>`__ to
-`Azure Event Hubs
-<https://azure.microsoft.com/en-us/products/event-hubs>`__.
+or AI training, you can stream events using the `Kafka Connector <https://www.mongodb.com/products/integrations/kafka-connector>`__ to
+`Azure Event Hubs <https://azure.microsoft.com/en-us/products/event-hubs>`__.
 
 Build the Solution
 ------------------
