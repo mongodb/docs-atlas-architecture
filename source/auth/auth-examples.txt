@@ -20,213 +20,154 @@ Authorization and Authentication Examples
    :class: onecol
 
 
-The following examples configure authentication and custom roles using
-|service| :ref:`tools for automation <arch-center-automation>`.
+The following examples show how to implement our recommendations for authentication 
+and authorization for different access types. The examples show how to implement 
+the recommendations using both the |service| CLI and Terraform.
 
-.. include:: /includes/complete-examples.rst 
+To learn about Terraform, see :ref:`getting-started-terraform` and the
+`MongoDB Atlas Provider Terraform docs <https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs>`__. 
 
 .. tabs::
 
-   .. tab:: Dev and Test Environments
-      :tabid: devtest
+   .. tab:: CLI
+      :tabid: cli
 
-      .. tabs::
 
-         .. tab:: CLI
-            :tabid: cli
+      |service| UI
+      ------------
 
-            Run the following command to create a user authentication
-            with IAM credentials to a specified {+cluster+}. 
-            
-            .. include:: /includes/examples/cli-example-auth-aws-iam-devtest.rst
+      For access to the |service| UI, you should use IP restrictions in conjunction 
+      with either :ref:`Federated Authentication <arch-center-federated_auth>` or 
+      |service| credentials and :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
+      You then use RBAC with a Federated Identity Provider.
 
-            Run the following command to create a temporary user with
-            SCRAM authentication.
+      - To configure your {+ip-access-list+} using the CLI, follow the steps on this 
+      :ref:`page <access-list>`. 
 
-            .. include:: /includes/examples/cli-example-auth-temp-user-devtest.rst
+      - To configure Federated Authentication with an SAML 2.0 identity provider 
+      (such as Okta, Microsoft Entra ID, or Ping Identity) using the CLI, 
 
-            Run the following command to configure Workforce Identity
-            Federation with OIDC. 
+      For more information, see :ref:`atlas-federated-authentication`.
 
-            .. include:: /includes/examples/cli-example-auth-oid-devtest.rst
+      - To use Atlas credentials with Multi-factor Authentication (MFA), 
 
-         .. tab:: Terraform
-            :tabid: Terraform
+      Database Access
+      ---------------
 
-            The following examples demonstrate how to configure
-            authentication and authorization. Before you can create
-            resources with Terraform, you must: 
+      Workforce Users
 
-            - :ref:`Create your paying organization
-              <configure-paying-org>` and :ref:`create an API key
-              <atlas-admin-api-access>` for the paying organization.
-              Store your API key as environment variables by running the
-              following command in the terminal: 
+      Use Workforce Identity Federation.
 
-              .. code-block::
+      For development and test environments, you can also use SCRAM. Consider creating temporary database users with just-in-time database access.
 
-                 export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
-                 export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+      Workload Users
 
-            - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
+      Use one of the following:
 
-            Common Files 
-            ~~~~~~~~~~~~
+         Workload Identity Federation
 
-            You must create the following files for each example. Place
-            the files for each example in their own directory. Change
-            the IDs and names to use your values. Then run the commands
-            to initialize Terraform, view the Terraform plan, and apply
-            the changes. 
+         AWS-IAM authentication
 
-            azure.tf 
-            ````````
+         X.509 certificates
 
-            .. include:: /includes/examples/tf-example-auth-tfazure.rst
 
-            variables.tf 
-            ````````````
+      API Access
+      ----------
 
-            .. include:: /includes/examples/tf-example-auth-variables-devtest.rst
+      Use Service Accounts. For development and test environments, you can also use Service Accounts or API Keys.
 
-            terraform.tfvars 
-            ````````````````
 
-            .. include:: /includes/examples/tf-example-auth-tfvars-devtest.rst
+      Workload Identity Federation lets your applications access MongoDB Atlas clusters using 
+      external programmatic identities such as Azure Service Principals, Azure Managed Identities and Google Service Accounts.
+      https://www.mongodb.com/docs/atlas/workload-oidc/
 
+      - :atlascli:`serviceAccounts </commands/atlas-api-serviceAccounts/>` 
 
-            Authentication Example 
-            ~~~~~~~~~~~~~~~~~~~~~~
 
-            Use the following to create an |service| user with username
-            and password authentication.
+      .. tab:: Terraform
+         :tabid: Terraform
 
-            main.tf 
-            ```````
+         The following examples demonstrate how to configure
+         authentication and authorization. Before you can create
+         resources with Terraform, you must: 
 
-            .. include:: /includes/examples/tf-example-auth-scram-devtest.rst
+         - :ref:`Create your paying organization
+            <configure-paying-org>` and :ref:`create an API key
+            <atlas-admin-api-access>` for the paying organization.
+            Store your API key as environment variables by running the
+            following command in the terminal: 
 
-            Use the following example to set up an :abbr:`OIDC (OpenID Connect)`
-            federated identity provider in |service|, for using it with
-            |azure| and then create an :abbr:`OIDC (OpenID Connect)`
-            federated authentication user. It uses OIDC tokens issued by |azure| Active Directory to allow access. 
+            .. code-block::
 
-            main.tf 
-            ```````
+               export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+               export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
 
-            .. include:: /includes/examples/tf-example-auth-oidc-devtest.rst 
+         - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
 
-            outputs.tf 
-            ``````````
+         Common Files 
+         ~~~~~~~~~~~~
 
-            .. include:: /includes/examples/tf-example-auth-tfoutputs-devtest.rst
+         You must create the following files for each example. Place
+         the files for each example in their own directory. Change
+         the IDs and names to use your values. Then run the commands
+         to initialize Terraform, view the Terraform plan, and apply
+         the changes. 
 
-            Authorization Example 
-            ~~~~~~~~~~~~~~~~~~~~~
-            
-            Use the following to grant users admin rights on the
-            {+cluster+} and project member rights for the projects in the
-            {+cluster+}. 
+         azure.tf 
+         ````````
 
-            main.tf 
-            ```````
+         .. include:: /includes/examples/tf-example-auth-tfazure.rst
 
-            .. include:: /includes/examples/tf-example-auth-grant-roles-devtest.rst  
+         variables.tf 
+         ````````````
 
-   .. tab:: Staging and Prod Environments
-      :tabid: stagingprod
+         .. include:: /includes/examples/tf-example-auth-variables-stagingprod.rst
 
-      .. tabs::
+         terraform.tfvars 
+         ````````````````
+         .. include:: /includes/examples/tf-example-auth-tfvars-stagingprod.rst
 
-         .. tab:: CLI
-            :tabid: cli
+         outputs.tf 
+         ``````````
 
-            Run the following command to create a database user from a specific
-            group in the Identity Provider. You can manage the user
-            authentication and authorization through the identity provider,
-            Okta. The command also grants the users in the identity provider
-            group ``dbAdmin`` and ``readWrite`` privileges on the |service|
-            {+cluster+}. 
+         .. include:: /includes/examples/tf-example-auth-tfoutputs-stagingprod.rst
 
-            .. include:: /includes/examples/cli-example-auth-okta-stagingprod.rst 
+         Configure Federated Settings for Identity Provider 
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-            Run the following command to create an :abbr:`OIDC (OpenID
-            Connect)`-compatible identity providers from your federation
-            settings.  
+         Use the following to set up an :abbr:`OIDC (OpenID Connect)`
+         federated identity provider in |service|, for using it with
+         |azure|. It allows access by using OIDC tokens issued by |azure|
+         Active Directory. 
 
-            .. include:: /includes/examples/cli-example-auth-oidc-stagingprod.rst 
+         .. include:: /includes/examples/tf-example-auth-oidc-stagingprod.rst
 
-         .. tab:: Terraform
-            :tabid: Terraform
+         Use the following to create an :abbr:`OIDC (OpenID Connect)`
+         federated authentication user. 
 
-            The following examples demonstrate how to configure
-            authentication and authorization. Before you can create
-            resources with Terraform, you must: 
+         .. include:: /includes/examples/tf-example-auth-create-oidc-user-stagingprod.rst
 
-            - :ref:`Create your paying organization
-              <configure-paying-org>` and :ref:`create an API key
-              <atlas-admin-api-access>` for the paying organization.
-              Store your API key as environment variables by running the
-              following command in the terminal: 
+         Configure Custom Role 
+         ~~~~~~~~~~~~~~~~~~~~~
 
-              .. code-block::
+         Use the following to create a custom role named ``my_custom_role``
+         which allows update, add, and delete operations on any collection
+         in the database named ``myDb``.
 
-                 export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
-                 export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+         .. include:: /includes/examples/tf-example-auth-create-custom-role-stagingprod.rst
 
-            - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
 
-            Common Files 
-            ~~~~~~~~~~~~
 
-            You must create the following files for each example. Place
-            the files for each example in their own directory. Change
-            the IDs and names to use your values. Then run the commands
-            to initialize Terraform, view the Terraform plan, and apply
-            the changes. 
 
-            azure.tf 
-            ````````
 
-            .. include:: /includes/examples/tf-example-auth-tfazure.rst
 
-            variables.tf 
-            ````````````
 
-            .. include:: /includes/examples/tf-example-auth-variables-stagingprod.rst
 
-            terraform.tfvars 
-            ````````````````
-            .. include:: /includes/examples/tf-example-auth-tfvars-stagingprod.rst
 
-            outputs.tf 
-            ``````````
 
-            .. include:: /includes/examples/tf-example-auth-tfoutputs-stagingprod.rst
+.. include:: /includes/complete-examples.rst 
 
-            Configure Federated Settings for Identity Provider 
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-            Use the following to set up an :abbr:`OIDC (OpenID Connect)`
-            federated identity provider in |service|, for using it with
-            |azure|. It allows access by using OIDC tokens issued by |azure|
-            Active Directory. 
-
-            .. include:: /includes/examples/tf-example-auth-oidc-stagingprod.rst
-
-            Use the following to create an :abbr:`OIDC (OpenID Connect)`
-            federated authentication user. 
-
-            .. include:: /includes/examples/tf-example-auth-create-oidc-user-stagingprod.rst
-
-            Configure Custom Role 
-            ~~~~~~~~~~~~~~~~~~~~~
-
-            Use the following to create a custom role named ``my_custom_role``
-            which allows update, add, and delete operations on any collection
-            in the database named ``myDb``.
-
-            .. include:: /includes/examples/tf-example-auth-create-custom-role-stagingprod.rst
 
 For an example of an |service| project with the |service| role assigned
 to a specific group, see :ref:`Examples <arch-center-hierarchy>`.

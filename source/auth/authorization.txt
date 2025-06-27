@@ -26,7 +26,7 @@ resources.
 
 When implementing |service| authorization, you must use 
 :ref:`Role-Based Access Control (RBAC) <arch-center-rbac>`. Using an 
-:ref:`Identity Federation Provider's <arch-center-fip>` groups with RBAC 
+:ref:`Federated Identity Provider's <arch-center-fip>` groups with RBAC 
 simplifies management.
 
 The following recommendations apply to both workforce (human) and workload 
