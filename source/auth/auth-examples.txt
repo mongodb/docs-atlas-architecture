@@ -32,61 +32,66 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
    .. tab:: CLI
       :tabid: cli
 
-
       |service| UI
       ~~~~~~~~~~~~
 
-      For access to the |service| UI, you should use IP restrictions in conjunction 
-      with either :ref:`Federated Authentication <arch-center-federated_auth>` or 
-      |service| credentials and :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
-      You then use RBAC with a Federated Identity Provider.
+      For access to the |service| UI:
+      
+      - Implement :atlas:`{+ip-access-list+}s </security/ip-access-list/>`. 
 
-      - To configure your {+ip-access-list+} using the CLI, follow the steps on this 
-        :ref:`page <access-list>`. 
+      - Implement :ref:`Federated Authentication <arch-center-federated_auth>` or 
+        |service| credentials and :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
 
-      - To configure Federated Authentication with an SAML 2.0 identity provider 
-        (such as Okta, Microsoft Entra ID, or Ping Identity) using the CLI, 
-        TBD
+        To set up Federated Auth, use the 
+        :atlas:`atlas-federatedAuthentication </command/atlas-federatedAuthentication/>` 
+        and related commands. You can then use the :atlas:`atlas-users-invite </command/atlas-users-invite/>` 
+        command to invite users to your organization and projects.
+
+        .. note::
+
+           For users that authenticate with SSO, you will also need to configure 
+           the SSO Identity Provider. 
 
         For more information, see :ref:`atlas-federated-authentication`.
 
       - To use Atlas credentials with Multi-factor Authentication (MFA), 
 
-        TBD
 
       Database Access
       ~~~~~~~~~~~~~~~
 
-      Workforce Users
+      Workforce (Human) Access
+      `````````````````````````
 
-      Use Workforce Identity Federation.
+      For workforce database access:
 
-      For development and test environments, you can also use SCRAM. Consider 
-      creating temporary database users with just-in-time database access.
+      - Use :atlas:`Workforce Identity Federation </workforce-oidc/>`.
 
-      Workload Users
+      - Use the :cli:`atlas-dbusers-certs-create <command/atlas-dbusers-certs-create>`
+        command to create Atlas-managed MFA (Multi-Factor Authentication)
+        :atlas:`X.509 client </security-self-managed-x509>`  certificates.
 
-      Use one of the following:
+      ..note::
 
-         Workload Identity Federation
+        To use self-managed certificates, you must first configure 
+        :atlas:`X.509 </operator/v2.7/ak8so-x509/>`
 
-         AWS-IAM authentication
 
-         X.509 certificates
+      Workload (Machine) Access
+      `````````````````````````
+
+      For workload (machine) access, use 
+      :atlas:`Workload Identity Federation </workload-oidc/>`.
 
 
       API Access
       ~~~~~~~~~~
 
-      Use Service Accounts. For development and test environments, you can also use Service Accounts or API Keys.
+      Use the :atlascli:`serviceAccounts </command/atlas-api-serviceAccounts/>` 
+      and related commands to create and manage Service Accounts.
 
-
-      Workload Identity Federation lets your applications access MongoDB Atlas clusters using 
-      external programmatic identities such as Azure Service Principals, Azure Managed Identities and Google Service Accounts.
-      https://www.mongodb.com/docs/atlas/workload-oidc/
-
-      - :atlascli:`serviceAccounts </commands/atlas-api-serviceAccounts/>` 
-
+      For development and test environments, you can also use Service Accounts 
+      or API Keys.
 
    .. tab:: Terraform
       :tabid: Terraform
