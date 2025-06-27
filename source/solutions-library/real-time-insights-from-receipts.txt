@@ -338,7 +338,7 @@ event broker. For high-throughput scenarios, such as real-time analytics
 or AI training, you can stream events using the `Kafka Connector
 <https://www.mongodb.com/products/integrations/kafka-connector>`__ to
 `Azure Event Hubs
-<https://azure.microsoft.com/en-us/products/event-hubs>`__.
+<https://www.mongodb.com/blog/post/using-azure-event-hubs-with-connector-apache-kafka>`__.
 
 Build the Solution
 ------------------
