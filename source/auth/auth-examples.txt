@@ -38,7 +38,12 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
       For access to the |service| UI:
       
       - Implement :atlas:`{+ip-access-list+}s </security/ip-access-list/>`. 
+        For example, 
 
+        .. code-block::
+
+           atlas organizations apiKeys accessLists create --apiKey <API_KEY_ID> --ip <IP_ADDRESS>
+ 
       - Implement :ref:`Federated Authentication <arch-center-federated_auth>` or 
         |service| credentials and :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
 
@@ -47,15 +52,18 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
         and related commands. You can then use the :atlas:`atlas-users-invite </command/atlas-users-invite/>` 
         command to invite users to your organization and projects.
 
+        To get started, use the following command: 
+
+        .. code-block::
+
+           atlas federatedAuthentication --help
+
         .. note::
 
            For users that authenticate with SSO, you will also need to configure 
            the SSO Identity Provider. 
 
         For more information, see :ref:`atlas-federated-authentication`.
-
-      - To use Atlas credentials with Multi-factor Authentication (MFA), 
-
 
       Database Access
       ~~~~~~~~~~~~~~~
@@ -71,27 +79,40 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
         command to create Atlas-managed MFA (Multi-Factor Authentication)
         :atlas:`X.509 client </security-self-managed-x509>`  certificates.
 
-      ..note::
+         ..note::
 
-        To use self-managed certificates, you must first configure 
-        :atlas:`X.509 </operator/v2.7/ak8so-x509/>`
+           To use self-managed certificates, you must first configure 
+           :atlas:`X.509 </operator/v2.7/ak8so-x509/>`
+
+         .. code-block::
+
+            atlas dbusers certs create --username <USERNAME> --projectId <PROJECT_ID> [--monthsUntilExpiration <MONTHS>] [--output json]
 
 
       Workload (Machine) Access
       `````````````````````````
 
-      For workload (machine) access, use 
-      :atlas:`Workload Identity Federation </workload-oidc/>`.
+      For workload (machine) access, use :atlas:`Workload Identity Federation </workload-oidc/>`.
 
 
       API Access
       ~~~~~~~~~~
 
-      Use the :atlascli:`serviceAccounts </command/atlas-api-serviceAccounts/>` 
+      Use the :atlas:`serviceAccounts </command/atlas-api-serviceAccounts/>` 
       and related commands to create and manage Service Accounts.
+      For example, 
 
-      For development and test environments, you can also use Service Accounts 
-      or API Keys.
+      .. code-block:: shell
+
+         atlas api serviceAccounts createServiceAccount [options]
+
+      For development and test environments, you can also use 
+      :atlas:`API keys </command/atlas-projects-apikeys-create/>`. For example, 
+
+      .. code-block:: shell
+
+         atlas organizations apiKeys create [options]
+
 
    .. tab:: Terraform
       :tabid: Terraform
