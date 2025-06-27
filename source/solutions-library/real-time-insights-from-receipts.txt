@@ -339,6 +339,9 @@ or AI training, you can stream events using the `Kafka Connector
 `Azure Event Hubs
 <https://azure.microsoft.com/en-us/products/event-hubs>`__.
 
+With Azure cloud services and MongoDB, you can build powerful, scalable
+solutions tailored to modern application requirements.
+
 Build the Solution
 ------------------
 
