@@ -213,7 +213,8 @@ high-level view of the solution:
 
 To build this solution, you deploy two backend `microservices
 <https://www.mongodb.com/resources/solutions/use-cases/what-are-microservices>`__
-- invoice and recommendation - on Azure App Services, and use
+- invoice and recommendation - on `Azure App Services
+<https://learn.microsoft.com/en-us/azure/app-service/>`__, and use
 `Azure Functions
 <https://learn.microsoft.com/en-us/azure/azure-functions/>`__ to
 simulate external integrations, such as tax logic or loyalty programs.
@@ -355,8 +356,9 @@ simulate how systems react to customer purchases in real time.
 The `frontend repository
 <https://github.com/mongodb-industry-solutions/retail-store-v2>`__
 contains a mock e-commerce site, Leafy Popup Store, for handling orders
-and users. To get started, follow the setup instructions, then use the
-UI to simulate purchases and see the demo in action.
+and users. To get started, follow the pre-requisites and setup
+instructions, then use the UI to simulate purchases and see the demo in
+action.
 
 .. procedure::
    :style: normal
