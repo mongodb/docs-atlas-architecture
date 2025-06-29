@@ -270,3 +270,7 @@ Deployments
 
 To learn our recommendations for deployments that relate to authentication, 
 see :ref:`arch-center-hierarchy`.
+
+Examples
+--------
+For examples of configuring Authentication, see :ref:`arch-center-examples`.
