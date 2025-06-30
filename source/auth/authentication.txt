@@ -66,12 +66,15 @@ The following recommendations apply to all :ref:`deployment paradigms
 
 - Workforce Users
 
-  Use IP access restrictions, and then either:
+  Use IP access restrictions, and then:
 
-  - Use :ref:`Federated Authentication <arch-center-federated_auth>` with an SAML 2.0 
-    identity provider, such as Okta, Microsoft Entra ID, or Ping Identity, or 
+  - Use :ref:`Federated Authentication <arch-center-federated_auth>` with an 
+    SAML 2.0 identity provider, such as Okta, Microsoft Entra ID, or Ping 
+    Identity, **and** 
   - Use Atlas credentials with 
-    :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`.
+    :ref:`Multi-factor Authentication (MFA) <arch-center-mfa>`. You should 
+    always use the most secure form of MFA available, such as a hardware key 
+    or biometrics.
 
 - Workload Users
   
@@ -170,20 +173,15 @@ To learn more, see :ref:`oidc-authentication-workload` and
 Multi-Factor Authentication 
 `````````````````````````````
 
-For any human user that has access to the |service| control plane, we recommend 
-:abbr:`MFA (Multi-Factor Authentication)` for enhanced security. When 
-:abbr:`MFA (Multi-Factor Authentication)` is enabled, |service| requires 
-two forms of identification: 
+For any human user that has access to the |service| control plane, we **require** 
+:abbr:`MFA (Multi-Factor Authentication)` for enhanced security. |service| 
+supports the following MFA methods as secondary identification: 
 
-- The user's credentials 
-- One of the following recommended factors: 
-
-  - Security keys
-  - Biometrics
-  - OTP authenticators 
-  - Push notifications
-  - SMS (not recommended as primary factor)
-  - Email (not recommended as primary factor)
+- Security keys
+- Biometrics
+- OTP authenticators 
+- Push notifications with Okta Verify
+- Email
 
 .. note::
    
@@ -234,11 +232,8 @@ with {+service+} through the {+atlas-admin-api+}. We recommend that you use
 service accounts instead of |api| keys when possible because they provide added 
 security through short-lived access tokens and required credential rotations.
 
-You can manage programmatic access for service accounts only by using the 
-{+atlas-ui+} or the {+atlas-admin-api+}. You can't manage programmatic access 
-for service accounts through the {+atlas-cli+} or Terraform.
-
-To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-overview/>`.
+You can manage programmatic access for service accounts by using the 
+{+atlas-ui+}, {+atlas-cli+}, {+atlas-admin-api+}, and Terraform.
 
 .. _arch-center-admin-api-keys:
 
@@ -270,3 +265,18 @@ Deployments
 
 To learn our recommendations for deployments that relate to authentication, 
 see :ref:`arch-center-hierarchy`.
+
+Additional Security Measures
+````````````````````````````
+To further enhance security and minimize the risk of unauthorized access, 
+consider these additional security measures:
+
+- :ref:`Rotate service account secrets <https://www.mongodb.com/docs/atlas/tutorial/rotate-service-account-secrets/#std-label-rotate-service-account-secrets>`__ 
+  before they expire.
+- Use an :ref:`IP access list <https://www.mongodb.com/docs/atlas/configure-api-access/#optional--require-an-ip-access-list-for-the-atlas-administration-api>`__ 
+  for your service accounts.
+- Assign the least privileged :ref:`Atlas role <https://www.mongodb.com/docs/atlas/reference/user-roles/>`__ 
+  required for the service account's intended purpose to adhere to the principle 
+  of least privilege.
+
+To learn more, see :atlas:`Service Accounts Overview </api/service-accounts-overview/>`.
