@@ -94,8 +94,8 @@ advantages, including:
 
 .. note:: Customer Success Story
 
-   Discover `how Albert Heijn <https://www.mongodb.com/solutions/customer-case-studies/albert-heijn>`__,
-   the largest supermarket chain in the Netherlands uses MongoDB to
+   Discover how `Albert Heijn <https://www.mongodb.com/solutions/customer-case-studies/albert-heijn>`__,
+   the largest supermarket chain in the Netherlands, uses MongoDB to
    support customer-facing applications.
 
 Data Management Challenges and How MongoDB Can Solve Them
