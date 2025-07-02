@@ -427,8 +427,8 @@ kick-start their projects.
    .. tab:: Retail
       :tabid: retail
 
-      Catalog
-      -------
+      AI-Driven Retail
+      ----------------
 
       .. card-group::
          :columns: 2
@@ -469,8 +469,8 @@ kick-start their projects.
             Learn how to build a real-time inventory management system
             with RFID and MongoDB Atlas.
 
-      Gen AI
-      ------
+      Ecommerce Personalised
+      ----------------------
 
       .. card-group::
          :columns: 2
@@ -505,8 +505,42 @@ kick-start their projects.
             interactions with customers, enhancing their shopping
             experience.
             
-      Personalization
-      ---------------
+      Gen AI
+      ------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: AI-Driven Real-Time Pricing with MongoDB and Vertex AI
+            :url: /solutions-library/ai-driven-real-time-pricing/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Leverage real-time data insights to optimize prices and gain
+            a competitive edge.
+
+         .. card::
+            :headline: Dynamic Pricing
+            :url: /solutions-library/retail-dynamic-pricing
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Implement real-time analytics and serverless functions to
+            enable dynamic pricing strategies.
+
+         .. card::
+            :headline: Real-Time Receipt Data
+            :url: /solutions-library/real-time-insights-from-receipts
+            :icon: general_features_realtime
+            :icon-alt: Atlas general_features_realtime icon
+
+            Discover how to turn receipt data into real-time insights
+            that power personalized experiences.
+
+      In Store and Omnichannel
+      ------------------------
 
       .. card-group::
          :columns: 2
