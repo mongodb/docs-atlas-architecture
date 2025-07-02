@@ -199,7 +199,7 @@ high-level view of the solution:
    :figwidth: 1200px
    :alt: Core solution components
    
-   Figure 3. This diagram illustrates the core components of the demo solution
+   Figure 2. This diagram illustrates the core components of the demo solution
 
 To build this solution, you deploy two backend `microservices
 <https://www.mongodb.com/resources/solutions/use-cases/what-are-microservices>`__
@@ -238,7 +238,7 @@ smarter, AI-driven catalog retrieval.
    :figwidth: 1200px
    :alt: Combination of traditional product details with vector embeddings from Voyage AI
    
-   Figure 4. MongoDB combines traditional product details with vector
+   Figure 3. MongoDB combines traditional product details with vector
    embeddings from Voyage AI, enabling semantic search and AI features
    directly in the product catalog.
 
@@ -279,7 +279,7 @@ pattern is explained in the invoice and recommendation microservices.
    :figwidth: 1200px
    :alt: Event-driven choreography
    
-   Figure 5. Event-driven choreography enables real-time recommendations
+   Figure 4. Event-driven choreography enables real-time recommendations
    based on a customer's most recent purchase, improving their overall
    experience
 
@@ -312,7 +312,7 @@ scalability, and fault tolerance.
    :figwidth: 1200px
    :alt: Azure cloud integrations in action
    
-   Figure 6. Azure cloud integrations in action
+   Figure 5. Azure cloud integrations in action
 
 In the demo, the microservice serves as a Change Stream listener that
 reacts to database events. These events could then be forwarded to
