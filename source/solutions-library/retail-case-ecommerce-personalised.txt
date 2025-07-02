@@ -1,0 +1,10 @@
+=============================
+Retail Ecommerce Personalised
+=============================
+
+.. toctree::
+   :titlesonly:
+
+   AI Product Search </solutions-library/retail-ai-product-search>
+   As-You-Type Suggestions <solutions-library/retail-as-you-type-suggestions.txt> 
+   Real-Time Receipt Data </solutions-library/real-time-insights-from-receipts>

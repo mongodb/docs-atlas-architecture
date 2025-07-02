@@ -5,6 +5,7 @@ Retail
 .. toctree::
    :titlesonly:
 
-   Catalog <solutions-library/retail-catalog>
-   Gen AI <solutions-library/retail-gen-ai>
-   Personalization <solutions-library/retail-personalization>
+   AI-Driven Retail <solutions-library/retail-case-ai-driven>
+   Ecommerce Personalised <solutions-library/retail-case-ecommerce-personalised>
+   Gen AI <solutions-library/retail-case-gen-ai>
+   In Store and Omnichannel <solutions-library/retail-case-in-store-omnichannel>
