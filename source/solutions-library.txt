@@ -432,6 +432,15 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: AI-Driven Real-Time Pricing with MongoDB and Vertex AI
+            :url: /solutions-library/ai-driven-real-time-pricing/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Leverage real-time data insights to optimize prices and gain
+            a competitive edge.
+
+         .. card::
             :headline: Dynamic Pricing
             :url: /solutions-library/retail-dynamic-pricing
             :icon: mdb_custom_aggregation
@@ -439,15 +448,6 @@ kick-start their projects.
 
             Implement real-time analytics and serverless functions to
             enable dynamic pricing strategies.
-
-         .. card::
-            :headline: Real-Time Pricing with MongoDB and Vertex AI
-            :url: /solutions-library/ai-driven-real-time-pricing/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Leverage real-time data insights to optimize prices and gain
-            a competitive edge.
 
       Ecommerce Personalised
       ----------------------
@@ -517,7 +517,6 @@ kick-start their projects.
       .. card-group::
          :columns: 2
          :style: extra-compact
-
 
          .. card::
             :headline: Building an Inventory Management System
