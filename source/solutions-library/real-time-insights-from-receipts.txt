@@ -165,18 +165,7 @@ MongoDB Atlas as the central data store. The demo showcases a backend
 microservice for invoice creation in a mock e-commerce system, adaptable
 to physical stores. MongoDB unifies operational and AI data, providing
 full control over your data while keeping it accessible for downstream
-use. 
-
-As shown below, the solution uses receipt data to generate real-time
-product recommendations, adding them to the digital receipt and the
-user’s homepage, personalizing their post-shopping experience.
-
-.. figure:: /includes/images/industry-solutions/digital-receipts-gif1.gif
-   :figwidth: 1200px
-   :alt: A mock e-commerce platform offering personalized product recommendations in digital receipts
-   
-   Figure 2. A mock e-commerce platform offering personalized product
-   recommendations in digital receipts
+use.
 
 Reference Architectures
 -----------------------
