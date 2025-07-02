@@ -7,7 +7,3 @@ Retail AI-Driven Retail
 
    AI-Driven Real-Time Pricing </solutions-library/ai-driven-real-time-pricing>   
    Dynamic Pricing </solutions-library/retail-dynamic-pricing>
-
-   Building an Inventory Management System <solutions-library/retail-asset-event-driven-inventory>
-   Building an Omnichannel Ordering System <solutions-library/retail-asset-omnichannel-ordering>
-   Real-Time Product Tracking <solutions-library/retail-asset-rfid-retail>
