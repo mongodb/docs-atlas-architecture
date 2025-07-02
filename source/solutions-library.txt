@@ -421,9 +421,6 @@ kick-start their projects.
             Build a YouTube transcription and summarization service with
             LLMs and semantic search.           
 
-      .. App-Driven Analytics
-      .. --------------------
-
    .. tab:: Retail
       :tabid: retail
 
@@ -435,12 +432,92 @@ kick-start their projects.
          :style: extra-compact
 
          .. card::
+            :headline: Dynamic Pricing
+            :url: /solutions-library/retail-dynamic-pricing
+            :icon: mdb_custom_aggregation
+            :icon-alt: Atlas mdb_custom_aggregation icon
+
+            Implement real-time analytics and serverless functions to
+            enable dynamic pricing strategies.
+
+         .. card::
+            :headline: Real-Time Pricing with MongoDB and Vertex AI
+            :url: /solutions-library/ai-driven-real-time-pricing/
+            :icon: general_content_play
+            :icon-alt: Atlas general_content_play icon
+
+            Leverage real-time data insights to optimize prices and gain
+            a competitive edge.
+
+      Ecommerce Personalised
+      ----------------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: AI Product Search
+            :url: /solutions-library/retail-ai-product-search/
+            :icon: mdb_vector_search
+            :icon-alt: Atlas mdb_vector_search icon
+
+            Transform e-commerce experiences with personalized,
+            AI-driven search powered by MongoDB Atlas Vector Search and
+            Databricks.
+
+         .. card::
             :headline: As-You-Type Suggestions
             :url: /solutions-library/retail-as-you-type-suggestions/
             :icon: mdb_custom_aggregation
             :icon-alt: Atlas mdb_custom_aggregation icon
 
-            Add fast and relevant as-you-type suggestions to your application, incorporating user context and domain-specific ranking factors.
+            Add fast and relevant as-you-type suggestions to your
+            application, incorporating user context and domain-specific
+            ranking factors.
+
+         .. card::
+            :headline: Real-Time Receipt Data
+            :url: /solutions-library/real-time-insights-from-receipts
+            :icon: general_features_realtime
+            :icon-alt: Atlas general_features_realtime icon
+
+            Discover how to turn receipt data into real-time insights
+            that power personalized experiences.
+            
+      Gen AI
+      ------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
+         .. card::
+            :headline: Automating Product Descriptions Using Generative AI
+            :url: /solutions-library/retail-asset-product-description/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Create engaging and multilingual product descriptions
+            quickly and easily with MongoDB and Together AI.
+
+         .. card::
+            :headline: Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
+            :url: /solutions-library/retail-asset-rag-chatbot/
+            :icon: industry_ai
+            :icon-alt: Atlas industry_ai icon
+
+            Discover how agentic RAG creates seamless and natural
+            interactions with customers, enhancing their shopping
+            experience.
+
+      In Store and Omnichannel
+      ------------------------
+
+      .. card-group::
+         :columns: 2
+         :style: extra-compact
+
 
          .. card::
             :headline: Building an Inventory Management System
@@ -468,110 +545,6 @@ kick-start their projects.
 
             Learn how to build a real-time inventory management system
             with RFID and MongoDB Atlas.
-
-      Ecommerce Personalised
-      ----------------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: AI Product Search
-            :url: /solutions-library/retail-ai-product-search/
-            :icon: mdb_vector_search
-            :icon-alt: Atlas mdb_vector_search icon
-
-            Transform e-commerce experiences with personalized,
-            AI-driven search powered by MongoDB Atlas Vector Search and
-            Databricks.
-
-         .. card::
-            :headline: Automating Product Descriptions Using Generative AI
-            :url: /solutions-library/retail-asset-product-description/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Create engaging and multilingual product descriptions
-            quickly and easily with MongoDB and Together AI.
-
-         .. card::
-            :headline: Launching an Agentic RAG Chatbot with MongoDB and Dataworkz
-            :url: /solutions-library/retail-asset-rag-chatbot/
-            :icon: industry_ai
-            :icon-alt: Atlas industry_ai icon
-
-            Discover how agentic RAG creates seamless and natural
-            interactions with customers, enhancing their shopping
-            experience.
-            
-      Gen AI
-      ------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: AI-Driven Real-Time Pricing with MongoDB and Vertex AI
-            :url: /solutions-library/ai-driven-real-time-pricing/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Leverage real-time data insights to optimize prices and gain
-            a competitive edge.
-
-         .. card::
-            :headline: Dynamic Pricing
-            :url: /solutions-library/retail-dynamic-pricing
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
-
-            Implement real-time analytics and serverless functions to
-            enable dynamic pricing strategies.
-
-         .. card::
-            :headline: Real-Time Receipt Data
-            :url: /solutions-library/real-time-insights-from-receipts
-            :icon: general_features_realtime
-            :icon-alt: Atlas general_features_realtime icon
-
-            Discover how to turn receipt data into real-time insights
-            that power personalized experiences.
-
-      In Store and Omnichannel
-      ------------------------
-
-      .. card-group::
-         :columns: 2
-         :style: extra-compact
-
-         .. card::
-            :headline: AI-Driven Real-Time Pricing with MongoDB and Vertex AI
-            :url: /solutions-library/ai-driven-real-time-pricing/
-            :icon: general_content_play
-            :icon-alt: Atlas general_content_play icon
-
-            Leverage real-time data insights to optimize prices and gain
-            a competitive edge.
-
-         .. card::
-            :headline: Dynamic Pricing
-            :url: /solutions-library/retail-dynamic-pricing
-            :icon: mdb_custom_aggregation
-            :icon-alt: Atlas mdb_custom_aggregation icon
-
-            Implement real-time analytics and serverless functions to
-            enable dynamic pricing strategies.
-
-         .. card::
-            :headline: Real-Time Receipt Data
-            :url: /solutions-library/real-time-insights-from-receipts
-            :icon: general_features_realtime
-            :icon-alt: Atlas general_features_realtime icon
-
-            Discover how to turn receipt data into real-time insights
-            that power personalized experiences.
 
    .. tab:: Telecommunications
       :tabid: Telco
