@@ -230,18 +230,19 @@ If you encounter resource capacity issues, see :ref:`arch-center-resource-capaci
 Plan Your MongoDB Version Changes and Maintenance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We recommend that you run the latest MongoDB version as it allows you to
-take advantage of new features and provides improved security guarantees
-compared with previous versions.
+We recommend that you run the latest MongoDB version, as it allows you to
+take advantage of new features and provides improved security guarantees compared 
+with previous versions. You should ensure that you perform major version upgrades 
+far before your current version reaches 
+`end of life <https://www.mongodb.com/legal/support-policy/lifecycles>`__. 
 
-Ensure that you perform MongoDB major version upgrades far before your
-current version reaches `end of life <https://www.mongodb.com/legal/support-policy/lifecycles>`__. 
+When planning and executing a major version upgrade, we recommend that 
+you use Feature Compatibility (FCV) to ensure version compatibility. By 
+pinning your cluster's FVC, you can revert MongoDB to the previous version.
 
-You can't downgrade your MongoDB version using the {+atlas-ui+}. Because of this,
-when planning and executing a major version upgrade, we recommend that you
-work directly with MongoDB Professional or Technical Services to help you
-avoid any issues that might occur during the upgrade process.
-
+For more information, see 
+:atlas:`Manage FCV During Upgrades </tutorial/major-version-change/#manage-feature-compatibility--fcv--during-upgrades>`.
+   
 Configure Maintenance Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

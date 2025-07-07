@@ -721,9 +721,9 @@ The following examples demonstrate how to enable monitoring using |service|
               are't too high.
             - SYSTEM CPU - Ensure that the CPU usage is steady.
 
-            ..literalinclude:: /includes/examples/generated-examples/main.snippet.get-metrics-prod.go
-                :language: go
-                :caption: get-disk-metrics/main.go
+            .. literalinclude:: /includes/examples/generated-examples/main.snippet.get-metrics-prod.go
+               :language: go
+               :caption: get-disk-metrics/main.go
 
             Download Logs
             ~~~~~~~~~~~~~
