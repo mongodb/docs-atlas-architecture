@@ -32,7 +32,7 @@ to automate and scale news broadcasting.
 `MongoDB Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** `Google NotebookLM <https://notebooklm.google/>__`
+**Partners:** `Google NotebookLM <https://notebooklm.google/>`__
 
 Solution Overview
 -----------------
@@ -84,13 +84,13 @@ summaries into audio:
   <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-overview/>`__,
   to fetch relevant news articles from the database.
 
-- Generate Podcast Script: Pass the articles through an AI pipeline to
+- **Generate Podcast Script:** Pass the articles through an AI pipeline to
   create a structured, multi-voice podcast script.
 
-- Convert to Audio: Use advanced text-to-speech models to transform the
+- **Convert to Audio:** Use advanced text-to-speech models to transform the
   script into high-quality audio, stored as a .wav file.
 
-- Optimize Delivery: Cache the generated podcast to ensure seamless,
+- **Optimize Delivery:** Cache the generated podcast to ensure seamless,
   on-demand playback for users.
 
 This framework delivers high-quality, human-like narration in MP3
