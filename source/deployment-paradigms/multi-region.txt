@@ -28,10 +28,10 @@ geographies. Multi-region deployments:
   <arch-center-compliance-data-sovereignty>`, such as the EU's General Data 
   Protection Regulation (GDPR) law. You can set up one or more 
   clusters in the regions where you need to ensure data sovereignty, and configure 
-  you architecture to write that specific data to the correct clusters. 
+  your architecture to write that specific data to the correct clusters. 
   Any public data can be distributed to all of the clusters. 
   
-  For example, you have an application that requires the storage of EU customer's 
+  For example, you have an application that requires the storage of EU customers' 
   data. You can create a multi-region deployment with clusters in ``eu-west-1`` 
   and ``eu-east-1``, ``ap-south-1`` and ``ap-northeast-1``, and ``us-east-1``. 
   You store EU customer data only in ``eu-west-1`` and ``eu-east-1`` to ensure 
