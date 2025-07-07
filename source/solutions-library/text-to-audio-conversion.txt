@@ -78,7 +78,7 @@ summaries into audio:
    
    Figure 1. AI-based text-to-audio conversion architecture
 
-- Retrieve Articles: Use the `Aggregation Framework
+- **Retrieve Articles:** Use the `Aggregation Framework
   <https://www.mongodb.com/docs/manual/aggregation/>`__ and `Vector
   Search
   <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-overview/>`__,
