@@ -171,6 +171,6 @@ Learn More
 
 - :ref:`arch-center-is-ai-media-personalization`
 
-- :ref:`arch-center-is-Gen-AI-powered-video-summarization-solution`
-
 - :ref:`arch-center-is-telco-ops`
+
+- :ref:`arch-center-is-Gen-AI-powered-video-summarization-solution`
