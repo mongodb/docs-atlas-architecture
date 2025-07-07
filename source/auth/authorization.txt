@@ -26,7 +26,7 @@ resources.
 
 When implementing |service| authorization, you must use 
 :ref:`Role-Based Access Control (RBAC) <arch-center-rbac>`. Using an 
-:ref:`Identity Federation Provider's <arch-center-fip>` user groups with RBAC 
+:ref:`Federated Identity Provider's <arch-center-fip>` user groups with RBAC 
 simplifies management.
 
 The following recommendations apply to both workforce (human) and workload 
@@ -135,3 +135,7 @@ that automatically expire after the predefined times. A user can be
 created for 6 hours, 1 day, or 1 week.
 
 To learn more, see :ref:`mongodb-users`. 
+
+Examples
+--------
+For examples of configuring Authorization, see :ref:`arch-center-examples`.

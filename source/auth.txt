@@ -40,3 +40,4 @@ has no access to the system.
 
    Authentication </auth/authentication>
    Authorization </auth/authorization>
+   Auth Examples </auth/auth-examples>
