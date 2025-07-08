@@ -23,34 +23,31 @@ Auditing
 ~~~~~~~~
 
 Available on ``M10+`` {+clusters+}, database auditing lets you track system 
-activity for deployments with
-multiple users. As an |service| administrator, you can:
+activity for deployments with multiple users. By default, |service|
+performs database authentication auditing in ``M10+`` {+clusters+} to
+record authentication events, including those pertaining to:
 
-- Rely on default auditing settings in |service|. By default, |service|
-  performs database authentication auditing in ``M10+`` {+clusters+} to
-  record authentication events, including those pertaining to:
+- database users
+- source IP address
+- timestamps for both successful and failed attempts
 
-  - database users
-  - source IP addresses
-  - timestamps for successful and failed attempts
+As an |service| administrator, you can create a custom JSON audit filter in 
+MongoDB to precisely control what gets audited across your system. This approach 
+lets you specify exactly which actions, database users, and Atlas roles should 
+be monitored, giving you more granular control than the standard 
+Atlas UI filter builder.
 
-- :atlas:`Configure a JSON-formatted audit filter 
-  </database-auditing/#configure-a-custom-auditing-filter>` to
-  customize MongoDB auditing
-  and select the actions, database users, |service| roles, and |ldap| groups
-  that you want to audit. If you create a custom audit filter, you can
-  skip using the managed {+atlas-ui+} auditing filter builder and configure
-  your own tailored filter of event auditing. For a full list of
-  events you can configure for auditing, and for a list of examples,
-  see :manual:`MongoDB auditing </core/auditing>` and :atlas:`Example Auditing Filters 
-  </database-auditing/#example-auditing-filters>`.
-  
-  You can :manual:`configure manual auditing </core/auditing>` of most of the
-  documented :manual:`system event actions </reference/audit-message/mongo/#audit-event-actions--details--and-results>`
-  in |service|. Granular MongoDB database auditing allows you to track
-  usage of all DDL (Data Definition Language), DML (Data Manipulation Language),
-  and DCL (Data Control Language) commands in detail. See also
-  :atlas:`Set up Database Auditing </database-auditing>`.
+With manual auditing configuration, you can monitor almost all documented system 
+events in Atlas. The comprehensive database auditing capabilities provide detailed 
+tracking of DDL (Data Definition Language), DML (Data Manipulation Language), 
+and DCL (Data Control Language) operations, providing complete visibility into 
+database schema changes, data modifications, and permission adjustments.
+
+For implementation guidance, including complete event lists and practical 
+configuration examples, refer to the :manual:`MongoDB auditing </core/auditing>` 
+and :atlas:`Example Auditing Filters </database-auditing/#example-auditing-filters>` 
+documentation. Additional setup instructions are available in the 
+:atlas:`Set up Database Auditing </database-auditing>`.
 
 .. _accessing-audit-logs:
 
