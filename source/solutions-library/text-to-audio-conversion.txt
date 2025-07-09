@@ -131,8 +131,8 @@ Key Learnings
 -------------
 
 To create a media solution that converts news data into audio content,
-you need a system that is flexible, fast, and able to scale easily. The
-following features of MongoDB make this possible:
+you need a system that is flexible, fast, and able to scale easily.
+MongoDB makes this possible through these core strengths:
 
 - **The document model handles diverse attributes:** News data combines
   various attributes, including static fields (e.g., ID, title, body,
