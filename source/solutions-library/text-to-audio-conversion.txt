@@ -52,9 +52,9 @@ flexible, schema-less documents within a single collection. These
 documents capture both static information—such as title, content, and
 publication date—and dynamic metrics that monitor article performance
 and popularity over time, such as the number of qualified reads. You can
-also use MongoDB to store derived insights, such as sentiment analysis
-and key entities, in the same collection for analysis. You can enrich
-these insights with a generative AI pipeline.
+also enrich derived insights, such as sentiment analysis and key
+entities, with a generative AI pipeline and store them in the same
+MongoDB collection. 
 
 This adaptable structure provides a robust framework to query and
 extract the latest news and metadata. You can then transform this
