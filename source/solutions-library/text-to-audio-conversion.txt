@@ -37,61 +37,58 @@ to automate and scale news broadcasting.
 Solution Overview
 -----------------
 
-The surge in audio content demand like podcasts, with `9 million new
-listeners in the U.S. alone
-<https://advertise.acast.com/news-and-insights/future-of-podcast-advertising-in-2025-industry-leaders-predictions>`__,
-has prompted news organizations to seek efficient ways to deliver daily
-summaries. Automating this process remains challenging, requiring
-managing dynamic articles data to convert it into high-quality audio
-experiences. 
+The surge in demand for audio content has prompted news organizations to
+seek efficient ways to deliver daily summaries. For example, podcasts
+have `9 million listeners per year
+<https://advertise.acast.com/news-and-insights/future-of-podcast-advertising-in-2025-industry-leaders-predictions>`__
+in the U.S. alone. However, automating this process is challenging
+because it involves managing dynamic article data and converting it into
+high-quality audio experiences.
 
-With MongoDB and generative AI, you can build a news automation solution
-to streamline and scale podcast creation. MongoDB serves as the core
-data layer for the system, efficiently managing news articles as
-flexible, schema-less documents within a single collection. These
-documents capture both static information—such as title, content, and
-publication date—and dynamic metrics, like the number of qualified
-reads, that monitor article performance and popularity over time.
-Moreover, derived insights, such as sentiment analysis and key entities,
-can be enriched through a generative AI pipeline and added to the same
-collection for analysis.
+You can use MongoDB and generative AI to automate and streamline podcast
+creation. MongoDB serves as the core data layer for the system,
+efficiently managing news articles as flexible, schema-less documents
+within a single collection. These documents capture both static
+information—such as title, content, and publication date—and dynamic
+metrics that monitor article performance and popularity over time, such
+as the number of qualified reads. You can also use MongoDB to store
+derived insights, such as sentiment analysis and key entities, in the
+same collection for analysis. You can enrich these insights by using a
+generative AI pipeline.
 
-This adaptable structure ensures efficiency and scalability, providing a
-robust framework to query and extract the latest news and metadata. By
-integrating advanced language models, this information can be further
-transformed into audio podcasts. With this foundation in place, you
-unlock new AI-driven business opportunities, attract new customers and
-increase revenue streams.
+This adaptable structure provides a robust framework to query and
+extract the latest news and metadata. You can then transform this
+information into audio podcasts by integrating advanced language models.
+With this foundation in place, you unlock new AI-driven business
+opportunities, attract new customers and increase revenue streams.
 
 Reference Architectures
 -----------------------
 
-To implement this framework, you'll need MongoDB for data storage and
+To implement this framework, you need MongoDB for data storage and
 AI-powered speech synthesis for audio creation. You can use Google’s
 NotebookLM model to refine news text with accurate intonation and
-pacing. The steps below outline the workflow for converting news
+pacing. The diagram below outlines the workflow for converting news
 summaries into audio:
 
 .. figure:: /includes/images/industry-solutions/text-to-audio-architecture.svg
    :figwidth: 1200px
-   :alt: visualization for the network chatbot
+   :alt: visualization for text-to-audio conversion
    
    Figure 1. AI-based text-to-audio conversion architecture
 
-- **Retrieve Articles:** Use the `Aggregation Framework
-  <https://www.mongodb.com/docs/manual/aggregation/>`__ and `Vector
-  Search
-  <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-overview/>`__,
-  to fetch relevant news articles from the database.
+1. **Retrieve Articles:** Use :ref:`aggregation <aggregation>` and 
+   :ref:`Atlas Vector Search <avs-overview>` to fetch relevant news
+   articles from the database.
 
-- **Generate Podcast Script:** Pass the articles through an AI pipeline to
-  create a structured, multi-voice podcast script.
+#. **Generate Podcast Script:** Pass the articles through an AI pipeline to
+   create a structured, multi-voice podcast script.
 
-- **Convert to Audio:** Use advanced text-to-speech models to transform the
-  script into high-quality audio, stored as a .wav file.
+#. **Convert to Audio:** Use advanced text-to-speech models to transform the
+   script into high-quality audio, stored as a ``.wav`` file.
 
-- **Optimize Delivery:** Cache the generated podcast to ensure seamless,
-  on-demand playback for users.
+#. **Optimize Delivery:** Cache the generated podcast to ensure seamless,
+   on-demand playback for users.
 
 This framework delivers high-quality, human-like narration in MP3
 format, providing users with a professional and engaging listening
@@ -100,9 +97,10 @@ experience.
 Build the Solution
 ------------------
 
-This solution is part of the larger ist.media project. You can use this
-framework as inspiration for building your own customized text-to-audio
-solution. To do so, follow these steps:
+Follow these steps to build a text-to-audio solution using the
+MongoDB `ist.media <https://github.com/mongodb-industry-solutions/ist.media/tree/main>`__
+GitHub repository. You can use this framework as inspiration to 
+build your own customized text-to-audio pipeline.
 
 .. procedure::
    :style: normal
@@ -111,31 +109,30 @@ solution. To do so, follow these steps:
 
       Clone the `ist.media github repository
       <https://github.com/mongodb-industry-solutions/ist.media/tree/main>`__
-      and follow the Readme instructions to deploy the demo. 
+      and follow the ``README`` instructions to deploy the demo. 
 
    .. step:: Create a feed for news
 
       Run the demo and verify that the /feed endpoint provides the news
-      feed for the current day. Alternatively, you can supply your own
-      data—served statically by the endpoint in the same format—if you
-      prefer to skip the initial news collection mechanisms used by
-      ist.media.
+      feed for the current day. Alternatively, if you prefer not to use
+      the ist.media news collection mechanisms, you can supply your own
+      data—served statically by the endpoint in the same format.
 
    .. step:: Generate text-to-audio conversion
 
       Run the `podcast.py
       <https://github.com/mongodb-industry-solutions/ist.media/blob/main/scripts/podcast.py>`__
-      file in the ist.media demo. This script uses the notebooklm.google
-      API to generate the podcast, downloads it from storage, and saves
-      it with the date in the filename (day/month/year).
+      file in the ist.media demo. This script uses the `AutoContent API
+      <https://autocontentapi.com/>`__ to generate the podcast. It then
+      downloads and saves it with the date (day/month/year) in the
+      filename.
 
 Key Learnings
 -------------
 
-Building a news automation solution that transforms data into engaging
-audio content requires systems designed for flexibility, speed,
-scalability, and adaptability. Below are the key insights that make this
-approach successful:
+To create a media solution that converts news data into audio content,
+you need a system that is flexible, fast, and able to scale easily. The
+following features of MongoDB make this possible:
 
 - **The document model handles diverse attributes:** News data combines
   various attributes, including static fields (e.g., ID, title, body,
@@ -145,20 +142,18 @@ approach successful:
   database limitations and allowing the system to evolve smoothly.
 
 - **Speed drives efficiency:** By processing complete, self-contained
-  documents, the system avoids complex operations, enabling faster
-  enrichment, analysis, and transformation of articles into audio
-  content in near real-time.
+  documents, MongoDB avoids complex operations, enabling faster analysis
+  and near real-time transformation of articles into audio content.
 
-- **Scalability ensures reliable growth and performance:** Whether managing
-  small updates or processing large volumes of dynamic data, a scalable
-  system maintains high availability and supports seamless expansion,
-  making it ideal for handling the demands of large-scale media
-  applications.
+- **Scalability supports growth and performance:** MongoDB Atlas
+  scalable systems handle small changes and large amounts of data
+  smoothly, ensuring high performance and reliability as your media
+  application grows.
 
-- **Flexibility empowers developers:** Without rigid schemas, new data points
-  like AI insights, audience metrics, or editorial updates can be
-  integrated seamlessly, allowing experimentation, scaling, and
-  adaptation to evolving news consumption.
+- **Flexible systems empower developers:** Without fixed schemas,
+  developers can easily add new information—like AI insights, audience
+  metrics, or editorial updates—making it simple to adapt and respond to
+  evolving news consumption.
 
 Authors
 -------
