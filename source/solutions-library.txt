@@ -539,7 +539,7 @@ kick-start their projects.
             Discover how to turn receipt data into real-time insights
             that power personalized experiences.
 
-   .. tab:: Telco
+   .. tab:: Telecommunications
       :tabid: Telco
 
       Gen AI
