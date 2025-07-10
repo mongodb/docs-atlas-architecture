@@ -1,6 +1,6 @@
-=======================
-Retail AI-Driven Retail
-=======================
+================
+AI-Driven Retail
+================
 
 .. toctree::
    :titlesonly:

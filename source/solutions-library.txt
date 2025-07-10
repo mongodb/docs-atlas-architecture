@@ -511,7 +511,7 @@ kick-start their projects.
             interactions with customers, enhancing their shopping
             experience.
 
-      In Store and Omnichannel
+      In-Store and Omnichannel
       ------------------------
 
       .. card-group::
