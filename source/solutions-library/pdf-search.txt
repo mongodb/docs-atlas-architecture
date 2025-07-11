@@ -57,7 +57,7 @@ them to harness the power of unstructured data while promoting
 accessibility and flexibility. They are especially helpful for PDFs, which are
 common yet difficult to search. RAG makes PDF search more efficient and 
 accurate. Now, users can simply type a question in natural language 
-and the app will sift through the company data, provide an answer, 
+and the application will sift through the company data, provide an answer, 
 summarize the content of the documents, and indicate the source of the 
 information, including the page and paragraph where it was found.
 
@@ -68,7 +68,7 @@ PDF search application that combines MongoDB, Superduper, and LLMs. Our use
 case for this solution focuses on a claims adjuster or an underwriter
 handling a specific case. Analyzing a PDF of guidelines that is associated
 with a specific customer helps determine the loss amount, in the event of an
-accident, or the new premium, in the case of a policy renewal. The app
+accident, or the new premium, in the case of a policy renewal. The application
 answers questions and displays the relevant sections of
 the document.
 
@@ -77,9 +77,8 @@ Combining `Atlas Vector Search
 `LLMs
 <https://www.mongodb.com/resources/basics/large-language-models>`__ to
 build RAG apps can directly impact the bottom line of an insurance
-company. Visit the `Atlas Vector Search Quick Start guide
-<https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
-to try our semantic search tool now.
+company. Visit the :ref:`Atlas Vector Search Quick Start <vector-search-quick-start>`
+page to try our semantic search tool now.
 
 .. video:: https://youtu.be/_w9okXmzTJw
 
@@ -117,8 +116,7 @@ on country of residency. When the user selects a customer and asks a
 question, the system runs a vector search query only on that particular
 document, seamlessly filtering out the non-relevant ones. This is made
 possible by the :ref:`pre-filtering <vectorSearch-agg-pipeline-filter>`
-(see code snippets below) field included in the index and in the search
-query. 
+field included in the index and the search query (see code snippets below). 
 
 Atlas Vector Search also takes advantage of MongoDB's new `Search Nodes
 <https://www.mongodb.com/blog/post/search-nodes-now-public-preview-performance-scale-dedicated-infrastructure>`__
@@ -127,9 +125,9 @@ of resourcing for specific workload needs. Search Nodes provide
 dedicated infrastructure for `Atlas Search
 <https://www.mongodb.com/products/platform/atlas-search>`__ and Vector
 Search workloads, allowing you to optimize compute resources and fully
-scale search needs independent of the database. Search Nodes provide
-better performance at scale, delivering workload isolation, higher
-availability, and the ability to better optimize resource usage.
+scale search needs independent of the database. Search Nodes provide 
+workload isolation, higher availability, and the ability to better 
+optimize resource usage.
 
 .. figure:: /includes/images/industry-solutions/is-pdf-search-fig2.svg
    :figwidth: 1200px
@@ -198,7 +196,7 @@ tools, eliminating data migration and duplication.
   own models on their own infrastructure.
 
 - Easily switch from embedding models to other API providers. They can
-  also host their on models on HuggingFace or other platforms.
+  also host their models on HuggingFace or other platforms.
 
 Superduper.io provides an array of sample use cases and notebooks that
 developers can use to get started, including vector search with MongoDB,
@@ -225,9 +223,8 @@ Key Learnings
   important to consider privacy and data protection requirements. You
   can deploy a model locally if your data needs to remain on the
   servers. Otherwise, you can call an API and get your vector embeddings
-  back, as explained in `this
-  <https://www.mongodb.com/docs/atlas/atlas-vector-search/create-embeddings/>`__
-  tutorial. You can use `Voyage AI (acquired by MongoDB)
+  back, as explained in :ref:`this <create-vector-embeddings>`
+  tutorial. You can use `Voyage AI
   <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai>`__
   or open-source models. 
 
