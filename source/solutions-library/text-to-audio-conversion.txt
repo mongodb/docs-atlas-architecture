@@ -136,12 +136,11 @@ you need a system that is flexible, fast, and able to scale easily.
 MongoDB makes this possible through these core strengths:
 
 - **The document model handles diverse attributes:** News data combines
-  various attributes, including static fields such as ID, title, body,
-  date, and image URL; dynamic metadata such as read count; AI-generated
-  insights such as keywords and article sentiment; and embeddings for
-  semantic search. The document model supports all these elements,
-  removing database limitations and allowing the system to evolve
-  smoothly.
+  various attributes, including static fields such as ID, title, and
+  body, dynamic metadata such as read count, AI-generated insights such
+  as keywords and article sentiment, and embeddings for semantic search.
+  The document model supports all these elements, removing database
+  limitations and allowing the system to evolve smoothly.
 
 - **Speed ensures operational efficiency:** By processing complete,
   self-contained documents, MongoDB avoids complex operations, enabling
