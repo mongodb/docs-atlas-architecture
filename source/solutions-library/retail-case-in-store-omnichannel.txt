@@ -1,6 +1,6 @@
-===============================
-Retail In-Store and Omnichannel
-===============================
+=================================
+Retail - In-Store and Omnichannel
+=================================
 
 .. toctree::
    :titlesonly:
