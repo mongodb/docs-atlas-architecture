@@ -1,6 +1,6 @@
-=======================
-Personalized E-commerce
-=======================
+==============================
+Retail Personalized E-commerce
+==============================
 
 .. toctree::
    :titlesonly:
