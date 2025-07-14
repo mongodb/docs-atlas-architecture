@@ -52,9 +52,9 @@ flexible, schema-less documents within a single collection. These
 documents capture both static information—such as title, content, and
 publication date—and dynamic metrics that monitor article performance
 and popularity over time, such as the number of qualified reads. You can
-also enrich derived insights, such as sentiment analysis and key
-entities, with a generative AI pipeline and store them in the same
-MongoDB collection. 
+also store derived insights, such as sentiment analysis and key
+entities, in your MongoDB collection and enrich them with a generative
+AI pipeline.
 
 This adaptable structure provides a robust framework to query and
 extract the latest news and metadata. You can then transform this
@@ -113,16 +113,17 @@ build your own customized text-to-audio pipeline.
 
    .. step:: Create a feed for news
 
-      Run the demo and verify that the /feed endpoint provides the news
-      feed for the current day. Alternatively, if you prefer not to use
-      the ist.media news collection mechanisms, you can supply your own
-      data—served statically by the endpoint in the same format.
+      Run the demo and verify that the ``/feed`` endpoint provides the
+      news feed for the current day. Alternatively, if you prefer not to
+      use the ist.media news collection mechanisms, you can supply your
+      own data, which is served statically by the endpoint in the same
+      format.
 
    .. step:: Generate text-to-audio conversion
 
       Run the `podcast.py
       <https://github.com/mongodb-industry-solutions/ist.media/blob/main/scripts/podcast.py>`__
-      file in the ist.media demo. This script uses the `AutoContent API
+      script in the ist.media demo. This script uses the `AutoContent API
       <https://autocontentapi.com/>`__ to generate the podcast. It then
       downloads and saves it with the date (day/month/year) in the
       filename.
@@ -135,26 +136,26 @@ you need a system that is flexible, fast, and able to scale easily.
 MongoDB makes this possible through these core strengths:
 
 - **The document model handles diverse attributes:** News data combines
-  various attributes, including static fields (e.g., ID, title, body,
-  date, image URL), dynamic metadata (e.g., read count), AI-generated
-  insights (e.g., keywords, sentiment), and embeddings for semantic
-  search. The document model supports all these elements, removing
-  database limitations and allowing the system to evolve smoothly.
+  various attributes, including static fields such as ID, title, body,
+  date, and image URL; dynamic metadata such as read count; AI-generated
+  insights such as keywords and article sentiment; and embeddings for
+  semantic search. The document model supports all these elements,
+  removing database limitations and allowing the system to evolve
+  smoothly.
 
 - **Speed ensures operational efficiency:** By processing complete,
   self-contained documents, MongoDB avoids complex operations, enabling
   faster analysis and near real-time transformation of articles into
   audio content.
 
-- **Scalable systems enable growth:** MongoDB Atlas
-  scalable systems handle small changes and large amounts of data
-  smoothly, ensuring high performance and reliability as your media
-  application grows.
+- **Scalable systems enable growth:** MongoDB Atlas handles both small
+  changes and large amounts of data smoothly, ensuring high performance
+  and reliability as your media application grows.
 
 - **Flexible systems empower developers:** Without fixed schemas,
-  developers can easily add new information—like AI insights, audience
-  metrics, or editorial updates—making it simple to adapt and respond to
-  evolving news consumption.
+  developers can easily add new information, like AI insights, audience
+  metrics, or editorial updates. This makes it simple to adapt and
+  respond to evolving news consumption.
 
 Authors
 -------
