@@ -427,7 +427,7 @@ kick-start their projects.
             :icon: mdb_vector_search
             :icon-alt: Atlas mdb_vector_search icon
 
-            Automate news broadcasting combining generative AI with
+            Automate news broadcasting by combining generative AI with
             MongoDB.
 
       .. App-Driven Analytics
