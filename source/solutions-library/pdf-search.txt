@@ -82,8 +82,8 @@ company. To try our semantic search tool, visit the
 
 .. video:: https://youtu.be/_w9okXmzTJw
 
-Building the Solution and Reference Architecture
-------------------------------------------------
+Reference Architecture
+----------------------
 
 Combining MongoDB and Superduper allows you to build an information
 retrieval system with ease. The process involves the following steps:
@@ -205,18 +205,20 @@ many more. This solution's demo is adapted from a
 `previously developed app <https://github.com/SuperDuperDB/poc-volvo>`__ from
 Superduper.io. 
 
-Key Learnings
--------------
+Build the Solution
+------------------
 
-.. MAYA: this should go somewhere before key learnings.
-
-- Build the solution following the instructions in this `Github repo
+Build the solution following the instructions in this `Github repo
   <https://github.com/mongodb-industry-solutions/Insurance-PDF-Search/tree/main>`__.
   The solution is composed of two steps:
 
   #. The initialization script breaks down the PDFs into chunks and then
      turns them into vector embeddings.
   #. The querying step allows the user to interrogate the documents.
+
+
+Key Learnings
+-------------
 
 - The embedding generation process can be
   carried out using different models and deployment options. It is
