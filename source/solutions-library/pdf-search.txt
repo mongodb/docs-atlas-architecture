@@ -226,7 +226,8 @@ Key Learnings
   back, as explained in :ref:`this <create-vector-embeddings>`
   tutorial. You can use `Voyage AI
   <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai>`__
-  or open-source models. 
+  or open-source models. When building your system, consider privacy and
+  security requirements.
 
 - **Superduper integrates AI models and workflow:** Superduper is the framework 
   that provides a simple and standard interface to interact with Vector Search and LLMs.
