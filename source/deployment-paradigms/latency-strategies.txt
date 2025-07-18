@@ -20,7 +20,7 @@ Physical Distance
 -----------------
 Physical distance is the primary cause of latency. The distance between 
 users and your application, between your application and your data, and between 
-{+cluster+} nodes all impact system latency.
+{+cluster+} nodes all impact system latency and application performance.
 
 To reduce latency for read operations, it's crucial to place both your 
 application and data geographically closer to users. 
@@ -35,15 +35,19 @@ Consider the following factors:
 - **Write Concern Levels:** There is a trade-off between write durability and 
   write latency. The write concern level you configure (for example, 
   ``w: "majority"``) defines replication across multiple data centers, 
-  potentially increasing latency for more durable writes. 
+  potentially increasing latency for more durable writes. However, this ensures 
+  that all data is committed to secondaries and protects you from rolling back 
+  writes in the event of failover.
 
 - **Order of Regions:** The order of regions in your configuration can determine 
   the priority for the primary node location, which can impact write latency 
   depending on where your users are located. For example, if most of your users 
-  are in Asia, your primary node should also be in a region in Asia. 
+  are in Asia, you should set the highest priority for the Asia region so that 
+  it is elected the primary. 
 
 - **Mirrored Reads:** Mirrored reads reduce the impact of primary elections 
-  following an outage by pre-warming the caches on the secondary nodes. 
+  following an outage by pre-warming the caches on the secondary nodes. For more 
+  information, see :manual:`Mirrored Reads </replication/#std-label-mirrored-reads>`.
 
 - **Read Preference:** By default, applications send read operations to the 
   primary node. However, you can configure the read preference to send read 
@@ -63,7 +67,8 @@ Consider the following factors:
 
 Network Configuration
 ---------------------
-You can further reduce latency using the following network connectivity options: 
+You can increase security and further reduce latency using the following network 
+connectivity options: 
 
 - **Private Endpoints:** 
   :atlas:`Private endpoints </data-federation/admin/manage-private-endpoint/>` 
@@ -73,7 +78,9 @@ You can further reduce latency using the following network connectivity options:
 
 - **VPC Peering:** 
   Configure :atlas:`VPC peering </atlas-stream-processing/manage-vpc-peering-connections/>` 
-  in your replica sets to allow applications to connect to peered regions.
+  in your replica sets to allow applications to connect to peered regions. 
+  In the event of a failover, VPC peering provides a way for an application 
+  server to detect a new primary node and route traffic accordingly. 
 
 Data Modeling and Query Optimization
 ------------------------------------
@@ -97,5 +104,5 @@ Monitoring and Testing Latency
 observe latency metrics for different regions. You can also implement 
 application-level monitoring to track end-to-end latency to and from the 
 application. Before final production deployment, we suggest conducting performance 
-testing under various multi-region scenarios to identify and address latency 
-bottlenecks.
+testing under the various :ref:`multi-region scenarios <arch-center-paradigms-multi-region>` 
+to identify and address latency bottlenecks.

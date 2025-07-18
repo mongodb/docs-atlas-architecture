@@ -18,8 +18,8 @@ deployments are supported on all {+cluster+} tiers. They provide
 the least expensive option for applications and are a good choice when 
 cost is a factor, and the low risk of a regional failure is acceptable. 
 
-All {+service+} providers have regions that support availability zones within 
-a region, which adds protection in the case of a single zone outage. The provider 
+Each cloud provider supports availability zones within a region, which adds 
+protection in the case of a single zone outage. The provider 
 automatically reroutes traffic to a node in another availability zone within the 
 region to ensure availability. This is similar to multi-regional deployments but 
 on a smaller scale.
@@ -54,11 +54,6 @@ offering availability if there's a zonal outage that affects the
 primary node.
 
 If your application requires low latency and cross-region or cross-provider high
-availability, consider a :ref:`arch-center-paradigms-multi-region` or 
-:ref:`arch-center-paradigms-multi-cloud`, respectively.
-
-If your application requires data sovereignty and
-cross-region or cross-provider high
 availability, consider a :ref:`arch-center-paradigms-multi-region` or 
 :ref:`arch-center-paradigms-multi-cloud`, respectively.
 
