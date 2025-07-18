@@ -75,18 +75,18 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
 
       - Use :atlas:`Workforce Identity Federation </workforce-oidc/>`.
 
-      - Use the :cli:`atlas-dbusers-certs-create <command/atlas-dbusers-certs-create>`
+      - Use the :atlascli:`atlas-dbusers-certs-create <command/atlas-dbusers-certs-create>`
         command to create Atlas-managed MFA (Multi-Factor Authentication)
         :atlas:`X.509 client </security-self-managed-x509>`  certificates.
 
-         ..note::
+        .. note::
 
            To use self-managed certificates, you must first configure 
-           :atlas:`X.509 </operator/v2.7/ak8so-x509/>`
+           :atlas:`X.509 </operator/v2.7/ak8so-x509/>`:
 
-         .. code-block::
+           .. code-block::
 
-            atlas dbusers certs create --username <USERNAME> --projectId <PROJECT_ID> [--monthsUntilExpiration <MONTHS>] [--output json]
+              atlas dbusers certs create --username <USERNAME> --projectId <PROJECT_ID> [--monthsUntilExpiration <MONTHS>] [--output json]
 
 
       Workload (Machine) Access
@@ -121,16 +121,15 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
       authentication and authorization. Before you can create
       resources with Terraform, you must: 
 
-      - :ref:`Create your paying organization
-         <configure-paying-org>` and :ref:`create an API key
-         <atlas-admin-api-access>` for the paying organization.
-         Store your API key as environment variables by running the
-         following command in the terminal: 
+      - :ref:`Create your paying organization <configure-paying-org>` and 
+        :ref:`create an API key <atlas-admin-api-access>` for the paying 
+        organization. Store your API key as environment variables by running the
+        following command in the terminal: 
 
-         .. code-block::
+        .. code-block::
 
-            export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
-            export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
+           export MONGODB_ATLAS_PUBLIC_KEY="<insert your public key here>"
+           export MONGODB_ATLAS_PRIVATE_KEY="<insert your private key here>"
 
       - `Install Terraform <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>`__
 
@@ -146,21 +145,21 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
       azure.tf 
       ````````
 
-      .. include:: /includes/examples/tf-example-auth-tfazure.rst
+      .. include:: /includes/examples/terraform/tf-example-auth-tfazure.rst
 
       variables.tf 
       ````````````
 
-      .. include:: /includes/examples/tf-example-auth-variables-stagingprod.rst
+      .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-variables-stagingprod.rst
 
       terraform.tfvars 
       ````````````````
-      .. include:: /includes/examples/tf-example-auth-tfvars-stagingprod.rst
+      .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-tfvars-stagingprod.rst
 
       outputs.tf 
       ``````````
 
-      .. include:: /includes/examples/tf-example-auth-tfoutputs-stagingprod.rst
+      .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-tfoutputs-stagingprod.rst
 
       Configure Federated Settings for Identity Provider 
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -170,12 +169,12 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
       |azure|. It allows access by using OIDC tokens issued by |azure|
       Active Directory. 
 
-      .. include:: /includes/examples/tf-example-auth-oidc-stagingprod.rst
+      .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-oidc-stagingprod.rst
 
       Use the following to create an :abbr:`OIDC (OpenID Connect)`
       federated authentication user. 
 
-      .. include:: /includes/examples/tf-example-auth-create-oidc-user-stagingprod.rst
+      .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-create-oidc-user-stagingprod.rst
 
       Configure Custom Role 
       ~~~~~~~~~~~~~~~~~~~~~
@@ -184,13 +183,10 @@ To learn about Terraform, see :ref:`getting-started-terraform` and the
       which allows update, add, and delete operations on any collection
       in the database named ``myDb``.
 
-      .. include:: /includes/examples/tf-example-auth-create-custom-role-stagingprod.rst
+      .. include:: /includes/examples/terraform/staging-prod/tf-example-auth-create-custom-role-stagingprod.rst
 
 
-
-
-.. include:: /includes/complete-examples.rst 
-
+.. include:: /includes/complete-examples-terraform.rst 
 
 
 For an example of an |service| project with the |service| role assigned
