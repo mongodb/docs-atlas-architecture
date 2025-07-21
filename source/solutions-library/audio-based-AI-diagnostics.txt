@@ -115,7 +115,7 @@ Then, upload the vectors to MongoDB Atlas. After only a few examples of sounds
 have been added to the database, they are ready to be searched and compared
 with the sound emitted by equipment during real-time operations.
 
-**#. Real-time Audio Diagnosis**
+**2. Real-time Audio Diagnosis**
 
 Next, put your equipment in normal operation and start capturing the sound
 it makes in real time. The preceding video demonstration captures one-second
