@@ -100,7 +100,7 @@ Reference Architectures
 
 This solution is divided into two parts:
 
-**#. Audio Preparation**
+**1. Audio Preparation**
 
 First, the solution captures the audio from the equipment in different
 situations, such as normal operation, high or low load, obstructed equipment, 
