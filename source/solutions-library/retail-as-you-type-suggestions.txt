@@ -32,38 +32,28 @@ Add fast and relevant as-you-type suggestions to your application, incorporating
 Solution Overview
 -----------------
 
-The quicker a user can navigate to desired, relevant content, the sooner
-they can leverage that knowledge, buy that product, help that customer,
-and make those critical decisions. Picture getting to “The Matrix” by
-only typing “matr,” or finding replacement air filters for the ones you
-bought a few months ago by typing only “fi” in the search box, and your
-previous order is the top suggestion. These are examples of as-you-type
-suggestions. Vector Search and full-text search are great at matching
-content semantically and fuzzily, when there is a complete query or very
+As-you-type functionality — also known as
+autocomplete, autosuggest, typeahead, search-ahead, and predictive
+search — often refers to low-level character matching, as opposed to a
+purpose-built, comprehensive solution. This functionality helps users navigate
+quickly to desired, relevant content. Looking up the movie 
+"The Matrix" by typing “matr,” into the search bar is an example of as-you-type 
+functionality.
+
+Vector Search and full-text search are great at matching
+content semantically, when there is a complete query, or very
 close word matches. But as-you-type functionality can return relevant
 results with even fewer characters and where there's even more distance
 between the inputted text and the target keyword. Only a lexical-based
 solution that facilitates partial matching like as-you-type suggestions
 can provide this level of relevant, context-sensitive results.
 
-**As-you-type functionality — also known as
-autocomplete, autosuggest, typeahead, search-ahead, and predictive
-search — often refers to low-level character matching, as opposed to a
-purpose-built, comprehensive solution. As demonstrated here, we use
-“as-you-type suggestions” to refer to a complete solution encompassing
-tunable relevancy, filtering, and highlighting.**
-
-With this solution, you’ll be able to add fast and relevant as-you-type
-suggestions to your application, incorporating user context and
-domain-specific ranking factors.
-
-
 Reference Architectures
 -----------------------
 
 This as-you-type suggestion solution is architecturally straightforward
 — as a user types, requests are sent to Atlas Search, which returns
-relevant results. The heart of the architecture is a specialized
+relevant results. The architecture is structured around a specialized
 ``entities`` collection and the corresponding queries.
 
 .. figure:: /includes/images/industry-solutions/retail-as-you-type-architecture.png
@@ -80,11 +70,11 @@ domain. A requirement of this solution is that entities must be modeled
 as individual documents in a specialized collection tuned for
 as-you-type suggestibility. 
 
-It's often the case that your main collection represents one type of
+It's often the case that the main collection represents one type of
 entity as documents, and other domain entities as metadata fields or
-embedded documents. For example, let’s take the sample movies data
+embedded documents. For example, using the sample movies data
 available within Atlas: as a user types, movie titles certainly should
-be suggested. But what about cast member names? Can I find movies
+be suggested. But what about cast member names? Is it possible to find movies
 starring Keanu Reeves by typing only "kea"? What about documentaries by
 only typing "doc"?
 
@@ -105,11 +95,10 @@ Modeling entities directly as individual documents allows each to carry
 optional metadata fields to assist in ranking, displaying, filtering, or
 grouping them. 
 
-At the heart of this solution, the straightforward document model feeds
-the ``name`` field through a sophisticated index configuration, which slices
-and dices the values in a multitude of ways suitable for querying in
-several ways. The power of this solution comes from the synergy of
-multiple indexing and querying strategies.
+The straightforward document model feeds the ``name`` field through a 
+sophisticated index configuration, which divides the values in a 
+multitude of ways suitable for querying in several ways. The power of this 
+solution comes from the union of multiple indexing and querying strategies.
 
 .. code-block:: javascript  
 
@@ -138,9 +127,9 @@ Importing Entities
 ~~~~~~~~~~~~~~~~~~
 
 While there are multiple ways to populate the
-“entities” collection, one straightforward way to populate it is with a
-short and sweet `aggregation pipeline <https://www.mongodb.com/basics/aggregation-pipeline>`__ run on the main collection to bring
-in the unique titles across all movies:
+“entities” collection, one straightforward way to populate it is with an
+`aggregation pipeline <https://www.mongodb.com/basics/aggregation-pipeline>`__ 
+run on the main collection to bring in the unique titles across all movies:
 
 .. code-block:: javascript  
 
