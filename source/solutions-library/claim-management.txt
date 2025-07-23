@@ -18,8 +18,8 @@ Claim Management Using LLMs and Vector Search for RAG
    :depth: 1
    :class: singlecol
 
-Discover how to combine Atlas Vector Search and large language models (LLMs) to 
-streamline the claim adjustment process.
+Discover how to combine MongoDB Atlas Vector Search and large language models
+(LLMs) to streamline the claim adjustment process.
 
 **Use cases:** `Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__, 
 `Content Management <https://www.mongodb.com/solutions/use-cases/content-management>`__
@@ -38,28 +38,22 @@ streamline the claim adjustment process.
 Solution Overview
 -----------------
 
-One of the biggest challenges for claim adjusters is pulling and aggregating 
-information from disparate systems and diverse data formats. PDFs of policy 
-guidelines might be stored in a content-sharing platform, customer information 
-locked in a legacy CRM, and claim-related pictures and voice reports in yet 
-another tool. All of this data is not just fragmented across siloed sources and 
-hard to find but also in formats that have been historically nearly impossible 
-to index with traditional methods. Over the years, insurance companies have been 
-accumulating terabytes of `unstructured data <https://www.mongodb.com/unstructured-data>`__ 
-in their datastores, but failing to capitalize on the possibility of accessing 
-and leveraging it to uncover business insights, deliver better customer 
-experiences, and streamline operations. Some of our customers even admit they’re 
-not fully aware of all of the data that’s truly in their archives. There’s a 
-tremendous opportunity now to leverage all of this unstructured data to the 
-benefit of these organizations and their customers.
+One of the biggest challenges for claim adjusters is aggregating information
+from disparate systems and diverse data formats. Over the years, insurance
+companies have accumulated terabytes of `unstructured data
+<https://www.mongodb.com/unstructured-data>`__ in their datastores, but fail to
+capitalize on it to uncover business insights, deliver better customer
+experiences, and streamline operations.
 
-Our solution addresses these challenges by combining the power of 
-`Altas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
-and a `Large Language Model (LLM) <https://www.mongodb.com/basics/large-language-models>`__ to
-in a `retrieval augmented generation (RAG) <https://www.mongodb.com/basics/retrieval-augmented-generation>`__
-system, allowing organizations to go beyond the limitations of baseline 
-foundational models, making them context-aware by feeding them proprietary data. 
-In this way, they can leverage the full potential of AI to streamline operations.
+To benefit these organizations and their customers, MongoDB's solution combines
+the power of `Altas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__ and a `Large
+Language Models (LLMs) <https://www.mongodb.com/basics/large-language-models>`__
+in a `retrieval augmented generation (RAG)
+<https://www.mongodb.com/basics/retrieval-augmented-generation>`__ system, to
+allow organizations to go beyond the limitations of baseline foundational
+models. By feeding models propriety data, they are made context aware and can
+leverage the full potential of AI to streamline operations.
 
 Reference Architectures
 -----------------------
@@ -68,7 +62,7 @@ With MongoDB
 ~~~~~~~~~~~~
 
 MongoDB Atlas combines transactional and search capabilities in the same 
-platform, providing a unified development experience. As embeddings are stored 
+platform to provide a unified development experience. As embeddings are stored 
 alongside existing data, when running a vector search query, we get the document 
 containing both the vector embeddings and the associated metadata, eliminating 
 the need to retrieve the data elsewhere. This is a great advantage for 
@@ -109,8 +103,8 @@ used to retrieve documents associated with the user prompt.
       claimDescriptionEmbedding: [0.3, 0.6, ..., 11.2]
    }
 
-Building the Solution
----------------------
+Build the Solution
+------------------
 
 The instructions to build the demo are included in the README of `this
 Github repo <https://github.com/mongodb-industry-solutions/RAG-Insurance>`__.
