@@ -55,22 +55,32 @@ allow organizations to go beyond the limitations of baseline foundational
 models. By feeding models propriety data, they are made context aware and can
 leverage the full potential of AI to streamline operations.
 
-Reference Architectures
------------------------
+Reference Architecture
+----------------------
 
 With MongoDB
 ~~~~~~~~~~~~
 
-MongoDB Atlas combines transactional and search capabilities in the same 
-platform to provide a unified development experience. As embeddings are stored 
-alongside existing data, when running a vector search query, we get the document 
-containing both the vector embeddings and the associated metadata, eliminating 
-the need to retrieve the data elsewhere. This is a great advantage for 
-developers who don’t need to learn to use and maintain a separate technology and
-can fully focus on building their apps.
+To provide a unified development experience, documents are stored alongside
+their vector embeddings and associated metadata, eliminating the need to
+retrieve data elsewhere. This allows users to focus on building their application,
+instead of maintaining a separate technology.
 
 Ultimately, the data obtained from MongoDB Vector Search is fed to the LLM as 
 context.
+
+The process of the RAG querying flow is as follows:
+
+#. The user writes a prompt in natural language.
+
+#. Voyage AI's embedding model vectorizes the prompt.
+
+#. Atlas Vector Search uses the vectorized prompt to retrieve relevant
+   documents.
+
+#. LLM uses both the context and original question to generate an answer.
+
+#. The user receives an answer.
 
 .. figure:: /includes/images/industry-solutions/rag-querying-flow.svg
    :figwidth: 1200px
