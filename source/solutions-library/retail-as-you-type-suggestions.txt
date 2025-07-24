@@ -35,14 +35,14 @@ Solution Overview
 As-you-type functionality — also known as
 autocomplete, autosuggest, typeahead, search-ahead, and predictive
 search — often refers to low-level character matching, as opposed to a
-purpose-built, comprehensive solution. This functionality helps users navigate
+purpose-built, comprehensive solution. This functionality helps you navigate
 quickly to desired, relevant content. Looking up the movie 
 "The Matrix" by typing “matr,” into the search bar is an example of as-you-type 
 functionality.
 
 Vector Search and full-text search are great at matching
 content semantically, when there is a complete query, or very
-close word matches. But as-you-type functionality can return relevant
+close word matches. However, as-you-type functionality can return relevant
 results with even fewer characters and where there's even more distance
 between the inputted text and the target keyword. Only a lexical-based
 solution that facilitates partial matching like as-you-type suggestions
@@ -51,10 +51,10 @@ can provide this level of relevant, context-sensitive results.
 Reference Architectures
 -----------------------
 
-This as-you-type suggestion solution is architecturally straightforward
-— as a user types, requests are sent to Atlas Search, which returns
-relevant results. The architecture is structured around a specialized
-``entities`` collection and the corresponding queries.
+The as-you-type suggestion solution is architecturally straightforward. As you 
+type, requests are sent to Atlas Search, which returns relevant results.
+The architecture is structured around a specialized ``entities``  collection
+and the corresponding queries.
 
 .. figure:: /includes/images/industry-solutions/retail-as-you-type-architecture.png
    :figwidth: 1200px
@@ -125,8 +125,8 @@ steps:
 Importing Entities 
 ~~~~~~~~~~~~~~~~~~
 
-While there are multiple ways to populate the
-“entities” collection, one straightforward way to populate it is with an
+While there are multiple ways to populate the “entities” collection,
+one straightforward way to populate it is with an
 `aggregation pipeline <https://www.mongodb.com/basics/aggregation-pipeline>`__ 
 run on the main collection to bring in the unique titles across all movies:
 
@@ -204,10 +204,10 @@ The ``type`` field is indexed as both a ``token`` field, for ``equals`` or ``in`
 filtering, and a ``stringFacet`` field to provide a means to get counts
 across the results of each entity type.
 
-Any other fields added beyond ``_id``, ``type``, and ``name`` are handled by the
-index definition, either through dynamic mapping or the static
-definitions you provide. In this example, ``weight`` is custom and handled
-dynamically as a numeric type.
+The index definition handles any other fields added beyond ``_id``, ``type``, 
+and ``name``, either through dynamic mapping or the static definitions you 
+provide. In this example, ``weight`` is custom and handled dynamically as a 
+numeric type.
 
 Searching for Suggestions 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -215,13 +215,12 @@ Searching for Suggestions
 The resulting specialized search index provides the foundation for
 as-you-type queries. The ``name`` field is indexed in a number of ways and
 matched against users typing with various tunable query operators.
-The idea is to comare the query operators to the differently analyzed
-mappings and see what matches. The more matches that are found, the higher the
+The idea is to compare the query operators to the differently analyzed
+mappings and see what matches. The more matches found, the higher the
 suggestion is ranked. Each of the query clauses can be independently
-increased and summed giving a relevancy score for the matching entity.
+increased and summed, giving a relevancy score for the matching entity.
 These scores could be further increased by other factors such as an
 optional entity ``weight`` field. 
-
 
 .. figure:: /includes/images/industry-solutions/retail-as-you-type-querying.png
    :figwidth: 1200px
@@ -229,9 +228,8 @@ optional entity ``weight`` field.
 
    Figure 3. Example query and relevancy scoring computation
 
-Generally, the behavior of a user selecting a suggestion is to then
-perform a targeted traditional search for the selected item, which would
-in turn surface all matching items.
+Generally, a user selecting a suggestion then performs a a targeted traditional 
+search for the selected item. The search then returns all matching items.
 
 .. code-block:: javascript
 
