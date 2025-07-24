@@ -108,7 +108,7 @@ alongside their related document.
      
      - Stores claim information. The relevant fields are
        the ``claimDescription`` field and its corresponding embedding
-       ``claimDescriptionEmbedding`` This embedding is indexed and used to
+       ``claimDescriptionEmbedding``. This embedding is indexed and used to
        retrieve documents associated with the user prompt.
 
      - .. code-block:: javascript
@@ -151,42 +151,55 @@ alongside their related document.
 Build the Solution
 ------------------
 
-The instructions to build the demo are included in the README of `this
-Github repo <https://github.com/mongodb-industry-solutions/RAG-Insurance>`__.
+For detailed setup instructions, follow the README of `this
+Github repository <https://github.com/mongodb-industry-solutions/RAG-Insurance>`__.
 You’ll be guided through the following steps:
 
-- AWS Account with Bedrock access
-- Atlas connection setup
-- Dataset download
-- LLM configuration options
-- Vector Search index creation
+To build the solution, follow these instructions:
 
-Visit the `Atlas Vector Search Quick Start guide
-<https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
-to try our semantic search tool now.
+.. procedure::
+   :style: normal
 
-This `document
-<https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-type/#create-an-atlas-vector-search-index>`__
-walks you through the creation and configuration of the Vector Search
-index. Make sure you follow this structure:
+   .. step:: Set up MongoDB database and collections
 
-.. code-block:: json
-   :copyable: true 
+      Create a new database in MongoDB Atlas called ``demo_rag_insurance`` and
+      use the provided dataset ``demo_rag_insurance_claims.json`` to create a
+      collection called ``claims_final``.
 
-   {
-      "fields": [
-         { 
-            "type": "vector", 
-            "path": "claimDescriptionEmbeddingCohere",
-            "numDimensions": 350, 
-            "similarity": "cosine"
+   .. step:: Create a Vector Search Index
+
+      `Create and configure an Atlas Vector Search Index
+      <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-type/#create-an-atlas-vector-search-index>`__
+      for ``claimDescriptionEmbeddingCohere`` called
+      ``vector_index_claim_description_cohere``. You must structure the search index as follows:
+
+      .. code-block:: json
+         :copyable: true 
+
+         {
+            "fields": [
+               { 
+                  "type": "vector", 
+                  "path": "claimDescriptionEmbeddingCohere",
+                  "numDimensions": 350, 
+                  "similarity": "cosine"
+               }
+            ]
          }
-      ]
-   }
+
+   .. step:: Configure the Backend
+
+   .. step:: Interact with the API
+
+   .. step:: Connect to the Frontend
 
 Ultimately, you have to run both the front and the back end. You’ll
 access a web UI that allows you to ask questions to the LLM, obtain an
 answer, and see the reference documents used as context.
+
+Visit the `Atlas Vector Search Quick Start guide
+<https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
+to try our semantic search tool now.
 
 Key Learnings
 -------------
