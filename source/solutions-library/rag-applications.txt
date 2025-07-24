@@ -39,15 +39,13 @@ Stream Processing
 Solution Overview
 -----------------
 
-Whether organizations leverage AI to optimize business processes or enhance
-customer-facing applications, providing AI models with up-to-date data is
-essential to delivering a differentiated experience. While retrieval-augmented
-generation (`RAG
+Providing AI models with up-to-date data is essential to delivering a
+differentiated experience. While retrieval-augmented generation (`RAG
 <https://www.mongodb.com/basics/retrieval-augmented-generation>`__) systems
 enable organizations to ground large language models (`LLMs
-<https://www.mongodb.com/basics/large-language-models>`__) easily
-and foundational models with the truth of their proprietary data, keeping that
-data fresh adds another level of complexity.
+<https://www.mongodb.com/basics/large-language-models>`__) easily and
+foundational models with the truth of their proprietary data, keeping that data
+fresh adds another level of complexity.
 
 By continuously updating vector embeddings, the core of RAG systems, AI models
 have up-to-date data to provide pertinent and accurate answers. Additionally,
