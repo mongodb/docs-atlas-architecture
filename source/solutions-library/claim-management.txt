@@ -188,14 +188,20 @@ To build the solution, follow these instructions:
          }
 
    .. step:: Configure the Backend
+      
+      Set up a virtual environment using Poetry.
 
    .. step:: Interact with the API
 
+      Start the backend server. 
+
    .. step:: Connect to the Frontend
 
-Ultimately, you have to run both the front and the back end. You’ll
-access a web UI that allows you to ask questions to the LLM, obtain an
-answer, and see the reference documents used as context.
+      Configure environment variables and run the frontend.
+
+Ultimately, you have to run both the front and back end. You’ll access a web UI
+that allows you to ask questions to the LLM, obtain an answer, and see the
+reference documents used as context.
 
 Visit the `Atlas Vector Search Quick Start guide
 <https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
@@ -221,14 +227,14 @@ Key Learnings
 
 - **Performing a Vector Search query:** Notably, `Vector Search queries <https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/>`__ 
   have a dedicated operator within MongoDB’s `aggregation pipeline
-  <https://www.mongodb.com/docs/manual/aggregation/>`__. This means they
-  can be concatenated with other operations, making it extremely
-  convenient for developers because they don’t need to learn a different
-  language or change context.
+  <https://www.mongodb.com/docs/manual/aggregation/>`__. This means they can be
+  concatenated with other operations, making it convenient for developers
+  because they don’t need to learn a different language or change context.
 
-- Using LangChain as the framework that glues together MongoDB Atlas
-  Vector Search and the LLM, allowing for an easy and fast RAG
-  implementation.
+- **Fast RAG Implementation:** Using the `LangChain
+  <https://www.mongodb.com/docs/atlas/ai-integrations/langchain/>`__ framework
+  that glues together MongoDB Atlas Vector Search and the LLM allows for an
+  easy and fast RAG implementation.
 
 Authors
 -------
