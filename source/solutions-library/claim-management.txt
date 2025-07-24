@@ -91,27 +91,62 @@ The process of the RAG querying flow is as follows:
 Data Model Approach
 -------------------
 
-The “claim” collection contains documents including a number of fields
-related to the claim. In particular, we are interested in the
-``claimDescription`` field, which we vectorize and add to the document
-as ``claimDescriptionEmbedding``. This embedding is then indexed and
-used to retrieve documents associated with the user prompt.
+In the demo solution, the data model is a simplified design that emulates
+real-world insurance claim data. The approach leverages MongoDB's flexible
+document model to handle the diverse data structure that stores embeddings
+alongside their related document.
 
-.. code-block:: json
-   :emphasize-lines: 4, 10
-   :copyable: true
+.. list-table::
+   :header-rows: 1
+   :widths: 8 10 20
 
-   {
-      _id: ObjectId('64d39175e65'),
-      customerID: "c113",
-      claimDescription: "A motorist driving...",
-      damageDescription: "Front-ends of both...",
-      lossAmount: 1250,
-      photo: "image_65.jpg"
-      claimClosedDate: "2024-02-03",
-      coverages: Array(2),
-      claimDescriptionEmbedding: [0.3, 0.6, ..., 11.2]
-   }
+   * - Collection
+     - Description
+     - Sample Document
+
+   * - ``claims_final``
+     
+     - Stores claim information. The relevant fields are
+       the ``claimDescription`` field and its corresponding embedding
+       ``claimDescriptionEmbedding`` This embedding is indexed and used to
+       retrieve documents associated with the user prompt.
+
+     - .. code-block:: javascript
+          
+          {
+          "_id": {
+            "$oid": "65cc809c76da22d0089dfb2e"
+          },
+          "customerID": "c105",
+          "policyNumber": "p105",
+          "claimID": "cl105",
+          "claimStatusCode": "Subrogation",
+          "claimDescription": "High winds caused ...",
+          "totalLossAmount": 4200,
+          "claimFNOLDate": "2023-10-27",
+          "claimClosedDate": "2024-09-01",
+          "claimLineCode": "Auto",
+          "damageDescription": "Roof caved in ...",
+          "insurableObject": {
+            "insurableObjectId": "abc105",
+            "vehicleMake": "Make105",
+            "vehicleModel": "Model105"
+          },
+          "coverages": [
+            {
+               "coverageCode": "888",
+               "description": "3rd party responsible"
+            },
+            {
+               "coverageCode": "777",
+               "description": "Vehicle rental/loaner service for customer"
+            }
+          ],
+          "claimDescriptionEmbedding": [-0.017, ..., 0.011],
+          "damageDescriptionEmbedding": [-0.047, ..., -0.043],
+          "photo": "105.jpg",
+          "photoEmbedding": [9.629, ..., 14.075]
+          }
 
 Build the Solution
 ------------------
@@ -142,7 +177,7 @@ index. Make sure you follow this structure:
       "fields": [
          { 
             "type": "vector", 
-            "path": "claimDescriptionEmbedding",
+            "path": "claimDescriptionEmbeddingCohere",
             "numDimensions": 350, 
             "similarity": "cosine"
          }
