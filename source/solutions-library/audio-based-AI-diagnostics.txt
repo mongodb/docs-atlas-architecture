@@ -24,8 +24,11 @@ Vector Search to generate real-time audio diagnostics.
 **Industries:** Energy and Environmental, `Manufacturing and Mobility
 <https://www.mongodb.com/solutions/industries/manufacturing>`__
 
-**Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `MongoDB Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+
+**Partners:** Audio embedding generation with `panns-inference 
+<https://github.com/qiuqiangkong/panns_inference>`__.
 
 Solution Overview
 -----------------
@@ -33,14 +36,13 @@ Solution Overview
 As the renewable energy sector rapidly evolves with advancements in AI
 and `machine learning <https://www.mongodb.com/basics/machine-learning>`__,
 new opportunities for efficiency gains and cost reductions are emerging.
-
 Companies are increasingly turning to predictive maintenance to increase 
 efficiency and reduce costs. However, predictive maintenance systems
 face the following challenges:
 
 - Integrating data with diverse formats and sources.
 
-- Scaling due to the volume of IoT signals that are generated.
+- Scaling the high volume of IoT signals that are generated.
 
 - Performing real-time analysis of vast datasets, which can be
   resource-intensive.
@@ -74,6 +76,8 @@ benefits:
 
 Other Applicable Industries and Use Cases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can implement predictive maintenance systems in other industries, such as:
 
 **Manufacturing**: Implement real-time anomaly detection in manufacturing
 plants to predict equipment failures and optimize production processes, leading
@@ -176,7 +180,7 @@ GitHub repository. For more detailed instructions, see the repository's ``README
       Install the required Python modules in the GitHub repo by running
       ``python3 -m pip install -r requirements.txt``.
 
-   .. step:: Record audio files.
+   .. step:: Record audio files
       
       `Record audio files <https://github.com/mongodb-industry-solutions/Wind-Turbine-Diagnostics/blob/main/README.md#3-record-audio-files>`__
 
@@ -223,23 +227,6 @@ Key Learnings
   detection and addresses challenges faced by businesses and development teams.
 - Create a Vector Search index in Atlas or on a :ref:`local deployment
   <atlas-cli-update-local-deployment>`.
-  
-Technologies and Products Used
-------------------------------
-
-MongoDB Developer Data Platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- `Atlas Database <https://www.mongodb.com/atlas/database>`__
-- `Atlas Vector Search
-  <https://www.mongodb.com/products/platform/atlas-vector-search>`__
-
-Partner Technologies
-~~~~~~~~~~~~~~~~~~~~
-
-- Audio embedding generation with `panns-inference
-  <https://github.com/qiuqiangkong/panns_inference>`__.
-
 
 Authors
 -------
