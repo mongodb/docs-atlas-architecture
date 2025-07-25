@@ -79,17 +79,17 @@ Other Applicable Industries and Use Cases
 
 You can implement predictive maintenance systems in other industries, such as:
 
-**Manufacturing**: Implement real-time anomaly detection in manufacturing
-plants to predict equipment failures and optimize production processes, leading
-to reduced downtime and increased productivity.
+- **Manufacturing**: Implement real-time anomaly detection in manufacturing
+  plants to predict equipment failures and optimize production processes, leading
+  to reduced downtime and increased productivity.
 
-**Transportation**: Utilize AI and Atlas Vector Search for predictive
-maintenance in vehicles, aircraft, and logistics equipment to anticipate
-maintenance needs, minimize disruptions, and improve fleet management.
+- **Transportation**: Utilize AI and Atlas Vector Search for predictive
+  maintenance in vehicles, aircraft, and logistics equipment to anticipate
+  maintenance needs, minimize disruptions, and improve fleet management.
 
-**Healthcare**: Apply real-time anomaly detection in medical devices and
-equipment to identify potential issues early, ensure patient safety, and
-optimize healthcare operations.
+- **Healthcare**: Apply real-time anomaly detection in medical devices and
+  equipment to identify potential issues early, ensure patient safety, and
+  optimize healthcare operations.
 
 .. video:: https://youtu.be/-FCyBZlA2_8
 
