@@ -214,7 +214,7 @@ GitHub repository. For more detailed instructions, see the repository's ``README
       a. Open a new terminal window and ``cd`` into the ``nodeUI`` directory.
       #. Run ``npm install``.
       #. Run ``node nodeui.js``.
-      #. Use a browser to open the link http://localhost:3000/.
+      #. Open the following link in your browser: http://localhost:3000/.
 
 Key Learnings
 -------------
