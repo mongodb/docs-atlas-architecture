@@ -33,7 +33,7 @@ Solution Overview
 -----------------
 
 As-you-type functionality — also known as
-autocomplete, autosuggest, typeahead, search-ahead, and predictive
+autocomplete, autosuggest, or predictive
 search — often refers to low-level character matching, as opposed to a
 purpose-built, comprehensive solution. This functionality helps you navigate
 quickly to desired, relevant content. Looking up the movie 
@@ -41,10 +41,10 @@ quickly to desired, relevant content. Looking up the movie
 functionality.
 
 Vector Search and full-text search are great at matching
-content semantically, when there is a complete query, or very
+content semantically when there is a complete query, or very
 close word matches. However, as-you-type functionality can return relevant
-results with even fewer characters and where there's even more distance
-between the inputted text and the target keyword. Only a lexical-based
+results with even fewer characters and when there's even more distance
+between the text input and the target keyword. Only a lexical-based
 solution that facilitates partial matching like as-you-type suggestions
 can provide this level of relevant, context-sensitive results.
 
@@ -66,22 +66,21 @@ Data Model Approach
 -------------------
 
 Each suggestion presented to the user represents a unique entity of your
-domain. A requirement of this solution is that entities must be modeled
-as individual documents in a specialized collection tuned for
-as-you-type suggestibility. 
+domain. Entities must be modeled as individual documents in a specialized
+collection tuned for as-you-type suggestibility. 
 
 The main collection usually represents one type of entity as documents, and 
 other domain entities as metadata fields or embedded documents. For example, 
 consider using the sample movies data available within Atlas. As you type, the 
-search suggests movie names. But what about cast member names? Is it 
-possible to find movies starring Keanu Reeves by typing only "kea"? What about 
-documentaries by only typing "doc"?
+search suggests movie names. However, you could also search for cast member 
+names. For example, you could find movies starring Keanu Reeves by typing only
+"kea".
 
 The data model has the following schema:
 
-- ``_id:`` unique id for this collection in the form ``<type>-<natural id>``. 
-- ``type:`` entity/object type, e.g. movie, brand, person product, and category.
-- ``name:`` the name or title of the entity, which would generally be unique per type.
+- ``_id``: unique id for this collection in the form ``<type>-<natural id>``. 
+- ``type``: entity/object type, e.g. movie, brand, person product, and category.
+- ``name``: the name or title of the entity, which would generally be unique per type.
 
 It’s important that entity documents have stable, unique identifiers, as
 the entities are regularly refreshed from the main collection.
@@ -94,7 +93,7 @@ Modeling entities directly as individual documents allows each to carry
 optional metadata fields to assist in ranking, displaying, filtering, or
 grouping them. 
 
-The straightforward document model feeds the ``name`` field through a 
+The document model feeds the ``name`` field through a 
 sophisticated index configuration, which divides the values in a 
 multitude of ways suitable for querying in several ways. The power of this 
 solution comes from the union of multiple indexing and querying strategies.
@@ -111,24 +110,23 @@ solution comes from the union of multiple indexing and querying strategies.
 Building the Solution
 ---------------------
 
-First, identify the entities in your data that are to be suggestible. In
+First, identify the suggestible entities in your data. In
 the movies scenario, these would include movie titles, cast member
 names, and perhaps genres and director names too.  
 
-The basis of this as-you-type suggestion system can be achieved in a few
-steps:
+The basis of this as-you-type suggestion system is as follows:
 
-1. Create an “entities” collection and populate it using the schema modeled above. As often as warranted, refresh the “entities” collection. 
-2. Create an Atlas Search “entities_index” using an index configuration as described below. 
+1. Create an ``entities`` collection and populate it using the schema modeled above. As often as warranted, refresh the ``entities`` collection. 
+2. Create an Atlas Search ``entities_index`` using an index configuration as described below. 
 3. Craft a robust set of query clauses, along with any pertinent boosting factors, within a $search-using aggregation pipeline.
 
 Importing Entities 
 ~~~~~~~~~~~~~~~~~~
 
 While there are multiple ways to populate the “entities” collection,
-one straightforward way to populate it is with an
+one straightforward way to populate it is to run an
 `aggregation pipeline <https://www.mongodb.com/basics/aggregation-pipeline>`__ 
-run on the main collection to bring in the unique titles across all movies:
+on the main collection to bring in the unique titles across all movies:
 
 .. code-block:: javascript  
 
@@ -228,7 +226,7 @@ optional entity ``weight`` field.
 
    Figure 3. Example query and relevancy scoring computation
 
-Generally, a user selecting a suggestion then performs a a targeted traditional 
+Generally, a user selecting a suggestion then performs a targeted traditional 
 search for the selected item. The search then returns all matching items.
 
 .. code-block:: javascript
@@ -251,18 +249,18 @@ search for the selected item. The search then returns all matching items.
 
 Visit the `GitHub repo <https://github.com/mongodb-developer/atlas-search-as-you-type-suggest>`__ to this solution. 
 
-Key Considerations
-------------------
+Key Learnings
+-------------
 
-- Model suggestible entities as documents with a specialized index
-  configuration: This could be done as described above in a separate
+- **Model suggestible entities as documents with a specialized index
+  configuration:** This could be done as described above in a separate
   collection containing entities from any source. 
 
-- If your main collection models all suggestible entities as top-level documents
-  already, an index can be created or an existing one augmented to use the
-  index configuration techniques described here.
+- **Index Creation:** If your main collection models all suggestible entities as
+  top-level documents already, an index can be created or an existing one
+  augmented to use the index configuration techniques described here.
 
-- Craft clever queries: Leverage the index structure, generating rich and
+- **Craft clever queries:** Leverage the index structure, generating rich and
   nuanced queries to match entities and rank suggestions as desired.
 
 Technology and Products
