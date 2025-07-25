@@ -27,7 +27,7 @@ Vector Search to generate real-time audio diagnostics.
 **Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `MongoDB Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** Audio embedding generation with `panns-inference 
+**Partners:** Generate audio embeddings with `panns-inference 
 <https://github.com/qiuqiangkong/panns_inference>`__.
 
 Solution Overview
