@@ -119,6 +119,11 @@ Reference Architectures
 Data Model Approach
 -------------------
 
+In the demo solution, the data model is a collection of documents that
+encapsulate all relevant information about a song. This approach leverages the
+flexibility of the document data model to store diverse data types alongside
+their embeddings. The documents have the following structure:
+
 .. code-block:: javascript
    :copyable: true
 
@@ -134,22 +139,6 @@ Data Model Approach
       "lyrics_embeddings_en": [...],
       "tags": ["man", "story", "night"]
    }
-
-The data we currently have about the song consists of the following fields:
-
-- **Title:** Name of the song
-- **Genre:** a single-worded string containing a music style from a list of 6 
-  genres
-- **Artist:** Name of the artist
-- **Year:** The year in which the song was written
-- **Views:** Number of times the song has been listened to
-- **Lyrics:** A string field containing the lyrics with each line separated by 
-  a new line delimiter
-- **Language:** The language of the lyrics in ISO-369. We are only storing 
-  songs in English and Spanish.
-- **Duration:** Duration of the song in seconds
-- **Lyrics embedding vector:** language-specific embeddings vector
-- **Tags:** A list of tags associated with the lyrics
 
 The benefit of using the document data model is that it allows you to store all
 the related information of a song in a single document for easy and fast 
