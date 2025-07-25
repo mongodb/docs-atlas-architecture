@@ -27,8 +27,8 @@ Vector Search to generate real-time audio diagnostics.
 **Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `MongoDB Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-**Partners:** Generate audio embeddings with `panns-inference 
-<https://github.com/qiuqiangkong/panns_inference>`__.
+**Partners:** Generate audio embeddings with `panns_inference 
+<https://github.com/qiuqiangkong/panns_inference>`__
 
 Solution Overview
 -----------------
@@ -181,8 +181,6 @@ GitHub repository. For more detailed instructions, see the repository's ``README
       ``python3 -m pip install -r requirements.txt``.
 
    .. step:: Record audio files
-      
-      `Record audio files <https://github.com/mongodb-industry-solutions/Wind-Turbine-Diagnostics/blob/main/README.md#3-record-audio-files>`__
 
       a. Run ``python3 add_audio.py``.
       #. Select the audio input by typing the relevant number and then press enter. Record each sound in sequence.
