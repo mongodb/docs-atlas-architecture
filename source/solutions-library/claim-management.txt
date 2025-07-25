@@ -47,13 +47,13 @@ experiences, and streamline operations.
 
 To benefit these organizations and their customers, MongoDB's solution combines
 the power of `Altas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__ and a `Large
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__ and `Large
 Language Models (LLMs) <https://www.mongodb.com/basics/large-language-models>`__
 in a `retrieval augmented generation (RAG)
 <https://www.mongodb.com/basics/retrieval-augmented-generation>`__ system, to
 allow organizations to go beyond the limitations of baseline foundational
-models. By feeding models propriety data, they are made context aware and can
-leverage the full potential of AI to streamline operations.
+models. Propriety data makes models context aware, allowing them to leverage the
+full potential of AI to streamline operations. 
 
 Reference Architecture
 ----------------------
@@ -61,10 +61,10 @@ Reference Architecture
 With MongoDB
 ~~~~~~~~~~~~
 
-To provide a unified development experience, documents are stored alongside
+MongoDB provides a unified development experience by storing documents alongside
 their vector embeddings and associated metadata, eliminating the need to
-retrieve data elsewhere. This allows users to focus on building their application,
-instead of maintaining a separate technology.
+retrieve data elsewhere. This allows users to focus on building their
+application, instead of maintaining a separate technology.
 
 Ultimately, the data obtained from MongoDB Vector Search is fed to the LLM as 
 context.
