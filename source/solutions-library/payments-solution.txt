@@ -21,13 +21,13 @@ payment data to power modern applications.
   <https://www.mongodb.com/solutions/use-cases/modernize>`__
 - **Industries:** `Financial Services
   <https://www.mongodb.com/industries/financial-services>`__
-- **Products and tools:** `Atlas <https://www.mongodb.com/atlas/database>`__, `Enterprise
+- **Products and tools:** `MongoDB Atlas <https://www.mongodb.com/atlas/database>`__, `MongoDB Enterprise
   Advanced <https://www.mongodb.com/products/mongodb-enterprise-advanced>`__, `Atlas
-  Clusters <https://www.mongodb.com/basics/clusters>`__, `Change Streams
+  Clusters <https://www.mongodb.com/basics/clusters>`__, `MongoDB Change Streams
   <https://www.mongodb.com/developer/products/mongodb/change-streams/>`__, `Atlas Search
   <https://www.mongodb.com/atlas/search>`__, `Atlas Charts
   <https://www.mongodb.com/products/charts>`__, `Atlas Auditing and Enterprise Security
-  <https://www.mongodb.com/collateral/mongo-db-atlas-security>`__, `Kafka Connector
+  <https://www.mongodb.com/collateral/mongo-db-atlas-security>`__, `MongoDB Kafka Connector
   <https://www.mongodb.com/products/integrations/kafka-connector>`__, `Queryable
   Encryption <https://www.mongodb.com/products/capabilities/security/encryption>`__, `Time
   Series <https://www.mongodb.com/products/capabilities/time-series>`__
@@ -84,7 +84,7 @@ Businesses are embracing the following strategies when updating their systems:
   domain-driven design ensures that technology changes serve business goals.
 - **Microservices architecture:** By transitioning from a monolithic architecture
   to a `microservices architecture <https://www.mongodb.com/databases/what-are-microservices>`__, 
-  you can update and change your system more efficiently.
+  you can update and scale your system more efficiently.
 
 How MongoDB Supports Modernization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -435,8 +435,8 @@ Payments Microservices
 - `Change streams <https://www.mongodb.com/basics/change-streams>`__: Payments are
   event-driven. 
 
-- `Time-series collections <https://www.mongodb.com/products/capabilities/time-series>`__: 
-  Use a time-series collection to hold payment history.
+- `Time series collections <https://www.mongodb.com/products/capabilities/time-series>`__: 
+  Use a time series collection to hold payment history.
 
 - `In-use encryption
   <https://www.mongodb.com/products/capabilities/security/encryption>`__: Protect
