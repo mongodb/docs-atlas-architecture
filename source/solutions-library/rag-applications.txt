@@ -18,7 +18,7 @@ Building Continuously Updating RAG Applications
    :depth: 1
    :class: singlecol
 
-Use native stream processing and vector search in MongoDB Atlas to continuously
+Use MongoDB Atlas native stream processing and vector search to continuously
 update, store, and search embeddings through a unified interface.
 
 **Use cases:** `Gen AI
@@ -34,85 +34,81 @@ update, store, and search embeddings through a unified interface.
 Stream Processing
 <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
 
-**Partners:** `Confluent <http://confluent.io/>`__, `AWS <http://aws.com/>`__
+**Partners:** `Confluent <http://confluent.io/>`__, `AWS <https://aws.amazon.com/>`__
 
 Solution Overview
 -----------------
 
 Providing AI models with up-to-date data is essential to delivering a
-differentiated experience. While retrieval-augmented generation (`RAG
+differentiated experience. Retrieval-augmented generation (`RAG
 <https://www.mongodb.com/basics/retrieval-augmented-generation>`__) systems
 enable organizations to ground large language models (`LLMs
-<https://www.mongodb.com/basics/large-language-models>`__) easily and
-foundational models with the truth of their proprietary data, keeping that data
-fresh adds another level of complexity.
+<https://www.mongodb.com/basics/large-language-models>`__) and other
+foundational models in the truth of their proprietary data. However, maintaining
+the freshness of the underlying data introduces a layer of complexity.
 
-By continuously updating vector embeddings, the core of RAG systems, AI models
-have up-to-date data to provide pertinent and accurate answers. Additionally,
-different embedding models may offer higher levels of accuracy depending on
-their primary purpose. Take, for example, an embedding model trained primarily
-on a specific language, such as Japanese or Simplified Chinese, instead of a
-more popular model that might have general knowledge of several languages. The
-specialized model will likely create embeddings that enable the foundation 
-model or LLM to output content more accurately.
+To ensure models provide accurate answers, it is essential to continuously
+update the vector embeddings that form the core of RAG systems to represent the
+latest information available. 
 
-This solution addresses the issue of continuously updating and routing the
-creation of vector embeddings in a RAG system. By leveraging `MongoDB Atlas
-Stream Processing
+Furthermore, the choice of embedding model impacts the quality of AI outputs due
+to how different models are optimized for varying purposes and data types. For
+example, an embedding model trained on a particular language will create more
+contextually appropriate embeddings for that language than a general-purpose
+model trained across many languages.
+
+By leveraging MongoDB Atlas' native `Stream Processing
 <https://www.mongodb.com/products/platform/atlas-stream-processing>`__ and
-`MongoDB Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__, both native
-capabilities in MongoDB Atlas, this solution walks developers through
-continuously updating, storing, and searching embeddings with a single 
-interface.
+`Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__ capabilities,
+this solution addresses this issue of continuously updating and routing vector
+embeddings in a RAG system. With this solution, developers can continuously
+update, store, and search embeddings within a single interface.
 
-While this solution demonstrates creating vector embeddings of song lyrics in
-different languages, the scenario is relevant to many industries and use cases,
-including:
+This solution is relevant to many industries and use cases, including:
 
 - **Financial services:** Financial documents, legal policies, and contracts
   often use multiple languages and differ based on country regulations.
-  Empowering loan officers with an AI-powered interface for expediting loan
-  creation can optimize banking workflows; however, the optimization will only
-  benefit as much as the data is relevant and fresh.
+  Empowering loan officers with an AI-powered interface using relevant and fresh
+  data for expediting loan creation can optimize banking workflows.
 
 - **Healthcare and Insurance:** From constantly updating patient records to 
   AI-powered underwriting of insurance policies, it’s important that any RAG 
   system that optimizes these processes has access to the latest information.
 
-- **Retail:** Personalizing retail experiences by delivering the right offer at
-  the right time to the right customer is critical. However, consider the many
-  languages that shoppers might use and product descriptions that have to
-  match. Routing up-to-date, contextual data to the most accurate embedding
-  model can improve these experiences.
+- **Retail:** Personalizing retail experiences for customers is critical.
+  However, consider the many languages that shoppers might use and product
+  descriptions that have to match. Routing up-to-date, contextual data to the
+  most accurate embedding model can improve these experiences.
 
 Reference Architectures
 -----------------------
 
-With MongoDB
-~~~~~~~~~~~~
+- **MongoDB Atlas Cluster:** Enables the flexible storage of various data types
+  including text, associated metadata, and corresponding vector embeddings in
+  documents. Atlas's vector index capability directly supports efficient
+  semantic search queries within the database, which can be leveraged through
+  the `MongoDB Aggregation Framework
+  <https://www.mongodb.com/basics/aggregation>`__.
 
-- **MongoDB:** With a MongoDB cluster deployed in Atlas, it allows you to store
-  the lyrics and related information under the same document (tags, vectors,
-  etc.). Additionally, Atlas provides a vector index to support semantic 
-  searches using the `MongoDB Aggregation Framework <https://www.mongodb.com/basics/aggregation>`__.
-- **Atlas Stream Processing:** This Stream Processing Instance subscribes to
-  the events generated by MongoDB, filters the relevant information, transforms
-  the events, and emits them to the corresponding Kafka topic. Additionally, it
-  will subscribe to the Kafka cluster to update the documents that change.
-- **Confluent Kafka cluster:** This managed Kafka cluster will receive the new
-  documents and updates from current documents to be processed. Additionally,
-  the events received by the processor will be directed to Atlas Stream 
+- **Atlas Stream Processing:** Subscribes to the event streams generated by
+  MongoDB, filters relevant information, transforms events, and emits them to
+  the corresponding Kafka topic. It also subscribes to the Kafka cluster to
+  process updates and propagate changes back to the database.
+
+- **Confluent Kafka Cluster:** Receives document updates and new documents from
+  producers and makes them available for further processing by Atlas Stream
   Processing.
 
-- **Metadata service:**
+- **Metadata Service:**
 
-  - **Embedding generator:** Python script that subscribes to the Kafka input
-    topics (both Spanish and English). For each message received, it reads the
-    lyrics and generates an embedding using a model specific for each 
-    language.
-  - **Tags extractor:** Python script that extracts the tags from the lyrics
-    (the 10 most common nouns) and adds it to the resulting event.
+  - **Embedding Generator:** Python script that subscribes to the Kafka input
+    topics. For each message received, it generates an embedding using a
+    specialized machine learning model.
+
+  - **Tags Extractor:** Python script that analyzes incoming data to identify
+    relevant structured metadata to enrich the document for indexing, search, or
+    analysis.
 
 .. figure:: /includes/images/industry-solutions/RefArchitecture_StreamProcessing_WithMongoDB.svg
    :figwidth: 1200px
