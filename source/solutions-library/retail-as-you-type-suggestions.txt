@@ -37,7 +37,7 @@ autocomplete, autosuggest, or predictive
 search — often refers to low-level character matching, as opposed to a
 purpose-built, comprehensive solution. This functionality helps you navigate
 quickly to desired, relevant content. Looking up the movie 
-"The Matrix" by typing “matr,” into the search bar is an example of as-you-type 
+"The Matrix" by typing “matr” into the search bar is an example of as-you-type 
 functionality.
 
 Vector Search and full-text search are great at matching
@@ -72,8 +72,8 @@ collection tuned for as-you-type suggestibility.
 The main collection usually represents one type of entity as documents, and 
 other domain entities as metadata fields or embedded documents. For example, 
 consider using the sample movies data available within Atlas. As you type, the 
-search suggests movie names. However, you could also search for cast member 
-names. For example, you could find movies starring Keanu Reeves by typing only
+search suggests movie names. However, you can also search for cast member 
+names. For example, you can find movies starring Keanu Reeves by typing only
 "kea".
 
 The data model has the following schema:
@@ -86,8 +86,8 @@ It’s important that entity documents have stable, unique identifiers, as
 the entities are regularly refreshed from the main collection.
 Assigning a ``type`` to each entity allows for filtering (only suggest cast
 members in an actor-specific lookup), grouping (organize the
-suggestions by type), or boosting by type (movie titles could have a
-higher weighting than cast member names).
+suggestions by type), or boosting by type (weight movies higher than cast member
+names).
 
 Modeling entities directly as individual documents allows each to carry
 optional metadata fields to assist in ranking, displaying, filtering, or
@@ -118,12 +118,12 @@ The basis of this as-you-type suggestion system is as follows:
 
 1. Create an ``entities`` collection and populate it using the schema modeled above. As often as warranted, refresh the ``entities`` collection. 
 2. Create an Atlas Search ``entities_index`` using an index configuration as described below. 
-3. Craft a robust set of query clauses, along with any pertinent boosting factors, within a $search-using aggregation pipeline.
+3. Craft a robust set of query clauses, along with any pertinent boosting factors, within an aggregation pipeline that uses ``$search``.
 
 Importing Entities 
 ~~~~~~~~~~~~~~~~~~
 
-While there are multiple ways to populate the “entities” collection,
+While there are multiple ways to populate the ``entities`` collection,
 one straightforward way to populate it is to run an
 `aggregation pipeline <https://www.mongodb.com/basics/aggregation-pipeline>`__ 
 on the main collection to bring in the unique titles across all movies:
@@ -146,12 +146,12 @@ on the main collection to bring in the unique titles across all movies:
       { $merge: { into: "entities" } }
    ]
 
-The ``$project`` converts each unique movie title into the necessary
-“entities” schema. Because this collection types each document, the ``type``
+The ``$project`` stage converts each unique movie title into the necessary
+``entities`` schema. Because this collection types each document, the ``type``
 is encoded as a prefix of the generated ``_id`` and appended with the actual
 movie title creating a reproducible identifier for each unique title.
 Including ``type`` in the entity identifiers allows different types of
-entities with the same name to be independent from one another (there
+``entities`` with the same name to be independent from one another (there
 could be a movie named “Adventure” as well as the “Adventure” genre). 
 
 Finally, the ``$merge`` stage adds all new titles and leaves the
@@ -168,7 +168,7 @@ The resulting title-typed document for “The Matrix” comes out simply as:
    }
 
 Each entity type potentially needs its own technique for merging into
-the “entities” collection, as in the case of the "genre" and "cast"
+the ``entities`` collection, as in the case of the "genre" and "cast"
 entities, which need to be unwound from their nested arrays using
 ``$unwind``. 
 
@@ -194,9 +194,8 @@ facilitate partial matching and ranking at query time.
    
    Figure 2. Multiple indexing strategies
 
-Atlas Search index configuration enables a single document field to be
-indexed in a multitude ("multi") of ways (the feature is called
-“multi”-analyzers).
+The feature multi-analyzers uses Atlas Search index configuration to enable
+a single document field to be indexed in a multitude of ways.
 
 The ``type`` field is indexed as both a ``token`` field, for ``equals`` or ``in``
 filtering, and a ``stringFacet`` field to provide a means to get counts
@@ -247,7 +246,7 @@ search for the selected item. The search then returns all matching items.
       { $merge: { into: "entities" } }
    ]
 
-Visit the `GitHub repo <https://github.com/mongodb-developer/atlas-search-as-you-type-suggest>`__ to this solution. 
+Visit the `GitHub repository <https://github.com/mongodb-developer/atlas-search-as-you-type-suggest>`__ to this solution. 
 
 Key Learnings
 -------------
@@ -262,9 +261,6 @@ Key Learnings
 
 - **Craft clever queries:** Leverage the index structure, generating rich and
   nuanced queries to match entities and rank suggestions as desired.
-
-Technology and Products
------------------------
 
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
