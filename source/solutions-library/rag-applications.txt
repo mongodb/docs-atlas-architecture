@@ -45,11 +45,10 @@ differentiated experience. Retrieval-augmented generation (`RAG
 enable organizations to ground large language models (`LLMs
 <https://www.mongodb.com/basics/large-language-models>`__) and other
 foundational models in the truth of their proprietary data. However, maintaining
-the freshness of the underlying data introduces a layer of complexity.
-
-To ensure models provide accurate answers, it is essential to continuously
-update the vector embeddings that form the core of RAG systems to represent the
-latest information available. 
+the freshness of the underlying data introduces a layer of complexity. To ensure
+models provide accurate answers, it is essential to continuously update the
+vector embeddings that form the core of RAG systems to represent the latest
+information available. 
 
 Furthermore, the choice of embedding model impacts the quality of AI outputs due
 to how different models are optimized for varying purposes and data types. For
@@ -122,23 +121,33 @@ Data Model Approach
 In the demo solution, the data model is a collection of documents that
 encapsulate all relevant information about a song. This approach leverages the
 flexibility of the document data model to store diverse data types alongside
-their embeddings. The documents have the following structure:
+their embeddings. The `sample data
+<https://github.com/dsdlt/mongodb-scalable-document-embeddings/tree/main/dataset>`__
+has two datasets available for import: ``archive_lyrics_small1`` and
+``archive_lyrics_small2``. The documents have the following structure:
 
 .. code-block:: javascript
    :copyable: true
+   :emphasize-lines: 10-11
 
    {
       "title": "Hurricane",
-      "genre": "rock",
       "artist": "Bob Dylan",
       "year": 1976,
-      "views": 307418,
       "lyrics": "...",
       "language": "en",
+      "genre": "rock",
       "duration": 61,
       "lyrics_embeddings_en": [...],
-      "tags": ["man", "story", "night"]
+      "tags": ["man", "story", "night"]   // only in archive_lyrics_small1
    }
+
+The relevant data fields are:
+- ``lyrics_embeddings_en``/``lyrics_embeddings_es``: Language-specific lyrics
+  embedding vector
+
+- ``tags``: In the ``archive_lyrics_small1`` dataset, list of tags associated
+  with the lyrics
 
 The benefit of using the document data model is that it allows you to store all
 the related information of a song in a single document for easy and fast 
@@ -323,8 +332,11 @@ Key Learnings
   horizontally scaling the functions responsible for embedding generation to 
   handle bursts in workload.
 
-Technologies and Products Used
-------------------------------
+Learn More
+----------
+
+To learn more about the products and technologies in this example, see the
+associated links below.
 
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
