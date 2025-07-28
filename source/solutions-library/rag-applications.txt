@@ -121,14 +121,17 @@ Data Model Approach
 In the demo solution, the data model is a collection of documents that
 encapsulate all relevant information about a song. This approach leverages the
 flexibility of the document data model to store diverse data types alongside
-their embeddings. The `sample data
+their embeddings, allowing for easy and fast retrieval. 
+
+The `sample data
 <https://github.com/dsdlt/mongodb-scalable-document-embeddings/tree/main/dataset>`__
 has two datasets available for import: ``archive_lyrics_small1`` and
-``archive_lyrics_small2``. The documents have the following structure:
+``archive_lyrics_small2``. The documents in these datasets have the following
+structure:
 
 .. code-block:: javascript
    :copyable: true
-   :emphasize-lines: 10-11
+   :emphasize-lines: 9-10
 
    {
       "title": "Hurricane",
@@ -143,97 +146,96 @@ has two datasets available for import: ``archive_lyrics_small1`` and
    }
 
 The relevant data fields are:
+
 - ``lyrics_embeddings_en``/``lyrics_embeddings_es``: Language-specific lyrics
   embedding vector
 
-- ``tags``: In the ``archive_lyrics_small1`` dataset, list of tags associated
-  with the lyrics
-
-The benefit of using the document data model is that it allows you to store all
-the related information of a song in a single document for easy and fast 
-retrieval.
+- ``tags``: In the ``archive_lyrics_small1`` dataset, list of most common words
+  in the lyrics
 
 Building the Solution
 ---------------------
 
-In the `GitHub repository
-<https://github.com/dsdlt/mongodb-scalable-document-embeddings>`__ you will
-find detailed instructions on how to build the solution to update your 
-embeddings asynchronously and at scale, leveraging MongoDB Atlas.
+The `GitHub repository
+<https://github.com/dsdlt/mongodb-scalable-document-embeddings>`__ contains
+detailed instructions on how to build the solution to update your embeddings
+asynchronously and at scale, leveraging MongoDB Atlas.
 
 .. procedure::
    :style: normal
 
-   .. step:: Create a MongoDB cluster
+   .. step:: Set up the Environment
 
-      The first step is to create a MongoDB cluster. If you don't have an 
-      Atlas account, create one following the steps in this link: https://www.mongodb.com/docs/guides/atlas/account/.
+      Clone the repository, set up a virtual environment, and install necessary dependencies.
 
-      We will create a cluster in Atlas using AWS as our cloud provider and
-      us-east-1 as our region. Additionally, create an Atlas Stream Processing
-      Instance (SPI) following the instructions in the documentation:
-      https://www.mongodb.com/docs/atlas/atlas-sp/manage-processing-instance/.
+   .. Load the Dataset
       
-   .. step:: Create a Kafka cluster in Confluent
+      .. important:: 
 
-      To create a Kafka cluster in Confluent Cloud follow the instructions in 
-      their documentation: https://docs.confluent.io/cloud/current/clusters/create-cluster.html#create-ak-clusters.
+         If you don't already have an Atlas account, :ref:`join now
+         <guides-create-atlas-account>` and :ref:`create a cluster
+         <guides-create-a-cluster>`.
 
-      Once you have created the cluster, go to cluster settings and copy the
-      bootstrap URL.
+      Use the `provided script
+      <https://github.com/dsdlt/mongodb-scalable-document-embeddings/blob/main/dataset/data_load.sh>`__
+      to load the data with :ref:`<mongoimport>`.
+
+   .. step:: Configure a Kafka Cluster in Confluent
+
+      Follow the instructions in the `Confluent documentation
+      https://docs.confluent.io/cloud/current/clusters/create-cluster.html#create-ak-clusters`__
+      to create a Kafka Cluster.
+
+      .. _copy-bootstrap-URL:
+      
+      Copy your bootstrap URL.
 
       .. figure:: /includes/images/industry-solutions/createkafkacluster1.png
-         :figwidth: 750px
+         :figwidth: 500px
          :alt: Kafka cluster settings
 
          Figure 2. Kafka cluster settings
       
-      Then, create an API key to connect to your cluster.
+      Create an API key to connect to your cluster.
 
       .. figure:: /includes/images/industry-solutions/createkafkacluster2.png
-         :figwidth: 750px
+         :figwidth: 500px
          :alt: API key settings
 
          Figure 3. API key settings
 
-      The next step is to configure the topics for use in this solution:
-      SpanishInputTopic, EnglishInputTopic, and OutputTopic.
+      Configure the topics ``SpanishInputTopic``, ``EnglishInputTopic``, and
+      ``OutputTopic`` in Confluent.
       
       .. figure:: /includes/images/industry-solutions/createkafkacluster3.png
-         :figwidth: 1200px
+         :figwidth: 500px
          :alt: Topic settings
 
          Figure 4. Topic settings
 
-   .. step:: Configure the Stream Processing connection registry
+   .. step:: Configure the Stream Processing Connection Registry
 
-      To configure a new connection, click the configure button in the Stream
-      Processing Instance, then click Connection Registry and add a new 
-      connection.
+      Configure a new connection in :ref:`Atlas Stream Processing
+      <atlas-sp-tutorial>` to connect the instance with the Kafka Cluster.
 
-      You will use this to connect the Atlas Stream Processing Instance with 
-      the Kafka Cluster.
+      Use the :ref:`Confluent bootstrap URL <copy-bootstrap-URL>` in the
+      connection  Registry.
 
-      Once you have created your Kafka cluster, Confluent will provide you with
-      the bootstrap server URL, username, and password for the Connection
-      Registry.
-      
       .. figure:: /includes/images/industry-solutions/configurespconnection1.png
-         :figwidth: 1200px
+         :figwidth: 500px
          :alt: Stream Processing connection registry settings
 
          Figure 5. Stream Processing connection registry settings
 
-      Next, create a connection from the Atlas Stream Processing Instance to
-      the MongoDB Atlas cluster.
+      Connect the Atlas Stream Processing Instance to the Atlas cluster.
       
       .. figure:: /includes/images/industry-solutions/configurespconnection2.png
-         :figwidth: 1200px
+         :figwidth: 500px
          :alt: Stream Processing to Atlas settings
 
          Figure 6. Stream Processing to Atlas settings
 
-   .. step:: Connect to the Stream Processing instance
+   .. step:: Configure Atlas Stream Processing instance
 
       To configure the pipelines and connections in the Stream Processing 
       Instance, you can connect to the cluster using the Mongo Shell (mongosh).
