@@ -190,26 +190,19 @@ The ``README`` guides you through the following steps:
 
       .. _copy-bootstrap-URL:
       
-      Copy your bootstrap URL from the ``Cluster Settings`` tab on Confluent.
-      
-      Use the Kafka REST API and create an API key to connect to your cluster.
+      Copy your bootstrap URL from the ``Cluster Settings`` tab on Confluent and
+      use the Kafka REST API to create an API key to connect to your cluster.
 
-      Configure the topics ``SpanishInputTopic``, ``EnglishInputTopic``, and
+      Create the topics ``SpanishInputTopic``, ``EnglishInputTopic``, and
       ``OutputTopic`` in the ``Topics`` tab on Confluent.
 
    .. step:: Configure the Stream Processing Connection Registry
 
       Use the :ref:`Confluent bootstrap URL <copy-bootstrap-URL>` in the
-      connection registry to configure a new connection in :ref:`Atlas Stream Processing
-      <atlas-sp-tutorial>` that connects the instance with the Kafka Cluster.
+      connection registry to configure a new connection between the :ref:`Atlas
+      Stream Processing Instance <atlas-sp-tutorial>` and the Kafka Cluster.
 
       Connect the Atlas Stream Processing Instance to the Atlas cluster.
-      
-      .. figure:: /includes/images/industry-solutions/configurespconnection2.png
-         :figwidth: 500px
-         :alt: Stream Processing to Atlas settings
-
-         Figure 6. Stream Processing to Atlas settings
 
    .. step:: Configure Atlas Stream Processing
 
@@ -229,13 +222,17 @@ The ``README`` guides you through the following steps:
 
    .. step:: Create an Atlas Vector Search Index
 
-      Next, you will create language-specific vector indexes in Atlas Search.
+      Create language-specific vector indexes in Atlas Search.
 
-      Visit the `Atlas Vector Search Quick Start guide <https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__ 
-      and start building smarter searches.
+      .. note::
 
-      The definition for the Atlas Vector Search Index for Spanish is as 
-      follows:
+         Visit the `Atlas Vector Search Quick Start guide
+         <https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
+         and start building smarter searches.
+
+      Create and configure an :ref:`Atlas Vector Search index
+      <avs-create-index>` for ``lyrics_embeddings_es``. You must structure the
+      search index as follows:
 
       .. code-block:: javascript
          :copyable: true
@@ -251,8 +248,9 @@ The ``README`` guides you through the following steps:
             ]
          }
 
-      The definition for the Atlas Vector Search Index for English is as
-      follows:
+      Create and configure an :ref:`Atlas Vector Search index
+      <avs-create-index>` for ``lyrics_embeddings_en``. You must structure the
+      search index as follows:
       
       .. code-block:: javascript
          :copyable: true
@@ -268,11 +266,12 @@ The ``README`` guides you through the following steps:
             ]
          }
 
-   .. step:: Run a semantic search
+   .. step:: Search and Analyze Large-Scale Documents using Vector Search
 
-      We created a script in Python to help you interactively run semantic
-      queries. You can find the script in the repository under the client 
-      folder.
+      Use the provided `query_client.py
+      <https://github.com/dsdlt/mongodb-scalable-document-embeddings/blob/main/client/query_client.py>`
+      script to run semantic queries using Atlas Vector Search in a chat
+      interface.
 
 Key Learnings
 -------------
