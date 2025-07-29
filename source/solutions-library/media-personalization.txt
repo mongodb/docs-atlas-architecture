@@ -49,14 +49,12 @@ MongoDB Atlas and `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__, you
 can build an AI-driven Media Personalization Platform, designed for
 large-scale media and publishing companies, that transforms content
-delivery to users. 
-
-By analyzing interactions and consumption patterns, this solution grasps
-what content resonates with users and predicts what they are likely to
-engage with in the future. These insights enable publishers to construct
-a personalized content journey. To learn how to build smarter searches,
-visit the :ref:`Atlas Vector Search Quick Start guide
-<vector-search-quick-start>`.
+delivery to users. By analyzing interactions and consumption patterns,
+this solution grasps what content resonates with users and predicts what
+they are likely to engage with in the future. These insights enable
+publishers to construct a personalized content journey. To learn how to
+build smarter searches, visit the :ref:`Atlas Vector Search Quick Start
+guide <vector-search-quick-start>`.
 
 Reference Architectures
 -----------------------
