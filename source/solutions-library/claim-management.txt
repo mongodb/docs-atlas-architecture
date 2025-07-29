@@ -18,7 +18,7 @@ Claims Management Using LLMs and Vector Search for RAG
    :depth: 1
    :class: singlecol
 
-Discover how to combine MongoDB Atlas Vector Search and large language models
+Discover how to combine MongoDB Atlas Vector Search and Large Language Models
 (LLMs) to streamline the claims adjustment process.
 
 **Use cases:** `Gen AI <https://www.mongodb.com/use-cases/artificial-intelligence>`__, 
@@ -45,14 +45,14 @@ companies have accumulated terabytes of `unstructured data
 help uncover business insights, deliver better customer experiences, and
 streamline operations. However, many companies fail to capitalize on this.
 
-To benefit these organizations and their customers, MongoDB's solution combines
-the power of `Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__ and `Large
-Language Models (LLMs) <https://www.mongodb.com/basics/large-language-models>`__
-in a `retrieval augmented generation (RAG)
-<https://www.mongodb.com/basics/retrieval-augmented-generation>`__ system, to
-allow organizations to go beyond the limitations of baseline foundational
-models. Propriety data makes models context-aware, allowing them to leverage the
+To benefit these organizations and their customers, you can build a claims
+management solution with MongoDB that combines the power of `Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__ and `LLMs
+<https://www.mongodb.com/basics/large-language-models>`__ in a `retrieval
+augmented generation (RAG)
+<https://www.mongodb.com/basics/retrieval-augmented-generation>`__ system, and
+allows organizations to go beyond the limitations of baseline foundational
+models. Propriety data makes models context-aware, allowing them to use the
 full potential of AI to streamline operations. 
 
 Reference Architecture
@@ -195,30 +195,30 @@ Quick Start guide <vector-search-quick-start>`.
 Key Learnings
 -------------
 
-- **Text embedding creation:** The embedding generation process can be
-  carried out using different models and deployment options. It is
-  important to consider privacy and data protection requirements. You
-  can deploy a model locally if your data needs to remain on the
-  servers. Otherwise, you can call an API and get your vector embeddings
-  back, as explained in `this
+- **Generate Text Embeddings:** You can create embeddings using different models
+  and deployment options. It is important to consider privacy and data
+  protection requirements. You can deploy a model locally if your data needs to
+  remain on the servers. Otherwise you can call an API and get your vector
+  embeddings back, as explained in `this
   <https://www.mongodb.com/docs/atlas/atlas-vector-search/create-embeddings/>`__
   tutorial. You can use `Voyage AI (acquired by MongoDB)
   <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai>`__
   or open-source models. 
 
-- **Creation of a Vector Search index in Atlas:** It is now possible to
-  create indexes for `local deployments
+- **Create Vector Search Indexes:** You can build Vector Search indexes in
+  MongoDB Atlas, alternatively, you can also build indexes for `local
+  deployments
   <https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-local/#std-label-atlas-cli-deploy-local-avs>`__.
 
-- **Performing a Vector Search query:** :ref:`Vector Search queries
-  <return-vector-search-results>` have a dedicated operator within MongoDB’s
-  :ref:`aggregation pipeline <aggregation>`. This means they can be concatenated
-  with other operations, making it convenient for developers because they don’t
-  need to learn a different language or change context.
+- **Perform a Vector Search Query:** You can run :ref:`Vector Search queries
+  <return-vector-search-results>` with MongoDB's :ref:`aggregation pipeline
+  <aggregation>`, allowing you to concatenate multiple operations in your
+  workflow. This approach eliminates the need to learn another programming
+  language or change context.
 
-- **Fast RAG Implementation:** Using the :ref:`LangChain <langchain>` framework
-  that combines MongoDB Atlas Vector Search and the LLM allows for an easy and
-  fast RAG implementation.
+- **Develop a Fast RAG Implementation:** You can develop a fast RAG
+  implementation with a :ref:`LangChain <langchain>` framework that combines
+  MongoDB Atlas Vector Search and LLMs.
 
 Authors
 -------
