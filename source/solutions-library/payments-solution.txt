@@ -38,10 +38,16 @@ payment data to power modern applications.
 Solution Overview
 -----------------
 
-Today's payment industry changes quickly, and business are working to offer
+Today's payment industry changes quickly, and businesses are working to offer
 secure and easy-to-use payment solutions. This need is driven by factors
 like new regulations, customer expectations, and market competition. Financial
 services organizations can use MongoDB to modernize their payment systems.
+
+This solution showcases how you can use MongoDB to build an `ODL
+<https://www.mongodb.com/collateral/implementing-an-operational-data-layer>`__. 
+You can deploy an ODL on top of legacy systems to modernize your
+architecture without the difficulty and risk that comes with fully replacing the
+legacy systems.
 
 Modernizing Payment Systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,7 +62,7 @@ Several factors are pushing the modernization of payment systems:
   across different platforms.
 - **Open banking:** Open banking makes the financial sector more
   competitive and innovative, allowing for the development of new payment services.
-- **Competition:** Financial technology (fintech) startups offer new payment solutions, 
+- **Competition:** :abbr:`Fintech (Financial Technology)` startups offer new payment solutions, 
   challenging traditional financial institutions to update their systems.
 
 Modernization Challenges
@@ -104,12 +110,6 @@ The following MongoDB features support payment modernization efforts:
 Reference Architectures
 -----------------------
 
-This solution showcases how you can use MongoDB to build an `operational data layer
-<https://www.mongodb.com/collateral/implementing-an-operational-data-layer>`__ 
-(ODL). You can deploy an ODL on top of legacy systems to modernize your
-architecture without the difficulty and risk that comes with fully replacing the
-legacy systems.
-
 The diagram below details the architecture used by this payment solution. To learn more
 about how it works with MongoDB, visit our `Real-Time Payments page
 <https://www.mongodb.com/basics/real-time-payments>`__.
@@ -149,10 +149,6 @@ User Management
 
 This service facilitates user and account interactions. The diagram below shows
 the flow for account creation. 
-
-(`Github repo <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main/api/user>`__)
-Facilitates the main operations around user/account interaction. In the diagram below, you
-can see the main flow for creating accounts.
 
 The diagram involves the following entities:
 
@@ -390,8 +386,8 @@ Documents in the ``notifications`` collection have the following structure:
        ]
    }
 
-Building the Solution
----------------------
+Build the Solution
+------------------
 
 The code for this tutorial can be found in this `GitHub repository
 <https://github.com/mongodb-developer/FSIDemo-Payments/tree/main>`__. To get
