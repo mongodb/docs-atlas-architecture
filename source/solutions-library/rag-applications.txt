@@ -277,16 +277,14 @@ Key Learnings
 -------------
 
 - **Maintain embedding relevancy:** Regularly update data embeddings to ensure
-  your semantic searches remain accurate, especially if your documents change 
-  frequently.
+  your semantic searches remain accurate.
   
-- **Optimize language-model pairing:** To maximize semantic search accuracy,
-  ensure your large language model (LLM) closely aligns with the language of
-  your data to significantly enhance the relevance and precision of your search results.
+- **Optimize language-model pairing:** To enhance the relevance and precision of
+  your search results, ensure your LLM closely aligns with the language of your
+  data.
 
-- **Embrace flexible embeddings:** MongoDB's flexible data model eliminates the
-  need for rigid schema definitions. This flexibility allows you to store
-  embeddings directly alongside your data, regardless of their length or the 
+- **Embrace flexible embeddings:** MongoDB's flexible data model allows you to store
+  embeddings directly alongside your data, regardless of their length or the
   model used to generate them.
 
 - **Choose the right similarity function:** The effectiveness of your semantic
@@ -295,9 +293,7 @@ Key Learnings
 
 - **Asynchronous embedding generation:** Generating embeddings can be
   computationally expensive. Consider running this task asynchronously to avoid
-  impacting your application's performance. Leverage the cloud's elasticity by
-  horizontally scaling the functions responsible for embedding generation to 
-  handle bursts in workload.
+  impacting your application's performance.
 
 Learn More
 ----------
