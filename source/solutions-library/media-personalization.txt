@@ -47,7 +47,7 @@ To overcome these challenges, publishers need to use data effectively to
 create more engaging and personalized experiences for their users. With
 MongoDB Atlas and `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__, you
-can build an AI-driven Media Personalization Platform, designed for
+can build an AI-driven media personalization platform, designed for
 large-scale media and publishing companies, that transforms content
 delivery to users. By analyzing interactions and consumption patterns,
 this solution grasps what content resonates with users and predicts what
@@ -59,47 +59,23 @@ guide <vector-search-quick-start>`.
 Reference Architectures
 -----------------------
 
+The architecture below shows how you can build an AI-driven media
+solution with MongoDB that incorporates advanced personalization
+capabilities, such as:
+
+- Discovery and content suggestions
+- Content summarization and reformating
+- Keyword Extraction
+- Insights and dossiers creation
+
 .. figure:: /includes/images/industry-solutions/reference-architecture.svg
    :figwidth: 750px
    :alt: An image showing the reference architecture of vector search
 
-   Figure 1. Media personalization architecture with Atlas Vector Search
+   Figure 1. AI-driven media architecture with Atlas Vector Search
 
-Build the Solution
-------------------
-
-You can view a solution demo at `<https://ist.media>`__.
-
-.. figure:: /includes/images/industry-solutions/ist-homepage.svg
-   :figwidth: 750px
-   :alt: An image showing the homepage of the ist website
-
-   Figure 2. Media platform homepage interface
-
-In the underlying data model, a representative news article has the following
-structure:
-
-.. figure:: /includes/images/industry-solutions/demo-model.svg
-   :figwidth: 750px
-   :alt: An image showing an example of a news article in data model format
-
-   Figure 3. Data model for a news article
-
-You can use `Voyage AI <https://www.voyageai.com/>`__ to generate your
-embeddings. To perform vector search, create a vector index in MongoDB Atlas
-with the following configuration:
-
-.. figure:: /includes/images/industry-solutions/vector-index.svg
-   :figwidth: 750px
-   :alt: An image showing an embedding model
-
-   Figure 4. Vector index for the embedding model
-
-Key Learnings
--------------
-
-Personalize and Suggest Content
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Discovery and Content Suggestions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This solution suggests content based on users' preferences and past
 interactions by utilizing user data, behavioral analytics, and vectorization
@@ -114,8 +90,8 @@ to scale their operations vertically or horizontally. You can also scale
 search nodes independently from operational database nodes to adapt to
 the specific load scenario.
 
-Summarize and Reformat Content
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Content Summarization and Reformating
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Users have a diverse array of consumption habits. This solution provides 
 concise summaries and adapts content formatting based
@@ -167,6 +143,42 @@ Other Applicable Industries
 You can reuse the core concepts of this solution across other industries
 such as retail, where presenting the right products to the right users is
 essential to keep sales high.
+
+
+Build the Solution
+------------------
+
+You can view a solution demo at `<https://ist.media>`__.
+
+.. figure:: /includes/images/industry-solutions/ist-homepage.svg
+   :figwidth: 750px
+   :alt: An image showing the homepage of the ist website
+
+   Figure 2. Media platform homepage interface
+
+In the underlying data model, a representative news article has the following
+structure:
+
+.. figure:: /includes/images/industry-solutions/demo-model.svg
+   :figwidth: 750px
+   :alt: An image showing an example of a news article in data model format
+
+   Figure 3. Data model for a news article
+
+You can use `Voyage AI <https://www.voyageai.com/>`__ to generate your
+embeddings. To perform vector search, create a vector index in MongoDB Atlas
+with the following configuration:
+
+.. figure:: /includes/images/industry-solutions/vector-index.svg
+   :figwidth: 750px
+   :alt: An image showing an embedding model
+
+   Figure 4. Vector index for the embedding model
+
+Key Learnings
+-------------
+
+
 
 Authors
 -------
