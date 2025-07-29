@@ -150,8 +150,8 @@ The relevant data fields are:
 - ``lyrics_embeddings_en``/``lyrics_embeddings_es``: Language-specific lyrics
   embedding vector
 
-- ``tags``: In the ``archive_lyrics_small1`` dataset, list of most common words
-  in the lyrics
+- ``tags``: Only in the ``archive_lyrics_small1`` dataset, lists frequently
+  occurring words in the lyrics
 
 Building the Solution
 ---------------------
@@ -159,7 +159,9 @@ Building the Solution
 The `GitHub repository
 <https://github.com/dsdlt/mongodb-scalable-document-embeddings>`__ contains
 detailed instructions on how to build the solution to update your embeddings
-asynchronously and at scale, leveraging MongoDB Atlas.
+asynchronously and at scale, leveraging MongoDB Atlas. 
+
+The ``README`` guides you through the following steps:
 
 .. procedure::
    :style: normal
@@ -183,7 +185,7 @@ asynchronously and at scale, leveraging MongoDB Atlas.
    .. step:: Configure a Kafka Cluster in Confluent
 
       Follow the instructions in the `Confluent documentation
-      https://docs.confluent.io/cloud/current/clusters/create-cluster.html#create-ak-clusters`__
+      <https://docs.confluent.io/cloud/current/clusters/create-cluster.html#create-ak-clusters>`__
       to create a Kafka Cluster.
 
       .. _copy-bootstrap-URL:
@@ -235,28 +237,18 @@ asynchronously and at scale, leveraging MongoDB Atlas.
 
          Figure 6. Stream Processing to Atlas settings
 
-   .. step:: Configure Atlas Stream Processing instance
+   .. step:: Configure Atlas Stream Processing
 
-      To configure the pipelines and connections in the Stream Processing 
-      Instance, you can connect to the cluster using the Mongo Shell (mongosh).
+      Copy your `connection string
+      <https://www.mongodb.com/docs/atlas/atlas-stream-processing/tutorial/#get-the-stream-processing-instance-connection-string.>`__
+      for connecting to the Stream Processing Instance.
 
-      When clicking on the Connect button in the Stream Processing Instance, 
-      the Atlas UI provides instructions on connecting to the instance.
+      Use the :ref:`MongoDB Shell (mongosh) <mdb-shell-overview>` to configure
+      the pipelines and connections in the Stream Processing Instance.
 
-      .. figure:: /includes/images/industry-solutions/connectstreamprocessing1.png
-         :figwidth: 1200px
-         :alt: Connect to Stream Processing
+   .. step:: Launch the Processor Scripts
 
-         Figure 7. Connect to Stream Processing
-
-   .. step:: Configuring Atlas Stream Processing
-
-      You can follow the steps to configure Atlas Stream Processing in the
-      README file in the GitHub repo. There you will learn how to create the
-      pipelines to subscribe to changes in MongoDB, emit to each
-      language-specific topic, and merge the events containing the processed
-      data with the embeddings received from the Kafka cluster into MongoDB 
-      using a MongoDB aggregation stage.
+      
 
    .. step:: Create the Atlas Vector Search indexes
 
@@ -318,16 +310,20 @@ Key Learnings
 - **Maintain embedding relevancy:** Regularly update data embeddings to ensure
   your semantic searches remain accurate, especially if your documents change 
   frequently.
+  
 - **Optimize language-model pairing:** To maximize semantic search accuracy,
   ensure your large language model (LLM) closely aligns with the language of
   your data to significantly enhance the relevance and precision of your search results.
+
 - **Embrace flexible embeddings:** MongoDB's flexible data model eliminates the
   need for rigid schema definitions. This flexibility allows you to store
   embeddings directly alongside your data, regardless of their length or the 
   model used to generate them.
+
 - **Choose the right similarity function:** The effectiveness of your semantic
   searches depends on the chosen similarity function. Tailor your selection to 
   your specific use case.
+
 - **Asynchronous embedding generation:** Generating embeddings can be
   computationally expensive. Consider running this task asynchronously to avoid
   impacting your application's performance. Leverage the cloud's elasticity by
