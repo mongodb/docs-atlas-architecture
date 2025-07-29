@@ -47,32 +47,38 @@ To overcome these challenges, publishers need to use data effectively to
 create more engaging and personalized experiences for their users. With
 MongoDB Atlas and `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__, you
-can build an AI-driven media personalization platform, designed for
-large-scale media and publishing companies, that transforms content
-delivery to users. By analyzing interactions and consumption patterns,
-this solution grasps what content resonates with users and predicts what
-they are likely to engage with in the future. These insights enable
-publishers to construct a personalized content journey. To learn how to
-build smarter searches, visit the :ref:`Atlas Vector Search Quick Start
-guide <vector-search-quick-start>`.
+can build an AI-driven media platform, designed for large-scale media
+and publishing companies, that transforms content delivery to users. By
+analyzing interactions and consumption patterns, this solution grasps
+what content resonates with users and predicts what they are likely to
+engage with in the future. These insights enable publishers to construct
+a personalized content journey. To learn how to build smarter searches,
+visit the :ref:`Atlas Vector Search Quick Start guide
+<vector-search-quick-start>`.
 
 Reference Architectures
 -----------------------
 
-The architecture below shows how you can build an AI-driven media
-solution with MongoDB that incorporates advanced personalization
-capabilities, such as:
+The architecture shows how you can build an AI-driven media solution
+with MongoDB that incorporates advanced personalization services, such
+as:
 
 - Discovery and content suggestions
 - Content summarization and reformating
 - Keyword Extraction
-- Insights and dossiers creation
+- Insights and dossiers automation
+
+You can reuse the core concepts of this solution across other industries
+such as retail, where presenting the right products to the right users is
+essential to keep sales high.
 
 .. figure:: /includes/images/industry-solutions/reference-architecture.svg
    :figwidth: 750px
    :alt: An image showing the reference architecture of vector search
 
    Figure 1. AI-driven media architecture with Atlas Vector Search
+
+Below is a closer look at each of these services.
 
 Discovery and Content Suggestions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,8 +103,8 @@ Users have a diverse array of consumption habits. This solution provides
 concise summaries and adapts content formatting based
 on user preferences and device specifications.
 
-Extract Keywords
-~~~~~~~~~~~~~~~~
+Keywords Extraction
+~~~~~~~~~~~~~~~~~~~
 
 In traditional publishing workflows, selecting keywords requires content
 creators to meticulously identify and incorporate relevant keywords. This
@@ -111,8 +117,8 @@ news dimensions and enhancing the searchability of content within the
 platform. Keywords significantly influence the :abbr:`SEO (Search Engine Optimization)` 
 performance of digital content.
 
-Automatically Create Insights and Dossiers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Insights and Dossiers Automation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This solution automatically generates comprehensive insights and
 dossiers from multiple articles, which is helpful for users who want
@@ -121,29 +127,17 @@ uses one or more LLMs to generate natural language output, derived
 from multiple source articles. You can integrate any leading language
 model that fits your requirements. Here's how this process works:
 
-- **Integration with multiple sources:** The system uses MongoDB Atlas
-  Vector Search to pull content from a variety of articles and data sources.
-  This content is then compiled into dossiers, which provide users with a
-  detailed and contextual exploration of topics and are curated to offer a narrative
-  or analytical perspective beyond the original content.
+- **Integration with multiple sources:** The system uses Atlas
+  Vector Search to pull content from a variety of articles and data
+  sources. This content is then compiled into dossiers, which provide
+  users with a detailed and contextual exploration of topics and are
+  curated to offer a narrative or analytical perspective beyond the
+  original content.
 
 - **Customizable output:** You can customize the system output by setting
   parameters based on your audience's preferences or your specific project
   requirements. This includes adjusting the level of detail, the amount of
   technical terms, and the inclusion of multimedia elements.
-
-This feature enhances user engagement by delivering personalized and context-rich
-content. It caters to users looking for either quick summaries or in-depth
-analyses. By using an LLM to automate these processes, you can maintain a
-high level of productivity and innovation in content creation.
-
-Other Applicable Industries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can reuse the core concepts of this solution across other industries
-such as retail, where presenting the right products to the right users is
-essential to keep sales high.
-
 
 Build the Solution
 ------------------
