@@ -190,44 +190,18 @@ The ``README`` guides you through the following steps:
 
       .. _copy-bootstrap-URL:
       
-      Copy your bootstrap URL.
-
-      .. figure:: /includes/images/industry-solutions/createkafkacluster1.png
-         :figwidth: 500px
-         :alt: Kafka cluster settings
-
-         Figure 2. Kafka cluster settings
+      Copy your bootstrap URL from the ``Cluster Settings`` tab on Confluent.
       
-      Create an API key to connect to your cluster.
-
-      .. figure:: /includes/images/industry-solutions/createkafkacluster2.png
-         :figwidth: 500px
-         :alt: API key settings
-
-         Figure 3. API key settings
+      Use the Kafka REST API and create an API key to connect to your cluster.
 
       Configure the topics ``SpanishInputTopic``, ``EnglishInputTopic``, and
-      ``OutputTopic`` in Confluent.
-      
-      .. figure:: /includes/images/industry-solutions/createkafkacluster3.png
-         :figwidth: 500px
-         :alt: Topic settings
-
-         Figure 4. Topic settings
+      ``OutputTopic`` in the ``Topics`` tab on Confluent.
 
    .. step:: Configure the Stream Processing Connection Registry
 
-      Configure a new connection in :ref:`Atlas Stream Processing
-      <atlas-sp-tutorial>` to connect the instance with the Kafka Cluster.
-
       Use the :ref:`Confluent bootstrap URL <copy-bootstrap-URL>` in the
-      connection  Registry.
-
-      .. figure:: /includes/images/industry-solutions/configurespconnection1.png
-         :figwidth: 500px
-         :alt: Stream Processing connection registry settings
-
-         Figure 5. Stream Processing connection registry settings
+      connection registry to configure a new connection in :ref:`Atlas Stream Processing
+      <atlas-sp-tutorial>` that connects the instance with the Kafka Cluster.
 
       Connect the Atlas Stream Processing Instance to the Atlas cluster.
       
