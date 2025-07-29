@@ -36,26 +36,27 @@ Media
 Solution Overview
 -----------------
 
-In today's rapidly evolving media landscape, the surge in
+In today's evolving media landscape, the large amounts of
 digital content makes it difficult to capture audience attention.
-Additionally, the decline in referral traffic from social media platforms
-and search engines puts significant pressure on traditional media outlets.
-Therefore, publishers are seeking ways to stabilize their user base
-and sustainably enhance engagement.
+At the same time, declining referral traffic from social media platforms
+and search engines puts additional pressure on traditional media outlets.
+As a result, publishers are seeking ways to stabilize their user base
+and enhance content engagement.
 
-Overcoming these challenges requires leveraging data effectively to
-create more engaging, personalized user experiences. This solution, designed
-for large-scale media and publishing companies,
-uses MongoDB and `Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`_ to
-transform how content is delivered to users. To learn how to build
-smarter searches, visit the :ref:`Atlas Vector Search Quick Start 
-guide <vector-search-quick-start>`.
+To overcome these challenges, publishers need to use data effectively to
+create more engaging and personalized experiences for their users. With
+MongoDB Atlas and `Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__, you
+can build an AI-driven Media Personalization Platform, designed for
+large-scale media and publishing companies, that transforms content
+delivery to users. 
 
-By analyzing interactions and consumption patterns, this solution
-grasps what content resonates with users and predicts what they are
-likely to engage with in the future. This enables publishers to
-construct a personalized content journey.
+By analyzing interactions and consumption patterns, this solution grasps
+what content resonates with users and predicts what they are likely to
+engage with in the future. These insights enable publishers to construct
+a personalized content journey. To learn how to build smarter searches,
+visit the :ref:`Atlas Vector Search Quick Start guide
+<vector-search-quick-start>`.
 
 Reference Architectures
 -----------------------
