@@ -139,9 +139,7 @@ Build the Solution
 
 For detailed setup instructions, follow the ``README`` of `this
 GitHub repository <https://github.com/mongodb-industry-solutions/RAG-Insurance>`__.
-You’ll be guided through the following steps:
-
-To build the solution, follow these instructions:
+The instructions guide you through the following steps:
 
 .. procedure::
    :style: normal
