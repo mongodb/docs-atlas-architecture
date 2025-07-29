@@ -170,7 +170,7 @@ The ``README`` guides you through the following steps:
 
       Clone the repository, set up a virtual environment, and install necessary dependencies.
 
-   .. Load the Dataset
+   .. step:: Load the Dataset
       
       .. important:: 
 
@@ -248,9 +248,12 @@ The ``README`` guides you through the following steps:
 
    .. step:: Launch the Processor Scripts
 
-      
+      Execute the metadata service to subscribe to the input topics, create the
+      tags and embeddings for the corresponding language according to the
+      information received in the event, and write the event to the output
+      topic.
 
-   .. step:: Create the Atlas Vector Search indexes
+   .. step:: Create an Atlas Vector Search Index
 
       Next, you will create language-specific vector indexes in Atlas Search.
 
@@ -291,13 +294,6 @@ The ``README`` guides you through the following steps:
             ]
          }
 
-   .. step:: Run the metadata service
-
-      The metadata service is a Python script that will subscribe to the input
-      topics, create the tags and embeddings for the corresponding language
-      according to the information received in the event, and write the event 
-      to the output topic.
-
    .. step:: Run a semantic search
 
       We created a script in Python to help you interactively run semantic
@@ -333,7 +329,7 @@ Key Learnings
 Learn More
 ----------
 
-To learn more about the products and technologies in this example, see the
+To learn more about the products and technologies in this solution, see the
 associated links below.
 
 MongoDB Developer Data Platform
@@ -346,8 +342,8 @@ MongoDB Developer Data Platform
 Partner Technologies
 ~~~~~~~~~~~~~~~~~~~~
 
-- Confluent Cloud
-- AWS EC2
+- `Confluent Cloud <https://www.confluent.io/confluent-cloud/>`__
+- `Amazon EC2 <https://aws.amazon.com/pm/ec2/>`__
 
 Author
 ------
