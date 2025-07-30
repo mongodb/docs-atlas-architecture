@@ -178,3 +178,12 @@ Authors
 -------
 
 - Benjamin Lorenz, MongoDB
+
+Learn More
+----------
+
+- :ref:`_arch-center-is-Gen-AI-powered-video-summarization-solution`
+
+- :ref:`_arch-center-is-streamline-global-gaming-management`
+
+- :ref:`_arch-center-is-text-to-audio`
