@@ -172,7 +172,19 @@ with the following configuration:
 Key Learnings
 -------------
 
+Below are core takeaways from this solution:
 
+- You can **build an AI-powered media solution with MongoDB Atlas** to 
+  deliver tailored content to your users and automate backend processes,
+  such as keywords automation.
+
+- You can **store diverse media data with MongoDB's flexible document
+  model**, including user data, news articles and embeddings to develop
+  AI-driven applications.  
+
+- You can **use MongoDB Atlas Vector Search to optimize content
+  personalization**, aligning individual preferences and past
+  interactions to provide better user experiences.
 
 Authors
 -------
