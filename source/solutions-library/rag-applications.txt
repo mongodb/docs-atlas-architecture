@@ -269,7 +269,7 @@ The ``README`` guides you through the following steps:
    .. step:: Search and Analyze Large-Scale Documents using Vector Search
 
       Use the provided `query_client.py
-      <https://github.com/dsdlt/mongodb-scalable-document-embeddings/blob/main/client/query_client.py>`
+      <https://github.com/dsdlt/mongodb-scalable-document-embeddings/blob/main/client/query_client.py>`__
       script to run semantic queries using Atlas Vector Search in a chat
       interface.
 
