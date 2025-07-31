@@ -68,10 +68,6 @@ services, such as:
 - Keyword extraction
 - Insights and dossiers automation
 
-You can reuse the core concepts of this solution across other industries
-such as retail, where presenting the right products to the right users is
-essential to keep sales high.
-
 .. figure:: /includes/images/industry-solutions/media-personalization-architecture.svg
    :figwidth: 750px
    :alt: An image showing the reference architecture of vector search
@@ -138,6 +134,10 @@ model that fits your requirements. Here's how this process works:
   parameters based on your audience's preferences or your specific project
   requirements. This includes adjusting the level of detail, the amount of
   technical terms, and the inclusion of multimedia elements.
+
+You can reuse the core concepts of this solution across other industries
+such as retail, where presenting the right products to the right users is
+essential to keep sales high.
 
 Build the Solution
 ------------------
