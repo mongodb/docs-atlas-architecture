@@ -36,36 +36,36 @@ Media
 Solution Overview
 -----------------
 
-In today's evolving media landscape, the large amounts of
-digital content makes it difficult to capture audience attention.
-At the same time, declining referral traffic from social media platforms
-and search engines puts additional pressure on traditional media outlets.
-As a result, publishers are seeking ways to stabilize their user base
-and enhance content engagement.
+In today's evolving media landscape, the large amount of digital content
+makes it difficult to capture audience attention. At the same time,
+referral traffic from social media platforms is declining, which puts
+additional pressure on traditional media outlets to drive engagement. As
+a result, publishers are seeking ways to stabilize their user base and
+enhance content engagement.
 
 To overcome these challenges, publishers need to use data effectively to
 create more engaging and personalized experiences for their users. With
 MongoDB Atlas and `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__, you
-can build an AI-driven media platform, designed for large-scale media
-and publishing companies, that transforms content delivery to users. By
-analyzing interactions and consumption patterns, this solution grasps
-what content resonates with users and predicts what they are likely to
-engage with in the future. These insights enable publishers to construct
-a personalized content journey. To learn how to build smarter searches,
-visit the :ref:`Atlas Vector Search Quick Start guide
+can build an AI-driven media platform that transforms content delivery
+to users of large-scale media and publishing platforms. By analyzing
+interactions and consumption patterns, this solution grasps what content
+resonates with users and predicts what they are likely to engage with in
+the future. These insights enable publishers to construct a personalized
+content journey. To learn how to build smarter searches, visit the
+:ref:`Atlas Vector Search Quick Start guide
 <vector-search-quick-start>`.
 
 Reference Architectures
 -----------------------
 
-The architecture shows how you can build an AI-driven media solution
-with MongoDB that incorporates advanced personalization services, such
-as:
+The architecture below shows how you can build an AI-driven media
+solution with MongoDB that incorporates advanced personalization
+services, such as:
 
 - Discovery and content suggestions
 - Content summarization and reformating
-- Keyword Extraction
+- Keyword extraction
 - Insights and dossiers automation
 
 You can reuse the core concepts of this solution across other industries
@@ -78,7 +78,7 @@ essential to keep sales high.
 
    Figure 1. AI-driven media architecture with Atlas Vector Search
 
-Below is a closer look at each of these services.
+The following sections describe these services in more detail.
 
 Discovery and Content Suggestions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -103,8 +103,8 @@ Users have a diverse array of consumption habits. This solution provides
 concise summaries and adapts content formatting based
 on user preferences and device specifications.
 
-Keywords Extraction
-~~~~~~~~~~~~~~~~~~~
+Keyword Extraction
+~~~~~~~~~~~~~~~~~~
 
 In traditional publishing workflows, selecting keywords requires content
 creators to meticulously identify and incorporate relevant keywords. This
@@ -172,19 +172,18 @@ with the following configuration:
 Key Learnings
 -------------
 
-Below are core takeaways from this solution:
+- **Build AI-driven solutions:** With MongoDB Atlas, you can build an
+  AI-powered media solution that delivers tailored content to your users
+  and automate backend processes, such as keywords automation.
 
-- You can **build an AI-powered media solution with MongoDB Atlas** to 
-  deliver tailored content to your users and automate backend processes,
-  such as keywords automation.
-
-- You can **store diverse media data with MongoDB's flexible document
-  model**, including user data, news articles and embeddings to develop
+- **Store diverse data types:** With MongoDB's flexible document model,
+  you can store a wide range of media data including user data, news
+  articles, and embeddings, which simplifies the development of
   AI-driven applications.  
 
-- You can **personalize user content experiences with MongoDB Atlas
-  Vector Search**, aligning individual preferences and past interactions
-  to provide better content journeys.
+- **Personalize user experiences:** With MongoDB Atlas Vector Search, you
+  can create a personalized content journey, based on individual
+  preferences and past interactions, that improves user engagement.
 
 Authors
 -------
