@@ -174,7 +174,7 @@ with the following configuration:
 Key Learnings
 -------------
 
-- **Build AI-driven solutions:** With MongoDB Atlas, you can build an
+- **Build AI-driven applications:** With MongoDB Atlas, you can build an
   AI-powered media solution that delivers tailored content to your users
   and automate backend processes, such as keywords automation.
 
