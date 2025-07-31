@@ -72,7 +72,7 @@ You can reuse the core concepts of this solution across other industries
 such as retail, where presenting the right products to the right users is
 essential to keep sales high.
 
-.. figure:: /includes/images/industry-solutions/media-personalization-architecture.svg
+.. figure:: /includes/images/industry-solutions/media-personalization-architecture2.svg
    :figwidth: 750px
    :alt: An image showing the reference architecture of vector search
 
