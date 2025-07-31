@@ -142,8 +142,8 @@ essential to keep sales high.
 Build the Solution
 ------------------
 
-You can view a demo of the solution at `<https://ist.media>`__, or replicate it
-using the `ist.media GitHub repository
+You can view the solution demo at `<https://ist.media>`__, or replicate
+it using the ``README`` of `this GitHub repository
 <https://github.com/mongodb-industry-solutions/ist.media/tree/main>`__. 
 
 .. figure:: /includes/images/industry-solutions/ist-media-interface.svg
