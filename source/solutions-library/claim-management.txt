@@ -45,15 +45,15 @@ companies have accumulated terabytes of `unstructured data
 help uncover business insights, deliver better customer experiences, and
 streamline operations. However, many companies fail to capitalize on this.
 
-To benefit these organizations and their customers, you can build a claims
-management solution with MongoDB that combines the power of `Atlas Vector Search
+To help your organization overcome these challenges, you can build a claims
+management solution with MongoDB that combines `Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__ and `LLMs
 <https://www.mongodb.com/basics/large-language-models>`__ in a `retrieval
 augmented generation (RAG)
-<https://www.mongodb.com/basics/retrieval-augmented-generation>`__ system, and
-allows organizations to go beyond the limitations of baseline foundational
-models. Propriety data makes models context-aware, allowing them to use the
-full potential of AI to streamline operations. 
+<https://www.mongodb.com/basics/retrieval-augmented-generation>`__ system. This
+framework helps organizations go beyond the limitations of basic foundational
+models and use their proprietary data to make models context-aware, streamlining
+operations with AI’s full potential.
 
 Reference Architecture
 ----------------------
