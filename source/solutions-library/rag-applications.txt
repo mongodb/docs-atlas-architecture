@@ -175,8 +175,8 @@ The ``README`` guides you through the following steps:
       .. important:: 
 
          If you don't already have an Atlas account, :ref:`join now
-         <guides-create-atlas-account>` and :ref:`create a cluster
-         <guides-create-a-cluster>`.
+         <atlas-getting-started>` and :ref:`create a cluster
+         <deploy-atlas-m0-cluster>`.
 
       Use the `provided script
       <https://github.com/dsdlt/mongodb-scalable-document-embeddings/blob/main/dataset/data_load.sh>`__
@@ -221,8 +221,6 @@ The ``README`` guides you through the following steps:
       topic.
 
    .. step:: Create an Atlas Vector Search Index
-
-      Create language-specific vector indexes in Atlas Search.
 
       .. note::
 
@@ -279,9 +277,9 @@ Key Learnings
 - **Maintain embedding relevancy:** Regularly update data embeddings to ensure
   your semantic searches remain accurate.
   
-- **Optimize language-model pairing:** To enhance the relevance and precision of
-  your search results, ensure your LLM closely aligns with the language of your
-  data.
+- **Optimize language-model pairing:** Ensure your LLM closely aligns with the
+  language of your data to enhance the relevance and precision of your search
+  results.
 
 - **Embrace flexible embeddings:** MongoDB's flexible data model allows you to store
   embeddings directly alongside your data, regardless of their length or the
@@ -290,10 +288,6 @@ Key Learnings
 - **Choose the right similarity function:** The effectiveness of your semantic
   searches depends on the chosen similarity function. Tailor your selection to 
   your specific use case.
-
-- **Asynchronous embedding generation:** Generating embeddings can be
-  computationally expensive. Consider running this task asynchronously to avoid
-  impacting your application's performance.
 
 Learn More
 ----------
