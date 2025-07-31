@@ -142,7 +142,9 @@ essential to keep sales high.
 Build the Solution
 ------------------
 
-You can view a solution demo at `<https://ist.media>`__.
+You can view a demo of the solution at `<https://ist.media>`__, or replicate it
+using the `ist.media GitHub repository
+<https://github.com/mongodb-industry-solutions/ist.media/tree/main>__`. 
 
 .. figure:: /includes/images/industry-solutions/ist-media-interface.svg
    :figwidth: 750px
