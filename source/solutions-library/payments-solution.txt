@@ -78,7 +78,7 @@ Updating payment systems is challenging due to:
 - **Technical debt:** Previous shortcuts in system design can limit future growth and
   adaptability.
 
-In this example solution, you can learn how you can use MongoDB when modernizing
+In this example solution, you can learn how you can use MongoDB to modernize
 payment systems.
 
 Approaches to Modernization
