@@ -39,9 +39,9 @@ Stream Processing
 Solution Overview
 -----------------
 
-Providing models with up-to-date data is essential for delivering a
-differentiated experience that uses relevant context to offer recommendations
-beyond a one-size-fits all AI approach. `Retrieval-augmented generation
+Providing models with up-to-date data is essential so that they can use relevant
+context when offering recommendations beyond a one-size-fits-all AI approach.
+`Retrieval-augmented generation
 <https://www.mongodb.com/basics/retrieval-augmented-generation>`__ (RAG) systems
 enable organizations to ground `large language models
 <https://www.mongodb.com/basics/large-language-models>`__ (LLMs) and other
@@ -188,7 +188,7 @@ The ``README`` guides you through the following steps:
       <https://docs.confluent.io/cloud/current/clusters/create-cluster.html#create-ak-clusters>`__
       to create a Kafka Cluster.
 
-      .. _copy-bootstrap-URL:
+      .. _is-copy-bootstrap-URL:
       
       Copy your bootstrap URL from the ``Cluster Settings`` tab on Confluent and
       use the Kafka REST API to create an API key to connect to your cluster.
@@ -198,7 +198,7 @@ The ``README`` guides you through the following steps:
 
    .. step:: Configure the Stream Processing Connection Registry
 
-      Use the :ref:`Confluent bootstrap URL <copy-bootstrap-URL>` in the
+      Use the :ref:`Confluent bootstrap URL <is-copy-bootstrap-URL>` in the
       connection registry to configure a new connection between the :ref:`Atlas
       Stream Processing Instance <atlas-sp-tutorial>` and the Kafka Cluster.
 
@@ -282,19 +282,6 @@ Key Learnings
 - **Choose the right similarity function:** The effectiveness of your semantic
   searches depends on the chosen similarity function. Tailor your selection to 
   your specific use case.
-
-Learn More
-----------
-
-To learn more about the products and technologies in this solution, see the
-associated links below.
-
-MongoDB Developer Data Platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- `Atlas Database <http://mongodb.com/atlas>`__
-- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
-- `Atlas Stream Processing <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
 
 Author
 ------
