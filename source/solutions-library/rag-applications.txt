@@ -18,7 +18,7 @@ Building Continuously Updating RAG Applications
    :depth: 1
    :class: singlecol
 
-Use MongoDB Atlas native stream processing and vector search to continuously
+Use MongoDB Atlas Stream Processing and Vector Search to continuously
 update, store, and search embeddings through a unified interface.
 
 **Use cases:** `Gen AI
@@ -39,30 +39,29 @@ Stream Processing
 Solution Overview
 -----------------
 
-Providing AI models with up-to-date data is essential to delivering a
-differentiated experience. Retrieval-augmented generation (`RAG
-<https://www.mongodb.com/basics/retrieval-augmented-generation>`__) systems
-enable organizations to ground large language models (`LLMs
-<https://www.mongodb.com/basics/large-language-models>`__) and other
+Providing models with up-to-date data is essential for delivering a
+differentiated experience that uses relevant context to offer recommendations
+beyond a one-size-fits all AI approach. `Retrieval-augmented generation
+<https://www.mongodb.com/basics/retrieval-augmented-generation>`__ (RAG) systems
+enable organizations to ground `large language models
+<https://www.mongodb.com/basics/large-language-models>`__ (LLMs) and other
 foundational models in the truth of their proprietary data. However, maintaining
-the freshness of the underlying data introduces a layer of complexity. To ensure
-models provide accurate answers, it is essential to continuously update the
-vector embeddings that form the core of RAG systems to represent the latest
-information available. 
+the underlying data is complex. To ensure that models provide accurate answers,
+it is essential to continuously update the vector embeddings that form the core
+of RAG systems to represent the latest information available. 
 
-Furthermore, the choice of embedding model impacts the quality of AI outputs due
-to how different models are optimized for varying purposes and data types. For
-example, an embedding model trained on a particular language will create more
-contextually appropriate embeddings for that language than a general-purpose
-model trained across many languages.
+Furthermore, the choice of embedding model impacts the quality of AI outputs
+because different models are optimized for different purposes and data types.
+For example, an embedding model trained on a particular language will create
+more contextually appropriate embeddings for that language than a
+general-purpose model trained across many languages.
 
 By leveraging MongoDB Atlas' native `Stream Processing
 <https://www.mongodb.com/products/platform/atlas-stream-processing>`__ and
 `Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__ capabilities,
-this solution addresses this issue of continuously updating and routing vector
-embeddings in a RAG system. With this solution, developers can continuously
-update, store, and search embeddings within a single interface.
+this solution allows developers to continuously update, store, and search
+embeddings within a single interface.
 
 This solution is relevant to many industries and use cases, including:
 
@@ -71,33 +70,33 @@ This solution is relevant to many industries and use cases, including:
   Empowering loan officers with an AI-powered interface using relevant and fresh
   data for expediting loan creation can optimize banking workflows.
 
-- **Healthcare and Insurance:** From constantly updating patient records to 
-  AI-powered underwriting of insurance policies, it’s important that any RAG 
-  system that optimizes these processes has access to the latest information.
+- **Healthcare and Insurance:** RAG systems that help update patient records or
+  underwrite insurance policies need access to up-to-date information.
 
-- **Retail:** Personalizing retail experiences for customers is critical.
-  However, consider the many languages that shoppers might use and product
-  descriptions that have to match. Routing up-to-date, contextual data to the
-  most accurate embedding model can improve these experiences.
+- **Retail:** Up-to-date contextual data is crucial for RAG systems to select
+  the right embedding model, enabling personalized experiences for customers
+  regardless of the language they use.
 
 Reference Architectures
 -----------------------
 
+This solution uses the following components:
+
 - **MongoDB Atlas Cluster:** Enables the flexible storage of various data types
   including text, associated metadata, and corresponding vector embeddings in
   documents. Atlas's vector index capability directly supports efficient
-  semantic search queries within the database, which can be leveraged through
+  semantic search queries within the database, which you can leverage by using
   the `MongoDB Aggregation Framework
   <https://www.mongodb.com/basics/aggregation>`__.
+
+- **Confluent Kafka Cluster:** Receives document updates and new documents from
+  producers and makes them available for further processing by Atlas Stream
+  Processing.
 
 - **Atlas Stream Processing:** Subscribes to the event streams generated by
   MongoDB, filters relevant information, transforms events, and emits them to
   the corresponding Kafka topic. It also subscribes to the Kafka cluster to
   process updates and propagate changes back to the database.
-
-- **Confluent Kafka Cluster:** Receives document updates and new documents from
-  producers and makes them available for further processing by Atlas Stream
-  Processing.
 
 - **Metadata Service:**
 
@@ -119,9 +118,9 @@ Data Model Approach
 -------------------
 
 In the demo solution, the data model is a collection of documents that
-encapsulate all relevant information about a song. This approach leverages the
-flexibility of the document data model to store diverse data types alongside
-their embeddings, allowing for easy and fast retrieval. 
+encapsulate all relevant information about a song. MongoDB's document data model
+allows you to store diverse data types alongside their embeddings, allowing for
+easy and fast retrieval. 
 
 The `sample data
 <https://github.com/dsdlt/mongodb-scalable-document-embeddings/tree/main/dataset>`__
@@ -145,21 +144,22 @@ structure:
       "tags": ["man", "story", "night"]   // only in archive_lyrics_small1
    }
 
-The relevant data fields are:
+In this solution, Atlas Stream Processing uses the following data fields for the
+output topic:
 
 - ``lyrics_embeddings_en``/``lyrics_embeddings_es``: Language-specific lyrics
   embedding vector
 
-- ``tags``: Only in the ``archive_lyrics_small1`` dataset, lists frequently
-  occurring words in the lyrics
+- ``tags``: Only in the ``archive_lyrics_small1`` dataset, lists
+  frequently-occurring words in the lyrics
 
-Building the Solution
----------------------
+Build the Solution
+------------------
 
 The `GitHub repository
 <https://github.com/dsdlt/mongodb-scalable-document-embeddings>`__ contains
 detailed instructions on how to build the solution to update your embeddings
-asynchronously and at scale, leveraging MongoDB Atlas. 
+asynchronously and at scale by leveraging MongoDB Atlas. 
 
 The ``README`` guides you through the following steps:
 
@@ -222,12 +222,6 @@ The ``README`` guides you through the following steps:
 
    .. step:: Create an Atlas Vector Search Index
 
-      .. note::
-
-         Visit the `Atlas Vector Search Quick Start guide
-         <https://www.mongodb.com/docs/atlas/atlas-vector-search/tutorials/vector-search-quick-start/?tck=ai_as_web>`__
-         and start building smarter searches.
-
       Create and configure an :ref:`Atlas Vector Search index
       <avs-create-index>` for ``lyrics_embeddings_es``. You must structure the
       search index as follows:
@@ -274,12 +268,12 @@ The ``README`` guides you through the following steps:
 Key Learnings
 -------------
 
-- **Maintain embedding relevancy:** Regularly update data embeddings to ensure
+- **Maintain embedding relevance:** Regularly update data embeddings to ensure
   your semantic searches remain accurate.
   
-- **Optimize language-model pairing:** Ensure your LLM closely aligns with the
-  language of your data to enhance the relevance and precision of your search
-  results.
+- **Optimize language-model pairing:** Ensure that your LLM closely aligns with
+  the language of your data to enhance the relevance and precision of your
+  search results.
 
 - **Embrace flexible embeddings:** MongoDB's flexible data model allows you to store
   embeddings directly alongside your data, regardless of their length or the
@@ -301,12 +295,6 @@ MongoDB Developer Data Platform
 - `Atlas Database <http://mongodb.com/atlas>`__
 - `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 - `Atlas Stream Processing <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
-
-Partner Technologies
-~~~~~~~~~~~~~~~~~~~~
-
-- `Confluent Cloud <https://www.confluent.io/confluent-cloud/>`__
-- `Amazon EC2 <https://aws.amazon.com/pm/ec2/>`__
 
 Author
 ------
