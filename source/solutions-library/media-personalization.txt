@@ -52,9 +52,7 @@ to users of large-scale media and publishing platforms. By analyzing
 interactions and consumption patterns, this solution grasps what content
 resonates with users and predicts what they are likely to engage with in
 the future. These insights enable publishers to construct a personalized
-content journey. To learn how to build smarter searches, visit the
-:ref:`Atlas Vector Search Quick Start guide
-<vector-search-quick-start>`.
+content journey. 
 
 Reference Architectures
 -----------------------
@@ -200,3 +198,7 @@ Learn More
 - :ref:`arch-center-is-streamline-global-gaming-management`
 
 - :ref:`arch-center-is-text-to-audio`
+
+- To learn how to build smarter searches, visit the
+  :ref:`Atlas Vector Search Quick Start guide
+  <vector-search-quick-start>`.
