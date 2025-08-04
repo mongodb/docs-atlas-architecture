@@ -39,7 +39,7 @@ Solution Overview
 -----------------
 
 One of the biggest challenges for claims adjusters is aggregating information
-from disparate systems and diverse data formats. Over the years, insurance
+from diverse systems and data formats. Over the years, insurance
 companies have accumulated terabytes of `unstructured data
 <https://www.mongodb.com/unstructured-data>`__ in their datastores, which can
 help uncover business insights, deliver better customer experiences, and
@@ -199,14 +199,13 @@ Key Learnings
   remain on the servers. Otherwise you can call an API and get your vector
   embeddings back, as explained in `this
   <https://www.mongodb.com/docs/atlas/atlas-vector-search/create-embeddings/>`__
-  tutorial. You can use `Voyage AI (acquired by MongoDB)
+  tutorial. You can use `Voyage AI
   <https://www.mongodb.com/blog/post/redefining-database-ai-why-mongodb-acquired-voyage-ai>`__
   or open-source models. 
 
 - **Create Vector Search Indexes:** You can build Vector Search indexes in
-  MongoDB Atlas, alternatively, you can also build indexes for `local
-  deployments
-  <https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-local/#std-label-atlas-cli-deploy-local-avs>`__.
+  MongoDB Atlas. Alternatively, you can also build indexes for :ref:`local
+  deployments <atlas-cli-deploy-local>`.
 
 - **Perform a Vector Search Query:** You can run :ref:`Vector Search queries
   <return-vector-search-results>` with MongoDB's :ref:`aggregation pipeline
