@@ -25,7 +25,7 @@ Add fast and relevant as-you-type suggestions to your application, incorporating
 
 **Industries:** `Retail <https://www.mongodb.com/industries/retail>`__
 
-**Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `MongoDB Atlas Vector Search
 <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 
@@ -42,11 +42,11 @@ functionality.
 
 Vector Search and full-text search are great at matching
 content semantically when there is a complete query, or very
-close word matches. However, as-you-type functionality can return relevant
-results with even fewer characters and when there's even more distance
-between the text input and the target keyword. Only a lexical-based
-solution that facilitates partial matching like as-you-type suggestions
-can provide this level of relevant, context-sensitive results.
+close word matches. However, an integrated as-you-type functionality can return 
+relevant results with even fewer characters and more distance
+between the text input and the target keyword. This lexical-based
+solution facilitates partial matching and provides relevant, context-sensitive 
+results.
 
 Reference Architectures
 -----------------------
@@ -71,10 +71,10 @@ collection tuned for as-you-type suggestibility.
 
 The main collection usually represents one type of entity as documents, and 
 other domain entities as metadata fields or embedded documents. For example, 
-consider using the sample movies data available within Atlas. As you type, the 
-search suggests movie names. However, you can also search for cast member 
-names. For example, you can find movies starring Keanu Reeves by typing only
-"kea".
+consider using the sample movies data available within Atlas. As you 
+type, the search suggests movie names. However, you can also search for cast 
+member names. For example, you can find movies starring Keanu Reeves by typing 
+only "kea".
 
 The data model has the following schema:
 
@@ -107,8 +107,8 @@ solution comes from the union of multiple indexing and querying strategies.
    }
    
 
-Building the Solution
----------------------
+Buildthe Solution
+-----------------
 
 First, identify the suggestible entities in your data. In
 the movies scenario, these would include movie titles, cast member
@@ -228,45 +228,30 @@ optional entity ``weight`` field.
 Generally, a user selecting a suggestion then performs a targeted traditional 
 search for the selected item. The search then returns all matching items.
 
-.. code-block:: javascript
-
-   [
-      {
-         $group: {
-            _id: "$title",
-         },
-      },
-      {
-         $project: {
-            _id: {$concat: [ "title", "-", "$_id" ]},
-            type: "title",
-            name: "$_id"
-         }
-      },
-      { $merge: { into: "entities" } }
-   ]
-
 Visit the `GitHub repository <https://github.com/mongodb-developer/atlas-search-as-you-type-suggest>`__ to this solution. 
 
 Key Learnings
 -------------
 
+- **Use a specialized index configuration to model suggestible entities as 
+  documents:** You can follow the steps above to create a separate collection 
+  that contains all entities from any source. 
+
 - **Model suggestible entities as documents with a specialized index
   configuration:** This could be done as described above in a separate
   collection containing entities from any source. 
 
-- **Index Creation:** If your main collection models all suggestible entities as
-  top-level documents already, an index can be created or an existing one
-  augmented to use the index configuration techniques described here.
+- **Create an index with these configuration techniques:** If your main collection models all suggestible entities as
+  top-level documents.
 
-- **Craft clever queries:** Leverage the index structure, generating rich and
-  nuanced queries to match entities and rank suggestions as desired.
+- **Use the index structure to craft clever queries:** that match entities and 
+  rank suggestions as desired.
 
 MongoDB Developer Data Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `Atlas <http://mongodb.com/atlas>`__
-- `Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
+- `MongoDB Atlas <http://mongodb.com/atlas>`__
+- `MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
 Author
 ------
