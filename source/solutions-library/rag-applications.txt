@@ -29,8 +29,8 @@ update, store, and search embeddings through a unified interface.
 `Healthcare <https://www.mongodb.com/industries/healthcare>`__, `Retail
 <https://www.mongodb.com/industries/retail>`__
 
-**Products:** `Atlas <http://mongodb.com/atlas>`__, `Atlas Vector Search
-<https://www.mongodb.com/products/platform/atlas-vector-search>`__, `Atlas
+**Products:** `MongoDB Atlas <http://mongodb.com/atlas>`__, `MongoDB Atlas Vector Search
+<https://www.mongodb.com/products/platform/atlas-vector-search>`__, `MongoDB Atlas
 Stream Processing
 <https://www.mongodb.com/products/platform/atlas-stream-processing>`__
 
@@ -84,10 +84,9 @@ This solution uses the following components:
 
 - **MongoDB Atlas Cluster:** Enables the flexible storage of various data types
   including text, associated metadata, and corresponding vector embeddings in
-  documents. Atlas's vector index capability directly supports efficient
-  semantic search queries within the database, which you can leverage by using
-  the `MongoDB Aggregation Framework
-  <https://www.mongodb.com/basics/aggregation>`__.
+  documents. Vector index in Atlas directly supports efficient semantic search
+  queries within the database, which you can use with the `MongoDB
+  Aggregation Framework <https://www.mongodb.com/basics/aggregation>`__.
 
 - **Confluent Kafka Cluster:** Receives document updates and new documents from
   producers and makes them available for further processing by Atlas Stream
@@ -119,8 +118,8 @@ Data Model Approach
 
 In the demo solution, the data model is a collection of documents that
 encapsulate all relevant information about a song. MongoDB's document data model
-allows you to store diverse data types alongside their embeddings, allowing for
-easy and fast retrieval. 
+stores diverse data types alongside their embeddings, allowing for easy and fast
+data retrieval. 
 
 The `sample data
 <https://github.com/dsdlt/mongodb-scalable-document-embeddings/tree/main/dataset>`__
@@ -158,8 +157,8 @@ Build the Solution
 
 The `GitHub repository
 <https://github.com/dsdlt/mongodb-scalable-document-embeddings>`__ contains
-detailed instructions on how to build the solution to update your embeddings
-asynchronously and at scale by leveraging MongoDB Atlas. 
+detailed instructions for replicating this solution, allowing you to update your
+embeddings asynchronously and at scale with MongoDB Atlas.
 
 The ``README`` guides you through the following steps:
 
@@ -282,6 +281,19 @@ Key Learnings
 - **Choose the right similarity function:** The effectiveness of your semantic
   searches depends on the chosen similarity function. Tailor your selection to 
   your specific use case.
+
+- **Generate asynchronous embeddings:** Create embeddings asynchronously to
+  maintain your application performance and scale generation functions
+  horizontally.
+
+Learn More
+----------
+
+- :ref:`arch-center-is-claim-management`
+
+- :ref:`arch-center-is-rag-chatbot`
+
+- :ref:`arch-center-is-fireworks-rag`
 
 Author
 ------
