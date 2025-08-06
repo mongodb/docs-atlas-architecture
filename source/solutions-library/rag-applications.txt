@@ -286,6 +286,11 @@ Key Learnings
   maintain your application performance and scale generation functions
   horizontally.
 
+Authors
+-------
+
+David Sanchez, MongoDB
+
 Learn More
 ----------
 
@@ -294,8 +299,3 @@ Learn More
 - :ref:`arch-center-is-rag-chatbot`
 
 - :ref:`arch-center-is-fireworks-rag`
-
-Author
-------
-
-David Sanchez, MongoDB
