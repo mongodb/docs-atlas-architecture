@@ -107,8 +107,8 @@ solution comes from the union of multiple indexing and querying strategies.
    }
    
 
-Buildthe Solution
------------------
+Build the Solution
+------------------
 
 First, identify the suggestible entities in your data. In
 the movies scenario, these would include movie titles, cast member
@@ -237,22 +237,25 @@ Key Learnings
   documents:** You can follow the steps above to create a separate collection 
   that contains all entities from any source. 
 
-- **Model suggestible entities as documents with a specialized index
-  configuration:** This could be done as described above in a separate
-  collection containing entities from any source. 
-
-- **Create an index with these configuration techniques:** If your main collection models all suggestible entities as
-  top-level documents.
+- **Create an index with these configurations:** Use these index settings when 
+  your main collection models all suggestible entities as top-level documents. 
 
 - **Use the index structure to craft clever queries:** that match entities and 
   rank suggestions as desired.
 
-MongoDB Developer Data Platform
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- **Use the index structure to craft clever queries:** Use your index to match
+  entities and rank suggestions as desired. 
 
 - `MongoDB Atlas <http://mongodb.com/atlas>`__
 - `MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
 
-Author
-------
+Authors
+-------
 - Erik Hatcher, MongoDB
+
+Learn More
+----------
+
+- :ref:`arch-center-is-ai-product-search`
+- :ref:`arch-center-is-product-description`
+- :ref:`arch-center-is-event-driven-inventory`
