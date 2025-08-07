@@ -244,7 +244,7 @@ Key Learnings
   rank suggestions as desired.
 
 - **Use the index structure to craft clever queries:** Use your index to match
-  entities and rank suggestions as desired. 
+  entities and rank suggestions as desired.
 
 - `MongoDB Atlas <http://mongodb.com/atlas>`__
 - `MongoDB Atlas Vector Search <https://www.mongodb.com/products/platform/atlas-vector-search>`__
